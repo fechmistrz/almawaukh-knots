@@ -4,6 +4,7 @@
 % DICTIONARY;invariant, finite type;niezmiennik, skończonego typu
 Niezmienniki Wasiljewa (znane także jako niezmienniki skończonego typu) umożliwiają radykalnie nowe podejście do węzłów.
 Około 1989 roku odkryli je niezależnie Wiktor Wasiljew, w~oparciu o~teorię osobliwości, oraz Michaił Goussarow, metodami kombinatorycznymi.
+% Wasiljew: V. A. Vassiliev, Cohomology of knot spaces, Theory of Singularities and its Applications (ed. V. I. Arnold), Advances in Soviet Math., 1 (1990) 23-69.
 My przedstawimy to drugie podejście.
 Niezmienniki Wasiljewa najlepiej zrozumieć, jeśli osłabimy trochę definicję węzła i będziemy rozważać także krzywe z~samoprzecięciami.
 
@@ -233,27 +234,6 @@ Z definicji \ref{def:vassiliev_order} wynika, że $\mathcal V_n$ jest przestrzen
     \mathcal V_0 \subseteq \mathcal V_1 \subseteq \mathcal V_2 \subseteq \ldots \subseteq \mathcal V := \bigcup_{n=0}^\infty \mathcal V_n.
 \end{equation}
 
-Dokładny wymiar przestrzeni $\mathcal V_n$ jest znany tylko dla $n \le 12$.
-Poniższa tabela ma dość ciekawą historię.
-Wasiljew znalazł ręcznie wartości w kolumnach dla $n \le 4$ w 1990 roku.
-Potem Bar-Natan napisał komputerowy program rozwiazujący pewne równania liniowe i~znalazł tak wymiary przestrzeni $\mathcal V_n$ dla $n \le 9$, miało to miejsce w roku 1993.
-Wreszcie Kneissler cztery lata później znalazł dolne oraz górne ograniczenia: dolne oparte o znaczone powierzchnie, górne pochodzące od algebry Vogela (\cite{kneissler97}).
-\index{algebra!Vogela}
-\index{powierzchnia!znaczona}
-% DICTIONARY;marked surface;powierzchnia znaczona
-Dla $n \le 12$ ograniczenia te pokrywają się!
-
-\renewcommand*{\arraystretch}{1.4}
-\footnotesize
-\begin{longtable}{lcccccccccccccc}
-\hline
-    $n$ & $0$ & $1$ & $2$ & $3$ & $4$ & $5$ & $6$ & $7$ & $8$ & $9$ & $10$ & $11$ & $12$ \\ \hline \endhead
-    $\dim \mathcal V_n$ & $1$ & $1$ & $2$ & $3$ & $6$ & $10$ & $19$ & $33$ & $60$ & $104$ & $184$ & $316$ & $548$ \\
-    $\dim \mathcal V_n / \mathcal V_{n-1}$ & $1$ & $0$ & $1$ & $1$ & $3$ & $4$ & $9$ & $14$ & $27$ & $44$ & $80$ & $132$ & $232$ \\
-    \hline
-\end{longtable}
-\normalsize
-
 Oznaczmy wymiar przestrzeni $\mathcal V_n / \mathcal V_{n-1}$ przez $d_n$.
 Dla wyższych rzędów nie dość, że nie znamy dokładnych wartości ciągu $d_n$, to dolne i górne ograniczenia asymptotyczne są od siebie bardzo różne: górne jest niemalże silnią, dolne natomiast jest podwykładnicze.
 
@@ -331,12 +311,40 @@ Ograniczenie Dasbacha pozostaje najlepsze (stan na 2011 rok).
     Dasbach w \cite{dasbach00}.
 \end{proof}
 
+Dokładny wymiar przestrzeni $\mathcal V_n$ jest znany tylko dla $n \le 12$.
+Poniższa tabela ma dość ciekawą historię.
+Wasiljew znalazł ręcznie wartości w kolumnach dla $n \le 4$ w 1990 roku.
+Potem Bar-Natan napisał komputerowy program rozwiazujący pewne równania liniowe i~znalazł tak wymiary przestrzeni $\mathcal V_n$ dla $n \le 9$, miało to miejsce w roku 1993.
+Wreszcie Kneissler cztery lata później znalazł dolne oraz górne ograniczenia: dolne oparte o znaczone powierzchnie, górne pochodzące od algebry Vogela (\cite{kneissler97}).
+\index{algebra!Vogela}
+\index{powierzchnia!znaczona}
+% DICTIONARY;marked surface;powierzchnia znaczona
+Dla $n \le 12$ ograniczenia te pokrywają się!
+
+\renewcommand*{\arraystretch}{1.4}
+\footnotesize
+\begin{longtable}{lcccccccccccccc}
+\hline
+    $n$ & $0$ & $1$ & $2$ & $3$ & $4$ & $5$ & $6$ & $7$ & $8$ & $9$ & $10$ & $11$ & $12$ \\ \hline \endhead
+    $\dim \mathcal V_n$ & $1$ & $1$ & $2$ & $3$ & $6$ & $10$ & $19$ & $33$ & $60$ & $104$ & $184$ & $316$ & $548$ \\
+    $\dim \mathcal V_n / \mathcal V_{n-1}$ & $1$ & $0$ & $1$ & $1$ & $3$ & $4$ & $9$ & $14$ & $27$ & $44$ & $80$ & $132$ & $232$ \\
+    \hline
+\end{longtable}
+\normalsize
+
+% kneissler97 podaje inny ciąg: 0, 1, 1, 2, 3, 5, 8, 12, 18, 27, 39, 55... (rk Pm), nasz nazywając (rk Am / rk Arm)
+% Am: Z<circle diagrams of degree m> / Z<STU relations>
+% Arm: Am / Z<FI relations>
+% Pm: podmoduł Am generowany przez spójne diagramy
+
 Stojmenow w \cite{stoimenow_01} pokazał, że niezmienniki Wasiljewa każdego rzędu można wyznaczyć w~skończonym czasie.
 Dokładniej:
 
 \begin{proposition}
     Każdy niezmiennik Wasiljewa rzędu co najwyżej $k$ jest jednoznacznie określony przez swoje wartości na alternujących węzłach o co najwyżej $2k^2 + k$ skrzyżowaniach.
 \end{proposition}
+
+% kneissler97: Corollary 2.5: up to degree twelce can't distinguish knots from their inverses.
 
 Niezmienniki Wasiljewa nie są zupełne.
 Ohyama dla każdego węzła $K$ i~liczby naturalnej $n$ wskazał jawnie nieskończoną rodzinę złożonych węzłów, których niezmienniki rzędu co najwyżej $n$ nie odróżniają od $K$ (\cite{ohyama95}).
