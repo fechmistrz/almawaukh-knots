@@ -38,33 +38,114 @@ Kinoshita, Terasaki zdefiniowali nieskończoną rodzinę węzłów o trywialnym 
 Dowód tego, że $11n_{34}$ oraz $11n_{42}$ są różne, jako pierwszy podał prawdopodobnie Riley w~1971 roku \cite{riley71}: wykorzystał on homomorfizmy z~grupy węzła w~$PSL(2, 7)$.
 Genusy, odpowiednio: $3$ i~$2$, wyznaczył Gabai piętnaście lat później w~\cite{gabai86}, używał foliacji.
 
-Mutanty nie dają się łatwo odróżniać niezmiennikami.
+Mutanty nie dają się łatwo odróżniać niezmiennikami, niestety dowód tego faktu jest równie trudny.
+% Poziom zaawansowania tej książki nie pozwala przedstawić szczegółów dowodu, dlatego wymienimy tylko odnośniki do literatury: 
 
 \begin{proposition}
-    Mutacja węzłów nie zmienia następujących niezmienników:
-    kablowego wielomianu Jonesa, % menasco91
-    2-kablowego wielomianu HOMFLY, % przytycki89
-    kablowego wielomianu Kauffmana, % lipson87
-    \index{wielomian!kablowy}
-    sygnatury Tristrama-Levine'a, % cooper99
-    \index{sygnatura}
-    symplicjalnej objętości Gromowa, % ruberman87: Ruberman [42] showed that mutants have equal volume in all hyperbolic pieces of the JSJ decomposition.
-    \index{objętość!Gromowa}
-    instanton homologii Floera, % ruberman99
-    \index{homologia!Floera}
-    niezmienników Wittena % rong94
-    \index{niezmiennik!Wittena}
-    ani Cassona. % kirk89
-    \index{niezmiennik!Cassona}
-    % wielomian Alexandera
+    Mutacja węzła nie zmienia wielomianu Alexandera.
+    \index{wielomian!Alexandera}
 \end{proposition}
 
 \begin{proof}
-    Poziom zaawansowania tej książki nie pozwala przedstawić szczegółów dowodu, dlatego wymienimy tylko odnośniki do literatury: \cite{menasco91}, \cite{przytycki89}, \cite{lipson87}, \cite{cooper99}, \cite{ruberman87}, \cite{ruberman99}, \cite{rong94} oraz \cite{kirk89}.
+    Stojmenow, Tanaka piszą w \cite{tanaka09}, że to proste ćwiczenie teorii kłębiastej, oraz że rozumowanie łatwo przenosi się na odkryte później wielomiany Jonesa, HOMFLY, BLM/Ho, Kauffmana.
+\end{proof}
+
+\begin{proposition}
+    Mutacja węzła nie zmienia kablowego wielomianu Jonesa.
+    \index{wielomian!Jonesa}
+\end{proposition}
+
+\begin{proof}
+    \cite{menasco91}.
+\end{proof}
+
+\begin{proposition}
+    Mutacja węzła nie zmienia 2-kablowego wielomianu HOMFLY.
+    \index{wielomian!HOMFLY}
+\end{proposition}
+
+\begin{proof}
+    \cite{przytycki89}.
+\end{proof}
+
+\begin{proposition}
+    Mutacja węzła nie zmienia kablowego wielomianu Kauffmana.
+    \index{wielomian!kablowy}
+    \index{wielomian!Kauffmana}
+\end{proposition}
+
+\begin{proof}
+    \cite{lipson87}.
+\end{proof}
+
+% z tanaka09
+Wzór kablowy \cite[tw. 6.15]{lickorish97} pokazuje, że wielomian Alexandera nie odróżnia satelitów zmutowanych węzłów.
+Wynik rozszerzono do wielomianów HOMFLY oraz Kauffmana dla 2-satelitów zmutowanych węzłów \cite{lipson87}.
+Wielomian HOMFLY radzi sobie lepiej z 3-kablami (często odróżnia je, w tym parę węzłów Kinoshity-Terasakiego/Conwaya).
+\index{węzeł!Conwaya}
+\index{węzeł!Kinoshity-Terasakiego}
+Natomiast Morton, Traczyk \cite{traczyk88} pokazali, że wielomian Jonesa wcale nie odróżnia satelitów mutantów.
+
+\begin{proposition}
+    Mutacja węzła nie zmienia wielomianu BLM/Ho.
+    \index{wielomian!BLM/Ho}
+\end{proposition}
+
+\begin{proof}
+    \cite{tanaka09}, choć nie wiem gdzie dokładnie.
+\end{proof}
+
+\begin{proposition}
+    Mutacja węzła nie zmienia sygnatury Tristrama-Levine'a.
+    \index{sygnatura}
+    \index{sygnatura!Tristrama-Levine'a}
+\end{proposition}
+
+\begin{proof}
+    \cite{cooper99}.
+\end{proof}
+
+\begin{proposition}
+    Mutacja węzła nie zmienia symplicjalnej objętości Gromowa.
+    \index{objętość!Gromowa}
+\end{proposition}
+
+\begin{proof}
+    \cite{ruberman87}.
+    % Ruberman [42] showed that mutants have equal volume in all hyperbolic pieces of the JSJ decomposition.
+\end{proof}
+
+\begin{proposition}
+    Mutacja węzła nie zmienia instanton homologii Floera.
+    \index{homologia!Floera}
+\end{proposition}
+
+\begin{proof}
+    \cite{ruberman99}.
+\end{proof}
+
+\begin{proposition}
+    Mutacja węzła nie zmienia niezmienników Wittena.
+    \index{niezmiennik!Wittena}
+\end{proposition}
+
+\begin{proof}
+    \cite{rong94}.
+\end{proof}
+
+\begin{proposition}
+    Mutacja węzła nie zmienia niezmienników Cassona.
+    \index{niezmiennik!Cassona}
+\end{proposition}
+
+\begin{proof}
+    \cite{kirk89}.
 \end{proof}
 
 Warto przytoczyć teraz obserwację 3.8.2 z \cite[s. 43]{kawauchi96}: jeśli sploty $L_1, L_2$ są mutantami, to podwójne przestrzenie nakryciowe nad $S^3$ rozgałęzione odpowiednio wzdłuż $L_1$ oraz $L_2$ są homeomorficzne z zachowaniem orientacji.
+\index{przestrzeń nakryciowa}
 Co więcej, macierze Seiferta mutantów są $S$-równoważne.
+\index{macierz!Seiferta}
 To tłumaczy czemu większość niezmienników nie radzi sobie z odróżnianiem mutantów.
 % Viro: Two-fold branched coverings of three-sphere
 
@@ -96,7 +177,7 @@ Choć wzór ten zastosowany do konkretnej pary węzłów sprawia zazwyczaj trudn
 \end{proposition}
 
 \begin{proof}
-    \cite{toshifumi09}.
+    \cite{tanaka09}.
     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
     Mauris condimentum leo sit amet venenatis elementum.
     Sed congue ligula ut lorem dictum eleifend.
