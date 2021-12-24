@@ -2,8 +2,10 @@
 \index{węzeł!hiperboliczny|(}
 \label{sec:hyperbolic}
 Jak pisaliśmy w~sekcji \ref{sec:mutant}, słynne węzły Conwaya oraz Kinoshity-Terasakiego odróżnił od siebie po raz pierwszy Riley.
+\index{węzeł!Conwaya}%
+\index{węzeł!Kinoshity-Terasakiego}%
 Zbadał paraboliczne reprezentacje ich grup w~skończoną grupę prostą $PSL(2, 7)$, co doprowadziło go do odkrycia struktury hiperbolicznej w~dopełnieniu ósemki \cite{riley75}.
-\index{reprezentacja paraboliczna}
+\index{ósemka}
 % https://arxiv.org/pdf/2002.00564.pdf
 Zainspirowany tym wynikiem Thurston najpierw rozłożył dopełnienie ósemki na dwa idealne wielościany, a~potem znacznie uogólnił swój przykład.
 
@@ -35,7 +37,8 @@ Wiedzę o~węzłach hiperbolicznych można czerpać także z~artykułu Weeksa \c
 \end{definition}
 
 \begin{proposition}
-    Splot $L$ jest hiperboliczny wtedy i~tylko wtedy, gdy $S^3 \setminus L = \mathbb H^3 / \Gamma$, gdzie $\mathbb H^3$ to hiperboliczna 3-przestrzeń, zaś $\Gamma$ jest dyskretną, beztorsyjną grupą izometrii, izomorficzną z~$\pi_1(S^3 \setminus L)$.
+    Niech $L$ będzie splotem, zaś $\mathbb H^3$ hiperboliczną 3-przestrzenią.
+    Splot $L$ jest hiperboliczny wtedy i~tylko wtedy, gdy $S^3 \setminus L = \mathbb H^3 / \Gamma$, gdzie $\Gamma$ jest dyskretną, beztorsyjną grupą izometrii, izomorficzną z~$\pi_1(S^3 \setminus L)$.
 \end{proposition}
 % TODO: skąd to jest dokładnie?
 
@@ -49,14 +52,13 @@ Thurston podejrzewał, że każda 3-rozmaitość rozkłada się wzdłuż sfer i~
 Nie umiał podać pełnego uzasadnienia, w~pracy \cite{thurston82} udowodnił swoje przypuszczenie dla rozmaitości Hakena.
 \index{rozmaitość Hakena}
 Dowód hipotezy geometryzacyjnej dostarczył mniej więcej dwie dekady później Perelman, nie to jest jednak dla nas najważniejsze.
-\index{hipoteza geometryzacyjna Thurstona}
+\index{hipoteza!geometryzacyjna Thurstona}
 Z przełomowych prac Thurstona z~lat 70. oraz 80. wynika coś ciekawszego: że dopełnienie węzła jest rozmaitością włóknistą Seiferta, toroidalną albo hiperboliczną.
 Innymi słowy, Thurston przedstawił trychotomię:
 
 \begin{theorem}
     \index{twierdzenie!Thurstona}
     Każdy węzeł jest satelitarny, torusowy albo hiperboliczny.
-    \index{węzeł!hiperboliczny}
     \index{węzeł!satelitarny}
     \index{węzeł!torusowy}
 \end{theorem}
@@ -358,7 +360,7 @@ A trzy dekady później poprawił wswój wynik w~\cite{adams13}:
 \end{proposition}
 
 Jego metoda polega na podzieleniu dopełnienia splotu na czterościany i~ośmiościany oraz policzeniu ich.
-To, w~połączeniu ze znanymi ograniczeniam na objętość ,,cegiełek'', wystarcza.
+To, w~połączeniu ze znanymi ograniczeniami na objętość ,,cegiełek'', wystarcza.
 Podział na ośmiościany zaproponował Dylan (nie William!) Thurston.
 % wiem to z purcell19
 
@@ -386,6 +388,7 @@ Przytoczę teraz przykłady konkretnych rodzin i najmniejszych węzłów, za \ci
 \begin{proposition}
     \label{prp:eight_least_hyperbolic}
     Żaden węzeł nie ma mniejszej objętości hiperbolicznej od ósemki.
+    \index{ósemka}
 \end{proposition}
 
 \begin{proof}
@@ -395,18 +398,34 @@ Przytoczę teraz przykłady konkretnych rodzin i najmniejszych węzłów, za \ci
 \end{proof}
 
 \begin{proposition}
-    Wśród orientowalnych 3-rozmaitości z ostrzem\footnote{cusped manifold -- niezwarte, zupełne hiperboliczne rozmaitości ze skończoną objętością Riemanna} najmniejszą objętość posiada dopełnienie ósemki oraz jej bliźniak, otrzymany przez $(5, 1)$-chirurgię jednego z~ogniw splotu Whiteheada.
-\index{splot Whiteheada}%
+    Wśród orientowalnych 3-rozmaitości z ostrzem\footnote{cusped manifold -- niezwarte, zupełne hiperboliczne rozmaitości ze skończoną objętością Riemanna} najmniejszą objętość posiada dopełnienie ósemki oraz jego bliźniak, otrzymany przez $(5, 1)$-chirurgię jednego z~ogniw splotu Whiteheada.
+\index{splot!Whiteheada}%
 \index{ósemka}%
 % sformułowanie wygląda jak z "THE MINIMAL VOLUME ORIENTABLE HYPERBOLIC 3-MANIFOLD WITH 4 CUSPS"
 \end{proposition}
 
 Klasa rozmaitości wspomniana w fakcie obejmuje dopełnienia hiperbolicznych węzłów.
+Powyższy fakt także został wzięty z~pracy \cite{cao01}.
 
-% tak - https://arxiv.org/pdf/1203.6551.pdf mówi, że cao-meyerhoff znali obydwa węzły/sploty
-% aczkolwiek nie mam pojęcia skąd to wziąłem
+Meyerhoff nie przestawał pracować nad rozmaitościami o~małych objętościach i~osiem lat później w~\cite{meyerhoff09} przedstawił z Gabaiem, Milleyem bez dowodu (obiecali pokazać go później):
 
-% Gabai-Meyerhoff-Milley [21] determined the first 10 low volume orientable cusped hyperbolic 3-manifolds. This shows that the next 4 limit volumes are:
+\begin{proposition}
+    Istnieje 10 orientowalnych 3-rozmaitości z jednym ostrzem o objętości co najwyżej $2.848$: \texttt{m003}, \texttt{m004} ($\approx 2.02988$), \texttt{m006}, \texttt{m007} ($\approx 2.56897$), \texttt{m009}, \texttt{m010} ($\approx 2.66674$), \texttt{m011} ($\approx 2.78183$), \texttt{m015}, \texttt{m016} oraz \texttt{m017} ($\approx 2.82812$).
+    Nazwy pochodzą ze spisu rozmaitości programu SnapPy. 
+\end{proposition}
+
+Udało mi się rozszyfrować niektóre nazwy.
+\texttt{m003} to siostra $4_1$, % https://hal.archives-ouvertes.fr/hal-02867890/document Michel Planat - Quantum computing thanks to Bianchi groups
+\texttt{m004} to węzeł $4_1$, % SnapPy - also known as
+% m006
+% m007
+% m009
+% m010
+% m011
+\texttt{m015} to węzeł $5_2$,
+\texttt{m016} to węzeł $12n242$, czyli znany nam już $(-2, 3, 7)$-precel,
+\index{węzeł!preclowy!(-2, 3, 7)}%
+\texttt{m017} to siostra $5_2$. % https://arxiv.org/pdf/2107.03275.pdf
 
 \begin{proposition}
     Wśród orientowalnych 3-rozmaitości o~dwóch ostrzach najmniejszą objętość mają splot Whiteheada oraz $(-2, 3, 8)$-precel.
@@ -422,13 +441,12 @@ Klasa rozmaitości wspomniana w fakcie obejmuje dopełnienia hiperbolicznych wę
 Przypadek trzech ostrz nie jest zbyt dobrze zrozumiany.
 
 \begin{proposition}
-    Wśród orientowalnych 3-rozmaitości o~czterech ostrzach najmniejszą objętość posiada dopełnienie splotu $8_4^2$.
+    Wśród orientowalnych 3-rozmaitości o~czterech ostrzach najmniejszą objętość posiada dopełnienie splotu $8_4^2$ wg numeracji Rolfsena (L8a13).
 \end{proposition}
-
-Jego objętość wynosi $2v_8$.
 
 \begin{proof}
     Rozumowanie Yoshidy \cite{yoshida13} oparte o pracę Agola.
+    Objętość splotu wynosi $2v_8$.
 \end{proof}
 
 \index{objętość|)}
