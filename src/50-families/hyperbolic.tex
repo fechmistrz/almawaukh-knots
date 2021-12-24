@@ -1,14 +1,14 @@
-\section{Węzły hiperboliczne} % (fold)
+\section{Węzły hiperboliczne}
+\index{węzeł!hiperboliczny|(}
 \label{sec:hyperbolic}
-Jak pisaliśmy w sekcji \ref{sec:mutant}, słynne węzły Conwaya oraz Kinoshity-Terasakiego odróżnił od siebie po raz pierwszy przez Rileya.
-Zbadał paraboliczne reprezentacje ich grup w skończoną grupę prostą $PSL(2, 7)$, co doprowadziło go do odkrycia w dopełnieniu ósemki struktury hiperbolicznej \cite{riley75}.
+Jak pisaliśmy w~sekcji \ref{sec:mutant}, słynne węzły Conwaya oraz Kinoshity-Terasakiego odróżnił od siebie po raz pierwszy Riley.
+Zbadał paraboliczne reprezentacje ich grup w~skończoną grupę prostą $PSL(2, 7)$, co doprowadziło go do odkrycia struktury hiperbolicznej w~dopełnieniu ósemki \cite{riley75}.
 \index{reprezentacja paraboliczna}
 % https://arxiv.org/pdf/2002.00564.pdf
-Zainspirowany tym wynikiem Thurston najpierw rozłożył dopełnienie ósemki na dwa idealne wielościany, a potem znacznie uogólnił swój przykład.
+Zainspirowany tym wynikiem Thurston najpierw rozłożył dopełnienie ósemki na dwa idealne wielościany, a~potem znacznie uogólnił swój przykład.
 
-Reszta sekcji powstała na podstawie przeglądowej pracy \cite{purcell19} Futera, Kalfagianniego oraz Purcell i~notatek z~wykładów, które były prowadzone przez samą Purcell.
-Wiedzę o~węzłach hiperbolicznych można czerpać także z~artykułu \cite{weeks05} Weeksa.
-Poprawiona wersja dostępna w~serwisie arXiv.
+Reszta sekcji powstała na podstawie dwóch źródeł: przeglądowej pracy Kalfagianniego, Futera oraz Purcell \cite{purcell19} i~notatek z~wykładów, które były prowadzone przez samą Purcell.
+Wiedzę o~węzłach hiperbolicznych można czerpać także z~artykułu Weeksa \cite{weeks05}.
 
 % Badając sploty nie ograniczamy się tylko do diagramów, ale korzystamy też z ich dopełnień, to znaczy 3-rozmaitości $S^3 \setminus L$.
 % Jest ona homeomorficzna z wnętrzem zwartej rozmaitości $X(L) = S^3 \setminus N(K)$, zwanej zewnętrzem splotu, gdzie $N(L)$ stanowi rurowe otoczenie splotu.
@@ -31,41 +31,42 @@ Poprawiona wersja dostępna w~serwisie arXiv.
 % Węzły i sploty, które będziemy rozpatrywać dalej, mają szczególną strukturą geometryczną.
 
 \begin{definition}[hiperboliczny]
-    \index{węzeł!hiperboliczny}
     Splot $L$, na dopełnieniu którego można zadać zupełną metrykę o~stałej krzywiźnie $-1$ nazywamy hiperbolicznym.
 \end{definition}
 
 \begin{proposition}
-    Splot $L$ jest hiperboliczny wtedy i tylko wtedy, gdy $S^3 \setminus L = \mathbb H^3 / \Gamma$, gdzie $\mathbb H^3$ to hiperboliczna 3-przestrzeń, zaś $\Gamma$ jest dyskretną, beztorsyjną grupą izometrii, izomorficzną z $\pi_1(S^3 \setminus L)$.
+    Splot $L$ jest hiperboliczny wtedy i~tylko wtedy, gdy $S^3 \setminus L = \mathbb H^3 / \Gamma$, gdzie $\mathbb H^3$ to hiperboliczna 3-przestrzeń, zaś $\Gamma$ jest dyskretną, beztorsyjną grupą izometrii, izomorficzną z~$\pi_1(S^3 \setminus L)$.
 \end{proposition}
+% TODO: skąd to jest dokładnie?
 
-Thurston podejrzewał, że każda 3-rozmaitość rozkłada się wzdłuż sfer i nieściśliwych torusów na części wyposażone w jedną z ośmiu kanonicznych geometrii:
+Thurston podejrzewał, że każda 3-rozmaitość rozkłada się wzdłuż sfer i~nieściśliwych torusów na części wyposażone w~jedną z~ośmiu kanonicznych geometrii:
 \begin{itemize}
-\item sferyczną $S^3$,
-\item euklidesową $E^3$,
-\item hiperboliczną $H^3$,
-\item $S^2 \times \R$,
-\item $H^2 \times \R$,
+\item sferyczną $S^3$, albo euklidesową $E^3$, albo hiperboliczną $H^3$,
+\item $S^2 \times \R$, albo $H^2 \times \R$,
 \item uniwersalne nakrycie $SL(2, \R)$,
-\item geometrię Sol albo
-\item geometrię Nil.
+\item geometrię Sol albo geometrię Nil.
 \end{itemize}
-Nie umiał podać pełnego uzasadnienia, w 1982 roku udowodnił swoje przypuszczenie dla rozmaitości Hakena.
+Nie umiał podać pełnego uzasadnienia, w~pracy \cite{thurston82} udowodnił swoje przypuszczenie dla rozmaitości Hakena.
+\index{rozmaitość Hakena}
 Dowód hipotezy geometryzacyjnej dostarczył mniej więcej dwie dekady później Perelman, nie to jest jednak dla nas najważniejsze.
+\index{hipoteza geometryzacyjna Thurstona}
+Z przełomowych prac Thurstona z~lat 70. oraz 80. wynika coś ciekawszego: że dopełnienie węzła jest rozmaitością włóknistą Seiferta, toroidalną albo hiperboliczną.
+Innymi słowy, Thurston przedstawił trychotomię:
 
-Thurston pokazał też, że dopełnienie węzła jest rozmaitością włóknistą Seiferta, toroidalną albo hiperboliczną.
-Innymi słowy, przedstawił trychotomię:
 \begin{theorem}
     \index{twierdzenie!Thurstona}
     Każdy węzeł jest satelitarny, torusowy albo hiperboliczny.
+    \index{węzeł!hiperboliczny}
+    \index{węzeł!satelitarny}
+    \index{węzeł!torusowy}
 \end{theorem}
-
-Węzły hiperboliczne stanowią najliczniejszą i najmniej zrozumianą rodzinę węzłów.
+% luźno związane: http://www.deltami.edu.pl/temat/matematyka/topologia/2012/12/27/%William_Thurston_i_hipoteza_geometryzacyjna/
 
 \begin{proof}
-    Thurston w \cite{thurston82}.
+    Thurston w~\cite{thurston82}.
 \end{proof}
 
+Węzły hiperboliczne stanowią najliczniejszą i~najmniej zrozumianą rodzinę węzłów.
 Sam Nead, użytkownik portalu MathOverflow napisał, że kryterium Thurstona dzięki maszynerii JSJ oraz pracom innych osób można wysłowić algebraicznie.
 
 \begin{proposition}
@@ -80,31 +81,116 @@ Sam Nead, użytkownik portalu MathOverflow napisał, że kryterium Thurstona dzi
     %  - $L$ is not a torus knot. Equivalently, $X$ contains no essential annulus. These last two topological properties are equivalent to $\pi$ not containing a copy of $\ZZ^2$.
     % Then $X$ admits a hyperbolic structure.
     Niech $L$ będzie splotem, który nie rozszczepia się, nie jest niewęzłem, nie posiada wśród ogniw niezakłóconego węzła satelitarnego oraz nie jest węzłem torusowym.
-    Wtedy $L$ jest węzłem hiperbolicznym.
+    \index{splot!rozszczepialny}
+    Wtedy $L$ jest hiperboliczny.
 \end{proposition}
 
 \begin{proposition}
     Niech $L$ będzie splotem takim, że jego dopełnienie $S^3 \setminus L$ nie zawiera właściwej 2-sfery, właściwego dysku, właściwego torusa oraz właściwego pierścienia.
-    Wtedy $L$ jest węzłem hiperbolicznym.
+    Wtedy $L$ jest hiperboliczny.
 \end{proposition}
 
 \begin{proposition}
-    Niech $L$ będzie splotem takim, że jego grupa $\pi = \pi(S^3 \setminus L)$ nie jest produktem wolnym, nie jest nieskończona i cykliczna oraz nie zawiera w sobie kopii grupy $\Z \oplus \Z$.
-    Wtedy $L$ jest węzłem hiperbolicznym.
+    Niech $L$ będzie splotem takim, że jego grupa $\pi(S^3 \setminus L)$ nie jest produktem wolnym, nie jest izomorficzna z~$\Z$ oraz nie zawiera w~sobie kopii grupy $\Z \oplus \Z$.
+    Wtedy $L$ jest hiperboliczny.
 \end{proposition}
 
 \begin{proof}
     Patrz \url{https://mathoverflow.net/a/153327}.
 \end{proof}
 
-Dwa lata później Menasco \cite{menasco84} pokazał, że każdy pierwszy, alternujący splot jest albo 2-warkoczem (a zatem, torusowy) albo hiperboliczny.
+Czas na podanie jakichś przykładów węzłów hiperbolicznych, za \cite{adams05}.
+
+\begin{proposition}
+    Każdy alternujący, pierwszy, oraz nierozszczepialny splot jest albo 2-warkoczem (a zatem, torusowy) albo hiperboliczny.
+    \index{węzeł!alternujący}
+    \index{węzeł!pierwszy}
+    \index{węzeł!rozszczepialny}
+\end{proposition}
+
+\begin{proof}
+    Menasco \cite{menasco84} pokazał, że dopełnienie alternującego węzła nie zawiera nieściśliwych  nieperyferyjnych torusów.
+    To w~połączeniu z~unifikacyjnym twierdzeniem Thurstona dla rozmaitości Hakena kończy dowód.
+    % zarys dowodu zz MathSciNet
+\end{proof}
+
+\begin{proposition}
+    Nietrywialne pierwsze prawie alternujące węzły są torusowe albo hiperboliczne.
+    \index{węzeł!pierwszy}
+    \index{węzeł!prawie alternujący}
+\end{proposition}
+
+\begin{proof}
+    Grupa studentów pod opieką Adamsa w \cite{brock92}.
+\end{proof}
+
+\begin{proposition}
+    Toroidalnie alternujące węzły pierwsze są torusowe albo hiperboliczne.
+    \index{węzeł!pierwszy}
+    \index{węzeł!toroidalnie alternujący}
+\end{proposition}
+
+Ze wszystkich węzłów pierwszych do 11 skrzyżowań i~pierwszych, nierozszczepialnych splotów do 10 skrzyżowań tylko 3 węzły i~2 sploty nie są toroidalnie alternujące, tak twierdzi Adams \cite{adams05}.
+
+\begin{proof}
+    Patrz \cite{adams994}.
+\end{proof}
+
+\begin{proposition}
+    Sploty Montesinosa są prawie zawsze torusowe albo hiperboliczne.
+    \index{splot!Montesinosa}
+\end{proposition}
+
+\begin{proof}
+    Najpierw zidentyfikowano sploty Montesinosa torusowe, które są też torusowe \cite{boileau80}.
+    Potem w~pracy \cite{oertel84} znaleziono listę wyjątków (z chyba trochę inną notacją niż nasza):
+    \begin{itemize}
+        \item $K(1/2, 1/2, 21/2, 21/2)$,
+        \item $K(2/3, 21/3, 21/3)$, 
+        \item $K(1/2, 21/4, 21/4)$, 
+        \item $K(1/2, 21/3, 21/6)$,
+        \item lub lustra tych splotów. \qedhere
+    \end{itemize}
+\end{proof}
+
+\begin{proposition}
+    Mutant węzła hiperbolicznego jest węzłem hiperbolicznym.
+    \index{mutant}
+\end{proposition}
+
+\begin{proof}
+    Ruberman w~\cite{ruberman87}, patrz wniosek 1.4.
+\end{proof}
+
+\begin{proposition}
+    Niech $G$ oznacza grupę izometrii wnętrza dopełnienia węzła hiperbolicznego.
+    Wtedy $G$ jest diedralna lub skończona cykliczna.
+\end{proposition}
+
+\begin{proof}
+    Pierwszy był Riley w~artykule \cite[s. 124]{riley79}, można też zapoznać się z~późniejszą pracą \cite{kodama92} Kodamy i Sakumy.
+    % Kodama - lemat_1.1
+\end{proof}
+
+Kawauchi \cite[s. 131]{kawauchi96} wprowadza jeszcze jedną grupę (grupę symetrii węzła): iloraz grupy PL automorfizmów pary $(S^3, K)$ przez podgrupę elementów, które są otaczająco izotopijne z~odwzorowaniem tożsamościowym.
+Okazuje się, że nie wszystkie są skończone:
+
+\begin{proposition}
+    Węzeł $K$ ma skończoną grupę symetrii wtedy i~tylko wtedy, gdy jest hiperboliczny, torusowy lub kablem węzła torusowego.
+\end{proposition}
+
+Kawauchi nie podaje dowodu, ale zaleca zajrzeć do pracy Sakumy.
+Ja zajrzałem i dalej nie mam pojęcia, jak ten dowód miałby wyglądać.
+
+Z kryterium Thurstona mamy prosty wniosek (bo węzły złożone są satelitarne):
 
 \begin{corollary}
     Każdy węzeł hiperboliczny jest pierwszy.
+    \index{węzeł!pierwszy}
 \end{corollary}
 
 Prawie każdy węzeł pierwszy o~mniej niż 17 skrzyżowaniach jest hiperboliczny, na 32 wyjątki składa się 12 węzłów torusowych oraz 20 satelitów trójlistnika.
-Te ostatnie mają co najmniej 11 skrzyżowań.
+Te ostatnie mają co najmniej 13 skrzyżowań.
 Baza ciągów liczb całkowitych OEIS zawiera informacje na temat liczności poszczególnych typów węzłów.
 Analizując ciągi A051764, A051765 oraz A052408 można dojść do wniosku, że wraz ze wzrostem liczby skrzyżowań, stosunek liczby węzłów hiperbolicznych do wszystkich węzłów dąży do $1$:
 
@@ -122,60 +208,60 @@ Analizując ciągi A051764, A051765 oraz A052408 można dojść do wniosku, że 
 \normalsize
 \end{figure}
 
-W pracy \cite{malyutin16} A. Malyutin pokazał jednak, że to przypuszczenie jest sprzeczne z~wieloma innymi starymi hipotezami teorii węzłów: \ref{con:malyutin1} -- \ref{con:malyutin4}.
+W pracy \cite{malyutin16} Malutin pokazał jednak, że to przypuszczenie jest sprzeczne z~wieloma innymi starymi hipotezami teorii węzłów: \ref{con:malyutin1} -- \ref{con:malyutin4}.
 
 \begin{conjecture}
     \label{con:malyutin1}
     Indeks skrzyżowaniowy jest addytywny względem sumy spójnej.
+    \index{indeks skrzyżowaniowy}
+    \index{suma spójna}
 \end{conjecture}
 
 (To jest powtórzenie hipotezy \ref{con:crossing_additive}).
-Murasugi dowiódł prawdziwości hipotezy dla węzłów alternujących, w~pracy \cite{murasugi87} jest to wniosek z~dowodu hipotezy Taita.
-Krótko po tym Lickorish, Thistlethwaite powtórzyli to dla węzłów adekwatnych w \cite{lickorish88}.
-Na początku XX wieku Diao \cite{diao04} oraz Gruber \cite{gruber03} niezależnie udowodnili hipotezę \ref{con:malyutin1} dla pewnej szerokiej klasy węzłów, obejmującej wszystkie węzły torusowe oraz wiele węzłów alternujących oraz pewne inne obiekty, których nie chcemy opisywać.
 
 \begin{conjecture}
     Satelita ma większy (w słabszej wersji: nie mniejszy) indeks skrzyżowaniowy niż jego towarzysze.
+    \index{węzeł!satelitarny}
 \end{conjecture}
 
-Lackenby pokazał w~\cite{lackenby14}, że jeśli $K$ jest satelitą z towarzyszem $L$, to $\operatorname{cr} K \ge 10^{-13} \operatorname{cr} L$.
+Lackenby pokazał w~\cite{lackenby14}, że jeśli $K$ jest satelitą z~towarzyszem $L$, to $\crossing K \ge 10^{-13} \crossing L$.
 
 \begin{conjecture}
-    Węzeł złożony ma większy (w słabszej wersji: nie mniejszy) indeks skrzyżowaniowy niż jego faktory.
+    \label{con:malyutin3}
+    Węzeł złożony ma większy (w słabszej wersji: nie mniejszy) indeks skrzyżowaniowy niż jego składniki.
+    \index{węzeł!pierwszy}
 \end{conjecture}
 
-Mówimy, że węzeł pierwszy $P$ jest $\lambda$-regularny, jeśli $cr K \ge \lambda \cdot cr P$ za każdym razem, gdy węzeł $P$ jest faktorem węzła $K$.
+Mówimy, że węzeł pierwszy $P$ jest $\lambda$-regularny, jeśli $\crossing K \ge \lambda \cdot \crossing P$ za każdym razem, gdy węzeł $P$ jest składnikiem węzła $K$.
+\index{węzeł!regularny}
 Zatem hipotezę można wysłowić krótko ,,węzły pierwsze są $1$-regularne''.
-Na podstawie prac Murasugiego, Kauffmana i~Thistlethwaite'a z~końca lat 80. wiemy, że zachodzi dla węzłów alternujących.
-Diao pokazał w \cite[tw. 3.8]{diao04}, że torusowe węzły także są $1$-regularne, natomiast Lackenby przedstawił w~\cite{lackenby09} rozumowanie, dlaczego wszystkie węzły są $1/152$-regularne.
-Pisaliśmy o tym w podsekcji \ref{sub:crossing_number}.
+Z tego, co pisaliśmy po hipotezie \ref{con:crossing_additive} wynika, że hipoteza \ref{con:malyutin1} jest prawdziwa w~klasie węzłów alternujących czy torusowych i~że wszystkie węzły są $1/152$-regularne.
+% diao04 -> tw. 3.8
 
 \begin{conjecture}
     \label{con:malyutin4}
     Węzły pierwsze są $2/3$-regularne.
 \end{conjecture}
 
-Rozwiązanie zagadki przyniosła praca samego Malyutina \cite{malyutin19} opublikowana latem 2019 roku, przynajmniej dla splotów.
+Rozwiązanie zagadki przyniosła praca samego Malutina \cite{malyutin19} opublikowana latem 2019 roku, przynajmniej dla splotów.
 Pokazał w~niej, że jeśli oznaczymy liczbę splotów pierwszych i~nierozszczepialnych o~$n$ lub mniej skrzyżowaniach przez $P_n$, zaś liczbę hiperbolicznych splotów, także o~$n$ lub mniej skrzyżowaniach, przez $H_n$, prawdziwe będzie oszacowanie
+\index{splot!rozszczepialny}
+\index{węzeł!pierwszy}
 \begin{equation}
     \liminf_{n \to \infty} \frac{H_n}{P_n} < 1 - 10^{-13}.
 \end{equation}
 
-% Every non-split, prime, alternating link that is not a~torus link is hyperbolic by a~result of William Menasco.
-
-% https://arxiv.org/abs/math/0309466
-% https://arxiv.org/abs/math/0311380
-
 Czwarty rozdział książki \cite{purcell2020} zawiera ćwiczenie, by znaleźć dwuparametrową rodzinę zupełnych struktur hiperbolicznych na dziurawym torusie oraz czterokrotnie dziurawej sferze.
-Elastyczność tego rodzaju nie występuje w przestrzeniach wyższych wymiarów.
-Z twierdzenia o sztywności, w wersji algebraicznej:
+Elastyczność tego rodzaju nie występuje w~przestrzeniach wyższych wymiarów.
+Z~twierdzenia o~sztywności, w~wersji algebraicznej:
 
 \begin{theorem}[Mostow-Prasad]
     \index{twierdzenie!o sztywności}
-    Niech $\Gamma_1, \Gamma_2$ będą dyskretnymi podgrupami grupy izometrii $\mathbb H^n$ dla $n \ge 3$ takimi, że ilorazy $\mathbb H^n$ mają skończone objętości.
+    Niech $\Gamma_1, \Gamma_2$ będą dyskretnymi podgrupami grupy izometrii $\mathbb H^n$ dla $n \ge 3$ takimi, że ilorazy $\mathbb H^n/\Gamma_i$ mają skończone objętości.
     Załóżmy też, że istnieje izomorfizm grup $\varphi \colon \Gamma_1 \to \Gamma_2$.
     Wtedy podgrupy $\Gamma_1, \Gamma_2$ są sprzężone.
 \end{theorem}
+\index{twierdzenie!Mostowa-Prasada}
 
 albo geometrycznej:
 
@@ -185,66 +271,40 @@ albo geometrycznej:
 \end{theorem}
 
 wynika, że jeśli znaleźliśmy jakąś zupełną strukturę hiperboliczną na dopełnieniu splotu, to innych już nie ma. 
-Dzięki temu niezmienniki mające korzenie w geometrii hiperbolicznej mają przyjemne własności.
-Patrz także oryginalne prace: Mostowa \cite{mostow73}, Prasada \cite{prasad73}.
 
 \begin{proof}
-    Thurston przedstawił szkic rozumowania w sekcji 5.9 swoich notatek, na bazie których powstała później książka \cite{thurston97}.
-    Inne szczegółowe rozumowanie można znaleźć w rozdziale C podręcznika \cite{benedetti92}.
+    Thurston przedstawił szkic rozumowania w~sekcji 5.9 swoich notatek, na bazie których powstała później książka \cite{thurston97}.
+    Inne szczegółowe rozumowanie można znaleźć w~rozdziale C podręcznika \cite{benedetti92}.
+    Patrz także oryginalne prace: Mostowa \cite{mostow73}, Prasada \cite{prasad73}.
 \end{proof}
 
-% luźno związane: http://www.deltami.edu.pl/temat/matematyka/topologia/2012/12/27/%William_Thurston_i_hipoteza_geometryzacyjna/
-
-\begin{proposition}
-    Grupa symetrii węzła hiperbolicznego jest skończona: cykliczna lub diedralna.
-\end{proposition}
-
-Uwaga -- nie chodzi tutaj ani o grupę węzła, ani grupę kolorującą, ale prawdopodobnie grupę automorfizmów zewnętrznych grupy $\pi_1(S^3 \setminus K)$.
-
-\begin{tobedone} % proof
-    Pierwszy był Riley w artykule \cite{riley75}, można też zapoznać się z późniejszą pracą \cite{kodama92} Kodamy.
-
-    Kawauchi pisze w \cite[s. 130]{kawauchi96}, że chodzi o grupę zewnętrznych automorfizmów $\pi(K)$ albo izometrie dopełnienia węzła, to jest dobry trop.
-
-    Patrz też Kawauchi, s. 130: proposition 10.6.3.
-\end{tobedone} % proof
-
-% objętość
-
 Twierdzenie Mostowa-Prasada pozwala nam na wprowadzenie nowych niezmienników splotów hiperbolicznych: wystarczy wziąć dowolny geometryczny niezmiennik dopełnienia węzła.
-Najważniejszym z nich wydaje się być objętość.
+Najważniejszym z~nich wydaje się być objętość.
 
+\index{objętość|(}
 \begin{definition}[objętość]
     Niech $L$ będzie splotem hiperbolicznym.
-    Objętość dopełnienia $L$ względem zupełnej metryki hiperbolicznej nazywamy objętością splotu $L$ i oznaczamy $\volume L$.
+    Objętość dopełnienia $L$ względem zupełnej metryki hiperbolicznej nazywamy objętością splotu $L$ i~oznaczamy $\volume L$.
 \end{definition}
 
 Objętość jest zawsze skończoną liczbą rzeczywistą.
 Dla wygody przyjmuje się czasami, że objętość węzłów torusowych oraz satelitarnych wynosi $0$.
-Komputerowy program SnapPea napisany przez J. Weeksa pozwala na wyznaczenie objętości dowolnego splotu o rozsądnej ilości skrzyżowań.
+Komputerowy program SnapPea napisany przez Weeksa pozwala na wyznaczenie objętości dowolnego splotu o~rozsądnej ilości skrzyżowań.
+\index{SnapPea}
 
 \begin{example}
-    $\volume 4_1 \approx 2.0298832$.
+    $\volume 4_1 = -6 \int_{0}^{\pi/3} \log |2\sin \theta| \,\mathrm{d}\theta \approx 2.0298832$.
 \end{example}
 
-Patrz też ciąg A091518 w bazie danych OEIS.
-
-\begin{proposition}
-    \label{prp:eight_least_hyperbolic}
-    Żaden węzeł nie ma mniejszej objętości hiperbolicznej od ósemki.
-\end{proposition}
-
-\begin{proof}
-    Cao, Meyerhoff w \cite{cao01} przeanalizowali pakowania horokul w uniwersalnym nakryciu związanym z rozmaitościami.
-    Doszli do wniosku, że nie ma tam dostatecznieo wolnego miejsca, jeżeli ostrze (cusp) nie jest odpowiedniego rozmiaru.
-    Trzykrotnie wspierają się przy tym pomocą komputera, by sprawdzić, że określone warunki są spełnione we wszystkich punktach danej przestrzeni parametrów.
-\end{proof}
+Patrz też ciąg A091518 w~bazie danych OEIS.
+Jak zobaczymy później, żaden węzeł nie ma mniejszej objętości.
 
 \begin{example}
     $\volume 5_2 \approx 2.82812$.
 \end{example}
 
 W encyklopedii Wolfram Mathworld znajduje się informacja, że $5_2$ oraz pewien węzeł o~dwunastu skrzyżowaniach mają tę samą objętość, prawdopodobnie chodzi tu o~$12n_{242}$, który znany jest także jako $(-2, 3, 7)$-precel. 
+\index{węzeł!preclowy!(-2, 3, 7)}
 
 \begin{example}
     $\volume 6_1 \approx 3.16396$.
@@ -263,66 +323,116 @@ W encyklopedii Wolfram Mathworld znajduje się informacja, że $5_2$ oraz pewien
 \end{example}
 
 \begin{example}
-    Niech $K$ będzie jednym z dwóch węzłów w parze Perko.
+    Niech $K$ będzie jednym z~dwóch węzłów w~parze Perko.
     Wtedy $\volume K \approx 5.63877$.
+    \index{para Perko}
 \end{example}
 
 Praca \cite{purcell19} wspomina kilka przyjemnych ograniczeń, jakie musi spełniać objętość.
-Aby je przytoczyć, musimy najpierw zdefiniować dwie stałe: $v_4$ oraz $v_8$, odpowiednio objętość idealnego czworościanu (ośmiościanu) foremnego w $\mathbb H^3$.
+Aby je przytoczyć, musimy najpierw zdefiniować dwie stałe: $v_4$ oraz $v_8$, odpowiednio objętość idealnego czworościanu\footnote{Albo rozmaitości Giesekinga, powstałej z czworościanu przez usunięcie  wierzchołków i sklejenie ściany 012 z 310 oraz 023 z 321. Dopełnienie ósemki jest podwójnym nakryciem tej rozmaitości.\index{rozmaitość Giesekinga}} oraz ośmiościanu foremnego w~$\mathbb H^3$.
 Mamy
 \begin{align}
-    v_4 & = 1.0149\ldots \\
-    v_8 & = 3.6638\ldots
+    v_4 & = \int_{0}^{2\pi/3} \log(2 \cos(\theta/2)) \,\mathrm{d}\theta \approx 1.01494\,16064, \\
+    % https://en.wikipedia.org/wiki/Gieseking_manifold
+    v_8 & = 4 \sum_{n=0}^\infty \frac{(-1)^n}{(2n+1)^2} \approx 3.66386\,23767. % ... 08876060218414059729536443096597497126688537065 ... \ldots
 \end{align}
 
-I tak najpierw Adams pokazał w swojej rozprawie doktorskiej \cite{adams83}:
+I tak najpierw Adams pokazał w~swojej rozprawie doktorskiej \cite{adams83}:
 
 \begin{proposition}
-    Niech $D$ będzie diagramem hiperbolicznego splotu o $\operatorname{cr} L \ge 5$ skrzyżowaniach.
+    Niech $D$ będzie diagramem hiperbolicznego splotu o~$\crossing L \ge 5$ skrzyżowaniach.
     Wtedy
     \begin{equation}
-        \volume K \le 4 (\operatorname{cr} D - 4) v_4.
+        \volume L \le 4 (\crossing D - 4) v_4.
     \end{equation} 
 \end{proposition}
 
-A trzy dekady później poprawił wswój wynik w \cite{adams13}:
+A trzy dekady później poprawił wswój wynik w~\cite{adams13}:
 
 \begin{proposition}
-    Niech $D$ będzie diagramem hiperbolicznego splotu o $\operatorname{cr} L \ge 5$ skrzyżowaniach.
+    Niech $D$ będzie diagramem hiperbolicznego splotu o~$\crossing L \ge 5$ skrzyżowaniach.
     Wtedy
     \begin{equation}
-        \volume K \le (\operatorname{cr} D - 5) v_8 + 4v_4.
+        \volume L \le (\crossing D - 5) v_8 + 4v_4.
     \end{equation} 
 \end{proposition}
 
-Jego metoda polega na podzieleniu dopełnienia splotu na czterościany i ośmiościany oraz policzeniu ich.
-To, w połączeniu ze znanymi ograniczeniam na objętość ,,cegiełek'', wystarcza.
-Podział na ośmiościany zaproponował Dylan Thurston (nie mylić z Williamem!).
+Jego metoda polega na podzieleniu dopełnienia splotu na czterościany i~ośmiościany oraz policzeniu ich.
+To, w~połączeniu ze znanymi ograniczeniam na objętość ,,cegiełek'', wystarcza.
+Podział na ośmiościany zaproponował Dylan (nie William!) Thurston.
+% wiem to z purcell19
 
-% Wiki
+Thurston zauważył \cite[s. 365]{thurston82}, że tylko skończenie wiele hiperbolicznych 3-rozmaitości może mieć tę samą objętość -- wynika to z~prac Gromowa i~Jørgensena.
+Następnie Wielenberg przedstawił w~\cite{wielenberg81} przykłady pokazujące, że istnieją dowolnie duże kolizje wśród węzłów hiperbolicznych: pewne podgrupy klasycznej grupy Picarda działają jako izometrie na górną półprzestrzestrzeń hiperboliczną wymiaru 3 mają podstawowe wielościany, które są takie same jako zbiory, ale różnią się jeśli chodzi o~utożsamienie ze sobą ścian.
 
-Thurston zauważył, że tylko skończenie wiele hiperbolicznych 3-rozmaitości może mieć tę samą objętość -- wynika to z prac Gromova i Jørgensena.
-Następnie Wielenberg przedstawił w~\cite{wielenberg81} przykłady pokazujące, że istnieją dowolnie duże kolizje wśród węzłów hiperbolicznych: pewne podgrupy klasycznej grupy Picarda działają  na półprzestrzeni hiperbolicznej wymiaru 3 i mają przy tym fundamentalne wielościany identyczne jako zbiory, ale znacząco różne w~sposobie, w jaki zidentyfikowano ich ściany.
-
-Na przykład mutacja węzła hiperbolicznego nigdy nie zmienia objętości \cite{ruberman87}, \cite[s. 124]{adams94}.
-Praktyka pokazuje jednak, że niezmiennik dobrze wspomaga proces tablicowania węzłów.
+Chociaż mutanty mają tę samą objętość hiperboliczną (fakt \ref{mutants_the_same_volume}), to praktyka pokazuje, że ten niezmiennik dobrze wspomaga proces tablicowania węzłów.
 
 \begin{proposition}
-    Objętości hiperboliczne 3-rozmaitości tworzą dobrze uporządkowany podzbiór $\R$, typu $\omega^\omega$.
+    Zbiór
+    $$\{\volume K: K \textrm{ jest hiperboliczny}\} \subseteq \R$$
+    jest dobrze uporządkowany, typu porządkowego $\omega^\omega$.
 \end{proposition}
 
 \begin{proof}
-    Wikipedia twierdzi, że dowód jest gdzieś w \cite{neumann85}, ja tego nie widzę.
+    Wikipedia twierdzi, że dowód jest gdzieś w~\cite{neumann85}, ja tego nie widzę.
+    % wikipedia - angielski artykuł "hyperbolic volume"
+    Może zamiast tego da się go znaleźć w notatkach Thurstona \cite{thurston02}
+    % https://arxiv.org/pdf/1203.6551.pdf: Thurston and Jørgensen (see [43]) showed that the set of volumes of finite volume orientable complete hyperbolic 3-manifolds is a closed, non-discrete, well ordered subset of R>0 of order type ω^ω. 
 \end{proof}
 
-W dowolnej rodzinie węzłów istnieje element o najmniejszej objętości.
-Dla orientowalnych, niezwartych hiperbolicznych 3-rozmaitości, klasy obejmującej dopełnienia hiperbolicznych węzłów, najmniejszą objętość posiada dopełnienie ósemki oraz jej bliźniak, otrzymany przez $(5, 1)$-chirurgię jednego z ogniw splotu Whiteheada.
-To jest fakt \ref{prp:eight_least_hyperbolic}.
-Natomiast wśród orientowalnych 3-rozmaitości o dwóch ostrzach najmniejszą objętość, ma $(-2, 3, 8)$-precel oraz splot Whiteheada: Agol pokazał to w \cite{agol10}.
-Ich objętość wynosi
-\begin{equation}
-    v_8 = 4 \sum_{n=0}^\infty \frac{(-1)^n}{(2n+1)^2} \approx 3.6638623767. % ... 08876060218414059729536443096597497126688537065 ...
-\end{equation}
-Yoshida \cite{yoshida13} znalazł splot z najmniejszą objętością równą $2v_8$ wśród tych o 4 ogniwach, sploty o 3 ogniwach nie są zbyt dobrze zrozumiane.
+W dowolnej rodzinie węzłów istnieje element o~najmniejszej objętości.
+Przytoczę teraz przykłady konkretnych rodzin i najmniejszych węzłów, za \cite[s. 16-17]{purcell19} oraz \cite[s. 1-99]{hodgson13}.
+
+\begin{proposition}
+    \label{prp:eight_least_hyperbolic}
+    Żaden węzeł nie ma mniejszej objętości hiperbolicznej od ósemki.
+\end{proposition}
+
+\begin{proof}
+    Cao, Meyerhoff w~\cite{cao01} przeanalizowali pakowania horokul w~uniwersalnym nakryciu związanym z~rozmaitościami.
+    Doszli do wniosku, że nie ma tam dostatecznieo wolnego miejsca, jeżeli ostrze (cusp) nie jest odpowiedniego rozmiaru.
+    Trzykrotnie wspierają się przy tym pomocą komputera, by sprawdzić, że określone warunki są spełnione we wszystkich punktach danej przestrzeni parametrów.
+\end{proof}
+
+\begin{proposition}
+    Wśród orientowalnych 3-rozmaitości z ostrzem\footnote{cusped manifold -- niezwarte, zupełne hiperboliczne rozmaitości ze skończoną objętością Riemanna} najmniejszą objętość posiada dopełnienie ósemki oraz jej bliźniak, otrzymany przez $(5, 1)$-chirurgię jednego z~ogniw splotu Whiteheada.
+\index{splot Whiteheada}%
+\index{ósemka}%
+% sformułowanie wygląda jak z "THE MINIMAL VOLUME ORIENTABLE HYPERBOLIC 3-MANIFOLD WITH 4 CUSPS"
+\end{proposition}
+
+Klasa rozmaitości wspomniana w fakcie obejmuje dopełnienia hiperbolicznych węzłów.
+
+% tak - https://arxiv.org/pdf/1203.6551.pdf mówi, że cao-meyerhoff znali obydwa węzły/sploty
+% aczkolwiek nie mam pojęcia skąd to wziąłem
+
+% Gabai-Meyerhoff-Milley [21] determined the first 10 low volume orientable cusped hyperbolic 3-manifolds. This shows that the next 4 limit volumes are:
+
+\begin{proposition}
+    Wśród orientowalnych 3-rozmaitości o~dwóch ostrzach najmniejszą objętość mają splot Whiteheada oraz $(-2, 3, 8)$-precel.
+\index{splot!Whiteheada}%
+\index{węzeł!preclowy!(-2, 3, 8)}%
+\end{proposition}
+
+\begin{proof}
+    Agol pokazał to w~\cite{agol10}.
+    Ich objętość wynosi $v_8$.
+\end{proof}
+
+Przypadek trzech ostrz nie jest zbyt dobrze zrozumiany.
+
+\begin{proposition}
+    Wśród orientowalnych 3-rozmaitości o~czterech ostrzach najmniejszą objętość posiada dopełnienie splotu $8_4^2$.
+\end{proposition}
+
+Jego objętość wynosi $2v_8$.
+
+\begin{proof}
+    Rozumowanie Yoshidy \cite{yoshida13} oparte o pracę Agola.
+\end{proof}
+
+\index{objętość|)}
+
+\index{węzeł!hiperboliczny|)}
 
 % Koniec sekcji Węzły hiperboliczne
