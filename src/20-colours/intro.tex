@@ -7,12 +7,14 @@ Nawet ten ostatni wariant kolorowania nie stanowi idealnego narzędzia do klasyf
 Mówimy, że nie jest zupeły: istnieją różne węzły, którym przypisuje te same wartości, czyli ich nie odróżnia.
 Problem ten będzie powtarzać się dla prawie wszystkich późniejszych niezmienników, z wyjątkiem dopiero całki Koncewicza (patrz sekcja \ref{sec:vassiliev}).
 
-\section{Kolorowanie splotów} % (fold)
+\section{Kolorowanie splotów}
+\index{kolorowalność|(}
 
 Przygodę z kolorowaniami rozpoczyna się zazwyczaj od trójkolorowalności.
 Jest to pewna cecha diagramów, którą można posiadać albo nie.
 
 \begin{definition}[trójkolorowalność]
+\index{trójkolorowalność}%
     Niech $D$ będzie diagramem splotu $L$, którego łuki występują w~trzech kolorach.
     Jeżeli spełnione są następujące warunki:
     \begin{itemize}[leftmargin=*]
@@ -29,10 +31,11 @@ Jest to pewna cecha diagramów, którą można posiadać albo nie.
     Węzły te są zatem od siebie różne.
 \end{example}
 
-Dla własnej wygody jako kolorów używać będziemy kolejnych liczb naturalnych $0, 1, \ldots, n$.
+Dla wygody jako kolorów używać będziemy kolejnych liczb naturalnych $0, 1, \ldots, n-1$.
 Pozwala to zapisać warunek kolorowalności równaniem algebraicznym, niezależnie od ilości użytych kolorów.
 
 \begin{definition}[kolorowanie]
+\index{równanie kolorujące}%
     \label{def:colouring_equation}
     Niech $L$ będzie splotem, zaś $n$ liczbą naturalną.
     Mówimy, że splot $L$ jest kolorowalny modulo $n$, jeśli posiada diagram, którego włóknom można przypisać liczby całkowite $0, \ldots, n - 1$ tak, by
@@ -158,7 +161,7 @@ Dowód faktu \ref{prp:colouring_invariance} pokazuje coś więcej: liczba koloro
 
 \begin{lemma}
     \label{lem:colouring_arc}
-    Niech $D$ będzie diagramem z definicji \ref{def:colouring_equation} z wybranym łukiem, zaś $k \in \{0, \ldots, n - 1\}$ pewnym kolorem.
+    Ustalmy diagram $D$ dla węzła z~wybranym łukiem, oraz kolor $k \in \{0, \ldots, n - 1\}$.
     Bez straty ogólności możemy założyć, że krótki łuk jest koloru $k$.
 \end{lemma}
 
@@ -188,16 +191,21 @@ Kolorem tym zazwyczaj jest $0$.
 \end{proof}
 
 Sploty rozszczepialne są $n$-kolorowalne dla każdego $n \ge 2$, można skorzystać z~tego samego schematu kolorowania.
+\index{splot!rozszczepialny}%
 Pierścienie Boromeuszy nie kolorują się modulo trzy, nie są zatem rozszczepialne.
 % TODO: pierścienie Boromeuszy nie są nigdzie zdefiniowane
-Sploty, które nie są kolorowalne modulo $n$ dla każdej liczby $n \in \N$ nazywa się czasem niewidzialnymi, dwa węzły do dziesięciu skrzyżowań mają tę własność: $10_{124}$ oraz $10_{153}$.
+\index{pierścienie Boromeuszy}%
+Sploty, które nie są kolorowalne modulo $n$ dla żadnej liczby $n \in \N$ nazywa się czasem niewidzialnymi, dwa węzły do dziesięciu skrzyżowań mają tę własność: $10_{124}$ oraz $10_{153}$.
+\index{węzeł!niewidzialny}%
 
 Pokażemy teraz, że suma równań kolorujących z dobrze wybranymi znakami jest postaci $0 \equiv 0 \mod n$.
-Będziemy potrzebować kilku pomocniczych definicji.
-Każdy diagram węzła rozcina płaszczyznę na obszary, z~czego jeden jest nieograniczony.
+Jest to składnik w dowodzie na to, że wyznacznik determinuje kolorowalność splotu.
+Będziemy potrzebować pomocniczej definicji.
 
 \begin{definition}[uszachowienie]
-    Przyporządkowanie każdemu z~obszarów, na jakie diagram rozcina płaszczyznę, jednego z~dwóch kolorów tak, by sąsiadujące ze sobą obszary były różnych kolorów, nazywamy uszachowieniem.
+\index{uszachowienie}%
+	Diagram rozcina płaszczyznę na obszary.
+	Przyporządkowanie im jednego z~dwóch kolorów tak, by sąsiadujące ze sobą obszary były zawsze różnych kolorów, nazywamy uszachowieniem diagramu.
 \end{definition}
 
 Ustalmy węzeł $K$ oraz dowolne uszachowienie dla jego diagramu.
@@ -240,8 +248,6 @@ Skojarzmy z~każdym skrzyżowaniem równanie kolorujące, zgodnie z~poniższym s
     Sumą równań kolorujących o dobrze wybranych znakach jest $0 \equiv 0 \mod n$.
 \end{proposition}
 
-Będziemy potrzebować tego do pokazania, że wyznacznik determinuje kolorowalność splotu.
-
 \begin{proof}
     Każde równanie kolorujące składa się z~czterech wyrazów, po jednym od każdej nici, która spotyka się w~danym skrzyżowaniu.
     Nić biegnie między dwoma skrzyżowaniami, więc suma wszystkich równań kolorujących składa się z~par składników, po jednej parze na nić.
@@ -263,7 +269,9 @@ Liczbę kolorowań splotu $L$ modulo $n$, trywialnych lub nie, oznaczamy przez $
     Suma spójna $n$ trójlistników ma $3^{n+1}$, trywialnych lub nie, $3$-kolorowań.
 \end{proof}
 
-Jako kolorów użyjemy teraz elementów $g_1, \ldots, g_n$ pewnej skończonej grupy $G$.
+Dotychczas kolorowaliśmy diagramy węzłów liczbami $0, 1, 2, \ldots, n-1$, czyli elementami grupy $\Z/n\Z$, ale nic nie stoi na przeszkodzie, żeby próbować użyć dowolnej innej skończonej grupy.
+
+\index{etykietowanie|(}
 
 \begin{definition}[etykietowanie]
     Mówimy, że zorientowany węzeł $K$ jest etykietowalny grupą $G$ generowaną przez elementy $g_1, \ldots, g_n$, jeśli posiada diagram, którego włóknom przypisano elementy $g_1, \ldots, g_n$ tak, by równanie $gk=hg$ było spełnione przy każdym skrzyżowaniu ($g$: włókno biegnące górą, $k$: bo jego lewej stronie, $h$: po prawej).
@@ -317,6 +325,7 @@ Elementy tej grupy to $1, r, r^2, \ldots, r^{p-1}, s, sr, \ldots, sr^{p-1}$.
 
 Kolorowania definiowano kiedyś jako surjekcje $\rho \colon \pi \to D_{2n}$ z~grupy podstawowej.
 Jak mówi prezentacja Wirtingera, grupa splotu generowana jest przez ścieżki z~punktu bazowego w~$S^3$ do brzegu rurowego otoczenia splotu, wokół południka i~znowu do bazowego punktu.
+\index{prezentacja Wirtingera}%
 Fox zauważył, że z~surjektywności $\rho$ wynika, iż generatory mapują się na symetrie osiowe $sr^k$.
 Ponieważ istnieje wzajemnie jednoznaczna odpowiedniość między generatorami grupy splotu oraz łukami diagramu, każdemu możemy przypisać liczbę całkowitą $k$.
 Etykietowania są więc uogólnieniem kolorowań.
@@ -330,10 +339,14 @@ Rozumowanie, które przedstawiliśmy, prowadzi do prostej klasyfikacji grup, kt�
 Historycznie, prezentacja Wirtingera była pierwsza, zaś etykietowania odkryto później.
 
 \begin{proposition}[Perko]
-    Niech $K$ będzie węzłem etykietowalnym grupą $S_3$.
-    Wtedy $K$ jest też etykietowalny grupą $S_4$.
+    Niech $K$ będzie węzłem.
+    Jeżeli jest etykietowalny grupą $S_3$, to jest etykietowalny także grupą $S_4$.
 \end{proposition}
 
 Nie znam innych nietrywialnych faktów dotyczących etykietowań.
+
+\index{etykietowanie|)}
+
+\index{kolorowalność|)}
 
 % Koniec sekcji Kolorowanie splotów
