@@ -61,6 +61,7 @@ Genus oraz charakterystyka Eulera są ze sobą związane:
 \end{proposition}
 
 Nas interesują głównie powierzchnie Seiferta węzłów:
+\index{powierzchnia Seiferta}
 
 \begin{proposition}
     \label{prp:seifert_euler_characteristics}
@@ -86,6 +87,7 @@ Reszta tej podsekcji nie jest wymagana do zrozumienia macierzy Seiferta, przyjrz
 Znalezienie 3-genusu dowolnego węzła sprawia te same trudności, co wyznaczenie jego liczby gordyjskiej.
 Dowolna powierzchnia Seiferta zadaje ograniczenie z góry.
 Z dołu 3-genus można szacować przy użyciu wielomianu Alexandera:
+\index{wielomian Alexandera}
 
 \begin{proposition}
     \label{prp:alexander_genus}
@@ -113,7 +115,7 @@ Floer zdefiniował w~\cite{floer90} przestrzeń wektorową nazywaną teraz homol
 %~kanoniczną gradację modulo $2$ oraz
 \index{homologia!Floera}
 Ta homologia rozkłada się na sumę prostą przestrzeni własnych wyróżnionego endomorfizmu, ich charakterystyki Eulera są współczynnikami wielomianu Alexandera.
-Pozwala to na dokładniejsze szacowanie genusu węzła, patrz prace Ozsváth, Szabó \cite{szabo03} i Ghigginiego \cite{ghiggini08}.
+Pozwala to na dokładniejsze szacowanie genusu węzła, patrz prace Ozsvátha, Szabó \cite{szabo03} i Ghigginiego \cite{ghiggini08}.
 
 Z góry genus ograniczony jest przez kilka klasycznych niezmienników numerycznych.
 Zanim to pokażemy, przytoczymy techniczny lemat udowodniony przez Yamadę (\cite{yamada87}):
@@ -122,7 +124,8 @@ Zanim to pokażemy, przytoczymy techniczny lemat udowodniony przez Yamadę (\cit
     \label{prp:seifert_circles_braid}
     Niech $L$ będzie splotem, zaś $\operatorname{s} L$ minimalną liczbą okręgów Seiferta, które dostajemy ze wszystkich możliwych diagramów splotu $L$.
     Wtedy $\operatorname{s} L = \braid L$ jest równe indeksowi warkoczowemu.
-    \end{proposition}
+\index{indeks warkoczowy}%
+\end{proposition}
 
 Powyższe stwierdzenie występuje bez dowodu (bez?) w \cite[s. 17]{kawauchi96}.
 
@@ -152,6 +155,7 @@ Powyższe stwierdzenie występuje bez dowodu (bez?) w \cite[s. 17]{kawauchi96}.
     \label{cor:crossing_genus}
     Niech $K$ będzie węzłem.
     Wtedy $\crossing K \ge 2 \genus K$.
+\index{indeks skrzyżowaniowy}
 \end{corollary}
 
 Czy w definicji genusu można ograniczyć się do powierzchni Seiferta, które pochodzą od algorytmu Seiferta?
@@ -171,7 +175,7 @@ Jak sam pisze, sklasyfikowane wcześniej węzły o~genusie (kanonicznym) 1 okaza
 Pod koniec lat pięćdziesiątych Crowell i~Murasugi niezależnie zauważyli, że algorytm Seiferta zastosowany do alternującego diagramu zawsze daje powierzchnię o~minimalnej powierzchni.
 Ich kombinatoryczne uzasadnienie było dość zawiłe, elementarny dowód podał Gabai w \cite{gabai86}.
 
-Dubel trójlistnika ma genus równy $1$, ale algorytm Seiferta zastosowany wobec węzła produkuje powierzchnie o genusie co najmniej $3$, jak przewiduje ograniczenie znalezione przez Mortona w \cite{morton86} jako twierdzenie 2:
+Dubel trójlistnika ma genus równy $1$, ale algorytm Seiferta zastosowany wobec węzła produkuje powierzchnie o genusie co najmniej $3$, jak przewiduje ograniczenie znalezione przez Mortona w \cite[twierdzenie 2]{morton86}:
 
 \begin{proposition}
     Niech $P(v, z)$ będzie wersją wielomianu HOMFLY spełniającą zależność
@@ -182,14 +186,26 @@ Dubel trójlistnika ma genus równy $1$, ale algorytm Seiferta zastosowany wobec
 \end{proposition}
 
 Nierówność Mortona jest równością dla wielu klas węzłów, w tym alternujących (Crowell, Murasugi), jednorodnych (które stanowią uogólnienie węzłów alternujących, Cromwell w \cite{cromwell89}), whiteheadowskich dubli węzłów dwumostowych (Nakamura w \cite{nakamura06}, Tripp w \cite{tripp02}) albo precli (Brittenham, Jensen \cite{brittenham06}).
+\index{nierówność Mortona}%
+\index{węzeł!alternujący}%
+\index{węzeł!jednorodny}%
+\index{dubel Whiteheada}%
+\index{węzeł!dwumostowy}%
+\index{węzeł!preclowy}%
 Stojmenow pokazał, że staje się równością dla węzłów o co najwyżej 12 skrzyżowaniach i znalazł przykład węzła, dla którego jest ostra.
 
 \begin{definition}[genus wolny]
+\index{genus!wolny}
     Niech $K$ będzie węzłem.
-    Minimalny genus spośród powierzchni Seiferta węzła $K$, których dopełnienie w 3-sferze jest \emph{ciałem z rączkami} (handlebody, czyli ma wolną grupę podstawową), nazywamy genusem wolnym i~oznaczamy $g_f$.
+    Minimalny genus spośród powierzchni Seiferta węzła $K$, których dopełnienie w 3-sferze jest ciałem z rączkami, nazywamy genusem wolnym i~oznaczamy $g_f$.
+\index{ciało z rączkami}
 \end{definition}
 
-Dopełnienie powierzchni Seiferta jest zawsze handlebody, dlatego też mamy oczywiste nierówności $g \le g_f \le g_c$.
+Dopełnienie powierzchni Seiferta jest zawsze ciałem z rączkami, więc mamy oczywiste nierówności
+\begin{equation}
+	g \le g_f \le g_c.
+\end{equation}
+
 Morton w 1986 roku pokazał, że genus pewnych węzłów nie jest realizowany przez żaden diagram do którego stosuje się algorytm Seiferta, choćby $10_{165}$.
 Patrz \cite{morton86}.
 
@@ -319,6 +335,7 @@ Przebiega w dwóch etapach: najpierw pokazuje się, że genus sumy nie jest wię
 \end{corollary}
 
 Powrócimy teraz do węzłów pierwszych (definicja \ref{def:prime_knot}).
+\index{węzeł!pierwszy}%
 
 \begin{proposition}
     Niech $K$ będzie węzłem.
@@ -345,8 +362,8 @@ Implikacja odwrotna jest fałszywa: pięciolistnik jest pierwszy, ale jego genus
 
     Jeśli $K$ jest pierwszy, nie ma czego dowodzić.
     W przeciwnym razie jest równoważny z~$J_1 \shrap J_2$, gdzie $J_1$ i~$J_2$ są nietrywialne.
-    Mamy $g(J_1)+g(J_2)=g(K)$ oraz $g(J_1),g(J_2)\geqslant 1$.
-    Zatem $g(J_1),g(J_2)\leqslant n$.
+    Mamy $g(J_1) + g(J_2) = g(K)$ oraz $g(J_1),g(J_2) \ge 1$.
+    Zatem $g(J_1), g(J_2) \le n$.
     Na mocy hipotezy indukcyjnej, $J_1$ oraz $J_2$ są równoważne sumom
     \[
         J_1 \cong K_1\#\cdots\# K_s,\qquad
@@ -356,11 +373,12 @@ Implikacja odwrotna jest fałszywa: pięciolistnik jest pierwszy, ale jego genus
     Zatem $K$ jest równoważny z~$K_1\#\cdots\# K_r$, co kończy dowód.
 \end{proof}
 
-Nasz aparat matematyczny jest niedostatecznie rozwinięty, by udowodnić jedyność rozkładu.
+Nasz aparat matematyczny jest niedostatecznie rozwinięty, by móc udowodnić jedyność rozkładu.
 
 \begin{theorem}[Schubert, 1949]
-
-    Każdy różny od niewęzła węzeł rozkłada się na węzły pierwsze, z~dokładnością do kolejności składników, jednoznacznie.
+	Każdy nietrywialny węzeł rozkłada się na węzły pierwsze.
+	Rozkład jest, z dokładnością do kolejności składników, jednoznaczny.
+\index{węzeł!pierwszy}%
 \end{theorem}
 
 Schubert podał geometryczny dowód oparty o powierzchnie Seiferta; wyraził go w języku PL-rozmaitości (\cite{schubert49}), ale niedużym wysiłkiem można dokonać adaptacji do gładkiego świata.
@@ -450,6 +468,5 @@ Hashizume \cite{hashizume58} rozszeszył wyniki Schuberta do splotów.
 \end{proof}
 
 \index{genus|)}
-
 
 % Koniec podsekcji Genus
