@@ -5,15 +5,15 @@ Znacznie później (w sekcji \ref{sec:tangle}) określimy jeszcze sumę oraz ilo
 
 \subsection{Lustro i~rewers} % (fold)
 \begin{definition}[lustro]
-    \index{lustro}
-    \index{węzeł!lustrzany}
+\index{lustro}%
+\index{węzeł!lustrzany}%
     Niech $L$ będzie zorientowanym splotem.
     Splot $mL$ powstały przez odbicie splotu $L$ względem dowolnej płaszczyzny nazywamy lustrem.
 \end{definition}
 
 \begin{definition}[rewers]
-    \index{rewers}
-    \index{węzeł!odwrotny}
+\index{rewers}%
+\index{węzeł!odwrotny}%
     Niech $L$ będzie zorientowanym splotem.
     Splot $rL$ powstały przez odwrócenie orientacji wszystkich ogniw splotu $L$ nazywamy rewersem.
 \end{definition}
@@ -44,17 +44,18 @@ Zauważmy, że wykonując powyższe operacje na węźle możemy otrzymać mniej 
 Wyróżniamy pięć typów symetrii węzłów:
 
 \begin{definition}[całkowicie chiralny albo skrętny]
-    \index{węzeł!chiralny (skrętny)}
+\index{węzeł!chiralny}%
+\index{węzeł!skrętny|see {węzeł lustrzany}}%
     Węzły $K$, $rK$, $mK$ są parami nierównoważne. % chiral 9_32
 \end{definition}
 
 \begin{definition}[odwracalny]
-    \index{węzeł!odwracalny}
+    \index{węzeł!odwracalny}%
     Węzły $K \cong rK$ są równoważne. % reversible 3_1
 \end{definition}
 
 \begin{definition}[zwierciadlany ujemnie]
-    \index{węzeł!zwierciadlany}
+    \index{węzeł!zwierciadlany}%
     Węzły $K \cong mrK$ są równoważne. % negative amphicheiral 8_17
 \end{definition}
 
@@ -70,7 +71,8 @@ Wyróżniamy pięć typów symetrii węzłów:
     Węzeł $9_{32}$ jest całkowicie skrętny.
 \end{example}
 
-Całkowicie skrętne są też między innymi wszystkie węzły torusowe.
+% Całkowicie skrętne są też między innymi wszystkie węzły torusowe.
+% TODO: wiki pisze Each nontrivial torus knot is prime[4] and chiral.[2]
 
 \begin{example}
     \label{exm:trefoil_is_chiral}
@@ -217,20 +219,19 @@ Indeksem zaczepienia $\lambda$ węzła $p(K)$ jest różnica między liczbą skr
 
 % Koniec podsekcji Lustro i~rewers
 
-\subsection{Suma niespójna i~suma spójna} % (fold)
-
-Suma spójna węzłów to szczególny przypadek sklejenia dwóch rozmaitości wzdłuż brzegu.
+\subsection{Suma niespójna i~suma spójna}
 
 \begin{definition}[suma niespójna]
+\index{suma niespójna}%
     Niech $L_1$ oraz $L_2$ będą splotami, które leżą po różnych stronach ustalonej płaszczyzny w przestrzeni $\R^3$.
     Teoriomnogościową sumę $L_1 \sqcup L_2$ nazywamy sumą niespójną splotów.
 \end{definition}
 
 \begin{definition}[suma spójna]
-    \index{suma!spójna, niespójna}
+\index{suma!spójna}%
     Niech $K_1, K_2$ będą zorientowanymi węzłami.
     Natnijmy każdy z nich w dwóch punktach tego samego krótkiego łuku, a następnie zszyjmy dwoma łukami, które nie przecinają już istniejących, jak na obrazku.
-    Otrzymany węzeł nazywamy sumą spójną węzłów $K_1$ oraz $K_2$.
+    Otrzymany węzeł nazywamy sumą spójną węzłów $K_1$ oraz $K_2$ i oznaczamy przez $K_1 \shrap K_2$.
 \begin{comment}
     \[
         \begin{tikzpicture}[baseline=-0.65ex,scale=0.1]
@@ -308,41 +309,39 @@ Suma spójna węzłów to szczególny przypadek sklejenia dwóch rozmaitości wz
 \end{comment}
 \end{definition}
 
-\begin{tobedone}
-The band sum operation is a special case of a hyperbolic transformation of a link (in 12.3) and also of a fusion of a link (in 13.1).
-% Kawauchi
-\end{tobedone}
+Pojęcie sumy spójnej węzłów (oraz satelity, opisane później) wprowadził do matematyki Schubert w \cite{schubert49}.
 
-Ważna jest orientacja składników: suma dwóch trójlistników może być węzłem babskim lub prostym.
+Ważna jest orientacja składników: suma dwóch trójlistników może być węzłem babskim lub prostym\footnote{To jedno z niewielu miejsc, gdzie nomenklatura pochodzi od żeglarzy: z~angielskiego \emph{granny knot, square knot}}.
 Uzasadnienie, że te węzły są różne, nie jest łatwym zadaniem.
-Fox pokazał w~1952 roku, że ich dopełnienia nie są homeomorficzne.
-Suma przeciwnie skręconych trójlistników jest plastrowa, natomiast tak samo skręconych nie jest.
+Fox twierdzi, że Seifert wiedział to już w~1933 roku.
+% [S.-B. Preuss. Akad. Wiss. 1933, 811–828]
+Pokazał też w~króciutkim artykule \cite{fox52}, że
+
+\begin{proposition}
+	Dopełnienia węzła babskiego oraz prostego nie są homeomorficzne.
+\end{proposition}
+
+Suma tak samo skręconych trójlistników ma niezerową sygnaturę, więc nie może być plastrowa.
+Natomiast suma przeciwnie skręconych jest plastrowa.\footnote{Nie wiem, skąd to wiem.}
 \index{węzeł!plastrowy}
-(To jedno z niewielu miejsc, gdzie nomenklatura pochodzi od żeglarzy: z~angielskiego \emph{granny knot, square knot}.)
 
-Warunku, by zszywające łuki nie przecinały diagramów, nie można pominąć: Cromwell w~\cite[s.90]{cromwell04} pokazuje przykład dwóch niewęzłów, z~których otrzymano niepoprawnie dwie różne sumy, $6_1$ oraz $8_{20}$.
+Warunku, by zszywające łuki nie przecinały diagramów, nie można pominąć: Cromwell w~\cite[s. 90]{cromwell04} pokazuje przykład dwóch niewęzłów, z~których otrzymano niepoprawnie dwie różne sumy, $6_1$ oraz $8_{20}$.
 
-Uogólnieniem sumy spójnej oraz (nieopisanej w~naszej pracy) operacji \emph{plumbing} jest suma Murasugiego, dobrze wyjaśniona w~czwartym rozdziale książki \cite{kawauchi96}.
-
-\begin{tobedone}
-The Murasugi sum of Seifert surfaces was introduced originally in [Murasugi 1958, 1958',1958"] in order to estimate the degree of the Alexander polynomial of alter- nating links. After that, J. Stallings showed in [Stallings 1978] that a Seifert surface obtained by a Murasugi sum of fiber surfaces is a fiber surface.
-\end{tobedone}
-
-% TODO: \textbf{W topologii rozważa się podobną operację dla dwóch $n$-wymiarowych rozmaitości: z~każdej z nich usuwa się kulę, po czym skleja wzdłuż brzegu kuli. Kiedy zajmujemy się węzłami, nie interesuje nas jednak struktura rozmaitości (gdyż każdy węzeł jest równoważny z okręgiem), ale zanurzenie w~otaczającą przestrzeń.}
+W topologii rozważa się podobną operację dla $n$-rozmaitości: z~każdej z~nich wycina się kulę, po czym skleja wzdłuż brzegowej sfery w~jedną rozmaitość.
+Ale kiedy zajmujemy się węzłami, nie interesuje nas struktura rozmaitości (gdyż każdy węzeł jest homeomorficzny z~okręgiem), tylko zanurzenie w otaczającą przestrzeń.
 
 \begin{proposition}
     Suma spójna węzłów jest dobrze określonym działaniem.
 \end{proposition}
 
-Suma spójna nie jest dobrze określona dla splotów:
-nie istnieje kanoniczny wybór, które ogniwa łączyć ze sobą.
+Suma spójna nie jest dobrze określona dla splotów: nie istnieje kanoniczny wybór, które ogniwa łączyć ze sobą.
 
 \begin{proof}
     Niech dane będą węzły $K_1$ oraz $K_2$
     oraz dwa różne łuki $\gamma_1$, $\gamma_2$,
     których można użyć do konstrukcji sumy spójnej.
-    Skurczmy $K_1$, przeciągnijmy najpierw przez łuk $\gamma_1$, a~następnie wzdłuż węzła $K_2$.
-    Teraz wystarczy odwrócić ten proces z~$\gamma_2$ w~miejscu $\gamma_1$.
+    Skurczmy $K_1$ tak, by był bardzo mały, przeciągnijmy najpierw przez łuk $\gamma_1$, a~następnie wzdłuż węzła $K_2$ do miejsca, gdzie zaczyna się łuk $\gamma_2$.
+    Na koniec odwróćmy proces, z łukiem~$\gamma_2$ w~miejscu łuku $\gamma_1$.
 \end{proof}
 
 \begin{proposition}
@@ -360,7 +359,7 @@ Dużo później pokażemy, że działaniu $\shrap$ brakuje elementów przeciwnyc
 
 \begin{proof}[Niedowód]
     Technika ta zwana jest szwindlem Mazura.
-    \index{szwindel Mazura}
+\index{szwindel Mazura}%
     Załóżmy, że $K \shrap L = \Unknot$ i~dopuśćmy wyjątkowo węzły dzikie.
     Skonstruujmy sumę $K \shrap L \shrap K \shrap \ldots$,
     przy czym kolejne składniki powinny zmniejszać się,
@@ -373,28 +372,26 @@ Dużo później pokażemy, że działaniu $\shrap$ brakuje elementów przeciwnyc
          \simeq \Unknot.
     \end{align*}
     Analogicznie pokazujemy, że $L \simeq \Unknot$.
+    (To jedyne miejsce w~całej książce, gdzie użyte zostają węzły dzikie.
 \end{proof}
 
-\begin{tobedone}
-    % Kawauchi
-    Theorem 3.2.1 (Non-cancellation theorem) A connected sum L1~L2 of any two links L1 and L2 is not a trivial link unless both links L1 and L2 are trivial links.
-The proof (whose details are left to the reader) is essentially obtained from the following two facts:
-(1) If L1 and L2 are non-split links, then L1~L2 is a non-split link.
-(2) If L1~L2 is a trivial knot, then L1 and L2 are trivial knots.
-(1) is directly proved by a cut-and-paste argument of combinatorial topology. (2) is usually obtained from Schubert's result on the additivity of the knot genus (cf. 4.1.5) under the connected sum, i.e., g(Ll~L2) = geLd +g(L2) (which is also proved by a cut-and-paste argument).
-\end{tobedone}
-
 Prawdziwy dowód oparty jest na topologii algebraicznej, stanowi bezpośredni wniosek z~faktów \ref{prp:genus_detects_unknot} oraz \ref{prp:genus_of_sum}.
+O~tym samym dowodzie wspomina Kawauchi \cite[s. 33]{kawauchi96}, a~fakt nazywa twierdzeniem o~nieanulowaniu.
 
-Półgrupę węzłów z~operacją sumy spójnej można ulepszyć do grupy na dwa sposoby:
-albo poprzez zmianę działania, w~jakie jest wyposażona,
-albo osłabiając definicję węzłów równoważnych.
-Drugi pomysł jest dużo lepszy niż pierwszy.
-Na początku lat pięćdziesiątych J. Milnor wprowadził do matematyki pojęcie zgodności
-(z angielskiego \emph{concordance}), które zastąpiło zwykłą równoważność.
-\index{węzeł!zgodny}
+Półgrupę węzłów z~operacją sumy spójnej można uczynić grupą na dwa sposoby: albo zmieniając działanie, albo osłabiając równoważność węzłów.
+Drugi pomysł jest lepszy niż pierwszy.
+Na początku lat pięćdziesiątych Milnor wprowadził pojęcie zgodności.
+\index{węzeł!plastrowy}%
+\index{węzeł!zgodny}%
 Element neutralny nowej grupy to węzły plastrowe, ich opis leży w~sekcji \ref{sec:slice}.
-Zagadnienia te zakorzenione są w~czterowymiarowej topologii.
+Zgodność i plastrowe węzły to zagadnienia zakorzenione w~czterowymiarowej topologii.
+
+Kawauchi \cite[s. 50-53]{kawauchi96} opisuje $2n$-sumę Murasugiego, narzędzie będące uogólnieniem sumy spójnej (która odpowiada wartości $n = 1$) z komentarzem, że jest bardzo przydatna do badania powierzchni Seiferta czy genusu.
+\index{suma Murasugiego}%
+Została wprowadzona dawno temu w~\cite{murasugi58}, by szacować stopień wielomianu Alexandera alternujących węzłów.
+
+Innym uogólnieniem jest suma paskowa, patrz \cite[s. 31-32, 43]{kawauchi96}, specjalny przypadek hiperbolicznej transformacji splotu oraz fuzji splotu.
+% TODO: sprawdzić, czy fuzja splotu ma trafić do indeksu
 
 % Koniec podsekcji Suma niespójna i~suma spójna
 
