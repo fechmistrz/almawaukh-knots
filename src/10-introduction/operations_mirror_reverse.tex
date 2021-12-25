@@ -1,0 +1,215 @@
+\subsection{Lustro i~rewers} % (fold)
+\begin{definition}[lustro]
+\index{lustro}%
+\index{węzeł!lustrzany}%
+    Niech $L$ będzie zorientowanym splotem.
+    Splot $mL$ powstały przez odbicie splotu $L$ względem dowolnej płaszczyzny nazywamy lustrem.
+\end{definition}
+
+\begin{definition}[rewers]
+\index{rewers}%
+\index{węzeł!odwrotny}%
+    Niech $L$ będzie zorientowanym splotem.
+    Splot $rL$ powstały przez odwrócenie orientacji wszystkich ogniw splotu $L$ nazywamy rewersem.
+\end{definition}
+
+\begin{comment}
+\begin{figure}[H]
+    \begin{minipage}[b]{.32\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{../data/link_mirror.png}
+        \subcaption{lustro $mL$}
+    \end{minipage}
+    \begin{minipage}[b]{.32\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{../data/link.png}
+        \subcaption{przykładowy splot $L$}
+    \end{minipage}
+    \begin{minipage}[b]{.32\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{../data/link_reverse.png}
+        \subcaption{rewers $rL$}
+    \end{minipage}
+\end{figure}
+\end{comment}
+
+Na lewym obrazku odbiliśmy diagram względem poziomej prostej, innym sposobem na otrzymanie lustra jest odwrócenie wszystkich skrzyżowań, co odpowiada odbijaniu względem płaszczyzny papieru.
+Zauważmy, że wykonując powyższe operacje na węźle możemy otrzymać mniej niż czterech różne obiekty ($L$, $mL$, $rL$, $mrL$) -- na przykład trójlistnik jest własnym rewersem, ale nie lustrem.
+
+Wyróżniamy pięć typów symetrii węzłów:
+
+\begin{definition}[całkowicie chiralny albo skrętny]
+\index{węzeł!chiralny}%
+\index{węzeł!skrętny|see {węzeł lustrzany}}%
+    Węzły $K$, $rK$, $mK$ są parami nierównoważne. % chiral 9_32
+\end{definition}
+
+\begin{definition}[odwracalny]
+    \index{węzeł!odwracalny}%
+    Węzły $K \cong rK$ są równoważne. % reversible 3_1
+\end{definition}
+
+\begin{definition}[zwierciadlany ujemnie]
+    \index{węzeł!zwierciadlany}%
+    Węzły $K \cong mrK$ są równoważne. % negative amphicheiral 8_17
+\end{definition}
+
+\begin{definition}[zwierciadlany dodatnio]
+    Węzły $K \cong mK$ są równoważne. % positive amphicheiral 12a_427
+\end{definition}
+
+\begin{definition}[całkowicie zwierciadlany]
+    Węzły $K, rK, mK$ są parami równoważne. % fully amphicheiral 4_1
+\end{definition}
+
+\begin{example}
+    Węzeł $9_{32}$ jest całkowicie skrętny.
+\end{example}
+
+% Całkowicie skrętne są też między innymi wszystkie węzły torusowe.
+% TODO: wiki pisze Each nontrivial torus knot is prime[4] and chiral.[2]
+
+\begin{example}
+    \label{exm:trefoil_is_chiral}
+    Trójlistnik jest odwracalny, ale nie zwierciadlany.
+\end{example}
+
+Po raz pierwszy odkrył to M. Dehn w 1914 roku \cite{dehn14}.
+Oto, jak tego dokonał.
+Iloraz grafu Cayleya dla grupy podstawowej trójlistnika, $G = \pi_1(S^3 - K)$, zanurza się w~produkt $\mathbb H^2 \times \R$, co pozwala wyznaczyć grupę zewnętrznych automorfizmów grupy $G$, $\Z/2\Z$.
+\index{grupa!podstawowa}
+Korzystając z południków i równoleżników pokazał następnie, że nietrywialny automorfizm odwraca orientację przestrzeni otaczającej.
+My przekonamy się o~tym przez wyznaczenie wielomianu Jonesa trójlistnika, patrz wniosek \ref{cor:joines_of_amphicheiral}.
+
+\begin{example}
+    Węzeł $8_{17}$ jest zwierciadlany ujemnie, ale nie odwracalny.
+\end{example}
+
+Sześćdziesiąt lat temu matematycy nie byli pewni, czy węzły nieodwracalne w~ogóle istnieją \cite[problem 10]{fox62};
+obecnie wiadomo, że nieodwracalne są prawie wszystkie węzły (\cite[s.~46]{murasugi96}).
+W~roku 1962 Ralph Fox wskazał kilku kandydatów do tego tytułu.
+Hale Trotter odkrył rok później nieskończoną rodzinę nieodwracalnych precli, patrz \ref{prp:pretzel_not_invertible}.
+
+% MAKOTO SAKUMA - A SURVEY OF THE IMPACT OF THURSTON’S WORK ON KNOT THEORY
+% Hartley [129] realized that one can apply this method to the problem of identifying noninvertible knots, as follows. Suppose no automorphism of Γ maps γ to γ−1. Then the set R(G(K), Γ, γ) is possibly different from the set R(G(K), Γ, γ−1), and there is a chance to show noninvertibility of K by comparing the homology invariants associated with φ ∈ R(G(K), Γ, γ) with those associated with φ′ ∈ R(G(K), Γ, γ−1). Hartley showed that this method is quite effective: he completely determined the 36 non-invertible knots up to 10 crossings claimed by Conway to be noninvertible.
+
+\begin{example}
+    Węzeł $12a427$ jest zwierciadlany dodatnio, ale nie odwracalny.
+\end{example}
+
+Żaden inny węzeł pierwszy o mniej niż 13 skrzyżowaniach nie ma tej cechy.
+
+\begin{example}
+    Ósemka $4_1$ jest całkowicie zwierciadlana.
+\end{example}
+
+To najprostszy typ symetrii, wystarczy jawnie wskazać przekształcenie między diagramem węzła, jego lustra oraz odwrotności.
+
+Tait odnosił wrażenie, że zwierciadlane węzły mają parzysty indeks skrzyżowań,
+ale Hoste (Thistlethwaite?) znalazł w~1998 kontrprzykład o~piętnastu skrzyżowaniach.
+Jest on jedynym znanym nam dzisiaj.
+Hipoteza Taita jest prawdziwa dla węzłów pierwszych, alternujących.
+
+\begin{proposition}[10.4.4 w \cite{kawauchi96}]
+    Niech $K$ będzie węzłem zwierciadlanym.
+    Wtedy
+    \begin{align}
+        V(t) & = V(1/t) \\
+        P(a, z) & = P(1/a, z) \\
+        F(a, z) & = F(1/a, z),
+    \end{align}
+    gdzie $\jones, P, F$ oznacza kolejno wielomian Jonesa, HOMFLY oraz Kauffmana.
+    Równość $\conway(z) = \conway(-z)$ zachodzi dla wszystkich węzłów, zwierciadlanych lub nie.
+
+    Patrz fakt \ref{cor:joines_of_amphicheiral}.
+\end{proposition}
+
+Poniższa tabela oparta jest (kolejno) o~ciągi
+\href{https://oeis.org/A051766}{51766},
+\href{https://oeis.org/A051769}{51769},
+\href{https://oeis.org/A051768}{51768},
+\href{https://oeis.org/A051767}{51767},
+\href{https://oeis.org/A052400}{52400},
+z bazy danych ``The On-Line Encyclopedia of Integer Sequences'' (OEIS).
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{@{}*{20}l@{}} \toprule
+        skrzyżowania & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12 & 13 & 14 \\ \midrule
+        całkowicie skrętne & 0 & 0 & 0 & 0 & 0 & 0 & 2 & 27 & 187 & 1103 & 6919 & 37885 \\
+        odwracalne & 1 & 0 & 2 & 2 & 7 & 16 & 47 & 125 & 365 & 1015 & 3069 & 8813 \\
+        $-$ zwierciadlane & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 6 & 0 & 40 & 0 & 227 \\
+        $+$ zwierciadlane & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 6 \\
+        zwierciadlane & 0 & 1 & 0 & 1 & 0 & 4 & 0 & 7 & 0 & 17 & 0 & 41 \\
+        \bottomrule
+        \hline
+    \end{tabular}
+    \caption{Liczba węzłów o~poszczególnych typach symetrii}
+\end{table}
+
+\begin{tobedone}[Kawauchi, definicja 10.3.2]
+    Węzeł $K \subseteq S^3$ jest silnie odwracalny, jeśli istnieje inwolucja pary $(S^3, K)$ która zachowuje orientację sfery, ale odwraca orientację węzła.
+\end{tobedone}
+
+Węzeł silnie odwracalny jest odwracalny, ale nie vice versa (Hartley 1980, Whitten 1981).
+Chyba, że ograniczymy się do węzłów hiperbolicznych (Kawauchi proposition 10.3.3, cf. 3.2.11).
+Bycie silnie odwracalnym nie narzuca żadnych ograniczeń na wielomian Alexandera (odniesienie do $u = 1$?), patrz Sakai 1983.
+
+\subsection{Węzły okresowe}
+Można wyróżnić jeszcze jeden rodzaj symetrii.
+
+\begin{definition}
+    \label{def:period}
+    \index{węzeł!okresowy}
+    Węzeł $K$ nazywamy $n$-okresowym, jeśli istnieje obrót $f \colon \R^3 \to \R^3$ o~kąt $2\pi/n$ wokół pewnej prostej $l$, rozłącznej z~węzłem, taki że $f(K) = K$.
+\end{definition}
+
+Zamiast obrotów można rozpatrywać dowolne odwzorowania okresowe $f \colon S^3 \to S^3$, których zbiór punktów stałych jest rozłączny z węzłem $K$, homeomorficzny z $S^1$ oraz które trzymają węzeł $K$ w miejscu, ale dostaje się wtedy dokładnie taką samą klasę węzłów.
+\index{hipoteza!Smitha}
+Wynika to z hipotezy Smitha, otrzymanej z połączenia głębokich teorii dotyczących geometrii i topologii 3-rozmaitości.
+% Kawauchi, ćwiczenie 10.1.10
+% Morgan-Bass 1984
+
+\begin{proposition}
+    Zbiór wszystkich okresów jest niezmiennikiem węzłów.
+\end{proposition}
+
+Nieodwracalny węzeł $8_{17}$ nie posiada żadnych okresów.
+% ćwiczenie 10.1.5 w Kawauchi
+Węzeł $5_1$ 5-okresowy, co widać na standardowym diagramie, oraz 2-okresowy, tę drugą symetrię można dostrzec na diagramie realizującym indeks mostowy.
+Trójlistnik ma dokładnie dwa okresy, $2$ i~$3$.
+Ogólniej, jak głosi Kawauchi \cite[ćwiczenie 10.1.9]{kawauchi96}:
+
+\begin{proposition}
+    Jedynymi okresami węzła $(p, q)$-torusowego są dzielniki liczb $p$ oraz $q$.
+\end{proposition}
+
+Z~każdym węzłem okresowym związany jest inny, prostszy węzeł.
+Niech $f$ będzie obrotem z definicji \ref{def:period}, zaś $p \colon \R^3 \to \R^3/f \simeq \R^3$ rzutem na przestrzeń ilorazową.
+\index{węzeł!ilorazowy}
+Wtedy $p(K)$ nazywamy \emph{węzłem ilorazowym}, zaś $K$ to jego $n$-krotne nakrycie.
+
+Murasugi podał dwa warunki, które musi spełniać węzeł o~okresie $n = p^r$, gdzie $r$ jest liczbą pierwszą.
+Do ich zrozumienia potrzebujemy prostej definicji.
+Ustalmy półprostą, która nie jest styczna do węzła $K$, po czym zorientujmy ją oraz węzeł.
+Indeksem zaczepienia $\lambda$ węzła $p(K)$ jest różnica między liczbą skrzyżowań dodatnich oraz ujemnych wzdłuż półprostej (bez znaku).
+
+\begin{proposition}[warunek Murasugiego]
+    \index{warunek!Murasugiego}
+    \label{prp:murasugi_periodic}
+    Niech $K$ będzie węzłem o~okresie $n = p^r$, gdzie $p$ jest liczbą pierwszą.
+    Niech $J$ będzie jego węzłem ilorazowym, z~indeksem zaczepienia $\lambda$.
+    Wtedy wielomian $\alexander_J$ jest dzielnikiem wielomianu $\alexander_K$ oraz istnieje pewna całkowita liczba $k$, taka że
+    \begin{equation}
+        \alexander_K(t) \equiv \pm t^k \alexander_J(n)^n \left(1 + t + t^2 + \ldots + t^{\lambda - 1}\right)^{n-1} \mod p.
+    \end{equation}
+\end{proposition}
+
+\begin{proof}
+    Mozolne operacje na macierzach, których wyznacznikiem jest wielomian Alexandera, patrz \cite{murasugi71}.
+    Kawauchi przedstawia inny dowód: najpierw dowodzi tego dla węzła torusowego $T_{n, d}$, którego węzłem ilorazowym jest niewęzeł.
+    W ogólnym przypadku, korzysta z relacji kłębiastej dla wielomianu Conwaya.
+    Szczegóły oraz odsyłacze do dalszych prac znaleźć można w jego przeglądowej publikacji \cite[s. 122-124]{kawauchi96}.
+\end{proof}
+
+% Koniec podsekcji Lustro i rewers

@@ -1,0 +1,175 @@
+\subsection{Suma niespójna i~suma spójna}
+
+\begin{definition}[suma niespójna]
+\index{suma niespójna}%
+    Niech $L_1$ oraz $L_2$ będą splotami, które leżą po różnych stronach ustalonej płaszczyzny w przestrzeni $\R^3$.
+    Teoriomnogościową sumę $L_1 \sqcup L_2$ nazywamy sumą niespójną splotów.
+\end{definition}
+
+\begin{definition}[suma spójna]
+\index{suma!spójna}%
+    Niech $K_1, K_2$ będą zorientowanymi węzłami.
+    Natnijmy każdy z nich w dwóch punktach tego samego krótkiego łuku, a następnie zszyjmy dwoma łukami, które nie przecinają już istniejących, jak na obrazku.
+    Otrzymany węzeł nazywamy sumą spójną węzłów $K_1$ oraz $K_2$ i oznaczamy przez $K_1 \shrap K_2$.
+\begin{comment}
+    \[
+        \begin{tikzpicture}[baseline=-0.65ex,scale=0.1]
+        \begin{knot}[clip width=5, flip crossing/.list={5}, ignore endpoint intersections=false,]
+            \strand[thick] (-3.5, -3.5) [in=down, out=up] to (3.5, 3.5);
+            \strand[thick] (3.5, 3.5) [in=right, out=up] to (-4.5, 10);
+            \strand[thick] (-4.5, 10) [in=up, out=left] to (-10, 3.5);
+            \strand[thick] (-10, 3.5) to (-10, -3.5);
+            \strand[thick] (-10, -3.5) [in=left, out=down] to (-4.5, -10);
+            \strand[thick] (-4.5, -10) [in=down, out=right] to (3.5, -3.5);
+            \strand[thick] (3.5, -3.5) [in=down, out=up] to (-3.5, 3.5);
+            \strand[thick] (-3.5, 3.5) [in=left, out=up] to (4.5, 10);
+            \strand[thick] (4.5, 10) [in=up, out=right] to (10, 3.5);
+            \strand[thick, -Latex] (10, 3.5) to (10, -3.5);
+            \strand[thick] (10, -3.5) [in=right, out=down] to (4.5, -10);
+            \strand[thick] (4.5, -10) [in=down, out=left] to (-3.5, -3.5);
+            \node at (0, -15) {$K_1$};
+        \end{knot}
+        \end{tikzpicture}
+        \shrap
+        \begin{tikzpicture}[baseline=-0.65ex,scale=0.1]
+        \begin{knot}[clip width=5, flip crossing/.list={6}, ignore endpoint intersections=false,]
+            \strand[thick] (-3.5, -3.5) [in=down, out=up] to (3.5, 3.5);
+            %\strand[thick] (3.5, 3.5) [in=right, out=up] to (-4.5, 10);
+            %\strand[thick] (-4.5, 10) [in=up, out=left] to (-10, 3.5);
+            \strand[thick] (-10, -3.5) [in=left, out=up] to (0, 6.5);
+            \strand[thick, Latex-] (-10, -3.5) [in=left, out=down] to (-4.5, -10);
+            \strand[thick] (-4.5, -10) [in=down, out=right] to (3.5, -3.5);
+            \strand[thick] (3.5, -3.5) [in=down, out=up] to (-3.5, 3.5);
+            %\strand[thick] (-3.5, 3.5) [in=left, out=up] to (4.5, 10);
+            %\strand[thick] (4.5, 10) [in=up, out=right] to (10, 3.5);
+            \strand[thick] (10, -3.5) [in=right, out=up] to (0, 6.5);
+            \strand[thick] (10, -3.5) [in=right, out=down] to (4.5, -10);
+            \strand[thick] (4.5, -10) [in=down, out=left] to (-3.5, -3.5);
+            %
+            \strand[thick] (-3.5, 3.5) [in=left, out=up] to (0, 10);
+            \strand[thick] (3.5, 3.5) [in=right, out=up] to (0, 10);
+            \node at (0, -15) {$K_2$};
+        \end{knot}
+        \end{tikzpicture}
+        =
+        \begin{tikzpicture}[baseline=-0.65ex,scale=0.1]
+        \begin{knot}[clip width=5, flip crossing/.list={5, 22, 23}, ignore endpoint intersections=false,]
+            \strand[thick] (-18.5, -3.5) [in=down, out=up] to (-11.5, 3.5);
+            \strand[thick] (-11.5, 3.5) [in=right, out=up] to (-19.5, 10);
+            \strand[thick] (-19.5, 10) [in=up, out=left] to (-25, 3.5);
+            \strand[thick] (-25, 3.5) to (-25, -3.5);
+            \strand[thick] (-25, -3.5) [in=left, out=down] to (-19.5, -10);
+            \strand[thick] (-19.5, -10) [in=down, out=right] to (-11.5, -3.5);
+            \strand[thick] (-11.5, -3.5) [in=down, out=up] to (-18.5, 3.5);
+            \strand[thick] (-18.5, 3.5) [in=left, out=up] to (-10.5, 10);
+            \strand[thick] (-10.5, 10) [in=left, out=right] to (-5, 2);
+            \strand[thick, -Latex] (-5, 2) to (-5+6, 2);
+            \strand[thick] (5, 2) to (-5+6, 2);
+            \strand[thick] (3, -2) to [in=left, out=right] (10.5, -10);
+            \strand[thick, -Latex] (3, -2) to (0, -2);
+            \strand[thick] (-5, -2) to (0, -2);
+            \strand[thick] (-5, -2) [in=right, out=left] to (-10.5, -10);
+            \strand[thick] (-10.5, -10) [in=down, out=left] to (-18.5, -3.5);
+            %%%
+            \strand[thick] (11.5, -3.5) [in=down, out=up] to (18.5, 3.5);
+            \strand[thick] (-10 +15, 2) [in=left, out=right] to (15, 6.5);
+            \strand[thick] (10.5, -10) [in=down, out=right] to (18.5, -3.5);
+            \strand[thick] (18.5, -3.5) [in=down, out=up] to (11.5, 3.5);
+            \strand[thick] (25, -3.5) [in=right, out=up] to (15, 6.5);
+            \strand[thick] (25, -3.5) [in=right, out=down] to (19.5, -10);
+            \strand[thick] (19.5, -10) [in=down, out=left] to (11.5, -3.5);
+            \strand[thick] (11.5, 3.5) [in=left, out=up] to (15, 10);
+            \strand[thick] (18.5, 3.5) [in=right, out=up] to (15, 10);
+            %%%
+            \node at (0, -15) {$K_1 \shrap K_2$};
+        \end{knot}
+        \end{tikzpicture}
+    \]
+\end{comment}
+\end{definition}
+
+Pojęcie sumy spójnej węzłów (oraz satelity, opisane później) wprowadził do matematyki Schubert w \cite{schubert49}.
+
+Ważna jest orientacja składników: suma dwóch trójlistników może być węzłem babskim lub prostym\footnote{To jedno z niewielu miejsc, gdzie nomenklatura pochodzi od żeglarzy: z~angielskiego \emph{granny knot, square knot}}.
+Uzasadnienie, że te węzły są różne, nie jest łatwym zadaniem.
+Fox twierdzi, że Seifert wiedział to już w~1933 roku.
+% [S.-B. Preuss. Akad. Wiss. 1933, 811–828]
+Pokazał też w~króciutkim artykule \cite{fox52}, że
+
+\begin{proposition}
+	Dopełnienia węzła babskiego oraz prostego nie są homeomorficzne.
+\end{proposition}
+
+Suma tak samo skręconych trójlistników ma niezerową sygnaturę, więc nie może być plastrowa.
+Natomiast suma przeciwnie skręconych jest plastrowa.\footnote{Nie wiem, skąd to wiem.}
+\index{węzeł!plastrowy}
+
+Warunku, by zszywające łuki nie przecinały diagramów, nie można pominąć: Cromwell w~\cite[s. 90]{cromwell04} pokazuje przykład dwóch niewęzłów, z~których otrzymano niepoprawnie dwie różne sumy, $6_1$ oraz $8_{20}$.
+
+W topologii rozważa się podobną operację dla $n$-rozmaitości: z~każdej z~nich wycina się kulę, po czym skleja wzdłuż brzegowej sfery w~jedną rozmaitość.
+Ale kiedy zajmujemy się węzłami, nie interesuje nas struktura rozmaitości (gdyż każdy węzeł jest homeomorficzny z~okręgiem), tylko zanurzenie w otaczającą przestrzeń.
+
+\begin{proposition}
+    Suma spójna węzłów jest dobrze określonym działaniem.
+\end{proposition}
+
+Suma spójna nie jest dobrze określona dla splotów: nie istnieje kanoniczny wybór, które ogniwa łączyć ze sobą.
+
+\begin{proof}
+    Niech dane będą węzły $K_1$ oraz $K_2$
+    oraz dwa różne łuki $\gamma_1$, $\gamma_2$,
+    których można użyć do konstrukcji sumy spójnej.
+    Skurczmy $K_1$ tak, by był bardzo mały, przeciągnijmy najpierw przez łuk $\gamma_1$, a~następnie wzdłuż węzła $K_2$ do miejsca, gdzie zaczyna się łuk $\gamma_2$.
+    Na koniec odwróćmy proces, z łukiem~$\gamma_2$ w~miejscu łuku $\gamma_1$.
+\end{proof}
+
+\begin{proposition}
+    Suma spójna jest działaniem łącznym oraz przemiennym.
+    Niewęzeł stanowi jej element neutralny.
+\end{proposition}
+
+Prosty dowód tego faktu pozostawiamy Czytelnikowi.
+W języku algebry mówimy, że węzły z~sumą spójną tworzą półgrupę (tak jak liczby naturalne z działaniem dodawania).
+Dużo później pokażemy, że działaniu $\shrap$ brakuje elementów przeciwnych, więc ta struktura algebraiczna nie jest grupą.
+
+\begin{proposition}
+    Niech $K_1, K_2$ będą takimi węzłami, że $K_1 \shrap K_2 = \Unknot$. Wtedy $K_1 = K_2 = \Unknot$.
+\end{proposition}
+
+\begin{proof}[Niedowód]
+    Technika ta zwana jest szwindlem Mazura.
+\index{szwindel Mazura}%
+    Załóżmy, że $K \shrap L = \Unknot$ i~dopuśćmy wyjątkowo węzły dzikie.
+    Skonstruujmy sumę $K \shrap L \shrap K \shrap \ldots$,
+    przy czym kolejne składniki powinny zmniejszać się,
+    aby ich suma nadal była węzłem.
+    Wtedy
+    \begin{align*}
+        K & \simeq K \shrap [(L \shrap K) \shrap (L \shrap K) \ldots] \\
+         & \simeq (K \shrap L) \shrap (K \shrap L) \shrap \ldots
+         \simeq \Unknot \shrap \Unknot \shrap \ldots
+         \simeq \Unknot.
+    \end{align*}
+    Analogicznie pokazujemy, że $L \simeq \Unknot$.
+    (To jedyne miejsce w~całej książce, gdzie użyte zostają węzły dzikie.
+\end{proof}
+
+Prawdziwy dowód oparty jest na topologii algebraicznej, stanowi bezpośredni wniosek z~faktów \ref{prp:genus_detects_unknot} oraz \ref{prp:genus_of_sum}.
+O~tym samym dowodzie wspomina Kawauchi \cite[s. 33]{kawauchi96}, a~fakt nazywa twierdzeniem o~nieanulowaniu.
+
+Półgrupę węzłów z~operacją sumy spójnej można uczynić grupą na dwa sposoby: albo zmieniając działanie, albo osłabiając równoważność węzłów.
+Drugi pomysł jest lepszy niż pierwszy.
+Na początku lat pięćdziesiątych Milnor wprowadził pojęcie zgodności.
+\index{węzeł!plastrowy}%
+\index{węzeł!zgodny}%
+Element neutralny nowej grupy to węzły plastrowe, ich opis leży w~sekcji \ref{sec:slice}.
+Zgodność i plastrowe węzły to zagadnienia zakorzenione w~czterowymiarowej topologii.
+
+Kawauchi \cite[s. 50-53]{kawauchi96} opisuje $2n$-sumę Murasugiego, narzędzie będące uogólnieniem sumy spójnej (która odpowiada wartości $n = 1$) z komentarzem, że jest bardzo przydatna do badania powierzchni Seiferta czy genusu.
+\index{suma Murasugiego}%
+Została wprowadzona dawno temu w~\cite{murasugi58}, by szacować stopień wielomianu Alexandera alternujących węzłów.
+
+Innym uogólnieniem jest suma paskowa, patrz \cite[s. 31-32, 43]{kawauchi96}, specjalny przypadek hiperbolicznej transformacji splotu oraz fuzji splotu.
+% TODO: sprawdzić, czy fuzja splotu ma trafić do indeksu
+
+% Koniec podsekcji Suma niespójna i suma spójna
