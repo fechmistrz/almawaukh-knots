@@ -1,5 +1,6 @@
-\subsection{Genus} % (fold)
-\label{sec:genus}
+\subsection{Genus}
+\index{genus|(}%
+\label{sec:genus}%
 Zaczniemy od starego twierdzenia, które klasyfikuje powierzchnie domknięte.
 
 \begin{proposition}
@@ -26,25 +27,18 @@ W~przypadku powierzchni Seiferta mamy do czynienia z jednym otworem.
 Dla wygody przypomnijmy jeszcze definicję klasycznego niezmiennika powierzchni:
 
 \begin{definition}[charakterystyka Eulera]
-    \index{charakterystyka Eulera}
+\index{charakterystyka Eulera}%
     Niech $M$ będzie domkniętą powierzchnią orientowalną.
     Po striangulowaniu, składa się z $k_0$ wierzchołków, $k_1$ krawędzi oraz $k_2$ ścian.
     Wielkość
     \begin{equation}
         \chi = k_0 - k_1 + k_2
     \end{equation}
-    jest niezmiennikiem powierzchni, zwanym zazwyczaj charakterystyką Eulera.
+    jest niezmiennikiem powierzchni, zwanym charakterystyką Eulera.
 \end{definition}
 
 Definicja ta nie jest wygodna podczas ręcznych obliczeń.
-
-\begin{proposition}
-    Niech $M$ będzie powierzchnią o genusie $g$ i $\mu$ składowych spójności brzegu.
-    Wtedy
-    \begin{equation}
-        \chi = 2 - \mu - 2\genus.
-    \end{equation}
-\end{proposition}
+Mamy za to:
 
 \begin{proposition}
     Charakterystykę Eulera powierzchni jednoznacznie wyznaczają cztery reguły:
@@ -56,6 +50,16 @@ Definicja ta nie jest wygodna podczas ręcznych obliczeń.
     \end{itemize}
 \end{proposition}
 
+Genus oraz charakterystyka Eulera są ze sobą związane:
+
+\begin{proposition}
+    Niech $M$ będzie powierzchnią o genusie $\genus$ i $\mu$ składowych spójności brzegu.
+    Wtedy
+    \begin{equation}
+        \chi = 2 - \mu - 2\genus.
+    \end{equation}
+\end{proposition}
+
 Nas interesują głównie powierzchnie Seiferta węzłów:
 
 \begin{proposition}
@@ -63,6 +67,8 @@ Nas interesują głównie powierzchnie Seiferta węzłów:
     Niech $K$ będzie węzłem z~diagramem $D$.
     Wtedy $\chi(M_D) = d - b$, gdzie $b$ jest liczbą skrzyżowań $D$, zaś $d$ jest liczbą okręgów Seiferta.
 \end{proposition}
+
+Można przeczytać o tym w \cite[s. 82]{murasugi96}.
 
 \begin{proof}
     W~dowodzie faktu \ref{prp:seifert_exists} widzieliśmy, że liczba skrzyżowań $b$ jest jednocześnie liczbą pasków doklejonych do dysków.
@@ -87,19 +93,20 @@ Z dołu 3-genus można szacować przy użyciu wielomianu Alexandera:
     Wtedy $\operatorname{span} \alexander_K(t) \le 2\genus(K)$.
 \end{proposition}
 
+Fakt ten znalazłem w podręczniku Murasugiego \cite[s. 131]{murasugi96}.
+
 \begin{proof}
     Załóżmy, że $F$ jest powierzchnią Seiferta węzła $K$ o genusie $g$.
-    Wtedy macierz Seiferta powstała z $F$ jest rzędu $2g$, więc żaden ze składników jej wyznacznika nie może mieć stopnia większego niż $2g$.
+    Wtedy macierz Seiferta powstała z $F$ jest stopnia $2g$, więc żaden ze składników jej wyznacznika nie może mieć stopnia (jako wielomian) większego niż $2g$.
 \end{proof}
 
 To dolne ograniczenie jest realizowane przez pewną powierzchnię Seiferta dla każdego pierwszego węzła o~co najwyżej 11 skrzyżowaniach poza siedmioma wyjątkami: 11n42, 11n67, 11n97 ($g = 2$), 11n34, 11n45, 11n73 oraz 11n152 ($g = 3$).
+% warto byłoby dodać jakiś kod pozwalający sprawdzić, czemu akurat te węzły
 Jeżeli nie powoduje to nieporozumień, zamiast 3-genus można pisać po prostu genus.
 
 \begin{proposition}
-    Niech $K$ będzie węzłem, zaś $M$ pewną macierzą.
-    Wtedy $\operatorname{span} \alexander_K(t) = 2\genus(K)$ wtedy i tylko wtedy, gdy wyznacznik $\det M \neq 0$ jest niezerowy.
-    % Murasugi
-    % co oznacza M?
+    Niech $K$ będzie węzłem, zaś $M$ jego macierzą Seiferta.
+    Równość $\operatorname{span} \alexander_K(t) = 2\genus(K)$ zachodzi wtedy i tylko wtedy, gdy wyznacznik $\det M \neq 0$ jest niezerowy.
 \end{proposition}
 
 Floer zdefiniował w~\cite{floer90} przestrzeń wektorową nazywaną teraz homologią Floera, jest ona wyposażona w~endomorfizm parzystego stopnia, który powstaje z 2-wymiarowej klasy homologii reprezentowanej przez powierzchnię Seiferta.
@@ -113,15 +120,15 @@ Zanim to pokażemy, przytoczymy techniczny lemat udowodniony przez Yamadę (\cit
 
 \begin{proposition}
     \label{prp:seifert_circles_braid}
-    Niech $L$ będzie splotem, zaś $s(L)$ minimalną liczbą okręgów Seiferta, które dostajemy ze wszystkich możliwych diagramów splotu $L$.
-    Wtedy $s(L) = \braid(L)$ pokrywa się wartością z indeksem warkoczowym.
-\end{proposition}
+    Niech $L$ będzie splotem, zaś $\operatorname{s} L$ minimalną liczbą okręgów Seiferta, które dostajemy ze wszystkich możliwych diagramów splotu $L$.
+    Wtedy $\operatorname{s} L = \braid L$ jest równe indeksowi warkoczowemu.
+    \end{proposition}
 
-Powyższe stwierdzenie występuje bez dowodu w \cite[s. 17]{kawauchi96}.
+Powyższe stwierdzenie występuje bez dowodu (bez?) w \cite[s. 17]{kawauchi96}.
 
 \begin{proposition}
     Niech $L$ będzie splotem.
-    Wtedy $\crossing(L) - \braid(L) - \mu(L) + 2 \ge 2 \genus(L)$.
+    Wtedy $\crossing L - \braid L - \operatorname{\mu} L + 2 \ge 2 \genus L$.
 \end{proposition}
 
 \begin{proof}
@@ -131,12 +138,12 @@ Powyższe stwierdzenie występuje bez dowodu w \cite[s. 17]{kawauchi96}.
     \begin{equation}
         g = \frac{c + 2 - s - \mu(K)}{2}.
     \end{equation}
-    Z~minimalności diagramu wynika, że $c = \crossing(L)$.
-    Fakt \ref{prp:seifert_circles_braid} mówi, że $s \ge \braid(L)$.
-    Nierówność $g \ge \operatorname{g}(L)$ wynika z~definicji genusu.
+    Z~minimalności diagramu wynika, że $c = \crossing L$.
+    Fakt \ref{prp:seifert_circles_braid} mówi, że $s \ge \braid L$.
+    Nierówność $g \ge \genus L$ wynika z~definicji genusu.
     Z powyższych rozważań wynika, że
     \begin{equation}
-        \crossing(L) + 2 \ge  2 \genus(L) + \operatorname{b}(L) + \mu(L),
+        \crossing L + 2 \ge 2 \genus L + \braid L + \operatorname{\mu} L,
     \end{equation}
     a to jest równoważnie nierówności, której prawdziwości dowodzimy.
 \end{proof}
@@ -152,9 +159,14 @@ Niestety, poza pewnymi wyjątkami, nie.
 Zanim przekonamy się, dlaczego tak jest, zdefiniujmy jeszcze dwa niezmienniki.
 
 \begin{definition}[genus kanoniczny]
+\index{genus!kanoniczny}%
     Niech $K$ będzie węzłem.
-    Minimalny genus spośród wszystkich powierzchni Seiferta węzła $K$, które pochodzą z~algorytmu Seiferta, nazywamy genusem klasycznym i~oznaczamy $g_c$.
+    Najmniejszy z genusów powierzchni Seiferta węzła $K$, które pochodzą z~algorytmu Seiferta, nazywamy genusem klasycznym i~oznaczamy symbolem $\operatorname{g_c} K$ lub krótko $g_c$.
 \end{definition}
+
+Stojmenow \cite{stoimenow08} opisał diagramy węzłów o~kanonicznym genusie równym 2.
+Część z~jego wyników przenosi się na genus 3.
+Jak sam pisze, sklasyfikowane wcześniej węzły o~genusie (kanonicznym) 1 okazały się być zbyt wąską klasą.
 
 Pod koniec lat pięćdziesiątych Crowell i~Murasugi niezależnie zauważyli, że algorytm Seiferta zastosowany do alternującego diagramu zawsze daje powierzchnię o~minimalnej powierzchni.
 Ich kombinatoryczne uzasadnienie było dość zawiłe, elementarny dowód podał Gabai w \cite{gabai86}.
@@ -169,7 +181,7 @@ Dubel trójlistnika ma genus równy $1$, ale algorytm Seiferta zastosowany wobec
     Wtedy $M = \max \deg_z P(v, z) \le 2g_c$.
 \end{proposition}
 
-Nierówność Mortona jest równością dla wielu klas węzłów, w tym alternujących (Crowell, Murasugi), jednorodnych (które stanowią uogólnienie węzłów alternujących, Cromwell w \cite{cromwell89}), whiteheadowskich dubli węzłów dwumostowych (Nakamura w \cite{nakamura06}, Tripp w \cite{tripp02}) albo precli (Brittenham, Jensen w preprincie ,,Canonical genus and the Whitehead doubles of pretzel knots'').
+Nierówność Mortona jest równością dla wielu klas węzłów, w tym alternujących (Crowell, Murasugi), jednorodnych (które stanowią uogólnienie węzłów alternujących, Cromwell w \cite{cromwell89}), whiteheadowskich dubli węzłów dwumostowych (Nakamura w \cite{nakamura06}, Tripp w \cite{tripp02}) albo precli (Brittenham, Jensen \cite{brittenham06}).
 Stojmenow pokazał, że staje się równością dla węzłów o co najwyżej 12 skrzyżowaniach i znalazł przykład węzła, dla którego jest ostra.
 
 \begin{definition}[genus wolny]
@@ -180,7 +192,8 @@ Stojmenow pokazał, że staje się równością dla węzłów o co najwyżej 12 
 Dopełnienie powierzchni Seiferta jest zawsze handlebody, dlatego też mamy oczywiste nierówności $g \le g_f \le g_c$.
 Morton w 1986 roku pokazał, że genus pewnych węzłów nie jest realizowany przez żaden diagram do którego stosuje się algorytm Seiferta, choćby $10_{165}$.
 Patrz \cite{morton86}.
-Moriah, matematyk izraelski, mniej więcej w tym samym czasie rozwiązał problem postawiony dekadę wcześniej przez Kirby'ego \cite{kirby78}: jak duża może być różnica $g_f - g$?
+
+Moriah, matematyk izraelski, rozwiązał problem postawiony dekadę wcześniej przez Kirby'ego \cite{kirby78}: jak duża może być różnica $g_f - g$?
 
 \begin{proposition}
     Niech $K$ będzie węzłem, $D_k(K)$ jego dublem Whiteheada z $k \neq 0$ skręceniami, zaś $B_n(K)$ to $n$-krotne nakrycie cykliczne sfery $S^3$ rozgałęzione nad węzłem $K$.
@@ -204,7 +217,11 @@ Moriah, matematyk izraelski, mniej więcej w tym samym czasie rozwiązał proble
     podczas gdy zwykły genus to $g(D_{-1}(3_1^n)) = 1$.
 \end{corollary}
 
-% kawauchi: Since any canonical Seifert surface is a free Seifert surface, we have the inequality 9c(K) ;::: 9j(K) ;::: g(K) for all knots K. For example, when K is an alternating knot (cf. 8.4.11), it is known that this inequality is replaced by the equality (cf. [Murasugi 1960]).
+Kobayashi oraz Kobayashi \cite{kobayashi96} wskazali nieskończoną rodzinę węzłów nieograniczonego genusu, dla której
+\begin{equation}
+	g_c(K) = \frac 32 g_f(K) = 2g(K).
+\end{equation}
+% znam ich ze Stojmenow - Knots of (canonical) genus two
 
 \begin{proposition}
     \label{prp:genus_detects_unknot}
@@ -349,10 +366,7 @@ Nasz aparat matematyczny jest niedostatecznie rozwinięty, by udowodnić jedyno�
 Schubert podał geometryczny dowód oparty o powierzchnie Seiferta; wyraził go w języku PL-rozmaitości (\cite{schubert49}), ale niedużym wysiłkiem można dokonać adaptacji do gładkiego świata.
 Praca Schuberta korzysta z twierdzenia Alexandera, że 2-sfera w przestrzeni $\R^3$ ogranicza dysk, i jego odpowiednika dla torusów w $S^3$.
 
-\begin{tobedone}
-    Inny dowód? [Hashizume 1958].
-    % kawauchi
-\end{tobedone}
+Hashizume \cite{hashizume58} rozszeszył wyniki Schuberta do splotów.
 
 \begin{proposition}
     \label{prp:infinitely_many_prime_knots}
@@ -432,7 +446,10 @@ Praca Schuberta korzysta z twierdzenia Alexandera, że 2-sfera w przestrzeni $\R
     \]
 \end{comment}
     Wynika stąd, że genus wynosi $\frac 12 (1 - (1+2n) + (2+2n)) = 1$, ponieważ wyznacznik ma wartość $4n+1$,
-    węzły $2n+2)_1$ nie są trywialne i~są parami różne.
+    węzły $(2n+2)_1$ nie są trywialne i~są parami różne.
 \end{proof}
+
+\index{genus|)}
+
 
 % Koniec podsekcji Genus
