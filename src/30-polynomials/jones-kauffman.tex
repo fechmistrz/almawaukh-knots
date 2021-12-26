@@ -1,17 +1,20 @@
-\subsection{Definicja kombinatoryczna -- klamra Kauffmana} % (fold)
-
+\subsection{Definicja kombinatoryczna -- klamra Kauffmana}
+\index{klamra Kauffmana|(}
 Klamra Kauffmana to wielomian Laurenta jednej zmiennej zdefiniowany w pracy \cite{kauffman87} z 1987 roku, oparty na ruchach Reidemeistera.
 Dzięki swojej prostocie mógł być odkryty na początku XX wieku, nim jeszcze maszyneria teorii węzłów została rozwinięta.
 
 Poszukujemy niezmiennika dla splotów o~kilku prostych własnościach.
 Przede wszystkim żądamy, by niewęzłowi przypisany był wielomian $1$: $\bracket{\LittleUnknot} = 1$.
-Po drugie chcemy wyznaczać nawiasy znając je dla prostszych splotów, co zapiszemy symbolicznie $\bracket{\LittleRightCrossing} = A \bracket{\LittleRightSmoothing} + B \bracket{\LittleLeftSmoothing}$.
-Zależy nam wreszcie na tym, by móc dodać do splotu trywialną składową: $\langle L \cup \LittleUnknot \rangle = C \langle L \rangle$.
+Po drugie chcemy wyznaczać nawiasy znając je dla prostszych splotów, co zapiszemy symbolicznie:
+\begin{equation}
+    \bracket{\MediumRightCrossing} = A \bracket{\MediumRightSmoothing} + B \bracket{\MediumLeftSmoothing}
+\end{equation}
+Zależy nam też na tym, by móc dodać do splotu trywialną składową: $\langle L \cup \LittleUnknot \rangle = C \langle L \rangle$.
 Prosty rachunek pokazuje wpływ drugiego ruchu Reidemeistera na klamrę:
 \begin{equation}
     \bracket{\reidemeisterIIaa}
-    = (A^2 + ABC + B^2) \bracket{\LittleLeftSmoothing} + BA \bracket{\LittleRightSmoothing}
-    \stackrel{?}{=} \bracket{\LittleRightSmoothing}.
+    = (A^2 + ABC + B^2) \bracket{\MediumLeftSmoothing} + BA \bracket{\MediumRightSmoothing}
+    \stackrel{?}{=} \bracket{\MediumRightSmoothing}.
 \end{equation}
 
 Aby zachodziła ostatnia równość wystarczy przyjąć $B = A^{-1}$, co wymusza na nas wartość trzeciego parametru: $C = -A^2 - A^{-2}$.
@@ -24,26 +27,35 @@ W ten sposób odkryliśmy definicję.
     który jest niezmienniczy ze względu na gładkie deformacje diagramu,
     a~przy tym spełnia trzy poniższe aksjomaty:
     \begin{align}
-        \bracket{\LittleUnknot} & = 1 \label{eqn:kauffman_axiom_1} \\
-        \bracket{D \sqcup \LittleUnknot} & = (-A^{-2} - A^2) \bracket{D} \label{eqn:kauffman_axiom_2} \\
-        \bracket{\LittleRightCrossing} & = A \bracket{\LittleRightSmoothing} + A^{-1} \bracket{\LittleLeftSmoothing} \label{eqn:kauffman_axiom_3}
+        \bracket{\MediumUnknot} & = 1
+        \label{eqn:kauffman_axiom_1}%
+        \\
+        \bracket{\MediumRightCrossing} & = 
+        A \bracket{\MediumRightSmoothing} + 
+        A^{-1} \bracket{\MediumLeftSmoothing}
+        \label{eqn:kauffman_axiom_2}%
+        \\
+        \bracket{D \sqcup \MediumUnknot} & = 
+        (-A^{-2} - A^2) \bracket{D}
+        \label{eqn:kauffman_axiom_3}%
     \end{align}
     nazywamy klamrą Kauffmana.
 \end{definition}
 
-Trzeci aksjomat jest wariacją na temat relacji kłębiastej.
+Drugi aksjomat jest wariacją na temat relacji kłębiastej.
 
 \begin{lemma}
     Klamra Kauffmana każdego diagramu wyznacza się w~skończenie wielu krokach.
 \end{lemma}
 
 \begin{proof}
-    Szkic: W każdym kroku możemy albo zmniejszyć liczbę ogniw (drugi aksjomat), albo liczbę skrzyżowań (trzeci aksjomat).
+    Najprościej dowieść tego indukcyjnie, ze względu na liczbę skrzyżowań na diagramie splotu.
+    Baza indukcji to przypadek zero skrzyżowań, czyli niesplotów.
+    Zauważmy, że ostatni (i później pierwszy) aksjomat pozwala wyznaczyć wartość klamry Kauffmana dla każdego niesplotu w tylu krokach, ile ogniw ma niesplot.
 
-    Przepisać:
-    Jeżeli diagram $D$ ma $n$ skrzyżowań, to nieustanne stosowanie aksjomatu trzeciego pozwala na zapisanie $\bracket{D}$ jako sumy $2^n$ składników,
-    z~których każdy jest po prostu zamkniętą krzywą i~ma trywialną klamrę ($\bracket{\LittleUnknot} = 1$).
-    Klamrę sumy wyznacza się korzystając z~drugiego aksjomatu.
+    Pozostał krok indukcyjny.
+    Załóżmy, że wyznaczyliśmy już wartości klamry dla każdego diagramu o $n$ skrzyżowaniach i chcemy ją obliczyć dla kolejnego splotu z diagramem o~$n + 1$ skrzyżowaniach.
+    Pozwala na to drugi aksjomat, usuwający jedno ze skrzyżowań.
 \end{proof}
 
 Przedstawimy teraz wpływ ruchów Reidemeistera na nasz nowy wielomian.
@@ -52,7 +64,7 @@ Przedstawimy teraz wpływ ruchów Reidemeistera na nasz nowy wielomian.
     Drugi i~trzeci ruch Reidemeistera nie ma wpływu na klamrę Kauffmana,
     pierwszy ruch zmienia ją zgodnie z~regułą:
     \begin{equation}
-        \bracket{\reidemeisterIa} = -A^{-3} \bracket{\,\reidemeisterIb\,}.
+        \bracket{\MediumReidemeisterIaLeft} = -A^{-3} \bracket{\,\MediumReidemeisterIb\,}.
     \end{equation}
 \end{lemma}
 
@@ -60,78 +72,41 @@ Przedstawimy teraz wpływ ruchów Reidemeistera na nasz nowy wielomian.
 Pierwszy ruch Reidemeistera:
 \begin{comment}
 \begin{align*}
-    \bracket{\reidemeisterIa} & \stackrel{K3}{=} A \bracket{
-    \begin{tikzpicture}[baseline=-0.65ex,scale=0.07]
-    \useasboundingbox (-4, -5) rectangle (3, 5);
-    \begin{knot}[clip width=5, end tolerance=1pt]
-        \strand[semithick]
-            (-3, 5) [in=left, out=down] to (-1,1) [in=left, out=right]
-                                        to (1,3)
-                                        to [in=up, out=right] (3,0);
-        \strand[semithick]
-            (-3, -5) [in=left, out=up] to (-1,-1) [in=left, out=right]
-                                       to (1, -3)
-                                       to [in=down, out=right] (3,0);
-    \end{knot}
-    \end{tikzpicture}}
-    + A^{-1} \bracket{\,
-    \begin{tikzpicture}[baseline=-0.65ex,scale=0.07]
-    \begin{knot}[clip width=5]
-        \strand[semithick] (0,-5) [in=down, out=up] to (1, -2) to (1, 2) to (0, 5);
-        \strand[semithick] (4,0) circle (1.5);
-    \end{knot}
-    \end{tikzpicture}} \\
-    & \stackrel{K2}{=} A \bracket{\,\reidemeisterIb\,} + A^{-1}(-A^{-2}-A^2) \bracket{\,\reidemeisterIb\,}
-    = -A^{-3}\bracket{\,\reidemeisterIb\,}
+    \bracket{\MediumReidemeisterIaLeft} & \stackrel{K2}{=} A 
+    \bracket{\MediumReidemeisterIaLeftFirstSmoothering} + 
+    A^{-1} \bracket{\MediumReidemeisterIaLeftSecondSmoothering} \\ & \stackrel{K3}{=} 
+    A \bracket{\MediumReidemeisterIb} + 
+    A^{-1}(-A^{-2}-A^2) \bracket{\MediumReidemeisterIb} = 
+    -A^{-3}\bracket{\MediumReidemeisterIb}
 \end{align*}
 \end{comment}
 
 Dla drugiego ruchu:
 \begin{comment}
 \begin{align*}
-    \bracket{\reidemeisterIIa} &\stackrel{K3}{=} A
-    \bracket{\reidemeisterIab}
-    + A^{-1} \bracket{\begin{tikzpicture}[baseline=-0.65ex,scale=0.07]
-    \useasboundingbox (-5, -6) rectangle (5, 6);
-    \begin{knot}[clip width=5, end tolerance=1pt]
-        \strand[semithick] (4,-5) .. controls (4,-2) and (-4,-2) .. (-4,0);
-        \strand[semithick] (4,5) to (4,0);
-        \strand[semithick] (-4,-5) .. controls (-4,-2) and (4,-2) .. (4,0);
-        \strand[semithick] (-4,5) to (-4,0);
-    \end{knot}
-    \end{tikzpicture}}
-    \stackrel{K1}{=} -A^{-2} \bracket{\LittleLeftSmoothing} + A^{-1}
-    \bracket{\begin{tikzpicture}[baseline=-0.65ex,scale=0.07]
-    \useasboundingbox (-5, -6) rectangle (5, 6);
-    \begin{knot}[clip width=5, end tolerance=1pt]
-        \strand[semithick] (4,-5) .. controls (4,-2) and (-4,-2) .. (-4,0);
-        \strand[semithick] (4,5) to (4,0);
-        \strand[semithick] (-4,-5) .. controls (-4,-2) and (4,-2) .. (4,0);
-        \strand[semithick] (-4,5) to (-4,0);
-    \end{knot}
-    \end{tikzpicture}}
-    \\ & \stackrel{K3}{=} -A^{-2} \bracket{\LittleLeftSmoothing}
-    + A^{-1}A \bracket{\LittleRightSmoothing} + A^{-1}A^{-1} \bracket{\LittleLeftSmoothing}
-    = \bracket{\LittleRightSmoothing}
+    \bracket{\MediumReidemeisterIIa} & \stackrel{K2}{=}
+    A \bracket{\MediumReidemeisterIIaSmoothed} +
+    A^{-1} \bracket{\MediumLeftCrossingLow} \\ & \stackrel{K1}{=}
+    -A^{-2} \bracket{\MediumLeftSmoothing} + 
+    A^{-1} \bracket{\MediumLeftCrossingLow} \\ & \stackrel{K2}{=}
+    -A^{-2} \bracket{\MediumLeftSmoothing} +
+    A^{-1}A \bracket{\MediumRightSmoothing} + 
+    A^{-1}A^{-1} \bracket{\MediumLeftSmoothing} \\ & = 
+    \bracket{\MediumRightSmoothing}
 \end{align*}
 \end{comment}
 
 Dla trzeciego ruchu:
 \begin{comment}
 \begin{align*}
-\bracket{\,\reidemeisterIIIa\,} &\stackrel{K3}{=} A
-\bracket{\,\begin{tikzpicture}[baseline=-0.65ex,yscale=0.07, xscale=0.1]
-    \useasboundingbox (-5, -6) rectangle (5, 6);
-    \begin{knot}[clip width=5, flip crossing/.list={1,2,3}, end tolerance=1pt]
-        \strand[semithick] (-5, 5) [in=-135, out=-45] to (5,5);
-        \strand[semithick] (-5, -5) [in=135, out=45] to (5,-5);
-        \strand[semithick] (-5, 0) .. controls (-2, 0) and (-2,5) .. (0,5) .. controls (2, 5) and (2, 0) .. (5, 0);
-    \end{knot}
-    \end{tikzpicture}\,}
-+A^{-1} \bracket{\RightCrossSmoothing} \\
-%\stackrel{R2}{=} A \bracket{\,\LeftCrossSmoothing\,} +A^{-1} \bracket{\RightCrossSmoothing} \\
-& \stackrel{R2}{=} A \bracket{\,\LeftCrossSmoothing\,} +A^{-1} \bracket{\RightCrossSmoothing}
-\stackrel{K3}{=} \bracket{\,\reidemeisterIIIb\,}
+\bracket{\MediumReidemeisterIIIa} & \stackrel{K2}{=}
+A \bracket{\MediumReidemeisterIIIb} +
+A^{-1} \bracket{\MediumReidemeisterIIIc} \stackrel{R2}{=} 
+A \bracket{\MediumReidemeisterIIId} +
+A^{-1} \bracket{\MediumReidemeisterIIIe} \\ & \stackrel{R2}{=}
+A \bracket{\MediumReidemeisterIIIbFlipped} +
+A^{-1} \bracket{\MediumReidemeisterIIIcFlipped} \stackrel{K2}{=} 
+\bracket{\MediumReidemeisterIIIaFlipped},
 \end{align*}
 korzystaliśmy tu z~własności drugiego ruchu.
 \end{comment}
@@ -144,10 +119,11 @@ korzystaliśmy tu z~własności drugiego ruchu.
 Klamra Kauffmana nie jest niezmiennikiem węzłów ze względu na I ruch Reidemeistera.
 Jeżeli przypomnimy sobie, że na mocy lematu \ref{lem:writhe_reidemeister} spin także nie jest niezmiennikiem węzłów, odkryjemy ,,trik Kauffmana'': niedoskonałości tych dwóch obiektów znoszą się wzajemnie.
 \index{trik Kauffmana}
+\index{spin}
 
 \begin{definition}
-    \index{wielomian!Jonesa}
-    \label{def:jones_polynomial}
+\index{wielomian!Jonesa}%
+\label{def:jones_polynomial}%
     Niech $L$ będzie zorientowanym splotem.
     Wielomian Laurenta $\jones(L) \in \Z[t^{\pm 1/2}]$ określony przez
     \begin{equation}
@@ -166,12 +142,22 @@ W szczególności pozwoliła na uogólnienie go do niezmiennika 3-rozmaitości.
 \begin{proof}
     %Skorzystamy z~tego, że indeks zaczepienia jest niezmiennikiem.
     Wystarczy pokazać niezmienniczość $(-A)^{-3w(D)}\langle D\rangle$ na ruchy Reidemeistera.
-    Ale
+    
+    Niech
     \begin{equation}
-        (-A)^{-3 w\left(\MalyreidemeisterIa\right)} \bracket{\MalyreidemeisterIa} =
-        (-A)^{-3 w\left(\ \MalyreidemeisterIb\ \right)+3} (-A)^{-3}\bracket{\ \MalyreidemeisterIb\ } =
-        (-A)^{-3 w\left(\ \MalyreidemeisterIb\ \right)}    \bracket{\,\MalyreidemeisterIb\,}. \qedhere
+        D_1 = \MediumReidemeisterIaLeft,
+        \quad\quad\quad
+        D_2 = \MediumReidemeisterIb
     \end{equation}
+    Jak zauważyliśmy już wcześniej, II i III ruch nie zmienia ani spinu, ani klamry Kauffmana.
+    Pozostało sprawdzić I ruch.
+    Mamy:
+    \begin{equation}
+        (-A)^{-3 w\left(D_1\right)} \bracket{D_1} =
+        (-A)^{-3 w\left(D_2\right) + 3} (-A)^{-3}\bracket{D_2} =
+        (-A)^{-3 w\left(D_2\right)} \bracket{D_2},
+    \end{equation}
+    co kończy dowód.
 \end{proof}
 
 Zazwyczaj, ale nie zawsze, wielomian Jonesa lepiej radzi sobie z odróżnianiem od siebie splotów.
@@ -225,10 +211,12 @@ Istnieją sploty o~trywialnym wielomianie Jonesa, jest ich nawet nieskończenie 
 \begin{proposition}
     Niech $k \ge 2$ będzie liczbą naturalną.
     Istnieje nieskończenie wiele splotów pierwszych z $k$ ogniwami, których wielomian Jonesa nie odróżnia od niesplotu z $k$ ogniwami.
-    Co więcej, można wymagać, by wszystkie te sploty były satelitami splotu Hopfa.s
+
+    Co więcej, można wymagać, by wszystkie te sploty były satelitami splotu Hopfa.
+\index{splot!Hopfa}%
 \end{proposition}
 
-Niech $\jones$ będzie wielomianem Jonesa splotu $K$ o~$n$ składowych spójności.
+Niech $\jones$ będzie wielomianem Jonesa splotu $L$ o~$n$ składowych spójności.
 Jego wartości w~niektórych pierwiastkach jedności są związane z~innymi niezmiennikami węzłów.
 I tak przyjmując oznaczenie $\omega_k = \exp(2\pi i/k)$ mamy
 
@@ -243,7 +231,7 @@ I tak przyjmując oznaczenie $\omega_k = \exp(2\pi i/k)$ mamy
 
 \begin{proof}
     Jak wkrótce się przekonamy, to proste wnioski z~relacji kłębiastej.
-    Explicite wskazał je Jones w \cite{jones85} (jako theorem 14, 15).
+    Explicite wskazał je Jones w \cite[twierdzenie 14, 15]{jones85}.
 \end{proof}
 
 \begin{proposition}
@@ -255,7 +243,7 @@ I tak przyjmując oznaczenie $\omega_k = \exp(2\pi i/k)$ mamy
 \end{proof}
 
 \begin{proposition}
-    $V_L(\omega_6) = \pm i^{n-1} \cdot (\sqrt 3i)^r$, gdzie $r$ jest rangą pierwszej grupy homologii podwówjnego rozgałęzionego nakrycia $L$ nad $\Z_3$.
+    $V_L(\omega_6) = \pm i^{n-1} \cdot (\sqrt 3i)^r$, gdzie $r$ jest rangą pierwszej grupy homologii podwójnego rozgałęzionego nakrycia $L$ nad $\Z_3$.
 \end{proposition}
 
 \begin{proof}
@@ -267,7 +255,7 @@ I tak przyjmując oznaczenie $\omega_k = \exp(2\pi i/k)$ mamy
 \end{proposition}
 
 \begin{proof}
-    Dowód zawiera praca ,,3-coloring and other elementary invariants of knots'' (Przytycki, 1998).
+    Patrz \cite{przytycki98}.
 \end{proof}
 
 \begin{proposition}
@@ -276,7 +264,7 @@ I tak przyjmując oznaczenie $\omega_k = \exp(2\pi i/k)$ mamy
 \end{proposition}
 
 \begin{proof}
-    Równość 4. pokazał Murakami w~1986 roku (\cite{murakami86}).
+    Równość tę pokazał Murakami w~1986 roku (\cite{murakami86}).
 \end{proof}
 
 \begin{proposition}
@@ -286,7 +274,7 @@ I tak przyjmując oznaczenie $\omega_k = \exp(2\pi i/k)$ mamy
 \end{proposition}
 
 \begin{proof}
-    ????
+    ???? % TODO
 \end{proof}
 
 Nie jest znana topologiczna interpretacja wielomianu Jonesa (którą posiada wielomian Alexandera) ani charakteryzacja poza warunkami koniecznymi z~pięciu faktów powyżej.
@@ -306,8 +294,8 @@ Nie jest znana topologiczna interpretacja wielomianu Jonesa (którą posiada wie
 
 Poza powyżej opisanymi przypadkami, wartości wielomianu Jonesa nie można znaleźć w~czasie wielomianowym od ilości skrzyżowań na diagramie (jest to problem $\#P$-trudny).
 
-Czemu wielomian Jonesa jest wielomianem?
-Odpowiedniki wielomianu Jonesa dla węzłów w~3-rozmaitościach innych niż sfera $S^3$ nie są wielomianami, ale funkcjami z~pierwiastków jedności w~zbiór elementów całkowitch\footnote{algebraic integers} (jak podaje J. Roberts).
+% Czemu wielomian Jonesa jest wielomianem?
+% Odpowiedniki wielomianu Jonesa dla węzłów w~3-rozmaitościach innych niż sfera $S^3$ nie są wielomianami, ale funkcjami z~pierwiastków jedności w~zbiór elementów całkowitch\footnote{algebraic integers} (jak podaje J. Roberts).
 
 Dotychczas wyznaczyliśmy wielomian Jonesa jedynie dla splotów trywialnych (fakt \ref{prp:jones_trivial_link}).
 Dlaczego?
@@ -317,6 +305,7 @@ Na szczęście wtedy z pomocą przychodzi:
 \begin{definition}
     Niech $L$ będzie zorientowanym splotem.
     Wielomian Laurenta $\jones_L(t) \in \Z[t^{\pm 1/2}]$, który spełnia relację kłębiastą
+\index{relacja kłębiasta}%
     \begin{equation}
         t^{-1} \jones(L_+) - t\jones(L_-) + (t^{-1/2} - t^{1/2}) \jones(L_0) = 0
     \end{equation}
@@ -324,24 +313,56 @@ Na szczęście wtedy z pomocą przychodzi:
 \end{definition}
 
 \begin{proof}
-Wyraźmy wielomian Jonesa przez nawias Kauffmana i~spin.
-Chcemy pokazać, że
+Niech
 \begin{equation}
-    A^{4}(-A)^{-3w(L_+)}\bracket{\LittleRightCrossing}
-    -A^{-4}(-A)^{-3w(L_-)}\bracket{\LittleLeftCrossing}
-    +(A^2-A^{-2})(-A)^{-3w(L_0)}\bracket{\LittleRightSmoothing} = 0.
+    L_+ = \MediumRightCrossing
+    \quad\quad
+    L_- = \MediumLeftCrossing
+    \quad\quad
+    L_0 = \MediumRightSmoothing
+    \quad\quad
+    L_\infty = \MediumLeftSmoothing
+\end{equation}
+% TODO: zdefiniować je raz, a dobrze.
+% ack -l 'L_\+'
+% src/30-polynomials/alexander.tex
+% src/30-polynomials/jones-kauffman.tex
+% src/30-polynomials/blmho.tex
+% src/30-polynomials/homfly.tex
+% src/00-meta-latex/diagrams.tex
+(oznaczenia te są standardowe i pozwalają oszczędzić trochę miejsca).
+Wyraźmy wielomian Jonesa przez klamrę Kauffmana i~spin.
+Chcemy pokazać, że
+\begin{align}
+    & A^{4}(-A)^{-3w(L_+)}\bracket{L_+} \\
+    - & A^{-4}(-A)^{-3w(L_-)}\bracket{L_0} \\ 
+    + & (A^2-A^{-2})(-A)^{-3w(L_0)}\bracket{L_0} = 0.
+\end{align}
+
+Ale $w(L_\pm) = w(L_0)\pm 1$, zatem to jest równoważne z
+
+\begin{equation}
+    -A \bracket{L_+} +
+    A^{-1} \bracket{L_-} +
+    (A^2-A^{-2}) \bracket{L_0} =0.
 \end{equation}
 
-Ale $w(L_\pm)=w(L_0)\pm 1$, zatem to jest równoważne z
-\[
-    -A\bracket{\LittleRightCrossing} +A^{-1}\bracket{\LittleLeftCrossing} +(A^2-A^{-2})\bracket{\LittleRightSmoothing} =0.
-\]
-Z definicji nawiasu Kauffmana wnioskujemy, że
-$\bracket{\LittleRightCrossing} = A\bracket{\LittleRightSmoothing}+A^{-1}\bracket{\LittleLeftSmoothing}$ i
-$\bracket{\LittleLeftCrossing} = A\bracket{\LittleLeftSmoothing}+A^{-1}\bracket{\LittleRightSmoothing}$.
+Z definicji klamry Kauffmana wnioskujemy, że
+
+\begin{equation}
+    \begin{cases}
+        \bracket{L_+} = A\bracket{L_0} + A^{-1}\bracket{L_\infty} \\
+        \bracket{L_-} = A\bracket{L_\infty} + A^{-1}\bracket{L_0}
+    \end{cases}
+\end{equation}
+
 Pierwsze równanie przemnóżmy przez $A$, drugie przez $A^{-1}$, a~następnie dodajmy je do siebie.
-Wtedy otrzymamy $A\bracket{\LittleRightCrossing}-A^{-1}\bracket{\LittleLeftCrossing} =
-A^2\bracket{\LittleRightSmoothing} - A^{-2}\bracket{\LittleRightSmoothing}$.
+Wtedy otrzymamy
+\begin{equation}
+    A\bracket{L_+} - A^{-1}\bracket{L_-} =
+    A^2 (\bracket{L_0} - \bracket{L_\infty}),
+\end{equation}
+quod erat demonstrandum.
 \end{proof}
 
 % \subsection{Odwrotności, lustra i~sumy}
@@ -350,6 +371,7 @@ Wielomian Jonesa nie wykrywa orientacji splotu.
 \begin{proposition}
     Niech $L$ będzie zorientowanym splotem.
     Wtedy $\jones(rL)=\jones(L)$.
+\index{rewers}%
 \end{proposition}
 
 \begin{proof}
@@ -362,6 +384,7 @@ Ale czasami potrafi odróżnić splot od jego lustra:
 \begin{proposition}
     Niech $L$ będzie zorientowanym splotem.
     Wtedy $\jones(mL)(t)=\jones(L)(t^{-1})$.
+\index{lustro}%
 \end{proposition}
 
 \begin{proof}
@@ -385,9 +408,11 @@ Ale czasami potrafi odróżnić splot od jego lustra:
 \begin{corollary}
     \label{cor:joines_of_amphicheiral}
     Jeśli $K$ jest węzłem zwierciadlanym, to wielomian $\jones_K$ jest symetryczny.
+\index{węzeł!zwierciadlany}
 \end{corollary}
 
 Implikacja odwrotna nie zachodzi na mocy wniosku \ref{cor:acheiral_signature}: węzeł $9_{42}$ ma symetryczny wielomian Jonesa, ale niezerową sygnaturę.
+\index{sygnatura}%
 Poniżej trzynastu skrzyżowań taka sytuacja ma miejsce dla dokładnie czternastu węzłów pierwszych.
 % 9_42, 10_125, 11n_19, 11n_24, 11n_82, 12a_0669, 12a_1171, 12a_1179, 12a_1205, 12n_0362, 12n_0506, 12n_0562, 12n_0571, 12n_0821
 
@@ -439,7 +464,8 @@ Wcześniej pokazał to z~dużo większym wysiłkiem Dehn, patrz przykład \ref{e
 \end{proof}
 
 \begin{proposition}
-    \label{prp:jones_multiplicative_2}
+\label{prp:jones_multiplicative_2}%
+\index{relacja kłębiasta}%
     Niech $K_1, K_2$ będą zorientowanymi węzłami.
     Wtedy
     \begin{equation}
@@ -507,4 +533,7 @@ Wcześniej pokazał to z~dużo większym wysiłkiem Dehn, patrz przykład \ref{e
 
 % Koniec sekcji Relacja kłębiasta
 % Koniec podsekcji Wielomian Jonesa
+
+\index{klamra Kauffmana|)}
+
 % Koniec podsekcji Nawias Kauffmana
