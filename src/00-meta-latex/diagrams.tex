@@ -36,6 +36,10 @@
 
 %%%%%%%%%% LEFT/RIGHT, BIG/SMALL START %%%%%%%%%%
 
+% \LeftCrossing - for example in crossing sign definition, where nothing besides the crossing is shown
+% \MediumLeftCrossing - for skein relations
+% \LittleLeftCrossing - for inline usage
+
 \newcommand{\LeftCrossing} {\begin{tikzpicture}[baseline=-0.65ex, scale=0.1]
     \begin{knot}[clip width=5, end tolerance=1pt]
         \strand[thick] (-5,5) to (5,-5);
@@ -45,6 +49,22 @@
 
 \newcommand{\RightCrossing} {\begin{tikzpicture}[baseline=-0.65ex, scale=0.1]
     % \useasboundingbox (-5, -5) rectangle (5,5);
+    \begin{knot}[clip width=5, end tolerance=1pt, flip crossing/.list={1}]
+        \strand[thick] (-5,5) to (5,-5);
+        \strand[thick] (-5,-5) to (5,5);
+    \end{knot}
+\end{tikzpicture}}
+
+\newcommand{\MediumLeftCrossing} {\begin{tikzpicture}[baseline=-0.65ex, scale=0.06]
+    \useasboundingbox (-7, -7) rectangle (7, 7);
+    \begin{knot}[clip width=5, end tolerance=1pt]
+        \strand[thick] (-5,5) to (5,-5);
+        \strand[thick] (-5,-5) to (5,5);
+    \end{knot}
+\end{tikzpicture}}
+
+\newcommand{\MediumRightCrossing} {\begin{tikzpicture}[baseline=-0.65ex, scale=0.06]
+    \useasboundingbox (-7, -7) rectangle (7, 7);
     \begin{knot}[clip width=5, end tolerance=1pt, flip crossing/.list={1}]
         \strand[thick] (-5,5) to (5,-5);
         \strand[thick] (-5,-5) to (5,5);
@@ -74,41 +94,49 @@
 
 %%%%%%%%%% LEFT/RIGHT SMOOTHING, BIG/SMALL START %%%%%%%%%%
 
-\newcommand{\LeftCrossSmoothing} {
-    \begin{tikzpicture}[baseline=-0.65ex, scale=0.1]
-        \begin{knot}[clip width=5, end tolerance=1pt]
-            \strand[thick] (-5, 5) [in=-135, out=-45] to (5,5);
-            \strand[thick] (-5, -5) [in=135, out=45] to (5,-5);
-        \end{knot}
-    \end{tikzpicture}
-}
+\newcommand{\LeftCrossSmoothing} {\begin{tikzpicture}[baseline=-0.65ex, scale=0.1]
+    \begin{knot}[clip width=5, end tolerance=1pt]
+        \strand[thick] (-5, 5) [in=-135, out=-45] to (5,5);
+        \strand[thick] (-5, -5) [in=135, out=45] to (5,-5);
+    \end{knot}
+\end{tikzpicture}}
 
-\newcommand{\RightCrossSmoothing} {
-    \begin{tikzpicture}[baseline=-0.65ex, scale=0.1]
-        \begin{knot}[clip width=5, end tolerance=1pt]
-            \strand[thick] (-4, -5) to [out=45, in=-45] (-4, 5);
-            \strand[thick] (4, -5) to [out=135, in=-135] (4, 5);
-        \end{knot}
-    \end{tikzpicture}
-}
+\newcommand{\RightCrossSmoothing} {\begin{tikzpicture}[baseline=-0.65ex, scale=0.1]
+    \begin{knot}[clip width=5, end tolerance=1pt]
+        \strand[thick] (-4, -5) to [out=45, in=-45] (-4, 5);
+        \strand[thick] (4, -5) to [out=135, in=-135] (4, 5);
+    \end{knot}
+\end{tikzpicture}}
 
-\newcommand{\LittleLeftSmoothing} {
-    \begin{tikzpicture}[baseline=-0.65ex,scale=0.03]
-        \begin{knot}[clip width=5, end tolerance=1pt]
-            \strand[semithick] (-5, 5) [in=-135, out=-45] to (5,5);
-            \strand[semithick] (-5, -5) [in=135, out=45] to (5,-5);
-        \end{knot}
-    \end{tikzpicture}
-}
+\newcommand{\MediumLeftSmoothing} {\begin{tikzpicture}[baseline=-0.65ex,scale=0.06]
+    \useasboundingbox (-7, -7) rectangle (7, 7);
+    \begin{knot}[clip width=5, end tolerance=1pt]
+        \strand[thick] (-5, 5) [in=-135, out=-45] to (5,5);
+        \strand[thick] (-5, -5) [in=135, out=45] to (5,-5);
+    \end{knot}
+\end{tikzpicture}}
 
-\newcommand{\LittleRightSmoothing} {
-    \begin{tikzpicture}[baseline=-0.65ex,scale=0.03]
-        \begin{knot}[clip width=5, end tolerance=1pt]
-            \strand[semithick] (-4, -5) to [out=45, in=-45] (-4, 5);
-            \strand[semithick] (4, -5) to [out=135, in=-135] (4, 5);
-        \end{knot}
-    \end{tikzpicture}
-}
+\newcommand{\MediumRightSmoothing} {\begin{tikzpicture}[baseline=-0.65ex,scale=0.06]
+    \useasboundingbox (-7, -7) rectangle (7, 7);
+    \begin{knot}[clip width=5, end tolerance=1pt]
+        \strand[thick] (-4, -5) to [out=45, in=-45] (-4, 5);
+        \strand[thick] (4, -5) to [out=135, in=-135] (4, 5);
+    \end{knot}
+\end{tikzpicture}}
+
+\newcommand{\LittleLeftSmoothing} {\begin{tikzpicture}[baseline=-0.65ex,scale=0.03]
+    \begin{knot}[clip width=5, end tolerance=1pt]
+        \strand[semithick] (-5, 5) [in=-135, out=-45] to (5,5);
+        \strand[semithick] (-5, -5) [in=135, out=45] to (5,-5);
+    \end{knot}
+\end{tikzpicture}}
+
+\newcommand{\LittleRightSmoothing} {\begin{tikzpicture}[baseline=-0.65ex,scale=0.03]
+    \begin{knot}[clip width=5, end tolerance=1pt]
+        \strand[semithick] (-4, -5) to [out=45, in=-45] (-4, 5);
+        \strand[semithick] (4, -5) to [out=135, in=-135] (4, 5);
+    \end{knot}
+\end{tikzpicture}}
 
 %%%%%%%%%% LEFT/RIGHT SMOOTHING, BIG/SMALL END %%%%%%%%%%
 
@@ -126,13 +154,55 @@
 
 \newcommand{\reidemeisterIa} {
 \begin{tikzpicture}[baseline=-0.65ex, scale=0.07]
-\useasboundingbox (-4, -5) rectangle (3, 5);
+\useasboundingbox (-5, -5) rectangle (3, 5);
 \begin{knot}[clip width=5, end tolerance=1pt]
     \strand[semithick] (-3,  5) [in=left, out=down] to (1, -2) [in=down, out=right] to (3, 0);
     \strand[semithick] (-3, -5) [in=left, out=up]   to (1,  2) [in=up,   out=right] to (3, 0);
 \end{knot}
 \end{tikzpicture}
 }
+
+% for skein relation defining Kauffman F polynomial start
+\newcommand{\MediumReidemeisterIaRight} {
+    \begin{tikzpicture}[baseline=-0.65ex,scale=0.06]
+        \useasboundingbox (-7, -7) rectangle (7, 7);
+        \begin{knot}[clip width=5, end tolerance=1pt]
+    \strand[thick] (-5, -5) [in=left, out=60] to 
+                   ( 3,  5) [in=up, out=right] to
+                   ( 5,  0);
+    \strand[thick] (-5,  5) [in=left, out=-60] to 
+                   ( 3, -5) [in=down, out=right] to 
+                   ( 5,  0);
+        \end{knot}
+    \end{tikzpicture}
+}
+
+\newcommand{\MediumReidemeisterIaLeft} {
+    \begin{tikzpicture}[baseline=-0.65ex,scale=0.06]
+        \useasboundingbox (-7, -7) rectangle (7, 7);
+        \begin{knot}[clip width=5, end tolerance=1pt]
+    \strand[thick] (-5,  5) [in=left, out=-60] to 
+                   ( 3, -5) [in=down, out=right] to
+                   ( 5,  0);
+    \strand[thick] (-5, -5) [in=left, out=60] to 
+                   ( 3,  5) [in=up, out=right] to 
+                   ( 5,  0);
+        \end{knot}
+    \end{tikzpicture}
+}
+
+\newcommand{\MediumReidemeisterIb} {
+    \begin{tikzpicture}[baseline=-0.65ex,scale=0.06]
+        \useasboundingbox (-2, -7) rectangle (2, 7);
+        \begin{knot}[clip width=5, end tolerance=1pt]
+    \strand[thick] (0,  -6.65) to 
+                   (0,   6);
+        \end{knot}
+    \end{tikzpicture}
+}
+% for skein relation defining Kauffman F polynomial end
+
+
 
 \newcommand{\MalyreidemeisterIa} {\begin{tikzpicture}[baseline=-0.65ex, scale=0.03]
 \useasboundingbox (-4, -5) rectangle (3, 5);
@@ -168,6 +238,16 @@
 \end{knot}
 \end{tikzpicture}
 }
+
+% potrzebne do klamry Kauffmana
+\newcommand{\reidemeisterIac}  {
+\begin{tikzpicture}[baseline=-0.65ex, scale=0.06]
+    \useasboundingbox (-7, -7) rectangle (7, 7);
+    \begin{knot}[clip width=5, end tolerance=1pt]
+        \strand[thick] (-5,-5) to (-5, 5);
+        \strand[thick] (-5,-5) to (5,5);
+    \end{knot}
+\end{tikzpicture}}
 
 \newcommand{\reidemeisterIIa} {
 \begin{tikzpicture}[baseline=-0.65ex,scale=0.07]

@@ -1,33 +1,42 @@
-\section{Wielomian Kauffmana} % (fold)
+\section{Wielomian Kauffmana}
+\index{wielomian!Kauffmana|(}
 
-Mniej więcej w~tym samym czasie, gdy odkryto wielomian BLM/Ho, Kauffman zaproponował sposób, dzięki któremu ten wielomian można uogólnić do odróżniającego lustra.
-% Dopuszczał stosowanie tylko drugiego i~trzeciego ruchu Reidemeistera.
-Wielomianu Kauffmana nie należy mylić z~klamrą Kauffmana!
+Mniej więcej w~tym samym czasie, gdy odkryto wielomian BLM/Ho, Kauffman opisał w~\cite{kauffman90} sposób, jak uogólnić ten niezmiennik do odróżniającego lustra.
+Wielomianu $F$ Kauffmana nie należy mylić z~klamrą Kauffmana $\langle \ldots \rangle$!
 
 \begin{definition}[wielomian Kauffmana]
-    \index{wielomian!Kauffmana}
-    Niech $K$ będzie zorientowanym splotem, zaś $D$ ustalonym diagramem o~spinie $\writhe D$.
-    Istnieje wielomian $L(K)$ wyznaczony przez relację kłębiastą
+    Niech $L$ będzie zorientowanym splotem, zaś $D$ ustalonym diagramem o~spinie $\writhe D$.
+    Istnieje wielomian $\Lambda(L)$ wyznaczony przez relację kłębiastą
     \begin{equation}
-        L(\LittleLeftCrossing) + L(\LittleRightCrossing) = z L(\LittleLeftSmoothing) + z L(\LittleRightSmoothing)
+        \Lambda \left(\MediumLeftCrossing\right) + 
+        \Lambda \left(\MediumRightCrossing\right) = 
+        z \cdot \left(
+        \Lambda \left(\MediumLeftSmoothing\right) + 
+        \Lambda \left(\MediumRightSmoothing\right)
+        \right),
     \end{equation}
-    z warunkiem brzegowym $L(\LittleUnknot) = 1$, niezmienniczy względem II i III ruchu Reidemeistera oraz taki, że $L(s) = a^{-1} L(s_r) = a L(s_l)$, gdzie $s$ jest pojedynczym węzłem, zaś $s_r, s_l$ to jego obrazy względem dwóch wariantów I ruchu Reidemeistera.
+    który jest niezmienniczy względem II i III ruchu Reidemeistera, spełnia równości:
+    \begin{equation}
+        \Lambda \left(\MediumReidemeisterIaRight\right) = 
+        a \Lambda \left(\MediumReidemeisterIb\right),
+        \quad\quad\quad
+        \Lambda \left(\MediumReidemeisterIaLeft\right) = 
+        \frac 1 a \Lambda \left(\MediumReidemeisterIb\right)
+    \end{equation}
+    oraz warunek brzegowy $\Lambda(\LittleUnknot) = 1$.
     Wtedy wielomian dwóch zmiennych
     \begin{equation}
-        % F_L(a, z) = a^{-w(L)} \langle |L| \rangle,
-        F_K(a, z) = a^{-\writhe D} L(D),
+        F_L(a, z) = a^{-\writhe D} \Lambda(D),
     \end{equation}
     nazywamy wielomianem Kauffmana.
+    Jest niezmiennikiem splotów.
 \end{definition}
-
-\begin{tobedone}
-$s_r, s_l$: patrz Stoimenow, Tabulating and distinguishing mutants.
-\end{tobedone}
 
 Jego związki z~wielomianem HOMFLY pozostają nieznane.
 Wiemy natomiast, że
 
 \begin{proposition}
+\index{wielomian!BLM/Ho}%
     Wielomian Kauffmana uogólnia wielomian BLM/Ho, zgodnie z podstawieniem
     \begin{equation}
         Q(x) = F(1, x).
@@ -35,10 +44,13 @@ Wiemy natomiast, że
 \end{proposition}
 
 \begin{proposition}
+\index{wielomian!Jonesa}
     Wielomian Kauffmana uogólnia wielomian Jonesa, zgodnie z podstawieniem
     \begin{equation}
         \jones(t)=F(-t^{-3/4},t^{-1/4}+t^{1/4}).
     \end{equation}
 \end{proposition}
+
+\index{wielomian!Kauffmana|)}
 
 % Koniec sekcji Wielomian Kauffmana
