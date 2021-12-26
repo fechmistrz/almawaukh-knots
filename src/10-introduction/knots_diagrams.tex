@@ -1,36 +1,38 @@
 \section{Diagramy. Ruchy Reidemeistera}
-Chociaż w~świetle definicji \ref{def:knot} węzły są pewnymi regularnymi podzbiorami przestrzeni $\R^3$,
-z kombinatorycznego punktu widzenia wygodniej jest rysować je na płaszczyźnie.
+Chociaż w~świetle definicji \ref{def:knot} węzły są pewnymi regularnymi podzbiorami przestrzeni $\R^3$, z~kombinatorycznego punktu widzenia wygodniej jest rysować je na płaszczyźnie.
 
 \begin{definition}[orientacja]
-    \index{splot!zorientowany}
+\index{węzeł!zorientowany}%
+\index{orientacja|see {węzeł zorientowany}}%
     Węzeł, w~którym wybrano kierunek, w~którym należy się po nim poruszać, nazywamy zorientowanym.
     Splot nazywamy zorientowanym, jeśli wszystkie jego ogniwa traktowane jako węzły są zorientowane.
 \end{definition}
 
+Orientację na diagramie zaznaczamy małą strzałką wskazującą kierunek poruszania się.
+
 \begin{definition}
+\index{cień}%
     Rzut węzła $K \subseteq \R^3$ na płaszczyznę nazywamy cieniem.
 \end{definition}
 
 \begin{definition}[skrzyżowanie]
+\index{skrzyżowanie}% 
     Podwójny punkt w cieniu nazywamy skrzyżowaniem.
 \end{definition}
 
 \begin{definition}[diagram]
-    \index{diagram}
+\index{diagram}%
     Cień razem z~informacją o~tym, jak przebiegają skrzyżowania i pozbawiony katastrof: potrójnych przecięć, stycznych czy dziobów nazywamy diagramem.
     % TODO: Narysować katastrofy
 \end{definition}
 
-Orientację na diagramie zaznaczamy małą strzałką wskazującą kierunek poruszania się.
-
 \begin{definition}[włókno]
-    \index{włókno}
+\index{włókno}%
     Fragment diagramu, który biegnie między dwoma kolejnymi tunelami, czyli podskrzyżowaniami, nazywamy włóknem.
 \end{definition}
 
 \begin{definition}[nić]
-    \index{nić}
+\index{nić}%
     Fragment diagramu, który biegnie między dwoma kolejnymi skrzyżowaniami, nazywamy nicią.
 \end{definition}
 
@@ -42,6 +44,7 @@ Nici powstają z włókien przez rozcięcie ich przy każdym nadskrzyżowaniu.
 \end{proposition}
 
 Kawauchi \cite[s. 7]{kawauchi96} wspomina w tym miejscu podręcznik Crowella, Foxa \cite[s. 7]{crowell63}.
+To samo jest na przykład w~\cite[s. 9]{burde03}.
 
 \begin{proof}
     Rzut splotu na równoległe płaszczyzny jest taki sam, a te można sparametryzować prostymi przechodzącymi przez początek układu współrzędnych, które tworzą przestrzeń rzutową $\R \mathbb P^2$.
@@ -54,13 +57,12 @@ Kawauchi \cite[s. 7]{kawauchi96} wspomina w tym miejscu podręcznik Crowella, Fo
     Każdy splot posiada diagram.
 \end{corollary}
 
-Wynika stąd, że każdy węzeł ma wiele diagramów.
-Mając dane dwa różne diagramy chcielibyśmy wiedzieć, czy reprezentują ten sam węzeł.
-Na szczęście Reidemeister w latach 20. XX wieku podał proste kryterium rozstrzygające ten problem.
+Każdy węzeł ma zatem wiele diagramów; mając dane dwa różne chcielibyśmy wiedzieć, czy przedstawiają ten sam węzeł.
+Kurt Reidemeister podał proste kryterium rozstrzygające ten problem w~latach dwudziestych ubiegłego wieku.
 Najpierw zdefiniujmy trzy lokalne operacje na diagramach.
 
 \begin{definition}[ruchy Reidemeistera]
-    \index{ruchy!Reidemeistera}
+\index{ruchy Reidemeistera}%
     Trzy gatunki lokalnych deformacji diagramu splotu:
 \begin{comment}
     \[
@@ -118,16 +120,15 @@ Najpierw zdefiniujmy trzy lokalne operacje na diagramach.
         \end{tikzpicture}}_{R_3}
     \]
 \end{comment}
-    skręcenie lub rozkręcenie ($R_1$), wsunięcie lub rozsunięcie ($R_2$) lub przesunięcie łuku przez skrzyżowanie ($R_3$) nazywamy ruchami Reidemeistera.
+    skręcenie lub rozkręcenie ($R_1$), wsunięcie lub rozsunięcie ($R_2$) oraz przesunięcie łuku przez skrzyżowanie ($R_3$) nazywamy ruchami Reidemeistera.
 \end{definition}
 
 Ruch $R_i$ operuje więc na $i$ łukach diagramu.
-Reidemeister w~swojej pierwszej pracy przyjął inną kolejność,
-jego drugi ruch jest naszym pierwszym.
+Reidemeister w~swojej pierwszej pracy przyjął inną kolejność, jego drugi ruch jest naszym pierwszym.
 
 \begin{theorem}[Reidemeister, 1927]
-    \label{thm:reidemeister}
-    \index{twierdzenie!Reidemeistera}
+\label{thm:reidemeister}%
+\index{twierdzenie!Reidemeistera}%
     Niech $D_1, D_2$ będą diagramami dwóch splotów $L_1, L_2$.
     Sploty $L_1, L_2$ są takie same wtedy i tylko wtedy, gdy diagram $D_2$ można otrzymać z $D_1$ wykonując skończony ciąg ruchów Reidemeistera oraz gładkich deformacji łuków, bez zmiany biegu skrzyżowań.
 \end{theorem}
@@ -136,30 +137,15 @@ Dowód podali niezależnie Reidemeister \cite{reidemeister27} oraz Alexander, Br
 Twierdzenie Reidemeistera jest prawdziwe także dla splotów zorientowanych, wtedy jednak w każdym ruchu trzeba uwzględnić wszystkie możliwe orientacje łuków.
 
 \begin{proof}
-    Szkielet dowodu można znaleźć w~książce Burdego i~Zieschanga.
-    Kluczowe pomysły zawiera ,,Knots, links, braids and $3$-manifolds''
-    Prasołowa i~Sosińskiego.
-    Innym przystępnym źródłem jest podręcznik \cite{murasugi96} Murasugiego ,,Knot theory and its applications''.
+    Szkielet dowodu można znaleźć w~książce Burdego i~Zieschanga \cite[s. 4-10]{burde03}.
+    Kluczowe pomysły zawiera też \cite[s. 11-12]{prasolov97} Prasołowa i~Sosińskiego.
+    Innym przystępnym źródłem jest podręcznik \cite[s. 50-56]{murasugi96} Murasugiego.
 \end{proof}
 
-\begin{tobedone}
-    Trace (1983) showed that two knot diagrams for the same knot are related by using only type II and III moves if and only if they have the same writhe and winding number.
-    Trace, Bruce (1983), "On the Reidemeister moves of a classical knot", Proceedings of the American Mathematical Society, 89 (4): 722–724, doi:10.2307/2044613, MR 0719004
-
-    Wspomnieć o węzłach obramowanych (framed knots), które są równoważne przy użyciu II, III i podwójnego I ruchu Reidemeistera.
-\end{tobedone}
-
-\begin{tobedone}
-    Furthermore, combined work of Östlund (2001), Manturov (2004), and Hagge (2006) shows that for every knot type there are a pair of knot diagrams so that every sequence of Reidemeister moves taking one to the other must use all three types of moves.
-    Östlund, Olof-Petter (2001), "Invariants of knot diagrams and relations among Reidemeister moves", J. Knot Theory Ramifications, 10 (8): 1215–1227, arXiv:math/0005108, doi:10.1142/S0218216501001402, MR 1871226
-    Manturov, Vassily Olegovich (2004), Knot theory, Boca Raton, FL: Chapman et Hall/CRC, doi:10.1201/9780203402849, ISBN 0-415-31001-6, MR 2068425
-    Hagge, Tobias (2006), "Every Reidemeister move is needed for each knot type", Proc. Amer. Math. Soc., 134 (1): 295–301, doi:10.1090/S0002-9939-05-07935-9, MR 2170571
-\end{tobedone}
-
-\begin{tobedone}
-    Alexander Coward demonstrated that for link diagrams representing equivalent links, there is a sequence of moves ordered by type: first type I moves, then type II moves, type III, and then type II. The moves before the type III moves increase crossing number while those after decrease crossing number.
-    Coward, Alexander; Lackenby, Marc (2014), "An upper bound on Reidemeister moves", American Journal of Mathematics, 136 (4): 1023–1066, arXiv:1104.1882, doi:10.1353/ajm.2014.0027, MR 3245186?
-\end{tobedone}
+Trace \cite{trace83} zauważył, że dwa diagramy jednego węzła są związane tylko II i III ruchem (ale nie I) wtedy i tylko wtedy, gdy mają ten sam spin oraz indeks punktu względem krzywej (,,winding number'').
+Z prac Östlunda \cite{ostlund01}, Manturowa\footnote{Niestety nie wiem, o które strony tej książki chodzi.} \cite{manturov04} oraz Haggego \cite{hagge06} wynika, że dla każdego węzła istnieje para diagramów, do przejścia między którymi trzeba wykorzystać wszystkie trzy ruchy.
+% praca Haggego nazywa się "Every Reidemeister move is needed for each knot type" ale nawet w MathSciNecie wspomnieni są Ostlund i Manturow, więc zostawiam. Tekst skopiowany z Wiki
+Coward \cite{coward06} zademonstrował, że nawet jeśli wszystkie trzy ruchy są potrzebne, można je wykonywać w specjalnej kolejności: najpierw tylko I ruchy, potem tylko II ruchy, następnie tylko III ruchy i znowu II ruchy.
 
 W praktyce twierdzenia \ref{thm:reidemeister} nie stosuje się bezpośrednio do diagramów splotów.
 Mając dane dwa spójne diagramy tego samego splotu trudno znaleźć jest ciąg ruchów przekształcający jeden z nich w drugi.
@@ -186,30 +172,21 @@ Niezmienniki będą nam stale towarzyszyć w~wędrówce po krainie węzłów.
 
 % koniec sekcji Ruchy Reidemeistera
 
-%Niestety pomimo upływu czasus, nikt nie napisał komputerowego programu realizującego ten algorytm (stan na 1994).
-%Może podejmie się tego Czytelnik?
-%Inne algorytmy istnieją, jednak wszystkie działają w~wykładniczym czasie.
-
-W 1961 roku W. Haken \cite{haken61} podał niezawodny przepis na wykrycie diagramu niewęzła,
-częściowo rozwiązując jeden z~ważniejszych problemów teorii węzłów.
-Przez wiele lat nikt nie podjął się implementacji tego algorytmu,
-udało się to niedawno Burtonowi, Budneyowi oraz Petterssonowi w~komputerowym programie Regina\footnote{Dostępny pod adresem \url{https://regina-normal.github.io/}.} na przełomie tysiącleci.
-Burton, Rubinstein i~Tillman pokazali w~pracy \cite{burton12}, jak sprawdzać,
-czy powierzchnia normalna na striangulowanej 3-rozmaitości jest (nie)ściśliwa w~czasie wykładniczym.
-To okazało się być wystarczającym do udzielenia negatywnej odpowiedzi na pytanie Thurstona:
-,,czy przestrzeń Seiferta-Webera jest rozmaitością Hakena?'',
-a zatem wykraczającego poza poziom tej pracy.
-
-Wiadomo, że genus wykrywa niewęzły (fakt \ref{prp:genus_detects_unknot}) i nie wiadomo, czy wielomian Jonesa to robi (hipoteza \ref{con:jones}).
+Wolfgang Haken \cite{haken61} podał przepis na wykrycie diagramu niewęzła i rozwiązał częściowo jeden z~ważniejszych problemów teorii węzłów.
+Długo nikt nie podjął się implementacji tego algorytmu\footnote{Moritz Epple pisze ,,this algorithm was extremely impractical''.}, udało się to Burtonowi, Budneyowi oraz Petterssonowi w~komputerowym programie Regina\footnote{Dostępny pod adresem \url{https://regina-normal.github.io/}.} na przełomie tysiącleci.
+Burton, Rubinstein i~Tillman pokazali w~pracy \cite{burton12}, jak sprawdzać, czy powierzchnia normalna na striangulowanej 3-rozmaitości jest (nie)ściśliwa w~czasie wykładniczym.
+To okazało się wystarczyć do udzielenia negatywnej odpowiedzi na pytanie Thurstona: ,,czy przestrzeń Seiferta-Webera jest rozmaitością Hakena?'', a zatem wykraczającego poza poziom tej pracy.
+\index{przestrzeń Seiferta-Webera}%
+\index{rozmaitość Hakena}%
 
 SnapPea\footnote{Dostępny pod adresem \url{http://geometrygames.org/SnapPea/index.html}.} to inny popularny wśród niskowymiarowych topologów program pozwalający badać hiperboliczne 3-rozmaitości, patrz sekcja \ref{sec:hyperbolic}.
 
-\begin{tobedone}
-    Dowiązać tutaj wszystkie wykrywacze niewęzła opisane w książce.
-\end{tobedone}
+Wiadomo, że genus wykrywa niewęzły (fakt \ref{prp:genus_detects_unknot}) i nie wiadomo, czy wielomian Jonesa to robi (hipoteza \ref{con:jones}).
+\index{genus}%
+\index{wielomian Jonesa}%
 
 Przykładami trudnych w~rozpoznaniu niewęzłów są: niewęzeł Goritza, Freedmana.
-Więcej trudnych niewęzłów zawiera praca \cite{zanellati16} autorstwa C. Petronio oraz A. Zanellatiego.
+Więcej trudnych niewęzłów zawiera praca \cite{zanellati16} autorstwa Petronio oraz Zanellatiego.
 
 \index{niewęzeł}
 \index{niewęzeł!Goritza}
@@ -237,7 +214,7 @@ Więcej trudnych niewęzłów zawiera praca \cite{zanellati16} autorstwa C. Petr
 Zanim opowiemy, jak dotąd przebiegała klasyfikacja węzłów o małej liczbie skrzyżowań, zdefiniujemy klasę splotów ze specjalnymi diagramami.
 
 \begin{definition}[alternacja]
-    \index{splot!alternujący}
+\index{węzeł!alternujący}%
     Diagram splotu, gdzie podczas poruszania się wzdłuż każdego ogniwa nad- oraz podskrzyżowania mijane są naprzemiennie, nazywamy alternującym.
     Splot jest alternujący, jeśli posiada alternujący diagram.
 \end{definition}
@@ -250,6 +227,7 @@ Sundberg oraz Thistlethwaite pokazali w 1998 roku, że liczba splotów alternuj�
 
 \begin{proposition}
     Niech $a_n$ oznacza liczbę pierwszych, alternujących supłów o~$n$ skrzyżowaniach.
+\index{supeł}%
     Wtedy
     \begin{equation}
         a_n \sim (3c_1/4\sqrt{\pi})n^{-5/2}\lambda^{n-3/2},
