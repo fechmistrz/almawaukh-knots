@@ -38,7 +38,7 @@ chapter-draft: build/draft-knot-theory.pdf
 build/knot-theory.pdf: src/knot-theory.tex src/*/*.tex
 	$(call make_pdf)
 
-build/draft-knot-theory.pdf: src/*/*.tex
+build/draft-knot-theory.pdf: src/*-*/*.tex
 	sed 's@\(\\includecomment\)@% \1@g' src/include/head.tex > src/include/head.tex.bak
 	mv src/include/head.tex.bak src/include/head.tex
 	$(call make_pdf)
