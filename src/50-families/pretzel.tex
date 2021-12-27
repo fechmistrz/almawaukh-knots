@@ -1,9 +1,11 @@
-\section{Precle} % (fold)
+\section{Precle}
+\index{węzeł!preclowy|see {precel}}%
+\index{precel|(}%
 Precle to sploty ze standardowym diagramem, na którym wyróżnić można co najmniej trzy warkocze na dokładnie dwóch pasmach.
 Warkocze te ułożone są w sposób cykliczny.
 Pojawiły się po raz pierwszy w~książce Reidemeistera z~1932 roku jako przykład węzła o~trywialnym wielomianie Alexandera.
 Zanim podamy formalną definicję, wygodnie będzie przyjrzyć się ogólniejszej rodzinie splotów Montesinosa, nazwanych tak na cześć José Marii Montesinosa Amilibii, topologa hiszpańskiego.
-Wprowadził je do matematyki w~1973 roku.
+Wprowadził je do matematyki w~1973 roku \cite{montesinos73}.
 
 \begin{tobedone}
 A special feature of this knot is that the two-fold branched covering space over 83 with this knot as the branch set is a Seifert manifold. From this point of view, J. M. Montesinos generalized the pretzel links to a class of links called the Montesinos links (cf. [Montesinos 1973', *]). The Montesinos link M( -cb; (PI, ql), (p2, q2), ... , (Pn, qn)) is obtained from the pretzel link P(-cb;PI,P2, ... ,Pn) by replacing each 2-string braid of Pi-half twists with a rational tangle with slope qi/Pi (see 3.3 for rational tangles). The classification of the Montesinos links is stated in [Burde-Zieschang 1985] (see also 10.7).
@@ -14,7 +16,7 @@ A special feature of this knot is that the two-fold branched covering space over
 \end{tobedone}
 
 \begin{definition}[splot Montesinosa]
-    \index{splot!Montesinosa}
+\index{splot!Montesinosa}%
     Splotem Montesinosa nazywamy splot o~poniższym diagramie, gdzie wymierne liczby $\alpha_i/\beta_i$ oraz całkowita $e \in \Z$ odpowiadają supłom.
 \begin{comment}
     \[
@@ -66,55 +68,66 @@ The pretzel links are not in general simple links (see Chapter 3 for this defini
 % Kawauchi
 \end{tobedone}
 
-Splotom Montesinosa poświęcony jest cały rozdział dwunasty z~podręcznika Burdego i~Zieschanga \cite{burde03}.
-Można tam znaleźć klasyfikację splotów Montesinosa, zawiera jednak pułapkę w postaci innej notacji niż nasza dla supłów dwumostowych.
-Autorzy podają przykład węzła $43/105 = [0, 2, 2, 3, 1, 4]$, my opisalibyśmy go jako $105/22 = [4, 1, 3, 2, 2]$.
-Zakładają, że przedstawienie jest minimalne i~że występują co najmniej $r = 3$ supły.
-Poniższy fakt nie używa naszej notacji!
+Cały dwunasty rozdział podręcznika Burdego i~Zieschanga \cite{burde03} jest poświęcony splotom Montesinosa.
+Można tam znaleźć ich klasyfikację, zawiera jednak pułapkę: autorzy używają innej notacji dla supłów dwumostowych.
+Podają przykład węzła $43/105 = [0, 2, 2, 3, 1, 4]$, dla nas to jest $105/22 = [4, 1, 3, 2, 2]$.
 
 \begin{proposition}
     Sploty Montesinosa o $r \ge 3$ supłach $\beta_1/\alpha_1, \beta_2/\alpha_2, \ldots$ takich, że
     \begin{equation}
         \sum_{j=1}^r \frac{1}{\alpha_j} \le r - 2
     \end{equation}
-    są sklasyfikowane z dokładnością do cyklicznych permutacji i odwracania porządku przez uporządkowany zbior ułamków $\{\beta_i/\alpha_i \mod 1 : 1 \le i \le r\}$ razem z~wymierną liczbą
+    są sklasyfikowane (z dokładnością do cyklicznych permutacji oraz odwracania) przez uporządkowany zbior ułamków $\{\beta_i/\alpha_i \mod 1 : 1 \le i \le r\}$ razem z~wymierną liczbą
     \begin{equation}
         e_0 = e + \sum_{j=1}^r \frac{\beta_j}{\alpha_j}.
     \end{equation}
 \end{proposition}
 
+Powyższy fakt nie używa naszej notacji!
+
 \begin{proof}
-    Praca doktorancka ,,Involutions et fibrés de Seifert dans les variétés de dimension $3$'' Bonahona z 1978 roku.
-    W internecie dostępny jest jej skan (była pisana odręcznie!), ale angielskie tłumaczenie nie istnieje.
+    Praca doktorska Bonahona \cite{bonahon79}.
+    W~internecie dostępny jest jej skan (gdyż była pisana odręcznie po francusku!), ale angielskie tłumaczenie nie istnieje.
 \end{proof}
 
 Używając nadal tej niestandardowej notacji można sklasyfikować węzły odwracalny czy zwierciadlane:
 
 \begin{proposition}
-    Splot Montesinosa jest zwierciadlany wtedy i tylko wtedy, gdy $e = 0$ oraz istnieje permutacja $\pi$, cykl długości $r$ lub odwrócenie (inwersja?), taka że
+\index{węzeł!zwierciadlany}%
+    Splot Montesinosa jest zwierciadlany wtedy i tylko wtedy, gdy $e = 0$ oraz istnieje permutacja $\pi$, cykl długości $r$ lub odwrócenie, taka że
     \begin{equation}
-        \frac{\beta_{\pi(i)}}{\alpha_{\pi(i)}} \equiv \frac{\beta_i}{\alpha_i} \pmod 1
+        \frac{\beta_{\pi(i)}}{\alpha_{\pi(i)}} \equiv -\frac{\beta_i}{\alpha_i} \pmod 1
     \end{equation}
 \end{proposition}
+
+\begin{proof}
+    Patrz \cite[s. 230]{burde14}.
+\end{proof}
 
 \begin{corollary}
     Splot Montesinosa z nieparzystą liczbą supłów nie jest zwierciadlany.
 \end{corollary}
 
 \begin{proposition}
-    Sploty Montesinosa jest odwracalny wtedy i tylko wtedy, gdy, po ewentualnej zmianie etykiet supłów, przynajmniej jedna z liczb $\alpha_i$ jest parzysta lub wszystkie liczby $\alpha_i$ są parzyste, a sam splot ma postać
+\index{węzeł!odwracalny}%
+    Splot Montesinosa jest odwracalny wtedy i tylko wtedy, gdy, po ewentualnej zmianie etykiet supłów, przynajmniej jedna z liczb $\alpha_i$ jest parzysta lub wszystkie liczby $\alpha_i$ są parzyste, a sam splot ma postać
     \begin{equation}
         M(e_0, \beta_1/\alpha_1, \ldots, \beta_p/\alpha_p, \beta_p/\alpha_p, \ldots, \beta_1/\alpha_1)
     \end{equation}
-    lub
+    (oraz $r = 2p$) lub
     \begin{equation}
         M(e_0, \beta_1/\alpha_1, \ldots, \beta_p/\alpha_p, \beta_{p+1}/\alpha_{p+1}, \beta_p/\alpha_p, \ldots, \beta_1/\alpha_1)
     \end{equation}
-    lub
+    (oraz $r = 2p+1$) lub
     \begin{equation}
          M(e_0, \beta_1/\alpha_1, \ldots, \beta_p/\alpha_p, \beta_{p+1}/\alpha_{p+1}, \beta_p/\alpha_p, \ldots, \beta_2/\alpha_2).
     \end{equation}
+    (oraz $r = 2p$).
 \end{proposition}
+
+\begin{proof}
+    Patrz \cite[s. 231]{burde14}.
+\end{proof}
 
 % DICTIONARY;pretzel link;splot preclowy, precel
 \begin{definition}[precel]
@@ -125,22 +138,25 @@ Używając nadal tej niestandardowej notacji można sklasyfikować węzły odwra
 \end{definition}
 
 Na standardowym diagramie precla $(p_1, p_2, \ldots, p_n)$ występuje $p_1$ lewych skrzyżowań w~pierwszym suple, $p_2$ w~drugim, i~tak dalej.
-Taki precel jest węzłem dokładnie wtedy, gdy $n$ oraz $p_i$ są nieparzyste lub dokładnie jedna z~liczb $p_i$ jest parzysta.
+Taki precel jest węzłem dokładnie wtedy, gdy $n$ oraz $p_i$ są nieparzyste lub dokładnie jedna z~liczb $p_i$ jest parzysta (\cite[s. 27]{kawauchi96}).
 
 \begin{proposition}
-    Jeśli co najmniej dwa współczynniki $p_i, p_j$ zerują się, precel jest rozdzielczy.
+    Jeśli co najmniej dwa współczynniki $p_i, p_j$ zerują się, precel jest rozszczepialny.
 \end{proposition}
 
 \begin{proof}
     Widać to bezpośrednio z diagramu: jego część zawarta między supłem $p_i$ oraz $p_j$ jest rozłączna z~resztą diagramu.
     Nie jest jednak prawdziwa implikacja odwrotna.
+    % TODO: podać przykład
 \end{proof}
 
 Precel $(1,1,1)$ to prawy trójlistnik, $(5, -1, -1)$ to węzeł dokerski $6_1$, $(-3, 0, -3)$ to splot dwóch trójlistników, zaś $(2p, 2q, 2r)$ jest splotem trzech niewęzłów.
 Precle $(-2, 3, 2n+1)$ są szczególnie użyteczne jako narzędzie do badania 3-rozmaitości.
 Wiele twierdzeń, które dotyczą takich rozmaitości, opiera się na przykład na chirurgii Dehna precla $(-2, 3, 7)$.
+\index{precel!(-2, 3, 7)}
 
 \begin{proposition}
+\index{węzeł!torusowy}%
     Niech $K$ będzie węzłem torusowym.
     Jeśli $K$ jest jednocześnie $(-2, 3, k)$-preclem, to
     \begin{equation}
@@ -157,7 +173,7 @@ Wiele twierdzeń, które dotyczą takich rozmaitości, opiera się na przykład 
 \end{proposition}
 
 \begin{proof}
-    Stavros Garoufalidis, Christoph Koutschan: ,,The Noncommutative $A$-Polynomial of $(-2,3,n)$ Pretzel Knots''.
+    Patrz \cite{garoufalidis12}.
 \end{proof}
 
 \begin{proposition}
@@ -179,10 +195,14 @@ Jeśli $p = r$, węzeł można odwrócić przez półobrót wokół środkowej o
 Cykliczne permutacje trójki $(p, q, r)$ nie zmieniają węzła, więc wszystkie trzy liczby $p, q, r$ muszą być różne.
 Jeśli jedna z tych liczb jest parzysta, półobrót wokół poziomej osi odwraca węzeł.
 Z pracy Bankwitza i Schumanna wynika, że jeśli któryś z parametrów ma wartość $\pm 1$, to węzeł też jest odwracalny.
+% Bankwitz, Carl; Schumann, Hans Georg;
+% Über viergeflechte. (German)
+% Abh. Math. Sem. Univ. Hamburg 10 (1934), no. 1, 263–284.
 Nie jest trudno pokazać to wprost.
 Zatem nie wiemy jedynie jakie są precle $(p, q, -q)$, gdzie $|p| \neq |q|$ oraz $|p|, |q| \ge 3$.
 
 Jeśli liczby $p, q, r$ są nieparzyste i tego samego znaku, to wyznacznik precla $(p, q, r)$ jest postaci $4n+3$.
+\index{wyznacznik}%
 Wtedy używając formy kwadratowej (jak Reidemeister w 1932!) można pokazać, że taki węzeł nie jest achiralny.
 Niech $K$ będzie zorientowanym preclem $(3, 5, 7)$.
 Wtedy $K$, $mK$, $rK$, $mrK$ są parami nierównoważne.
@@ -191,26 +211,41 @@ Trójlistnik jest odwracalny, ale nie zwierciadlany, ósemka jest zwierciadlana 
 To pokazuje, że wszystkie typy symetrii są realizowane przez precle lub sumy precli.
 
 \begin{proposition}
-    \label{prp:pretzel_alexander}
+\label{prp:pretzel_alexander}%
+\index{wielomian!Alexandera}%
     Jeżeli liczby $p, q, r$ są nieprzyste, to wielomianem Alexandera $(p, q, r)$-precla jest
     \begin{equation}
         \alexander = \frac 14 ((pq+qr+pr) (t^2-2t-1) + (t+1)^2).
     \end{equation}
 \end{proposition}
 
-Wielomian Alexandera precla $(p_1, \ldots, p_n)$ nigdy nie zależy od kolejności współczynników, jest to ćwiczenie 10.9 w~książce Livingstona.
+\begin{proof}
+    Bae, Lee pokazali w \cite[lemat 3.1]{bae20}, że macierz Seiferta $(p, q, r)$-precla to
+    \begin{equation}
+        M = \frac 1 2 \begin{bmatrix}
+            p+q & p-1 \\
+            p+1 & p+r
+        \end{bmatrix},
+    \end{equation}
+    wystarczy więc użyć wzoru $\alexander = \det(M-tM^t)$.
+\end{proof}
+
+Wielomian Alexandera precla $(p_1, \ldots, p_n)$ nigdy nie zależy od kolejności współczynników, jest to ćwiczenie w~książce Livingstona \cite[s. 215]{livingston93}.
 
 \begin{proposition}
     Niech $n$ będzie liczbą pierwszą.
     Węzeł $p, q, r$-preclowy jest $n$-kolorowalny wtedy i~tylko wtedy, gdy $n$ dzieli $|pq+qr+pr|$.
     Jeśli przynajmniej jedna z~liczba $p, q, r$ nie jest wielokrotnością $n$, kolorowanie z dokładnością do permutacji jest jedyne.
     W przeciwnym przypadku istnieją cztery różne kolorowania.
+\index{kolorowalność}%
 \end{proposition}
 
 \begin{proof}
     Pierwsza część jest wnioskiem ze stwierdzeeń \ref{prp:colour_determinant}, \ref{prp:alexander_determinant} oraz \ref{prp:pretzel_alexander}.
-    Dowód drugiej zawiera praca \emph{Counting $m$-coloring classes of knots and links} autorstwa K. Brownell, K. O'Neil oraz L. Taalman, trzech amerykanek.
+    Dowód drugiej zawiera praca \emph{Counting $m$-coloring classes of knots and links} autorstwa K. Brownell, K. O'Neil oraz L. Taalman, trzech Amerykanek.
     Podano tam także ogólny wzór na liczbę $n$-kolorowań dowolnego węzła.
 \end{proof}
+
+\index{precel|)}%
 
 % Koniec sekcji Precle
