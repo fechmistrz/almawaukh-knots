@@ -1,13 +1,14 @@
-\section{Węzły torusowe} % (fold)
+\section{Węzły torusowe}
+\index{węzły!torusowe|(}
 
 W tej sekcji przyjrzymy się węzłom o~specjalnym ułożeniu w~przestrzeni $\R^3$.
 Do ich określenia potrzebny jest torus trywialny, powierzchnia otrzymana przez obrót okręgu $(x-2)^2 + y^2 = 1$ wokół osi $y$.
 Można go także uzyskać przez sklejenie podstaw walca tak, by go przy tym nie zapętlić.
-Oczywiście istnieją też nietrywialne torusy, na przykład rurowe otoczenie trójlistnika.
+Oczywiście istnieją też nietrywialne torusy, jak rurowe otoczenie trójlistnika.
 
 \begin{definition}[splot torusowy]
-    \index{węzeł!torusowy}
-    Splot leżący na powierzchni niezaplątanego torusa nazywamy torusowym.
+\index{węzeł!torusowy}%
+    Splot, który leży na powierzchni trywialnego torusa, nazywamy torusowym.
 \end{definition}
 
 Na walcu $S^2 \times [0,1]$, którego podstawa leży w~płaszczyźnie $xy$, rozpatrzmy $r$ skierowanych odcinkach (dla $k = 0, 1, \ldots, r - 1$) o~końcach w~punktach
@@ -88,53 +89,27 @@ Murasugi prezentuje w~swojej książce \cite{murasugi96} przyjemny dowód opiera
     Sfera $S^3$ powstaje z~powierzchni dwóch węzłów trywialnych z~wnętrzem ($D^2 \times S^1$) przez wzajemne sklejenie południka i~równoleżnika z~równoleżnikiem i~południkiem.
 \end{lemma}
 
-\begin{proposition}
-    Klamra Kauffmana spełnia zależność rekurencyjną
-    \begin{equation}
-        \bracket{T_{2, n}} = A \bracket{T_{2,n-1}} + (-1)^{n-1} A^{2-3n}
-    \end{equation}
-    z warunkiem brzegowym $\bracket{T_{2,1}} = -A^3$.
-\end{proposition}
-
-\begin{proposition}
-    Niech $L = T_{p, q}$ będzie węzłem torusowym.
-    Wtedy jego wielomianem Jonesa jest
-    \begin{equation}
-        \jones(t) = \frac {{\sqrt t}^{(p-1)(q-1)}}{1-t^2} \cdot (1 - t^{p+1} - t^{q+1} + t^{p+q}).
-    \end{equation}
-\end{proposition}
-
-\begin{proposition}
-    Niech $L = T_{p, q}$ będzie węzłem torusowym.
-    Wtedy jego wielomianem Alexandera jest
-    \begin{equation}
-         \alexander(t) = \frac{(t^{pq}-1)(t-1)}{(t^p-1)(t^q-1)}.
-    \end{equation}
-\end{proposition}
-
-\begin{proof}
-    Przypadek $p = 2$ wymaga prostego rozumowania indukcyjnego.
-    Samo ćwiczenie pojawia się w~wielu podręcznikach topologii.
-    Pełny dowód można znaleźć w~przykładzie 9.15 książki ,,Knots'' Burdego oraz Zieschanga.
-    Inne podejście, tak zwaną formułę Seiferta-Torresa, prezentuje przeglądowa praca Turaewa ,,Reidemeister torsion in knot theory'', 119-182.
-\end{proof}
-
-Macierze Seiferta $M$ mają nieskomplikowaną blokową budowę, która może posłużyć do znalezienia wielomianu Alexandera (wzorem $\alexander = \det (M - tM^t)$).
-Rachunki są nieco uciążliwe.
+Przejdźmy do podania wartości różnych niezmienników.
 
 \begin{proposition}
     Niech $L = T_{p, q}$ będzie splotem torusowym o $d$ ogniwach, różnym od $T_{0, 0}$.
-    Wtedy jego wielomaienm Alexandera jest
+\index{wielomian!Alexandera}%
+    Wtedy jego wielomianem Alexandera jest
     \begin{equation}
         \alexander_L(t) = (-1)^{d-1} \frac{(1-t)(1 - t^{pq/d})^d}{(1-t^p)(1-t^q)} \cdot t^{-(p-1)(q-1)/2}.
     \end{equation}
 \end{proposition}
 
-Powyższy fakt często pojawia się jako ćwiczenie w podręcznikach topologii.
-% TODO: w jakich dokładnie podręcznikach?
+Przypadek $p = 2$ wymaga prostego rozumowania indukcyjnego.
+Samo ćwiczenie pojawia się w~wielu podręcznikach topologii.
+Pełny dowód można znaleźć w~\cite[przykład 9.15]{burde14}, gdzie wyznaczono jakobian prezentacji grupy węzła $\langle x, y \mid x^py^{-q}\rangle$.
+
+Inne podejście, formułę Seiferta-Torresa, prezentuje przeglądowa praca Turaewa \cite{turaev86}.
+\index{formuła Seiferta-Torresa}
 
 \begin{proof}
-    Macierzą Seiferta węzła torusowego $L = T_{p, q}$ jest macierz blokowa
+    Macierz Seiferta węzła torusowego $L = T_{p, q}$ ma nieskomplikowaną blokową budowę i posłuży nam do znalezienia wielomianu Alexandera wzorem $\alexander = \det (M - tM^t)$.
+    % Rachunki są nieco uciążliwe.
     \begin{equation}
         M = \begin{bmatrix}
             B & & & & \\
@@ -142,7 +117,7 @@ Powyższy fakt często pojawia się jako ćwiczenie w podręcznikach topologii.
             & \ddots & \ddots & & \\
             & & \ddots & B & \\
             & & & -B & B
-        \end{bmatrix}
+        \end{bmatrix},
     \end{equation}
     złożona z~$(q-1)^2$ bloków o~wymiarach $(p-1) \times (p-1)$:
     \begin{equation}
@@ -152,10 +127,18 @@ Powyższy fakt często pojawia się jako ćwiczenie w podręcznikach topologii.
             & 1 & \ddots & & \\
             & & \ddots & -1 & \\
             & & & 1 & -1
-        \end{bmatrix}
+        \end{bmatrix}.
     \end{equation}
-    Pełny dowód można znaleźć w przykładzie 9.15 w książce \cite{burde03}, gdzie wyznaczono jakobian prezentacji grupy węzła $\langle x, y \mid x^py^{-q}\rangle$.
+    Rachunki pozostawiamy Czytelnikowi jako ćwiczenie.
 \end{proof}
+
+\begin{corollary}
+    Niech $K = T_{p, q}$ będzie węzłem torusowym.
+    Wtedy jego wielomianem Alexandera jest
+    \begin{equation}
+         \alexander(t) = \frac{(t^{pq}-1)(t-1)}{(t^p-1)(t^q-1)}.
+    \end{equation}
+\end{corollary}
 
 \begin{corollary}
     Wielomian Alexandera odróżnia od siebie węzły $(2,n)$-torusowe.
@@ -166,12 +149,6 @@ Powyższy fakt często pojawia się jako ćwiczenie w podręcznikach topologii.
 \end{proof}
 
 Znajomość wielomianu Alexandera wystarcza na szczęście do podania pełnej klasyfikacji węzłów torusowych bez uciążliwego dowodu.
-
-\begin{tobedone}
-    The classification of the torus knots followed from that of the free product Zp *Zq which is the quotient group of the group of the torus knot (cf.[Schreier 1924]).
-    Now the Alexander polynomial is an easy tool for solving this problem (cf. Exercise 7.4.4).
-    % Kawauchi
-\end{tobedone}
 
 \begin{proposition}
     Niech $p, q, r, s$ będą liczbami całkowitymi.
@@ -191,16 +168,40 @@ Znajomość wielomianu Alexandera wystarcza na szczęście do podania pełnej kl
     Z czwartego wynika, że $qr \le s < ps$, czyli sprzeczność.
 \end{proof}
 
-Podamy teraz wartości całkowitoliczbowych niezmienników dla węzłów torusowych przy założeniu, że $q$ lub $r$ nie jest zerem.
-Nietrywialne węzły torusowe są pierwsze i~odwracalne, ale mają niezerową sygnaturę, więc nie są chiralne.
-Wiedział to Schreier w 1924: ,,Über die Gruppen $A^a B^b = 1$''.
-% TODO: zamienić na prawdziwe cytowanie
+Kawauchi pisze, że wcześniej klasyfikacja węzłów torusowych wynikała z klasyfikacji wolnych produktów $(\Z/p) * (\Z/q)$, które są ilorazami grup węzłów torusowych \cite{schreier24}.
+
+Wartości wielomianu Jonesa podajemy bez dowodu:
 
 \begin{proposition}
+\index{klamra Kauffmana}%
+    Klamra Kauffmana spełnia zależność rekurencyjną
+    \begin{equation}
+        \bracket{T_{2, n}} = A \bracket{T_{2,n-1}} + (-1)^{n-1} A^{2-3n}
+    \end{equation}
+    z warunkiem brzegowym $\bracket{T_{2,1}} = -A^3$.
+\end{proposition}
+
+\begin{proposition}
+\index{wielomian!Jonesa}%
+    Niech $L = T_{p, q}$ będzie węzłem torusowym.
+    Wtedy jego wielomianem Jonesa jest
+    \begin{equation}
+        \jones(t) = \frac {{\sqrt t}^{(p-1)(q-1)}}{1-t^2} \cdot (1 - t^{p+1} - t^{q+1} + t^{p+q}).
+    \end{equation}
+\end{proposition}
+
+Podamy teraz wartości całkowitoliczbowych niezmienników dla węzłów torusowych przy założeniu, że $q$ lub $r$ nie jest zerem.
+Nietrywialne węzły torusowe są pierwsze i~odwracalne, ale mają niezerową sygnaturę, więc nie są chiralne.
+Wiedział to Schreier w 1924.
+% TODO: \cite schreier24?
+
+\begin{proposition}
+\index{okres}%
     Węzeł torusowy $T_{p, q}$ ma okres $|p|$ oraz $|q|$.
 \end{proposition}
 
 \begin{proposition}
+\index{sygnatura}%
     Niech $p, q > 0$ będą liczbami całkowitymi, zaś $R_2$ oznacza resztę z dzielenia przez dwa.
     Zdefiniujmy funkcję $\sigma(p, q) = - \sigma(T_{p, q})$.
     Spełnia zależność rekurencyjną
@@ -257,10 +258,14 @@ Uwaga: definicja funkcji $s$ z \cite{borodzik10} zawiera złośliwą literówkę
     \end{equation}
 \end{corollary}
 
-\begin{proposition}[Murasugi, 1991]
+\begin{proposition}
+\index{indeks skrzyżowaniowy}%
     Mamy $\crossing T_{p, q} = \min \{|pq| - |p|, |pq| - |q|\}$.
-    % minimal crossing number is Ipl(lql - 1) (cf. [Murasugi 1991]
 \end{proposition}
+
+\begin{proof}
+    Murasugi twierdzi, że udowodnił to w \cite{murasugi91}.
+\end{proof}
 
 Wyznaczenie indeksu rozwiązującego było dużo trudniejsze.
 Murasugi pisze w~książce \cite{murasugi96}, że mamy nierówność
@@ -272,7 +277,8 @@ Hipoteza Milnora głosiła, że w~rzeczywistości równość zachodzi zawsze.
 Dowód został odnaleziony w~latach 1993-1995 przy użyciu tzw. \emph{gauge theory} (działu teorii pola, gdzie lagranżjan jest niezmienniczy względem grup Liego lokalnych transformacji...).
 
 \begin{proposition}
-    \label{prp:torus_unknotting_number}
+\index{liczba gordyjska}%
+\label{prp:torus_unknotting_number}%
     Dla względnie pierwszych $p, q > 0$ mamy
     \begin{equation}
         u(T_{p, q}) = \frac 12 (p - 1)(q - 1),
@@ -284,16 +290,21 @@ Dowód został odnaleziony w~latach 1993-1995 przy użyciu tzw. \emph{gauge theo
     % This last result was proved by F. B. Kronheimer and T. S. Mrowka in [Kronheimer-Mrowka 1993], who determined the 4-dimensional genus of T(p, q) (defined in 12.3) by applying gauge theory to an embedded surface in a 4-manifold.
 \end{proof}
 
-Genus pokrywa się z~liczbą gordyjską dla węzłów (czyli względnie pierwszych $q, r$).
+Genus pokrywa się z~liczbą gordyjską dla węzłów torusowych, bo wyznacznik macierzy Seiferta jest niezerowy, więc genus to dokładnie stopień wielomianu Alexandera.
+
+Patrz też \cite[s. 149]{murasugi96}.
 
 \begin{proposition}
-    \label{prp:torus_bridge_number}
+\index{indeks mostowy}%
+\label{prp:torus_bridge_number}%
     $\bridge T_{p, q} = \min \{|p|, |q|\}$
-    % It is also known that the bridge index of a torus knot T(p, q) with Ipi > Iql is Iql (see [Schu- bert 1954])
 \end{proposition}
 
+Według Murasugiego dowód znajduje się w \cite{schubert54}.
+
 \begin{corollary}
-    \label{cor:torus_braid_number}
+\index{indeks warkoczowy}%
+\label{cor:torus_braid_number}%
     Niech $p, q \neq 0$ będą liczbami całkowitymi.
     Wtedy $\braid T_{p, q} = \min \{|p|, |q|\}$.
 \end{corollary}
@@ -318,5 +329,7 @@ Genus pokrywa się z~liczbą gordyjską dla węzłów (czyli względnie pierwszy
     Najpierw pokazali to Murasugi \cite{murasugi61}, Neuwirth \cite{neuwirth61} przy dodatkowym założeniu, że węzeł $K$ jest alternujący,
     wkrótce po tym Burde, Zieschang znaleźli dowód w ogólnym przypadku \cite{burde66}.
 \end{proof}
+
+\index{węzły!torusowe|)}
 
 % Koniec sekcji Węzły torusowe
