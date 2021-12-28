@@ -1,4 +1,5 @@
-\section{Wielomian HOMFLY} % (fold)
+\section{Wielomian HOMFLY}
+\index{wielomian!HOMFLY|(}
 
 Po tym, jak Jones przedstawił światu swój wielomian w~1984 roku, matematycy
 zaczęli szukać jego uogólnienia zależnego nie od jednej, lecz dwóch zmiennych.
@@ -22,15 +23,14 @@ W przeciwnym razie używa się skrótu HOMFLY-PT.
 % Using three variables: x⋅P(L +)+y⋅P(L −)+z⋅P(L 0)=0x \cdot P(L_+) + y \cdot P(L_-) + z \cdot P(L_0) = 0.
 
 \begin{definition}[wielomian HOMFLY]
-    \index{relacja kłębiasta}
-    \index{wielomian!HOMFLY}
-    \label{def:homfly}
+\index{relacja kłębiasta}%
+\label{def:homfly}%
     Niech $L$ będzie zorientowanym diagramem splotu.
     Wielomian Laurenta $P$ dwóch zmiennych, który spełnia relację kłębiastą
     \begin{equation}
         l \cdot P_{L_+} + l^{-1} \cdot P_{L_-} + m \cdot P_{L_0} = 0
     \end{equation}
-    z warunkiem początkowym $P_{\LittleUnknot} \equiv 1$, jest niezmienniczy na izotopie oraz ruchy Reidemeistera, nazywamy wielomianem HOMFLY.
+    z warunkiem brzegowym $P({\LittleUnknot}) \equiv 1$ oraz jest niezmienniczy na izotopie i~trzy ruchy Reidemeistera, nazywamy wielomianem HOMFLY.
 \end{definition}
 
 Litery $l, m$ pochodzą od nazwisk odkrywców, Lickorisha i Milletta.
@@ -40,20 +40,28 @@ To dość mylące, ale niektórzy autorzy używają innej, równoważnej relacji
     $a \cdot P_{L_+} - a^{-1} \cdot P_{L_-} = z \cdot P_{L_0}$.
 \end{definition}
 
-Czasami zamiast $a$ pisze się $v$.
+Czasami zamiast $a$ pisze się $v$.
 
 \begin{definition}[HOMFLY jeszcze inaczej]
     $\alpha^{-1} \cdot P_{L_+} - \alpha \cdot P_{L_-} = z \cdot P_{L_0}$.
 \end{definition}
 
 \begin{definition}[HOMFLY jednorodny]
-    $x \cdot P_{L_+} + y \cdot P_{L_-} + z \cdot P_{L_0} = 0$.
+    $x \cdot S_{L_+} - y \cdot S_{L_-} - z \cdot S_{L_0} = 0$.
 \end{definition}
 
-Jednorodny wielomian HOMFLY niesie taką samą informację jak jego wersja o~dwóch zmiennych.
-Istotnie, jeśli podstawimy $z = 1$, dostaniemy wielomian dwóch zmiennych.
-W~drugą stronę wystarczy każdy wyraz przemnożyć przez pewną potęgę $z$, by ten był stopnia zero.
-Wygodniej jest jednak nałożyć inny warunek, $xy=1$, co prowadzi do definicji \ref{def:homfly}.
+Jednorodny wielomian HOMFLY można znaleźć na przykład w~\cite[s. 10]{millett88} albo \cite[s. 231]{murasugi96}.
+Murasugi podaje tam jako ćwiczenie równości:
+\begin{align}
+    P(\alpha, z) & = S(\alpha^{-1}, \alpha, z) \\
+    S(x, y, z) & = P(\sqrt{y/x}, z/\sqrt{xy}).
+\end{align}
+
+% Jednorodny wielomian HOMFLY niesie taką samą informację jak jego wersja o~dwóch zmiennych.
+% Istotnie, jeśli podstawimy $z = 1$, dostaniemy wielomian dwóch zmiennych.
+% W~drugą stronę wystarczy każdy wyraz przemnożyć przez pewną potęgę $z$, by ten był stopnia zero.
+% Wygodniej jest jednak nałożyć inny warunek, $xy=1$, co prowadzi do definicji \ref{def:homfly}.
+% Ja to pisałem chyba z jakiejś polskiej książki, której nie mogę już znaleźć...
 
 Relacja kłębiasta pozwala wywnioskować własności wielomianu sumy spójnej i~prostej.
 Potrzebować będziemy lematu:
@@ -78,6 +86,7 @@ Można potraktować to jako proste ćwiczenie z~indukcji matematycznej, pozostaw
 \end{proposition}
 
 Dowód przebiega analogicznie do dowodu ,,multiplikatywności'' wielomianów Alexandera (fakty \ref{prp:alexander_multiplicative}) oraz Jonesa (fakt \ref{prp:jones_multiplicative_1}, \ref{prp:jones_multiplicative_2}).
+Patrz \url{https://math.stackexchange.com/a/399405}.
 
 \begin{proof}
     Każdy splot $L$ jest kombinacją liniową (o współczynnikach będących wielomianami w~$m$ oraz $l$) niesplotów $U_k$ o~różnej liczbie składowych $k$.
@@ -127,9 +136,10 @@ Teraz powołamy się na lemat \ref{lem:unknotting_well_defined}.
 
 Porównajmy wielomian HOMFLY ze znanymi już wielomianami Alexandera $\alexander$ oraz Jonesa $\jones$.
 Żaden z~nich nie jest mocniejszy od drugiego, istnieją pary węzłów rozróżnialne przez dokładnie jeden.
-Na przykład $4_1$ oraz $11n_{19}$ mają różne wielomiany Alexandera, zaś $8_{10}$ oraz $10_{143}$ różne wielomiany Jonesa.
+Na przykład $4_1$ oraz $11n_{19}$ mają różne tylko wielomiany Alexandera, zaś $8_{10}$ oraz $10_{143}$ różne tylko wielomiany Jonesa.
 
 \begin{proposition}
+\label{homfly_stronger}
     Wielomian HOMFLY jest mocniejszy niż wielomiany Jonesa i~Alexandera jednocześnie.
 \end{proposition}
 
@@ -146,9 +156,8 @@ Jeśli wielomiany dwóch splotów, niezależnie od orientacji ich ogniw, są zaw
 W~\cite{dunfield10} znaleziono diagram pewnego węzła o~75 skrzyżowaniach, którego kablowe mutacje zachowują wielomiany Jonesa oraz Alexandera, ale nie zachowują wielomianu HOMFLY.
 Wiadomo, że jeśli istnieje prostszy przykład, to ma co najmniej 13 skrzyżowań.
 
-Pomimo swej mocy nie jest jednak niezmiennikiem zupełnym, nie odróżnia od siebie mutantów.
-
-Konkretne przykłady kolizji to $5_1$ oraz $10_{132}$, $8_{8}$ oraz $10_{129}$, $8_{16}$ oraz $10_{156}$ albo $10_{25}$ oraz $10_{56}$.
+Pomimo swej mocy nie jest jednak niezmiennikiem zupełnym, nigdy nie odróżnia od siebie mutantów (to fakt \ref{mutants_and_homfly}).
+Konkretne przykłady kolizji, tym razem nie mutantów, to $5_1$ oraz $10_{132}$, $8_{8}$ oraz $10_{129}$, $8_{16}$ oraz $10_{156}$ albo $10_{25}$ oraz $10_{56}$.
 Co bardziej dramatyczne, Kanenobu wskazał przy użyciu elementarnych metod (!) w~pracy \cite{kanenobu86} z~1986:
 
 \begin{proposition}
@@ -220,7 +229,7 @@ Co bardziej dramatyczne, Kanenobu wskazał przy użyciu elementarnych metod (!) 
     \end{enumerate}
     Wynika stąd, że węzły $K(p, q)$, gdzie $p \ge q$, są parami różne.
     Dalej, węzeł $K(p,q)$ jest amfichiralny wtedy i tylko wtedy, gdy $p + q = 0$, zawsze trzymostowy (lemat 4) i hiperboliczny dokładnie wtedy, gdy $(p, q) \neq (0, 0)$.
-    Autor twierdzi, że dowód włóknistości, taśmowości i~bycia genusu $2$ zamieścił wcześniej w~\cite{kanenobu81}.
+    Autor twierdzi, że dowód włóknistości, taśmowości i~bycia genusu $2$ zamieścił wcześniej w~\cite{kanenobu81}, ale to jest po francusku.
 \end{proof}
 
 Zaletą wielomianu HOMFLY jest to, że często wykrywa chiralność (węzeł chiralny nie jest równoważny swemu lustrzanemu odbiciu), ale nie odróżnia enancjomerów węzłów $9_{42}$, $10_{48}$, $10_{71}$, $10_{91}$, $10_{104}$, oraz $10_{125}$.
@@ -231,5 +240,7 @@ Do jej wykrycia potrzebna jest na przykład $SU(2)$-teoria Cherna-Simonsa, wyja�
 % Example 16 - książka
 
 % TODO: Dla każdego splotu $L$ o~$k$ składowych, $P_L(x,y) - 1$ jest krotnością $x+y-1$, zaś $P_L(x,y) + (-1)^K$ jest krotnością $x +y + 1$, zatem wielomian HOMFLY nigdy nie jest zerem. Uwaga: to jest inna parametryzacja!
+
+\index{wielomian!HOMFLY|)}
 
 % Koniec sekcji Wielomian HOMFLY
