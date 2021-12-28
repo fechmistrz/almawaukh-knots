@@ -1,11 +1,11 @@
-\subsection{Liczba gordyjska} % (fold)
+\subsection{Liczba gordyjska}
+\index{liczba!gordyjska|(}%
 
-\index{liczba!gordyjska}
 Z angielskiego \emph{unknotting number}.
 
 \begin{definition}
     Niech $L$ będzie splotem.
-    Minimalną liczbę skrzyżowań, które trzeba odwrócić na pewnym jego diagramie, by dostać niewęzeł, nazywamy liczbą gordyjską i~oznaczamy $\operatorname{u}(L)$.
+    Minimalną liczbę skrzyżowań, które trzeba odwrócić na pewnym jego diagramie, by dostać niewęzeł, nazywamy liczbą gordyjską i~oznaczamy $\unknotting L$.
 \end{definition}
 
 Zgodnie z ,,klasyczną'' definicją, między odwracaniem kolejnych skrzyżowań mamy prawo wykonać izotopie otaczające; natomiast zgodnie ze ,,standardową'' definicją, takie izotopie są zabronione.
@@ -34,6 +34,7 @@ Obie definicje są równoważne: tłumaczy to książka Adamsa \cite[s. 58]{adam
 
 W pracy \cite{shimizu14} Shimizu rozpatruje różne operacje, które rozwiązują węzły lub sploty.
 Nie będziemy się nimi zajmować, podamy tylko przykład: zamiana pod- i nadskrzyżowań wokół obszaru na diagramie rozwiązuje węzły, ale nie sploty; kontrprzykładem jest splot Hopfa.
+\index{splot!Hopfa}%
 Patrz też \cite[s. 141-154]{kawauchi96}.
 
 \begin{tobedone}
@@ -46,8 +47,40 @@ Patrz też \cite[s. 141-154]{kawauchi96}.
 
 Jeśli odwrócenie pewnych skrzyżowań daje niewęzeł, to odwrócenie pozostałych także.
 To daje proste liczby gordyjskiej: $2 \operatorname{u} (K) \le \crossing (K)$.
-Nie jest zbyt pomocne, równość zachodzi pięć razy dla pierwszych węzłów do 12 skrzyżowań: $3_{1}$, $5_{1}$, $7_{1}$, $9_{1}$, $11a_{367}$.
-Dokładna wartość liczby gordyjskiej jest znana tylko dla niektórych klas węzłów, na przykład torusowych (fakt \ref{prp:torus_unknotting_number}) albo skręconych (definicja \ref{def:twist_knot}).
+Nie jest zbyt pomocne, daje rozstrzygnięcie pięć razy dla pierwszych węzłów do 12 skrzyżowań: $3_{1}$, $5_{1}$, $7_{1}$, $9_{1}$, $11a_{367}$.
+Dokładna wartość liczby gordyjskiej jest znana tylko dla niektórych klas węzłów, na przykład torusowych (fakt \ref{prp:torus_unknotting_number}) albo skręconych.
+
+Poniżej lista liczb gordyjskich oraz ich odkrywców dla węzłów do 10 skrzyżowań, więcej informacji o 11, 12 skrzyżowaniach można znaleźć w internecie\footnote{Patrz \url{https://knotinfo.math.indiana.edu/descriptions/unknotting_number.html}}.
+$7_{4}$: \cite{lickorish85}.
+$8_{3}$, $8_{4}$, $8_{6}$, $8_{8}$, $8_{12}$, $9_{5}$, $9_{8}$, $9_{15}$, $9_{17}$, $9_{31}$: \cite{kanenobumurakami86}.
+$8_{10}$, $10_{48}$, $10_{52}$, $10_{54}$ ($\unknotting \neq 1$), $10_{57}$, $10_{58}$, $10_{64}$, $10_{68}$, $10_{70}$, $10_{77}$ ($\unknotting \neq 1$), $10_{110}$, $10_{112}$, $10_{116}$, $10_{117}$, $10_{125}$, $10_{126}$, $10_{130}$, $10_{135}$, $10_{138}$, $10_{158}$, $10_{162}$: \cite{szabo05}.
+$8_{16}$: \cite{yasuhara00}, \cite{stoimenow04}.
+$8_{18}$, $9_{37}$, $9_{40}$, $9_{46}$, $9_{48}$, $9_{49}$, $10_{103}$: \cite{stoimenow04}.
+$9_{10}$, $9_{13}$, $9_{35}$, $9_{38}$, $10_{53}$, $10_{101}$, $10_{120}$: \cite{owens08}.
+$9_{15}$, $9_{17}$: \cite{kanenobumurakami86}, \cite{stoimenow04}.
+$9_{25}$: \cite{kobayashi89}.
+$9_{29}$: \cite{gordon06}, \cite{szabo05}.
+$10_{8}$: \cite[s. 62]{adams94}.
+$10_{65}$, $10_{69}$, $10_{89}$, $10_{108}$, $10_{163}$, $10_{165}$: \cite{miyazawa98}.
+$10_{67}$: \cite{traczyk99}, \cite{szabo05}.
+$10_{79}$: \cite{szabo05}, $\unknotting \neq 1$ przez \cite{gordon06}.
+$10_{81}$, $10_{87}$, $10_{90}$, $10_{93}$, $10_{94}$, $10_{96}$: \cite{gordon06}, \cite{szabo05}.
+$10_{83}$: \cite{gordon06}, \cite{szabo05}, \cite{nakanishi05}.
+$10_{86}$: \cite{stoimenow04}, \cite{szabo05}, \cite{gordon06}.
+$10_{97}$: \cite{miyazawa98}, \cite{nakanishi05}.
+$10_{105}$, $10_{106}$, $10_{109}$, $10_{121}$: \cite{szabo05}, \cite{stoimenow04}, \cite{nakanishi05}.
+$10_{131}$: \cite{stoimenow04}, \cite{szabo05}.
+$10_{139}$, $10_{145}$, $10_{152}$: \cite{ishikawa02}.
+$10_{148}$, $10_{151}$: \cite{gordon06}, \cite{szabo05}.
+$10_{153}$: \cite{gordon06}.
+$10_{154}$: \cite{stoimenow03}, \cite{ishikawa02}.
+$10_{161}$: \cite{ishikawa02}.
+.
+
+Dotychczas wyznaczono liczbę gordyjską dla prawie wszystkich węzłów pierwszych o~co najwyżej dziesięciu skrzyżowaniach,
+Cha, Livingston \cite{cha05} podają następującą listę wyjątków:
+$10_{11}$, $10_{47}$, $10_{51}$, $10_{54}$, $10_{61}$, $10_{76}$, $10_{77}$, $10_{79}$, $10_{100}$ (stan na rok 2018).
+
 
 Dla każdego nietrywialnego splotu istnieje diagram wymagający odwrócenia dowolnie wielu skrzyżowań.
 Wcześniej Nakanishi znalazł 2-gordyjski diagram 1-gordyjskiego węzła $6_2$ (\cite{nakanishi83}) oraz udowodnił, że każdy nietrywialny węzeł ma diagram, który nie jest 1-gordyjski (\cite{nakanishi96}).
@@ -57,16 +90,16 @@ Jeśli liczba gordyjska diagramu $D$ wynosi $\frac 12 (\crossing D - 1)$, co jes
 to węzeł jest $(2,p)$-torusowy albo wygląda jak diagram niewęzła po pierwszym ruchu Reidemeistera.
 
 Bleiler odkrył w~\cite{bleiler84} fascynujący przykład wymiernego węzła $10_8$, który jest $2$-gordyjski, ale świadkiem tego nie może być żaden diagram mininalny, ponieważ, co jeszcze bardziej fascynujące, węzeł ten posiada tylko jeden diagram o~dziesięciu skrzyżowaniach oraz liczbie gordyjskiej 3.
-Wynika stąd, że liczba $u$ nie musi być osiągana przez diagram minimalny, wbrew powszechnym przypuszczeniom obecnym jeszcze w latach 70.
+Wynika stąd, że liczba $\unknotting$ nie musi być osiągana przez diagram minimalny, wbrew powszechnym przypuszczeniom obecnym jeszcze w latach 70.
 Praca \cite{bernhard94} opisuje nieskończoną rodzinę węzłów $C_k$, gdzie $C_2 = 10_8$ jest węzłem Bleilera.
 
 Przykład Bleilera pokazuje, że do szukania liczby gordyjskiej potrzeba wyrafinowanego algorytmu.
 Ponieważ odwrócenie jednego ze skrzyżowań na minimalnym diagramie węzła $10_8$ daje $1$-gordyjski węzeł $4_1, 5_1, 6_1$ lub $6_2$, możemy liczyć, że każdy diagram minimalny ma skrzyżowanie, którego odwrócenie zmniejsza liczbę gordyjską.
-Dlatego jeszcze w~latach 90. postawiono hipotezę:
+Dlatego jeszcze w~latach 90. postawiono (\cite{bernhard94}, \cite{jablan98}) hipotezę:
 
-\begin{conjecture}[Bernharda-Jablana, \cite{bernhard94}, \cite{jablan98}]
-    \index{hipoteza!Bernharda-Jablana}
-    \label{con:bernhard_jablan}
+\begin{conjecture}[Bernharda-Jablana]
+\index{hipoteza!Bernharda-Jablana}%
+\label{con:bernhard_jablan}%
     Każdy węzeł $K$ posiada diagram $D$ realizujący liczbę gordyjską oraz skrzyżowanie, którego odwrócenie daje nowy węzeł $K'$ z diagramem $D'$ o mniejszej liczbie gordyjskiej: $u(D') < u(D)$.
 \end{conjecture}
 
@@ -82,20 +115,19 @@ Prawdziwość sprawdzono natomiast dla węzłów do jedenastu skrzyżowań oraz 
 
 Bleiler postawił w~\cite{bleiler84} problem: czy jeden węzeł może mieć kilka diagramów minimalnych, z~których tylko niektóre są świadkiem $1$-gordyjskości?
 Rozwiązanie przyszło wkrótce z Japonii: według \cite{kanenobumurakami86} dzieje się tak m.in. dla węzła $8_{14}$.
-Stojemenow w~pracy \cite{stoimenow01} pełnej różnych przykładów wskazał dodatkowo węzły $14_{36750}$ oraz $14_{36760}$.
+Stojmenow w~pracy \cite{stoimenow01} pełnej różnych przykładów wskazał dodatkowo węzły $14_{36750}$ oraz $14_{36760}$.
 
 Sploty o liczbie gordyjskiej 1 zasługują na szczególną uwagę.
 
 \begin{proposition}
     Niech $L$ będzie wymiernym splotem 1-gordyjskim.
+\index{węzeł!wymierny}%
     Wtedy na minimalnym diagramie $L$ jedno ze skrzyżowań jest rozwiązujące.
 \end{proposition}
 
 \begin{proof}
     Kanenobu, Murakami dla węzłów \cite{kanenobumurakami86}, wkrótce po tym Kohn dla splotów \cite{kohn91}.
 \end{proof}
-
-Z pracy \cite{kanenobumurakami86} wynika dodatkowo, że liczba gordyjska węzłów $8_{3}$, $8_{4}$, $8_{6}$, $8_{8}$, $8_{12}$, $9_{5}$, $9_{8}$, $9_{15}$, $9_{17}$, $9_{31}$ wynosi dokładnie 2, wcześniej wiedzieliśmy, że jest równa co najwyżej 2.
 
 Coward, Lackenby dowiedli w~\cite{coward11}, że jeśli $K$ jest 1-gordyjski i~o genusie 1, to z~dokładnością do pewnej relacji równoważności, tylko jedna zmiana skrzyżowania rozwiązuje go; chyba że $K$ jest ósemką -- wtedy takie zmiany są dwie.
 
@@ -104,7 +136,7 @@ Coward, Lackenby dowiedli w~\cite{coward11}, że jeśli $K$ jest 1-gordyjski i~o
     Węzły $1$-gordyjskie są pierwsze.
 \end{proposition}
 
-Podejrzewał to H. Wendt w~1937 roku, kiedy policzył liczbę gordyjską węzła babskiego używając homologii rozgałęzionego nakrycia cyklicznego.
+Podejrzewał to Hilmar Wendt w~1937 roku, kiedy policzył liczbę gordyjską węzła babskiego używając homologii rozgałęzionego nakrycia cyklicznego \cite{wendt37}.
 
 \begin{proof}[Niedowód]
     W pracy \cite{scharleman85} z~1985 roku M. Scharleman podał dość zawiłe uzasadnienie, w~które zamieszane były grafy planarne.
@@ -120,13 +152,13 @@ Stąd oraz z faktu \ref{prp:unknotting_one_prime} wynika, że suma dwóch $1$-go
     Wtedy $u(K_1 \shrap K_2) = u(K_1) + u(K_2)$, czyli liczba gordyjska jest addytywna.
 \end{conjecture}
 
-Dotychczas wyznaczono liczbę gordyjską dla prawie wszystkich węzłów pierwszych o~co najwyżej dziesięciu skrzyżowaniach,
-Cha, Livingston \cite{cha05} podają następującą listę wyjątków:
-$10_{11}$, $10_{47}$, $10_{51}$, $10_{54}$, $10_{61}$, $10_{76}$, $10_{77}$, $10_{79}$, $10_{100}$ (stan na rok 2018).
-
 Borodzik oraz Friedl podali niedawno całkiem mocne ograniczenia na liczbę gordyjską w~pracach \cite{borodzik14} i~\cite{borodzik15}.
 Ich narzędziem jest parowanie Blanchfielda.
 Poprawiają tam starsze estymaty wynikające z~sygnatury Levine'a-Tristrama, indeksu Nakanishiego oraz przeszkody Lickorisha.
+\index{parowanie Blanchfielda}%
+\index{sygnatura!Levine'a-Tristrama}%
+\index{indeks Nakanishiego}%
+\index{przeszkoda Lickorisha}%
 Wśród węzłów o~co najwyżej dwunastu skrzyżowaniach 25 ma liczbę gordyjską równą co najmniej trzy, co trudno pokazać innymi metodami.
 
 Liczbę gordyjską można uogólnić w naturalny sposób do metryki.
@@ -146,5 +178,7 @@ Dokładniej:
 \begin{proof}
     Dowód korzysta z grup warkoczowych, które poznamy w sekcji \ref{sec:braid}.
 \end{proof}
+
+\index{liczba!gordyjska|)}
 
 % Koniec podsekcji Liczba gordyjska
