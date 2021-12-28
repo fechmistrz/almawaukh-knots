@@ -20,6 +20,7 @@ prepare:
 
 precommit:
 	./src/merridew/bibliography_sort.py src/knot_theory.bib
+	ack -l ' ' | xargs sed -i 's/ / /g'
 	for i in $$(find src -type f -iname '*.tex'); do \
 	    sed '$$a\' $$i > file && mv file $$i; \
 	    perl -p -i -e 's/\t/    /g' "$$i"; \
