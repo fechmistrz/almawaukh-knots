@@ -1,14 +1,15 @@
-\section{Warkocze} % (fold)
+\section{Warkocze}
 \label{sec:braid}
-Zaczniemy od opisu grupy warkoczy, rozważanej po raz pierwszy niejawnie przez A. Hurwitza w~1885 roku i~jawnie przez E. Artina czterdzieści lat później.
+\index{warkocz|(}
+Zaczniemy od opisu grupy warkoczy, rozważanej po raz pierwszy (niejawnie) przez Hurwitza w~1885 roku oraz jawnie przez Artina czterdzieści lat później.
 O dwóch punktach $(d_1, t_1)$, $(d_2, t_2)$ w~walcu $B^2 \times [0, 1] \subseteq \R^3$ powiemy, że łączący je odcinek jest malejący, jeśli $t_1 > t_2$.
 Łamana malejąca to taka, która jest złożona z~malejących odcinków.
 
 % DICTIONARY;braid;warkocz
 % DICTIONARY;strand;pasmo
 \begin{definition}[warkocz]
-    \index{warkocz}
-    Teoriomnogościową sumę parami rozłącznych łamanych malejących, które łączą zbiory $\{x_1, \ldots, x_n\} \times \{1\}$ oraz $\{x_1, \ldots, x_n\} \times \{0\}$, nazywamy warkoczem o~$n$ pasmach.
+\index{pasmo warkocza}%
+Teoriomnogościową sumę parami rozłącznych łamanych malejących, które łączą zbiory $\{x_1, \ldots, x_n\} \times \{1\}$ oraz $\{x_1, \ldots, x_n\} \times \{0\}$, nazywamy warkoczem o~$n$ pasmach.
 \end{definition}
 
 Poszczególne pasma warkocza możemy utożsamiać z~wykresami pewnych (gładkich) funkcji $f_i \colon [0, 1] \to \R^2$, jeśli zbiory $\{f_i(0) : 1 \le i \le n\} = \{f_i(1) : 1 \le i \le n\}$ są równe.
@@ -17,7 +18,7 @@ Przez analogię do węzłów można zdefiniować diagramy warkoczy jako cienie b
 Najczęściej rzutujemy prostopadle do odcinka $\{0\} \times [0, 1]$.
 
 \begin{definition}
-    \index{grupa!warkoczy}
+\index{grupa warkoczy}%
     Określmy pomocniczo dwie kontrakcje $B^2 \times [0,1] \to B^2 \times [0,1]$:
     \begin{align*}
         \psi_1(d, t)&  = (d, t/2) \\
@@ -26,6 +27,7 @@ Najczęściej rzutujemy prostopadle do odcinka $\{0\} \times [0, 1]$.
     Klasy abstrakcji warkoczy z~mnożeniem danym wzorem $z_1z_2 = \psi_1(z_1) \cup \psi_2(z_2)$ tworzą grupę warkoczy $B_n$.
     Jej elementem neutralnym jest warkocz $1_n = \bigcup_{i = 1}^n \{x_1\} \times [0,1]$.
 \end{definition}
+
 
 Sprawdzenie aksjomatów grupy pozostawiamy Czytelnikowi,
 pozostawiając mu małą wskazówkę graficzną:
@@ -100,6 +102,12 @@ pozostawiając mu małą wskazówkę graficzną:
     \end{equation}
 \end{proposition}
 
+Pierwszy był sam Artin \cite{artin25}, wiele lat później Birman, Ko, Lee odkryli nową, ,,symetryczną'' prezentację, ale dla oszczędności miejsca nawet ich nie cytujemy.
+Wraz z~upływem wody w~Wiśle pojawiły się nowe dowody (w~kolejności chronologicznej): Magnusa \cite{magnus34}, Bohnenblusa \cite{bohnenblust47}, Chow \cite{chow48}, Fadella i van Buskirka \cite{fadell62}, Foxa i Neuwirtha \cite{fox62}.
+Patrz też \cite{birman74}.
+
+González-Meneses przytacza ze szczegółami niektóre dowody (przez czesanie warkoczy, grupy podstawowe kompleksów komórkowych i inne) w~\cite{gonzalez11}.
+
 Generatory $\sigma_i$ posiadają prostą interpretację graficzną:
 \begin{comment}
 \[
@@ -122,10 +130,11 @@ Generatory $\sigma_i$ posiadają prostą interpretację graficzną:
 \]
 \end{comment}
 
-Jeśli zapomnimy, jak poszczególne pasma krzyżują się, każdy warkocz staje się permutacją zbioru $n$-elementowego.
+Jeśli zapomnimy, jak poszczególne pasma krzyżują się, każdy warkocz staje się permutacją zbioru $n$-elementowego.
 To odwzorowanie jest ,,na'' i zgodne ze składaniem warkoczy, dlatego wyznacza homomorfizm $B_n \to S_n$.
 % DICTIONARY;braid, pure;warkocz, czysty
-Jego jądro stanowi podgrupa warkoczy czystych, czyli takich, że początek i~koniec każdego pasma znajdują się w tej samej pozycji.
+\index{warkocz!czysty}%
+Jego jądro stanowi podgrupa warkoczy czystych, czyli takich, że początek i~koniec każdego pasma znajdują się w~tej samej pozycji.
 
 \begin{proposition}
     Grupa warkoczy $B_n$ jest przemienna wtedy i tylko wtedy, gdy $n < 3$.
@@ -149,22 +158,24 @@ Obrazem generatora $\sigma_i \in B_n$ jest transpozycja $(i, i+1) \in S_n$, co p
 \end{proposition}
 
 \begin{proof}
-    Garside w \cite{garside69}.
+    Garside w~\cite{garside69}.
 \end{proof}
 
 Grupa $B_3$ jest izomorficzna z grupą podstawową trójlistnika (patrz przykład \ref{exm:trefoil_group}).
 Nie istnieje żaden węzeł, którego grupą podstawową byłaby jednak $B_n$ dla $n \ge 4$: tam elementy $\sigma_1$, $\sigma_n$ oraz generator centrum rozpinają grupę izomorficzną z~$\Z^3$.
 Natomiast asferyczna, niezwarta 3-rozmaitość nie może mieć grupy podstawowej $\Z^3$.
-Musimy pominąć czysto kohomologiczny dowód faktu, ale zaiste prowadzi to do sprzeczności.
+Musimy niestety pominąć czysto kohomologiczny dowód\footnote{Głodny wiedzy Czytelnik powinien odwiedzić \url{https://math.stackexchange.com/a/2119984}.} faktu, ale zaiste prowadzi to do sprzeczności.
 
 % DICTIONARY;closure of braid;domknięcie warkocza
 Każdy warkocz można domknąć do węzła, łącząc punkty $(x_i, 1)$ oraz $(x_i, 0)$
 łamanymi, których rzuty do płaszczyzny diagramu nie przecinają się.
+\index{warkocz!domknięcie warkocza}%
 Nie wiadomo, kto wymyślił operację domykania warkoczy, ale była ona z pewnością znana Alexanderowi: rozpatrywano je jeszcze przed samymi warkoczami.
 
-\begin{tobedone}
-    \cite{kawauchi96} strona 13, 14: braid and plat presentations.
-\end{tobedone}
+Niech $b \in B_n$ będzie słowem zapisanym na standardowych generatorach.
+Oznaczmy przez $b_+$, $b_-$ nieznakowaną sumę dodatnich, ujemnych wykładników.
+Jeśli $b_+ - 3b_- \ge n$, to domknięcie warkocza $b$ nie jest achiralne (twierdzenie 5 z~\cite{jones85}).
+\index{węzeł!achiralny}%
 
 \begin{theorem}[Alexander, 1923]
     \label{thm:alexander}
@@ -173,14 +184,12 @@ Nie wiadomo, kto wymyślił operację domykania warkoczy, ale była ona z pewno�
 \end{theorem}
 
 \begin{proof}
-    W kolejności chronologicznej: najpierw Alexander \cite{alexander23}, a po blisko połowie wieku Morton \cite{mortonhr86}, Yamada \cite{yamada87} i Vogel \cite{vogel90}.
+    W kolejności chronologicznej: najpierw Alexander \cite{alexander23}, a po blisko połowie wieku Morton \cite{mortonhr86}, Yamada \cite{yamada87} (którego praca daje łatwy do zaimplementowania program komputerowy) i Vogel \cite{vogel90} (ulepszający algorym Yamady).
 \end{proof}
 
-Niech $b \in B_n$ będzie słowem zapisanym na standardowych generatorach.
-Oznaczmy przez $b_+$, $b_-$ nieznakowaną sumę dodatnich, ujemnych wykładników.
-Jeśli $b_+ - 3b_- \ge n$, to domknięcie warkocza $b$ nie jest achiralne (twierdzenie 5 z~\cite{jones85}).
-
 \begin{theorem}[Markow, 1936]
+\index{twierdzenie!Markowa}%
+\label{markov_theorem}
     Dwa domknięte warkocze są równoważne jako sploty wtedy i~tylko wtedy,
     gdy jeden powstaje z~drugiego przez ciąg
     sprzężeń: $z_1 \mapsto z_2 z_1 z_2^{-1}$ oraz procesów Markowa,
@@ -200,25 +209,16 @@ Lambropoulou, Rourke przedstawili w~\cite{lambropoulou97} wersję twierdzenia wy
 % Weinberg = Ной Вайнберг: http://www.mathsoc.spb.ru/history/Odynec_2020.pdf
 
 Historia twierdzenia Markowa jest raczej dramatyczna: Markow przedstawił swój dowód ustnie, ale nigdy go nie opublikował, zostawiając to zadanie swojemu uczniowi, Weinbergowi.
-Ten jednak został zabity podczas wojny, wkrótce po opublikowaniu pierwszej pracy na temat teorii węzłów.
-% Prassolov, Sosinsky
+Ten jednak został zabity podczas wojny, wkrótce po opublikowaniu pierwszej pracy na temat teorii węzłów i na dokładny dowód trzeba było czekać do publikacji \cite{birman74} blisko 40 lat.
 
-\begin{tobedone}
-According to this theorem and Theorem 1.2.2, it may be said that knot theory is the study of the Markov equiva- lence classes of the braid groups. The word problem in the braid group is solvable, i.e., there is an algorithm to determine whether or not two given words are the same element in the braid group. The conjugacy problem in the braid group is also solvable, i.e., there is an algorithm to determine whether or not two given words are conjugate in the braid group. However, the Markov equivalence problem has not yet been solved.
-\cite{kawauchi96} strona 18.
-\end{tobedone}
+Twierdzenie \ref{markov_theorem} mówi nam, że teoria węzłów bada klasy równoważności w~grupie warkoczy.
+Zarówno problem słowa (czy dwa słowa w~grupie przedstawiają ten sam jej element?) jak i~problem sprzężoności (czy dwa słowa w~grupie są sprzężone?) są rozwiązane, ale nadal nie mamy algorytmu, który mówiłby, czy dwa słowa w~grupie są równoważne w~sensie Markowa.
+Cały czas chodzi o słowa w grupie warkoczy, oczywiście.
+% TODO: kto to pokazał? wg Kawauchiego, Murasugi w 82 ale widziałem gdzieś informację, że Garside był pierwszy.
+% a może Jones 1985?
 
-\begin{tobedone}
-    Introduction to knot theory: Summary of the lecture by Gregor Schaumann 2016 zawiera informację, że dwa diagramy warkoczy przedstawiają ten sam warkocz wtedy i tylko wtedy, gdy można między nimi przechodzić przy użyciu: tożsamości wężowych oraz ruchów Turaeva.
-    Brakuje źródła z krótkim dowodem.
-    Możliwe, że w "Operator invariants of ..." 1989.
-\end{tobedone}
-
-Problem słowa (czy dane słowo przedstawia element neutralny?) oraz sprzężoności (czy dwa słowa są sprzeżone?) są rozwiązalne w~grupach warkoczowych.
-Problem, czy dwa słowa prezentują równoważne węzły -- nie.
-
-\index{reprezentacja Burau}
-Na zakończenie sekcji wspomnijmy o~macierzowej reprezentacji Burau.
+Na zakończenie sekcji wspomnijmy o~macierzowej reprezentacji Burau, wprowadzonej do matematyki w latach trzydziestych zeszłego wieku \cite{burau33}.
+\index{reprezentacja Burau}%
 Wyznaczona jest ona przez obrazy generatorów:
 \begin{equation}
     \varphi(\sigma_i) = I_{i-1} \oplus \begin{pmatrix}
@@ -226,8 +226,10 @@ Wyznaczona jest ona przez obrazy generatorów:
         1   & 0
     \end{pmatrix} \oplus I_{n-i-1}
 \end{equation}
-Reprezentacja $\varphi$ jest wierna dla $n = 2, 3$.
-Moody pokazał, że reprezentacja nie jest wierna dla $n > 8$, Long, Paton ulepszyli jego podejście i otrzymali mocniejszą nierównosć $n > 5$.
+Reprezentacja $\varphi$ jest wierna dla $n = 2, 3$, wiedziano o~tym od jakiegoś czasu. % wiedział to Magnus w 1969: https://mathscinet.ams.org/mathscinet-getitem?mr=264062
+% dowód ma też Kassel, Turaev - strona 110
+Moody \cite{moody91} pokazał, że reprezentacja nie jest wierna dla $n > 8$, Long, Paton \cite{paton93} ulepszyli jego podejście i~poprawili jego wynik do niewierności dla $n > 5$.
+% Paton = Mark https://www.genealogy.math.ndsu.nodak.edu/id.php?id=139714
 Ich kontrukcja korzysta z~pewnej zamkniętej krzywej na sześciokrotnie przekłutym dysku o~pewnych cechach homologicznych.
 Podobnymi metodami Bigelow pokazał u schyłku stulecia \cite{bigelow99}, że jeśli
 \begin{align}
@@ -239,6 +241,7 @@ Czy reprezentacja Burau dla $B_4$ jest wierna?
 Negatywna odpowiedź na to pytanie prawie na pewno prowadziłaby do
 nietrywialnego węzła, którego wielomianem HOMFLY jest $1$,
 natomiast odpowiedź pozytywna raczej nie ma aż tak dramatycznych następstw.
+% The first nonfaithful Burau representations were found by John A. Moody without the use of computer, using a notion of winding number or contour integration.[3] A more conceptual understanding, due to Darren D. Long and Mark Paton[4] interprets the linking or winding as coming from Poincaré duality in first homology relative to the basepoint of a covering space, and uses the intersection form (traditionally called Squier's Form as Craig Squier was the first to explore its properties).[5] Stephen Bigelow combined computer techniques and the Long–Paton theorem to show that the Burau representation is not faithful for n ≥ 5.[6][7][8] Bigelow moreover provides an explicit non-trivial element in the kernel as a word in the standard generators of the braid group: let 
 
 Grupy $B_n$ mogą być obiektem badań algebry bez związku z~teorią węzłów.
 
@@ -247,7 +250,7 @@ Grupy $B_n$ mogą być obiektem badań algebry bez związku z~teorią węzłów.
 \end{proposition}
 
 Istnieje wiele dowodów tego faktu: pierwszy korzystał z~krótkich ciągów dokładnych (Fadell, Neuwirth 1965), później podano oparty o~struktury Garside'a (Garside 1969), czysto teoriogrupowy pochodzi od Dyera (1980).
-My przedstawimy inne rozumowanie, opisując przy tym ciekawy sam w sobie porządek Dehornoya.
+My przedstawimy inne rozumowanie, opisując przy tym ciekawy sam w~sobie porządek Dehornoya.
 \index{porządek Dehornoya}
 
 \begin{proof}
@@ -336,5 +339,7 @@ Let E be the largest and e the smallest power of l in the HOMFLY polynomial of a
 \end{tobedone}
 
 % Koniec podsekcji Liczba warkoczowa
+
+\index{warkocz|)}
 
 % Koniec sekcji warkocze
