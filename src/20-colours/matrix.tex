@@ -1,12 +1,11 @@
-\section{Macierz i~wyznacznik} % (fold)
-
+\section{Macierz kolorująca i~wyznacznik}
+\index{macierz!kolorująca|(}%
 Zajmiemy się teraz wyznacznikiem, pierwszym nieoczywistym niezmiennikiem splotów, który przypisuje każdemu pewną liczbę całkowitą.
 Jest on blisko związany z~kolorowaniem.
 Zauważmy, że pierwszy ruch Reidemeistera usuwa zamknięte krzywe, czyli pojedyncze łuki bez skrzyżowań.
 Diagram bez takich krzywych ma tyle samo skrzyżowań, co łuków.
 
 \begin{definition}[macierz kolorująca]
-    \index{macierz!kolorująca}
     Ustalmy diagram bez zamkniętych krzywych dla splotu $L$ z~łukami $x_0, \ldots, x_m$ oraz skrzyżowaniami $0, \ldots, m$.
     Definiujemy macierz $A_+$, której wyraz $a_{lj}$ jest współczynnikiem przy $x_j$ w~$l$-tym równaniu kolorującym:
 \begin{comment}
@@ -30,20 +29,27 @@ Wykreślenie wiersza i~kolumny jest konieczne.
 Gdybyśmy tego zaniechali, otrzymana macierz nie byłaby odwracalna, bowiem wiersze sumują się do zera (patrz fakt \ref{prp:colouring_sum_zero}).
 Dla alternujących diagramów możemy żądać, by górą $i$-tego skrzyżowania biegło $i$-te włókno, wtedy na diagonali macierzy $A$ znajdą się same minus dwójki.
 
+\index{wyznacznik|(}
 \begin{definition}[wyznacznik]
-    \index{wyznacznik}
-    \label{def:determinant}
+\label{def:determinant}%
     Wyznacznikiem splotu nazywamy wyznacznik macierzy kolorującej $A$ bez znaku: $\det K := |\det A_K|$.
     Za wyznacznik niewęzła przyjmujemy liczbę $1$.
 \end{definition}
 
 \begin{definition}[defekt]
+\index{defekt}%
     Wymiar jądra macierzy kolorującej modulo $p$, defekt, nazywamy defektem węzła.
 \end{definition}
 
-Defekty modulo różne liczby pierwsze są niezależne od siebie.
-Na przykład suma spójna $k$ trójlistników i~$j$ węzłów $T_{2,5}$ posiada defekt $k$ modulo $3$ oraz $j$ modulo $5$.
-Podobne przykłady istnieją dla innych zbiorów liczb pierwszych.
+\begin{proposition}
+\label{no_relation_defects}%
+    Defekty modulo różne liczby pierwsze są niezależne od siebie.
+\end{proposition}
+
+\begin{proof}
+    Na przykład suma spójna $k$ trójlistników i~$j$ węzłów $T_{2,5}$ posiada defekt $k$ modulo $3$ oraz $j$ modulo $5$.
+    Podobne przykłady istnieją dla innych zbiorów liczb pierwszych.
+\end{proof}
 
 Pokażemy później (po poznaniu grupy kolorującej, czyli we wniosku \ref{cor:determinant_invariant}) lub jeszcze później (po wprowadzeniu wielomianu Alexandera, w~dowodzie faktu \ref{alexander_invariance}), że wyznacznik splotu jest dobrze określony: nie zależy on od wyboru etykietowania, minora macierzy oraz diagramu i~że jest niezmiennikiem.
 Teraz ograniczymy się do jego kilku własności.
@@ -86,6 +92,19 @@ Ich defekty modulo $3$ to $1$ i~$2$, zatem są różne.
 %     Pokażemy, że zmiana etykietowania nie zmienia wyznacznika.
 % \end{proof}
 
+\begin{proposition}
+\label{prp:bankwitz}%
+\index{indeks skrzyżowaniowy}
+    Wyznacznik splotu alternującego $L$ jest nie mniejszy od jego indeksu skrzyżowaniowego: $\det L \ge \crossing L$.
+\end{proposition}
+
+W ten sposób pokazano, że niealternujące węzły istnieją: $\det 8_{19} = 3 < 8 = \crossing 8_{19}$.
+Bankwitz podał w 1930 niepoprawny dowód dla specjalnego przypadku, kiedy $L$ jest węzłem.
+Pierwszy pełny dowód, oparty o teorię grafów, przedstawił blisko trzy dekady później Crowell w \cite{crowell59}.
+Znalazł też mocniejszą nierówność $\det L + 3 \ge \crossing L$ dla pierwszych, alternujących splotów, które nie są $(2, n)$-torusowe.
+To prawie wystarczyło do rozstrzygnięcia, które z węzłów o mniej niż 10 skrzyżowaniach są alternujące.
+Otwartym problemem pozostały $9_{45}$, $9_{47}$, $9_{48}$ oraz $9_{49}$.
+
 Wyznacznik jest blisko związany z kolorowaniami.
 
 \begin{lemma}
@@ -94,7 +113,7 @@ Wyznacznik jest blisko związany z kolorowaniami.
 \end{lemma}
 
 \begin{proof}
-    Z~algebry liniowej wiemy, że dla pewnych odwracalnych całkowitoliczbowych macierzy $C, R$ macierz $RAC = diag(a_1, \ldots, a_m)$ jest diagonalna: to postać normalna Smitha.
+    Z~algebry liniowej wiemy, że dla pewnych odwracalnych całkowitoliczbowych macierzy $C, R$ macierz $RAC = \operatorname{diag}(a_1, \ldots, a_m)$ jest diagonalna: to postać normalna Smitha.
     Istnieje odpowiedniość między niezerowymi rozwiązanami równania $Ax \equiv 0$ oraz $Dy \equiv 0$, mamy bowiem $x \equiv Cy$, zatem bez straty ogólności możemy przyjąć, że macierz $A$ jest diagonalna.
 
     Istnieje niezerowy wektor $x$ taki, że $Ax \equiv 0 \mod n$ wtedy i tylko wtedy, jeśli istnieją $x_1, \ldots, x_m \in \Z/n\Z$, nie wszystkie zerowe, że dla każdego $i$ mamy $a_ix_i \equiv 0 \mod n$.
@@ -104,7 +123,7 @@ Wyznacznik jest blisko związany z kolorowaniami.
 \end{proof}
 
 \begin{proposition}
-    \label{prp:colour_determinant}
+\label{prp:colour_determinant}%
     Splot $L$ koloruje się modulo $n$ wtedy i~tylko wtedy, gdy liczby $\det L$ oraz $n$ nie są względnie pierwsze.
 \end{proposition}
 
@@ -116,28 +135,43 @@ Wyznacznik jest blisko związany z kolorowaniami.
 \end{proof}
 
 \begin{corollary}
-    Niech $L$ będzie takim splotem, że $\det L = 1$.
-    Wtedy splot $L$ nie koloruje się modulo $n$ dla żadnego naturalnego $n$.
-\end{corollary}
-
-O takich splotach czasami, choć rzadko, mówi się, że są niewidzialne.
-
-\begin{corollary}
-    Niech $L$ będzie takim splotem, że $\det L = 0$.
-    Wtedy splot $L$ koloruje się modulo $n$ dla każdego naturalnego $n$.
+    Jeżeli wyznacznik splotu $L$ wynosi $\det L = 1$, to splot $L$ jest niewidzialny.
+\index{węzeł!niewidzialny}%
 \end{corollary}
 
 \begin{corollary}
+    Jeżeli wyznacznik splotu $L$ wynosi $\det L = 0$, to splot $L$ koloruje się modulo wszystkie liczby naturalne.
+\end{corollary}
+
+\begin{corollary}
+\index{splot!rozszczepialny}%
     Jeśli splot $L$ jest rozszczepialny, to jego wyznacznik wynosi $0$.
 \end{corollary}
 
+Poniższy problem pochodzi od Stojmenowa.
+
+\begin{conjecture}[problem 12.25 w \cite{ohtsuki02}]
+    Niech $n$ będzie nieparzystą sumą dwóch kwadratów.
+    Czy istnieje pierwszy, alternujący, achiralny węzeł o~wyznaczniku $n$?
+\end{conjecture}
+
+Oto, co już wiemy.
+Dla $n = 1, 9, 49$ oraz być może pewnej liczby $n > 2000$ niebędącej kwadratem, taki węzeł nie istnieje.
+Jeśli istnieje achiralny węzeł o wyznaczniku $n$, to $n$ jest nieparzystą sumą dwóch kwadratów (\cite{hartley79}).
+Implikacja odwrotna także jest prawdziwa, od węzła można dodatkowo żądać bycia pierwszym lub alternującym, ale nie zawsze obydwu warunków jednocześnie.
+Patrz też \cite{stoimenow05}.
+
+\index{wyznacznik|)}
+
+\index{macierz!Goeritza|(}
 Istnieje jeszcze jedna kombinatoryczna metoda badania węzłów, która prowadzi między innymi do pojęcia wyznacznika.
-W latach 30. ubiegłego wieku L. Goeritz pokazał, jak diagram węzła wyznacza specjalną formę kwadratową.
-Nieco później H. F. Trotter zmodyfikował jego pomysł, by sygnatura formy stanowiła niezmiennik splotów.
+Tuż przed wojną Lebrecht Goeritz pokazał, jak diagram węzła wyznacza specjalną formę kwadratową.
+Nieco później Trotter zmodyfikował jego pomysł, by sygnatura formy stanowiła niezmiennik splotów.
 Gordon, Litherland ujednolicili dwa wyżej wymienione podejścia w~pracy \cite{litherland81}.
 My opiszemy krótko macierz Goeritza.
 
 Ustalmy szachowiony diagram $D$ dla splotu $L$.
+\index{uszachowienie}%
 Oznaczmy białe obszary $0, 1, \ldots, m$, przy czym $0$ jest obszarem nieograniczonym.
 Przydzielmy skrzyżowaniom znaki:
 \begin{comment}
@@ -166,18 +200,19 @@ Przydzielmy skrzyżowaniom znaki:
 \end{comment}
 
 \begin{definition}
-    \index{macierz!Goeritza}
     Macierz Goeritza powstaje przez skreślenie z~macierzy $G_+$ jednego wiersza oraz jednej kolumny:
-    \[
+    \begin{equation}
         G_+=\begin{pmatrix}
         G_{00} & \cdots & G_{0m} \\
         \vdots & \ddots & \vdots \\
         G_{m0} & \cdots & G_{mm}
         \end{pmatrix},
-    \]
+    \end{equation}
     gdzie jeśli $i\neq j$, to $G_{ij}$ jest sumą znaków skrzyżowań przyległych do $i$ oraz $j$.
     Dla $i = j$, $G_{ii}$ jest minus sumą znaków skrzyżowań wokół $j$-tego obszaru.
 \end{definition}
+% M. Kneser, D. Puppe, Quadratische Formen und Verschlingungsinvarianten von Knoten, Math. Z., 58, 1953, 376-384.
+% R. H. Kyle, Branched covering spaces and the quadratic forms of links, Ann. of Math., 59(2), 1954, 539-548.
 
 Macierz $G_+$ posiada dwie własności pozwalające wykryć proste błędy rachunkowe: jest symetryczna, a~jej kolumny i~wiersze sumują się do zera.
 Jest przy tym zazwyczaj mniejsza od macierzy kolorującej.
@@ -189,57 +224,25 @@ Jest przy tym zazwyczaj mniejsza od macierzy kolorującej.
 
 Nie możemy niestety podać dowodu tego faktu, wymaga bowiem znajomości topologii algebraicznej, której wolelibyśmy nie zakładać.
 Macierz Goeritza nie jest niezmiennikiem splotów.
-Jeśli jednak równoważnym diagramom $D_1, D_2$ odpowiadają macierze $G_1, G_2$, to można między nimi przejść skończoną liczbą dwóch ruchów:
-\begin{enumerate}[leftmargin=*]
-\itemsep0em
-    \item zamiany macierzy $G$ na $PGP^{-1}$, gdzie $P$ i~$P^{-1}$ mają całkowite wyrazy
-    \item dopisania lub skreślenia $\pm 1$ na przekątnej (dla węzłów) albo $-1, 0, 1$ (dla splotów).
-\end{enumerate}
-
-% \begin{proposition}
-%     Wyznacznik jest niezmiennikiem splotów.
-%     Jeśli diagramy $D_1, D_2$ przedstawiają ten sam splot, to od macierzy Goeritza $G_1$ pierwszego do macierzy $G_2$ drugiego można dojść, wykonując trzy rodzaje ruchów:
-%     \begin{enumerate}
-%         \item zamieniając $G$ z~$P^t G P$, gdzie macierz $P$ jest całkowitoliczbowa i~$\det P = \pm 1$.
-%         \item zamieniając $G$ z
-%         \[
-%             \begin{pmatrix}
-%             G & 0 \\
-%             0 & k
-%             \end{pmatrix},
-%         \]
-%         gdzie $k \in \{-1, 0, 1\}$.
-%         Dla węzłów można ograniczyć się do $k = \pm 1$.
-%     \end{enumerate}
-% \end{proposition}
-
-% Dowód opiera się na prostych rachunkach i~ruchach Reidemeistera.
-
-% Z macierzy Goeritza można otrzymać sygnaturę: $\sigma(G) - \mu$, gdzie $\mu$ to to suma znaków skrzyżowań o~odpowiednio dobranej orientacji.
-
-Poniższy problem pochodzi od Stojmenowa.
-
-\begin{conjecture}[problem 12.25 w \cite{ohtsuki02}]
-    Niech $n$ będzie nieparzystą sumą dwóch kwadratów.
-    Czy istnieje pierwszy, alternujący, achiralny węzeł o~wyznaczniku $n$?
-\end{conjecture}
-
-Oto, co już wiemy.
-Dla $n = 1, 9, 49$ oraz być może pewnej liczby $n > 2000$ niebędącej kwadratem, taki węzeł nie istnieje.
-Jeśli istnieje achiralny węzeł o wyznaczniku $n$, to $n$ jest nieparzystą sumą dwóch kwadratów (\cite{hartley79}).
-Implikacja odwrotna także jest prawdziwa, od węzła można dodatkowo żądać bycia pierwszym lub alternującym, ale nie zawsze obydwu warunków jednocześnie.
-Patrz też \cite{stoimenow05}.
+Mamy jednak:
 
 \begin{proposition}
-    \label{prp:bankwitz}
-    Wyznacznik splotu alternującego $L$ jest nie mniejszy od jego indeksu skrzyżowaniowego: $\det L \ge \crossing L$.
+    Niech $D_1, D_2$ będą dwoma diagramami ustalonego splotu.
+    Wtedy macierz Goeritza $G_2$ można otrzymać z macierzy $G_1$ w skończonej liczbie kroków:
+    \begin{enumerate}%[leftmargin=*]
+    %\itemsep0em
+        \item zamiany macierzy $G$ na $PGP^{-1}$, gdzie $P$ i~$P^{-1}$ mają całkowite wyrazy
+        \item dopisania lub skreślenia $\pm 1$ na końcu przekątnej (dla węzłów) albo $-1, 0, 1$ (dla splotów).
+    \end{enumerate}
 \end{proposition}
 
-W ten sposób pokazano, że niealternujące węzły istnieją: $\det 8_{19} = 3 < 8 = \crossing 8_{19}$.
-Bankwitz podał w 1930 niepoprawny dowód dla specjalnego przypadku, kiedy $L$ jest węzłem.
-Pierwszy pełny dowód, oparty o teorię grafów, przedstawił blisko trzy dekady później Crowell w \cite{crowell59}.
-Znalazł też mocniejszą nierówność $\det L + 3 \ge \crossing L$ dla pierwszych, alternujących splotów, które nie są $(2, n)$-torusowe.
-To prawie wystarczyło do rozstrzygnięcia, które z węzłów o mniej niż 10 skrzyżowaniach są alternujące.
-Otwartym problemem pozostały $9_{45}$, $9_{47}$, $9_{48}$ oraz $9_{49}$.
+\begin{proof}
+    Patrz prace: Goeritza \cite{goeritz33} i późniejsze, Knesera, Puppego \cite{kneser53} oraz Kyle'a \cite{kyle54}.
+    % znalazłem te dowody w https://arxiv.org/pdf/0909.1118.pdf
+\end{proof}
+
+\index{macierz!Goeritza|)}
+
+\index{macierz!kolorująca|)}
 
 % Koniec sekcji Macierz i~wyznacznik
