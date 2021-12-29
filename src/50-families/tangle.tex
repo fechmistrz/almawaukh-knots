@@ -22,12 +22,50 @@ Podobnie jak dla węzłów, pojawia się naturalne pytanie o~równoważność dw
 Jest tak wtedy, gdy istnieje homeomorfizm kuli na siebie, który przekształca jeden supeł na drugi, ale nie rusza sfery otaczającej.
 Dla diagramów odpowiada to ruchom Reidemeistera, nie mamy jednak prawa opuszczać kuli zawierającej supeł.
 
+Dużo dokładniej mówi o tym Turajew:
+
+\begin{proposition}
+    Oznaczmy przez OTa kategorię zorientowanych supłów.
+    Jej obiektami są skończone ciągi złożone z~$\pm 1$, razem z~ciągiem pustym.
+    Morfizm ciągu $\varepsilon = (\varepsilon_1, \ldots, \varepsilon_k)$ w ciąg $\nu = (\nu_1, \ldots, \nu_l)$ jest klasą izotopii zorientowanego $(k, l)$-supła $L$ tak, że źródłem $L$ jest $\varepsilon$, zaś celem $\nu$. 
+    Na przykład supły $\curvearrowright$, $\curvearrowleft$ oraz $X_+$ opisane są przez morfizmy $\varnothing \to (-1, 1)$, $\varnothing \to (1, -1)$ oraz $(1, 1) \to (1, 1)$.
+    Składanie morfizmów odpowiada mnożeniu supłów.
+
+    W kategorii OTa wprowadza się iloczyn tensorowy $\otimes$. Iloczynem obiektów $\varepsilon, \nu$ (znaczących to, co wyżej) jest obiekt $(\varepsilon_1, \ldots, \varepsilon_k, \nu_1, \ldots, \nu_l)$.
+    Iloczyn tensorowy morfizmów to iloczyn tensorowy splotów i łatwo widać, że $(OTa, \otimes, \varnothing)$ jest ściśle monoidalną kategorią.
+
+    Zdefiniujmy cztery słowa:
+    \begin{align}
+        A & = (\downarrow \downarrow \curvearrowright) \circ (\downarrow \downarrow \uparrow \curvearrowright \downarrow) \circ (\downarrow \downarrow X_\pm \downarrow \downarrow) \circ (\downarrow \inversedcurvearrowright \uparrow \downarrow \downarrow) \circ (\inversedcurvearrowright \downarrow \downarrow) \\
+        B & = (\curvearrowleft \downarrow \downarrow) \circ (\downarrow \curvearrowleft \uparrow \downarrow \downarrow) \circ (\downarrow \downarrow X_\pm \downarrow \downarrow) \circ (\downarrow \downarrow \uparrow \inversedcurvearrowleft \downarrow) \circ (\downarrow \downarrow \inversedcurvearrowleft) \\
+        T & = (\curvearrowleft \uparrow \downarrow) \circ (\downarrow X_- \downarrow) \circ (\downarrow \uparrow \inversedcurvearrowleft) \\
+        Y & = (\uparrow \downarrow \curvearrowright) \circ (\downarrow X_+ \downarrow) \circ (\inversedcurvearrowright \uparrow \downarrow)
+    \end{align}
+    Kategoria OTa jest generowana przez morfizmy $\inversedcurvearrowright, \inversedcurvearrowleft, \curvearrowright, \curvearrowleft, X_+, X_-$ oraz przedstawiana przez nie razem z relacjami:
+    \begin{align}
+        (\curvearrowright \uparrow) \circ (\uparrow \inversedcurvearrowright) = & \uparrow \, = (\uparrow \curvearrowleft) \circ (\inversedcurvearrowleft \uparrow) \\
+        (\curvearrowleft \downarrow) \circ (\downarrow \inversedcurvearrowleft) = & \downarrow \, = (\downarrow \curvearrowright) \circ (\inversedcurvearrowright \downarrow) \\
+        A & = B \\
+        X_+ \circ X_- & = X_- \circ X_+ = \, \uparrow \uparrow \\
+        (X_+ \uparrow) \circ (\uparrow X_-) \circ (X_+ \uparrow) & = (\uparrow X_+) \circ (X_+ \uparrow) \circ (\uparrow X_+) \\
+        (\uparrow \curvearrowright) \circ (X_\pm \downarrow) \circ (\uparrow \inversedcurvearrowleft) & = \, \uparrow \\
+        Y \circ T = \, \downarrow \uparrow, & \quad T \circ Y = \, \uparrow \downarrow
+    \end{align}
+\end{proposition}
+
+\begin{proof}
+    Dowód twierdzenia oraz graficzne przedstawienie relacji z kategorii OTa zawiera praca Turajewa \cite{turaev90}.
+    Wszystkie relacje odpowiadają ruchom Reidemeistera.
+    Trzecie od końca równanie to geometryczny wariant równania Yanga-Baxtera.
+\index{równanie Yanga-Baxtera}%
+% TODO: przerysować... do kodu
+\end{proof}
+
 Wszystkich supłów jest bardzo dużo, więc ograniczymy się do końca rozdziału do pewnej ich regularnej rodziny.
 Oto cztery podstawowe supły:
 \input{50-families/tangle_02}
 
 \begin{definition}
-
     Supły powstające z~$(0)$ lub $(\infty)$ przez homeomorfizm kuli na siebie permutujący wejścia i~wyjścia nazywamy wymiernymi.
 \end{definition}
 
@@ -70,7 +108,6 @@ Każdemu supłowi przypiszmy pewną liczbę wymierną, według przepisu:
 \end{equation}
 
 \begin{proposition}
-
     Istnieje bijekcja między typami supłów wymiernych oraz ułamkami łańcuchowymi.
 \end{proposition}
 
@@ -106,8 +143,8 @@ Przez zszycie par łuków wejściowych (lub wyjściowych) zamieniamy supły w~w�
 Oznaczenia $N(T)$ oraz $D(T)$ pochodzą od angielskich słów \emph{numerator}, \emph{denominator}.
 Być może nie jest jasne, dlaczego terminy stosowane zazwyczaj do opisu ułamków stosujemy wobec diagramów splotów.
 Nazewnictwo nie jest przypadkowe. %, wrócimy do tego tematu wkrótce.
-\begin{proposition}
 
+\begin{proposition}
     Ułamek supła zadany wzorem
     \[
         F(A) = \frac{\conway_{N(A)}(z)}{\conway_{D(A)}(z)}
