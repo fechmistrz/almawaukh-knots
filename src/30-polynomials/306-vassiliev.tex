@@ -1,5 +1,5 @@
 \section{Niezmienniki Wasiljewa} % (fold)
-\index{niezmiennik!Wasiljewa}
+\index{niezmiennik!Wasiljewa|(}
 \label{sec:vassiliev}
 % DICTIONARY;invariant, finite type;niezmiennik, skończonego typu
 Niezmienniki Wasiljewa (znane także jako niezmienniki skończonego typu) umożliwiają radykalnie nowe podejście do węzłów.
@@ -11,16 +11,15 @@ Niezmienniki Wasiljewa najlepiej zrozumieć, jeśli osłabimy trochę definicję
 Uważam, że przyjemnym wprowadzeniem do niezmienników Wasiljewa jest artykuł \cite{chmutov12} Chmutowa.
 Za najlepsze uważa się pracę \cite{barnatan_95}: Bar-Natan, jej autor, pozostaje do dziś jedną z~najważniejszych osób dla rozwoju tego działu matematyki.
 Oprócz tego jest jeszcze pięknie zilustrowana książka \cite{duzhin12} trzech rosyjskich matematyków, będąca obszernym kompendium wiedzy o~węzłach wirtualnych oraz ciekawy podręcznik \cite{dye16}, który rozwija od podstaw teorię węzłów wirtualnych i~klasycznych równocześnie; wydaje się jednak, że nie jest do końca zgodny z~przedstawionymi tu definicjami, dlatego nie odnosimy się do niego dalej.
-% Kenneth A. Perko, Jr. (amazon): Not too happy about the reference at page 49 to "old Perko's notation," but that's just me. (Also, Fermat, mentioned at page 10, was not much of a lawyer, having used his father's money to buy a life-long provincial judgeship.) Clearly the book is an essential acquisition for anyone in the field and should provide great recreational value for reading on long airplane flights.
 Szkielet sekcji oparliśmy natomiast o piętnasty rozdział podręcznika Murasugiego, \cite{murasugi96}.
 
 % DICTIONARY;knot, singular;węzeł, singularny
 \begin{definition}[węzeł singularny]
-    \index{węzeł!singularny}
+\index{węzeł!singularny}%
     Niech $f \colon S^1 \to \R^3$ będzie kawałkami liniową funkcją, która jest różnowartościowa poza skończenie wieloma punktami.
     Załóżmy dodatkowo, że
     \begin{itemize}
-        \item włókna funkcji $f$ (przeciwobrazy punktów) są co najwyżej dwuelementowe
+        \item włókna -- przeciwobrazy punktów -- funkcji $f$ są co najwyżej dwuelementowe
         \item jeżeli dwa różne punkty mają ten sam obraz, to $K = f(S^1)$ przecina się tam pod kątem prostym.
     \end{itemize}
     Obraz funkcji $f$ nazywamy węzłem singularnym.
@@ -28,7 +27,45 @@ Szkielet sekcji oparliśmy natomiast o piętnasty rozdział podręcznika Murasug
 
 Gdy używamy słowa węzeł, nigdy nie mamy na myśli węzła singularnego.
 Punkt, gdzie węzeł singularny tnie samego siebie, nazywamy wierzchołkiem i~oznaczamy pogrubioną kropką na diagramie.
-Podamy teraz definicję równoważności dla węzłów singularnych przez analogię do zwykłych węzłów (definicja \ref{def:equivalent_knots_2}).
+Oto garść przykładów węzłów singularnych:
+
+\begin{comment}
+\begin{figure}[H]
+    \centering
+    \begin{minipage}[b]{.14\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{../data/virtual_0_1.png}
+        \subcaption{$0_1$}
+    \end{minipage}
+    \begin{minipage}[b]{.14\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{../data/virtual_2_1.png}
+        \subcaption{$2_1$}
+    \end{minipage}
+    \begin{minipage}[b]{.14\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{../data/virtual_3_1.png}
+        \subcaption{$3_1$}
+    \end{minipage}
+    \begin{minipage}[b]{.14\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{../data/virtual_3_7.png}
+        \subcaption{$3_7$}
+    \end{minipage}
+    \begin{minipage}[b]{.14\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{../data/virtual_4_1.png}
+        \subcaption{$4_1$}
+    \end{minipage}
+    \begin{minipage}[b]{.14\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{../data/virtual_4_108.png}
+        \subcaption{$4_{108}$}
+    \end{minipage}
+\end{figure}
+\end{comment}
+
+Podamy teraz definicję równoważności dla węzłów singularnych, zupełnie analogicznie do definicji \ref{def:equivalent_knots_2} dla zwykłych węzłów.
 
 \begin{definition}[płaski dysk]
     Niech $A$ będzie wierzchołkiem węzła singularnego $K$, $B_A$ jego małym domkniętym otoczeniem, zaś $P_A$ płaszczyzną, która zawiera $B_A \cap K$, mały fragment węzła wokół wierzchołka.
@@ -40,15 +77,15 @@ Podamy teraz definicję równoważności dla węzłów singularnych przez analog
 \end{definition}
 
 Ten drugi warunek gwarantuje nam, że skrzyżowania wokół podwójnych punktów nie ulegną zniszczeniu.
-Istnieje podobne kryterium dla diagramów, odpowiednik twierdzenia Reidemeistera (\ref{thm:reidemeister}).
+Istnieje podobne kryterium dla diagramów, odpowiednik twierdzenia Reidemeistera.
 
 \begin{proposition}
-    Dwa singularne diagramy są równoważne dokładnie wtedy, kiedy można między nimi przejść przy użyciu ciągu ruchów Reidemeistera oraz operacji $\Omega$:
+    Dwa singularne diagramy są równoważne dokładnie wtedy, kiedy można między nimi przejść przy użyciu ciągu izotopii otaczających, ruchów Reidemeistera oraz operacji $\Omega$:
 \begin{comment}
     \[
     \begin{tikzpicture}[baseline=-0.65ex, scale=0.1]
     \begin{knot}[clip width=5, end tolerance=1pt, flip crossing/.list={1,2,3,4}]
-        \strand[semithick] (-15, 5) to (0, 5) to (5, 0) to (0, -5) to (-15, -5);
+        \strand[semithick] (-15, 5) [in=up,out=right] to (5, 0) [in=right,out=down] to (-15, -5);
         \strand[semithick] (-2, -2) to (-10, -10);
         \strand[semithick] (-2, 2) to (-10, 10);
         \strand[semithick] (2, -2) to (10, -10);
@@ -61,7 +98,7 @@ Istnieje podobne kryterium dla diagramów, odpowiednik twierdzenia Reidemeistera
     \quad\cong_\Omega\quad
     \begin{tikzpicture}[baseline=-0.65ex, scale=0.1]
     \begin{knot}[clip width=5, end tolerance=1pt, flip crossing/.list={1,2,3,4}]
-        \strand[semithick] (-15, 5) to (-10, 5) to (-5, 0) to (-10, -5) to (-15, -5);
+        \strand[semithick] (-15, 5) [in=up,out=right] to (-5, 0) [in=right,out=down] to (-15, -5);
         \strand[semithick] (-2, -2) to (-10, -10);
         \strand[semithick] (-2, 2) to (-10, 10);
         \strand[semithick] (2, -2) to (10, -10);
@@ -74,7 +111,7 @@ Istnieje podobne kryterium dla diagramów, odpowiednik twierdzenia Reidemeistera
     \quad\cong_\Omega\quad
     \begin{tikzpicture}[baseline=-0.65ex, scale=0.1]
     \begin{knot}[clip width=5, end tolerance=1pt]
-        \strand[semithick] (-15, 5) to (0, 5) to (5, 0) to (0, -5) to (-15, -5);
+        \strand[semithick] (-15, 5) [in=up,out=right] to (5, 0) [in=right,out=down] to (-15, -5);
         \strand[semithick] (-2, -2) to (-10, -10);
         \strand[semithick] (-2, 2) to (-10, 10);
         \strand[semithick] (2, -2) to (10, -10);
@@ -90,18 +127,20 @@ Istnieje podobne kryterium dla diagramów, odpowiednik twierdzenia Reidemeistera
 
 Załóżmy teraz, że mamy jakiś niezmiennik węzłów $v$ o~wymiernych wartościach i~chcemy przedłużyć go do niezmiennika $\hat v$ węzłów singularnych.
 Najprościej zrobić to rekurencyjnie.
-Niech $\hat v$ będzie już określony dla węzłów singularnych o co najwyżej $n - 1$ wierzchołkach i~wybierzmy dowolny węzeł o~$n$ wierzchołkach.
+Niech $\hat v$ będzie już określony dla węzłów singularnych o co najwyżej $n - 1$ wierzchołkach i~wybierzmy dowolny węzeł i diagram o~$n$ wierzchołkach.
 Okazuje się, że jeżeli położymy
 \begin{comment}
 \begin{equation}
-    \hat v(K) = \hat v(\LittleLeftCrossing) - \hat v(\LittleRightCrossing),
+    \hat v\left(\SingularCrossing\right) = \hat v\left(\MediumSkeinPlus\right) - \hat v\left(\MediumSkeinMinus\right),
 \end{equation}
 \end{comment}
-to dostaniemy dobrze określoną funkcję: jeśli $L = K$ jest innym węzłem singularnym, to $\hat v(L) = \hat v(K)$.
-Nazywamy ją niezmiennikiem singularnym indukowanym przez niezmiennik węzłów $v_0$.
+to dostaniemy dobrze określoną funkcję: jeżeli $L = K$ jest tym samym węzłem singularnym z~innym diagramem, to $\hat v(L) = \hat v(K)$.
+
+Funkcję $\hat v$ nazywamy niezmiennikiem singularnym indukowanym przez niezmiennik węzłów $v_0$.
 
 \begin{definition}[rząd niezmiennika]
-    \label{def:vassiliev_order}
+\label{def:vassiliev_order}%
+\index{rząd niezmiennika}%
     Niech $v$ będzie niezmiennikiem singularnym.
     Mówimy, że $v$ jest niezmiennikiem Wasiljewa rzędu co najwyżej $n$, jeśli dla dowolnego singularnego węzła $K$ o $n + 1$ wierzchołkach zachodzi $v(K) = 0$.
     Jeśli dodatkowo $v$ nie jest rzędu co najwyżej $n - 1$, to mówimy, że jest rzędu dokładnie $n$.
@@ -114,30 +153,40 @@ Czas na garść przykładów.
     Współczynnik $\conway_{2k}$ indukuje niezmiennik Wasiljewa rzędu dokładnie $2k$.
 \end{example}
 
-Pokazał to Bar-Natan w roku 1991.
-Lin oraz Wang w~1994 roku na podstawie niezmienników małych rzędów, to jest $v_2$ oraz $v_3$, wysunęli następującą hipotezę: istnieje uniwersalna stała $C$ taka, że
+\begin{proof}
+    Jak pokazuje Chmutow w \cite{chmutov12}, porównanie relacji kłębiastej dla wielomianu Conwaya z tą dla niezmienników Wasiljewa pokazuje, że wielomian Conwaya singularnego węzła o $m$ punktach podwójnych jest podzielny przez $z^m$, co pokazuje, że $c_{2k}$ jest niezmiennikiem rzędu co najwyżej $2k$.
+
+    Bar-Natan w 1991 pokazał, że jest niezmiennikiem rzędu dokładnie $2k$.
+\end{proof}
+
+% linwang 263
+
+\index{hipoteza!Lin-Wang}%
+Lin oraz Wang \cite{wang96} w~1994 roku na podstawie niezmienników małych rzędów, to jest $v_2$ oraz $v_3$, wysunęli następującą hipotezę: istnieje uniwersalna stała $C$ taka, że
 \begin{equation}
     |v_k(K)| \le C (\crossing K)^k.
 \end{equation}
 
 Hipotezę wkrótce udowodniono, najpierw dla węzłów (Bar-Natan, \cite{barnatan95}), nieco później także dla splotów (Stojmenow, \cite{stoimenow_01}).
-Wartość stałej $C$ trudno obliczyć, dlatego Stojmenow zaproponował ograniczenie się do przypadku $v_k = \conway_k$.
+Wartość stałej $C$ trudno obliczyć, dlatego Stojmenow zaproponował \cite[problem 1.17]{ohtsuki02} ograniczenie się do przypadku $v_k = \conway_k$.
 
 \begin{conjecture}
     Niech $L$ będzie splotem.
     Wtedy
     \begin{equation}
-        |\conway_k(L)| \le \frac{1}{2^kk!} \cdot c^k.
+        |\conway_k(L)| \le \frac{(\crossing L)^k}{2^kk!}.
     \end{equation}
 \end{conjecture}
 
 Nierówność jest nietrywialna tylko dla splotu $L$ z~$k+1, k-1, \ldots$ składowymi; trywialna dla $k = 0$, łatwa dla $k=1$ (wtedy $\conway_1$ jest indeksem zaczepienia splotów o~dwóch składowych) oraz udowodniona dla węzłów i~$k=2$ przez Polyaka, Viro w~2001 (\cite{polyak01}).
-\index{niezmiennik!Cassona}
-% The Casson knot invariant (to be distinguished from the better-known Casson invariant) is defined to be the Vassiliev knot invariant v_2, which turns out to be \alexander_k''(1) / 2 , where \alexander_k is the Alexander polynomial of k. It can be characterized as the unique Vassiliev invariant of degree 2 that takes value 0 on the trivial knot and value 1 on the trefoil knot.
 
 \begin{example}
-    Niech $K$ będzie węzłem, zaś $\jones_K(t)$ jego wielomianem Jonesa.
-    Podstawmy za $t$ w wielomianie $\jones_K(t)$ formalny szereg potęgowy $e^x = 1 + x + \frac12 x^2 + \ldots$ i rozwińmy go w szereg Taylora:
+    Niech $\jones_K(t)$ będzie wielomianem Jonesa węzła $K$.
+    Dokonajmy podstawienia
+    \begin{equation}
+        t := e^x = 1 + x + \frac{x^2}{2} + \frac{x^3}{6} + \ldots,
+    \end{equation}
+    a~następnie rozwińmy wynik w~szereg Taylora:
     \begin{equation}
         \jones_K(e^x) = \sum_{k = 0}^\infty b_k x^k.
     \end{equation}
@@ -146,8 +195,9 @@ Nierówność jest nietrywialna tylko dla splotu $L$ z~$k+1, k-1, \ldots$ skład
 
 Ten i podobne wyniki dla wielomianów HOMFLY, Kauffmana uzyskała Birman z~Linem w \cite{birman93}.
 Praca ta znacznie uprościła oryginalne techniki Wasiljewa.
+Patrz też \cite[s. 56]{chmutov12}.
 
-\begin{example}
+\begin{example}[s. 311 w \cite{murasugi96}]
     Niech $K$ będzie węzłem, zaś $f(t)$ rozwinięciem Taylora wokół $t = 1$ dla wielomianu Jonesa:
     \begin{equation}
         f(t) = \sum_{k = 0}^\infty c_k (t-1)^k.
@@ -157,27 +207,31 @@ Praca ta znacznie uprościła oryginalne techniki Wasiljewa.
 
 Pójdźmy w ślad za Murasugim i zdefiniujmy nieskończoną rodzinę węzłów wirtualnych $K[p, q]$, gdzie $p$ jest liczbą wierzchołków, zaś $|q|$ liczbą klasycznych skrzyżowań.
 Jeśli $q < 0$, wszystkie skrzyżowania odwracamy:
-\begin{comment}
-\[
+% \begin{comment}
+\begin{figure}[H]
+  \centering
+  \[
 \begin{tikzpicture}[baseline=-0.65ex, scale=0.1]
 \begin{knot}[clip width=5, end tolerance=1pt, flip crossing/.list={2}]
     % left part
-    \draw[semithick] (5, 0) [in=-60, out=-120] to (-5, 0) [in=60, out=120] to (-15, 0) [in=-60, out=-120] to (-25, 0) [in=60, out=120] to (-35, 0) [in=180, out=-120] to (-35, -10);
-    \draw[semithick] (5, 0) [in=60, out=120] to (-5, 0) [in=-60, out=-120] to (-15, 0) [in=60, out=120] to (-25, 0) [in=-60, out=-120] to (-35, 0) [in=-180, out=120] to (-35, 10);
+    \draw[thick] (5, 0) [in=-60, out=-120] to (-5, 0) [in=60, out=120] to (-15, 0) [in=-60, out=-120] to (-25, 0) [in=60, out=120] to (-35, 0) [in=180, out=-120] to (-35, -10);
+    \draw[thick] (5, 0) [in=60, out=120] to (-5, 0) [in=-60, out=-120] to (-15, 0) [in=60, out=120] to (-25, 0) [in=-60, out=-120] to (-35, 0) [in=-180, out=120] to (-35, 10);
     % right part
-    \strand[semithick] (5, 0) [in=120, out=60] to (15, 0) [in=-120, out=-60] to (25, 0) [in=120, out=60] to (35, 0) [in=0, out=-60] to (35, -10);
-    \strand[semithick] (5, 0) [in=-120, out=-60] to (15, 0) [in=120, out=60] to (25, 0) [in=-120, out=-60] to (35, 0) [in=0, out=60] to (35, 10);
+    \strand[thick] (5, 0) [in=120, out=60] to (15, 0) [in=-120, out=-60] to (25, 0) [in=120, out=60] to (35, 0) [in=0, out=-60] to (35, -10);
+    \strand[thick] (5, 0) [in=-120, out=-60] to (15, 0) [in=120, out=60] to (25, 0) [in=-120, out=-60] to (35, 0) [in=0, out=60] to (35, 10);
     % external lines
-    \draw[semithick,Latex-] (-35, 10) to (35, 10);
-    \draw[semithick,Latex-] (-35, -10) to (35, -10);
-    \draw[black,fill=black] (5,0) circle (0.5);
-    \draw[black,fill=black] (-5,0) circle (0.5);
-    \draw[black,fill=black] (-15,0) circle (0.5);
-    \draw[black,fill=black] (-25,0) circle (0.5);
-    \draw[black,fill=black] (-35,0) circle (0.5);
+    \draw[thick,Latex-] (-35, 10) to (35, 10);
+    \draw[thick,Latex-] (-35, -10) to (35, -10);
+    \draw[black,fill=black] (5,0) circle (1);
+    \draw[black,fill=black] (-5,0) circle (1);
+    \draw[black,fill=black] (-15,0) circle (1);
+    \draw[black,fill=black] (-25,0) circle (1);
+    \draw[black,fill=black] (-35,0) circle (1);
 \end{knot}
 \end{tikzpicture}\]
-\end{comment}
+  \caption{Węzeł singularny $K[p, q]$ dla $p = 2, q = 10$.}
+\end{figure}
+% \end{comment}
 
 \begin{proposition}
     Następujące funkcje nie są niezmiennikami Wasiljewa: indeks skrzyżowaniowy $\operatorname{cr}$, liczba gordyjska $\operatorname{u}$, indeks mostowy $\operatorname{br}$, indeks warkoczowy $\operatorname{b}$, genus $g$, sygnatura $\sigma$.
@@ -199,37 +253,23 @@ Udowodnimy kilka najprostszych własności niezmienników Wasiljewa.
 
 \begin{proof}
     Niech $v$ będzie niezmiennikiem rzędu zero i~znika na każdym singularnym węźle o~jednym wierzchołku.
-    Relacja kłębiasta mówi wtedy, że $v(\LittleLeftCrossing) = v(\LittleRightCrossing)$, to znaczy odwrócenie dowolnego skrzyżowania nie zmienia wartości niezmiennika.
+    Relacja kłębiasta mówi, że $v(\LittleLeftCrossing) = v(\LittleRightCrossing)$, to znaczy odwrócenie dowolnego skrzyżowania nie zmienia wartości niezmiennika.
+
     Z lematu \ref{lem:unknotting_well_defined} wiemy jednak, że każdy węzeł można zmienić w niewęzeł odwracając niektóre skrzyżowania.
-    Wynika stąd, że $v(K) = v(\LittleUnknot)$, co należało udowodnić.
+    Wynika stąd, że $v(K) = v(\LittleUnknot)$ dla każdego singularnego węzła $K$, co należało udowodnić 
 \end{proof}
 
 \begin{proposition}
     Nie istnieje niezmiennik Wasiljewa rzędu jeden.
 \end{proposition}
 
-\begin{tobedone}
-    \index{diagram!strunowy}
-    % DICTIONARY;diagram, chord;diagram, strunowy
-    Chord diagrams. Ich produkt jest dobrze określony modulo relacja 4T.
-\end{tobedone}
+% The Casson knot invariant (to be distinguished from the better-known Casson invariant) is defined to be the Vassiliev knot invariant v_2, which turns out to be \alexander_k''(1) / 2 , where \alexander_k is the Alexander polynomial of k.
+% \index{niezmiennik!Cassona}
+% It can be characterized as the unique Vassiliev invariant of degree 2 that takes value 0 on the trivial knot and value 1 on the trefoil knot.
 
-\begin{tobedone}
-    Relacje AS, IHX, STU, FI.
-\end{tobedone}
-
-\begin{tobedone}
-    % DICTIONARY;actuality table;tablica rzeczywistości
-    \index{tablica rzeczywistości?}
-    Actuality tables.
-\end{tobedone}
-
-\begin{tobedone}
-    Wartość niezmienników Wasiljewa zależy tylko od chord diagrams. (\cite{duzhin12}, prop. 3.4.2)
-\end{tobedone}
-
+(Na podstawie pierwszych stron \cite{chmutov12}).
 Oznaczmy przez $\mathcal V_n$ zbiór niezmienników Wasiljewa rzędu co najwyżej $n$, o~wartościach w zbiorze liczb zespolonych $\C$.
-Z definicji \ref{def:vassiliev_order} wynika, że $\mathcal V_n$ jest przestrzenią wektorową nad ciałem $\C$ oraz $\mathcal V_n \subseteq \mathcal V_{n+1}$, zatem mamy rosnącą filtrację
+Z definicji \ref{def:vassiliev_order} wynika, że $\mathcal V_n$ jest przestrzenią wektorową nad ciałem $\C$ oraz $\mathcal V_n \subseteq \mathcal V_{n+1}$ i mamy rosnącą filtrację
 \begin{equation}
     \mathcal V_0 \subseteq \mathcal V_1 \subseteq \mathcal V_2 \subseteq \ldots \subseteq \mathcal V := \bigcup_{n=0}^\infty \mathcal V_n.
 \end{equation}
@@ -337,6 +377,193 @@ Dla $n \le 12$ ograniczenia te pokrywają się!
 % Arm: Am / Z<FI relations>
 % Pm: podmoduł Am generowany przez spójne diagramy
 
+Okazuje się, że wartość niezmiennika Wasiljewa $v$ nie zależy wprost od tego, jak zaplątany jest węzeł singularny $K$, ale od tego, jak ułożone są wierzchołki wzdłuż węzła. Standardową metodą kodowania tej informacji jest diagram cięciw.
+
+\begin{definition}[diagram cięciw]
+% DICTIONARY;diagram, chord;diagram, cięciw
+\index{diagram cięciw}%
+    Zorientowany okrąg razem z~$2n$ punktami leżącymi na nim (oraz~połączonymi w pary) z~dokładnością do zachowujących orientację homeomorfizmów nazywamy diagramem cięciw rzędu $n$, albo stopnia $n$.
+\end{definition}
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}[b]{.18\linewidth}
+        \centering
+        $\begin{tikzpicture}[baseline=-0.65ex,scale=0.15]
+            \useasboundingbox (-7, -5) rectangle (7, 5);
+            \draw[thick] (-0, 0) circle (5);
+            \draw[thick, brown] (0:5) to (180:5);
+            \draw[thick, brown] (60:5) [in=-60,out=-120] to (120:5);
+            \draw[thick, brown] (-60:5) [in=60,out=120] to (-120:5);
+        \end{tikzpicture}$
+        \subcaption{}
+    \end{minipage}
+    \begin{minipage}[b]{.18\linewidth}
+        \centering
+        $\begin{tikzpicture}[baseline=-0.65ex,scale=0.15]
+            \useasboundingbox (-7, -5) rectangle (7, 5);
+            \draw[thick] (-0, 0) circle (5);
+            \draw[thick, brown] (0:5) [in=-120, out=180] to (60:5);
+            \draw[thick, brown] (120:5) [in=0, out=-60] to (180:5);
+            \draw[thick, brown] (240:5) [in=120, out=60] to (300:5);
+        \end{tikzpicture}$
+        \subcaption{}
+    \end{minipage}
+    \begin{minipage}[b]{.18\linewidth}
+        \centering
+        $\begin{tikzpicture}[baseline=-0.65ex,scale=0.15]
+            \useasboundingbox (-7, -5) rectangle (7, 5);
+            \draw[thick] (-0, 0) circle (5);
+            \draw[thick, brown] (0:5) [out=180, in=-60] to (120:5);
+            \draw[thick, brown] (60:5) [in=0,out=-120] to (180:5);
+            \draw[thick, brown] (240:5) [in=120, out=60] to (300:5);
+        \end{tikzpicture}$
+        \subcaption{}
+    \end{minipage}
+    \begin{minipage}[b]{.18\linewidth}
+        \centering
+        $\begin{tikzpicture}[baseline=-0.65ex,scale=0.15]
+            \useasboundingbox (-7, -5) rectangle (7, 5);
+            \draw[thick] (-0, 0) circle (5);
+            \draw[thick, brown] (0:5) to (180:5);
+            \draw[thick, brown] (60:5) [in=120,out=-120] to (300:5);
+            \draw[thick, brown] (120:5) [in=60, out=-60] to (240:5);
+        \end{tikzpicture}$
+        \subcaption{}
+    \end{minipage}
+    \begin{minipage}[b]{.18\linewidth}
+        \centering
+        $\begin{tikzpicture}[baseline=-0.65ex,scale=0.15]
+            \useasboundingbox (-7, -5) rectangle (7, 5);
+            \draw[thick] (-0, 0) circle (5);
+            \draw[thick, brown] (0:5) to (180:5);
+            \draw[thick, brown] (60:5) to (240:5);
+            \draw[thick, brown] (120:5) to (300:5);
+        \end{tikzpicture}$
+        \subcaption{}
+    \end{minipage}
+    \caption{Wszystkie pięć diagramów cięcin stopnia 3}
+\end{figure}
+
+\begin{proposition}
+    Niech $K_1, K_2$ będą dwoma singularnymi węzłami o~tym samym diagramie cięciw, zaś $v$~niezmiennikiem Wasiljewa.
+    Wtedy $v(K_1) = v(K_2)$.
+\end{proposition}
+
+\begin{proof}
+    Umieśćmy węzły singularne $K_1, K_2$ w przestrzeni tak, by ich wierzchołki oraz obie gałęzie wychodzące z wierzchołków leżały tak samo. Wtedy można tak zdeformować łuki $K_1$ tak, by jedynymi osobliwościami, jakie się pojawią lub znikną, były podwójne punkty.
+    Teraz kłębiasta Wasiljewa mówi, że wartość $v$ nie zmienia się podczas tego procesu, zatem $v(K_1) = v(K_2)$, co należało okazać.
+    % chmutov12
+    % TODO: (\cite{duzhin12}, prop. 3.4.2)
+\end{proof}
+
+\begin{definition}[symbol niezmiennika]
+    Niech $v$ będzie niezmiennikiem Wasiljewa.
+    Obcięcie $v$ do zbioru węzłów singularnych o~dokładnie $n$ wierzchołkach traktowane jako funkcja ze zbioru diagramów cięcin nazywamy symbolem tego niezmiennika.
+\end{definition}
+
+Jeśli $v_1, v_2$ są niezmiennikami Wasiljewa rzędu co najwyżej $n$ o~tych samych symbolach, to ich różnica jest niezmiennikiem rzędu co najwyżej $n - 1$.
+Oznacza to, że przestrzeń $\mathcal V_n/\mathcal V_{n-1}$ pokrywa się z przestrzenią wszystkich symboli niezmienników Wasiljewa rzędu co najwyżej $n$.
+Zbiór diagramów cięcin rzędu $n$ jest skończony, więc przestrzeń funkcji na tym zbiorze też jest skończona, a zatem przestrzenie $\mathcal V_n$ są skończonego wymiaru.
+
+Symbol nie jest byle jaką funkcją, spełnia dwie relacje:
+
+\begin{figure}[H]
+$$
+\begin{tikzpicture}[baseline=-0.65ex,scale=0.15]
+    \useasboundingbox (-7, -5) rectangle (7, 5);
+    \draw[densely dotted] (-0, 0) circle (5);
+    \draw[thick, brown] (20*17:5) [out=180+17*20, in=down] to (0:2) [in=180+1*20, out=up] to (20*1:5);
+    \draw[thick] (20*16:5) arc (20*16:20*20:5);
+\end{tikzpicture}
+\mapsto 0
+$$
+\caption{Relacja ,,one-term'' (1T albo FI?)}
+\end{figure}
+oraz
+\begin{figure}[H]
+$$
+\begin{tikzpicture}[baseline=-0.65ex,scale=0.15]
+    \useasboundingbox (-7, -5) rectangle (7, 5);
+    \draw[densely dotted] (-0, 0) circle (5);
+    \draw[thick, brown] (20*1:5) [in=180+13*20, out=180+1*20] to (20*13:5);
+    \draw[thick, brown] (20*6:5) [in=180+12*20, out=180+6*20] to (20*12:5);
+    \draw[thick] (20*5 :5) arc (20*5 :20*8 :5);
+    \draw[thick] (20*11:5) arc (20*11:20*14:5);
+    \draw[thick] (20*17:5) arc (20*17:20*20:5);
+\end{tikzpicture}
+-
+\begin{tikzpicture}[baseline=-0.65ex,scale=0.15]
+    \useasboundingbox (-7, -5) rectangle (7, 5);
+    \draw[densely dotted] (-0, 0) circle (5);
+    \draw[thick, brown] (20*0:5) [in=180+12*20, out=180+0*20] to (20*12:5);
+    \draw[thick, brown] (20*7:5) [in=180+13*20, out=180+7*20] to (20*13:5);
+    \draw[thick] (20*5 :5) arc (20*5 :20*8 :5);
+    \draw[thick] (20*11:5) arc (20*11:20*14:5);
+    \draw[thick] (20*17:5) arc (20*17:20*20:5);
+\end{tikzpicture}
++
+\begin{tikzpicture}[baseline=-0.65ex,scale=0.15]
+    \useasboundingbox (-7, -5) rectangle (7, 5);
+    \draw[densely dotted] (-0, 0) circle (5);
+    \draw[thick, brown] (20*0:5) [in=180+6*20, out=180+0*20] to (20*6:5);
+    \draw[thick, brown] (20*1:5) [in=180+13*20, out=180+1*20] to (20*13:5);
+    \draw[thick] (20*5 :5) arc (20*5 :20*8 :5);
+    \draw[thick] (20*11:5) arc (20*11:20*14:5);
+    \draw[thick] (20*17:5) arc (20*17:20*20:5);
+\end{tikzpicture}
+-
+\begin{tikzpicture}[baseline=-0.65ex,scale=0.15]
+    \useasboundingbox (-7, -5) rectangle (7, 5);
+    \draw[densely dotted] (-0, 0) circle (5);
+    \draw[thick, brown] (20*0:5) [in=180+12*20, out=180+0*20] to (20*12:5);
+    \draw[thick, brown] (20*1:5) [in=180+7*20, out=180+1*20] to (20*7:5);
+    \draw[thick] (20*5 :5) arc (20*5 :20*8 :5);
+    \draw[thick] (20*11:5) arc (20*11:20*14:5);
+    \draw[thick] (20*17:5) arc (20*17:20*20:5);
+\end{tikzpicture}
+\mapsto 0.
+$$
+\caption{Relacja ,,four-term'' (4T)}
+\end{figure}
+
+Diagramy mogą mieć więcej cięciw z końcami tam, gdzie linia jest kropkowana, natomiast wszystkie końce cięciw na czarnych, pogrubionych łukach zostały zaznaczone explicite.
+
+Zastosowaliśmy tutaj mały skrót dla oszczędności miejsca: oczywiście nie umiemy jeszcze odejmować od siebie diagramów, dlatego powyższe relacje należy rozumieć tak, że na każdym diagramie liczymy symbol niezmiennika i porównujemy tak otrzymane liczby zespolone.
+
+\begin{definition}[układ ciężarów]
+    Funkcję określoną na zbiorze diagramów $n$ cięciw, która spełnia relacje 1T oraz 4T, nazywamy układem ciężarów.
+% DICTIONARY;weight system;układ ciężarów
+\end{definition}
+
+Okazuje się, że wszystkie zależności, jakie występują między niezmiennikami Wasiljewa, są konsekwencjami relacji 1T oraz 4T.
+Mówi o~tym głębokie twierdzenie Koncewicza:
+
+\begin{proposition}
+    Każdy układ ciężarów jest symbolem pewnego niezmiennika Wasiljewa. % rzędu co najwyżej $n$ - nie mieści się, przenosi samo $n$ do nowej linii.
+\end{proposition}
+
+\begin{proof}
+    Koncewicz w \cite{kontsevich93}. % chmutow12/chmutov11 theorem 3.4
+\end{proof}
+
+\begin{definition}[chiński znak]
+    Spójny graf złożony z pojedynczego zorientowanego okręgu oraz pewnej liczby niezorientowanych, kreskowanych linii, które mogą się spotykać w~jednym z dwóch typów wierzchołków:
+    \begin{itemize}
+        \item wewnętrznych wierzchołkach, gdzie spotykają się trzy kreskowane linie -- te są zorientowane (zgodnie lub przeciwnie do ruchu wskazówek zegara)
+        \item zewnętrznych wierzchołkach, gdzie kreskowane linie kończą się na okręgu.
+    \end{itemize}
+\end{definition}
+
+Diagramy cięciw modulo relacja 4T jest tym samym, co algebra chińskich znaków modulo relacja STU.
+W~tej drugiej spełnione są jeszcze relacje AS oraz IHX, nie mam siły tego rysować, ale wszystko można znaleźć w pracy Bar-Natana \cite{barnatan_95}.
+
+\begin{tobedone}
+    % DICTIONARY;actuality table;tablica rzeczywistości
+    \index{tablica rzeczywistości?}
+    Actuality tables.
+\end{tobedone}
+
 Stojmenow w \cite{stoimenow_01} pokazał, że niezmienniki Wasiljewa każdego rzędu można wyznaczyć w~skończonym czasie.
 Dokładniej:
 
@@ -379,3 +606,7 @@ Wynika stąd, że stanowić będzie dużo trudniejszy problem niż dowód hipote
 
 % DICTIONARY;link, string;splot, sznurkowy
 Chmutov, Duzhin wspominają w bardzo czytelnie napisanym artykule \cite{chmutov05}, że hipoteza \ref{con:vassilliev} jest prawdziwa dla splotów sznurkowych i warkoczy, jak dowiedziono w \cite{kohno87}, \cite{barnatandror95}.
+
+\index{niezmiennik!Wasiljewa|(}
+
+% koniec sekcji niezmienniki Wasiljewa

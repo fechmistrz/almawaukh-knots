@@ -322,7 +322,7 @@
 %%%%%%%%%% SKEIN START %%%%%%%%%%
 
 \newcommand{\skeinplus} {\begin{tikzpicture}[baseline=-0.65ex,scale=0.1]
-    \useasboundingbox (-5, -6) rectangle (5, 6);
+    \useasboundingbox (-7, -7) rectangle (7, 5);
     \begin{knot}[clip width=5, end tolerance=1pt]
         \strand[semithick, -latex] (-5, -5) to (5, 5);
         \strand[semithick,latex-] (-5, 5) to (5, -5);
@@ -330,8 +330,16 @@
     \end{knot}
 \end{tikzpicture}}
 
+\newcommand{\MediumSkeinPlus} {\begin{tikzpicture}[baseline=-0.65ex,scale=0.06]
+    \useasboundingbox (-7, -5) rectangle (7, 5);
+    \begin{knot}[clip width=5, end tolerance=1pt]
+        \strand[semithick, -Latex] (-5, -5) to (5, 5);
+        \strand[semithick,Latex-] (-5, 5) to (5, -5);
+    \end{knot}
+\end{tikzpicture}}
+
 \newcommand{\skeinminus} {\begin{tikzpicture}[baseline=-0.65ex,scale=0.1]
-    \useasboundingbox (-5, -6) rectangle (5, 6);
+    \useasboundingbox (-7, -7) rectangle (7, 5);
     \begin{knot}[clip width=5, end tolerance=1pt, flip crossing/.list={1}]
         \strand[semithick, -latex] (-5, -5) to (5, 5);
         \strand[semithick,latex-] (-5, 5) to (5, -5);
@@ -339,8 +347,16 @@
     \end{knot}
 \end{tikzpicture}}
 
+\newcommand{\MediumSkeinMinus} {\begin{tikzpicture}[baseline=-0.65ex,scale=0.06]
+    \useasboundingbox (-7, -5) rectangle (7, 5);
+    \begin{knot}[clip width=5, end tolerance=1pt, flip crossing/.list={1}]
+        \strand[semithick, -Latex] (-5, -5) to (5, 5);
+        \strand[semithick,Latex-] (-5, 5) to (5, -5);
+    \end{knot}
+\end{tikzpicture}}
+
 \newcommand{\skeinzero} {\begin{tikzpicture}[baseline=-0.65ex,scale=0.1]
-    \useasboundingbox (-5, -6) rectangle (5, 6);
+    \useasboundingbox (-7, -7) rectangle (7, 5);
     \begin{knot}[clip width=5, end tolerance=1pt, flip crossing/.list={1}]
         \strand[semithick, -latex] (-5, -5) to [out=45, in=-45] (-5, 5);
         \strand[semithick, -Latex] (5, -5) to [out=135, in=-135] (5, 5);
@@ -349,3 +365,19 @@
 \end{tikzpicture}}
 
 %%%%%%%%%% SKEIN END %%%%%%%%%%
+
+
+
+%%% VASSILIEV START %%%
+\newcommand{\SingularCrossing} {\begin{tikzpicture}[baseline=-0.65ex,scale=0.06]
+    \useasboundingbox (-7, -5) rectangle (7, 5);
+    \begin{knot}[clip width=5, end tolerance=1pt]
+        \strand[semithick] (-0.5, -0.5) to (-5, -5);
+        \strand[semithick,-Latex] (-0.5, 0.5) to (-5, 5);
+        \strand[semithick] (0.5, -0.5) to (5, -5);
+        \strand[semithick,-Latex] (0.5, 0.5) to (5, 5);
+        \draw[black,fill=black] (0,0) circle (1);
+    \end{knot}
+\end{tikzpicture}}
+      
+%%% VASSILIEV END
