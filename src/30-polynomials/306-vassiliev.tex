@@ -1,4 +1,4 @@
-\section{Niezmienniki Wasiljewa} % (fold)
+\section{Niezmienniki Wasiljewa}
 \index{niezmiennik!Wasiljewa|(}
 \label{sec:vassiliev}
 % DICTIONARY;invariant, finite type;niezmiennik, skończonego typu
@@ -10,7 +10,7 @@ Niezmienniki Wasiljewa najlepiej zrozumieć, jeśli osłabimy trochę definicję
 
 Uważam, że przyjemnym wprowadzeniem do niezmienników Wasiljewa jest artykuł \cite{chmutov12} Chmutowa.
 Za najlepsze uważa się pracę \cite{barnatan_95}: Bar-Natan, jej autor, pozostaje do dziś jedną z~najważniejszych osób dla rozwoju tego działu matematyki.
-Oprócz tego jest jeszcze pięknie zilustrowana książka \cite{duzhin12} trzech rosyjskich matematyków, będąca obszernym kompendium wiedzy o~węzłach wirtualnych oraz ciekawy podręcznik \cite{dye16}, który rozwija od podstaw teorię węzłów wirtualnych i~klasycznych równocześnie; wydaje się jednak, że nie jest do końca zgodny z~przedstawionymi tu definicjami, dlatego nie odnosimy się do niego dalej.
+Oprócz tego jest jeszcze pięknie zilustrowana książka \cite{duzhin12} trzech rosyjskich matematyków, będąca obszernym kompendium wiedzy o~węzłach singularnych. % oraz ciekawy podręcznik \cite{dye16}, który rozwija od podstaw teorię węzłów wirtualnych i~klasycznych równocześnie; węzły wirtualne to coś innego niż singularne, w równoważności dopuszcza się inne ruchy!
 Szkielet sekcji oparliśmy natomiast o piętnasty rozdział podręcznika Murasugiego, \cite{murasugi96}.
 
 % DICTIONARY;knot, singular;węzeł, singularny
@@ -20,7 +20,7 @@ Szkielet sekcji oparliśmy natomiast o piętnasty rozdział podręcznika Murasug
     Załóżmy dodatkowo, że
     \begin{itemize}
         \item włókna -- przeciwobrazy punktów -- funkcji $f$ są co najwyżej dwuelementowe
-        \item jeżeli dwa różne punkty mają ten sam obraz, to $K = f(S^1)$ przecina się tam pod kątem prostym.
+        \item jeżeli dwa różne punkty mają ten sam obraz, to węzeł $K = f(S^1)$ przecina się tam pod kątem prostym.
     \end{itemize}
     Obraz funkcji $f$ nazywamy węzłem singularnym.
 \end{definition}
@@ -154,7 +154,7 @@ Czas na garść przykładów.
 \end{example}
 
 \begin{proof}
-    Jak pokazuje Chmutow w \cite{chmutov12}, porównanie relacji kłębiastej dla wielomianu Conwaya z tą dla niezmienników Wasiljewa pokazuje, że wielomian Conwaya singularnego węzła o $m$ punktach podwójnych jest podzielny przez $z^m$, co pokazuje, że $c_{2k}$ jest niezmiennikiem rzędu co najwyżej $2k$.
+    Jak pokazuje Chmutow w \cite{chmutov12}, porównanie relacji kłębiastej dla wielomianu Conwaya z tą dla niezmienników Wasiljewa pokazuje, że wielomian Conwaya singularnego węzła o~$m$ punktach podwójnych jest podzielny przez $z^m$, co pokazuje, że $c_{2k}$ jest niezmiennikiem rzędu co najwyżej $2k$.
 
     Bar-Natan w 1991 pokazał, że jest niezmiennikiem rzędu dokładnie $2k$.
 \end{proof}
@@ -268,7 +268,7 @@ Niezmienniki rzędu zero tworzą przestrzeń liniową wymiaru 1 nad ciałem $\C$
 \end{proposition}
 
 \begin{proof}
-    Murasugi pokazuje to przy użyciu diagramów cięcin, które wprowadzimy później.
+    Murasugi pokazuje to przy użyciu diagramów cięciw, które wprowadzimy później.
     Patrz \cite[s. 315-320]{murasugi96}.
 \end{proof}
 
@@ -499,8 +499,12 @@ Okazuje się, że wartość niezmiennika Wasiljewa $v$ nie zależy wprost od teg
         \end{tikzpicture}$
         \subcaption{}
     \end{minipage}
-    \caption{Wszystkie pięć diagramów cięcin stopnia 3}
+    \caption{Wszystkie pięć diagramów cięciw stopnia 3}
 \end{figure}
+
+\begin{tobedone}
+    Jak zamienić węzeł w diagram cięciw?
+\end{tobedone}
 
 \begin{proposition}
     Niech $K_1, K_2$ będą dwoma singularnymi węzłami o~tym samym diagramie cięciw, zaś $v$~niezmiennikiem Wasiljewa.
@@ -516,12 +520,12 @@ Okazuje się, że wartość niezmiennika Wasiljewa $v$ nie zależy wprost od teg
 
 \begin{definition}[symbol niezmiennika]
     Niech $v$ będzie niezmiennikiem Wasiljewa.
-    Obcięcie $v$ do zbioru węzłów singularnych o~dokładnie $n$ wierzchołkach traktowane jako funkcja ze zbioru diagramów cięcin nazywamy symbolem tego niezmiennika.
+    Obcięcie $v$ do zbioru węzłów singularnych o~dokładnie $n$ wierzchołkach traktowane jako funkcja ze zbioru diagramów cięciw nazywamy symbolem tego niezmiennika.
 \end{definition}
 
 Jeśli $v_1, v_2$ są niezmiennikami Wasiljewa rzędu co najwyżej $n$ o~tych samych symbolach, to ich różnica jest niezmiennikiem rzędu co najwyżej $n - 1$.
 Oznacza to, że przestrzeń $\mathcal V_n/\mathcal V_{n-1}$ pokrywa się z przestrzenią wszystkich symboli niezmienników Wasiljewa rzędu co najwyżej $n$.
-Zbiór diagramów cięcin rzędu $n$ jest skończony, więc przestrzeń funkcji na tym zbiorze też jest skończona, a zatem przestrzenie $\mathcal V_n$ są skończonego wymiaru.
+Zbiór diagramów cięciw rzędu $n$ jest skończony, więc przestrzeń funkcji na tym zbiorze też jest skończona, a zatem przestrzenie $\mathcal V_n$ są skończonego wymiaru.
 
 Symbol nie jest byle jaką funkcją, spełnia dwie relacje:
 
@@ -607,9 +611,10 @@ Mówi o~tym głębokie twierdzenie Koncewicza:
 \begin{definition}[chiński znak]
     Spójny graf złożony z pojedynczego zorientowanego okręgu oraz pewnej liczby niezorientowanych, kreskowanych linii, które mogą się spotykać w~jednym z dwóch typów wierzchołków:
     \begin{itemize}
-        \item wewnętrznych wierzchołkach, gdzie spotykają się trzy kreskowane linie -- te są zorientowane (zgodnie lub przeciwnie do ruchu wskazówek zegara)
+        \item wewnętrznych wierzchołkach, gdzie spotykają się trzy kreskowane linie;
         \item zewnętrznych wierzchołkach, gdzie kreskowane linie kończą się na okręgu.
     \end{itemize}
+    Wierzchołki wewnętrzne są zorientowane, zgodnie lub przeciwnie do ruchu wskazówek zegara.
 \end{definition}
 
 Diagramy cięciw modulo relacja 4T jest tym samym, co algebra chińskich znaków modulo relacja STU.
@@ -658,11 +663,11 @@ Wygląda na to, że nikt nie odważył się dokonać tego dla innych węzłów (
     Uniwersalny niezmiennik Wasiljewa jest zupełny.
 \end{conjecture}
 
-Całka Koncewicza jest mocniejsza od każdego wielomianowego niezmiennika, jaki dotąd poznaliśmy, wliczając w to wielomiany Alexandera, Jonesa, HOMFLY oraz Kauffmana.
+Całka Koncewicza jest mocniejsza od każdego wielomianowego niezmiennika, jaki dotąd poznaliśmy.
 Wynika stąd, że stanowić będzie dużo trudniejszy problem niż dowód hipotezy \ref{con:jones} mówiącej, że wielomian Jonesa wykrywa niewęzły.
 
 % DICTIONARY;link, string;splot, sznurkowy
-Chmutov, Duzhin wspominają w bardzo czytelnie napisanym artykule \cite{chmutov05}, że hipoteza \ref{con:vassilliev} jest prawdziwa dla splotów sznurkowych i warkoczy, jak dowiedziono w \cite{kohno87}, \cite{barnatandror95}.
+Chmutow, Dużin wspominają w bardzo czytelnie napisanym artykule \cite{chmutov05}, że hipoteza \ref{con:vassilliev} jest prawdziwa dla splotów sznurkowych i warkoczy, jak dowiedziono w \cite{kohno87}, \cite{barnatandror95}.
 
 \index{niezmiennik!Wasiljewa|(}
 
