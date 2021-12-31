@@ -1,10 +1,11 @@
 \subsection{Mutanty i mutacje}
-\label{sec:mutant}
+\index{mutant|(}%
+\index{mutacja|see {mutant}}%
+\label{sec:mutant}%
 Na zakończenie wspomnimy o~mutacjach.
 
 \begin{definition}[mutacja]
     % \labelnotinuse{def:mutacja}
-    \index{mutacja}
     Półobrót supła względem osi poziomej, pionowej albo też prostopadłej do płaszczyzny, w~jakiej leży diagram, nazywamy mutacją.
     W razie potrzeby zmieniamy orientację supła na przeciwną.
 \end{definition}
@@ -15,15 +16,14 @@ rysunek z pracy ,,Tabulating and distinguishing mutants''
 
 \begin{definition}[mutant]
     \label{def:mutant}
-    \index{mutant}
     Niech $K$ będzie węzłem.
     Węzeł, który powstaje przez wykonanie ciągu mutacji na węźle $K$, nazywamy mutantem węzła $K$.
 \end{definition}
 
 Mutacja węzła o~co najwyżej dziesięciu skrzyżowaniach nie zmienia jego klasy abstrakcji.
 Najprostszą, a zarazem najsłynniejszą parą różnych od siebie mutantów stanowią węzeł Conwaya $11n_{34}$ oraz Kinoshity-Terasakiego $11n_{42}$.
-\index{węzeł!Conwaya}
-\index{węzeł!Kinoshity-Terasakiego}
+\index{węzeł!Conwaya}%
+\index{węzeł!Kinoshity-Terasakiego}%
 
 \begin{tobedone}
 rysunek
@@ -44,7 +44,7 @@ Mutanty nie dają się łatwo odróżniać niezmiennikami, niestety dowód tego 
 
 \begin{proposition}
     Mutacja węzła nie zmienia wielomianu Alexandera.
-    \index{wielomian!Alexandera}
+\index{wielomian!Alexandera}%
 \end{proposition}
 
 \begin{proof}
@@ -53,125 +53,15 @@ Mutanty nie dają się łatwo odróżniać niezmiennikami, niestety dowód tego 
 
 \begin{proposition}
     Mutacja węzła nie zmienia kablowego wielomianu Jonesa.
-    \index{wielomian!Jonesa}
+\index{wielomian!Jonesa}%
 \end{proposition}
 
 \begin{proof}
     \cite{menasco91}.
 \end{proof}
 
-\begin{proposition}
-\label{mutants_and_homfly}%
-\index{wielomian!HOMFLY}%
-    Mutacja węzła nie zmienia 2-kablowego wielomianu HOMFLY.
-\end{proposition}
-
-\begin{proof}
-    \cite{przytycki89}.
-\end{proof}
-
-\begin{proposition}
-    Mutacja węzła nie zmienia kablowego wielomianu Kauffmana.
-    \index{wielomian!kablowy}
-    \index{wielomian!Kauffmana}
-\end{proposition}
-
-\begin{proof}
-    \cite{lipson87}.
-\end{proof}
-
-% z tanaka09
-Wzór kablowy \cite[tw. 6.15]{lickorish97} pokazuje, że wielomian Alexandera nie odróżnia satelitów zmutowanych węzłów.
-Wynik rozszerzono do wielomianów HOMFLY oraz Kauffmana dla 2-satelitów zmutowanych węzłów \cite{lipson87}.
-Wielomian HOMFLY radzi sobie lepiej z 3-kablami (często odróżnia je, w tym parę węzłów Kinoshity-Terasakiego/Conwaya).
-\index{węzeł!Conwaya}
-\index{węzeł!Kinoshity-Terasakiego}
-Natomiast Morton, Traczyk \cite{traczyk88} pokazali, że wielomian Jonesa wcale nie odróżnia satelitów mutantów.
-
-\begin{proposition}
-    Mutacja węzła nie zmienia wielomianu BLM/Ho.
-    \index{wielomian!BLM/Ho}
-\end{proposition}
-
-\begin{proof}
-    \cite{tanaka09}, choć nie wiem gdzie dokładnie.
-\end{proof}
-
-\begin{proposition}
-    Mutacja węzła nie zmienia sygnatury Tristrama-Levine'a.
-    \index{sygnatura}
-    \index{sygnatura!Tristrama-Levine'a}
-\end{proposition}
-
-\begin{proof}
-    \cite{cooper99}.
-\end{proof}
-
-\begin{proposition}
-    \label{mutants_the_same_volume}
-    Mutacja węzła nie zmienia symplicjalnej objętości Gromowa.
-    \index{objętość!Gromowa}
-\end{proposition}
-
-\begin{proof}
-    \cite{ruberman87}.
-    % Ruberman [42] showed that mutants have equal volume in all hyperbolic pieces of the JSJ decomposition.
-\end{proof}
-
-\begin{proposition}
-    Mutacja węzła nie zmienia instanton homologii Floera.
-    \index{homologia!Floera}
-\end{proposition}
-
-\begin{proof}
-    \cite{ruberman99}.
-\end{proof}
-
-\begin{proposition}
-    Mutacja węzła nie zmienia niezmienników Wittena.
-    \index{niezmiennik!Wittena}
-\end{proposition}
-
-\begin{proof}
-    \cite{rong94}.
-\end{proof}
-
-\begin{proposition}
-    Mutacja węzła nie zmienia niezmienników Cassona.
-    \index{niezmiennik!Cassona}
-\end{proposition}
-
-\begin{proof}
-    \cite{kirk89}.
-\end{proof}
-
-Ohtsuki pyta w \cite[problem 12.15]{ohtsuki02}:
-
-\begin{conjecture}
-    Czy istnieją mutanty o różnych liczbach gordyjskich?
-\end{conjecture}
-
-Warto przytoczyć teraz obserwację 3.8.2 z \cite[s. 43]{kawauchi96}: jeśli sploty $L_1, L_2$ są mutantami, to podwójne przestrzenie nakryciowe nad $S^3$ rozgałęzione odpowiednio wzdłuż $L_1$ oraz $L_2$ są homeomorficzne z zachowaniem orientacji.
-\index{przestrzeń nakryciowa}
-Co więcej, macierze Seiferta mutantów są $S$-równoważne.
-\index{macierz!Seiferta}
-To tłumaczy czemu większość niezmienników nie radzi sobie z odróżnianiem mutantów.
-% Viro: Two-fold branched coverings of three-sphere
-
-Niedawno Stojmenow podjął się systematycznie szukania mutantów wśród węzłów o~mniej niż 19 skrzyżowaniach (praca \cite{stoimenow10} z~2010 roku).
-Początkowo pracował sam, badając pewne subtelne przykłady postanowił uwikłać w swój projekt Toshifumiego Tanakę, a później także Daniela Mateię.
-Praca \cite{stoimenow10} jest kontynuacją artykułu, który napisali wspólnymi siłami.
-
-I tak na stronie 531 można przeczytać, że ,,niezmienniki Wasiljewa co najwyżej 8. stopnia nie rozróżniają mutantów węzłów \cite{chmutov94}, ja tego nie widzę.
-\index{niezmiennik!Wasiljewa}
-Mniej więcej sześć lat później wynik poprawił J. Murakami (nie mylić z H. Murakamim!) do 10. stopnia w~niezindeksowanej pracy \cite{murakami99}.
-W międzyczasie Cromwell, Morton znaleźli niezmiennik stopnia 11., który odróżnia węzły Conwaya oraz Kinoshity-Terasakiego; patrz \cite{cromwell96}.
-% czy Murakami potwierdził wynik Cromwella, Mortona?
-
-Mutant węzła złożonego także jest złożony, co więcej istnieje bijekcja między czynnikami w ich rozkładach na węzły pierwsze \cite{ruberman87}.
-Dzięki temu możemy bez straty ogólności założyć, że badamy tylko węzły pierwsze, niestety wciąż nie jest znana ogólna procedura pozwalająca wyliczyć wszystkie mutanty danego węzła.
-
 Zbiór problemów niskowymiarowej topologii opublikowany przez Kirby'iego \cite{kirby78} zawiera następujące pytanie:
+
 \begin{conjecture}[problem 1.91]
     Niech $K$ będzie prostym\footnote{simple} węzłem bez orientacji.
     Czy istnieją węzły niebędące mutantami $K$, których nie można odróżnić od $K$ wielomianem Jonesa oraz wszystkimi jego satelitami?
@@ -187,19 +77,133 @@ Choć wzór ten zastosowany do konkretnej pary węzłów sprawia zazwyczaj trudn
 
 \begin{proof}
     \cite{tanaka09}.
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    Mauris condimentum leo sit amet venenatis elementum.
-    Sed congue ligula ut lorem dictum eleifend.
-    Maecenas sem elit, sodales ac massa sed, semper dapibus sem.
-    Maecenas vel porta mi.
-    Donec venenatis tellus nec tellus rhoncus malesuada.
-    Nam gravida eu nisi pretium eleifend.
-    Nulla faucibus tincidunt nunc in semper.
-    Cras ut blandit magna, eget blandit turpis.
-    Vivamus aliquam quam id velit iaculis mattis.
-    Ut a posuere orci.
-    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vestibulum in ligula quis ex efficitur cursus.
 \end{proof}
+
+\begin{proposition}
+\label{mutants_and_homfly}%
+\index{wielomian!HOMFLY}%
+    Mutacja węzła nie zmienia 2-kablowego wielomianu HOMFLY.
+\end{proposition}
+
+\begin{proof}
+    \cite{przytycki89}.
+\end{proof}
+
+\begin{proposition}
+    Mutacja węzła nie zmienia kablowego wielomianu Kauffmana.
+\index{wielomian!kablowy}%
+\index{wielomian!Kauffmana}%
+\end{proposition}
+
+\begin{proof}
+    \cite{lipson87}.
+\end{proof}
+
+% z tanaka09
+Wzór kablowy \cite[tw. 6.15]{lickorish97} pokazuje, że wielomian Alexandera nie odróżnia satelitów zmutowanych węzłów.
+Wynik rozszerzono do wielomianów HOMFLY oraz Kauffmana dla 2-satelitów zmutowanych węzłów \cite{lipson87}.
+Wielomian HOMFLY radzi sobie lepiej z 3-kablami (często odróżnia je, w tym parę węzłów Kinoshity-Terasakiego/Conwaya).
+\index{węzeł!Conwaya}%
+\index{węzeł!Kinoshity-Terasakiego}%
+Natomiast Morton, Traczyk \cite{traczyk88} pokazali, że wielomian Jonesa wcale nie odróżnia satelitów mutantów.
+
+\begin{proposition}
+    Mutacja węzła nie zmienia wielomianu BLM/Ho.
+\index{wielomian!BLM/Ho}%
+\end{proposition}
+
+\begin{proof}
+    \cite{tanaka09}, choć nie wiem gdzie dokładnie.
+\end{proof}
+
+\begin{proposition}
+    Mutacja węzła nie zmienia sygnatury Tristrama-Levine'a.
+\index{sygnatura!Tristrama-Levine'a}%
+\end{proposition}
+
+\begin{proof}
+    \cite{cooper99}.
+\end{proof}
+
+\begin{proposition}
+    \label{mutants_the_same_volume}
+    Mutacja węzła nie zmienia symplicjalnej objętości Gromowa.
+\index{objętość!symplicjalna Gromowa}%
+\end{proposition}
+
+\begin{proof}
+    \cite{ruberman87}.
+    % Ruberman [42] showed that mutants have equal volume in all hyperbolic pieces of the JSJ decomposition.
+\end{proof}
+
+\begin{proposition}
+    Mutacja węzła nie zmienia instanton homologii Floera.
+\index{homologia!Floera}%
+\end{proposition}
+
+\begin{proof}
+    \cite{ruberman99}.
+\end{proof}
+
+\begin{proposition}
+    Mutacja węzła nie zmienia niezmienników Wittena.
+\index{niezmiennik!Wittena}%
+\end{proposition}
+
+\begin{proof}
+    \cite{rong94}.
+\end{proof}
+
+\begin{proposition}
+    Mutacja węzła nie zmienia niezmienników Cassona.
+\index{niezmiennik!Cassona}%
+\end{proposition}
+
+\begin{proof}
+    \cite{kirk89}.
+\end{proof}
+
+\begin{proposition}
+    Niech $m, n$ będą nieujemnymi liczbami całkowitymi.
+    Wtedy istnieje węzeł $K$ o genusie plastrowym równym $m$, którego pewien mutant ma genus plastrowy równy $n$.
+\index{genus!plastrowy}
+\end{proposition}
+
+Stanowi to uogólnienie obserwacji Livingstona \cite{livingston83}, że istnieją mutanty o~różnym genusie plastrowym.
+
+\begin{proof}
+    Kim, Livingston w \cite{kim05}.
+\end{proof}
+
+\begin{conjecture}
+    Mutacja nie zmienia liczby gordyjskiej.
+\end{conjecture}
+
+Jak czytamy w \cite[problem 1.69]{kirby78}, przypuszczenie to jest bardzo trudne do udowodnienia: wynika z niego inna stara hipoteza teorii węzłów, że liczba gordyjska splotów jest addytywna.
+\index{hipoteza!o indeksie skrzyżowaniowym}%
+Przytoczymy tylko dwa częściowe wyniki.
+Najpierw Rolfsen zauważył, że jedynym mutantem niewęzła jest sam niewęzeł \cite{rolfsen93}.
+Dekadę później Gordon, Luecke pokazali, iż klasa węzłów $1$-gordyjskich jest zamknięta na przeprowadzanie mutacji \cite{gordon06}.
+(Ohtsuki powtarza hipotezę w \cite[problem 12.15]{ohtsuki02}.)
+
+Warto przytoczyć teraz obserwację 3.8.2 z \cite[s. 43]{kawauchi96}: jeśli sploty $L_1, L_2$ są mutantami, to podwójne przestrzenie nakryciowe nad $S^3$ rozgałęzione odpowiednio wzdłuż $L_1$ oraz $L_2$ są homeomorficzne z zachowaniem orientacji.
+Co więcej, macierze Seiferta mutantów są $S$-równoważne.
+\index{macierz!Seiferta}%
+To tłumaczy czemu większość niezmienników nie radzi sobie z odróżnianiem mutantów.
+% Viro: Two-fold branched coverings of three-sphere
+
+Niedawno Stojmenow podjął się systematycznie szukania mutantów wśród węzłów o~mniej niż 19 skrzyżowaniach (praca \cite{stoimenow10} z~2010 roku).
+Początkowo pracował sam, badając pewne subtelne przykłady postanowił uwikłać w swój projekt Toshifumiego Tanakę, a później także Daniela Mateię.
+Praca \cite{stoimenow10} jest kontynuacją artykułu, który napisali wspólnymi siłami.
+
+I tak na stronie 531 można przeczytać, że ,,niezmienniki Wasiljewa co najwyżej 8. stopnia nie rozróżniają mutantów węzłów \cite{chmutov94}'', ja tego nie widzę.
+\index{niezmiennik!Wasiljewa}%
+Mniej więcej sześć lat później wynik poprawił J. Murakami (nie mylić z H. Murakamim!) do 10. stopnia w~niezindeksowanej pracy \cite{murakami99}.
+W międzyczasie Cromwell, Morton znaleźli niezmiennik stopnia 11., który odróżnia węzły Conwaya oraz Kinoshity-Terasakiego; patrz \cite{cromwell96}.
+% czy Murakami potwierdził wynik Cromwella, Mortona?
+
+Mutant węzła złożonego także jest złożony, co więcej istnieje bijekcja między czynnikami w ich rozkładach na węzły pierwsze \cite{ruberman87}.
+Dzięki temu możemy bez straty ogólności założyć, że badamy tylko węzły pierwsze, niestety wciąż nie jest znana ogólna procedura pozwalająca wyliczyć wszystkie mutanty danego węzła.
 
 Zaraz po rewolucji, jaką w latach 80. wywołała relacja kłębiasta, Ewing napisał z~Millettem komputerowy program w~języku C, który wyjątkowo szybko znajdował wielomiany HOMFLY oraz Kauffmana zadanego węzła.
 Nawet dziś program ten jest w stanie uporać się z węzłami, z którymi nie radzą sobie inne narzędzia.
@@ -241,23 +245,4 @@ Reszta wyłożonego materiału nie pochodzi już z pracy \cite{stoimenow10}.
     Wtedy każdy mutant $D$ też jest alternujący.
 \end{proposition}
 
-\begin{conjecture}
-    Mutacja nie zmienia liczby gordyjskiej.
-\end{conjecture}
-
-Jak czytamy w \cite[problem 1.69]{kirby78}, przypuszczenie to jest bardzo trudne do udowodnienia: wynika z niego inna stara hipoteza teorii węzłów, że liczba gordyjska splotów jest addytywna.
-Przytoczymy tylko dwa częściowe wyniki.
-Najpierw Rolfsen zauważył, że jedynym mutantem niewęzła jest sam niewęzeł \cite{rolfsen93}.
-Dekadę później Gordon, Luecke pokazali, iż klasa węzłów $1$-gordyjskich jest zamknięta na przeprowadzanie mutacji \cite{gordon06}.
-
-\begin{proposition}
-    Niech $m, n$ będą nieujemnymi liczbami całkowitymi.
-    Wtedy istnieje węzeł $K$ o genusie plastrowym równym $m$, którego pewien mutant ma genus plastrowy równy $n$.
-\end{proposition}
-
-Stanowi to uogólnienie obserwacji Livingstona \cite{livingston83}, że istnieją mutanty o~różnym genusie plastrowym.
-
-\begin{proof}
-    Kim, Livingston w \cite{kim05}.
-\end{proof}
-
+\index{mutant|)}
