@@ -238,15 +238,14 @@ Jeśli $q < 0$, wszystkie skrzyżowania odwracamy:
 Wynik był znany już w latach 90., na przykład Birman w \cite{birman93} pokazała, że liczba gordyjska nie jest niezmiennikiem Wasiljewa.
 
 \begin{proof}
-    Żaden z tych niezmienników nie znika na singularnym węźle $K[n+1, n]$.
+    Dowód dla sygnatury jest w~podręczniku Murasugiego \cite[s. 312]{murasugi96}.
+    Natomiast żaden z~pozostałych niezmienników nie znika na singularnym węźle $K[n+1, n]$.
 \end{proof}
 
 Udowodnimy kilka najprostszych własności niezmienników Wasiljewa.
 
-% Niezmiennik Wasiljewa węzła z~pętelką to zero.
-
 \begin{proposition}
-    Każdy niezmiennik Wasiljewa rzędu zero jest funkcją stałą.
+    Każdy niezmiennik Wasiljewa rzędu 0 jest funkcją stałą.
 \end{proposition}
 
 \begin{proof}
@@ -257,9 +256,21 @@ Udowodnimy kilka najprostszych własności niezmienników Wasiljewa.
     Wynika stąd, że $v(K) = v(\LittleUnknot)$ dla każdego singularnego węzła $K$, co należało udowodnić 
 \end{proof}
 
+Każda zespolona krotność niezmiennika Wasiljewa znowu jest takim niezmiennikiem.
+Niezmienniki rzędu zero tworzą przestrzeń liniową wymiaru 1 nad ciałem $\C$, zatem możemy krótko (choć nie dokładnie) powiedzieć, że jest jeden niezmiennik rzędu zero.
+
 \begin{proposition}
-    Nie istnieje niezmiennik Wasiljewa rzędu jeden.
+    Nie istnieje niezmiennik Wasiljewa rzędu 1.
 \end{proposition}
+
+\begin{proposition}
+    Istnieje dokładnie jeden niezmiennik Wasiljewa rzędów 2 i 3.
+\end{proposition}
+
+\begin{proof}
+    Murasugi pokazuje to przy użyciu diagramów cięcin, które wprowadzimy później.
+    Patrz \cite[s. 315-320]{murasugi96}.
+\end{proof}
 
 % The Casson knot invariant (to be distinguished from the better-known Casson invariant) is defined to be the Vassiliev knot invariant v_2, which turns out to be \alexander_k''(1) / 2 , where \alexander_k is the Alexander polynomial of k.
 % \index{niezmiennik!Cassona}
@@ -275,27 +286,49 @@ Z definicji \ref{def:vassiliev_order} wynika, że $\mathcal V_n$ jest przestrzen
 Oznaczmy wymiar przestrzeni $\mathcal V_n / \mathcal V_{n-1}$ przez $d_n$.
 Dla wyższych rzędów nie dość, że nie znamy dokładnych wartości ciągu $d_n$, to dolne i górne ograniczenia asymptotyczne są od siebie bardzo różne: górne jest niemalże silnią, dolne natomiast jest podwykładnicze.
 
+% https://people.math.osu.edu/chmutov.1/talks/2015/talk-KinW-XL-2015.pdf ? strona 22
+% Chmutov, Duzhin. Mostovoy - Introduction to Vassiliev Knot Invariants, strona 432
 \begin{proposition}
     $d_n < (2n-1)!!$.
 \end{proposition}
 
-\begin{proposition}[Chmutov i Duzhin, 1993]
+\begin{proof}
+    \cite{duzhin94}.
+\end{proof}
+
+\begin{proposition}
     $d_n < (n-1)!$.
 \end{proposition}
 
-\begin{proposition}[Ng, 1995]
+\begin{proof}
+    \cite{chmutovduzhin94}.
+\end{proof}
+
+\begin{proposition}
     $d_n < \frac 12 (n-2)!$.
 \end{proposition}
 
-\begin{proposition}[Stojmenow, 1996]
+\begin{proof}
+    \cite{ng98}.
+\end{proof}
+
+\begin{proposition}
     Ciąg $d_n$ rośnie wolniej niż $n! \cdot (11/10)^n$.
 \end{proposition}
 
-\begin{proposition}[Bollobas i  Riordan, 2000]
+\begin{proof}
+    \cite{stoimenow98}.
+\end{proof}
+
+\begin{proposition}
     $d_n \lesssim n! / (2 \log 2 + O(1))^n$.
 \end{proposition}
 
-\begin{proposition}[Zagier, 2001]
+\begin{proof}
+    \cite{bollobas00}.
+\end{proof}
+
+\begin{proposition}
     Niech $a < \frac 1 6 \pi^2$ będzie stałą.
     Wtedy
     \begin{equation}
@@ -309,31 +342,57 @@ Dla wyższych rzędów nie dość, że nie znamy dokładnych wartości ciągu $d
 
 Zanim przejdziemy do ograniczeń z dołu, zdefinujmy jeszcze jedną przestrzeń, $\mathcal P_n \subseteq \mathcal V_n$.
 Składa się z~tych niezmienników Wasiljewa, które są jednocześnie morfizmami, to znaczy spełniają równość $v(K_1 \shrap K_2) = v(K_1) + v(K_2)$.
-Każdy niezmiennik jest wielomianową kombinacją niezmienników pierwotnych.
+Każdy niezmiennik jest wielomianową kombinacją niezmienników pierwotnych (elementów $\mathcal P_n$).
 
-\begin{proposition}[Chmutov, Duzhin i Lando, 1994]
+% https://people.math.osu.edu/chmutov.1/talks/2015/talk-KinW-XL-2015.pdf ? strona 32
+% Chmutov, Duzhin. Mostovoy - Introduction to Vassiliev Knot Invariants, strona 434
+\begin{proposition}
     $\dim \mathcal P_n \ge 1$.
 \end{proposition}
 
-\begin{proposition}[Melvin i Morton, Chmutov i Varchenko, 1995]
+\begin{proof}
+    \cite{duzhin94}.
+\end{proof}
+
+\begin{proposition}
     $\dim \mathcal P_n \ge [n/2]$.
 \end{proposition}
 
-\begin{proposition}[Duzhin, 1996]
+\begin{proof}
+    \cite{melvin95}, \cite{varchenko97}.
+\end{proof}
+
+\begin{proposition}
     $\dim \mathcal P_n \gtrsim \frac{1}{96} n^2$.
 \end{proposition}
 
-\begin{proposition}[Chmutov i Duzhin, 1997]
+\begin{proof}
+    \cite{duzhin96}.
+\end{proof}
+
+\begin{proposition}
     $\dim \mathcal P_n \gtrsim n^{\log_b n}$ dla $b > 4$.
 \end{proposition}
 
-\begin{proposition}[Koncewicz, 1997]
+\begin{proof}
+    \cite{duzhin99}.
+\end{proof}
+
+\begin{proposition}
     $\dim \mathcal P_n \gtrsim \exp (\pi \sqrt{n/3})$.
 \end{proposition}
 
-\begin{proposition}[Dasbach, 2000]
+\begin{proof}
+    Koncewicz w faksie do Chmutowa z 1997 roku. :)
+\end{proof}
+
+\begin{proposition}
     $\dim \mathcal P_n \gtrsim \exp (c \sqrt{n})$ dla każdej stałej $c < \pi \sqrt{2/3}$.
 \end{proposition}
+
+\begin{proof}
+    \cite{dasbach00}.
+\end{proof}
 
 Ograniczenie Dasbacha pozostaje najlepsze (stan na 2011 rok).
 
@@ -349,6 +408,7 @@ Ograniczenie Dasbacha pozostaje najlepsze (stan na 2011 rok).
     Dasbach w \cite{dasbach00}.
 \end{proof}
 
+% Chmutov, Duzhin. Mostovoy - Introduction to Vassiliev Knot Invariants, strona 432
 Dokładny wymiar przestrzeni $\mathcal V_n$ jest znany tylko dla $n \le 12$.
 Poniższa tabela ma dość ciekawą historię.
 Wasiljew znalazł ręcznie wartości w kolumnach dla $n \le 4$ w 1990 roku.
