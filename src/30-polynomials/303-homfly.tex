@@ -174,8 +174,8 @@ Co bardziej dramatyczne, Kanenobu wskazał przy użyciu elementarnych metod (!) 
 \begin{comment}
     \[
         \begin{tikzpicture}[baseline=-0.65ex,scale=0.08]
-        \begin{knot}[clip width=3, flip crossing/.list={1,3,6,7}]
-        \strand [semithick] (0, 25)
+        \begin{knot}[clip width=5, flip crossing/.list={1,3,6,7}]
+        \strand [thick] (0, 25)
             [in=left, out=right] to (20, 25)
             [in=up, out=right] to (25, 5)
             [in=down, out=down] to (15, 5)
@@ -184,27 +184,27 @@ Co bardziej dramatyczne, Kanenobu wskazał przy użyciu elementarnych metod (!) 
             [in=up, out=down] to (5, 5)
             [in=left, out=down] to (15, -10)
         ;
-        \strand [semithick] (15, -10)
+        \strand [thick] (15, -10)
             [in=down, out=right] to (20, 10)
             [in=up, out=up] to (30, 10)
             [in=right, out=down] to (20, -25)
             [in=down, out=left] to (5, -20)
             [in=down, out=up] to (5, -10)
         ;
-        \strand [semithick] (5, -10)
+        \strand [thick] (5, -10)
             [in=down, out=up] to (15, 0)
             [in=right, out=up] to (0, 5)
             [in=up, out=left] to (-15, 0)
             [in=up, out=down] to (-5, -10)
             ;
-        \strand [semithick] (-15, -10)
+        \strand [thick] (-15, -10)
             [in=down, out=left] to (-20, 10)
             [in=up, out=up] to (-30, 10)
             [in=left, out=down] to (-20, -25)
             [in=down, out=right] to (-5, -20)
             [in=down, out=up] to (-5, -10)
         ;
-        \strand [semithick] (0, 25)
+        \strand [thick] (0, 25)
             [in=right, out=left] to (-20, 25)
             [in=up, out=left] to (-25, 5)
             [in=down, out=down] to (-15, 5)
@@ -213,8 +213,8 @@ Co bardziej dramatyczne, Kanenobu wskazał przy użyciu elementarnych metod (!) 
             [in=up, out=down] to (-5, 5)
             [in=right, out=down] to (-15, -10)
         ;
-        \draw[fill=blue!10!white] (-5, 10) rectangle (5, 15);
-        \draw[fill=blue!10!white] (-5, -17.5) rectangle (5, -12.5);
+        \draw[fill=blue!10!white,thick] (-5, 10) rectangle (5, 15);
+        \draw[fill=blue!10!white,thick] (-5, -17.5) rectangle (5, -12.5);
         \node at (0, 12.5) {$p$};
         \node at (0, -15) {$q$};
         \end{knot}
