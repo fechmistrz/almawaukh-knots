@@ -1,0 +1,60 @@
+\subsection{Węzły okresowe}
+\index{węzeł!okresowy|(}%
+Można wyróżnić jeszcze jeden rodzaj symetrii.
+
+\begin{definition}
+\label{def:period}%
+    Węzeł $K$ nazywamy $n$-okresowym, jeśli istnieje obrót $f \colon \R^3 \to \R^3$ o~kąt $2\pi/n$ wokół pewnej prostej $l$, rozłącznej z~węzłem, taki że $f(K) = K$.
+\end{definition}
+
+Zamiast obrotów można rozpatrywać dowolne odwzorowania okresowe $f \colon S^3 \to S^3$, których zbiór punktów stałych jest rozłączny z węzłem $K$, homeomorficzny z $S^1$ oraz które trzymają węzeł $K$ w miejscu, ale dostaje się wtedy dokładnie taką samą klasę węzłów.
+\index{hipoteza!Smitha}
+Wynika to z hipotezy Smitha, otrzymanej z połączenia głębokich teorii dotyczących geometrii i topologii 3-rozmaitości.
+% Kawauchi, ćwiczenie 10.1.10
+% Morgan-Bass 1984
+
+\begin{proposition}
+    Zbiór wszystkich okresów jest niezmiennikiem węzłów.
+\end{proposition}
+
+Nieodwracalny węzeł $8_{17}$ nie posiada żadnych okresów.
+% ćwiczenie 10.1.5 w Kawauchi
+Węzeł $5_1$ 5-okresowy, co widać na standardowym diagramie, oraz 2-okresowy, tę drugą symetrię można dostrzec na diagramie realizującym indeks mostowy.
+Trójlistnik ma dokładnie dwa okresy, $2$ i~$3$.
+Ogólniej, jak głosi Kawauchi \cite[ćwiczenie 10.1.9]{kawauchi96}:
+
+\begin{proposition}
+    Jedynymi okresami węzła $(p, q)$-torusowego są dzielniki liczb $p$ oraz $q$.
+\end{proposition}
+
+Z~każdym węzłem okresowym związany jest inny, prostszy węzeł.
+Niech $f$ będzie obrotem z definicji \ref{def:period}, zaś $p \colon \R^3 \to \R^3/f \simeq \R^3$ rzutem na przestrzeń ilorazową.
+\index{węzeł!ilorazowy}%
+Wtedy $p(K)$ nazywamy \emph{węzłem ilorazowym}, zaś $K$ to jego $n$-krotne nakrycie.
+
+Murasugi podał dwa warunki, które musi spełniać węzeł o~okresie $n = p^r$, gdzie $r$ jest liczbą pierwszą.
+Do ich zrozumienia potrzebujemy prostej definicji.
+Ustalmy półprostą, która nie jest styczna do węzła $K$, po czym zorientujmy ją oraz węzeł.
+Indeksem zaczepienia $\lambda$ węzła $p(K)$ jest różnica między liczbą skrzyżowań dodatnich oraz ujemnych wzdłuż półprostej (bez znaku).
+
+\begin{proposition}[warunek Murasugiego]
+\index{warunek Murasugiego}%
+\label{prp:murasugi_periodic}%
+    Niech $K$ będzie węzłem o~okresie $n = p^r$, gdzie $p$ jest liczbą pierwszą.
+    Niech $J$ będzie jego węzłem ilorazowym, z~indeksem zaczepienia $\lambda$.
+    Wtedy wielomian $\alexander_J$ jest dzielnikiem wielomianu $\alexander_K$ oraz istnieje pewna całkowita liczba $k$, taka że
+    \begin{equation}
+        \alexander_K(t) \equiv \pm t^k \alexander_J(n)^n \left(1 + t + t^2 + \ldots + t^{\lambda - 1}\right)^{n-1} \mod p.
+    \end{equation}
+\end{proposition}
+
+\begin{proof}
+    Mozolne operacje na macierzach, których wyznacznikiem jest wielomian Alexandera, patrz \cite{murasugi71}.
+    Kawauchi przedstawia inny dowód: najpierw dowodzi tego dla węzła torusowego $T_{n, d}$, którego węzłem ilorazowym jest niewęzeł.
+    W ogólnym przypadku, korzysta z relacji kłębiastej dla wielomianu Conwaya.
+    Szczegóły oraz odsyłacze do dalszych prac znaleźć można w jego przeglądowej publikacji \cite[s. 122-124]{kawauchi96}.
+\end{proof}
+
+\index{węzeł!okresowy|(}%
+
+% koniec podsekcji Węzły okresowe

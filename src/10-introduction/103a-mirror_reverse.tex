@@ -1,7 +1,7 @@
-\subsection{Lustro i~rewers} % (fold)
+\subsection{Lustro i~rewers. Węzły skrętne i zwierciadlane}
 \begin{definition}[lustro]
 \index{lustro}%
-\index{węzeł!lustrzany}%
+\index{węzeł!lustrzany}% TODO: to się może mylić ze zwieciadlanym
     Niech $L$ będzie zorientowanym splotem.
     Splot $mL$ powstały przez odbicie splotu $L$ względem dowolnej płaszczyzny nazywamy lustrem.
 \end{definition}
@@ -44,20 +44,24 @@ Wyróżniamy pięć typów symetrii węzłów:
     Węzły $K$, $rK$, $mK$ są parami nierównoważne. % chiral 9_32
 \end{definition}
 
+% DICTIONARY;reversible;odwracalny
 \begin{definition}[odwracalny]
     \index{węzeł!odwracalny}%
     Węzły $K \cong rK$ są równoważne. % reversible 3_1
 \end{definition}
 
+% DICTIONARY;negative amphicheiral;zwierciadlany ujemnie
 \begin{definition}[zwierciadlany ujemnie]
     \index{węzeł!zwierciadlany}%
     Węzły $K \cong mrK$ są równoważne. % negative amphicheiral 8_17
 \end{definition}
 
+% DICTIONARY;positive amphicheiral;zwierciadlany dodatnio
 \begin{definition}[zwierciadlany dodatnio]
     Węzły $K \cong mK$ są równoważne. % positive amphicheiral 12a_427
 \end{definition}
 
+% DICTIONARY;fully amphicheiral;całkowicie zwierciadlany
 \begin{definition}[całkowicie zwierciadlany]
     Węzły $K, rK, mK$ są parami równoważne. % fully amphicheiral 4_1
 \end{definition}
@@ -106,12 +110,10 @@ Hale Trotter odkrył rok później nieskończoną rodzinę nieodwracalnych precl
 
 To najprostszy typ symetrii, wystarczy jawnie wskazać przekształcenie między diagramem węzła, jego lustra oraz odwrotności.
 
-Tait odnosił wrażenie, że zwierciadlane węzły mają parzysty indeks skrzyżowań,
-ale Hoste (Thistlethwaite?) znalazł w~1998 kontrprzykład o~piętnastu skrzyżowaniach.
-Jest on jedynym znanym nam dzisiaj.
-Jego gipoteza jest prawdziwa dla węzłów pierwszych, alternujących.
+Tait odnosił wrażenie, że zwierciadlane węzły mają parzysty indeks skrzyżowań, ale Hoste, Thistlethwaite znaleźli w~1998 kontrprzykład o~piętnastu skrzyżowaniach, $15_{700}$. % wg https://mathworld.wolfram.com/AmphichiralKnot.html
+(Czwarta) hipoteza Taita jest prawdziwa dla węzłów pierwszych, alternujących.
 
-\begin{proposition}[10.4.4 w \cite{kawauchi96}]
+\begin{proposition}[10.4.4 w \cite{kawauchi96}, \ref{cor:joines_of_amphicheiral} u nas]
     Niech $K$ będzie węzłem zwierciadlanym.
     Wtedy
     \begin{align}
@@ -121,8 +123,6 @@ Jego gipoteza jest prawdziwa dla węzłów pierwszych, alternujących.
     \end{align}
     gdzie $\jones, P, F$ oznacza kolejno wielomian Jonesa, HOMFLY oraz Kauffmana.
     Równość $\conway(z) = \conway(-z)$ zachodzi dla wszystkich węzłów, zwierciadlanych lub nie.
-
-    Patrz fakt \ref{cor:joines_of_amphicheiral}.
 \end{proposition}
 
 Poniższa tabela oparta jest (kolejno) o~ciągi
@@ -148,69 +148,32 @@ z bazy danych ``The On-Line Encyclopedia of Integer Sequences'' (OEIS).
     \caption{Liczba węzłów o~poszczególnych typach symetrii}
 \end{table}
 
-\begin{tobedone}[Kawauchi, definicja 10.3.2]
-    Węzeł $K \subseteq S^3$ jest silnie odwracalny, jeśli istnieje inwolucja pary $(S^3, K)$ która zachowuje orientację sfery, ale odwraca orientację węzła.
-\end{tobedone}
-
-Węzeł silnie odwracalny jest odwracalny, ale nie vice versa (Hartley 1980, Whitten 1981).
-Chyba, że ograniczymy się do węzłów hiperbolicznych (Kawauchi proposition 10.3.3, cf. 3.2.11).
-Bycie silnie odwracalnym nie narzuca żadnych ograniczeń na wielomian Alexandera (odniesienie do $u = 1$?), patrz Sakai 1983.
-
-\subsection{Węzły okresowe}
-Można wyróżnić jeszcze jeden rodzaj symetrii.
-
-\begin{definition}
-    \label{def:period}
-    \index{węzeł!okresowy}
-    Węzeł $K$ nazywamy $n$-okresowym, jeśli istnieje obrót $f \colon \R^3 \to \R^3$ o~kąt $2\pi/n$ wokół pewnej prostej $l$, rozłącznej z~węzłem, taki że $f(K) = K$.
+\begin{definition}[10.3.2 w \cite{kawauchi96}]
+    Niech $K \subseteq S^3$ będzie węzłem.
+    Jeśli istnieje inwolucja pary $(S^3, K)$, która zachowuje orientację sfery, ale odwraca orientację węzła, to węzeł $K$ nazywamy silnie odwracalnym.
 \end{definition}
 
-Zamiast obrotów można rozpatrywać dowolne odwzorowania okresowe $f \colon S^3 \to S^3$, których zbiór punktów stałych jest rozłączny z węzłem $K$, homeomorficzny z $S^1$ oraz które trzymają węzeł $K$ w miejscu, ale dostaje się wtedy dokładnie taką samą klasę węzłów.
-\index{hipoteza!Smitha}
-Wynika to z hipotezy Smitha, otrzymanej z połączenia głębokich teorii dotyczących geometrii i topologii 3-rozmaitości.
-% Kawauchi, ćwiczenie 10.1.10
-% Morgan-Bass 1984
-
 \begin{proposition}
-    Zbiór wszystkich okresów jest niezmiennikiem węzłów.
+    Jeśli węzeł jest silnie odwracalny, to jest też odwracalny.
+    Implikacja odwrotna nie zachodzi.
 \end{proposition}
 
-Nieodwracalny węzeł $8_{17}$ nie posiada żadnych okresów.
-% ćwiczenie 10.1.5 w Kawauchi
-Węzeł $5_1$ 5-okresowy, co widać na standardowym diagramie, oraz 2-okresowy, tę drugą symetrię można dostrzec na diagramie realizującym indeks mostowy.
-Trójlistnik ma dokładnie dwa okresy, $2$ i~$3$.
-Ogólniej, jak głosi Kawauchi \cite[ćwiczenie 10.1.9]{kawauchi96}:
+Hipotezę, że implikacja odwrotna jednak zachodzi, postawił Montesinos \cite[problem 1.6]{kirby78}, on też zdefiniował klasę silnie odwracalnych węzłów \cite{montesinos75}.
+
+\begin{proof}
+    Pierwsza część jest oczywista.
+    Hartley \cite{hartley80} oraz Whitten \cite{whitten81} niezależnie od siebie zaproponowali kontrprzykłady do implikacji odwrotnej.
+\end{proof}
+
+Ale hiperboliczny węzeł odwracalny jest silnie odwracalny.
+% Kawauchi bez dowodu.
 
 \begin{proposition}
-    Jedynymi okresami węzła $(p, q)$-torusowego są dzielniki liczb $p$ oraz $q$.
-\end{proposition}
-
-Z~każdym węzłem okresowym związany jest inny, prostszy węzeł.
-Niech $f$ będzie obrotem z definicji \ref{def:period}, zaś $p \colon \R^3 \to \R^3/f \simeq \R^3$ rzutem na przestrzeń ilorazową.
-\index{węzeł!ilorazowy}
-Wtedy $p(K)$ nazywamy \emph{węzłem ilorazowym}, zaś $K$ to jego $n$-krotne nakrycie.
-
-Murasugi podał dwa warunki, które musi spełniać węzeł o~okresie $n = p^r$, gdzie $r$ jest liczbą pierwszą.
-Do ich zrozumienia potrzebujemy prostej definicji.
-Ustalmy półprostą, która nie jest styczna do węzła $K$, po czym zorientujmy ją oraz węzeł.
-Indeksem zaczepienia $\lambda$ węzła $p(K)$ jest różnica między liczbą skrzyżowań dodatnich oraz ujemnych wzdłuż półprostej (bez znaku).
-
-\begin{proposition}[warunek Murasugiego]
-    \index{warunek!Murasugiego}
-    \label{prp:murasugi_periodic}
-    Niech $K$ będzie węzłem o~okresie $n = p^r$, gdzie $p$ jest liczbą pierwszą.
-    Niech $J$ będzie jego węzłem ilorazowym, z~indeksem zaczepienia $\lambda$.
-    Wtedy wielomian $\alexander_J$ jest dzielnikiem wielomianu $\alexander_K$ oraz istnieje pewna całkowita liczba $k$, taka że
-    \begin{equation}
-        \alexander_K(t) \equiv \pm t^k \alexander_J(n)^n \left(1 + t + t^2 + \ldots + t^{\lambda - 1}\right)^{n-1} \mod p.
-    \end{equation}
+    Każdy wielomian Alexandera jest realizowany przez pewien silnie odwracalny węzeł.
 \end{proposition}
 
 \begin{proof}
-    Mozolne operacje na macierzach, których wyznacznikiem jest wielomian Alexandera, patrz \cite{murasugi71}.
-    Kawauchi przedstawia inny dowód: najpierw dowodzi tego dla węzła torusowego $T_{n, d}$, którego węzłem ilorazowym jest niewęzeł.
-    W ogólnym przypadku, korzysta z relacji kłębiastej dla wielomianu Conwaya.
-    Szczegóły oraz odsyłacze do dalszych prac znaleźć można w jego przeglądowej publikacji \cite[s. 122-124]{kawauchi96}.
+    Sakai konstruuje w \cite{sakai83} silnie odwracalny węzeł o dowolnie wybranym cyklicznym module Alexandera.   
 \end{proof}
 
 % Koniec podsekcji Lustro i rewers
