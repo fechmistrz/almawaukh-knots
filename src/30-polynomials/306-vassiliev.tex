@@ -19,7 +19,7 @@ Szkielet sekcji oparliśmy natomiast o piętnasty rozdział podręcznika Murasug
     Niech $f \colon S^1 \to \R^3$ będzie kawałkami liniową funkcją, która jest różnowartościowa poza skończenie wieloma punktami.
     Załóżmy dodatkowo, że
     \begin{itemize}
-        \item włókna -- przeciwobrazy punktów -- funkcji $f$ są co najwyżej dwuelementowe
+        \item włókna -- przeciwobrazy punktów -- funkcji $f$ są co najwyżej dwuelementowe;
         \item jeżeli dwa różne punkty mają ten sam obraz, to węzeł $K = f(S^1)$ przecina się tam pod kątem prostym.
     \end{itemize}
     Obraz funkcji $f$ nazywamy węzłem singularnym.
@@ -27,6 +27,7 @@ Szkielet sekcji oparliśmy natomiast o piętnasty rozdział podręcznika Murasug
 
 Gdy używamy słowa węzeł, nigdy nie mamy na myśli węzła singularnego.
 Punkt, gdzie węzeł singularny tnie samego siebie, nazywamy wierzchołkiem i~oznaczamy pogrubioną kropką na diagramie.
+\index{wierzchołek (węzła singularnego)}%
 Oto garść przykładów węzłów singularnych:
 
 \begin{comment}
@@ -80,54 +81,30 @@ Ten drugi warunek gwarantuje nam, że skrzyżowania wokół podwójnych punktów
 Istnieje podobne kryterium dla diagramów, odpowiednik twierdzenia Reidemeistera.
 
 \begin{proposition}
-    Dwa singularne diagramy są równoważne dokładnie wtedy, kiedy można między nimi przejść przy użyciu ciągu izotopii otaczających, ruchów Reidemeistera oraz operacji $\Omega$:
+\index{ruchy Reidemeistera}
+\index{ruch $\Omega$}
+    Dwa singularne diagramy są równoważne dokładnie wtedy, kiedy można między nimi przejść przy użyciu ciągu izotopii otaczających, ruchów Reidemeistera, operacji $\Omega_4$ (dwóch wariantów III ruchu Reidemeistera z wierzchołkiem):
 \begin{comment}
     \[
-    \begin{tikzpicture}[baseline=-0.65ex, scale=0.1]
-    \begin{knot}[clip width=5, end tolerance=1pt, flip crossing/.list={1,2,3,4}]
-        \strand[semithick] (-15, 5) [in=up,out=right] to (5, 0) [in=right,out=down] to (-15, -5);
-        \strand[semithick] (-2, -2) to (-10, -10);
-        \strand[semithick] (-2, 2) to (-10, 10);
-        \strand[semithick] (2, -2) to (10, -10);
-        \strand[semithick] (2, 2) to (10, 10);
-        \draw[semithick] (2, 2) to (-2, -2);
-        \draw[semithick] (2, -2) to (-2, 2);
-        \draw[black,fill=black] (0,0) circle (.5);
-    \end{knot}
-    \end{tikzpicture}
-    \quad\cong_\Omega\quad
-    \begin{tikzpicture}[baseline=-0.65ex, scale=0.1]
-    \begin{knot}[clip width=5, end tolerance=1pt, flip crossing/.list={1,2,3,4}]
-        \strand[semithick] (-15, 5) [in=up,out=right] to (-5, 0) [in=right,out=down] to (-15, -5);
-        \strand[semithick] (-2, -2) to (-10, -10);
-        \strand[semithick] (-2, 2) to (-10, 10);
-        \strand[semithick] (2, -2) to (10, -10);
-        \strand[semithick] (2, 2) to (10, 10);
-        \draw[semithick] (2, 2) to (-2, -2);
-        \draw[semithick] (2, -2) to (-2, 2);
-        \draw[black,fill=black] (0,0) circle (.5);
-    \end{knot}
-    \end{tikzpicture}
-    \quad\cong_\Omega\quad
-    \begin{tikzpicture}[baseline=-0.65ex, scale=0.1]
-    \begin{knot}[clip width=5, end tolerance=1pt]
-        \strand[semithick] (-15, 5) [in=up,out=right] to (5, 0) [in=right,out=down] to (-15, -5);
-        \strand[semithick] (-2, -2) to (-10, -10);
-        \strand[semithick] (-2, 2) to (-10, 10);
-        \strand[semithick] (2, -2) to (10, -10);
-        \strand[semithick] (2, 2) to (10, 10);
-        \draw[semithick] (2, 2) to (-2, -2);
-        \draw[semithick] (2, -2) to (-2, 2);
-        \draw[black,fill=black] (0,0) circle (.5);
-    \end{knot}
-    \end{tikzpicture}
+        \VirtualReidemeisterIIIa \cong_{\Omega_{4a}} \VirtualReidemeisterIIIb
+        \quad\quad
+        \VirtualReidemeisterIIIc \cong_{\Omega_{4e}} \VirtualReidemeisterIIId
     \]
+\end{comment}
+    oraz zupełnie nowego ruchu $\Omega_5$ przypominającego flype:
+\begin{comment}
+\[
+    \VirtualOmegaVa \cong_{\Omega_{5a}} \VirtualOmegaVb
+\]
 \end{comment}
 \end{proposition}
 
+Uwaga: Murasugi podaje tylko jedną nową operację, wydaje nam się, że wszyscy nie mogą mieć racji.
+Ufamy pracy Nelsona, Oyamaguchiego, Sazdanovica \cite{sazdanovic19} gdzie pokazano, że ten zestaw ruchów jest minimalny.
+
 Załóżmy teraz, że mamy jakiś niezmiennik węzłów $v$ o~wymiernych wartościach i~chcemy przedłużyć go do niezmiennika $\hat v$ węzłów singularnych.
 Najprościej zrobić to rekurencyjnie.
-Niech $\hat v$ będzie już określony dla węzłów singularnych o co najwyżej $n - 1$ wierzchołkach i~wybierzmy dowolny węzeł i diagram o~$n$ wierzchołkach.
+Niech $\hat v$ będzie już określony dla singularnych węzłów o co najwyżej $n - 1$ wierzchołkach i~wybierzmy dowolny węzeł i diagram o~$n$ wierzchołkach.
 Okazuje się, że jeżeli położymy
 \begin{comment}
 \begin{equation}
@@ -146,17 +123,18 @@ Funkcję $\hat v$ nazywamy niezmiennikiem singularnym indukowanym przez niezmien
     Jeśli dodatkowo $v$ nie jest rzędu co najwyżej $n - 1$, to mówimy, że jest rzędu dokładnie $n$.
 \end{definition}
 
-Czas na garść przykładów.
+Czas na garść przykładów niezmienników skończonego typu oraz niezmienników, które nie są skończonego typu.
 
 \begin{example}
+\index{wielomian!Conwaya}%
     Niech $K$ będzie węzłem, zaś $\conway_K(t) = \sum_k \conway_{2k} z^{2k}$ jego wielomianem Conwaya.
     Współczynnik $\conway_{2k}$ indukuje niezmiennik Wasiljewa rzędu dokładnie $2k$.
 \end{example}
 
 \begin{proof}
-    Jak pokazuje Chmutow w \cite{chmutov12}, porównanie relacji kłębiastej dla wielomianu Conwaya z tą dla niezmienników Wasiljewa pokazuje, że wielomian Conwaya singularnego węzła o~$m$ punktach podwójnych jest podzielny przez $z^m$, co pokazuje, że $c_{2k}$ jest niezmiennikiem rzędu co najwyżej $2k$.
+    Jak wspomina Chmutow w \cite{chmutov12}, porównanie relacji kłębiastej dla wielomianu Conwaya z tą dla niezmienników Wasiljewa pokazuje, że wielomian Conwaya singularnego węzła o~$m$ punktach podwójnych jest podzielny przez $z^m$, co dowodzi już, że $c_{2k}$ jest niezmiennikiem rzędu co najwyżej $2k$.
 
-    Bar-Natan w 1991 pokazał, że jest niezmiennikiem rzędu dokładnie $2k$.
+    Bar-Natan w 1991 pokazał, że $\conway_{2k}$ jest niezmiennikiem rzędu dokładnie $2k$.
 \end{proof}
 
 \index{hipoteza!Lin-Wanga}%
@@ -179,6 +157,7 @@ Wartość stałej $C$ trudno obliczyć, dlatego Stojmenow zaproponował \cite[pr
 Nierówność jest nietrywialna tylko dla splotu $L$ z~$k+1, k-1, \ldots$ składowymi; trywialna dla $k = 0$, łatwa dla $k=1$ (wtedy $\conway_1$ jest indeksem zaczepienia splotów o~dwóch składowych) oraz udowodniona dla węzłów i~$k=2$ przez Polyaka, Viro w~2001 (\cite{polyak01}).
 
 \begin{example}
+\index{wielomian!Jonesa}%
     Niech $\jones_K(t)$ będzie wielomianem Jonesa węzła $K$.
     Dokonajmy podstawienia
     \begin{equation}
@@ -191,8 +170,7 @@ Nierówność jest nietrywialna tylko dla splotu $L$ z~$k+1, k-1, \ldots$ skład
     Współczynnik $b_{k}$ indukuje niezmiennik Wasiljewa rzędu co najwyżej $k$.
 \end{example}
 
-Ten i podobne wyniki dla wielomianów HOMFLY, Kauffmana uzyskała Birman z~Linem w \cite{birman93}.
-Praca ta znacznie uprościła oryginalne techniki Wasiljewa.
+Ten i podobne wyniki dla wielomianów HOMFLY, Kauffmana uzyskała Birman z~Linem w~\cite{birman93}, gdzie znacznie uprościli oryginalne techniki Wasiljewa.
 Patrz też \cite[s. 56]{chmutov12}.
 
 \begin{example}[s. 311 w \cite{murasugi96}]
@@ -233,6 +211,12 @@ Jeśli $q < 0$, wszystkie skrzyżowania odwracamy:
 
 \begin{proposition}
     Następujące funkcje nie są niezmiennikami Wasiljewa: indeks skrzyżowaniowy $\operatorname{cr}$, liczba gordyjska $\operatorname{u}$, indeks mostowy $\operatorname{br}$, indeks warkoczowy $\operatorname{b}$, genus $g$, sygnatura $\sigma$.
+\index{genus}%
+\index{indeks mostowy}%
+\index{indeks skrzyżowaniowy}%
+\index{indeks warkoczowy}%
+\index{liczba gordyjska}%
+\index{sygnatura}%
 \end{proposition}
 
 Wynik był znany już w latach 90., na przykład Birman w \cite{birman93} pokazała, że liczba gordyjska nie jest niezmiennikiem Wasiljewa.
@@ -414,7 +398,7 @@ Poniższa tabela ma dość ciekawą historię.
 Wasiljew znalazł ręcznie wartości w kolumnach dla $n \le 4$ w 1990 roku.
 Potem Bar-Natan napisał komputerowy program rozwiazujący pewne równania liniowe i~znalazł tak wymiary przestrzeni $\mathcal V_n$ dla $n \le 9$, miało to miejsce w roku 1993.
 Wreszcie Kneissler cztery lata później znalazł dolne oraz górne ograniczenia: dolne oparte o znaczone powierzchnie, górne pochodzące od algebry Vogela (\cite{kneissler97}).
-\index{algebra!Vogela}%
+\index{algebra Vogela}%
 % DICTIONARY;marked surface;powierzchnia znaczona
 Dla $n \le 12$ ograniczenia te pokrywają się!
 
@@ -442,6 +426,7 @@ Okazuje się, że wartość niezmiennika Wasiljewa $v$ nie zależy wprost od teg
     Zorientowany okrąg razem z~$2n$ punktami leżącymi na nim (oraz~połączonymi w pary) z~dokładnością do zachowujących orientację homeomorfizmów nazywamy diagramem cięciw rzędu $n$, albo stopnia $n$.
 \end{definition}
 
+\begin{comment}
 \begin{figure}[H]
     \centering
     \begin{minipage}[b]{.18\linewidth}
@@ -501,6 +486,7 @@ Okazuje się, że wartość niezmiennika Wasiljewa $v$ nie zależy wprost od teg
     \end{minipage}
     \caption{Wszystkie pięć diagramów cięciw stopnia 3}
 \end{figure}
+\end{comment}
 
 \begin{tobedone}
     Jak zamienić węzeł w diagram cięciw?
@@ -529,6 +515,7 @@ Zbiór diagramów cięciw rzędu $n$ jest skończony, więc przestrzeń funkcji 
 
 Symbol nie jest byle jaką funkcją, spełnia dwie relacje:
 
+\begin{comment}
 \begin{figure}[H]
 $$
 \begin{tikzpicture}[baseline=-0.65ex,scale=0.15]
@@ -587,6 +574,7 @@ $$
 $$
 \caption{Relacja ,,four-term'' (4T)}
 \end{figure}
+\end{comment}
 
 Diagramy mogą mieć więcej cięciw z końcami tam, gdzie linia jest kropkowana, natomiast wszystkie końce cięciw na czarnych, pogrubionych łukach zostały zaznaczone explicite.
 
@@ -618,6 +606,7 @@ Mówi o~tym głębokie twierdzenie Koncewicza:
 \end{definition}
 
 Diagramy cięciw modulo relacja 4T jest tym samym, co algebra chińskich znaków modulo relacja STU.
+\index{algebra!chińskich znaków}%
 W~tej drugiej spełnione są jeszcze relacje AS oraz IHX, nie mam siły tego rysować, ale wszystko można znaleźć w pracy Bar-Natana \cite{barnatan_95}.
 
 \begin{tobedone}
@@ -630,16 +619,18 @@ Stojmenow w \cite{stoimenow_01} pokazał, że niezmienniki Wasiljewa każdego rz
 Dokładniej:
 
 \begin{proposition}
-    Każdy niezmiennik Wasiljewa rzędu co najwyżej $k$ jest jednoznacznie określony przez swoje wartości na alternujących węzłach o co najwyżej $2k^2 + k$ skrzyżowaniach.
+    Niezmiennik Wasiljewa rzędu co najwyżej $k$ jest jednoznacznie określony przez wartości, jakie przyjmuje na alternujących węzłach o co najwyżej $2k^2 + k$ skrzyżowaniach.
 \end{proposition}
 
-% kneissler97: Corollary 2.5: up to degree twelce can't distinguish knots from their inverses.
+Oczywiście wynik ten onie ma to żadnego praktycznego zdarzenia, ponieważ już dla $k = 4$ musielibyśmy znać wszystkie węzły o 36 skrzyżowaniach (a~jeszcze ich nie znamy, stan na 2021 rok).
 
 Niezmienniki Wasiljewa nie są zupełne.
 Ohyama dla każdego węzła $K$ i~liczby naturalnej $n$ wskazał jawnie nieskończoną rodzinę złożonych węzłów, których niezmienniki rzędu co najwyżej $n$ nie odróżniają od $K$ (\cite{ohyama95}).
 Stanford rozszerzył ten wynik: w~\cite{stanford96} udowodnił, że dla każdego splotu $L$ istnieje nieskończona rodzina pierwszych, nierozszczepialnych, alternujących splotów nieodróżnialnych takimi niezmiennikami.
 
 Z drugiej strony, Chmutow i inni piszą w \cite{duzhin12}, że sześć niezmienników rzędu co najwyżej 4 wystarcza do odróżnienia dowolnych dwóch węzłów pierwszych do 8 skrzyżowań.
+Kneissler twierdzi (\cite[wniosek 2.5]{kneissler97}), że niezmienniki rzędu co najwyżej 12 nie odróżniają węzłów od ich odwrotności.
+\index{węzeł!odwrotny}%
 
 W 1993 roku Maxim Koncewicz pokazał, że dla każdego węzła można policzyć pewną całkę (teraz nazywaną całką Koncewicza), która jest uniwersalnym niezmiennikiem Wasiljewa.
 \index{całka Koncewicza}
@@ -653,8 +644,8 @@ gdzie $b_{2n}$ to zmodyfikowane liczby Bernoulliego o funkcji tworzącej
     \sum_{n=0}^\infty b_{2n} x^{2n} = \frac 12 \log \frac {e^{x/2} - e^{-x/2}}{x/2},
 \end{equation}
 zaś $w_{2n}$ to ,,koła'': diagramy okręgu z doczepionymi $2n$ promieniami.
-Liniową kombinację należy rozumieć jako element algebry chińskich znaków, opisanej w następnej wersji tej książki.
-\index{algebra!chińskich znaków}
+Liniową kombinację należy rozumieć jako element algebry chińskich znaków.
+\index{algebra!chińskich znaków}%
 Następnie Marché w~2003 roku znalazł wartości całki dla węzłów torusowych (\cite{marche04}).
 Wygląda na to, że nikt nie odważył się dokonać tego dla innych węzłów (stan na 2019).
 
@@ -668,7 +659,9 @@ Wynika stąd, że stanowić będzie dużo trudniejszy problem niż dowód hipote
 
 % DICTIONARY;link, string;splot, sznurkowy
 Chmutow, Dużin wspominają w bardzo czytelnie napisanym artykule \cite{chmutov05}, że hipoteza \ref{con:vassilliev} jest prawdziwa dla splotów sznurkowych i warkoczy, jak dowiedziono w \cite{kohno87}, \cite{barnatandror95}.
+\index{splot!sznurkowy}%
+\index{warkocz}%
 
-\index{niezmiennik!Wasiljewa|(}
+\index{niezmiennik!Wasiljewa|)}
 
 % koniec sekcji niezmienniki Wasiljewa
