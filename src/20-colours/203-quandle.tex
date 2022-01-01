@@ -1,12 +1,13 @@
-\section{Kwandle i wraki} % (fold)
-% TODO: Problems  on invariants of knots and 3-manifolds, rozdział 3
+\section{Kwandle i wraki}
+\index{kwandel|(}
 
-Sekcja ta powstała częściowo w~oparciu o~notatki autorstwa Andrew Bergera, Chrisa Geriga\footnote{dostępne pod adresem \url{https://math.berkeley.edu/~cgerig/notes}} oraz Andrew Bergera, Brandona Flannery'ego i~Chrisa Sumnichta\footnote{dostępne pod adresem \url{https://github.com/thyrgle/191_Final_Project/blob/master/paper.pdf}}.
-Kwandle, z~angielskiego \emph{quandle}, są strukturami algebraicznymi przypominającymi grupy.
-Aksjomaty grupy stanowią uogólnienie symetrii -- symetrie są odwracalne, można je składać, identyczność jest symetrią.
-Aksjomaty kwandli będą odzwierciedlać ruchy Reidemeistera.
+Sekcja ta powstała częściowo w~oparciu o~notatki autorstwa Bergera, Geriga\footnote{dostępne pod adresem \url{https://scholar.harvard.edu/files/gerig/files/knotnotes.pdf}} oraz Bergera, Flannery'ego i~Sumnichta\footnote{dostępne pod adresem \url{https://github.com/thyrgle/191_Final_Project/blob/master/paper.pdf}}.
+Kwandle to struktura algebraiczna podobna do grupy.
+Aksjomaty grupy stanowią uogólnienie symetrii, ponieważ składanie symetrii jest łączne, identyczność jest symetrią, funkcja odwrotna do symetrii jest symetrią.
+Aksjomaty kwandli odzwierciedlać będą ruchy Reidemeistera.
+\index{ruchy Reidemeistera}%
 
-David Joyce zapytany o znaczenie słowa \emph{quandle} odpowiedział: ,,I needed a usable word. “Distributive algebra” had too many syllables. Piffle was already taken. I tried trindle and quagle, but they didn’t seem right, so I went with quandle.''.
+David Joyce zapytany o znaczenie słowa \emph{quandle} odpowiedział: \emph{,,I needed a usable word. “Distributive algebra” had too many syllables. Piffle was already taken. I tried trindle and quagle, but they didn’t seem right, so I went with quandle.''}.
 
 % DICTIONARY;quandle;kwandel
 \begin{definition}[kwandl]
@@ -43,6 +44,8 @@ To znaczy: kiedy łuk o kolorze $x$ przechodzi pod łukiem koloru $y$, staje si�
 
 Ta definicja pochodzi z~nieopublikowanej korespondencji między Johnem Conwayem i~Gavenem Wraithem, którzy w 1959 byli studentami I stopnia na uniwersytecie w Cambridge.
 Ponownie odkryto ją w latach 80. XX wieku: Joyce w 1982 po raz pierwszy nazwał te obiekty kwandlami, Matwiejow w tym samym roku jako grupoidy rozdzielne, Brieskorn w 1986 jako zbiory automorficzne.
+\index{zbiór automorficzny|see {kwandel}}%
+\index{grupoid rozdzielny|see {kwandel}}%
 
 Drugi aksjomat nazywa się czasem odwracalnością z prawej strony: znając $x \triangleright y$ oraz $y$ możemy odtworzyć element $x$, jednak znając $x$ być może nie jesteśmy w stanie odtworzyć elementu $y$.
 Jedyny element $x$ taki, że $x \triangleright y = z$ nazwijmy $y \triangleleft z$.
@@ -63,6 +66,7 @@ To pozwala podać trochę inną definicję kwandli, my nie będziemy jej używa�
 Teraz możemy przetłumaczyć ruchy Reidemeistera w aksjomaty kwandli.
 
 \begin{proposition}
+\index{niezmiennik!zliczający}%
     Niech $X$ będzie skończonym kwandlem.
     Liczba etykietowań diagramu elementami kwandla $X$ jest niezmiennikiem węzłów, zwanym niezmiennikiem zliczającym.
 \end{proposition}
@@ -160,26 +164,33 @@ Homomorfizmy definiujemy standardowo, przez analogię do grup:
 Wiele znanych struktur algebraicznych okazuje się być źródłem kwandli.
 
 \begin{example}[kwandl cykliczny/diedralny]
+\index{kwandl!cykliczny}%
+\index{kwandl!diedralny}%
     Grupa abelowa z działaniem $x \triangleright y = 2y - x$.
 \end{example}
 
 \begin{example}[kwandle sprzężone]
+\index{kwandl!sprzężony}%
     Grupa z działaniem $x \triangleright y = y^{-n} x y^n$ dla każdego $n \in \N$.
 \end{example}
 
 \begin{example}[kwandl Alexandera]
+\index{kwandl!Alexandera}%
     Moduł nad pierścieniem $\Z[t, 1/t]$ wielomianów Laurenta z~działaniem $x \triangleright y = tx + (1-t) y$.
 \end{example}
 
 \begin{example}[kwandl symplektyczny]
+\index{kwandl!symplektyczny}%
     Przestrzeń liniowa i antysymetryczna forma dwuliniowa $\langle \cdot | \cdot \rangle$ z działaniem $x \triangleright y = x + \langle x | y \rangle y$.
 \end{example}
 
 D. Joyce w swojej rozprawie doktorskiej przypisał każdemu węzłowi $K$ pewien szczególny kwandl $Q(K)$, kwandl podstawowy.
+\index{kwandl!podstawowy}%
 Definicja tego obiektu jest dość zawiła: łuki diagramu są generatorami, zaś skrzyżowania odpowiadają za relacje.
 Joyce pokazał, że kwandl $Q(K)$ wyznacza węzeł $K$ jednoznacznie z dokładnością do orientacji.
 Nie czyni to jednak nowego niezmiennika użytecznym, gdyż wyznaczenie go nawet w najprostszych przypadkach stanowi trudność.
-Niebrzydowski, Przytycki pokazali w 2008 roku, że kwandl podstawowy trójlistnika jest izomorficzny z~rzutowym pierwotnym podkwandlem pewnych odwzorowań liniowych przestrzeni symplektycznej $\Z \oplus \Z$, cokolwiek to znaczy.
+Niebrzydowski, Przytycki pokazali w 2009 roku, że kwandl podstawowy trójlistnika jest izomorficzny z~rzutowym pierwotnym podkwandlem pewnych odwzorowań liniowych przestrzeni symplektycznej $\Z \oplus \Z$, cokolwiek to znaczy (patrz \cite{niebrzydowski09}).
+% We prove that the fundamental quandle of the trefoil knot is isomorphic to the projective primitive subquandle of transvections of the symplectic space Z ⊕ Z. The last quandle can be identified with the Dehn quandle of the torus and the cord quandle on a 2-sphere with four punctures.
 
 Aksjomaty grupy można wzmacniać (grupy abelowe) lub osłabiać (monoidy).
 Podobnie czyni się z aksjomatami kwandli.
@@ -187,6 +198,8 @@ Podobnie czyni się z aksjomatami kwandli.
 Kwandle inwolutywne odpowiadają węzłom bez orientacji, wraki dobrze opisują węzły obramowane, i tak dalej.
 
 \begin{definition}[kwandl inwolutywny]
+\index{kwandl!inwolutywny}%
+\index{kei|see {kwandl inwolutywny}}%
     Kwandl $Q$, w którym dla wszystkich $x, y \in Q$ zachodzi $x \triangleleft (x \triangleleft y) = y$, nazywamy inwolutywnym albo kei.
 \end{definition}
 
@@ -195,28 +208,30 @@ Szukał niełącznej struktury, która dobrze opisywałaby odbicia w skończonej
 
 % DICTIONARY;shelf;półka
 \begin{definition}[półka]
-    \index{półka}
+\index{półka}%
     Zbiór $X$ wyposażony w dwuargumentowe działanie $\triangleright$ taki, że dla wszystkich elementów $x, y, z \in X$ zachodzi $(x \triangleright y) \triangleright z = (x \triangleright z) \triangleright (y \triangleright z)$, nazywamy półką.
 \end{definition}
 
 \begin{example}
-    Niech $B_\infty$ oznacza grupę wszystkich warkoczy, zaś $\phi$ będzie jej endomorfizmem posyłającym generator $\sigma_k$ na $\sigma_{k+1}$.
+\index{warkocz}%
+    Niech\footnote{Przykład pożyczony z \url{http://nlab-pages.s3.us-east-2.amazonaws.com/nlab/show/shelf\#infinite_braid_group}} $B_\infty$ oznacza grupę wszystkich warkoczy, zaś $\phi$ będzie jej endomorfizmem posyłającym generator $\sigma_k$ na $\sigma_{k+1}$.
     Zbiór $B_\infty$ z działaniem $a \triangleleft b = a\phi(b)\sigma_1 \phi{a} ^{-1}$ jest półką.
 \end{example}
 
-Półki zdefiniowała Alissa Crans w pracy doktorskiej.
-To nieprzetłumaczalna gra słów: dwie półki (\emph{shelves}), lewa i prawa, które dobrze do siebie pasują, dają stojak (\emph{rack}).
+To nieprzetłumaczalna gra słów: dwie półki (\emph{shelves}), lewa i prawa, które dobrze do siebie pasują, dają stojak (\emph{rack}, czyli dla nas wrak).
+Jak napisała Crans w pracy \cite[s. 86]{crans04}: \emph{,,Just as a rack is comprised of two shelves which fit together nicely, a quandle is made up of two spindles''}.
+
 Półka stanowi uogólnienie dwóch obiektów -- wraków i wrzecion.
 
 % DICTIONARY;wrack;wrak
 \begin{definition}[wrak]
-    \index{wrak}
+\index{wrak}%
     Zbiór $X$ z dwuargumentowym działaniem $\triangleright$ takim, że dla każdej trójki elementów $x, y, z \in X$ zachodzi:
     \begin{enumerate}
         \item odwzorowanie $\beta_y \colon X \to X$ dane wzorem $\beta_y(x) = x \triangleright y$ jest odwracalne,
         \item $(x \triangleright y) \triangleright z = (x \triangleright z) \triangleright (y \triangleright z)$
     \end{enumerate}
-    nazywamy wrakiem (z angielskiego \emph{wrack}).
+    nazywamy wrakiem.
 \end{definition}
 
 \begin{example}
@@ -229,7 +244,8 @@ Półka stanowi uogólnienie dwóch obiektów -- wraków i wrzecion.
     Moduł nad pierścieniem $\Z[t^{\pm 1}, s]/(s^2 - (1-t)s)$ z działaniem $x \triangleright y = tx+sy$.
 \end{example}
 
-Wraki dobrze współgrają z podwójnym pierwszym ruchem Reidemeistera, który to nie zmienia spinu diagramu:
+\index{węzeł!obramowany}% framed?
+Wraki są naturalnym niezmiennikiem węzłów obramowanych, bo dobrze współgrają z II, III oraz podwójnym I ruchem Reidemeistera, który to nie zmienia spinu diagramu:
 \begin{comment}
 \[
     \begin{tikzpicture}[baseline=-0.65ex,scale=0.07]
@@ -257,13 +273,13 @@ Wraki dobrze współgrają z podwójnym pierwszym ruchem Reidemeistera, który t
 
 % DICTIONARY;spindle;wrzeciono
 \begin{definition}[wrzeciono]
-    \index{wrzeciono}
+\index{wrzeciono}%
     Zbiór $X$ z dwuargumentowym działaniem $\triangleright$ taki, że dla wszystkich elementów $x, y, z \in X$ zachodzi:
     \begin{enumerate}
         \item $x \triangleright x = x$,
         \item $(x \triangleright y) \triangleright z = (x \triangleright z) \triangleright (y \triangleright z)$
     \end{enumerate}
-    nazywamy wrzecionem (z angielskiego \emph{spindle}).
+    nazywamy wrzecionem.
 \end{definition}
 
 Zatem kwandle to wraki, które są też wrzecionami.
@@ -271,23 +287,20 @@ Muszę w~tym miejscu wtrącić uwagę językową.
 Conway nazwał wraki wrakami (\emph{wracks}), by częściowo zażartować z~nazwiska jego kolegi Gavina Wraitha, a częściowo by zaznaczyć, że są one tym, co zostaje z~grupy, w~której zapomniano o~mnożeniu, ale nie sprzęganiu (w~języku angielskim co najmniej od XVI wieku funkcjonuje zwrot ,,wrack and ruin'' oznaczający zniszczenie).
 Obecnie dominuje określenie \emph{racks}.
 
-%Pokażemy, że kwandle uogólniają kolorowania.
-%Niech $X$ będzie zbiorem kolorów z~operacją $\triangleright$, które spełnia aksjomaty z~definicji kwandli.
-%Wtedy przy każdym skrzyżowaniu występują trzy kolory: $x$, $y$ oraz $x \triangleright y$.
-
 Clark, Elhamdadi, Saito oraz Yeatman pokazali niedawno (\cite{clark13}) zbiór 26 kwandli, które razem odróżniają od siebie wszystkie 2977 zorientowanych węzłów pierwszych o~co najwyżej 12 skrzyżowaniach.
 Największy z~nich jest rzędu 182.
 Wcześniej (w 2003 roku) Dionisio, Lopes znaleźli 10 kwandli Alexandera, które odróżniają 249 węzłów pierwszych do 10 skrzyżowań.
 Vendramin znalazł w \cite{vendramin12} wszystkie 431 kwandli spójnych rzędu 35 lub mniejszego.
 
 \begin{definition}[kwandl spójny]
+\index{kwandl!spójny}
     Niech $Q$ będzie kwandlem.
     W grupie wszystkich automorfizmów $Q$ można wyróżnić grupę generowaną przez automorfizmy wewnętrzne $\beta_y(x) = x \triangleright y$.
     Jeżeli działanie tej podgrupy na $Q$ jest przechodnie, kwandl nazywamy spójnym.
 \end{definition}
 
-%Przypomnijmy, że 3-kolorowanie diagramu polegało na przypisaniu każdemu włóknu pewnego koloru (z trzech) tak, by każdy został użyty, a~żadne skrzyżowanie nie stało się dwubarwne.
-%Ogólniej, jeśli kolorami były liczby $0, \ldots, n - 1$, żądaliśmy od skrzyżowań, by kolor $y$ po przejściu pod kolorem $x$ stawał się $z$, gdzie $z \equiv 2x - y$ modulo $n$.
-%Można to uogólnić jeszcze bardziej, właśnie do quandli: $\Z/n$-kolorowanie węzła to quandle związany z~pierścieniem $\Z/n$ operacją $x \triangleright y =  2y - x$}
+Dużo otwartych problemów dotyczących kwandli można znaleźć w \cite[s. 455-465]{ohtsuki02}.
+
+\index{kwandel|)}
 
 % Koniec sekcji Wraki i~kwandle
