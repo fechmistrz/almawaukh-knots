@@ -1,21 +1,29 @@
 \section{Węzły pierwsze}
-
+\index{węzeł!pierwszy|(}%
 Suma spójna jest dla węzłów tym, czym mnożenie dla liczb naturalnych.
 Analogia ta nabiera sensu, gdy zdefiniujemy węzły pierwsze, odpowiedniki liczb pierwszych.
-Do ich dobrego zrozumienia warto znać powierzchnie Seiferta z~sekcji \ref{sec:genus}.
+Do ich dobrego zrozumienia warto znać powierzchnie Seiferta (ale przy pierwszym czytaniu nie trzeba).
 
 \begin{definition}[węzeł pierwszy]
-    \index{węzeł!pierwszy}
-    \label{def:prime_knot}
+\label{def:prime_knot}%
     Niech $K$ będzie węzłem różnym od niewęzła.
     Jeśli nie przedstawia się jako suma spójna $K_1 \shrap K_2$
     dwóch nietrywialnych węzłów $K_1, K_2$, nazywamy go węzłem pierwszym.
     W~przeciwnym razie mówimy, że jest złożony.
 \end{definition}
 
-Przesmyk to wąskie skrzyżowanie między dwiema rozłącznymi częśćmi diagramu, patrz także definicja \ref{def:isthmus}.
+Pokażemy później, że rozkład na węzły pierwsze istnieje i~wspomnimy, dlaczego jest jedyny.
+Fakt \ref{prp:genus_of_sum} stanowi odpowiednik zasadniczego twierdzenia arytmetyki (i jest od niego trochę trudniejszy w~dowodzie).
+Każdy węzeł jest sumą spójną siebie oraz niewęzła, dlatego byłoby miło, gdyby niewęzeł nie dał się zapisać jako suma dwóch innych węzłów.
+Jest to dokładnie wniosek \ref{cor:connected_sum_no_inverses}: suma spójna nie posiada elementów odwrotnych.
+
+% TODO: jak przedłużyć mimo niejednoznaczności na złożone?
+
+Przesmyk to wąskie skrzyżowanie między dwiema rozłącznymi częśćmi diagramu.
+\index{przesmyk}
 
 \begin{proposition}
+\index{splot!rozszczepialny}%
     Niech $L$ będzie alternującym splotem bez przesmyków.
     Jeśli diagram splotu $L$ jest spójny, to splot jest nierozszczepialny.
     Jeśli splot nie jest rozszczepialny, to jest też pierwszy jeśli dla każdego okręgu przecinającego diagram w dwóch niepodwójnych punktach, przekrój wnętrza okręgu z~diagramem jest łukiem.
@@ -23,7 +31,8 @@ Przesmyk to wąskie skrzyżowanie między dwiema rozłącznymi częśćmi diagra
 
 Innymi słowy, jeśli alternujący splot jest złożony, widać to bezpośrednio na każdym jego alternującym diagramie.
 Jako pierwszy pokazał to Menasco w~\cite{menasco84}.
-Jego dowód opiera się na multiplikatywności wielomianu BLM/Ho, patrz definicja \ref{def:blm_ho}.
+Jego dowód opiera się na multiplikatywności wielomianu BLM/Ho.
+\index{wielomian!BLM/Ho}
 
 Czy węzłów pierwszych jest nieskończenie wiele?
 Tak, patrz fakt \ref{prp:infinitely_many_prime_knots}, potrafimy nawet oszacować liczbę $K_n$ węzłów pierwszych oraz $L_n$ splotów pierwszych.
@@ -31,6 +40,7 @@ W roku 1987 C. Ernst, D. Sumners w~oparciu o~wyniki Thistlethwaite'a, Kauffmana,
 Dokładniej:
 
 \begin{proposition}
+\index{węzeł!dwumostowy}%
     Niech $f(n)$ oznacza liczbę węzłów dwumostowych o indeksie skrzyżowaniowym $n$.
     Wtedy
     \begin{equation}
@@ -46,7 +56,7 @@ Welsh rozpatruje w \cite{welsh92} węzły bez orientacji i znajduje poniższe og
 
 \begin{proposition}
     Niech $K_n$ oznacza liczbę węzłów pierwszych o $n$ skrzyżowaniach.
-    % n? co najwyżej n? coś innego?
+    % TODO: n? co najwyżej n? coś innego?
     Wtedy
     \begin{equation}
         2.68 \le \liminf_{n \to \infty}  \sqrt[n]{K_n} \le \limsup_{n \to \infty} \sqrt[n]{L_n} \le \frac {27}{2}.
@@ -55,9 +65,6 @@ Welsh rozpatruje w \cite{welsh92} węzły bez orientacji i znajduje poniższe og
 
 Pytanie, czy zwykłe granice istnieją, pozostaje otwarte.
 
-Każdy węzeł jest sumą spójną siebie oraz niewęzła, dlatego byłoby miło, gdyby niewęzeł nie dał się zapisać jako suma dwóch innych węzłów.
-Jest to dokładnie wniosek \ref{cor:connected_sum_no_inverses}: suma spójna nie posiada elementów odwrotnych.
-Pokażemy później, że rozkład na węzły pierwsze istnieje i~wspomnimy, dlaczego jest jedyny.
-Fakt \ref{prp:genus_of_sum} stanowi odpowiednik zasadniczego twierdzenia arytmetyki.
+\index{węzeł!pierwszy|)}
 
 % koniec sekcji Węzły pierwsze
