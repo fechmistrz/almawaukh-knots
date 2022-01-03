@@ -1,29 +1,27 @@
-
-\subsection{Liczba patykowa} % (fold)
+\subsection{Liczba patykowa}
 \index{liczba patykowa|(}
 
-Z angielskiego \emph{stick number}.
 % DICTIONARY;stick number;liczba patykowa
 
 \begin{definition}
     Minimalną liczbę odcinków w~łamanej, która przedstawia węzeł $K$, nazywamy jego liczbą patykową i~oznaczamy $\operatorname{s}(K)$.
 \end{definition}
 
-Wielkość tę wprowadził do matematyki Randell w 1988 i~znalazł dokładną jej wartość dla niewęzła (3), trójlistnika (6) oraz ósemki (7).
-% R. Randell, Invariants of piecewise-linear knots, Knot theory (Warsaw, 1995) 307–319, Banach Center
-Publ. 42, Polish Acad. Sci., Warsaw, 1998.
+Wielkość tę wprowadził do matematyki Randell w~\cite{randell98} i~znalazł dokładną jej wartość dla niewęzła (3), trójlistnika (6) oraz ósemki (7).
 Negami trzy lata później w~\cite{negami91} pokazał przy użyciu teorii grafów, że dla nietrywialnych węzłów prawdziwe są nierówności
 \begin{equation}
     \frac{5+\sqrt{9 + 8 \crossing K}}{2} \le \operatorname{s} K \le 2 \crossing K.
 \end{equation}
 
 Trójlistnik to jedyny węzeł realizujący górne ograniczenie.
-Z~pracy Elrifaia wynika, że dolne i górne ograniczenie nie pokrywają się dla żadnego węzła o co najwyżej 26 skrzyżowaniach (\cite{elrifai06}, wiemy o niej z \cite[s. 1]{huh11}).
+% Huh, Oh 2011 z trójlistnikiem?
+Z~pracy Elrifaia \cite{elrifai06} (a wiemy o~niej z~\cite[s. 1]{huh11}) wynika, że dla węzłów o~co najwyżej 26 skrzyżowaniach, dolne ograniczenie jest ostre: można pisać $<$ w~miejsce $\le$.
 
 Jin oraz Kim w 1993 ograniczyli liczby patykowe dla węzłów torusowych korzystając z~liczby supermostowej.
 Wkrótce wynik został poprawiony przez samego Jina, w pracy \cite{jin97} znalazł dokładne wartości dla niektórych węzłów.
-I~tak, jeśli $2 \le p < q \le 2p$, to $\operatorname{s} T_{p,q} = 2q$ oraz $\operatorname{s} T_{p, p-1} = 2$.
+I~tak, jeśli $2 \le p < q < 2p$, to $\operatorname{s} T_{p,q} = 2q$ oraz $\operatorname{s} T_{p, 2p} = 4p-1$.
 Ten sam wynik, choć dla węższego zakresu parametrów, odkryto w~\cite{greilsheimer97}.
+\index{suma spójna}%
 Autorzy niezależnie od siebie znaleźli proste oszacowanie z góry dla liczby patykowej sumy spójnej:
 \begin{equation}
     \operatorname{s}(K_1 \shrap K_2) \le \operatorname{s}(K_1) + \operatorname{s}(K_2) - 3.
