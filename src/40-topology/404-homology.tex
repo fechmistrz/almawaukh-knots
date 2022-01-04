@@ -2,16 +2,32 @@
 
 % TODO: wstęp do homologii
 
-\subsection{Homologie Chowanowa}
-
-Z powodu naszego ograniczonego rozumienia topologii algebraicznej oraz teorii kategorii
-wyłożony poniżej materiał jest tak naprawdę tylko przytoczeniem podstawowych definicji i~faktów.
-Prezentowane podejście do homologii Chowanowa pochodzi od Oleg Viro (praca \cite{viro04}.
+Z powodu naszego ograniczonego rozumienia topologii algebraicznej oraz teorii kategorii wyłożony poniżej materiał jest tak naprawdę tylko przytoczeniem podstawowych definicji i~faktów.
 
 Kompleks łańcuchowy to ciąg grup abelowych $C_n$ indeksowanych liczbami całkowitymi
 wraz z~różniczkami, morfizmami $\partial_n \colon C_n \to C_{n-1}$ takimi,
 że złożenie $\partial_{n-1} \circ \partial_n = 0$ jest trywialne.
 Iloraz $\ker \partial_n / \operatorname{im} \partial_{n+1}$ nazywamy $n$-tą grupą homologii, $H_n$.
+
+\subsection{Homologie Chowanowa}
+\index{homologia!Chowanowa|(}
+Viro napisał w 2004 piękną pracę \cite{viro04}, by objaśnić homologię Chowanowa używając tak mało algebry, jak to tylko możliwe.
+Jest przyjazna dla początkujących, więc na niej opiera się reszta tej podsekcji.
+Będziemy pracować ze stanami Kauffmana i obramowanymi węzłami, ponieważ autor sugeruje, że to bardziej naturalne.
+Oryginalna praca Chowanowa to \cite{khovanov00}.
+
+Niech $L$ będzie splotem, zaś $D$ jego diagramem.
+Chowanow skonstruował rodzinę grup $\mathcal H^{i, j}(D)$ takich, że
+\begin{equation}
+    K(L, q) = \sum_{i, j} q^j (-1)^i \dim_\Q (\mathcal H^{i, j}(D) \otimes \Q),
+\end{equation}
+gdzie $K$ jest wersją wielomianu Jonesa.
+Grupy $\mathcal H^{i, j}$ są u~niego grupami homologii pewnych kompleksów łańcuchowych.
+Ich konstrukcja była przeładowana algebraicznymi szczegółami, później Bar-Natan \cite{barnatan02}, Viro podali jej warianty z~myślą o~topologach.
+% Viro - Remarks on definition of Khovanov homology, arXiv
+
+% Rasmussen podał nowy dowód hipotezy Milnora o plastrowym genusie węzłów torusowych, jest to pierwszy dowód który nie zależy od gauge theory.
+% https://mathscinet.ams.org/mathscinet-getitem?mr=2729272
 
 Innym narzędziem wykrywającym niewęzły jest homologia Chowanowa (opisana później),
 jak pokazał Kronheimer z~Mrówką \cite{kronheimer11}.
@@ -22,11 +38,6 @@ Nie możemy liczyć na istotne przyspieszenie:
 znalezienie przybliżenia wielomianu Jonesa jest problemem \#P-trudnym (\cite{kuperberg15}, \cite{vertigan05}),
 a przy znanych homologiach -- wręcz trywialnym.
 Patrz też \ref{prp:jones_at_roots_of_unity}.
-
-% Przykładem takiego obiektu jest kompleks symplicjalny
-% Kompleks symplicjalny: para $K = (V, P)$, gdzie $P \subseteq \mathfrak P(V)$ jest
-% taką rodziną skończonych podzbiorów zamkniętą na branie podzbiorów, że $v \in V \implies \{v\} \in P$.
-% $V$ zbiór wierzchołków, $P$ sympleksów.
 
 \begin{definition}
     Niech $D$ będzie diagram splotu.
@@ -53,7 +64,6 @@ Tutaj lokalnie $\sigma(s) = |s|$, oraz $\tau(s) = |r^{-1}[1]| - |r^{-1}[-1]|$.
 %%% Zauważmy, że $|D_s| \equiv r(s) \mod 2$. DLACZEGO?
 
 \begin{definition}
-    \index{homologia!Chowanowa}
     Niech $C_{i, j}$ będzie wolną grupą abelową generowaną przez zbiór $\mathcal S_{i, j}$.
     Ponumerujmy skrzyżowania diagramu $D$ liczbami $1, 2, \ldots, n$.
     Homologie Chowanowa splotu o~diagramie $D$ to homologie kompleksu
@@ -78,8 +88,9 @@ gdy okręgi dodatnie (z $r^{-1}[1]$) zamienimy na $X$, zaś pozostałe na $1$.
 
 % Patrz ,,system Frobeniusa''.
 
+\index{homologia!Chowanowa|)}
+
 \subsection{Homologia Floera}
 Do zrobienia...
-
 
 % Koniec sekcji Homologie
