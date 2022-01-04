@@ -10,12 +10,8 @@ Na zakończenie wspomnimy o~mutacjach.
     W razie potrzeby zmieniamy orientację supła na przeciwną.
 \end{definition}
 
-\begin{tobedone}
-rysunek z pracy ,,Tabulating and distinguishing mutants''
-\end{tobedone}
-
 \begin{definition}[mutant]
-    \label{def:mutant}
+\label{def:mutant}%
     Niech $K$ będzie węzłem.
     Węzeł, który powstaje przez wykonanie ciągu mutacji na węźle $K$, nazywamy mutantem węzła $K$.
 \end{definition}
@@ -25,10 +21,11 @@ Najprostszą, a zarazem najsłynniejszą parą różnych od siebie mutantów sta
 \index{węzeł!Conwaya}%
 \index{węzeł!Kinoshity-Terasakiego}%
 
-\begin{tobedone}
-rysunek
-\end{tobedone}
-
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.601\linewidth]{../data/mixed/knudemutation.png}
+\caption{Węzły $11n_{42}$ oraz $11n_{34}$. Grafika Sørena Jørgensena, dostępna na licencji \href{https://creativecommons.org/licenses/by-sa/3.0/deed.en}{CC BY-SA 3.0} pod adresem \url{https://en.wikipedia.org/wiki/File:Knudemutation.svg}.}
+\end{figure}
 Conway zauważył podczas klasyfikacji niealternujących węzłów, że tylko one posiadają trywialny wielomian Alexandera.
 Mają też taki sam wielomian Jonesa,
 \begin{equation}
@@ -63,6 +60,7 @@ Mutanty nie dają się łatwo odróżniać niezmiennikami, niestety dowód tego 
 Zbiór problemów niskowymiarowej topologii opublikowany przez Kirby'iego \cite{kirby78} zawiera następujące pytanie:
 
 \begin{conjecture}[problem 1.91]
+\index{węzeł!satelitarny}
     Niech $K$ będzie prostym\footnote{simple} węzłem bez orientacji.
     Czy istnieją węzły niebędące mutantami $K$, których nie można odróżnić od $K$ wielomianem Jonesa oraz wszystkimi jego satelitami?
 \end{conjecture}
