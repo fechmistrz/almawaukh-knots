@@ -1,5 +1,6 @@
-\subsection{Hipotezy Taita} % (fold)
-\label{sub:tait_conjectures}
+\subsection{Hipotezy Taita}
+\label{sub:tait_conjectures}%
+\index{hipoteza!Taita|(}%
 W tej podsekcji definiujemy stan oraz wygładzenie diagramu, następnie wyprowadzamy wzór o~sumowaniu stanów oraz dowodzimy prawdziwości dwóch technicznych lematów.
 Pozwoli to oszacować rozpiętość wielomianu Jonesa, skąd bezpośrednio wynika już I hipoteza Taita \ref{con:tait_1}.
 Nie odbiega to znacząco od podejścia Kauffmana w~\cite{kauffman87}.
@@ -11,7 +12,7 @@ Na koniec naszkicujemy krótko dowody pozostałych hipotez.
 \index{diagram!zredukowany}%
 \index{przesmyk}%
 \label{def:isthmus}%
-    Wąskie skrzyżowanie między dwiema rozłącznymi częśćmi diagramu nazywamy przesmykiem.
+    Wąskie skrzyżowanie między dwiema rozłącznymi częściami diagramu nazywamy przesmykiem.
 \begin{comment}
     \[
         \begin{tikzpicture}[baseline=-0.65ex,scale=0.07]
@@ -26,15 +27,15 @@ Na koniec naszkicujemy krótko dowody pozostałych hipotez.
         \end{tikzpicture}
     \]
 \end{comment}
-    Diagram jest zredukowany, gdy nie zawiera przesmyków.
+    Diagram, na którym nie ma żadnych przesmyków, nazywamy zredukowanym.
 \end{definition}
 
 Słowo przesmyk pochodzi z teorii grafów, skrzyżowanie jest przesmykiem dokładnie wtedy, gdy odpowiadająca mu krawędź w grafie węzła jest przesmykiem, czyli jej usunięcie zwiększa liczbę składowych spójności.
-Tam używa się także określenia most, które u~nas ma już inne znaczenie.
+Tam używa się także określenia most, które u~nas ma już zarezerwowane inne znaczenie.
 Poza tym w tej książce nie ma grafów.
 
 \begin{definition}[diagram spójny]
-\index{diagram!spójny}
+\index{diagram!spójny}%
     Diagram, którego nie można podzielić na dwie niepuste części niespotykające się na żadnym skrzyżowaniu, nazywamy spójnym.
 \end{definition}
 
@@ -50,8 +51,9 @@ Hipoteza Taita mówi coś o zredukowanych, spójnych i alternujących diagramach
 
 \begin{definition}
 \index{wygładzenie}%
-    Niech $D$ będzie diagramem splotu, zaś $s$ jego stanem.
+    Niech $D$ będzie diagramem splotu $L$, zaś $s$ jego stanem.
     Diagram powstały przez wygładzenie wszystkich skrzyżowań zgodnie z~ich stanem oznaczamy $sD$.
+
     Przez $|sD|$ rozumiemy liczbę zamkniętych, nieprzecinających się krzywych, z których składa się nowy diagram.
 \end{definition}
 
@@ -319,7 +321,7 @@ Możemy wreszcie zająć się rozpiętością wielomianu Jonesa.
 
 \begin{conjecture}[Taita, pierwsza]
     \index{hipoteza!Taita}
-    Zredukowany, spójny, alternujący diagram zorientowanego splotu $L$ realizuje jego indeks skrzyżowaniowy.
+    Zredukowany, spójny, alternujący diagram $D$ zorientowanego splotu $L$ realizuje jego indeks skrzyżowaniowy.
 \end{conjecture}
 
 \begin{proof}
@@ -358,5 +360,7 @@ Założenia, że węzeł jest alternujący nie można pominąć, patrz tekst za 
 \end{proposition}
 
 Dziesięć lat temu Stojmenow zamieścił na portalu arXiv pracę \cite{stoimenow07}; czekam na publikację w recenzowanym czasopiśmie.
+
+\index{hipoteza!Taita|)}%
 
 % Koniec podsekcji Rozpiętość i~wielomian Jonesa

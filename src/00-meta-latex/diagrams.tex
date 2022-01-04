@@ -85,7 +85,7 @@
 \end{tikzpicture}}
 
 \newcommand{\LittleLeftCrossing} {\begin{tikzpicture}[baseline=-0.65ex, scale=0.03]
-    \useasboundingbox (-7, -5) rectangle (7, 5);
+    \useasboundingbox (-5, -5) rectangle (5, 5);
     \begin{knot}[clip width=5, end tolerance=1pt]
         \strand[semithick] (-5, -5) to (5, 5);
         \strand[semithick] (-5, 5) to (5, -5);
@@ -94,7 +94,7 @@
 }
 
 \newcommand{\LittleRightCrossing} {\begin{tikzpicture}[baseline=-0.65ex, scale=0.03]
-    \useasboundingbox (-7, -5) rectangle (7, 5);
+    \useasboundingbox (-5, -5) rectangle (5, 5);
     \begin{knot}[clip width=5, end tolerance=1pt, flip crossing/.list={1}]
         \strand[semithick] (-5, -5) to (5, 5);
         \strand[semithick] (-5, 5) to (5, -5);
@@ -138,7 +138,7 @@
 \end{tikzpicture}}
 
 \newcommand{\LittleLeftSmoothing} {\begin{tikzpicture}[baseline=-0.65ex,scale=0.03]
-    \useasboundingbox (-7, -5) rectangle (7, 5);
+    \useasboundingbox (-5, -5) rectangle (5, 5);
     \begin{knot}[clip width=5, end tolerance=1pt]
         \strand[semithick] (-5, -5) [in=135, out=45] to (5, -5);
         \strand[semithick] (-5, 5) [in=-135, out=-45] to (5, 5);
@@ -146,7 +146,7 @@
 \end{tikzpicture}}
 
 \newcommand{\LittleRightSmoothing} {\begin{tikzpicture}[baseline=-0.65ex,scale=0.03]
-    \useasboundingbox (-7, -5) rectangle (7, 5);
+    \useasboundingbox (-5, -5) rectangle (5, 5);
     \begin{knot}[clip width=5, end tolerance=1pt]
         \strand[semithick] (-4, -5) to [out=45, in=-45] (-4, 5);
         \strand[semithick] (4, -5) to [out=135, in=-135] (4, 5);
