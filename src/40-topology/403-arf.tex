@@ -1,7 +1,22 @@
-\section{Niezmiennik Cahita Arfa} % (fold)
+\section{Niezmiennik Arfa}
+\index{niezmiennik!Arfa|(}
 
-Niezmiennik Arfa dla węzłów można zdefiniować na kilka sposobów, z~których żaden jest istotnie lepszy od pozostałych.
-Przyjmuje on dwie wartości: $0$ i $1$.
+Cahit Arf wprowadził w 1941 roku pewien niezmiennik nieosobliwych form kwadratowych nad ciałem charakterystyki dwu.
+Zrobił to między innymi po to, by sklasyfikować takie formy kwadratowe.
+My poznamy wariant niezmiennika Arfy dla węzłów.
+
+Niech $(v_{i,j})$ będzie macierzą Seiferta węzła $K$ o genusie $g$.
+Wtedy jej wymiary wynoszą $2g \times 2g$ i macierz $V-V^t$ jest symplektyczna.
+
+\begin{definition}
+    Zachowując powyższe oznaczenia, niezmiennik Arfa to
+    \begin{equation}
+        \sum^g_{i=1}v_{2i-1,2i-1}v_{2i,2i} \pmod 2.
+    \end{equation}
+    % Przyjmuje on dwie wartości: 0, 1
+\end{definition}
+
+Niezmiennik Arfa dla węzłów można zdefiniować na kilka sposobów, z~których żaden nie jest istotnie lepszy od pozostałych.
 Pierwszy był pomysł Robertello \cite{robertello65}:
 
 \begin{proposition}[Robertello, 1965]
@@ -21,7 +36,7 @@ Nieco później Murasugi \cite{murasugi69} zauważył, że warunek można uproś
     Wtedy $\operatorname{Arf} K = 0$ wtedy i~tylko wtedy, gdy $\alexander_K(-1) \equiv \pm 1 \mod 8$.
 \end{proposition}
 
-Louis Kauffman zaproponował inne podejście w~1983 roku, z wykorzystaniem diagramów.
+Kauffman zaproponował inne podejście z wykorzystaniem diagramów.
 Dwa węzły nazwiemy równoważnymi przez przejścia, jeśli są związane skończenie wieloma ,,przejściami'' \cite[s. 143]{kauffman83}:
 \begin{comment}
 \[
@@ -64,41 +79,27 @@ Dwa węzły nazwiemy równoważnymi przez przejścia, jeśli są związane skoń
 \end{comment}
 
 \begin{definition}[Kauffman, 1983]
-    \index{niezmiennik!Arfa}
-    Każdy węzeł $K$ jest równoważny przez przejścia albo z niewęzłem, albo z trójlistnikiem.
-    W pierwszym przypadku mówimy, że niezmiennik Arfa znika: $\operatorname{Arf} K = 0$, w drugim, że nie: $\operatorname{Arf} K = 1$.
+    Każdy węzeł $K$ jest równoważny przez przejścia albo z niewęzłem (wtedy mówimy, że $\operatorname{Arf} K = 0$), albo z trójlistnikiem (wtedy, że $\operatorname{Arf} K = 1$).
 \end{definition}
 
 Wreszcie Jones zauważył \cite{jones85}, że wielomian $\jones$ także pozwala na określenie niezmiennika Arfa, dzięki zespolonym algebrom Clifforda oraz pracy \cite{lannes85}.
 Jest to jedyna definicja, którą łatwo rozszerzyć do splotów.
 
 \begin{proposition}[Jones, 1985]
-    \label{prp:arf_jones}
+\label{prp:arf_jones}%
     $\operatorname{Arf}(K) = \jones_K(i)$.
 \end{proposition}
 
 \begin{corollary}
-    Niezmiennik Arfa jest $\shrap$-addytywny.
+    Niezmiennik Arfa jest $\shrap$-addytywny (modulo 2).
 \end{corollary}
 
 \begin{proof}
-    Wynika to z faktu \ref{prp:arf_jones} oraz \ref{prp:jones_multiplicative_2}, ale istnieją też bardziej bezpośrednie dowody.
+    Wynika to z faktu \ref{prp:arf_jones} oraz \ref{prp:jones_multiplicative_2}, ale bezpośredni dowód też istnieje. % gdzie?
 \end{proof}
 
-Na zakończenie zostawiliśmy definicję zakorzenioną w topologii algebraicznej.
+O niezmienniku Arfa usłyszymy jeszcze poznając węzły plastrowe.
 
-\begin{proposition}
-    Niech $(v_{ij})$ będzie macierzą Seiferta powstałą z~krzywych genusu $g$, które reprezentują bazę pierwszej grupy homologii powierzchni.
-    To oznacza, że macierz $V$ wymiaru $2g \times 2g$ ma następującą własność: różnica $V - V^t$ jest symplektyczna.
-    Niezmiennik Arfa to
-    \begin{equation}
-        \sum^g_{i=1}v_{2i-1,2i-1}v_{2i,2i} \pmod 2.
-    \end{equation}
-\end{proposition}
+\index{niezmiennik!Arfa|)}
 
-O niezmienniku Arfa usłyszymy jeszcze poznając węzły plastrowe, w~sekcji \ref{sec:slice}.
-
-% https://macsphere.mcmaster.ca/handle/11375/25082 geometryczna interpretacja
-
-% OEIS http://oeis.org/A131433, ...1434
-% Koniec sekcji Niezmiennik Cahita Arfa
+% Koniec sekcji Niezmiennik Arfa
