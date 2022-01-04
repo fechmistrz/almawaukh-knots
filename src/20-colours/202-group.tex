@@ -1,16 +1,16 @@
-\section{Grupa} % (fold)
+\section{Grupa kolorująca}
+\index{grupa kolorująca|(}
 
-\index{grupa!kolorująca}
 \begin{definition}
-    \label{def:colouring_group}
+\label{def:colouring_group}%
     Niech $L$ będzie splotem.
     Grupa kolorująca $L$, oznaczana $\operatorname{Col}(L)$, to abelowa grupa generowana przez łuki diagramu przedstawiającego $L$ z~równaniami skrzyżowań tegoż diagramu jako relacjami.
     Oprócz tego mamy jeszcze jedną relację, $a = 0$, gdzie $a$ jest ustalonym łukiem.
 \end{definition}
 
 \begin{proposition}
-    \label{prp:colourings_are_morphisms}
-    Splot $L$ koloruje się modulo $n$, wtedy i~tylko wtedy gdy istnieje nietrywialny homomorfizm $\operatorname{Col}(L) \to \Z/n\Z$.
+\label{prp:colourings_are_morphisms}%
+    Splot $L$ koloruje się modulo $n$, wtedy i  ~tylko wtedy gdy istnieje nietrywialny homomorfizm $\operatorname{Col}(L) \to \Z/n\Z$.
 \end{proposition}
 
 \begin{proof}
@@ -24,7 +24,8 @@
 \end{proof}
 
 \begin{corollary}
-    \label{cor:knot_determinant_odd}
+\index{wyznacznik}%
+\label{cor:knot_determinant_odd}%
     Niech $K$ będzie węzłem.
     Wtedy $\det K$ jest liczbą nieparzystą.
 \end{corollary}
@@ -67,7 +68,7 @@ Podsumujmy.
 \end{proposition}
 
 \begin{corollary}
-    Grupa kolorująca splotu jest skończona wtedy i tylko wtedy, gdy wyznacznik tego splotu jest niezerowy.
+    Grupa kolorująca splotu $L$ jest skończona wtedy i tylko wtedy, gdy wyznacznik $\det L$ tego splotu jest niezerowy.
 \end{corollary}
 
 \begin{proof}
@@ -75,7 +76,8 @@ Podsumujmy.
 \end{proof}
 
 \begin{corollary}
-    \label{cor:determinant_invariant}
+\index{wyznacznik}%
+\label{cor:determinant_invariant}%
     Wyznacznik jest niezmiennikiem splotów.
 \end{corollary}
 
@@ -114,11 +116,13 @@ Rozpatrzmy węzeł $K_k$ dla $k \ge 4$:
 Niech $W_n$ będzie macierzą $n \times n$, na przekątnej której znajdują się $2$, zaś bezpośrednio nad i~pod nią -- wyrazy $-1$.
 W macierzy kolorującej (ze skreślonym wierszem ,,$c_k$'' oraz kolumną ,,$a_k$'') zamieńmy miejscami dwie pierwsze kolumny, dodajmy do drugiej dwa razy pierwszą, zaś do drugiego wiersza -- dwa razy pierwszy wiersz.
 Otrzymamy macierz
-\[\begin{pmatrix}
-    -1 & 0 & 0 \\
-    0 & 3 & -1 \\
-    0 & -1 & W_{k-3}
-\end{pmatrix}\]
+\begin{equation}
+    \begin{pmatrix}
+        -1 & 0 & 0 \\
+        0 & 3 & -1 \\
+        0 & -1 & W_{k-3}
+    \end{pmatrix}  
+\end{equation}
 
 Powtarzając operacje: zamiana miejscami skrajnie lewych kolumn, dodanie do drugiej $2m+1$ razy pierwszej, odjęcie pierwszego wiersza od trzeciego, czyli sprowadzając naszą macierz do postaci normalnej Smitha przekonamy się, że na jej przekątnej znajdują się wyrazy $-1, -1, \ldots, -1, 2k-3$.
 To oznacza, że $\det K_k = 2k-3$.
@@ -133,4 +137,7 @@ To oznacza, że $\det K_k = 2k-3$.
 
     Macierzą dla splotu trójlistników $(3_1)^{\# n}$ trójlistników jest $\operatorname{diag}(1, \ldots, 1, 3, \ldots, 3)$, zaś dla węzła $K_k$: $\operatorname{diag} (1, \ldots, 1, 3^?)$.
 \end{proof}
+
+\index{grupa kolorująca|)}%
+
 % koniec sekcji grupa
