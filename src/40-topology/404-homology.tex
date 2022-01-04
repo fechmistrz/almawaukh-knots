@@ -1,13 +1,7 @@
 \section{Homologie}
 
-% TODO: wstęp do homologii
-
-Z powodu naszego ograniczonego rozumienia topologii algebraicznej oraz teorii kategorii wyłożony poniżej materiał jest tak naprawdę tylko przytoczeniem podstawowych definicji i~faktów.
-
-Kompleks łańcuchowy to ciąg grup abelowych $C_n$ indeksowanych liczbami całkowitymi
-wraz z~różniczkami, morfizmami $\partial_n \colon C_n \to C_{n-1}$ takimi,
-że złożenie $\partial_{n-1} \circ \partial_n = 0$ jest trywialne.
-Iloraz $\ker \partial_n / \operatorname{im} \partial_{n+1}$ nazywamy $n$-tą grupą homologii, $H_n$.
+Ta sekcja wymaga znajomości przynajmniej homologii: kompleksów łańcuchowych, różniczek, grup homologii.
+Można się tego nauczyć z~każdego podręcznika topologii algebraicznej.
 
 \subsection{Homologie Chowanowa}
 \index{homologia!Chowanowa|(}
@@ -33,86 +27,10 @@ Niech $X$ będzie przestrzenią topologiczną, wtedy charakterystykę Eulera ora
     \chi(X) = \sum_{n = 0}^{\dim X} (-1)^n \operatorname{rk} H_n(X),
 \end{equation}
 a przy tym grupy homologii dostarczają więcej informacji, co więcej można o nich myśleć jako funktorach.
+Homologie są kategoryfikacją charakterystyki Eulera.
 
 Kategoryfikacja wielomianu Jonesa polega na zastąpieniu jakoś jego współczynników przez ciąg grup abelowych.
 Wzór o sumowaniu stanów przypomina ostatnią równość, brakuje tylko przedstawienia składników po prawej stronie jako alternująca suma rang grup.
-
-Pewne drobne trudności techniczne skłoniły (być może) Chowanowa do zmiany zmiennej w~powiększonym wielomianie Jonesa: $q = -t^{1/2}$.
-Dostał tak nowy wielomian $K$ o trzech własnościach:
-
-% TODO
-
-Stąd widać już, jakie grupy dobrać dla niewęzła:
-\begin{equation}
-    H^{i,j} = \begin{cases}
-        \Z & \textrm{ jeśli } i = 0, j = \pm 1 \\
-        0  & \textrm{ w przeciwnym razie}.
-    \end{cases}
-\end{equation}
-Wtedy spełniona jest równość
-\begin{equation}
-    K(L) = \sum_{i, j} (-1)^i q^j \operatorname{rk} H^{i, j} (L).
-\end{equation}
-Pozostało powtórzyć to dla dowolnego splotu.
-
-Wzór o sumowaniu stanów Kauffmana przybiera postać:
-\begin{equation}
-    K(L) = \sum_s (-1)^{(\writhe D - |s|)/2} q^{(3\writhe D - |s|)/2} (q+1/q)^{|sD|}.
-\end{equation}
-
-Każdy składnik z prawej strony przyczynia się do różnych jednomianów, zatem ma wpływ na różne grupy (które dopiero budujemy).
-Stany nie są prawdziwym odpowiednikiem sympleksów z kategoryfikacji charakterystyki Eulera.
-Najprostszym pomysłem, jak to naprawić, jest rozbicie ostatniej potęgi $q + 1/q$.
-Zauważmy, że ma tyle czynników, ile wygładzenie diagramu ma składowych.
-To motywuje definicję:
-
-\begin{definition}[stan wzbogacony]
-    Stan diagramu $D$ razem z przypisaniem znaku $+$ lub $-$ do każdego okręgu $sD$ nazywamy stanem wzbogaconym. 
-\end{definition}
-
-Dla ustalonego wzbogaconego stanu $S$ diagramu $D$ oznaczmy przez $\tau(S)$ sumę znaków przypisanych do okręgów\footnote{Oznaczenie wzięte z pracy Viro, żywimy nadzieję, że nikt nie weźmie $\tau$ za liczbę kolorowań z rodziału drugiego}.
-Wtedy
-\begin{equation}
-    q^{(3 \writhe D - |s|)/2} (q + 1/q)^{|sD|} = \sum_{S/s} q^{(3 \writhe D - |s| + 2 \tau(S))/2},
-\end{equation}
-gdzie sumowanie odbywa się po wszystkich stanach $S$ wzbogacających stan $s$.
-Niech
-\begin{equation}
-    j(S) := \frac 12 (3 \writhe D - |s| + 2 \tau(S)).
-\end{equation}
-
-Dobrnęliśmy do
-\begin{equation}
-    K(L, q) = \sum_S (-1)^{(\writhe D - |s|)/2} q^{j(S)},
-\end{equation}
-gdzie sumujemy po wszystkich wzbogaconych stanach diagramu $D$.
-
-Zdefiniujmy jeszcze trochę obiektów.
-Niech $C(D)$ oznacza wolną abelową grupę generowaną przez wzbogacone stany diagramu $D$, zaś $C^j(D)$ będzie jej podgrupą generowaną przez wzbogacone stany $S$ takie, że $j(S) = j$.
-Czyni to $C(D)$ wolną grupą abelową z $\Z$-gradacją:
-\begin{equation}
-    C(D) = \bigoplus_{j \in \Z} C^j (D).
-\end{equation}
-
-Dla ustalonego stanu wzbogaconego $S$, niech $i(S) = (\writhe D - |s|)/2$.
-Określmy jeszcze jedną podgrupę, $C^{i,j}(D) \le C^j(S)$ generowaną przez wzbudzone stany $S$, dla których $i(S) = i$.
-Dostajemy wreszcie
-\begin{equation}
-    K(L, q) = \sum_{j = -\infty}^\infty q^j \sum_{i = -\infty}^\infty (-1)^i \operatorname{rk} C^{i, j}(D).
-\end{equation}
-
-Teraz ,,wystarczy'' zdefiniować funkcję $d$ i sprawdzić, że jest różniczką, to znaczy że $d^2 = 0$.
-Tak też robi Viro, nam brakuje sił, by przybliżyć konstrukcję.
-To już koniec -- różniczka pozwala przejść z grup $C^{i,j}$ do grup homologii.
-
-\begin{definition}[obramowanie]
-\index{obramowanie|see {węzeł obramowany}}%
-\index{węzeł!obramowany}%
-    Każde nieznikające normalne pole wektorowe na splocie nazywamy obramowaniem.
-    Jeżeli wszystkie wektory są równoległe do płaszczyzny, na której leży diagram tego splotu, obramowanie nazywamy płaskim\footnote{Po angielsku ,,blackboard framing'', ale nie da się tego sensownie przetłumaczyć...}.
-\end{definition}
-
-Liczba samozaczepienia zorientowanego obramowanego splotu $L$ to indeks zaczepienia tego splotu ze sobą pchniętym w kierunku obramowania, jej wartość to dokładnie spin.
 
 Viro zauważa, że powszechna definicja wielomianu Jonesa sprawia problem dla pustego splotu (którego nigdy wcześniej nie rozpatrywaliśmy).
 Mamy:
@@ -125,61 +43,102 @@ Dlatego definiuje powiększony wielomian Jonesa:
 \begin{equation}
     \widetilde{\jones_L}(t) = (-t^{1/2} - t^{-1/2}) \cdot \jones_L(t),    
 \end{equation}
+i mówi, że będzie kategoryfikować powiększony wielomian Jonesa, a właściwie powiększoną klamrę Kauffmana.
 
-% Rasmussen podał nowy dowód hipotezy Milnora o plastrowym genusie węzłów torusowych, jest to pierwszy dowód który nie zależy od gauge theory.
-% https://mathscinet.ams.org/mathscinet-getitem?mr=2729272
+Jak pisze dalej, pewne drobne trudności techniczne mogły skłonić Chowanowa do pozbycia się ułamkowych potęg przez zmianę zmiennej w~powiększonym wielomianie Jonesa: niech $q := -t^{1/2}$.
+Dostaje się tak nowy wielomian, nazwijmy go $K$.
+Spełnia trzy aksjomaty:
+\begin{itemize}
+\item (normalizacja) $K(\LittleUnknot) = q + 1/q$;
+\item (stabilizacja) $K(L \sqcup \LittleUnknot) = (q + 1/q) K(L)$;
+\item (relacja kłębiasta) \begin{equation}
+    q^{-2} K\left(\MediumSkeinPlus\right) - q^{2} K\left(\MediumSkeinMinus\right) = (q^{-1}-q) K\left(\MediumSkeinZero\right).
+\end{equation}
+\end{itemize}
 
-Innym narzędziem wykrywającym niewęzły jest homologia Chowanowa (opisana później),
-jak pokazał Kronheimer z~Mrówką \cite{kronheimer11}.
-\textbf{We prove that a knot is the unknot if and only if its reduced Khovanov cohomology has rank 1. The proof has two steps. We show first that there is a spectral sequence beginning with the reduced Khovanov cohomology and abutting to a knot homology defined using singular instantons. We then show that the latter homology is isomorphic to the instanton Floer homology of the sutured knot complement: an invariant that is already known to detect the unknot.}
-Bar-Natan, topolog izraelski, napisał program liczący te homologie szybko \cite{barnatan07},
-zapewne w~czasie $O(\exp(c \sqrt n))$, dla diagramu o~$n$ skrzyżowaniach.
+Stąd widać już, jakie grupy dobrać dla niewęzła:
+\begin{equation}
+    H^{i,j} = \begin{cases}
+        \Z & \textrm{ jeśli } i = 0, j = \pm 1 \\
+        0  & \textrm{ w przeciwnym razie}.
+    \end{cases}
+\end{equation}
+Wtedy spełniona jest równość
+\begin{equation}
+    K(L, q) = \sum_{i, j} (-1)^i q^j \operatorname{rk} H^{i, j} (L).
+\end{equation}
+Pozostało powtórzyć to dla dowolnego splotu.
+Wzór o sumowaniu stanów przybiera postać:
+\begin{equation}
+    K(L, q) = \sum_s (-1)^{(\writhe D - |s|)/2} q^{(3\writhe D - |s|)/2} (q+1/q)^{|sD|}.
+\end{equation}
+
+Reprezentacja ta ma jedną wadę: każdy składnik z prawej strony przyczynia się do różnych jednomianów, zatem ma wpływ na różne grupy (których dopiero szukamy).
+,,Surowe'' stany nie są prawdziwym odpowiednikiem sympleksów, jakie spotyka się podczas kategoryfikacji charakterystyki Eulera.
+Najprostszym pomysłem, jak to naprawić, jest rozbicie ostatniej potęgi $q + 1/q$.
+Zauważmy, że ma tyle czynników, ile wygładzenie diagramu ma składowych.
+To motywuje definicję:
+
+\begin{definition}[stan wzbogacony]
+\index{stan!wzbogacony}%
+    Stan diagramu $D$ razem z przypisaniem znaku $+$ lub $-$ do każdego okręgu $sD$ nazywamy stanem wzbogaconym. 
+\end{definition}
+
+Dla ustalonego wzbogaconego stanu $S$ diagramu $D$ oznaczmy przez $\tau(S)$ sumę znaków przypisanych do okręgów\footnote{Oznaczenie wzięte z pracy Viro, żywimy nadzieję, że nikt nie weźmie $\tau$ za liczbę kolorowań z rodziału drugiego. Poza tym, Viro pisze $\sigma(s)$ zamiast naszego $|s|$ oraz $|s|$ zamiast naszego $|sD|$. Ostrożność wskazana.}.
+Wtedy
+\begin{equation}
+    q^{(3 \writhe D - |s|)/2} (q + 1/q)^{|sD|} = \sum_{S/s} q^{(3 \writhe D - |s| + 2 \tau(S))/2},
+\end{equation}
+gdzie sumowanie odbywa się po wszystkich stanach $S$ wzbogacających stan $s$.
+Niech
+\begin{equation}
+    j(S) := \frac 12 (3 \writhe D - |s| + 2 \tau(S)).
+\end{equation}
+Dobrnęliśmy do
+\begin{equation}
+    K(L, q) = \sum_S (-1)^{(\writhe D - |s|)/2} q^{j(S)},
+\end{equation}
+tym razem sumujemy po wszystkich wzbogaconych stanach diagramu $D$.
+
+Potrzebujemy jeszcze trochę nowych obiektów.
+Niech $C(D)$ oznacza wolną abelową grupę generowaną przez wzbogacone stany diagramu $D$, a $C^j(D)$ będzie jej podgrupą generowaną przez wzbogacone stany $S$ takie, że $j(S) = j$.
+
+Czyni to $C(D)$ wolną grupą abelową z $\Z$-gradacją:
+\begin{equation}
+    C(D) = \bigoplus_{j \in \Z} C^j (D).
+\end{equation}
+
+Dla ustalonego stanu wzbogaconego $S$, niech $i(S) = (\writhe D - |s|)/2$.
+Określmy ostatnią podgrupę, $C^{i,j}(D) \le C^j(S)$ generowaną przez wzbudzone stany $S$, dla których $i(S) = i$.
+Dostajemy wreszcie
+\begin{equation}
+    K(L, q) = \sum_{j = -\infty}^\infty q^j \sum_{i = -\infty}^\infty (-1)^i \operatorname{rk} C^{i, j}(D).
+\end{equation}
+
+Teraz ,,wystarczy'' zdefiniować funkcję $d$ i sprawdzić, że jest różniczką, to znaczy że $d^2 = 0$.
+Tak też robi Viro, nam brakuje sił, by przybliżyć konstrukcję.
+To już koniec -- różniczka pozwala przejść z grup $C^{i,j}$ do grup homologii.
+Pewne wyjaśnienia znaleźć można w~\cite[s. 42]{przytycki15}, gdzie podano przepis wymagający właściwie tylko ponumerowania skrzyżowań.
+
+Bar-Natan, topolog izraelski, napisał program liczący homologie Chowanowa szybko \cite{barnatan07}, przy czym szybko oznacza: chyba\footnote{Źródło: komentarze pod postem \url{https://mathoverflow.net/a/232267}} w~czasie $O(\exp(c \sqrt n))$, dla diagramu o~$n$ skrzyżowaniach.
 Nie możemy liczyć na istotne przyspieszenie:
 znalezienie przybliżenia wielomianu Jonesa jest problemem \#P-trudnym (\cite{kuperberg15}, \cite{vertigan05}),
-a przy znanych homologiach -- wręcz trywialnym.
-Patrz też \ref{prp:jones_at_roots_of_unity}.
+a przy znanych homologiach -- trywialnym.
+(Ale patrz też fakt \ref{prp:jones_at_roots_of_unity}).
 
-\begin{definition}
-    Niech $D$ będzie diagram splotu.
-    Niezredukowanym nawiasem Kauffmana nazywamy wielomian
-    \[
-        [D] = (-A^2 - A^{-2}) \langle D \rangle = \sum_s A^{\sigma(s)} (-A^2 - A^{-2})^{|D_s|}.
-    \]
-\end{definition}
+Kronheimer, Mrówka \cite{kronheimer11} pokazali:
 
-\begin{definition}
-    Rozszerzonym stanem Kauffmana nazywamy parę uporządkowaną $S = (s, r)$,
-    gdzie $s$ to stan Kauffmana,
-    zaś $r$ to odwzorowanie $D_s \to \{\pm 1\}$ ze zbioru składowych diagramu.
-\end{definition}
+\begin{proposition}
+\label{khovanov_detects_unknot}%
+    Zredukowana kohomologia Chowanowa wykrywa niewęzeł.
+\end{proposition}
 
-\begin{definition}
-    Zbiór rozszerzonych stanów Kauffmana $\mathcal S(D)$:
-    rozbija się na podzbiory indeksowane przez pary liczb całkowitych:
-    $\mathcal S_{i, j} = \{S : \sigma(s) = i, \sigma(s) + 2 \tau(s) = j\}$.
-\end{definition}
+\begin{proof}
+    Dowód składa się z dwóch kroków.
+    W pierwszym panowie pokazują, że istnieje ciąg spektralny zaczynający się od zredukowanej kohomologii Chowanowa, po którym następuje koniec: homologia zdefiniowana singularnymi instantonami.
 
-Tutaj lokalnie $\sigma(s) = |s|$, oraz $\tau(s) = |r^{-1}[1]| - |r^{-1}[-1]|$.
-
-%%% Zauważmy, że $|D_s| \equiv r(s) \mod 2$. DLACZEGO?
-
-\begin{definition}
-    Niech $C_{i, j}$ będzie wolną grupą abelową generowaną przez zbiór $\mathcal S_{i, j}$.
-    Ponumerujmy skrzyżowania diagramu $D$ liczbami $1, 2, \ldots, n$.
-    Homologie Chowanowa splotu o~diagramie $D$ to homologie kompleksu
-    \[
-        C(D) = \bigoplus_{i, j \in \Z} C_{i, j}(D),
-    \]
-    z różniczkami $\partial_{i, j} \colon C_{i,j} \to C_{i-2, j}$ danymi wzorem
-    \[
-        \partial_{i, j}(S) = \sum_{S'} (-1)^{t(S, S')}  S'.
-    \]
-    Sumowanie odbywa się po tych $S' \in \mathcal S_{i-2, j}$,
-    które różnią się od $S$ na dokładnie jednym skrzyżowaniu $v$:
-    $S(v) = 1$, $S'(v) = -1$ oraz $\tau(S') = 1 + \tau (S)$.
-
-    Liczba $t(S, S')$ to liczba skrzyżowań $D$ mniejszych od $v$, dla których $S$ przyjmuje wartość $-1$.
-\end{definition}
+    Potem dowodzą, że ta homologia jest izomorficzna z instantonową homologią Floera szwowego dopełnienia węzła, o której wiadomo, że wykrywa niewęzeł.
+\end{proof}
 
 \index{homologia!Chowanowa|)}
 

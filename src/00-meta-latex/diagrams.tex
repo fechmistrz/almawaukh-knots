@@ -427,7 +427,7 @@
 
 \newcommand{\MediumSkeinPlus} {\begin{tikzpicture}[baseline=-0.65ex,scale=0.06]
     \useasboundingbox (-7, -5) rectangle (7, 5);
-    \begin{knot}[clip width=5, end tolerance=1pt]
+    \begin{knot}[clip width=4, end tolerance=1pt]
         \strand[semithick, -Latex] (-5, -5) to (5, 5);
         \strand[semithick,Latex-] (-5, 5) to (5, -5);
     \end{knot}
@@ -444,7 +444,7 @@
 
 \newcommand{\MediumSkeinMinus} {\begin{tikzpicture}[baseline=-0.65ex,scale=0.06]
     \useasboundingbox (-7, -5) rectangle (7, 5);
-    \begin{knot}[clip width=5, end tolerance=1pt, flip crossing/.list={1}]
+    \begin{knot}[clip width=4, end tolerance=1pt, flip crossing/.list={1}]
         \strand[semithick, -Latex] (-5, -5) to (5, 5);
         \strand[semithick,Latex-] (-5, 5) to (5, -5);
     \end{knot}
@@ -454,8 +454,16 @@
     \useasboundingbox (-7, -7) rectangle (7, 5);
     \begin{knot}[clip width=5, end tolerance=1pt, flip crossing/.list={1}]
         \strand[semithick, -latex] (-5, -5) to [out=45, in=-45] (-5, 5);
-        \strand[semithick, -Latex] (5, -5) to [out=135, in=-135] (5, 5);
+        \strand[semithick, -latex] (5, -5) to [out=135, in=-135] (5, 5);
         \node[darkblue] at (0, -4)[below] {$L_0$};
+    \end{knot}
+\end{tikzpicture}}
+
+\newcommand{\MediumSkeinZero} {\begin{tikzpicture}[baseline=-0.65ex,scale=0.06]
+    \useasboundingbox (-7, -5) rectangle (7, 5);
+    \begin{knot}[clip width=5, end tolerance=1pt, flip crossing/.list={1}]
+        \strand[semithick, -latex] (-5, -5) to [out=45, in=-45] (-5, 5);
+        \strand[semithick, -latex] (5, -5) to [out=135, in=-135] (5, 5);
     \end{knot}
 \end{tikzpicture}}
 
