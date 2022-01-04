@@ -26,6 +26,106 @@ Grupy $\mathcal H^{i, j}$ są u~niego grupami homologii pewnych kompleksów ła�
 Ich konstrukcja była przeładowana algebraicznymi szczegółami, później Bar-Natan \cite{barnatan02}, Viro podali jej warianty z~myślą o~topologach.
 % Viro - Remarks on definition of Khovanov homology, arXiv
 
+Homologię Chowanowa nazywa się kategoryfikacją wielomianu Jonesa.
+Zanim zagłębimy się w szczegóły, rozpatrzmy prostszy przykład tego procesu.
+Niech $X$ będzie przestrzenią topologiczną, wtedy charakterystykę Eulera oraz grupy homologii łączy zależność
+\begin{equation}
+    \chi(X) = \sum_{n = 0}^{\dim X} (-1)^n \operatorname{rk} H_n(X),
+\end{equation}
+a przy tym grupy homologii dostarczają więcej informacji, co więcej można o nich myśleć jako funktorach.
+
+Kategoryfikacja wielomianu Jonesa polega na zastąpieniu jakoś jego współczynników przez ciąg grup abelowych.
+Wzór o sumowaniu stanów przypomina ostatnią równość, brakuje tylko przedstawienia składników po prawej stronie jako alternująca suma rang grup.
+
+Pewne drobne trudności techniczne skłoniły (być może) Chowanowa do zmiany zmiennej w~powiększonym wielomianie Jonesa: $q = -t^{1/2}$.
+Dostał tak nowy wielomian $K$ o trzech własnościach:
+
+% TODO
+
+Stąd widać już, jakie grupy dobrać dla niewęzła:
+\begin{equation}
+    H^{i,j} = \begin{cases}
+        \Z & \textrm{ jeśli } i = 0, j = \pm 1 \\
+        0  & \textrm{ w przeciwnym razie}.
+    \end{cases}
+\end{equation}
+Wtedy spełniona jest równość
+\begin{equation}
+    K(L) = \sum_{i, j} (-1)^i q^j \operatorname{rk} H^{i, j} (L).
+\end{equation}
+Pozostało powtórzyć to dla dowolnego splotu.
+
+Wzór o sumowaniu stanów Kauffmana przybiera postać:
+\begin{equation}
+    K(L) = \sum_s (-1)^{(\writhe D - |s|)/2} q^{(3\writhe D - |s|)/2} (q+1/q)^{|sD|}.
+\end{equation}
+
+Każdy składnik z prawej strony przyczynia się do różnych jednomianów, zatem ma wpływ na różne grupy (które dopiero budujemy).
+Stany nie są prawdziwym odpowiednikiem sympleksów z kategoryfikacji charakterystyki Eulera.
+Najprostszym pomysłem, jak to naprawić, jest rozbicie ostatniej potęgi $q + 1/q$.
+Zauważmy, że ma tyle czynników, ile wygładzenie diagramu ma składowych.
+To motywuje definicję:
+
+\begin{definition}[stan wzbogacony]
+    Stan diagramu $D$ razem z przypisaniem znaku $+$ lub $-$ do każdego okręgu $sD$ nazywamy stanem wzbogaconym. 
+\end{definition}
+
+Dla ustalonego wzbogaconego stanu $S$ diagramu $D$ oznaczmy przez $\tau(S)$ sumę znaków przypisanych do okręgów\footnote{Oznaczenie wzięte z pracy Viro, żywimy nadzieję, że nikt nie weźmie $\tau$ za liczbę kolorowań z rodziału drugiego}.
+Wtedy
+\begin{equation}
+    q^{(3 \writhe D - |s|)/2} (q + 1/q)^{|sD|} = \sum_{S/s} q^{(3 \writhe D - |s| + 2 \tau(S))/2},
+\end{equation}
+gdzie sumowanie odbywa się po wszystkich stanach $S$ wzbogacających stan $s$.
+Niech
+\begin{equation}
+    j(S) := \frac 12 (3 \writhe D - |s| + 2 \tau(S)).
+\end{equation}
+
+Dobrnęliśmy do
+\begin{equation}
+    K(L, q) = \sum_S (-1)^{(\writhe D - |s|)/2} q^{j(S)},
+\end{equation}
+gdzie sumujemy po wszystkich wzbogaconych stanach diagramu $D$.
+
+Zdefiniujmy jeszcze trochę obiektów.
+Niech $C(D)$ oznacza wolną abelową grupę generowaną przez wzbogacone stany diagramu $D$, zaś $C^j(D)$ będzie jej podgrupą generowaną przez wzbogacone stany $S$ takie, że $j(S) = j$.
+Czyni to $C(D)$ wolną grupą abelową z $\Z$-gradacją:
+\begin{equation}
+    C(D) = \bigoplus_{j \in \Z} C^j (D).
+\end{equation}
+
+Dla ustalonego stanu wzbogaconego $S$, niech $i(S) = (\writhe D - |s|)/2$.
+Określmy jeszcze jedną podgrupę, $C^{i,j}(D) \le C^j(S)$ generowaną przez wzbudzone stany $S$, dla których $i(S) = i$.
+Dostajemy wreszcie
+\begin{equation}
+    K(L, q) = \sum_{j = -\infty}^\infty q^j \sum_{i = -\infty}^\infty (-1)^i \operatorname{rk} C^{i, j}(D).
+\end{equation}
+
+Teraz ,,wystarczy'' zdefiniować funkcję $d$ i sprawdzić, że jest różniczką, to znaczy że $d^2 = 0$.
+Tak też robi Viro, nam brakuje sił, by przybliżyć konstrukcję.
+To już koniec -- różniczka pozwala przejść z grup $C^{i,j}$ do grup homologii.
+
+\begin{definition}[obramowanie]
+\index{obramowanie|see {węzeł obramowany}}%
+\index{węzeł!obramowany}%
+    Każde nieznikające normalne pole wektorowe na splocie nazywamy obramowaniem.
+    Jeżeli wszystkie wektory są równoległe do płaszczyzny, na której leży diagram tego splotu, obramowanie nazywamy płaskim\footnote{Po angielsku ,,blackboard framing'', ale nie da się tego sensownie przetłumaczyć...}.
+\end{definition}
+
+Liczba samozaczepienia zorientowanego obramowanego splotu $L$ to indeks zaczepienia tego splotu ze sobą pchniętym w kierunku obramowania, jej wartość to dokładnie spin.
+
+Viro zauważa, że powszechna definicja wielomianu Jonesa sprawia problem dla pustego splotu (którego nigdy wcześniej nie rozpatrywaliśmy).
+Mamy:
+\begin{equation}
+    \jones_\varnothing = \frac{1}{-t^{1/2} - t^{-1/2}},    
+\end{equation}
+a to nie jest wielomian Laurenta jednej zmiennej.
+\index{wielomian Jonesa!powiększony}%
+Dlatego definiuje powiększony wielomian Jonesa:
+\begin{equation}
+    \widetilde{\jones_L}(t) = (-t^{1/2} - t^{-1/2}) \cdot \jones_L(t),    
+\end{equation}
+
 % Rasmussen podał nowy dowód hipotezy Milnora o plastrowym genusie węzłów torusowych, jest to pierwszy dowód który nie zależy od gauge theory.
 % https://mathscinet.ams.org/mathscinet-getitem?mr=2729272
 
@@ -80,13 +180,6 @@ Tutaj lokalnie $\sigma(s) = |s|$, oraz $\tau(s) = |r^{-1}[1]| - |r^{-1}[-1]|$.
 
     Liczba $t(S, S')$ to liczba skrzyżowań $D$ mniejszych od $v$, dla których $S$ przyjmuje wartość $-1$.
 \end{definition}
-
-Chowanow w~pracy \cite{khovanov00} przypisał każdemu rozszerzonemu stanowi Kauffmana
-element w~bialgebrze $A^{\otimes |D_s|}$, gdzie $A = \Z[X]/(X^2)$.
-Różniczka wyraża się w~terminach mnożenia i~komnożenia,
-gdy okręgi dodatnie (z $r^{-1}[1]$) zamienimy na $X$, zaś pozostałe na $1$.
-
-% Patrz ,,system Frobeniusa''.
 
 \index{homologia!Chowanowa|)}
 
