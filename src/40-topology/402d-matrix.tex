@@ -1,14 +1,20 @@
 \subsection{Macierz Seiferta}
+\index{macierz Seiferta|(}
 Niech $K$ będzie węzłem z diagramem $D$ i powierzchnią Seiferta $S$.
 
+% Murasugi, s. 79
 \begin{definition}[graf Seiferta]
-    Jeżeli ściągniemy dyski z dowodu faktu \ref{prp:seifert_exists} do punktów jednocześnie kurcząc doklejone paski, otrzymamy graf zwany grafem Seiferta diagramu $D$.
+\index{graf Seiferta}%
+    Ściągnijmy dyski z dowodu faktu \ref{prp:seifert_exists} do punktów jednocześnie kurcząc doklejone paski, otrzymamy graf zwany grafem Seiferta diagramu $D$.
 \end{definition}
+
+Murasugi \cite[s. 79]{murasugi96} proponuje jako ćwiczenie dowód faktu:
 
 \begin{proposition}
     Graf Seiferta jest dwudzielny i planarny.
 \end{proposition}
 
+% Murasugi 82, 83
 Skoro graf Seiferta jest planarny, to dzieli sferę $S^2$ na $f$ obszarów.
 Można wyznaczyć ich liczbę: skoro $\chi(S^2) = d - b + f = 2$, to $f - 1 = 1 - d + b$, pomijamy obszar nieograniczony.
 Brzeg każdego obszaru jest zamkniętą krzywą, z których tworzymy krzywe $x_1, \ldots, x_m$ na powierzchni Seiferta.
@@ -22,12 +28,16 @@ Potrzebowaliśmy wyróżnić jedną ze stron powierzchni $S$, by słowo ,,nad'' 
     Przy zachowaniu powyższych oznaczeń, macierz, której wyrazy określa wzór $M_{i,j} = \operatorname{lk}(x_i, x_j^*)$, nazywamy macierzą Seiferta.
 \end{definition}
 
-\begin{tobedone}
-The Seifert matrix was introduced by [Seifert 1934] in the case of a knot.
-\end{tobedone}
-
 Konstrukcja macierzy Seiferta zależy od wyboru diagramu oraz orientacji krzywych $x_i$, dlatego nie jest niezmiennikiem węzłów.
 Stanie się nim, kiedy uwzględnimy jeszcze wpływ ruchów Reidemeistera.
+
+\begin{proposition}
+    Kwadratowa macierz $V$ o całkowitych wyrazach jest macierzą Seiferta węzła wtedy i~tylko wtedy, gdy $\det(V - V^t) = 1$.
+\end{proposition}
+
+\begin{proof}
+    Kawauchi \cite[s. 62]{kawauchi96} pisze, że wynika to z~klasyfikacji macierzy Seiferta splotów.
+\end{proof}
 
 \begin{definition}
     Operacja $\Lambda_1$ dla pewnej odwracalnej macierzy $P$ o całkowitych wyrazach (czyli $\det P = \pm 1$) to
@@ -54,34 +64,25 @@ Stanie się nim, kiedy uwzględnimy jeszcze wpływ ruchów Reidemeistera.
 \end{definition}
 
 \begin{definition}
+\index{S-równoważność}%
     Niech $M_1, M_2$ będą macierzami.
     Jeśli $M_2$ można otrzymać z $M_1$ przez skończony ciąg operacji $\Lambda_1, \Lambda_2$ oraz ich odwrotności, to macierze nazywamy $S$-równoważnymi.
 \end{definition}
 
-Litera $S$, jak nietrudno się domyślić, pochodzi od Seiferta.
 Badania powyższej relacji równoważności prowadzili w~latach sześćdziesiątych ubiegłego stulecia Trotter \cite{trotter62}, Murasugi \cite{murasugi65} oraz Levine \cite{levine70}.
+Litera $S$, jak nietrudno się domyślić, pochodzi od Seiferta.
+
 
 \begin{proposition}
     Macierz Seiferta modulo $S$-równoważność jest niezmiennikiem splotów.
 \end{proposition}
 
-
 Dowód tego faktu jest elementarny, ale dość długi.
-Razem z~ułatwiającymi zrozumienie diagramami można znaleźć go w podręczniku Murasugiego albo \cite[s. 64]{kawauchi96}, dlatego pominiemy go i skupimy się na tym, jakie niezmienniki można otrzymać z macierzy Seiferta.
+Razem z~ułatwiającymi zrozumienie diagramami można znaleźć go w podręczniku Murasugiego albo \cite[s. 64]{kawauchi96}, dlatego pomijamy go i skupimy się na tym, jakie niezmienniki można otrzymać z macierzy Seiferta.
 
 Wyznacznik samej macierzy Seiferta nie jest niezmiennikiem.
 Wykonując operację $\Lambda_2$ dostajemy macierz, której ostatnia kolumna albo ostatni wiersz są zerami, więc jej wyznacznik także jest zerem.
 Jeśli jednak najpierw dokonamy jej symetryzacji, dostaniemy znany już niezmiennik.
-
-\begin{tobedone}
-Theorem 5.1.4 An integral square matrix V of size n is a Seifert matrix of an r-component link L if and only if m = (n - r + 1)/2 is a non-negative integer and
-V - V' iis unimodular-congruent to the block sum T of m copies of $(0, 1, -1, 0)$ and
-the zero matrix $O^{r-1}$ of size r-1.
-
-Corollary: An integral square matrix V is a Seifert matrix of a knot if and only if det(V - V') = 1.
-
-Kawauchi, strona 62.
-\end{tobedone}
 
 \begin{proposition}
     Niech $M$ będzie macierzą Seiferta węzła $K$.
@@ -101,5 +102,6 @@ Przez wprowadzenie dodatkowej zmiennej $t \in \R$, ponownie uogólnimy wyznaczni
     \end{equation}
 \end{proposition}
 
-Określimy jeszcze jeden, niewystępujący wcześniej niezmiennik.
+Określimy jeszcze jeden, niewystępujący wcześniej niezmiennik (sygnaturę).
 
+\index{macierz Seiferta|)}

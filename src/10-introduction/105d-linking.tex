@@ -1,21 +1,14 @@
-\subsection{Indeks zaczepienia} % (fold)
+\subsection{Indeks zaczepienia}
+\index{indeks zaczepienia|(}
+Gauß wprowadził indeks zaczepienia dwóch węzłów jako pewna całka, ale żyjemy w~XXI wieku i wystarczy nam definicja odwołująca się do diagramów.
 
 \begin{definition}[znak]
-
-    \index{znak skrzyżowania}
+\index{znak skrzyżowania}%
     Liczbę $\pm 1$ przypisaną do skrzyżowania zgodnie z diagramem:
 \begin{comment}
     \[
-        \sign \Bigl(\,\,\begin{tikzpicture}[baseline=-0.65ex,scale=0.07]
-        \begin{knot}[clip width=5]
-        \strand[semithick,-Latex] (-5,-5) -- (5,5);
-        \strand[semithick,Latex-] (-5,5) -- (5,-5);
-        \end{knot}\end{tikzpicture}\,\,\Bigr) = +1 \quad
-        \sign \Bigl(\,\,\begin{tikzpicture}[baseline=-0.65ex,scale=0.07]
-        \begin{knot}[clip width=5, flip crossing/.list={1}]
-        \strand[semithick,-Latex] (-5,-5) -- (5,5);
-        \strand[semithick,Latex-] (-5,5) -- (5,-5);
-        \end{knot}\end{tikzpicture}\,\,\Bigr) = -1
+        \sign \left( \MediumSkeinPlus  \right) = +1 \quad
+        \sign \left( \MediumSkeinMinus \right) = -1
     \]
 \end{comment}
     nazywamy znakiem skrzyżowania.
@@ -23,9 +16,11 @@
 
 Skrzyżowania dodatnie to takie, w których obrócenie dolnego łuku w prawo daje górny łuk, dlatego czasem nazywa się je także praworęcznymi.
 Oczywiście skrzyżowania ujemne nazywamy wtedy leworęcznymi.
+\index{skrzyżowanie!dodatnie i ujemne}%
+\index{skrzyżowanie!lewo- i prawoskrętne}%
 
 \begin{definition}[wygładzenie]
-    \index{wygładzenie}
+\index{wygładzenie (skrzyżowania)}%
     Niech dany będzie diagram z wyróżnionym skrzyżowaniem.
     Wtedy diagramy
 \begin{comment}
@@ -140,3 +135,7 @@ Istotnie, na mocy twierdzenia Jordana $\linking$ jest funkcją o całkowitych wa
 \end{comment}
     Na mocy twierdzenia Reidemeistera dowód został zakończony.
 \end{proof}
+
+\index{indeks zaczepienia|)}
+
+% koniec podsekcji Indeks zaczepienia
