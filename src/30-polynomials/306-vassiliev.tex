@@ -10,25 +10,26 @@ Niezmienniki Wasiljewa najlepiej zrozumieć, jeśli osłabimy trochę definicję
 
 Uważam, że przyjemnym wprowadzeniem do niezmienników Wasiljewa jest artykuł \cite{chmutov12} Chmutowa.
 Za najlepsze uważa się pracę \cite{barnatan_95}: Bar-Natan, jej autor, pozostaje do dziś jedną z~najważniejszych osób dla rozwoju tego działu matematyki.
-Oprócz tego jest jeszcze pięknie zilustrowana książka \cite{duzhin12} trzech rosyjskich matematyków, będąca obszernym kompendium wiedzy o~węzłach singularnych. % oraz ciekawy podręcznik \cite{dye16}, który rozwija od podstaw teorię węzłów wirtualnych i~klasycznych równocześnie; węzły wirtualne to coś innego niż singularne, w równoważności dopuszcza się inne ruchy!
-Szkielet sekcji oparliśmy natomiast o piętnasty rozdział podręcznika Murasugiego, \cite{murasugi96}.
+Oprócz tego jest jeszcze pięknie zilustrowana książka \cite{duzhin12} trzech rosyjskich matematyków, będąca obszernym kompendium wiedzy o~węzłach osobliwych.
 
-% DICTIONARY;knot, singular;węzeł, singularny
-\begin{definition}[węzeł singularny]
-\index{węzeł!singularny}%
+Szkielet sekcji oparliśmy o piętnasty rozdział podręcznika Murasugiego, \cite{murasugi96}.
+
+% DICTIONARY;knot, singular;węzeł, osobliwy
+\begin{definition}[węzeł osobliwy]
+\index{węzeł!osobliwy}%
     Niech $f \colon S^1 \to \R^3$ będzie kawałkami liniową funkcją, która jest różnowartościowa poza skończenie wieloma punktami.
     Załóżmy dodatkowo, że
     \begin{itemize}
         \item włókna -- przeciwobrazy punktów -- funkcji $f$ są co najwyżej dwuelementowe;
         \item jeżeli dwa różne punkty mają ten sam obraz, to węzeł $K = f(S^1)$ przecina się tam pod kątem prostym.
     \end{itemize}
-    Obraz funkcji $f$ nazywamy węzłem singularnym.
+    Obraz funkcji $f$ nazywamy węzłem osobliwym.
 \end{definition}
 
-Gdy używamy słowa węzeł, nigdy nie mamy na myśli węzła singularnego.
-Punkt, gdzie węzeł singularny tnie samego siebie, nazywamy wierzchołkiem i~oznaczamy pogrubioną kropką na diagramie.
-\index{wierzchołek (węzła singularnego)}%
-Oto garść przykładów węzłów singularnych:
+Gdy używamy słowa węzeł, nigdy nie mamy na myśli węzła osobliwego.
+Punkt, gdzie węzeł osobliwy tnie samego siebie, nazywamy wierzchołkiem i~oznaczamy pogrubioną kropką na diagramie.
+\index{wierzchołek (węzła osobliwego)}%
+Oto garść przykładów węzłów osobliwych:
 
 \begin{comment}
 \begin{figure}[H]
@@ -66,15 +67,15 @@ Oto garść przykładów węzłów singularnych:
 \end{figure}
 \end{comment}
 
-Podamy teraz definicję równoważności dla węzłów singularnych, zupełnie analogicznie do definicji \ref{def:equivalent_knots_2} dla zwykłych węzłów.
+Podamy teraz definicję równoważności dla węzłów osobliwych, zupełnie analogicznie do definicji \ref{def:equivalent_knots_2} dla zwykłych węzłów.
 
 \begin{definition}[płaski dysk]
-    Niech $A$ będzie wierzchołkiem węzła singularnego $K$, $B_A$ jego małym domkniętym otoczeniem, zaś $P_A$ płaszczyzną, która zawiera $B_A \cap K$, mały fragment węzła wokół wierzchołka.
+    Niech $A$ będzie wierzchołkiem węzła osobliwego $K$, $B_A$ jego małym domkniętym otoczeniem, zaś $P_A$ płaszczyzną, która zawiera $B_A \cap K$, mały fragment węzła wokół wierzchołka.
     Dysk $P_A \cap B_A$ nazywamy płaskim dyskiem wokół wierzchołka $A$.
 \end{definition}
 
 \begin{definition}
-    Dwa singularne węzły $K, L$ są równoważne, co zapisujemy jako $K = L$, jeśli istnieje zachowujący orientację homeomorfizm $\varphi$ przestrzeni $\R^3$ w~siebie, który przenosi jeden węzeł na drugi: $\varphi(K) = L$ oraz indukuje bijekcję między rodzinami płaskich dysków $K$ i~$L$.
+    Dwa osobliwe węzły $K, L$ są równoważne, co zapisujemy jako $K = L$, jeśli istnieje zachowujący orientację homeomorfizm $\varphi$ przestrzeni $\R^3$ w~siebie, który przenosi jeden węzeł na drugi: $\varphi(K) = L$ oraz indukuje bijekcję między rodzinami płaskich dysków $K$ i~$L$.
 \end{definition}
 
 Ten drugi warunek gwarantuje nam, że skrzyżowania wokół podwójnych punktów nie ulegną zniszczeniu.
@@ -83,7 +84,7 @@ Istnieje podobne kryterium dla diagramów, odpowiednik twierdzenia Reidemeistera
 \begin{proposition}
 \index{ruchy Reidemeistera}
 \index{ruch $\Omega$}
-    Dwa singularne diagramy są równoważne dokładnie wtedy, kiedy można między nimi przejść przy użyciu ciągu izotopii otaczających, ruchów Reidemeistera, operacji $\Omega_4$ (dwóch wariantów III ruchu Reidemeistera z wierzchołkiem):
+    Dwa osobliwe diagramy są równoważne dokładnie wtedy, kiedy można między nimi przejść przy użyciu ciągu izotopii otaczających, ruchów Reidemeistera, operacji $\Omega_4$ (dwóch wariantów III ruchu Reidemeistera z wierzchołkiem):
 \begin{comment}
     \[
         \VirtualReidemeisterIIIa \cong_{\Omega_{4a}} \VirtualReidemeisterIIIb
@@ -102,24 +103,23 @@ Istnieje podobne kryterium dla diagramów, odpowiednik twierdzenia Reidemeistera
 Uwaga: Murasugi podaje tylko jedną nową operację, wydaje nam się, że wszyscy nie mogą mieć racji.
 Ufamy pracy Nelsona, Oyamaguchiego, Sazdanovica \cite{sazdanovic19} gdzie pokazano, że ten zestaw ruchów jest minimalny.
 
-Załóżmy teraz, że mamy jakiś niezmiennik węzłów $v$ o~wymiernych wartościach i~chcemy przedłużyć go do niezmiennika $\hat v$ węzłów singularnych.
+Załóżmy teraz, że mamy jakiś niezmiennik węzłów $v$ o~wymiernych wartościach i~chcemy przedłużyć go do niezmiennika $\hat v$ węzłów osobliwych.
 Najprościej zrobić to rekurencyjnie.
-Niech $\hat v$ będzie już określony dla singularnych węzłów o co najwyżej $n - 1$ wierzchołkach i~wybierzmy dowolny węzeł i diagram o~$n$ wierzchołkach.
+Niech $\hat v$ będzie już określony dla osobliwych węzłów o co najwyżej $n - 1$ wierzchołkach i~wybierzmy dowolny węzeł i diagram o~$n$ wierzchołkach.
 Okazuje się, że jeżeli położymy
 \begin{comment}
 \begin{equation}
     \hat v\left(\SingularCrossing\right) = \hat v\left(\MediumSkeinPlus\right) - \hat v\left(\MediumSkeinMinus\right),
 \end{equation}
 \end{comment}
-to dostaniemy dobrze określoną funkcję: jeżeli $L = K$ jest tym samym węzłem singularnym z~innym diagramem, to $\hat v(L) = \hat v(K)$.
-
-Funkcję $\hat v$ nazywamy niezmiennikiem singularnym indukowanym przez niezmiennik węzłów $v_0$.
+to dostaniemy dobrze określoną funkcję: jeżeli $L = K$ jest tym samym osobliwym węzłem z~innym diagramem, to $\hat v(L) = \hat v(K)$.
+Funkcję $\hat v$ nazywamy niezmiennikiem osobliwym indukowanym przez niezmiennik węzłów $v_0$.
 
 \begin{definition}[rząd niezmiennika]
 \label{def:vassiliev_order}%
-\index{rząd niezmiennika}%
-    Niech $v$ będzie niezmiennikiem singularnym.
-    Mówimy, że $v$ jest niezmiennikiem Wasiljewa rzędu co najwyżej $n$, jeśli dla dowolnego singularnego węzła $K$ o $n + 1$ wierzchołkach zachodzi $v(K) = 0$.
+\index{rząd niezmiennika (osobliwego)}%
+    Niech $v$ będzie niezmiennikiem osobliwym.
+    Mówimy, że $v$ jest niezmiennikiem Wasiljewa rzędu co najwyżej $n$, jeśli dla dowolnego osobliwego węzła $K$ o $n + 1$ wierzchołkach zachodzi $v(K) = 0$.
     Jeśli dodatkowo $v$ nie jest rzędu co najwyżej $n - 1$, to mówimy, że jest rzędu dokładnie $n$.
 \end{definition}
 
@@ -132,7 +132,7 @@ Czas na garść przykładów niezmienników skończonego typu oraz niezmiennikó
 \end{example}
 
 \begin{proof}
-    Jak wspomina Chmutow w \cite{chmutov12}, porównanie relacji kłębiastej dla wielomianu Conwaya z tą dla niezmienników Wasiljewa pokazuje, że wielomian Conwaya singularnego węzła o~$m$ punktach podwójnych jest podzielny przez $z^m$, co dowodzi już, że $c_{2k}$ jest niezmiennikiem rzędu co najwyżej $2k$.
+    Jak wspomina Chmutow w \cite{chmutov12}, porównanie relacji kłębiastej dla wielomianu Conwaya z tą dla niezmienników Wasiljewa pokazuje, że wielomian Conwaya osobliwego węzła o~$m$ punktach podwójnych jest podzielny przez $z^m$, co dowodzi już, że $c_{2k}$ jest niezmiennikiem rzędu co najwyżej $2k$.
 
     Bar-Natan w 1991 pokazał, że $\conway_{2k}$ jest niezmiennikiem rzędu dokładnie $2k$.
 \end{proof}
@@ -205,7 +205,7 @@ Jeśli $q < 0$, wszystkie skrzyżowania odwracamy:
     \draw[black,fill=black] (-35,0) circle (1);
 \end{knot}
 \end{tikzpicture}\]
-  \caption{Węzeł singularny $K[p, q]$ dla $p = 2, q = 10$.}
+  \caption{Węzeł osobliwy $K[p, q]$ dla $p = 2, q = 10$.}
 \end{figure}
 % \end{comment}
 
@@ -223,7 +223,7 @@ Wynik był znany już w latach 90., na przykład Birman w \cite{birman93} pokaza
 
 \begin{proof}
     Dowód dla sygnatury jest w~podręczniku Murasugiego \cite[s. 312]{murasugi96}.
-    Natomiast żaden z~pozostałych niezmienników nie znika na singularnym węźle $K[n+1, n]$.
+    Natomiast żaden z~pozostałych niezmienników nie znika na osobliwym węźle $K[n+1, n]$.
 \end{proof}
 
 Udowodnimy kilka najprostszych własności niezmienników Wasiljewa.
@@ -233,11 +233,11 @@ Udowodnimy kilka najprostszych własności niezmienników Wasiljewa.
 \end{proposition}
 
 \begin{proof}
-    Niech $v$ będzie niezmiennikiem rzędu zero i~znika na każdym singularnym węźle o~jednym wierzchołku.
+    Niech $v$ będzie niezmiennikiem rzędu zero i~znika na każdym osobliwym węźle o~jednym wierzchołku.
     Relacja kłębiasta mówi, że $v(\LittleLeftCrossing) = v(\LittleRightCrossing)$, to znaczy odwrócenie dowolnego skrzyżowania nie zmienia wartości niezmiennika.
 
     Z lematu \ref{lem:unknotting_well_defined} wiemy jednak, że każdy węzeł można zmienić w niewęzeł odwracając niektóre skrzyżowania.
-    Wynika stąd, że $v(K) = v(\LittleUnknot)$ dla każdego singularnego węzła $K$, co należało udowodnić 
+    Wynika stąd, że $v(K) = v(\LittleUnknot)$ dla każdego osobliwego węzła $K$, co należało udowodnić 
 \end{proof}
 
 Każda zespolona krotność niezmiennika Wasiljewa znowu jest takim niezmiennikiem.
@@ -418,7 +418,7 @@ Dla $n \le 12$ ograniczenia te pokrywają się!
 % Arm: Am / Z<FI relations>
 % Pm: podmoduł Am generowany przez spójne diagramy
 
-Okazuje się, że wartość niezmiennika Wasiljewa $v$ nie zależy wprost od tego, jak zaplątany jest węzeł singularny $K$, ale od tego, jak ułożone są wierzchołki wzdłuż węzła. Standardową metodą kodowania tej informacji jest diagram cięciw.
+Okazuje się, że wartość niezmiennika Wasiljewa $v$ nie zależy wprost od tego, jak zaplątany jest węzeł osobliwy $K$, ale od tego, jak ułożone są wierzchołki wzdłuż węzła. Standardową metodą kodowania tej informacji jest diagram cięciw.
 
 \begin{definition}[diagram cięciw]
 % DICTIONARY;diagram, chord;diagram, cięciw
@@ -493,12 +493,12 @@ Okazuje się, że wartość niezmiennika Wasiljewa $v$ nie zależy wprost od teg
 \end{tobedone}
 
 \begin{proposition}
-    Niech $K_1, K_2$ będą dwoma singularnymi węzłami o~tym samym diagramie cięciw, zaś $v$~niezmiennikiem Wasiljewa.
+    Niech $K_1, K_2$ będą dwoma osobliwymi węzłami o~tym samym diagramie cięciw, zaś $v$~niezmiennikiem Wasiljewa.
     Wtedy $v(K_1) = v(K_2)$.
 \end{proposition}
 
 \begin{proof}
-    Umieśćmy węzły singularne $K_1, K_2$ w przestrzeni tak, by ich wierzchołki oraz obie gałęzie wychodzące z wierzchołków leżały tak samo. Wtedy można tak zdeformować łuki $K_1$ tak, by jedynymi osobliwościami, jakie się pojawią lub znikną, były podwójne punkty.
+    Umieśćmy węzły osobliwe $K_1, K_2$ w przestrzeni tak, by ich wierzchołki oraz obie gałęzie wychodzące z wierzchołków leżały tak samo. Wtedy można tak zdeformować łuki $K_1$ tak, by jedynymi osobliwościami, jakie się pojawią lub znikną, były podwójne punkty.
     Teraz kłębiasta Wasiljewa mówi, że wartość $v$ nie zmienia się podczas tego procesu, zatem $v(K_1) = v(K_2)$, co należało okazać.
     % chmutov12
     % TODO: (\cite{duzhin12}, prop. 3.4.2)
@@ -506,7 +506,7 @@ Okazuje się, że wartość niezmiennika Wasiljewa $v$ nie zależy wprost od teg
 
 \begin{definition}[symbol niezmiennika]
     Niech $v$ będzie niezmiennikiem Wasiljewa.
-    Obcięcie $v$ do zbioru węzłów singularnych o~dokładnie $n$ wierzchołkach traktowane jako funkcja ze zbioru diagramów cięciw nazywamy symbolem tego niezmiennika.
+    Obcięcie $v$ do zbioru węzłów osobliwych o~dokładnie $n$ wierzchołkach traktowane jako funkcja ze zbioru diagramów cięciw nazywamy symbolem tego niezmiennika.
 \end{definition}
 
 Jeśli $v_1, v_2$ są niezmiennikami Wasiljewa rzędu co najwyżej $n$ o~tych samych symbolach, to ich różnica jest niezmiennikiem rzędu co najwyżej $n - 1$.
