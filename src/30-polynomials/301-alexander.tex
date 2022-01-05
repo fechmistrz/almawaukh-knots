@@ -1,12 +1,21 @@
 \section{Wielomian Alexandera}
 \index{wielomian!Alexandera|(}%
-Większość niezmienników, jakie dotąd widzieliśmy, przypisuje każdemu węzłowi lub splotowi pewną liczbę całkowitą: niezmienniki z pierwszego rozdziału, liczba kolorowań, wyznacznik czy też defekt są właśnie takie.
-Poznamy teraz wielomian, opisany po raz pierwszy przez Jamesa Waddella Alexandera w~1923 roku \cite{alexander23}.
-Przez blisko sześć dekad pozostał on jedynym wielomianowym niezmiennikiem węzłów.
-Ze względu na elementarność takiego podejścia, pominiemy teorię homologii, zamiast tego skupiając naszą uwagę na równaniach kolorujących.
-Najpierw trzeba je jednak uogólnić.
+
+Wielomian Alexandera to najstarszy niezmiennik tego typu, odkryty w 1923 roku \cite{alexander23}.
+Jego pierwsza definicja była czysto topologiczna algebraicznie: niech $K$ będzie węzłem w~3-sferze, zaś $X$ nieskończonym nakryciem cyklicznym jego dopełnienia (otrzymanym przez rozcięcie dopełnienia wzdłuż powierzchni Seiferta).
+Na przestrzeni $X$ oraz grupie homologii $H_1(X)$, działa automorfizm $t$, który czyni z~niej moduł nad pierścieniem $\Z[t, t^{-1}]$, i~to skończenie prezentowalny.
+Jeśli posiada przedstawienie z~$r$ generatorami i~$s$ relacjami, gdzie $r \le s$, rozpatrzmy ideał generowany przez minory $r \times r$ macierzy prezentacji (jeśli nie, weźmy ideał zerowy).
+Alexander pokazał, że ideał ten zawsze jest niezerowy i~główny.
+
+Jak widać, nie jest to definicja, do pracy z którą bylibyśmy przygotowani.
+Dlatego podamy prostszy opis, oparty o równania kolorujące.
+Później sprawdzimy, jaki wpływ na wielomian mają poznane wcześniej operacje na węzłach oraz co łączy go ze zdefiniowanymi wcześniej i~później numerycznymi niezmiennikami.
+Na koniec pokażemy, jak Conway odkrył na nowo wielomian Alexandera, jednocześnie przyspieszając jego liczenie.
+
+\subsection{Równania kolorujące (definicja pierwsza)}
 
 \begin{definition}
+\index{równanie kolorujące}%
     Wielomianowe równanie kolorujące związane ze skrzyżowaniem
 \begin{comment}
     \[\begin{tikzpicture}[baseline=-0.65ex, scale=0.12]
@@ -21,18 +30,18 @@ Najpierw trzeba je jednak uogólnić.
     \end{tikzpicture}\]
 \end{comment}
     splotu zorientowanego to $a + tc - ta - b = 0$.
-    Tylko orientacja górnej wiązki ma znaczenie.
+    Tylko orientacja górnego łuku ma znaczenie.
 \end{definition}
 
-Istotnie, wystarczy podstawić tutaj $t = -1$, by otrzymać mniej ogólną definicję \ref{def:colouring_equation}.
+Istotnie, wystarczy podstawić tutaj $t = -1$, by otrzymać szczególną definicję \ref{def:colouring_equation}.
 
 \begin{definition}[wielomian Alexandera]
 \label{def:alexander_polynomial}%
-    Niech $L$ będzie zorientowanym splotem z~diagramem bez krzywych zamkniętych.
-    Przypiszmy etykiety $x_0, \ldots, x_m$ do włókien oraz $0, \ldots, m$ do skrzyżowań.
-    Niech $P_{ij}$ będzie współczynnikiem przy $x_j$ w~wielomianowym równaniu kolorującym nad wierzchołkiem $i$.
-    Z macierzy $P=(P_{ij})$ wykreślmy jedną kolumnę i~jeden wiersz.
-    Wyznacznik tak otrzymanej macierzy nazywamy wielomianem Alexandera i~oznaczamy $\alexander_L(t)$.
+    Ustalmy diagram $D$ zorientowanego splotu $L$, gdzie nie ma żadnej krzywej zamkniętej (niewęzła $\LittleUnknot$).
+    Przypiszmy etykiety $x_0, \ldots, x_m$ do włókien oraz $0, \ldots, m$ do skrzyżowań diagramu $D$.
+    Niech $p_{ij}$ będzie współczynnikiem przy włóknie $x_j$ w~wielomianowym równaniu kolorującym nad wierzchołkiem $i$.
+    Z macierzy $P=(p_{ij})$ wykreślmy po jednej kolumnie i~wierszu.
+    Wyznacznik zmniejszonej macierzy to wielomian Alexandera, oznaczamy go $\alexander_L(t)$.
 \end{definition}
 
 Nasz nowy niezmiennik nie jest zwykłym wielomianem, tylko wielomianem Laurenta jednej zmiennej, czyli elementem pierścienia $\Z[t, t^{-1}]$.
@@ -48,7 +57,10 @@ Nasz nowy niezmiennik nie jest zwykłym wielomianem, tylko wielomianem Laurenta 
 
 W dowodzie niezmienniczości wyznacznika węzła skorzystaliśmy z~relacji między nim a~grupą kolorującą.
 Poprzednie wydania książki zawierały sugestię, że elementarny (czyli taki, który nie korzysta z~teorii modułów) dowód niezmienniczości wielomianu Alexandera nie istnieje.
-Sugestia ta była błędna, wystarczy użyć alternatywnej definicji.
+Sugestia ta była błędna.
+
+Podany dowód dotyczy tylko splotów o spójnym diagramie.
+Jeżeli mamy diagram, który nie spełnia tego założenia, to fakt \ref{prp:alexander_unlinks} orzeka, że jego wielomian Alexandera znika.
 
 \begin{proof}
     Ustalmy diagram o~$k$ skrzyżowaniach, który rozcina płaszczyznę na $k+2$ obszarów i~utwórzmy macierz o~wymiarach $k \times k$, której kolumny odpowiadają obszarom, wiersze zaś skrzyżowaniom -- pomijając przy tym dwa sąsiadujące ze sobą obszary -- o~wyrazach ze współczynników równań kolorujących.
@@ -76,8 +88,7 @@ Sugestia ta była błędna, wystarczy użyć alternatywnej definicji.
 
     Wprowadźmy jeszcze jedną techniczną definicję.
     Dwie kwadratowe macierze będą dla nas równoważne, jeśli można przejść od jednej do drugiej przy użyciu pięciu operacji:
-    \begin{enumerate}[leftmargin=*]
-    \itemsep0em
+    \begin{enumerate}
         \item przemnożenie wiersza lub kolumny przez $-1$;
         \item zamiana dwóch wierszy lub kolumn miejscami;
         \item dodanie jednego wiersza do innego (lub kolumny do innej);
@@ -93,7 +104,7 @@ Zwyczajowo wielomian normalizuje się: bierze reprezentanta, który jest symetry
 Odwrotnie, dowolny wielomian Laurenta z~całkowitymi współczynnikami o~takich własnościach jest wielomianem Alexandera pewnego węzła:
 
 \begin{proposition}
-    \label{prp:alexander_hosokawa}
+\label{prp:alexander_hosokawa}%
     Każdy wielomian Laurenta $p(t)$ o~całkowitych współczynnikach taki, że $p(1/t) = p(t)$ i~$p(1) = \pm 1$ jest wielomianem Alexandera pewnego węzła.
 \end{proposition}
 
@@ -106,14 +117,15 @@ Odwrotnie, dowolny wielomian Laurenta z~całkowitymi współczynnikami o~takich 
     Książka \cite{rolfsen76} Rolfsena na stronach 171-172 zawiera natomiast jawną konstrukcję węzła o~danym wielomianie Alexandera.
 \end{proof}
 
-Istnieje nieopisana przez nas odmiana wielomianu Alexandera, która liczy sobie tyle zmiennych, ile ogniw posiada splot.
-Fakt \ref{prp:alexander_hosokawa} można częściowo uogólnić: Torres znalazł w~\cite{torres53} dwie geometryczne własności tych wielomianów, nazwane później warunkami Torresa.
-\index{warunek!Torresa}
-Nie są one warunkami wystarczającymi, jak odkrył ponad ćwierć wieku później Hillman \cite{hillman81}: wielomian
-\begin{equation}
-    D(x,y) = \frac{1}{1-xy} \cdot \left((1 - x^6y^6)(x - 1 + 1/x) - 2(1 - x^5y^5)(1 - x)(1 - y)\right)
-\end{equation}
-spełnia warunki Torresa, ale nie jest wielomianem Alexandera.
+Nasz niezmiennik nie wykrywa niewęzła.
+Na przykład $11_{471} = 11n_{34}$, $11_{473} = 11n_{42}$ albo $(-3, 5, 7)$-precel posiadają trywialny wielomian Alexandera, zjawisko to nie występuje wśród nietrywialnych węzłów o co najwyżej 10 skrzyżowaniach.
+% MAKOTO SAKUMA - A SURVEY OF THE IMPACT OF THURSTON’S WORK ON KNOT THEORY
+% In fact, H. Seifert [301], J. H.C. Whitehead [336], and Kinoshita-Terasaka [175] gave systematic construction of nontrivial knots with trivial Alexander polynomial. 
+% H. Seifert,  ̈Uber das Geschlecht von Knoten, Math. Ann. 110 (1934), 571–592.
+% J. H. C. Whitehead, On doubled knots, J. London Math. Soc. 12, 63–71 (1937).
+% S. Kinoshita and H.Terasaka, On unions of knots, Osaka Math. J. 9 (1957) 131–153
+
+\subsection{Wielomian Alexandera a operacje na węzłach}
 
 Wielomian Alexandera nie odróżnia luster i~rewersów od wyjściowych węzłów:
 
@@ -123,7 +135,7 @@ Wielomian Alexandera nie odróżnia luster i~rewersów od wyjściowych węzłów
 \end{proposition}
 
 \begin{proof}
-    Po odbiciu diagramu względem pionowej prostej skrzyżowanie z~definicji \ref{def:colouring_equation} również się odbija.
+    Po odbiciu diagramu względem pionowej prostej skrzyżowanie z~definicji \ref{def:colouring_equation} też się odbija.
     Równanie związane z~nim zmienia się według schematu:
     \begin{equation}
         a + tc - ta - b = 0 \rightleftharpoons a + tb - ta - c = 0
@@ -132,23 +144,6 @@ Wielomian Alexandera nie odróżnia luster i~rewersów od wyjściowych węzłów
     Dowód drugiej równości przebiega analogicznie.
 \end{proof}
 
-Nasz niezmiennik nie wykrywa niewęzła.
-Na przykład $11_{471} = 11n_{34}$, $11_{473} = 11n_{42}$ albo $(-3, 5, 7)$-precel posiadają trywialny wielomian Alexandera, zjawisko to nie występuje wśród nietrywialnych węzłów o co najwyżej 10 skrzyżowaniach.
-% MAKOTO SAKUMA - A SURVEY OF THE IMPACT OF THURSTON’S WORK ON KNOT THEORY
-% In fact, H. Seifert [301], J. H.C. Whitehead [336], and Kinoshita-Terasaka [175] gave systematic construction of nontrivial knots with trivial Alexander polynomial. 
-% H. Seifert,  ̈Uber das Geschlecht von Knoten, Math. Ann. 110 (1934), 571–592.
-% J. H. C. Whitehead, On doubled knots, J. London Math. Soc. 12, 63–71 (1937).
-% S. Kinoshita and H.Terasaka, On unions of knots, Osaka Math. J. 9 (1957) 131–153
-
-\begin{proposition}
-    \label{prp:alexander_determinant}
-    Niech $L$ będzie zorientowanym splotem.
-    Wtedy $|\alexander_L(-1)| = \det L$.
-\end{proposition}
-
-\begin{proof}
-    Wystarczy porównać definicję dla $\alexander_L$ (\ref{def:alexander_polynomial}) oraz $\det L$ (\ref{def:determinant}).
-\end{proof}
 
 \begin{proposition}
     \label{prp:alexander_multiplicative}
@@ -247,27 +242,7 @@ Na przykład $11_{471} = 11n_{34}$, $11_{473} = 11n_{42}$ albo $(-3, 5, 7)$-prec
     Zatem $\alexander_{K_1 \shrap K_2}(t) = t^?\alexander_{K_1}(t) \alexander_{K_2}(t)$, jeśli nie pomyliliśmy się w~obliczeniach.
 \end{proof}
 
-\begin{proposition}
-    Wielomian Alexandera zadaje ograniczenie na indeks skrzyżowaniowy $c$:
-    \begin{equation}
-        \deg \alexander_K(t) < c(K).
-    \end{equation}
-\end{proposition}
-
-Być może istnieje bezpośredni dowód tej nierówności, ale jedyne uzasadnienie, jakie znam, opiera się na fakcie \ref{prp:alexander_genus} oraz wniosku \ref{cor:crossing_genus}.
-
-\begin{proposition}
-    Tylko skończenie wiele węzłów alternujących może mieć ten sam wielomian Alexandera.
-\end{proposition}
-
-\begin{proof}
-    Załóżmy nie wprost, że istnieje nieskończony ciąg $K_n$ węzłów alternujących o~tym samym wielomianie Alexandera $\alexander_K(t)$.
-    Wszystkie jego wyrazy mają ten sam wyznacznik, ponieważ $\det K_n = |\alexander_K(-1)|$.
-    Z faktu \ref{prp:bankwitz} wynika, że indeks skrzyżowaniowy węzłów $K_n$ jest wspólnie ograniczony: $c_k \le \det K_n = \det K$.
-    To prowadzi do sprzeczności: węzłów o~danym indeksie skrzyżowaniowym jest tylko skończenie wiele.
-\end{proof}
-
-Przedstawimy teraz kilka innych definicji, które prowadzą do tego samego niezmiennika.
+\subsection{Relacja kłębiasta (definicja druga)}
 
 \begin{definition}[relacja kłębiasta]
     Niech $L$ będzie zorientowanym splotem z ustalonym diagramem oraz skrzyżowaniem.
@@ -302,8 +277,6 @@ Spełnia wtedy zależność
 \end{equation}
 
 Relacja kłębiasta wystarcza do wyznaczenia $\alexander_L$ każdego splotu na mocy lematu \ref{lem:unknotting_well_defined}.
-Dzięki niej wiemy też, że wielomian Alexandera nie odróżnia od siebie niesplotów.
-Wady tej nie posiada wielomian Jonesa.
 
 \begin{proposition}
     \label{prp:alexander_unlinks}
@@ -327,11 +300,60 @@ Domknięcie warkocza $\sigma_{1} \sigma_* \sigma_{1} \sigma_{3} \sigma_* \sigma_
 \index{warkocz}
 Warkocze poznamy w rozdziale piątym.
 
-% Wielomian Jonesa (zdefiniowany w~kolejnej sekcji) spełnia podobną równość.
-% Ich istnienie może nasunąć przypuszczenie, że dają się wspólnie uogólnić.
-% Tak jest w~rzeczywistości -- mocniejszym niezmiennikiem okazał się wielomian HOMFLY-PT.
+\begin{corollary}
+    Wielomian Alexandera nie odróżnia od siebie niesplotów.
+\end{corollary}
 
-Murasugi podejrzewał, że w~przypadku węzłów alternujących ciąg współczynników jest unimodalny.
+Wady tej nie posiada wielomian Jonesa.
+
+\subsection{Wielomian Alexandera a niezmienniki numeryczne}
+\begin{proposition}
+    \label{prp:alexander_determinant}
+    Niech $L$ będzie zorientowanym splotem.
+    Wtedy $|\alexander_L(-1)| = \det L$.
+\end{proposition}
+
+\begin{proof}
+    Wystarczy porównać definicję dla $\alexander_L$ (\ref{def:alexander_polynomial}) oraz $\det L$ (\ref{def:determinant}).
+\end{proof}
+
+\begin{proposition}
+    Wielomian Alexandera zadaje ograniczenie na indeks skrzyżowaniowy:
+    \begin{equation}
+        \deg \alexander_K(t) < \crossing K.
+    \end{equation}
+\end{proposition}
+
+Być może istnieje bezpośredni dowód tej nierówności, ale jedyne uzasadnienie, jakie znam, opiera się na fakcie \ref{prp:alexander_genus} oraz wniosku \ref{cor:crossing_genus} -- czyli własnościach genusu.
+\index{genus}
+
+\begin{proposition}
+    Tylko skończenie wiele węzłów alternujących może mieć ten sam wielomian Alexandera.
+\end{proposition}
+
+\begin{proof}
+    Załóżmy nie wprost, że istnieje nieskończony ciąg $K_n$ węzłów alternujących o~tym samym wielomianie Alexandera $\alexander_K(t)$.
+    Wszystkie jego wyrazy mają ten sam wyznacznik, ponieważ $\det K_n = |\alexander_K(-1)|$.
+    Z faktu \ref{prp:bankwitz} wynika, że indeks skrzyżowaniowy węzłów $K_n$ jest wspólnie ograniczony: $c_k \le \det K_n = \det K$.
+    To prowadzi do sprzeczności: węzłów o~danym indeksie skrzyżowaniowym jest tylko skończenie wiele.
+\end{proof}
+
+\subsection{Różniczki Foxa (definicja trzecia)}
+Sekcja w przygotowaniu\footnote{Patrz \url{https://math.berkeley.edu/~hutching/teach/215b-2004/yu.pdf}.}.
+% TODO: różniczki Foxa a wielomian Alexandera
+
+\subsection{Różniaste różności}
+Istnieje odmiana wielomianu Alexandera, która liczy sobie tyle zmiennych, ile ogniw posiada splot (nie opisywaliśmy jej i~nie zamierzamy).
+Klasyfikację \ref{prp:alexander_hosokawa} można częściowo uogólnić: Torres \cite{torres53} znalazł dwie geometryczne własności, nazwane później warunkami Torresa.
+\index{warunek!Torresa}
+Są warunkami koniecznymi, ale nie wystarczającymi, jak odkrył ponad ćwierć wieku później Hillman \cite{hillman81}: wielomian
+\begin{equation}
+    D(x,y) = \frac{(1 - x^6y^6)(x - 1 + 1/x) - 2(1 - x^5y^5)(1 - x)(1 - y)}{1-xy}
+\end{equation}
+spełnia warunki Torresa, ale nie jest wielomianem Alexandera.
+
+Fox \cite{fox62} podejrzewał, że ciąg współczynników wielomianu Alexandera węzła alternującego jest unimodalny.
+\index{hipoteza!trapezoidalna}%
 Dowód podano dla węzłów algebraicznych (Murasugi \cite{murasugi85}) oraz genusu dwa (Ozsvath i~Szabo w~\cite{ozsvath03}).
 Hipoteza w~ogólnym przypadku pozostaje otwarta.
 % Wiemy natomiast, że jeśli węzeł jest alternujący, to kolejne współczynniki wielomianu Conwaya $\alexander$ są przeciwnym znaków? (Murasugi, 242)
@@ -339,17 +361,12 @@ Hipoteza w~ogólnym przypadku pozostaje otwarta.
 % Remark (M. Hutchings) There does exist a~categorification of the Alexander polynomial, or more precisely of ∆K(t)/(1 − t)2, where ∆K(t) denotes the (symmetrized) Alexander polynomial of the knot K. It is a~kind of Seiberg-Witten Floer homology of the three-manifold obtained by zero surgery on K.
 % One can regard it as Z×Z/2Z graded, although in fact the column whose Euler characteristic gives the coefficient of tk is relatively Z/2kZ graded.
 
-Na sam koniec pozostawiliśmy najstarszą definicję wielomianu Alexandera.
-Niech $K$ będzie węzłem w~3-sferze, zaś $X$ nieskończonym nakryciem cyklicznym jego dopełnienia.
-Można je otrzymać rozcinając dopełnienie wzdłuż powierzchni Seiferta.
-Na $X$, a~przez to także na grupie homologii $H_1(X)$, działa automorfizm $t$, który czyni z~niej moduł nad pierścieniem $\Z[t, t^{-1}]$, i~to skończenie prezentowalny.
-Jeśli posiada przedstawienie z~$r$ generatorami i~$s$ relacjami, gdzie $r \le s$, rozpatrzmy ideał generowany przez minory $r \times r$ macierzy prezentacji (jeśli nie, weźmy ideał zerowy).
-Alexander pokazał, że ideał ten zawsze jest niezerowy i~główny.
 
-\begin{tobedone}
-    Definicja przy użyciu różniczek Foxa:
-    https://math.berkeley.edu/~hutching/teach/215b-2004/yu.pdf
-\end{tobedone}
+
+
+
+
+%\end{document}
 
 \index{wielomian!Alexandera|)}
 
