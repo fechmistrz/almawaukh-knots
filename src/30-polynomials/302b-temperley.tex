@@ -1,26 +1,26 @@
-\subsection{Definicja algebraiczna -- algebra Temperleya-Lieba} % (fold)
+\subsection{Definicja algebraiczna -- algebra Temperleya-Lieba}
 
-Jones otrzymał swój wielomian jako efekt uboczny badań nad algebrami operatorowymi: wziął ślad pewnej reprezentacji warkoczy w~algebrę, która miała ważne znaczenie w~mechanice statystycznej.
-Dalszy opis pochodzi z Wikipedii.
-Zaletą tego podejścia jest możliwość wyboru algebry, która reprezentuje grupę warkoczy.
+% https://en.wikipedia.org/wiki/Jones_polynomial
+Jones otrzymał swój wielomian jako efekt uboczny badań nad algebrami operatorów: wziął ,,ślad'' pewnej reprezentacji warkoczy w~algebrę, która miała ważne znaczenie w~mechanice statystycznej.
+Jego praca \cite{jones85} jest bardzo zwięzła, nam pomogła książka \cite[s. 85-103]{kauffman91} oraz strona ,,Aharonov–Jones–Landau algorithm'' z angielskiej Wikipedii.
 
+% książka Kauffmana
 \begin{definition}[algebra Temperleya-Lieba]
-    \index{algebra!Temperleya-Lieba}
+\index{algebra Temperleya-Lieba}%
     Niech $R$ będzie przemiennym pierścieniem, w~którym ustalono element $\delta \in R$.
     Wtedy $R$-algebrę $TL_n(\delta)$ generowaną przez elementy $e_1, \ldots, e_{n-1}$, które związane są relacjami
     \begin{align}
-        e_i^2 & = \delta e_i, \\
-        e_i e_{i \pm 1} e_i & = e_i, \\
-        e_i e_j & = e_j e_i
+        U_i^2 & = \delta U_i, \\
+        U_i U_{i \pm 1} U_i & = U_i, \\
+        U_i U_j & = U_j U_i
     \end{align}
     dla $|i-j| \ge 2$, nazywamy algebrą Temperleya-Lieba.
-    % Algebra Temperleya-Lieba $A_n$ to wolna addytywna algebra na multiplikatywnych generatorach $e_1, \ldots, e_{n-1}$ traktowana jako $\C[\tau, \tau^{-1}]$-moduł.
-    % Zmienna $\tau$ komutuje ze wszystkimi generatorami, generatory zaś spełniają relacje ($j$ jest różne od $i - 1, i, i+1$):
 \end{definition}
 
-$TL_n(\delta)$ można przedstawić przy użyciu diagramów: prostokątów, których przeciwległe boki zawierają po $n$ punktów połączonych w~pary tak, by uniknąć samoprzecięć.
+$TL_n(\tau)$ daje się przedstawić przy użyciu diagramów: prostokątów, których przeciwległe boki zawierają po $n$ punktów połączonych w~pary tak, by uniknąć samoprzecięć.
 Mnożenie elementów algebry odpowiada sklejaniu dwóch diagramów, przy czym każdą zamkniętą pętlę zamieniamy na dodatkowy czynnik $\delta$.
-To w~gruncie rzeczy są warkocze.
+To prawie są warkocze.
+
 
 \begin{comment}
 \begin{figure}[H]
@@ -85,21 +85,38 @@ To w~gruncie rzeczy są warkocze.
 \end{figure}
 \end{comment}
 
+Dla ustalonej liczby zespolonej $A$, funkcja $\rho_A \colon B_n \to TL_n(\delta)$ zadana na generatorach grupy warkoczy: $\rho_A(\sigma_i) = AU_i + A^{-1}$.
+Bezpośredni rachunek pokazuje, że jest reprezentacją, jeśli $\delta = -A^2-A^{-2}$
+
+% książka Kauffmana
+\begin{definition}[algebra Jonesa]
+\index{algebra Jonesa}%
+    Niech $R$ będzie przemiennym pierścieniem, zaś $\tau$ skalarem, który komutuje ze wszystkimi innymi elementami.
+    Wtedy $R$-algebrę $TL_n(\tau)$ generowaną przez elementy $e_1, \ldots, e_{n-1}$, związanymi relacjami
+    \begin{align}
+        e_i^2 & = e_i, \\
+        e_i e_{i \pm 1} e_i & = \tau e_i, \\
+        e_i e_j & = e_j e_i
+    \end{align}
+    dla $|i-j| \ge 2$, nazywamy algebrą Jonesa.
+\end{definition}
+
+Kauffman pisze, że algebry są ze sobą związane: jeśli położymy $e_i = \delta^{-1} U_i$ oraz $\tau = \delta^{-2}$, to aksjomaty (Jonesa) są spełnione.
+
+% artykuł na Wiki
 \begin{definition}[ślad Markowa]
-    \index{sZZZlad@ślad Markowa}
-    Niech $K \in TL_n(\delta)$ będzie elementem algebry Temperleya-Lieba będącym iloczynem generatorów $e_1, \ldots, e_{n-1}$, którego domknięcie rozpada się na $m$ składowych spójności.
+\index{sZZZlad@ślad Markowa}%
+    Niech $T \in TL_n(\delta)$ będzie elementem algebry Temperleya-Lieba będącym iloczynem generatorów $e_1, \ldots, e_{n-1}$, którego domknięcie rozpada się na $m$ składowych spójności.
     Śladem Markowa elementu $K$ nazywamy wielkość $\operatorname{tr} K = \delta^{m-n}$.
 \end{definition}
 
-Każdy splot $L$ jest domknięciem warkocza zaplecionego na pewnej liczbie pasm, jak głosi twierdzenie \ref{thm:alexander} Alexandera.
-Rozpatrzmy pierścień $R = \Z[A, 1/A]$ z wyróżnionym elementem $\delta = -A^2 - A^{-2}$ oraz związaną z nim algebrę Temperleya-Lieba.
-Wzór
+Ślad Markowa przedłuża się liniowo do całej algebry Temperleya-Lieba i jest prawdziwym śladem: spełnia warunki $\operatorname{tr} (1) = 1$ oraz $\operatorname{tr} (T_1T_2) = \operatorname{tr} (T_2T_1)$.
+Ma też dodatkową własność, że jeśli $w$ jest słowem na literach $e_1, e_2, \ldots, e_{i-1}$, to $\operatorname{tr}(we_i) = \delta^{-1} \operatorname{tr} (w)$.
+
+Jones skorzystał z twierdzeń Alexandera i Markowa, złożył ze sobą funkcje $\operatorname{tr}$ oraz $\rho_A$ oraz znormalizował wynik.
+Dostał tak niezmiennik splotów $L$ (domknięć warkoczy $B$):
 \begin{equation}
-    \rho(\sigma_i) = A \cdot e_i + \frac{1}{A} \cdot 1
+    V_L(A^{-4}) = (-A)^{3 \writhe D} \delta^{n-1} (\operatorname{tr} \circ \rho_A)(B).
 \end{equation}
-zadaje reprezentację grupy warkoczy $\rho \colon B_n \to TL_n$.
-Wtedy $\langle K \rangle = \delta^{n-1} \operatorname{tr} \rho (\sigma)$ jest klamrą Kauffmana.
-Ponieważ sploty nie przedstawiają się jako domknięcia warkoczy jednoznacznie, trzeba jeszcze sprawdzić wpływ ruchów Reidemeistera na złożenie $\operatorname{tr} \circ \rho$.
-Pozostawiamy to Czytelnikowi jako ćwiczenie.
 
 % Koniec podsekcji Oryginalna praca Jonesa
