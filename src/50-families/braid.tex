@@ -255,7 +255,8 @@ Grupy $B_n$ mogą być obiektem badań algebry bez związku z~teorią węzłów.
 
 Istnieje wiele dowodów tego faktu: pierwszy korzystał z~krótkich ciągów dokładnych (Fadell, Neuwirth 1965), później podano oparty o~struktury Garside'a (Garside 1969), czysto teoriogrupowy pochodzi od Dyera (1980).
 My przedstawimy inne rozumowanie, opisując przy tym ciekawy sam w~sobie porządek Dehornoya\footnote{W 1989 roku udowodniono, że pewien aksjomat teorii mnogości, $I_3$, dotyczący dużych liczb kardynalnych implikuje istnienie algebraicznej struktury zwanej acykliczną półką (nie mylić z naszymi półkami).
-To pociąga decydowalność problemu słowa dla prawa $x(yz) = (xy)(xz)$, coś co nie jest wprost związane z dużymi liczbami kardynalnymi. Dehornoy w 1992 roku podał przykład acyklicznej półki na grupie warkoczy $B_\infty$.}.% z artykułu "Dehornoy order na wiki"
+To pociąga decydowalność problemu słowa dla prawa $x(yz) = (xy)(xz)$, coś co nie jest wprost związane z dużymi liczbami kardynalnymi.
+Dehornoy w 1992 roku podał przykład acyklicznej półki na grupie warkoczy $B_\infty$.}.% z artykułu "Dehornoy order na wiki"
 \index{porządek Dehornoya}%
 
 \begin{proof}
@@ -313,45 +314,7 @@ Dziesięć lat później dostaliśmy jeszcze pracę Bacardita, Dicksa \ref{bacar
 Czy grupy warkoczy są liniowe?
 Przez długi czas był to problem otwarty, potem Krammer \cite{krammer00} pokazał, że $B_4$ jest liniowa, następnie metodami topologicznymi Bigelow \cite{bigelow01} dowiódł, że wszystkie grupy $B_n$ są liniowe, a wkrótce po tym Krammer \cite{krammer02} uogólnił swoje algebraiczne rozumowanie także do wszystkich grup $B_n$.
 
-\subsection{Liczba warkoczowa} % (fold)
-\index{liczba warkoczowa|(}
-Z angielskiego \emph{braid number}.
-
-\begin{definition}
-    \label{def:braid_number}
-    Liczba warkoczowa to minimalna liczba pasm, na których można zapleść warkocz, którego domknięciem jest wyjściowy splot.
-\end{definition}
-
-Tylko jeden węzeł ma liczbę warkoczową $1$, jest to niewęzeł.
-Dwuwarkoczowe są dokładnie węzły torusowe typu $(2, n)$ dla $|n| \ge 3$.
-Węzły spełniające $\operatorname{br} (K) = 3$ nie zostały jeszcze sklasyfikowane.
-Liczba warkoczowa splotu zależy od orientacji ogniw i~trudno wyznacza się w~ogólnym przypadku.
-
-\begin{proposition}
-    Węzeł o~$n$ skrzyżowaniach można zapleść na $n - 1$ pasmach.
-\end{proposition}
-
-Powyższe ograniczenie ($\operatorname{b} \le \operatorname{cr} - 1$) nie jest zbyt użyteczne, równość mamy jedynie dla trójlistnika i ósemki.
-Dokładną wartość liczby warkoczowej znamy między innymi dla węzłów torusowych (fakt \ref{cor:torus_braid_number}).
-
-Wielomian Alexandera wykrywa czasami węzły, których nie otrzyma się przez domykanie ,,małych'' warkoczy.
-Przytoczone tu wyniki pochodzą z pracy \cite{jones85} Jonesa, gdzie nie ma jednak ich dowodów.
-Jeśli $|\alexander(i)| > 3$, to węzeł nie jest domknięciem 3-warkocza (wniosek 23).
-Ta implikacja jest skuteczna przy 43 z 59 węzłów o mniej niż 10 skrzyżowaniach.
-Jeśli zaś spełniona jest nierówność $\alexander (\exp (2\pi i / 5)) > 13/2$, nie jest on domknięciem 4-warkocza (wniosek 24).
-Prawdopodobnie nie istnieją podobne warunki dla 5-warkoczy.
-
-\begin{tobedone}
-Also, for a nonsplittable link with link crossing number c(L) and braid index i(L), c(L)>=2[i(L)-1] (Ohyama 1993).
-\end{tobedone}
-
-\begin{tobedone}
-Let E be the largest and e the smallest power of l in the HOMFLY polynomial of an oriented link, and i be the braid index. Then the morton-franks-williams inequality holds, i>=1/2(E-e)+1 (Franks and Williams 1987). The inequality is sharp for all prime knots up to 10 crossings with the exceptions of 09-042, 09-049, 10-132, 10-150, and 10-156.
-\end{tobedone}
-
-\index{liczba warkoczowa|)}
-
-% Koniec podsekcji Liczba warkoczowa
+\input{50-families/braid_a_number}
 
 \index{warkocz|)}
 

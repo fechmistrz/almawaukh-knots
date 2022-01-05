@@ -1,0 +1,47 @@
+
+\subsection{Liczba warkoczowa} % (fold)
+\index{liczba warkoczowa|(}
+
+% DICTIONARY;braid number;liczba warkoczowa
+\begin{definition}
+\label{def:braid_number}%
+    Liczba warkoczowa to minimalna liczba pasm, na których można zapleść warkocz, którego domknięciem jest wyjściowy splot.
+\end{definition}
+
+Tylko jeden węzeł ma liczbę warkoczową $1$, jest to niewęzeł.
+Dwuwarkoczowe są dokładnie węzły torusowe typu $(2, n)$ dla $|n| \ge 3$.
+Węzły spełniające $\braid (K) = 3$ nie zostały jeszcze sklasyfikowane.
+Liczba warkoczowa splotu zależy od orientacji ogniw i~trudno wyznacza się w~ogólnym przypadku.
+
+\begin{proposition}
+    Węzeł o~$n$ skrzyżowaniach można zapleść na $n - 1$ pasmach: $\crossing K \ge 1 + \braid K$.
+\end{proposition}
+
+Powyższe ograniczenie nie jest zbyt użyteczne, równość mamy jedynie dla trójlistnika i~ósemki.
+Ohyama pokazał, że jeśli $L$ jest nierozszczepionym\footnote{a może nierozszczepialnym?} splotem, to $\crossing L \ge 2 \braid L - 2$.
+Dowód korzysta z grafu Seiferta splotu.
+Wśród pierwszych węzłów do 10 skrzyżowań mamy równość w oszacowaniu Ohyamy, poza następującymi wyjątkami: $4_1$, $6_1$, $8_1$, $8_3$, $8_{12}$, $10_1$, $10_3$, $10_{13}$, $10_{35}$, $10_{58}$.
+
+\begin{proposition}[nierówność Mortona-Franksa-Williamsa]
+    Niech $L$ będzie zorientowanym splotem, zaś $E$ oraz $e$ największą oraz najmniejszą potęgą $l$ w wielomianie HOMLFLY.
+    Wtedy
+    \begin{equation}
+        \braid L \ge \frac{E-e}{2} + 1.
+    \end{equation}
+\end{proposition}
+
+Nierówność jest ostra dla wszystkich pierwszych węzłów do 10 skrzyżowań poza $9_{42}$, $9_{49}$, $10_{132}$, $10_{150}$ oraz $10_{156}$.
+% mathworld wolfram
+
+Wielomian Alexandera wykrywa czasami węzły, których nie otrzyma się przez domykanie ,,małych'' warkoczy.
+Przytoczone tu wyniki pochodzą z pracy \cite{jones85} Jonesa, gdzie nie ma jednak ich dowodów.
+Jeśli $|\alexander(i)| > 3$, to węzeł nie jest domknięciem 3-warkocza (wniosek 23).
+Ta implikacja jest skuteczna przy 43 z 59 węzłów o mniej niż 10 skrzyżowaniach.
+Jeśli zaś spełniona jest nierówność $\alexander (\exp (2\pi i / 5)) > 13/2$, nie jest on domknięciem 4-warkocza (wniosek 24).
+Prawdopodobnie nie istnieją podobne warunki dla 5-warkoczy.
+
+Znamy liczby warkoczowe między innymi węzłów torusowych (fakt \ref{cor:torus_braid_number}).
+
+\index{liczba warkoczowa|)}
+
+% Koniec podsekcji Liczba warkoczowa
