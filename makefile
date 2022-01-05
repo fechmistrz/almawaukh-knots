@@ -28,7 +28,8 @@ precommit:
 	python3 tools/translate_polish_english.py <(grep -r src -E -e '% DICTIONARY;.*;.*;.*' -h) > src/90-appendix/dictionary.tex
 	diff \
 		<(grep -Ehor src/ -e '\\label\{.*\}'  | sed -r 's/^\\label//g' | sort -u) \
-		<(grep -Ehor src/ -e '\\ref\{[^}]*\}' | sed -r 's/^\\ref//g'   | sort -u)
+		<(grep -Ehor src/ -e '\\(page)?ref\{[^}]*\}' | sed -r -e 's/^\\ref//g' -e 's/^\\pageref//g'   | sort -u) | sort -k 2 \
+		&& echo "No broken/unused references found"
 
 chapter-all: build/knot-theory.pdf
 
