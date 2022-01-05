@@ -19,15 +19,13 @@ prepare:
 	mkdir -p build
 
 precommit:
-	./src/merridew/bibliography_sort.py src/knot_theory.bib
-	ack -l ' ' | xargs sed -i 's/ / /g'
+	./src/merridew/bibliography_sort.py --bib src/knot_theory.bib
+	ack -l ' ' | xargs sed -i 's/ / /g' || true
 	for i in $$(find src -type f -iname '*.tex'); do \
 	    sed '$$a\' $$i > file && mv file $$i; \
 	    perl -p -i -e 's/\t/    /g' "$$i"; \
 	done;
-	find src -type f \
-	    | xargs awk -F ';' '/^% DICTIONARY/ {print "\\item \\textbf{" $$2 "} " $$3}' \
-	    | sort > src/90-appendix/dictionary.tex
+	python3 tools/translate_polish_english.py <(grep -r src -E -e '% DICTIONARY;.*;.*;.*' -h) > src/90-appendix/dictionary.tex
 	diff \
 		<(grep -Ehor src/ -e '\\label\{.*\}'  | sed -r 's/^\\label//g' | sort -u) \
 		<(grep -Ehor src/ -e '\\ref\{[^}]*\}' | sed -r 's/^\\ref//g'   | sort -u)
