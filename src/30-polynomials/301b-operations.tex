@@ -1,0 +1,117 @@
+\subsection{Wielomian Alexandera a operacje na węzłach}
+
+Wielomian Alexandera nie odróżnia luster i~rewersów od wyjściowych węzłów:
+
+\begin{proposition}
+    Niech $L$ będzie zorientowanym splotem.
+    Wtedy $\alexander_{mL}(t) = \alexander_L(1/t) = \alexander_{rL}(t)$.
+\end{proposition}
+
+\begin{proof}
+    Po odbiciu diagramu względem pionowej prostej skrzyżowanie z~definicji \ref{def:colouring_equation} też się odbija.
+    Równanie związane z~nim zmienia się według schematu:
+    \begin{equation}
+        a + tc - ta - b = 0 \rightleftharpoons a + tb - ta - c = 0
+    \end{equation}
+    Pierwsze równanie z~$t$ zamienionym na $1/t$ staje się drugim równaniem przemnożonym przez $-1/t$.
+    Dowód drugiej równości przebiega analogicznie.
+\end{proof}
+
+\begin{proposition}
+    \label{prp:alexander_multiplicative}
+    Niech $K_1, K_2$ będą zorientowanymi węzłami.
+    Wtedy
+    \begin{equation}
+        \alexander_{K_1 \shrap K_2}(t) \equiv \alexander_{K_1}(t) \alexander_{K_2}(t)
+    \end{equation}
+\end{proposition}
+
+\begin{proof}
+    Wybierzmy poniższe diagramy dla węzłów $K_1$ oraz $K$:
+\begin{comment}
+    \[\begin{tikzpicture}[baseline=-0.65ex, scale=0.07]
+    %\useasboundingbox (-5, -5) rectangle (5,5);
+    \begin{knot}[clip width=5, end tolerance=1pt]
+        \strand[semithick] (-70, -10) rectangle (-30, 10);
+        \strand[semithick] ( 30, -10) rectangle ( 70, 10);
+        \strand[semithick,Latex-] (-30, 5) .. controls (-22, 5) and (-18, -5) .. (-10, -5);
+        \strand[semithick] (-30,-5) .. controls (-22, -5) and (-18, 5) .. (-10,  5);
+        \strand[semithick] (-10, 5) [in=up, out=right] to (-5, 0) [in=right, out=down] to (-10, -5);
+
+        % prawe strzalki
+        \strand[semithick,-Latex] (30, 5) .. controls (22, 5) and (18, -5) .. (10, -5);
+        \strand[semithick] (30,-5) .. controls (22, -5) and (18, 5) .. (10,  5);
+        \strand[semithick] (10, 5) [in=up, out=left] to (5, 0) [in=left, out=down] to (10, -5);
+
+        \node[darkblue] at (-50,5) {$x_1,\ldots,x_{m-1}$};
+        \node[red] at (-50,-5) {$1,\ldots,m$};
+
+        \node[darkblue] at (50,5) {$y_1,\ldots,y_{n-1}$};
+        \node[red] at (50,-5) {$1,\ldots,n$};
+
+        \node[darkblue] at (-30,-5)[below right] {$x_m$};
+        \node[darkblue] at (-15,-5)[below] {$x_0$};
+        \node[darkblue] at (30,-5)[below left] {$y_n$};
+        \node[darkblue] at (15,-5)[below] {$y_0$};
+        \node[red] at ( 19.5,  1)[above]{$0$};
+        \node[red] at (-19.5,  1)[above]{$0$};
+    \end{knot}
+    \end{tikzpicture}
+\]
+\end{comment}
+    Niech $A$ oraz $B$ oznaczają macierze otrzymane z~wielomianowych równań kolorujących dla $K_1$ oraz $K_2$ przez skreślenie skrajnie lewej kolumny i~górnego wiersza.
+    Wtedy $\alexander_{K_1}(t) = \det A$ oraz $\alexander_{K_2}(t) = \det B$.
+    Poniższy diagram przedstawia sumę $K_1 \shrap K_2$:
+
+\begin{comment}
+\[\begin{tikzpicture}[baseline=-0.65ex, scale=0.07]
+    %\useasboundingbox (-5, -5) rectangle (5,5);
+    \begin{knot}[clip width=5, end tolerance=1pt]
+        \strand[semithick] (-70, -10) rectangle (-30, 10);
+        \strand[semithick] ( 30, -10) rectangle ( 70, 10);
+        \strand[semithick,Latex-] (-30, 5) .. controls (-22, 5) and (-18, -5) .. (-10, -5);
+        \strand[semithick] (-30,-5) .. controls (-22, -5) and (-18, 5) .. (-10,  5);
+
+        % prawe strzalki
+        \strand[semithick] (30, 5) .. controls (22, 5) and (18, -5) .. (10, -5);
+        \strand[semithick] (30,-5) .. controls (22, -5) and (18, 5) .. (10,  5);
+        \strand[semithick] (10, 5) to (-10, 5);
+        \strand[semithick,-Latex] (10, -5) to (-10, -5);
+
+        \node[darkblue] at (-50,5) {$x_1,\ldots,x_{m-1}$};
+        \node[red] at (-50,-5) {$1,\ldots,m$};
+
+        \node[darkblue] at (50,5) {$y_1,\ldots,y_{n-1}$};
+        \node[red] at (50,-5) {$1,\ldots,n$};
+
+        \node[darkblue] at (-30,-5)[below right] {$x_m$};
+        \node[darkblue] at (0,-5)[below] {$x_0 = y_0$};
+        \node[darkblue] at (0, 5)[above] {$z$};
+        \node[darkblue] at (30,-5)[below left] {$y_n$};
+        \node[red] at ( 19.5,  1)[above]{$\zeta$};
+        \node[red] at (-19.5,  1)[above]{$0$};
+    \end{knot}
+    \end{tikzpicture}\]
+\end{comment}
+
+    Uporządkujmy łuki na diagramie jako $x_0 = y_0$, $x_1, \ldots, x_m$, $y_1, \ldots, y_n$, $z$; skrzyżowania: $0, 1, \ldots, m$ (z $K_1$), $1, \ldots, n$ (z $K_2$), $\zeta$.
+    Wielomianowe równanie kolorujące dla $K_1 \shrap K_2$ nad skrzyżowaniami $1, \ldots, m$ ($1, \ldots, n$) są takie same, jak przed dodaniem do siebie węzłów.
+    Nad skrzyżowaniem $\zeta$ równanie orzeka, że $(1-t)y_0+t z-y_n=0$.
+
+    Wynika stąd, że $\alexander_{K_1 \shrap K_2}(t)$ jest wyznacznikiem macierzy
+    \begin{align*}
+        M &= \left(\begin{array}{cc|cc|c}
+            & & & & \\
+            \multicolumn{2}{c|}{\smash{\raisebox{.5\normalbaselineskip}{$A$}}} & & \\
+            \hline \\[-\normalbaselineskip]
+            & & & & \\
+            & & \multicolumn{2}{c|}{\smash{\raisebox{.5\normalbaselineskip}{$B$}}}\\ \hline
+            & & & -1 & t
+    \end{array}\right)
+    \end{align*}
+
+    Skreśliliśmy lewą kolumnę oraz górny wiersz.
+    Zatem $\alexander_{K_1 \shrap K_2}(t) = t^?\alexander_{K_1}(t) \alexander_{K_2}(t)$, jeśli nie pomyliliśmy się w~obliczeniach.
+\end{proof}
+
+% koniec podsekcji Wielomian Alexandera a operacje na węzłach

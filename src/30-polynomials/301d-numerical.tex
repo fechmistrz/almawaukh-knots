@@ -1,0 +1,33 @@
+\subsection{Wielomian Alexandera a niezmienniki numeryczne}
+\begin{proposition}
+    \label{prp:alexander_determinant}
+    Niech $L$ będzie zorientowanym splotem.
+    Wtedy $|\alexander_L(-1)| = \det L$.
+\end{proposition}
+
+\begin{proof}
+    Wystarczy porównać definicję dla $\alexander_L$ (\ref{def:alexander_polynomial}) oraz $\det L$ (\ref{def:determinant}).
+\end{proof}
+
+\begin{proposition}
+    Wielomian Alexandera zadaje ograniczenie na indeks skrzyżowaniowy:
+    \begin{equation}
+        \deg \alexander_K(t) < \crossing K.
+    \end{equation}
+\end{proposition}
+
+Być może istnieje bezpośredni dowód tej nierówności, ale jedyne uzasadnienie, jakie znam, opiera się na fakcie \ref{prp:alexander_genus} oraz wniosku \ref{cor:crossing_genus} -- czyli własnościach genusu.
+\index{genus}
+
+\begin{proposition}
+    Tylko skończenie wiele węzłów alternujących może mieć ten sam wielomian Alexandera.
+\end{proposition}
+
+\begin{proof}
+    Załóżmy nie wprost, że istnieje nieskończony ciąg $K_n$ węzłów alternujących o~tym samym wielomianie Alexandera $\alexander_K(t)$.
+    Wszystkie jego wyrazy mają ten sam wyznacznik, ponieważ $\det K_n = |\alexander_K(-1)|$.
+    Z faktu \ref{prp:bankwitz} wynika, że indeks skrzyżowaniowy węzłów $K_n$ jest wspólnie ograniczony: $c_k \le \det K_n = \det K$.
+    To prowadzi do sprzeczności: węzłów o~danym indeksie skrzyżowaniowym jest tylko skończenie wiele.
+\end{proof}
+
+% koniec podsekcji Wielomian Alexandera a niezmienniki numeryczne
