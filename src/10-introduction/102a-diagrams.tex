@@ -1,5 +1,6 @@
 Chociaż w~świetle definicji \ref{def:knot} węzły są pewnymi regularnymi podzbiorami przestrzeni $\R^3$, z~kombinatorycznego punktu widzenia wygodniej jest rysować je na płaszczyźnie.
 
+% DICTIONARY;oriented;zorientowany;węzeł
 \begin{definition}[orientacja]
 \index{węzeł!zorientowany}%
 \index{orientacja|see {węzeł zorientowany}}%
@@ -9,16 +10,19 @@ Chociaż w~świetle definicji \ref{def:knot} węzły są pewnymi regularnymi pod
 
 Orientację na diagramie zaznaczamy małą strzałką wskazującą kierunek poruszania się.
 
+% DICTIONARY;shadow;cień;-
 \begin{definition}
 \index{cień}%
     Rzut węzła $K \subseteq \R^3$ na płaszczyznę nazywamy cieniem.
 \end{definition}
 
+% DICTIONARY;crossing;skrzyżowanie;-
 \begin{definition}[skrzyżowanie]
 \index{skrzyżowanie}% 
     Podwójny punkt w cieniu nazywamy skrzyżowaniem.
 \end{definition}
 
+% DICTIONARY;diagram;diagram;-
 \begin{definition}[diagram]
 \index{diagram}%
     Cień razem z~informacją o~tym, jak przebiegają skrzyżowania i pozbawiony katastrof: potrójnych przecięć, stycznych czy dziobów nazywamy diagramem.
@@ -60,6 +64,7 @@ Każdy węzeł ma zatem wiele diagramów; mając dane dwa różne chcielibyśmy 
 Kurt Reidemeister podał proste kryterium rozstrzygające ten problem w~latach dwudziestych ubiegłego wieku.
 Najpierw zdefiniujmy trzy lokalne operacje na diagramach.
 
+% DICTIONARY;Reidemeister/Turaev/... move;ruch Reidemeistera/Turajewa/...;-
 \begin{definition}[ruchy Reidemeistera]
 \index{ruchy Reidemeistera}%
     Trzy gatunki lokalnych deformacji diagramu splotu:
@@ -165,6 +170,7 @@ Natomiast jeżeli $n_2 = 0$, czyli drugi diagram przedstawia niewęzeł, wystarc
 
 Hayashi \cite{hayashi05} dowiódł, że liczbę ruchów Reidemeistera potrzebnych, by rozszczepić splot można ograniczyć z góry na podstawie indeksu skrzyżowaniowego.
 
+% DICTIONARY;invariant;niezmiennik;-
 Zamiast tego definiuje się niezmienniki, czyli funkcje ze zbioru wszystkich diagramów, które nie zmieniają swojej wartości podczas wykonywania ruchów Reidemeistera.
 Kiedy pewien niezmiennik przyjmuje różne wartości na dwóch diagramach, te przedstawiają dwa istotnie różne sploty.
 Gdy wartości są te same, nie dostajemy żadnej informacji.
@@ -175,6 +181,7 @@ Niezmienniki będą nam stale towarzyszyć w~wędrówce po krainie węzłów.
 
 Wolfgang Haken \cite{haken61} podał przepis na wykrycie diagramu niewęzła i rozwiązał częściowo jeden z~ważniejszych problemów teorii węzłów.
 Długo nikt nie podjął się implementacji tego algorytmu\footnote{Moritz Epple pisze ,,this algorithm was extremely impractical''.}, udało się to Burtonowi, Budneyowi oraz Petterssonowi w~komputerowym programie Regina\footnote{Dostępny pod adresem \url{https://regina-normal.github.io/}.} na przełomie tysiącleci.
+% DICTIONARY;incompressible;nieściśliwy;-
 Burton, Rubinstein i~Tillman pokazali w~pracy \cite{burton12}, jak sprawdzać, czy powierzchnia normalna na striangulowanej 3-rozmaitości jest (nie)ściśliwa w~czasie wykładniczym.
 To okazało się wystarczyć do udzielenia negatywnej odpowiedzi na pytanie Thurstona: ,,czy przestrzeń Seiferta-Webera jest rozmaitością Hakena?'', a zatem wykraczającego poza poziom tej pracy.
 \index{przestrzeń Seiferta-Webera}%
@@ -183,6 +190,7 @@ To okazało się wystarczyć do udzielenia negatywnej odpowiedzi na pytanie Thur
 SnapPea\footnote{Dostępny pod adresem \url{http://geometrygames.org/SnapPea/index.html}.} to inny popularny wśród niskowymiarowych topologów program pozwalający badać hiperboliczne 3-rozmaitości, patrz sekcja \ref{sec:hyperbolic}.
 
 Wiadomo, że genus oraz zredukowana kohomologia Chowanowa wykrywa niewęzły (fakty \ref{prp:genus_detects_unknot}, \ref{khovanov_detects_unknot}) i nie wiadomo, czy wielomian Jonesa to robi (hipoteza \ref{con:jones}).
+% TODO: wiadomo, że Alexandera nie wykrywa
 % i nie zrobił tego w THE EFFICIENT CERTIFICATION OF KNOTTEDNESS AND THURSTON NORM, bo to wyszło na arxiv w 2016
 \index{genus}%
 \index{wielomian!Jonesa}%
@@ -216,6 +224,7 @@ Więcej trudnych niewęzłów zawiera praca \cite{zanellati16} autorstwa Petroni
 
 Zanim opowiemy, jak dotąd przebiegała klasyfikacja węzłów o małej liczbie skrzyżowań, zdefiniujemy klasę splotów ze specjalnymi diagramami.
 
+% DICTIONARY;alternating;alternujący;węzeł
 \begin{definition}[alternacja]
 \index{węzeł!alternujący}%
     Diagram splotu, gdzie podczas poruszania się wzdłuż każdego ogniwa nad- oraz podskrzyżowania mijane są naprzemiennie, nazywamy alternującym.
@@ -223,7 +232,7 @@ Zanim opowiemy, jak dotąd przebiegała klasyfikacja węzłów o małej liczbie 
 \end{definition}
 
 Około 1961 roku Fox zapytał ,,What is an alternating knot?''.
-Szukano takiej definicji węzła alternującego, która nie odnosi się bezpośrednio do diagramów, aż w~2015 roku Joshua Greene podał geometryczną charakteryzację: nierozdzielczy splot w $S^3$ jest alternujący wtedy i tylko wtedy, gdy ogranicza dodatnią oraz ujemną określoną powierzchnię rozpinającą \cite{greene17}.
+Szukano takiej definicji węzła alternującego, która nie odnosi się bezpośrednio do diagramów, aż w~2015 roku Joshua Greene podał geometryczną charakteryzację: nierozszczepialny splot w $S^3$ jest alternujący wtedy i tylko wtedy, gdy ogranicza dodatnią oraz ujemną określoną powierzchnię rozpinającą \cite{greene17}.
 % definite spanning surface
 
 Sundberg oraz Thistlethwaite pokazali w 1998 roku, że liczba splotów alternujących rośnie wykładniczo (\cite{sundberg98}):
