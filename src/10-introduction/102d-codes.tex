@@ -7,38 +7,27 @@ Wybierzmy punkt na diagramie, który nie jest skrzyżowaniem i przemierzajmy go 
 Gdy mijamy nowe skrzyżowania, przypisujemy im kolejne liczby $1, 2, \ldots$, zaś dla starych skrzyżowań przepisujemy numer.
 Jeżeli mijamy skrzyżowanie dołem, kodujemy je liczbą z minusem.
 
+\begin{comment}
 \begin{figure}[H]
-\centering
-\includegraphics[width=0.40\linewidth]{../data/mixed/gauss_code.png}
-\caption{Węzeł o kodzie 1 -2 3 -4 5 6 -7 -8 4 -9 2 -10 8 11 -6 -1 10 -3 9 -5 -11 7. Źródło: \url{https://knotinfo.math.indiana.edu/descriptions/gauss_notation.html}}
+    \centering
+    \begin{minipage}[b]{.45\linewidth}
+        \centering
+        \includegraphics[width=0.90\linewidth]{../data/mixed/gauss_code.png}
+        \subcaption{Węzeł o kodzie Gaußa 1 -2 3 -4 5 6 -7 -8 4 -9 2 -10 8 11 -6 -1 10 -3 9 -5 -11 7. Źródło:\\ \url{https://knotinfo.math.indiana.edu/descriptions/gauss_notation.html}.}
+    \end{minipage}
+    \quad
+    \begin{minipage}[b]{.45\linewidth}
+        \centering
+        \includegraphics[width=0.90\linewidth]{../data/mixed/dowker_code.png}
+        \subcaption{o kodzie (Dowkera-Thistlethwaite'a) 16 18 20 -22 4 2 8 -6 12 10 -14. Źródło:\\ \url{https://knotinfo.math.indiana.edu/descriptions/dt_notation.html}.}
+    \end{minipage}
 \end{figure}
+\end{comment}
 
 W ogólnym przypadku nie można odtworzyć węzła z jego kodu, ale można delikatnie zmienić notację, by było to możliwe.
 Kiedy mijamy skrzyżowanie drugi raz, stawiamy minus przed liczbą, jeżeli skrzyżowanie jest lewoskrętne i plus w przeciwnym wypadku.
 Nazywa się to rozszerzonym kodem Gaußa.
 W naszym przykładzie, rozszerzony kod to 1 -2 3 -4 5 6 -7 -8 \textbf{-4} -9 \textbf{-2} -10 8 11 \textbf{6 -1 -10 3 9 -5 -11 -7}, pogrubione liczby odpowiadają drugim przejściom.
-
-\subsubsection{Notacja Alexandera-Briggsa}
-\index{notacja!Alexandera-Briggsa}
-W~1927 roku Alexander, Briggs wprowadzili zupełnie inny sposób oznaczania węzłów -- wtedy do 9 skrzyżowań, ale przedłużoną do 10 skrzyżowań przez Rolfsena i używaną po dziś dzień.
-Do opisu węzła używa się dwóch liczb: jego indeksu skrzyżowaniowanego z dolnym indeksem, oznaczającym miejsce w tablicy~węzłów.
-Porządek jest umowny i jego wybór należy do osoby, która jako pierwsza znajdzie wszystkie węzły o danej liczbie skrzyżowań (przy czym węzeł skręcony występuje zawsze po torusowym).
-\index{węzeł!skręcony}%
-\index{węzeł!torusowy}%
-
-Od jedenastu skrzyżowań pojawia się mała zmiana: węzły alternujące i niealternujące kataloguje się osobno.
-I tak $11n_{185}$ to sto osiemdziesiąty piąty węzeł niealternujący o 11 skrzyżowaniach, zaś $11a_{367}$ to trzysta sześćdziesiąty siódmy alternujący.
-
-Rolfsen w 1976 stworzył z kilkoma błędami tablicę diagramów pierwszych węzłów do 10 skrzyżowań.
-Para Perko $10_{161}, 10_{162}$ przedstawia ten sam węzeł, zaś górne skrzyżowanie w~$10_{144}$ powinno być zmienione.
-Ostatnie cztery węzły dostały nowe numery, by uniknąć duplikatu.
-Kolejną usterką tablicy jest to, że notacja Conwaya oraz wielomian Alexandera dla węzłów $10_{83}$ oraz $10_{86}$ są zamienione miejscami.
-Tu czyha pułapka:\footnote{Wiemy o niej dzięki stronie \url{http://stoimenov.net/stoimeno/homepage/ptab/}.} Stojmenow, nowe wydanie książki Rolfsena, atlas węzłów Bar-Natana oraz tablica niezmienników węzłowych Livingstona naprawiają to przez wymianę podpisów.
-Podręcznik Kawauchiego wymienia diagramy.
-
-Ze strony internetowej Stojmenowa dowiedzieliśmy się jeszcze czegoś.
-Kolejność Rolfsena dla węzłów o 10 skrzyżowaniach obala nomenklaturę Little'a niealternujących oraz nadpisuje numerowanie Taita dla alternujących węzłów.
-Alexander, Briggs zrobili wcześniej to samo dla 9 lub mniej skrzyżowań.
 
 \subsubsection{Notacja Dowkera-Thistlethwaite'a}
 \index{notacja!Taita}
@@ -58,12 +47,6 @@ Opisany powyżej kod nie jest idealny, ponieważ odtworzony z niego węzeł moż
 Ogólniej, odbicie dowolnego składnika sumy spójnej nie zmienia kodu całego węzła.
 Nie stanowi to jednak dużego problemu, ponieważ notacja została stworzona na potrzeby tablicowania węzłów pierwszych, a~te są niezorientowane.
 
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.40\linewidth]{../data/mixed/dowker_code.png}
-\caption{Węzeł o kodzie (DT) 16 18 20 -22 4 2 8 -6 12 10 -14. Źródło:\\ \url{https://knotinfo.math.indiana.edu/descriptions/dt_notation.html}}
-\end{figure}
-
 Zaczynając od zredukowanego diagramu o $n$ skrzyżowaniach nie można doprowadzić do sytuacji, gdzie do pewnego skrzyżowania przypisane są dwie kolejne liczby całkowite.
 Dzięki temu problem można przetłumaczyć na język teorii grafów.
 Rozpatrzmy graf $G$, którego wierzchołkami są liczby $1, 2, \ldots, 2n$.
@@ -79,6 +62,29 @@ a(n) & = \frac{1}{n} \sum_{d\mid n} \left(\frac{n}{d}\right)^d \cdot u \left(d, 
 \end{align}
 
 Kilka początkowych wartości to $a_3 = 1, 2, 5, 20, 87, 616, 4843, 44128, 444621, \ldots$ (ciąg A002484 w OEIS).
+
+\subsubsection{Notacja Alexandera-Briggsa}
+\index{notacja!Alexandera-Briggsa}
+W~1927 roku Alexander, Briggs wprowadzili zupełnie inny sposób oznaczania węzłów -- wtedy do 9 skrzyżowań, ale przedłużoną do 10 skrzyżowań przez Rolfsena i używaną po dziś dzień.
+Do opisu węzła używa się dwóch liczb: jego indeksu skrzyżowaniowanego z dolnym indeksem, oznaczającym miejsce w tablicy~węzłów.
+I~tak węzły o~ośmiu skrzyżowaniach to $8_1, 8_2, \ldots,$ $8_{21}$.
+Porządek jest umowny i jego wybór należy do osoby, która jako pierwsza znajdzie wszystkie węzły o danej liczbie skrzyżowań (ale węzeł skręcony występuje zawsze po torusowym).
+\index{węzeł!skręcony}%
+\index{węzeł!torusowy}%
+
+Od jedenastu skrzyżowań pojawia się mała zmiana: węzły alternujące i niealternujące kataloguje się osobno.
+I tak $11n_{185}$ to sto osiemdziesiąty piąty węzeł niealternujący o 11 skrzyżowaniach, zaś $11a_{367}$ to trzysta sześćdziesiąty siódmy alternujący.
+
+Rolfsen w 1976 stworzył z kilkoma błędami tablicę diagramów pierwszych węzłów do 10 skrzyżowań.
+Para Perko $10_{161}, 10_{162}$ przedstawia ten sam węzeł, zaś górne skrzyżowanie w~$10_{144}$ powinno być zmienione.
+Ostatnie cztery węzły dostały nowe numery, by uniknąć duplikatu.
+Kolejną usterką tablicy jest to, że notacja Conwaya oraz wielomian Alexandera dla węzłów $10_{83}$ oraz $10_{86}$ są zamienione miejscami.
+Tu czyha pułapka:\footnote{Wiemy o niej dzięki stronie \url{http://stoimenov.net/stoimeno/homepage/ptab/}.} Stojmenow, nowe wydanie książki Rolfsena, atlas węzłów Bar-Natana oraz tablica niezmienników węzłowych Livingstona naprawiają to przez wymianę podpisów.
+Podręcznik Kawauchiego wymienia diagramy.
+
+Ze strony internetowej Stojmenowa dowiedzieliśmy się jeszcze czegoś.
+Kolejność Rolfsena dla węzłów o 10 skrzyżowaniach obala nomenklaturę Little'a niealternujących oraz nadpisuje numerowanie Taita dla alternujących węzłów.
+Alexander, Briggs zrobili wcześniej to samo dla 9 lub mniej skrzyżowań.
 
 \subsubsection{Notacja Conwaya}
 \index{notacja!Conwaya}
