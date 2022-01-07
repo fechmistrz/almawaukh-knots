@@ -29,7 +29,6 @@ Szkielet sekcji oparliśmy o piętnasty rozdział podręcznika Murasugiego, \cit
 Gdy używamy słowa węzeł, nigdy nie mamy na myśli węzła osobliwego.
 Punkt, gdzie węzeł osobliwy tnie samego siebie, nazywamy wierzchołkiem i~oznaczamy pogrubioną kropką na diagramie.
 \index{wierzchołek (węzła osobliwego)}%
-Oto garść przykładów węzłów osobliwych:
 
 \begin{comment}
 \begin{figure}[H]
@@ -64,6 +63,7 @@ Oto garść przykładów węzłów osobliwych:
         \includegraphics[width=\linewidth]{../data/virtual_4_108.png}
         \subcaption{$4_{108}$}
     \end{minipage}
+    \caption{Garść węzłów osobliwych o małej liczbie skrzyżowań}
 \end{figure}
 \end{comment}
 
@@ -83,22 +83,38 @@ Podamy teraz definicję równoważności dla węzłów osobliwych, zupełnie ana
 Ten drugi warunek gwarantuje nam, że skrzyżowania wokół podwójnych punktów nie ulegną zniszczeniu.
 Istnieje podobne kryterium dla diagramów, odpowiednik twierdzenia Reidemeistera.
 
+
+
+ 
+
+
 \begin{proposition}
 \index{ruchy Reidemeistera}
 \index{ruch $\Omega$}
-    Dwa osobliwe diagramy są równoważne dokładnie wtedy, kiedy można między nimi przejść przy użyciu ciągu izotopii otaczających, ruchów Reidemeistera, operacji $\Omega_4$ (dwóch wariantów III ruchu Reidemeistera z wierzchołkiem):
+    Dwa osobliwe diagramy są równoważne dokładnie wtedy, kiedy można między nimi przejść przy użyciu ciągu izotopii otaczających, ruchów Reidemeistera, operacji $\Omega_4$ oraz $\Omega_5$.
 \begin{comment}
-    \[
-        \VirtualReidemeisterIIIa \cong_{\Omega_{4a}} \VirtualReidemeisterIIIb
-        \quad\quad
-        \VirtualReidemeisterIIIc \cong_{\Omega_{4e}} \VirtualReidemeisterIIId
-    \]
-\end{comment}
-    oraz zupełnie nowego ruchu $\Omega_5$ przypominającego flype:
-\begin{comment}
-\[
-    \VirtualOmegaVa \cong_{\Omega_{5a}} \VirtualOmegaVb
-\]
+    \begin{figure}[H]
+    \centering
+    \begin{minipage}[b]{.45\linewidth}
+        \[
+            \LargeVirtualReidemeisterThreeA \cong \LargeVirtualReidemeisterThreeB
+        \]
+        \subcaption{ruch $\Omega_{4a}$}
+    \end{minipage}
+    \begin{minipage}[b]{.45\linewidth}
+        \[
+            \LargeVirtualReidemeisterThreeC \cong \LargeVirtualReidemeisterThreeD
+        \]
+        \subcaption{ruch $\Omega_{4e}$}
+    \end{minipage}
+    \caption{Dwa osobliwe warianty III ruchu Reidemeistera}
+    \end{figure}
+    \begin{figure}[H]
+        \[
+            \LargeVirtualFlypeFiveA \cong \LargeVirtualFlypeFiveB
+        \]
+    \caption{Osobliwy wariant ruchu flype, $\Omega_5$}
+    \end{figure}   
 \end{comment}
 \end{proposition}
 
@@ -109,9 +125,12 @@ Załóżmy teraz, że mamy jakiś niezmiennik węzłów $v$ o~wymiernych wartoś
 Najprościej zrobić to rekurencyjnie.
 Niech $\hat v$ będzie już określony dla osobliwych węzłów o co najwyżej $n - 1$ wierzchołkach i~wybierzmy dowolny węzeł i diagram o~$n$ wierzchołkach.
 Okazuje się, że jeżeli położymy
-\begin{comment}
+
+\begin{comment} 
 \begin{equation}
-    \hat v\left(\SingularCrossing\right) = \hat v\left(\SREDNIAWYSkeinPlus\right) - \hat v\left(\SREDNIAWYSkeinMinus\right),
+    \hat v\left( \MediumSingularCrossingArrows \right) =
+    \hat v\left( \MediumPlusCrossingArrows \right) - 
+    \hat v\left( \MediumMinusCrossingArrows \right),
 \end{equation}
 \end{comment}
 to dostaniemy dobrze określoną funkcję: jeżeli $L = K$ jest tym samym osobliwym węzłem z~innym diagramem, to $\hat v(L) = \hat v(K)$.
@@ -200,11 +219,11 @@ Jeśli $q < 0$, wszystkie skrzyżowania odwracamy:
     % external lines
     \draw[thick,Latex-] (-35, 10) to (35, 10);
     \draw[thick,Latex-] (-35, -10) to (35, -10);
-    \draw[black,fill=black] (5,0) circle (1);
-    \draw[black,fill=black] (-5,0) circle (1);
-    \draw[black,fill=black] (-15,0) circle (1);
-    \draw[black,fill=black] (-25,0) circle (1);
-    \draw[black,fill=black] (-35,0) circle (1);
+    \draw[black,fill=black] (5,0) circle (0.5);
+    \draw[black,fill=black] (-5,0) circle (0.5);
+    \draw[black,fill=black] (-15,0) circle (0.5);
+    \draw[black,fill=black] (-25,0) circle (0.5);
+    \draw[black,fill=black] (-35,0) circle (0.5);
 \end{knot}
 \end{tikzpicture}\]
   \caption{Węzeł osobliwy $K[p, q]$ dla $p = 2, q = 10$.}
@@ -433,58 +452,23 @@ Okazuje się, że wartość niezmiennika Wasiljewa $v$ nie zależy wprost od teg
 \begin{figure}[H]
     \centering
     \begin{minipage}[b]{.18\linewidth}
-        \centering
-        $\begin{tikzpicture}[baseline=-0.65ex,scale=0.15]
-            \useasboundingbox (-7, -5) rectangle (7, 5);
-            \draw[thick] (-0, 0) circle (5);
-            \draw[thick, brown] (0:5) to (180:5);
-            \draw[thick, brown] (60:5) [in=-60,out=-120] to (120:5);
-            \draw[thick, brown] (-60:5) [in=60,out=120] to (-120:5);
-        \end{tikzpicture}$
+        \[\LargeChordDiagramA\]
         \subcaption{}
     \end{minipage}
     \begin{minipage}[b]{.18\linewidth}
-        \centering
-        $\begin{tikzpicture}[baseline=-0.65ex,scale=0.15]
-            \useasboundingbox (-7, -5) rectangle (7, 5);
-            \draw[thick] (-0, 0) circle (5);
-            \draw[thick, brown] (0:5) [in=-120, out=180] to (60:5);
-            \draw[thick, brown] (120:5) [in=0, out=-60] to (180:5);
-            \draw[thick, brown] (240:5) [in=120, out=60] to (300:5);
-        \end{tikzpicture}$
+        \[\LargeChordDiagramB\]
         \subcaption{}
     \end{minipage}
     \begin{minipage}[b]{.18\linewidth}
-        \centering
-        $\begin{tikzpicture}[baseline=-0.65ex,scale=0.15]
-            \useasboundingbox (-7, -5) rectangle (7, 5);
-            \draw[thick] (-0, 0) circle (5);
-            \draw[thick, brown] (0:5) [out=180, in=-60] to (120:5);
-            \draw[thick, brown] (60:5) [in=0,out=-120] to (180:5);
-            \draw[thick, brown] (240:5) [in=120, out=60] to (300:5);
-        \end{tikzpicture}$
+        \[\LargeChordDiagramC\]
         \subcaption{}
     \end{minipage}
     \begin{minipage}[b]{.18\linewidth}
-        \centering
-        $\begin{tikzpicture}[baseline=-0.65ex,scale=0.15]
-            \useasboundingbox (-7, -5) rectangle (7, 5);
-            \draw[thick] (-0, 0) circle (5);
-            \draw[thick, brown] (0:5) to (180:5);
-            \draw[thick, brown] (60:5) [in=120,out=-120] to (300:5);
-            \draw[thick, brown] (120:5) [in=60, out=-60] to (240:5);
-        \end{tikzpicture}$
+        \[\LargeChordDiagramD\]
         \subcaption{}
     \end{minipage}
     \begin{minipage}[b]{.18\linewidth}
-        \centering
-        $\begin{tikzpicture}[baseline=-0.65ex,scale=0.15]
-            \useasboundingbox (-7, -5) rectangle (7, 5);
-            \draw[thick] (-0, 0) circle (5);
-            \draw[thick, brown] (0:5) to (180:5);
-            \draw[thick, brown] (60:5) to (240:5);
-            \draw[thick, brown] (120:5) to (300:5);
-        \end{tikzpicture}$
+        \[\LargeChordDiagramE\]
         \subcaption{}
     \end{minipage}
     \caption{Wszystkie pięć diagramów cięciw stopnia 3}
@@ -517,65 +501,19 @@ Oznacza to, że przestrzeń $\mathcal V_n/\mathcal V_{n-1}$ pokrywa się z przes
 Zbiór diagramów cięciw rzędu $n$ jest skończony, więc przestrzeń funkcji na tym zbiorze też jest skończona, a zatem przestrzenie $\mathcal V_n$ są skończonego wymiaru.
 
 Symbol nie jest byle jaką funkcją, spełnia dwie relacje:
-
 \begin{comment}
 \begin{figure}[H]
-$$
-\begin{tikzpicture}[baseline=-0.65ex,scale=0.15]
-    \useasboundingbox (-7, -5) rectangle (7, 5);
-    \draw[densely dotted] (-0, 0) circle (5);
-    \draw[thick, brown] (20*17:5) [out=180+17*20, in=down] to (0:2) [in=180+1*20, out=up] to (20*1:5);
-    \draw[thick] (20*16:5) arc (20*16:20*20:5);
-\end{tikzpicture}
-\mapsto 0
-$$
-\caption{Relacja ,,one-term'' (1T albo FI?)}
+    \[
+        \LargeOneTerm \mapsto 0
+    \]
+    \caption{Relacja ,,one-term'' (1T albo FI?)}
 \end{figure}
 oraz
 \begin{figure}[H]
-$$
-\begin{tikzpicture}[baseline=-0.65ex,scale=0.15]
-    \useasboundingbox (-7, -5) rectangle (7, 5);
-    \draw[densely dotted] (-0, 0) circle (5);
-    \draw[thick, brown] (20*1:5) [in=180+13*20, out=180+1*20] to (20*13:5);
-    \draw[thick, brown] (20*6:5) [in=180+12*20, out=180+6*20] to (20*12:5);
-    \draw[thick] (20*5 :5) arc (20*5 :20*8 :5);
-    \draw[thick] (20*11:5) arc (20*11:20*14:5);
-    \draw[thick] (20*17:5) arc (20*17:20*20:5);
-\end{tikzpicture}
--
-\begin{tikzpicture}[baseline=-0.65ex,scale=0.15]
-    \useasboundingbox (-7, -5) rectangle (7, 5);
-    \draw[densely dotted] (-0, 0) circle (5);
-    \draw[thick, brown] (20*0:5) [in=180+12*20, out=180+0*20] to (20*12:5);
-    \draw[thick, brown] (20*7:5) [in=180+13*20, out=180+7*20] to (20*13:5);
-    \draw[thick] (20*5 :5) arc (20*5 :20*8 :5);
-    \draw[thick] (20*11:5) arc (20*11:20*14:5);
-    \draw[thick] (20*17:5) arc (20*17:20*20:5);
-\end{tikzpicture}
-+
-\begin{tikzpicture}[baseline=-0.65ex,scale=0.15]
-    \useasboundingbox (-7, -5) rectangle (7, 5);
-    \draw[densely dotted] (-0, 0) circle (5);
-    \draw[thick, brown] (20*0:5) [in=180+6*20, out=180+0*20] to (20*6:5);
-    \draw[thick, brown] (20*1:5) [in=180+13*20, out=180+1*20] to (20*13:5);
-    \draw[thick] (20*5 :5) arc (20*5 :20*8 :5);
-    \draw[thick] (20*11:5) arc (20*11:20*14:5);
-    \draw[thick] (20*17:5) arc (20*17:20*20:5);
-\end{tikzpicture}
--
-\begin{tikzpicture}[baseline=-0.65ex,scale=0.15]
-    \useasboundingbox (-7, -5) rectangle (7, 5);
-    \draw[densely dotted] (-0, 0) circle (5);
-    \draw[thick, brown] (20*0:5) [in=180+12*20, out=180+0*20] to (20*12:5);
-    \draw[thick, brown] (20*1:5) [in=180+7*20, out=180+1*20] to (20*7:5);
-    \draw[thick] (20*5 :5) arc (20*5 :20*8 :5);
-    \draw[thick] (20*11:5) arc (20*11:20*14:5);
-    \draw[thick] (20*17:5) arc (20*17:20*20:5);
-\end{tikzpicture}
-\mapsto 0.
-$$
-\caption{Relacja ,,four-term'' (4T)}
+    \[
+        \LargeFourTermA - \LargeFourTermB + \LargeFourTermC - \LargeFourTermD \mapsto 0.
+    \]
+    \caption{Relacja ,,four-term'' (4T)}
 \end{figure}
 \end{comment}
 

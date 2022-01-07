@@ -114,7 +114,7 @@
 
 \newcommand{\VirtualReidemeisterIIIa} {\begin{tikzpicture}[baseline=-0.65ex,scale=0.15]
     \useasboundingbox (-7, -7) rectangle (7, 7);
-    \begin{knot}[clip width=4, flip crossing/.list={1, 2, 3}, end tolerance=1pt]
+    \begin{knot}[clip width=15, flip crossing/.list={1, 2, 3}, end tolerance=1pt]
         \strand[red,thick,-latex] (-0.25, -0.25) -- (-5, -5);
         \strand[red,thick,] (5, 5) -- (0.25, 0.25);
         %
@@ -123,6 +123,24 @@
         %
         \strand[red,thick,-latex] (-5, 0) .. controls (-3, 0) and (-3, 5) .. (0, 5) .. controls (3, 5) and (3, 0) .. (5, 0);
         \draw[thick,fill=black] (0, 0) circle (0.5);
+    \end{knot}
+\end{tikzpicture}}
+
+
+\newcommand{\WUVirtualReidemeisterIIIa} {\begin{tikzpicture}[baseline=-0.65ex,scale=0.15]
+    \useasboundingbox (-7, -7) rectangle (7, 7);
+    \begin{knot}[clip width=7, end tolerance=1pt]
+    \strand[thick,latex-] (-5, -5) to (-4, -4);
+    \strand[thick] (-4, -4) to (-0.25, -0.25);
+    \strand[thick] (0.25, 0.25) to (5, 5);
+    %
+    \strand[thick] (5, -5) to (0.25, -0.25);
+    \strand[thick] (-0.25, 0.25) to (-4, 4);
+    \strand[thick,-latex] (-4, 4) to (-5, 5);
+    %
+    \strand[thick,-latex] (-5, 0) [in=left, out=right] to (0, 5) to (5, 0); 
+    %
+    \draw[thick,fill=black] (0, 0) circle (0.75);
     \end{knot}
 \end{tikzpicture}}
 
