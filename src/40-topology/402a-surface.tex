@@ -62,25 +62,7 @@ Powyższe stwiedzenie uzasadnili Pontriagin oraz Frankl w~1930 roku, my jednak p
     a~następnie wyprostujmy wszystkie skrzyżowania zgodnie z~ich orientacją:
 \begin{comment}
     \[
-    \begin{tikzpicture}[scale=0.12, baseline=-3]
-        \begin{knot}[clip width=15, end tolerance=1pt,flip crossing/.list={1}]
-            \strand[semithick,Latex-] (-5,5) to (5,-5);
-            \strand[semithick,-Latex] (-5,-5) to (5,5);
-        \end{knot}
-    \end{tikzpicture}
-    \quad\longrightarrow\quad
-        \begin{tikzpicture}[baseline=-0.65ex, scale=0.12]
-        \useasboundingbox (-5, -6) rectangle (5, 6);
-        \draw[semithick,-Latex] (-4, -5) to [out=45, in=-45] (-4, 5);
-        \draw[semithick,-Latex] (4, -5) to [out=135, in=-135] (4, 5);
-        \end{tikzpicture}
-        \quad\longleftarrow\quad
-    \begin{tikzpicture}[scale=0.12, baseline=-3]
-        \begin{knot}[clip width=15, end tolerance=1pt]
-            \strand[semithick,Latex-] (-5,5) to (5,-5);
-            \strand[semithick,-Latex] (-5,-5) to (5,5);
-        \end{knot}
-    \end{tikzpicture}
+        \LargeMinusCrossingArrows, \LargePlusCrossingArrows \mapsto \LargeJustSmoothing
     \]
 \end{comment}
 

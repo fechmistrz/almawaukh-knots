@@ -2023,3 +2023,42 @@
     \end{knot}
 \end{tikzpicture}}
 
+\newcommand{\LargeGenusProofA} {\begin{tikzpicture}[baseline=-0.65ex, scale=0.15001]
+    \begin{knot}[clip width=15, end tolerance=1pt])
+        \useasboundingbox (-7, -5) rectangle (7, 5); % REMOVE ME
+        \draw[semithick,-Latex] (-7, -5) to (-5, -5) [in=right, out=right] to (-5, 5) to (-7, 5);
+        \draw[semithick,Latex-] ( 7, -5) to ( 5, -5) [in=left, out=left] to ( 5, 5) to ( 7, 5);
+        \node at (-5, 0) {$J$};
+        \node at (5, 0) {$K$};
+    \end{knot}
+\end{tikzpicture}}
+
+\newcommand{\LargeGenusProofB} {\begin{tikzpicture}[baseline=-0.65ex, scale=0.15001]
+    \begin{knot}[clip width=15, end tolerance=1pt])
+        \useasboundingbox (-7, -5) rectangle (7, 5); % REMOVE ME
+        \draw[semithick,-Latex] (-7, -5) to (-5, -5) to [out=right, in=left] (-2, -2) -- (2, -2) to [out=right, in=left] (5, -5) to (7, -5);
+        \draw[semithick,Latex-] (-7, 5) to (-5,  5) to [out=right, in=left] (-2,  2) -- (2,  2) to [out=right, in=left] (5,  5) to (7, 5);
+        \node at (0, -5) {$J \# K$};
+    \end{knot}
+\end{tikzpicture}}
+
+\newcommand{\LargeGenusProofC} {\begin{tikzpicture}[baseline=-0.65ex, scale=0.15001]
+    \begin{knot}[clip width=15, end tolerance=1pt])
+        \useasboundingbox (-7, -5) rectangle (7, 5); % REMOVE ME
+        \draw[semithick,fill=diagramfiller] (-7, -5) to (-5, -5) [in=right, out=right] to (-5, 5) to (-7, 5);
+        \draw[semithick,fill=diagramfiller] ( 7, -5) to ( 5, -5) [in=left, out=left] to ( 5, 5) to (7, 5);
+        \node at (-4.75, 0) {$M_J$};
+        \node at (4.75, 0) {$M_K$};
+    \end{knot}
+\end{tikzpicture}}
+
+\newcommand{\LargeGenusProofD} {\begin{tikzpicture}[baseline=-0.65ex, scale=0.15001]
+    \begin{knot}[clip width=15, end tolerance=1pt])
+        \useasboundingbox (-7, -5) rectangle (7, 5); % REMOVE ME
+        \fill[diagramfiller] (-5, -5) rectangle(5, 5);
+        \draw[semithick,fill=white] (-5, -5) to [out=right, in=left] (-2, -2) -- (2, -2) to [out=right, in=left] (5, -5);
+        \draw[semithick,fill=white] (-5,  5) to [out=right, in=left] (-2,  2) -- (2,  2) to [out=right, in=left] (5,  5);
+        \node at (0, 0) {$M_{J \# K}$};
+    \end{knot}
+\end{tikzpicture}}
+

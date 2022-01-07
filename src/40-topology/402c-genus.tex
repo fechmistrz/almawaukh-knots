@@ -268,34 +268,22 @@ Przebiega w dwóch etapach: najpierw pokazuje się, że genus sumy nie jest wię
     Wybierzmy powierzchnie Seiferta $M_J$ oraz $M_K$ dla $J$ oraz $K$ o~minimalnym genusie.
     Suma $J \shrap K$ powstaje z~$J$ oraz $K$, podobnie jest z~powierzchniami Seiferta:
 \begin{comment}
-    \[
-        \begin{tikzpicture}[baseline=-0.65ex,scale=0.12]
-        \draw[semithick,-Latex] (-7, -5) to (-5, -5) [in=right, out=right] to (-5, 5) to (-7, 5);
-        \draw[semithick,Latex-] ( 7, -5) to ( 5, -5) [in=left, out=left] to ( 5, 5) to ( 7, 5);
-        \node at (-5, 0) {$J$};
-        \node at (5, 0) {$K$};
-        \end{tikzpicture}
-        \longrightarrow
-        \begin{tikzpicture}[baseline=-0.65ex,scale=0.12]
-        \draw[semithick,-Latex] (-7, -5) to (-5, -5) to [out=right, in=left] (-2, -2) -- (2, -2) to [out=right, in=left] (5, -5) to (7, -5);
-        \draw[semithick,Latex-] (-7, 5) to (-5,  5) to [out=right, in=left] (-2,  2) -- (2,  2) to [out=right, in=left] (5,  5) to (7, 5);
-        \node at (0, -5) {$J \# K$};
-        \end{tikzpicture}
-        \quad\quad
-        \begin{tikzpicture}[baseline=-0.65ex,scale=0.12]
-        \draw[semithick,fill=blue!10!white] (-10, -5) to (-5, -5) [in=right, out=right] to (-5, 5) to (-10, 5);
-        \draw[semithick,fill=blue!10!white] ( 10, -5) to ( 5, -5) [in=left, out=left] to ( 5, 5) to (10, 5);
-        \node at (-6.5, 0) {$M_J$};
-        \node at (6.5, 0) {$M_K$};
-        \end{tikzpicture}
-        \longrightarrow
-        \begin{tikzpicture}[baseline=-0.65ex,scale=0.12]
-        \fill[blue!10!white] (-7, -5) rectangle (7, 5);
-        \draw[semithick,fill=white] (-7, -5) to (-5, -5) to [out=right, in=left] (-2, -2) -- (2, -2) to [out=right, in=left] (5, -5) to (7, -5);
-        \draw[semithick,fill=white] (-7, 5) to (-5,  5) to [out=right, in=left] (-2,  2) -- (2,  2) to [out=right, in=left] (5,  5) to (7, 5);
-        \node at (0, 0) {$M_{J \# K}$};
-        \end{tikzpicture}
-    \]
+    \begin{figure}[H]
+        \centering
+        \begin{minipage}[b]{.48\linewidth}
+        \[
+            \LargeGenusProofA \longrightarrow \LargeGenusProofB
+        \]
+        \subcaption{suma węzłów}
+        %
+        \end{minipage}
+        \begin{minipage}[b]{.48\linewidth}
+        \[
+            \LargeGenusProofC \longrightarrow \LargeGenusProofD
+        \]
+        \subcaption{suma powierzchni}
+        \end{minipage}
+    \end{figure}
 \end{comment}
 
     Skoro $M_{J\#K}$ powstaje z~$M_J \sqcup M_K$ przez dołączenie paska do brzegu, mamy
@@ -315,12 +303,7 @@ Przebiega w dwóch etapach: najpierw pokazuje się, że genus sumy nie jest wię
     Poprzez wykonanie chirurgii na powierzchni, możemy przyjąć specjalną postać jak w~poprzednim dowodzie:
 \begin{comment}
     \[
-        \begin{tikzpicture}[baseline=-0.65ex,scale=0.16]
-            \fill[blue!10!white] (-5, -5) rectangle(5, 5);
-        \draw[semithick,fill=white] (-5, -5) to [out=right, in=left] (-2, -2) -- (2, -2) to [out=right, in=left] (5, -5);
-        \draw[semithick,fill=white] (-5,  5) to [out=right, in=left] (-2,  2) -- (2,  2) to [out=right, in=left] (5,  5);
-            \node at (0, 0) {$M_{J \# K}$};
-        \end{tikzpicture}
+        \LargeGenusProofD
     \]
 \end{comment}
 
@@ -398,16 +381,16 @@ Hashizume \cite{hashizume58} rozszeszył wyniki Schuberta do splotów.
     Istotnie, algorytm Seiferta zastosowany do diagramu tego węzła wyprodukuje $2n+1$ okręgów.
 \begin{comment}
     \[
-        \begin{tikzpicture}[baseline=-0.65ex,scale=0.055]
-        \begin{knot}[clip width=10, flip crossing/.list={1,4,5},end tolerance=1pt]
+        \begin{tikzpicture}[baseline=-0.65ex,scale=0.06]
+        \begin{knot}[clip width=7, flip crossing/.list={1,4,5},end tolerance=1pt]
             \node at (0,10) {$\cdots$};
             \strand[semithick] (-30, -5) -- (-5, -5);
-            \strand[semithick,-Latex]  (5, -5) -- (30, -5);
-            \strand[semithick,Latex-]  (-30,-15) -- (-5,-15);
-            \strand[semithick,Latex-]  (5,-15) -- (30,-15);
+            \strand[semithick]  (5, -5) -- (30, -5);
+            \strand[semithick,latex-]  (-30,-15) -- (-5,-15);
+            \strand[semithick]  (5,-15) -- (30,-15);
 
-            \strand[semithick,domain=-90:90] plot ({7.5*cos(\x)-5}, {5*sin(\x)-10});
-            \strand[semithick,domain=90:270] plot ({7.5*cos(\x)+5}, {5*sin(\x)-10});
+            \strand[semithick] (-5, -15) [in=down, out=right] to (5, -10) [in=right, out=up] to (-5, -5);
+            \strand[semithick] (5, -15) [in=down, out=left] to (-5, -10) [in=left, out=up] to (5, -5);
 
             % zewnętrzne obręcze -- lewa strona
             \strand[semithick] (-30, 15) to [out=left, in=up]   (-45, 0);
@@ -421,17 +404,17 @@ Hashizume \cite{hashizume58} rozszeszył wyniki Schuberta do splotów.
             \strand[semithick] (30,  5) to [out=right, in=up]   (35,0);
             \strand[semithick] (30, -5) to [out=right, in=down] (35,0);
 
-            % jak w~drugim ruchu Reidemeistera - lewe
-            \strand[semithick] (-30, 15) .. controls (-24, 15) and (-24,  5) .. (-20,  5);
-            \strand[semithick] (-30,  5) .. controls (-24,  5) and (-24, 15) .. (-20, 15);
-            \strand[semithick] (-10, 15) .. controls (-16, 15) and (-16,  5) .. (-20,  5);
-            \strand[semithick] (-10,  5) .. controls (-16,  5) and (-16, 15) .. (-20, 15);
+            % jak w~drugim ruchu Reidemeistera - górny warkocz, lewy
+            \strand[semithick] (-30, 15) [in=left, out=right] to (-20,  5);
+            \strand[semithick] (-30,  5) [in=left, out=right] to (-20, 15);
+            \strand[semithick] (-10, 15) [in=right, out=left] to (-20,  5);
+            \strand[semithick] (-10,  5) [in=right, out=left] to (-20, 15);
 
-            % jak w~drugim ruchu Reidemeistera - prawe
-            \strand[semithick] (30, 15) .. controls (24, 15) and (24,  5) .. (20,  5);
-            \strand[semithick] (10, 15) .. controls (16, 15) and (16,  5) .. (20,  5);
-            \strand[semithick] (30,  5) .. controls (24,  5) and (24, 15) .. (20, 15);
-            \strand[semithick] (10,  5) .. controls (16,  5) and (16, 15) .. (20, 15);
+            % jak w~drugim ruchu Reidemeistera - górny warkocz, prawy
+            \strand[semithick] (30, 15) [in=right, out=left] to (20,  5);
+            \strand[semithick] (10, 15) [in=left, out=right] to (20,  5);
+            \strand[semithick] (30,  5) [in=right, out=left] to (20, 15);
+            \strand[semithick] (10,  5) [in=left, out=right] to (20, 15);
         \end{knot}
         \end{tikzpicture}
         \longrightarrow
