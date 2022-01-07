@@ -1969,3 +1969,57 @@
     \end{knot}
 \end{tikzpicture}}
 
+\newcommand{\HugeWirtingerPlus} {\begin{tikzpicture}[baseline=-0.65ex, scale=0.25001]
+    \begin{knot}[clip width=15, end tolerance=1pt, flip crossing/.list={1}])
+        \useasboundingbox (-7, -5) rectangle (7, 5); % REMOVE ME
+        \strand[thick, latex-] (-5,5) to (5,-5);
+        \strand[thick, -latex] (-5,-5) to (5,5);
+        \strand[thick, latex-, first_colour] (-5, 1) to (-1, 5);
+        \strand[thick, latex-, first_colour] (-5, -1) to (-1, -5);
+        \strand[thick, -latex, first_colour] (5, -1) to (1, -5);
+        \strand[thick, -latex, first_colour] (5, 1) to (1, 5);
+        \node[first_colour] at (-7, -2) {$x_k$};
+        \node[first_colour] at (-7, 2) {$x_{j+1}$};
+        \node[first_colour] at (7, -2) {$x_j$};
+        \node[first_colour] at (7, 2) {$x_k$};
+    \end{knot}
+\end{tikzpicture}}
+
+\newcommand{\HugeWirtingerMinus} {\begin{tikzpicture}[baseline=-0.65ex, scale=0.25001]
+    \begin{knot}[clip width=15, end tolerance=1pt, flip crossing/.list={1}])
+        \useasboundingbox (-7, -5) rectangle (7, 5); % REMOVE ME
+        \strand[thick, latex-] (-5,5) to (5,-5);
+        \strand[thick, latex-] (-5,-5) to (5,5);
+        \strand[thick, latex-, first_colour] (-5, 1) to (-1, 5);
+        \strand[thick, -latex, first_colour] (-5, -1) to (-1, -5);
+        \strand[thick, -latex, first_colour] (5, -1) to (1, -5);
+        \strand[thick, latex-, first_colour] (5, 1) to (1, 5);
+        \node[first_colour] at (-7, -2) {$x_k$};
+        \node[first_colour] at (-7, 2) {$x_{j+1}$};
+        \node[first_colour] at (7, -2) {$x_j$};
+        \node[first_colour] at (7, 2) {$x_k$};
+    \end{knot}
+\end{tikzpicture}}
+
+\newcommand{\LargeWirtingerRelationA} {\begin{tikzpicture}[baseline=-0.65ex, scale=0.15001]
+    \begin{knot}[clip width=15, end tolerance=1pt])
+        \useasboundingbox (-7, -5) rectangle (7, 5); % REMOVE ME
+        \strand[thick,-latex] (-5, -5) to (5, 5);
+        \strand[thick,-latex] (5, -5) to (-5, 5);
+        \node[first_colour] at (5, -5)  [above right] {$a_k$};
+        \node[first_colour] at (-5, 5)  [below left]  {$a_j$};
+        \node[first_colour] at (-5, -5) [above left]  {$a_i$};
+    \end{knot}
+\end{tikzpicture}}
+
+\newcommand{\LargeWirtingerRelationB} {\begin{tikzpicture}[baseline=-0.65ex, scale=0.15001]
+    \begin{knot}[clip width=15, end tolerance=1pt, flip crossing/.list={1}])
+        \useasboundingbox (-7, -5) rectangle (7, 5); % REMOVE ME
+        \strand[thick,-latex] (-5, -5) to (5, 5);
+        \strand[thick,-latex] (5, -5) to (-5, 5);
+        \node[first_colour] at (5, 5)   [below right] {$a_k$};
+        \node[first_colour] at (5, -5)  [above right] {$a_i$};
+        \node[first_colour] at (-5, -5) [above left]  {$a_j$};
+    \end{knot}
+\end{tikzpicture}}
+

@@ -19,27 +19,18 @@ Przedstawimy ją zaraz ze względu na użyteczność w~rachunkach, dowodząc jed
     \end{equation}
     gdzie $a_i$ to włókna diagramu, zaś $r_x$ to relacje Wirtingera: $a_ia_ja_i^{-1}a_k^{-1}=1$,
 \begin{comment}
-    \[
-    \begin{tikzpicture}[baseline=-0.65ex,scale=0.15]
-    \begin{knot}[clip width=15]
-        \strand[semithick,-Latex] (-5, -5) to (5, 5);
-        \strand[semithick,-Latex] (-5, 5) to (5, -5);
-        \node[darkblue] at (5, 5)[below right] {$a_i$};
-        \node[darkblue] at (5, -5)[above right] {$a_k$};
-        \node[darkblue] at (-5, 5)[below left] {$a_j$};
-    \end{knot}
-    \end{tikzpicture}
-    \quad\quad
-    \begin{tikzpicture}[baseline=-0.65ex,scale=0.15]
-    \begin{knot}[clip width=15, flip crossing/.list={1}]
-        \strand[semithick,-Latex] (-5, -5) to (5, 5);
-        \strand[semithick,-Latex] (-5, 5) to (5, -5);
-        \node[darkblue] at (5, 5)[below right] {$a_j$};
-        \node[darkblue] at (-5, -5)[above left] {$a_k$};
-        \node[darkblue] at (-5, 5)[below left] {$a_i$};
-    \end{knot}
-    \end{tikzpicture}
-    \]
+    \begin{figure}[H]
+    \begin{minipage}[b]{.48\linewidth}
+        \[
+            \LargeWirtingerRelationA
+        \]
+    \end{minipage}
+    \begin{minipage}[b]{.48\linewidth}
+        \[
+            \LargeWirtingerRelationB
+        \]
+    \end{minipage}
+    \end{figure}
 \end{comment}
     w~których łuk $a_i$ biegnie górą, zaś $a_j$ leży po jego lewej stronie.
 \end{proof}
@@ -48,49 +39,13 @@ Przedstawimy ją zaraz ze względu na użyteczność w~rachunkach, dowodząc jed
 \begin{figure}[H]
     \begin{minipage}[b]{.48\linewidth}
         \[
-            \begin{tikzpicture}[baseline=-0.65ex, scale=0.2]
-                \useasboundingbox (-5, -5) rectangle (5,5);
-                \begin{knot}[clip width=3.5, end tolerance=1pt, flip crossing/.list={1}]
-                    \strand[thick, Latex-] (-5,5) to (5,-5);
-                    \strand[thick, -Latex] (-5,-5) to (5,5);
-                    % top left
-                    \strand[thick, Latex-, darkblue] (-5, 1) to (-1, 5);
-                    % bottom left
-                    \strand[thick, Latex-, darkblue] (-5, -1) to (-1, -5);
-                    % bottom right
-                    \strand[thick, -Latex, darkblue] (5, -1) to (1, -5);
-                    % top right
-                    \strand[thick, -Latex, darkblue] (5, 1) to (1, 5);
-                    \node[darkblue] at (-7, -2) {$x_k$};
-                    \node[darkblue] at (-7, 2) {$x_{j+1}$};
-                    \node[darkblue] at (7, -2) {$x_j$};
-                    \node[darkblue] at (7, 2) {$x_k$};
-                \end{knot}
-            \end{tikzpicture}
+            \HugeWirtingerPlus
         \]
         \subcaption{skrzyżowanie dodatnie: $x_j = x_k x_{j+1} x_k^{-1}$}
     \end{minipage}
     \begin{minipage}[b]{.48\linewidth}
         \[
-            \begin{tikzpicture}[baseline=-0.65ex, scale=0.2]
-                \useasboundingbox (-5, -5) rectangle (5,5);
-                \begin{knot}[clip width=3.5, end tolerance=1pt, flip crossing/.list={1}]
-                    \strand[thick, Latex-] (-5,5) to (5,-5);
-                    \strand[thick, Latex-] (-5,-5) to (5,5);
-                    % top left
-                    \strand[thick, Latex-, darkblue] (-5, 1) to (-1, 5);
-                    % bottom left
-                    \strand[thick, -Latex, darkblue] (-5, -1) to (-1, -5);
-                    % bottom right
-                    \strand[thick, -Latex, darkblue] (5, -1) to (1, -5);
-                    % top right
-                    \strand[thick, Latex-, darkblue] (5, 1) to (1, 5);
-                    \node[darkblue] at (-7, -2) {$x_k$};
-                    \node[darkblue] at (-7, 2) {$x_{j+1}$};
-                    \node[darkblue] at (7, -2) {$x_j$};
-                    \node[darkblue] at (7, 2) {$x_k$};
-                \end{knot}
-            \end{tikzpicture}
+            \HugeWirtingerMinus
         \]
         \subcaption{skrzyżowanie ujemne: $x_j = x_k^{-1} x_{j+1} x_k$}
     \end{minipage}
@@ -98,7 +53,6 @@ Przedstawimy ją zaraz ze względu na użyteczność w~rachunkach, dowodząc jed
 \end{comment}
 
 \begin{corollary}
-
     Niech $G$ będzie grupą węzła.
     Wtedy jej abelianizacją jest $G^{\operatorname{ab}} = \Z$.
 \end{corollary}
