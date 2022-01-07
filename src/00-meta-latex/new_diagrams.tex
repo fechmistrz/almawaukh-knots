@@ -2062,3 +2062,43 @@
     \end{knot}
 \end{tikzpicture}}
 
+\newcommand{\LargeTwoPassMoveA} {\begin{tikzpicture}[baseline=-0.65ex, scale=0.15001]
+    \begin{knot}[clip width=7, end tolerance=1pt])
+        \useasboundingbox (-7, -5) rectangle (7, 5); % REMOVE ME
+        \strand[-latex, thick] (-5,-2) to (5,-2);
+        \strand[-latex, thick] (5,2) to (-5,2);
+        \strand[-latex, thick] (-2,-5) to (-2,5);
+        \strand[-latex, thick] (2,5) to (2,-5);
+    \end{knot}
+\end{tikzpicture}}
+
+\newcommand{\LargeTwoPassMoveB} {\begin{tikzpicture}[baseline=-0.65ex, scale=0.15001]
+    \begin{knot}[clip width=7, end tolerance=1pt, flip crossing/.list={1,2,3,4}])
+        \useasboundingbox (-7, -5) rectangle (7, 5); % REMOVE ME
+        \strand[-latex, thick] (-5,-2) to (5,-2);
+        \strand[-latex, thick] (5,2) to (-5,2);
+        \strand[-latex, thick] (-2,-5) to (-2,5);
+        \strand[-latex, thick] (2,5) to (2,-5);
+    \end{knot}
+\end{tikzpicture}}
+
+\newcommand{\LargeTwoPassMoveC} {\begin{tikzpicture}[baseline=-0.65ex, scale=0.15001]
+    \begin{knot}[clip width=7, end tolerance=1pt])
+        \useasboundingbox (-7, -5) rectangle (7, 5); % REMOVE ME
+        \strand[-latex, thick] (-5,-2) to (5,-2);
+        \strand[-latex, thick] (5,2) to (-5,2);
+        \strand[latex-, thick] (-2,-5) to (-2,5);
+        \strand[latex-, thick] (2,5) to (2,-5);
+    \end{knot}
+\end{tikzpicture}}
+
+\newcommand{\LargeTwoPassMoveD} {\begin{tikzpicture}[baseline=-0.65ex, scale=0.15001]
+    \begin{knot}[clip width=7, end tolerance=1pt, flip crossing/.list={1,2,3,4}])
+        \useasboundingbox (-7, -5) rectangle (7, 5); % REMOVE ME
+        \strand[-latex, thick] (-5,-2) to (5,-2);
+        \strand[-latex, thick] (5,2) to (-5,2);
+        \strand[latex-, thick] (-2,-5) to (-2,5);
+        \strand[latex-, thick] (2,5) to (2,-5);
+    \end{knot}
+\end{tikzpicture}}
+

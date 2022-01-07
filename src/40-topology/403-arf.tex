@@ -40,41 +40,9 @@ Kauffman zaproponował inne podejście z wykorzystaniem diagramów.
 Dwa węzły nazwiemy równoważnymi przez przejścia, jeśli są związane skończenie wieloma ,,przejściami'' \cite[s. 143]{kauffman83}:
 \begin{comment}
 \[
-    \begin{tikzpicture}[baseline=-0.65ex,scale=0.35]
-    \begin{knot}[clip width=7]
-        \strand[-latex, thick] (-2.5,-1.0) to (2.5,-1.0);
-        \strand[-latex, thick] (2.5,1.0) to (-2.5,1.0);
-        \strand[-latex, thick] (-1.0,-2.5) to (-1.0,2.5);
-        \strand[-latex, thick] (1.0,2.5) to (1.0,-2.5);
-    \end{knot}
-    \end{tikzpicture}
-    \cong
-    \begin{tikzpicture}[baseline=-0.65ex,scale=0.35]
-    \begin{knot}[clip width=7, flip crossing/.list={1,2,3,4}]
-        \strand[-latex, thick] (-2.5,-1.0) to (2.5,-1.0);
-        \strand[-latex, thick] (2.5,1.0) to (-2.5,1.0);
-        \strand[-latex, thick] (-1.0,-2.5) to (-1.0,2.5);
-        \strand[-latex, thick] (1.0,2.5) to (1.0,-2.5);
-    \end{knot}
-    \end{tikzpicture}
+    \LargeTwoPassMoveA \cong \LargeTwoPassMoveB
     \quad\mbox{albo}\quad
-    \begin{tikzpicture}[baseline=-0.65ex,scale=0.35]
-    \begin{knot}[clip width=7]
-        \strand[-latex, thick] (-2.5,-1.0) to (2.5,-1.0);
-        \strand[-latex, thick] (2.5,1.0) to (-2.5,1.0);
-        \strand[latex-, thick] (-1.0,-2.5) to (-1.0,2.5);
-        \strand[latex-, thick] (1.0,2.5) to (1.0,-2.5);
-    \end{knot}
-    \end{tikzpicture}
-    \cong
-    \begin{tikzpicture}[baseline=-0.65ex,scale=0.35]
-    \begin{knot}[clip width=7, flip crossing/.list={1,2,3,4}]
-        \strand[-latex, thick] (-2.5,-1.0) to (2.5,-1.0);
-        \strand[-latex, thick] (2.5,1.0) to (-2.5,1.0);
-        \strand[latex-, thick] (-1.0,-2.5) to (-1.0,2.5);
-        \strand[latex-, thick] (1.0,2.5) to (1.0,-2.5);
-    \end{knot}
-    \end{tikzpicture}
+    \LargeTwoPassMoveC \cong \LargeTwoPassMoveD
 \]
 \end{comment}
 
