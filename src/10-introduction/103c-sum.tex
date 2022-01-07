@@ -15,7 +15,8 @@
     Otrzymany węzeł nazywamy sumą spójną węzłów $K_1$ oraz $K_2$ i oznaczamy przez $K_1 \shrap K_2$.
 \begin{comment}
     \[
-        \begin{tikzpicture}[baseline=-0.65ex,scale=0.1]
+        \begin{tikzpicture}[baseline=-0.65ex,scale=0.09]
+        \useasboundingbox (-12, -15) rectangle (12, 10);
         \begin{knot}[clip width=5, flip crossing/.list={5}, ignore endpoint intersections=false,]
             \strand[thick] (-3.5, -3.5) [in=down, out=up] to (3.5, 3.5);
             \strand[thick] (3.5, 3.5) [in=right, out=up] to (-4.5, 10);
@@ -33,7 +34,8 @@
         \end{knot}
         \end{tikzpicture}
         \shrap
-        \begin{tikzpicture}[baseline=-0.65ex,scale=0.1]
+        \begin{tikzpicture}[baseline=-0.65ex,scale=0.09]
+        \useasboundingbox (-12, -15) rectangle (12, 10);
         \begin{knot}[clip width=5, flip crossing/.list={6}, ignore endpoint intersections=false,]
             \strand[thick] (-3.5, -3.5) [in=down, out=up] to (3.5, 3.5);
             %\strand[thick] (3.5, 3.5) [in=right, out=up] to (-4.5, 10);
@@ -54,7 +56,8 @@
         \end{knot}
         \end{tikzpicture}
         =
-        \begin{tikzpicture}[baseline=-0.65ex,scale=0.1]
+        \begin{tikzpicture}[baseline=-0.65ex,scale=0.09]
+        \useasboundingbox (-27, -15) rectangle (27, 10);
         \begin{knot}[clip width=5, flip crossing/.list={5, 22, 23}, ignore endpoint intersections=false,]
             \strand[thick] (-18.5, -3.5) [in=down, out=up] to (-11.5, 3.5);
             \strand[thick] (-11.5, 3.5) [in=right, out=up] to (-19.5, 10);
@@ -68,8 +71,8 @@
             \strand[thick, -Latex] (-5, 2) to (-5+6, 2);
             \strand[thick] (5, 2) to (-5+6, 2);
             \strand[thick] (3, -2) to [in=left, out=right] (10.5, -10);
-            \strand[thick, -Latex] (3, -2) to (0, -2);
-            \strand[thick] (-5, -2) to (0, -2);
+            \strand[thick, -Latex] (3, -2) to (-3, -2);
+            \strand[thick] (-5, -2) to (-3, -2);
             \strand[thick] (-5, -2) [in=right, out=left] to (-10.5, -10);
             \strand[thick] (-10.5, -10) [in=down, out=left] to (-18.5, -3.5);
             %%%
@@ -136,14 +139,14 @@ W języku algebry mówimy, że węzły z~sumą spójną tworzą półgrupę (tak
 Dużo później pokażemy, że działaniu $\shrap$ brakuje elementów przeciwnych, więc ta struktura algebraiczna nie jest grupą.
 
 \begin{proposition}
-    Niech $K_1, K_2$ będą takimi węzłami, że $K_1 \shrap K_2 = \Unknot$. Wtedy $K_1 = K_2 = \Unknot$.
+    Niech $K_1, K_2$ będą takimi węzłami, że $K_1 \shrap K_2 = \SmallUnknot$. Wtedy $K_1 = K_2 = \SmallUnknot$.
 \end{proposition}
 
 \begin{proof}[Niedowód]
 % DICTIONARY;Mazur swindle;szwindel Mazura;-
     Technika ta zwana jest szwindlem Mazura.
 \index{szwindel Mazura}%
-    Załóżmy, że $K \shrap L = \Unknot$ i~dopuśćmy wyjątkowo węzły dzikie.
+    Załóżmy, że $K \shrap L = \SmallUnknot$ i~dopuśćmy wyjątkowo węzły dzikie.
     Skonstruujmy sumę $K \shrap L \shrap K \shrap \ldots$,
     przy czym kolejne składniki powinny zmniejszać się,
     aby ich suma nadal była węzłem.
@@ -151,10 +154,10 @@ Dużo później pokażemy, że działaniu $\shrap$ brakuje elementów przeciwnyc
     \begin{align*}
         K & \simeq K \shrap [(L \shrap K) \shrap (L \shrap K) \ldots] \\
          & \simeq (K \shrap L) \shrap (K \shrap L) \shrap \ldots
-         \simeq \Unknot \shrap \Unknot \shrap \ldots
-         \simeq \Unknot.
+         \simeq \SmallUnknot \shrap \SmallUnknot \shrap \ldots
+         \simeq \SmallUnknot.
     \end{align*}
-    Analogicznie pokazujemy, że $L \simeq \Unknot$.
+    Analogicznie pokazujemy, że $L \simeq \SmallUnknot$.
     (To jedyne miejsce w~całej książce, gdzie użyte zostają węzły dzikie.
 \end{proof}
 

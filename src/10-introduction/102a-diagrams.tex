@@ -68,62 +68,30 @@ Najpierw zdefiniujmy trzy lokalne operacje na diagramach.
 \begin{definition}[ruchy Reidemeistera]
 \index{ruchy Reidemeistera}%
     Trzy gatunki lokalnych deformacji diagramu splotu:
-\begin{comment}
-    \[
-        \underbrace{\begin{tikzpicture}[baseline=-0.65ex,scale=0.1]
-        \begin{knot}[clip width=5]
-            \strand[thick] (-5, 10) to [in=left, out=down] (2, -5);
-            \strand[thick] (5, 0) to [in=right, out=down] (2, -5);
-            \strand[thick] (5, 0) to [in=right, out=up] (2, 5);
-            \strand[thick] (-5, -10) to [in=left, out=up] (2, 5);
-        \end{knot}
-        \end{tikzpicture}
-        \, \cong \,
-        \begin{tikzpicture}[baseline=-0.65ex,scale=0.1]
-        \begin{knot}[clip width=5]
-            \strand[thick] (0,10) to (0,-10);
-        \end{knot}
-        \end{tikzpicture}}_{R_1}
-        %%%
-        \quad \quad \quad
-        \underbrace{\begin{tikzpicture}[baseline=-0.65ex,scale=0.1]
-        \begin{knot}[clip width=5]
-            \strand[thick] (-5, 10) to [in=up, out=down] (5, 0);
-            \strand[thick] (-5, -10) to [in=down, out=up] (5, 0);
-            \strand[thick] (5, 10) to [in=up, out=down] (-5, 0);
-            \strand[thick] (5, -10) to [in=down, out=up] (-5, 0);
-        \end{knot}
-        \end{tikzpicture}
-        \, \cong \,
-        \begin{tikzpicture}[baseline=-0.65ex,scale=0.1]
-        \begin{knot}[clip width=5]
-            \strand[thick] (-5, 10) to [in=up, out=down] (-2, 0);
-            \strand[thick] (-5, -10) to [in=down, out=up] (-2, 0);
-            \strand[thick] (5, 10) to [in=up, out=down] (2, 0);
-            \strand[thick] (5, -10) to [in=down, out=up] (2, 0);
-        \end{knot}
-        \end{tikzpicture}}_{R_2}
-        %%%
-        \quad \quad \quad
-        \underbrace{\begin{tikzpicture}[baseline=-0.65ex,scale=0.1]
-        \begin{knot}[clip width=5, flip crossing/.list={1,2,3}]
-            \strand[thick] (-10, -10) -- (10, 10);
-            \strand[thick] (-10, 10) -- (10, -10);
-            \strand[thick] (-10, 0) to [in=left, out=right] (0, 10);
-            \strand[thick] (10, 0) to [in=right, out=left] (0, 10);
-        \end{knot}
-        \end{tikzpicture}
-        \, \cong \,
-        \begin{tikzpicture}[baseline=-0.65ex,scale=0.1]
-        \begin{knot}[clip width=5, flip crossing/.list={1,2,3}]
-            \strand[thick] (-10, -10) -- (10, 10);
-            \strand[thick] (-10, 10) -- (10, -10);
-            \strand[thick] (-10, 0) to [in=left, out=right] (0, -10);
-            \strand[thick] (10, 0) to [in=right, out=left] (0, -10);
-        \end{knot}
-        \end{tikzpicture}}_{R_3}
-    \]
-\end{comment}
+    \begin{figure}[H]
+    \centering
+    %
+    \begin{minipage}[b]{.3\linewidth}
+        \[
+            \LargeReidemeisterOneLeft \stackrel{R_1}{\cong} \LargeReidemeisterOneStraight
+        \]
+        \subcaption{ruch $R_1$}
+    \end{minipage}
+    %
+    \begin{minipage}[b]{.3\linewidth}
+        \[
+            \LargeReidemeisterTwoA \stackrel{R_2}{\cong} \LargeReidemeisterTwoB
+        \]
+        \subcaption{ruch $R_2$}
+    \end{minipage}
+    %
+    \begin{minipage}[b]{.35\linewidth}
+        \[
+            \LargeReidemeisterThreeA \stackrel{R_3}{\cong} \LargeReidemeisterThreeB
+        \]
+        \subcaption{ruch $R_3$}
+    \end{minipage}
+    \end{figure}
     skręcenie lub rozkręcenie ($R_1$), wsunięcie lub rozsunięcie ($R_2$) oraz przesunięcie łuku przez skrzyżowanie ($R_3$) nazywamy ruchami Reidemeistera.
 \end{definition}
 

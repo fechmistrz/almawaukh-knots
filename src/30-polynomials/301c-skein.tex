@@ -5,11 +5,24 @@
     Niech $L$ będzie zorientowanym splotem z ustalonym diagramem oraz skrzyżowaniem.
     Oznaczmy przez $L_+, L_-, L_0$ trzy diagramy splotów, które różnią się jedynie na małym obszarze wokół ustalonego skrzyżowania:
 \begin{comment}
-    \[
-        \skeinplus \quad\quad\quad\quad
-        \skeinminus \quad\quad\quad\quad
-        \skeinzero
-    \]
+    \begin{figure}[H]
+        \centering
+        \begin{minipage}[b]{.3\linewidth}
+            \centering
+            \[\LargePlusCrossingArrows\]
+            \subcaption{$L_+$}
+        \end{minipage}
+        \begin{minipage}[b]{.3\linewidth}
+            \centering
+            \[\LargeMinusCrossingArrows\]
+            \subcaption{$L_-$}
+        \end{minipage}
+        \begin{minipage}[b]{.3\linewidth}
+            \centering
+            \[\LargeJustSmoothing\]
+            \subcaption{$L_0$}
+        \end{minipage}
+    \end{figure}
 \end{comment}
     Mówimy, że niezmiennik zorientowanych splotów $f$ spełnia relację kłębiastą, jeżeli wartości $f(L_+)$, $f(L_-)$ i $f(L_0)$ są związane pewnym wielomianowym równaniem, niezależnie od wyboru splotu $L$.
 \end{definition}
@@ -23,7 +36,7 @@ Czasami mówi się o relacji motkowej, my nie zamierzamy używać tego synonimu.
     \begin{equation}
         \alexander_{L_+}(t) - \alexander_{L_-}(t) - (t^{1/2} - t^{-1/2}) \alexander_{L_0}(t) = 0
     \end{equation}
-    z warunkiem brzegowym $\alexander_{\LittleUnknot}(t) = 1$, nazywamy wielomianem Alexandera.
+    z warunkiem brzegowym $\alexander_{\SmallUnknot}(t) = 1$, nazywamy wielomianem Alexandera.
 \end{definition}
 
 Wzór ten, choć znany był Alexanderowi, nie zyskał przez wiele dekad uwagi matematyków.

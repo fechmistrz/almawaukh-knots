@@ -4,18 +4,22 @@ Klamra Kauffmana to wielomian Laurenta jednej zmiennej zdefiniowany w pracy \cit
 Dzięki swojej prostocie mógł być odkryty na początku XX wieku, nim jeszcze maszyneria teorii węzłów została rozwinięta.
 
 Poszukujemy niezmiennika dla splotów o~kilku prostych własnościach.
-Przede wszystkim żądamy, by niewęzłowi przypisany był wielomian $1$: $\bracket{\LittleUnknot} = 1$.
+Przede wszystkim żądamy, by niewęzłowi przypisany był wielomian $1$: $\bracket{\SmallUnknot} = 1$.
 Po drugie chcemy wyznaczać nawiasy znając je dla prostszych splotów, co zapiszemy symbolicznie:
+\begin{comment}
 \begin{equation}
-    \bracket{\MediumRightCrossing} = A \bracket{\MediumRightSmoothing} + B \bracket{\MediumLeftSmoothing}
+    \bracket{\MediumMinusCrossing} = A \bracket{\MediumAlphaSmoothing} + B \bracket{\MediumBetaSmoothing}
 \end{equation}
-Zależy nam też na tym, by móc dodać do splotu trywialną składową: $\langle L \cup \LittleUnknot \rangle = C \langle L \rangle$.
+\end{comment}
+Zależy nam też na tym, by móc dodać do splotu trywialną składową: $\langle L \cup \SmallUnknot \rangle = C \langle L \rangle$.
 Prosty rachunek pokazuje wpływ drugiego ruchu Reidemeistera na klamrę:
+\begin{comment}
 \begin{equation}
-    \bracket{\MediumReidemeisterIIaHorizontal}
-    = (A^2 + ABC + B^2) \bracket{\MediumRightSmoothing} + BA \bracket{\MediumLeftSmoothing}
-    \stackrel{?}{=} \bracket{\MediumLeftSmoothing}.
+    \bracket{\MediumKauffmanReidemeisterTwoA}
+    = (A^2 + ABC + B^2) \bracket{\MediumBetaSmoothing} + BA \bracket{\MediumAlphaSmoothing}
+    \stackrel{?}{=} \bracket{\MediumAlphaSmoothing}.
 \end{equation}
+\end{comment}
 
 Aby zachodziła ostatnia równość wystarczy przyjąć $B = A^{-1}$, co wymusza na nas wartość trzeciego parametru: $C = -A^2 - A^{-2}$.
 W ten sposób odkryliśmy definicję.
@@ -25,19 +29,21 @@ W ten sposób odkryliśmy definicję.
     Wielomian Laurenta $\bracket{D}$ dla diagramu splotu $D$ zmiennej $A$,
     który jest niezmienniczy ze względu na gładkie deformacje diagramu,
     a~przy tym spełnia trzy poniższe aksjomaty:
+\begin{comment}
     \begin{align}
         \bracket{\MediumUnknot} & = 1
         \label{eqn:kauffman_axiom_1}%
         \\
-        \bracket{\MediumRightCrossing} & = 
-        A \bracket{\MediumRightSmoothing} + 
-        A^{-1} \bracket{\MediumLeftSmoothing}
+        \bracket{\MediumMinusCrossing} & = 
+        A \bracket{\MediumAlphaSmoothing} + 
+        A^{-1} \bracket{\MediumBetaSmoothing}
         \label{eqn:kauffman_axiom_2}%
         \\
         \bracket{D \sqcup \MediumUnknot} & = 
         (-A^{-2} - A^2) \bracket{D}
         \label{eqn:kauffman_axiom_3}%
     \end{align}
+\end{comment}
     nazywamy klamrą Kauffmana.
 \end{definition}
 
@@ -62,53 +68,55 @@ Przedstawimy teraz wpływ ruchów Reidemeistera na nasz nowy wielomian.
 \begin{lemma}
     Drugi i~trzeci ruch Reidemeistera nie ma wpływu na klamrę Kauffmana,
     pierwszy ruch zmienia ją zgodnie z~regułą:
+\begin{comment}
     \begin{equation}
-        \bracket{\MediumReidemeisterIaLeft} = -A^{-3} \bracket{\,\MediumReidemeisterIb\,}.
+        \bracket{\MediumReidemeisterOneLeft} = -A^{-3} \bracket{\,\MediumReidemeisterOneStraight\,}.
     \end{equation}
+\end{comment}
 \end{lemma}
 
 \begin{proof}
 Pierwszy ruch Reidemeistera:
 \begin{comment}
-\begin{align*}
-    \bracket{\MediumReidemeisterIaLeft} & \stackrel{K2}{=} A 
-    \bracket{\MediumReidemeisterIaLeftFirstSmoothering} + 
-    A^{-1} \bracket{\MediumReidemeisterIaLeftSecondSmoothering} \\ & \stackrel{K3}{=} 
-    A \bracket{\MediumReidemeisterIb} + 
-    A^{-1}(-A^{-2}-A^2) \bracket{\MediumReidemeisterIb} = 
-    -A^{-3}\bracket{\MediumReidemeisterIb}
-\end{align*}
+\begin{align}
+    \bracket{\MediumReidemeisterOneLeft} & \stackrel{K2}{=} A 
+    \bracket{\MediumReidemeisterOneSmoothA} + 
+    A^{-1} \bracket{\MediumReidemeisterOneSmoothB} \\ & \stackrel{K3}{=} 
+    A \bracket{\MediumReidemeisterOneStraight} + 
+    A^{-1}(-A^{-2}-A^2) \bracket{\MediumReidemeisterOneStraight} = 
+    -A^{-3}\bracket{\MediumReidemeisterOneStraight}
+\end{align}
 \end{comment}
 
 Dla drugiego ruchu:
 \begin{comment}
-\begin{align*}
-    \bracket{\MediumReidemeisterIIa} & \stackrel{K2}{=}
-    A \bracket{\MediumReidemeisterIIaSmoothed} +
-    A^{-1} \bracket{\MediumLeftCrossingLow} \\ & \stackrel{K1}{=}
-    -A^{-2} \bracket{\MediumLeftSmoothing} + 
-    A^{-1} \bracket{\MediumLeftCrossingLow} \\ & \stackrel{K2}{=}
-    -A^{-2} \bracket{\MediumLeftSmoothing} +
-    A^{-1}A \bracket{\MediumRightSmoothing} + 
-    A^{-1}A^{-1} \bracket{\MediumLeftSmoothing} \\ & = 
-    \bracket{\MediumRightSmoothing}
-\end{align*}
+\begin{align}
+    \bracket{\MediumKauffmanReidemeisterTwoA} & \stackrel{K2}{=}
+    A \bracket{\MediumKauffmanReidemeisterTwoB} +
+    A^{-1} \bracket{\MediumKauffmanReidemeisterTwoC} \\ & \stackrel{K1}{=}
+    -A^{-2} \bracket{\MediumBetaSmoothing} + 
+    A^{-1} \bracket{\MediumKauffmanReidemeisterTwoC} \\ & \stackrel{K2}{=}
+    -A^{-2} \bracket{\MediumBetaSmoothing} +
+    A^{-1}A \bracket{\MediumAlphaSmoothing} + 
+    A^{-1}A^{-1} \bracket{\MediumBetaSmoothing} \\ & = 
+    \bracket{\MediumAlphaSmoothing}
+\end{align}
 \end{comment}
 
 Dla trzeciego ruchu:
 \begin{comment}
-\begin{align*}
-\bracket{\MediumReidemeisterIIIa} & \stackrel{K2}{=}
-A \bracket{\MediumReidemeisterIIIb} +
-A^{-1} \bracket{\MediumReidemeisterIIIc} \stackrel{R2}{=} 
-A \bracket{\MediumReidemeisterIIId} +
-A^{-1} \bracket{\MediumReidemeisterIIIe} \\ & \stackrel{R2}{=}
-A \bracket{\MediumReidemeisterIIIbFlipped} +
-A^{-1} \bracket{\MediumReidemeisterIIIcFlipped} \stackrel{K2}{=} 
-\bracket{\MediumReidemeisterIIIaFlipped},
-\end{align*}
-korzystaliśmy tu z~własności drugiego ruchu.
+\begin{align}
+\bracket{\MediumKauffmanReidemeisterThreeA} & \stackrel{K2}{=}
+A \bracket{\MediumKauffmanReidemeisterThreeB} +
+A^{-1} \bracket{\MediumKauffmanReidemeisterThreeC} \stackrel{R2}{=} 
+A \bracket{\MediumKauffmanReidemeisterThreeD} +
+A^{-1} \bracket{\MediumKauffmanReidemeisterThreeE} \\ & \stackrel{R2}{=}
+A \bracket{\MediumKauffmanReidemeisterThreeFlippedB} +
+A^{-1} \bracket{\MediumKauffmanReidemeisterThreeFlippedC} \stackrel{K2}{=} 
+\bracket{\MediumKauffmanReidemeisterThreeFlippedA},
+\end{align}
 \end{comment}
+korzystaliśmy tu z~własności drugiego ruchu.
 \end{proof}
 
 \begin{corollary}
@@ -142,11 +150,13 @@ W szczególności pozwoliła na uogólnienie go do niezmiennika 3-rozmaitości.
     Wystarczy pokazać niezmienniczość $(-A)^{-3w(D)}\langle D\rangle$ na ruchy Reidemeistera.
     
     Niech
+\begin{comment}
     \begin{equation}
-        D_1 = \MediumReidemeisterIaLeft,
+        D_1 = \LargeReidemeisterOneLeft,
         \quad\quad\quad
-        D_2 = \MediumReidemeisterIb
+        D_2 = \LargeReidemeisterOneStraight
     \end{equation}
+\end{comment}
     Jak zauważyliśmy już wcześniej, II i III ruch nie zmienia ani spinu, ani klamry Kauffmana.
     Pozostało sprawdzić I ruch.
     Mamy:
@@ -308,20 +318,22 @@ Na szczęście wtedy z pomocą przychodzi:
     \begin{equation}
         t^{-1} \jones(L_+) - t\jones(L_-) + (t^{-1/2} - t^{1/2}) \jones(L_0) = 0
     \end{equation}
-    z warunkiem brzegowym $\jones(\LittleUnknot) = 1$, nazywamy wielomianem Jonesa.
+    z warunkiem brzegowym $\jones(\SmallUnknot) = 1$, nazywamy wielomianem Jonesa.
 \end{definition}
 
 \begin{proof}
 Niech
+\begin{comment}
 \begin{equation}
-    L_+ = \MediumRightCrossing
+    L_+ = \MediumMinusCrossing
     \quad\quad
-    L_- = \MediumLeftCrossing
+    L_- = \MediumPlusCrossing
     \quad\quad
-    L_0 = \MediumRightSmoothing
+    L_0 = \MediumAlphaSmoothing
     \quad\quad
-    L_\infty = \MediumLeftSmoothing
+    L_\infty = \MediumBetaSmoothing
 \end{equation}
+\end{comment}
 % TODO: zdefiniować je raz, a dobrze.
 % ack -l 'L_\+'
 % src/30-polynomials/alexander.tex
@@ -330,7 +342,7 @@ Niech
 % src/30-polynomials/homfly.tex
 % src/00-meta-latex/diagrams.tex
 (oznaczenia te są standardowe i pozwalają oszczędzić trochę miejsca).
-Wyraźmy wielomian Jonesa przez klamrę Kauffmana i~spin.
+NIE SĄ - KOLIZJA OZNACZEŃ?Wyraźmy wielomian Jonesa przez klamrę Kauffmana i~spin.
 Chcemy pokazać, że
 \begin{align}
     & A^{4}(-A)^{-3w(L_+)}\bracket{L_+} \\
@@ -454,8 +466,8 @@ Wcześniej pokazał to z~dużo większym wysiłkiem Dehn, patrz przykład \ref{e
     Są to wielomiany Laurenta, które zależą tylko od $D_1$.
     Aksjomaty Kauffmana pozwalają na pokazanie, że obie funkcje mają następujące własności:
     \begin{align}
-        f_i(\LittleUnknot)            & = (-A^2 - A^{-2}) \langle D_2 \rangle \\
-        f_i(D_1 \sqcup \LittleUnknot) & = (-A^2 - A^{-2}) f_i(D_1) \\
+        f_i(\SmallUnknot)            & = (-A^2 - A^{-2}) \langle D_2 \rangle \\
+        f_i(D_1 \sqcup \SmallUnknot) & = (-A^2 - A^{-2}) f_i(D_1) \\
         f_i(\LittleRightCrossing)     & = A f_i(\LittleRightSmoothing) + A^{-1} f_i(\LittleLeftSmoothing).
     \end{align}
     Ponieważ powyższe tożsamości wystarczają do wyznaczenia wartości funkcji $f_i$ dla dowolnego diagramu $D_1$, dochodzimy do wniosku, że $f_1 \equiv f_2$.
@@ -475,48 +487,27 @@ Wcześniej pokazał to z~dużo większym wysiłkiem Dehn, patrz przykład \ref{e
 \begin{proof}
     Rozpatrzmy sploty
 \begin{comment}
-    \[
-        \begin{tikzpicture}[baseline=-0.65ex,scale=0.07]
-        \begin{knot}[clip width=5, flip crossing/.list={1}]
-            \strand[semithick] (-22, -5) rectangle (-12, 5);
-            \strand[semithick] (22, -5) rectangle (12, 5);
-
-            \strand[semithick,Latex-] (-12, 3) [in=left, out=right] to (12, -3);
-            \strand[semithick,Latex-] (12, 3) [in=right, out=left] to (-12, -3);
-
-            \node at (-17, 0) {$K_1$};
-            \node at (17, 0) {$K_2$};
-        \end{knot}
-        \end{tikzpicture}
-        \quad\quad
-        \begin{tikzpicture}[baseline=-0.65ex,scale=0.07]
-        \begin{knot}[clip width=5]
-            \strand[semithick] (-22, -5) rectangle (-12, 5);
-            \strand[semithick] (22, -5) rectangle (12, 5);
-
-            \strand[semithick,Latex-] (-12, 3) [in=left, out=right] to (12, -3);
-            \strand[semithick,Latex-] (12, 3) [in=right, out=left] to (-12, -3);
-
-            \node at (-17, 0) {$K_1$};
-            \node at (17, 0) {$K_2$};
-        \end{knot}
-        \end{tikzpicture}
-        \quad\quad
-        \begin{tikzpicture}[baseline=-0.65ex,scale=0.07]
-        \begin{knot}[clip width=5]
-            \strand[semithick] (-22, -5) rectangle (-12, 5);
-            \strand[semithick] (-12, -3) [in=down, out=right] to (-2, 0);
-            \strand[semithick,Latex-] (-12, 3) [in=up, out=right] to (-2, 0);
-
-            \strand[semithick] (22, -5) rectangle (12, 5);
-            \strand[semithick] (12, -3) [in=down, out=left] to (2, 0);
-            \strand[semithick,Latex-] (12, 3) [in=up, out=left] to (2, 0);
-
-            \node at (-17, 0) {$K_1$};
-            \node at (17, 0) {$K_2$};
-        \end{knot}
-        \end{tikzpicture}
-    \]
+    \begin{figure}[H]
+    \centering
+        %
+        \begin{minipage}[b]{.3\linewidth}
+            \[
+                \MediumJonesShrapA
+            \]
+        \end{minipage}
+        %
+        \begin{minipage}[b]{.3\linewidth}
+            \[
+                \MediumJonesShrapB
+            \]
+        \end{minipage}
+        %
+        \begin{minipage}[b]{.3\linewidth}
+            \[
+                \MediumJonesShrapAB
+            \]
+        \end{minipage}
+    \end{figure}
 \end{comment}
     Relacja kłębiasta orzeka w tym przypadku, że
     \begin{equation}

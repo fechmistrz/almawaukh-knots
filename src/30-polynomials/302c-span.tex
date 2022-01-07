@@ -15,16 +15,7 @@ Na koniec naszkicujemy krótko dowody pozostałych hipotez.
     Wąskie skrzyżowanie między dwiema rozłącznymi częściami diagramu nazywamy przesmykiem.
 \begin{comment}
     \[
-        \begin{tikzpicture}[baseline=-0.65ex,scale=0.07]
-        \begin{knot}[clip width=5]
-            \strand[semithick] (-5,-5) rectangle (5,5);
-            \strand[semithick] (-5, -3) [in=right, out=left] to (-15, 3);
-            \strand[semithick] (-5, 3) [in=right, out=left] to (-15, -3);
-
-            \node at (-20, -3) {$\ldots$};
-            \node at (-20,  3) {$\ldots$};
-        \end{knot}
-        \end{tikzpicture}
+        \LargeIsthmus
     \]
 \end{comment}
     Diagram, na którym nie ma żadnych przesmyków, nazywamy zredukowanym.
@@ -72,44 +63,44 @@ Dla wygody wprowadźmy skrót $\langle D \mid s \rangle := (-A^{-2}-A^2)^{|sD|-1
 \begin{proof}
     Oznaczmy prawą stronę dowodzonej równości przez $[D]$.
     Pokażemy, że spełnia ona aksjomaty Kauffmana z~definicji \ref{def:kauffman_bracket}, stąd wynika już, że $[D] = \bracket{D}$.
-    % ona $[\LittleUnknot]=1$, $[D\sqcup\LittleUnknot]=(-A^{-2}-A^2) [D]$ oraz $[\LittleRightCrossing] = A [\LittleRightSmoothing] + A^{-1}[\LittleLeftSmoothing]$.
+    % ona $[\SmallUnknot]=1$, $[D\sqcup\SmallUnknot]=(-A^{-2}-A^2) [D]$ oraz $[\SmallMinusCrossing] = A [\SmallAlphaSmoothing] + A^{-1}[\SmallBetaSmoothing]$.
 
-    Pierwszy aksjomat (równość \ref{eqn:kauffman_axiom_1}) mówi o niewęźle $\LittleUnknot$.
-    Posiada on tylko jeden stan $s$ dany wzorem $|s| = 0$, zatem $|s\,\LittleUnknot| = 1$ oraz $[D] = (-A^2 - A^{-2})^0 \cdot A^0 = 1$.
+    Pierwszy aksjomat (równość \ref{eqn:kauffman_axiom_1}) mówi o niewęźle $\SmallUnknot$.
+    Posiada on tylko jeden stan $s$ dany wzorem $|s| = 0$, zatem $|s\,\SmallUnknot| = 1$ oraz $[D] = (-A^2 - A^{-2})^0 \cdot A^0 = 1$.
 
-    By pokazać, że funkcja $[\,\cdot\,]$ spełnia drugi aksjomat (równość \ref{eqn:kauffman_axiom_2}) zauważmy, że diagramy $D \sqcup \LittleUnknot$ oraz $D$ mają te same skrzyżowania,
-    więc możemy utożsamiać stany $s$ dla $D$ ze stanami $u$ dla $D \sqcup \LittleUnknot$.
-    Wtedy $|u| = |s|$ oraz $|u(D \sqcup \LittleUnknot)| = |sD| + 1$.
+    By pokazać, że funkcja $[\,\cdot\,]$ spełnia drugi aksjomat (równość \ref{eqn:kauffman_axiom_2}) zauważmy, że diagramy $D \sqcup \SmallUnknot$ oraz $D$ mają te same skrzyżowania,
+    więc możemy utożsamiać stany $s$ dla $D$ ze stanami $u$ dla $D \sqcup \SmallUnknot$.
+    Wtedy $|u| = |s|$ oraz $|u(D \sqcup \SmallUnknot)| = |sD| + 1$.
     Zatem
     \begin{align}
-        \left[D \sqcup \LittleUnknot\right]
-        & = \sum_u (-A^2-A^{-2})^{|u(D\sqcup\LittleUnknot)|-1} A^{|u|} \\
+        \left[D \sqcup \SmallUnknot\right]
+        & = \sum_u (-A^2-A^{-2})^{|u(D\sqcup\SmallUnknot)|-1} A^{|u|} \\
         & = \sum_s (-A^2-A^{-2})^{|sD|} A^{|s|} \\
         & = (-A^2-A^{-2}) [D].
     \end{align}
     Pozostał ostatni aksjomat, równość \ref{eqn:kauffman_axiom_3}.
     Bezpośrednio z definicji mamy
     \begin{equation}
-       A[\LittleRightSmoothing]
-       = \sum_u(-A^2-A^{-2})^{|u\LittleRightSmoothing|-1}A^{|u|+1},
+       A\left[\MediumAlphaSmoothing\right]
+       = \sum_u(-A^2-A^{-2})^{|u\SmallAlphaSmoothing|-1}A^{|u|+1},
     \end{equation}
-    gdzie $u$ przebiega wszystkie stany $\LittleRightSmoothing$.
-    Ale $\LittleRightSmoothing$ to $\LittleRightCrossing$ z ustalonym skrzyżowaniem $c$ wygładzonym dodatnio, co daje bijekcję między wszystkimi stanami $u$ diagramu $\LittleRightSmoothing$ oraz tymi stanami $s$ diagramu $\LittleRightCrossing$, dla których $s(c) = + 1$.
-    Wtedy $|s\LittleRightCrossing| = |u\LittleRightSmoothing|$, $|s| = |u|+1$ oraz
+    gdzie $u$ przebiega wszystkie stany $\SmallAlphaSmoothing$.
+    Ale $\SmallAlphaSmoothing$ to $\SmallMinusCrossing$ z ustalonym skrzyżowaniem $c$ wygładzonym dodatnio, co daje bijekcję między wszystkimi stanami $u$ diagramu $\SmallAlphaSmoothing$ oraz tymi stanami $s$ diagramu $\SmallMinusCrossing$, dla których $s(c) = + 1$.
+    Wtedy $|s\SmallMinusCrossing| = |u\SmallAlphaSmoothing|$, $|s| = |u|+1$ oraz
     \begin{align}
-        A\left[\LittleRightSmoothing\right]
-        & = \sum_u (-A^2-A^{-2})^{|u\,\LittleRightSmoothing|-1}A^{|u|+1} \\
+        A\left[\MediumAlphaSmoothing\right]
+        & = \sum_u (-A^2-A^{-2})^{|u\,\SmallAlphaSmoothing|-1}A^{|u|+1} \\
         \label{eqn:state_sum_right}
-        & = \sum_{s(c)=1}(-A^2-A^{-2})^{|s\,\LittleRightCrossing|-1}A^{|s|},
+        & = \sum_{s(c)=1}(-A^2-A^{-2})^{|s\,\SmallMinusCrossing|-1}A^{|s|},
     \end{align}
     podobne rozumowanie pokazuje, że
     \begin{align}
         \label{eqn:state_sum_left}
-        A^{-1}\left[\LittleLeftSmoothing\right]
-        & = \sum_{s(c)=-1}(-A^2-A^{-2})^{|s\,\LittleRightCrossing|-1}A^{|s|}.
+        A^{-1}\left[\MediumBetaSmoothing\right]
+        & = \sum_{s(c)=-1}(-A^2-A^{-2})^{|s\,\SmallMinusCrossing|-1}A^{|s|}.
     \end{align}
     Dodanie do siebie równań \ref{eqn:state_sum_right} oraz \ref{eqn:state_sum_left} kończy dowód.
-    %: $A[\PrawyGladki]+A^{-1}[\LewyGladki] = \sum_s(-A^2-A^{-2})^{|s\,\LittleRightCrossing|-1}A^{|s|} = [\RightCrossing]$.
+    %: $A[\PrawyGladki]+A^{-1}[\LewyGladki] = \sum_s(-A^2-A^{-2})^{|s\,\SmallMinusCrossing|-1}A^{|s|} = [\RightCrossing]$.
 \end{proof}
 Zbadamy następnie dwa najprostsze stany dowolnego diagramu.
 
@@ -124,16 +115,16 @@ Wybierzmy dla niego to uszachowienie, w~którym wszystkie skrzyżowania są doda
 \[
     \begin{tikzpicture}[baseline=-0.65ex,scale=0.15]
     \begin{knot}[clip width=5]
-        \strand[semithick] (-25, 0) to (25, 0);
-        \strand[semithick] (10*0-15, -5) to (10*0-15, 5);
-        \strand[semithick] (10*1-15, -5) to (10*1-15, 5);
-        \strand[semithick] (10*2-15, -5) to (10*2-15, 5);
-        \strand[semithick] (10*3-15, -5) to (10*3-15, 5);
-        \draw[fill=blue!10!white,draw=none] (-25, 0) rectangle (-15, -5);
-        \draw[fill=blue!10!white,draw=none] (-15, 0) rectangle (-5, 5);
-        \draw[fill=blue!10!white,draw=none] (-5, 0) rectangle (5, -5);
-        \draw[fill=blue!10!white,draw=none] (5, 0) rectangle (15, 5);
-        \draw[fill=blue!10!white,draw=none] (15, 0) rectangle (25, -5);
+        \strand[thick] (-25, 0) to (25, 0);
+        \strand[thick] (10*0-15, -5) to (10*0-15, 5);
+        \strand[thick] (10*1-15, -5) to (10*1-15, 5);
+        \strand[thick] (10*2-15, -5) to (10*2-15, 5);
+        \strand[thick] (10*3-15, -5) to (10*3-15, 5);
+        \draw[fill=diagramfiller,draw=none] (-25, 0) rectangle (-15, -5);
+        \draw[fill=diagramfiller,draw=none] (-15, 0) rectangle (-5, 5);
+        \draw[fill=diagramfiller,draw=none] (-5, 0) rectangle (5, -5);
+        \draw[fill=diagramfiller,draw=none] (5, 0) rectangle (15, 5);
+        \draw[fill=diagramfiller,draw=none] (15, 0) rectangle (25, -5);
         \node[above left] at (-15, 0) {$+1$};
         \node[above left] at (5, 0) {$+1$};
         \node[below left] at (-5, 0) {$+1$};
@@ -149,7 +140,7 @@ Porównajmy wygładzenie $s_+D$ z~$s_-D$:
 \[
     \begin{tikzpicture}[baseline=-0.65ex,scale=0.10]
         \node at (0, 8) {$s_+D$};
-        \draw[fill=blue!10!white,draw=none] (-25, -5) rectangle (25, 5);
+        \draw[fill=diagramfiller,draw=none] (-25, -5) rectangle (25, 5);
         \draw[fill=white, draw=none] (-15, -5) [in=left, out=up] to (-12, 0) -- (-8, 0) [in=up, out=right] to (-5, -5);
         \draw[fill=white, draw=none] (5, -5) [in=left, out=up] to (8, 0) -- (12, 0) [in=up, out=right] to (15, -5);
         \draw[fill=white, draw=none] (-5, 5) [in=left, out=down] to (-2, 0) -- (2, 0) [in=down, out=right] to (5, 5);
@@ -159,11 +150,11 @@ Porównajmy wygładzenie $s_+D$ z~$s_-D$:
     \quad
     \begin{tikzpicture}[baseline=-0.65ex,scale=0.10]
         \node at (0, 8) {$s_-D$};
-        \draw[fill=blue!10!white, draw=none] (-15, 5) [in=left, out=up] to (-12, 0) -- (-8, 0) [in=up, out=right] to (-5, 5);
-        \draw[fill=blue!10!white, draw=none] (5, 5) [in=left, out=up] to (8, 0) -- (12, 0) [in=up, out=right] to (15, 5);
-        \draw[fill=blue!10!white, draw=none] (-5, -5) [in=left, out=down] to (-2, 0) -- (2, 0) [in=down, out=right] to (5, -5);
-        \draw[fill=blue!10!white, draw=none] (-25, 0) -- (-18, 0) [in=down, out=right] to (-15, -5) -- (-25, -5);
-        \draw[fill=blue!10!white, draw=none] ( 25, 0) -- ( 18, 0) [in=down, out=left] to ( 15, -5) -- ( 25, -5);
+        \draw[fill=diagramfiller, draw=none] (-15, 5) [in=left, out=up] to (-12, 0) -- (-8, 0) [in=up, out=right] to (-5, 5);
+        \draw[fill=diagramfiller, draw=none] (5, 5) [in=left, out=up] to (8, 0) -- (12, 0) [in=up, out=right] to (15, 5);
+        \draw[fill=diagramfiller, draw=none] (-5, -5) [in=left, out=down] to (-2, 0) -- (2, 0) [in=down, out=right] to (5, -5);
+        \draw[fill=diagramfiller, draw=none] (-25, 0) -- (-18, 0) [in=down, out=right] to (-15, -5) -- (-25, -5);
+        \draw[fill=diagramfiller, draw=none] ( 25, 0) -- ( 18, 0) [in=down, out=left] to ( 15, -5) -- ( 25, -5);
     \end{tikzpicture}
 \]
 \end{comment}
@@ -181,6 +172,7 @@ Zauważmy jeszcze, że na każdym skrzyżowaniu występują cztery różne ciemn
     z~równością, gdy diagram $D$ jest alternujący i~zredukowany.
 \end{lemma}
 
+
 \begin{proof}
     Skorzystamy z~indukcji względem $n$.
     Łatwo widać prawdziwość lematu dla $n = 0$.
@@ -190,7 +182,7 @@ Zauważmy jeszcze, że na każdym skrzyżowaniu występują cztery różne ciemn
     Można je wygładzić na dwa sposoby, jeden z~nich daje spójny diagram $D'$.
     Bez straty ogólności przyjmijmy, że dzieje się tak podczas dodatniego wygładzenia.
     Wtedy zachodzi $|s_+D'| = |s_+D|$, ale $|s_-D'| = |s_-D|\pm 1$, gdyż diagram $s_-D'$ powstaje z~$s_-D$ po zastąpieniu pewnej części
-    $\LittleRightSmoothing$ przez $\LittleLeftSmoothing$.
+    $\SmallAlphaSmoothing$ przez $\SmallBetaSmoothing$.
     To rozrywa jedną krzywą na dwa kawałki lub scala dwie krzywe w~jedną.
     Z założenia indukcyjnego mamy
     \begin{align}
@@ -207,34 +199,36 @@ Zauważmy jeszcze, że na każdym skrzyżowaniu występują cztery różne ciemn
     \[
         \begin{tikzpicture}[baseline=-0.65ex,scale=0.20]
         \begin{knot}[clip width=5]
-            \strand[semithick] (-5, 0) to (5, 0);
-            \strand[semithick] (0, -5) to (0, 5);
-            \draw[fill=blue!10!white,draw=none] (-5, -5) rectangle (0, 0);
-            \draw[fill=blue!10!white,draw=none] ( 5,  5) rectangle (0, 0);
+            \strand[thick] (-5, 0) to (5, 0);
+            \strand[thick] (0, -5) to (0, 5);
+            \draw[fill=diagramfiller,draw=none] (-5, -5) rectangle (0, 0);
+            \draw[fill=diagramfiller,draw=none] ( 5,  5) rectangle (0, 0);
             \node at (0, -8) {$D$};
         \end{knot}
         \end{tikzpicture}
         \quad
         \begin{tikzpicture}[baseline=-0.65ex,scale=0.20]
-            \draw[fill=blue!10!white, draw=none] (-5, 0) -- (-2, 0) [in=up, out=right] to (0, -2) -- (0, -5) -- (-5, -5);
-            \draw[fill=blue!10!white, draw=none] (5, 0) -- (2, 0) [in=down, out=left] to (0, 2) -- (0, 5) -- (5, 5);
-            \draw[semithick] (-5, 0) -- (-2, 0) [in=up, out=right] to (0, -2) -- (0, -5);
-            \draw[semithick] (5, 0) -- (2, 0) [in=down, out=left] to (0, 2) -- (0, 5);
+            \draw[fill=diagramfiller, draw=none] (-5, 0) -- (-2, 0) [in=up, out=right] to (0, -2) -- (0, -5) -- (-5, -5);
+            \draw[fill=diagramfiller, draw=none] (5, 0) -- (2, 0) [in=down, out=left] to (0, 2) -- (0, 5) -- (5, 5);
+            \draw[thick] (-5, 0) -- (-2, 0) [in=up, out=right] to (0, -2) -- (0, -5);
+            \draw[thick] (5, 0) -- (2, 0) [in=down, out=left] to (0, 2) -- (0, 5);
             \node at (0, -8) {$s_-D$};
         \end{tikzpicture}
         \quad
         \begin{tikzpicture}[baseline=-0.65ex,scale=0.20]
-            \draw[fill=blue!10!white, draw=none] (-5, -5) rectangle (5, 5);
+            \draw[fill=diagramfiller, draw=none] (-5, -5) rectangle (5, 5);
             \draw[fill=white, draw=none] (5, 0) -- (2, 0) [in=up, out=left] to (0, -2) -- (0, -5) -- (5, -5);
             \draw[fill=white, draw=none] (-5, 0) -- (-2, 0) [in=down, out=right] to (0, 2) -- (0, 5) -- (-5, 5);
-            \draw[semithick] (5, 0) -- (2, 0) [in=up, out=left] to (0, -2) -- (0, -5);
-            \draw[semithick] (-5, 0) -- (-2, 0) [in=down, out=right] to (0, 2) -- (0, 5);
+            \draw[thick] (5, 0) -- (2, 0) [in=up, out=left] to (0, -2) -- (0, -5);
+            \draw[thick] (-5, 0) -- (-2, 0) [in=down, out=right] to (0, 2) -- (0, 5);
             \node at (0, -8) {$s_-D'$};
         \end{tikzpicture}
     \]
 \end{comment}
     Oznacza to, że druga nierówność także jest równością, quod erat demonstrandum.
-    \end{proof}
+\end{proof}
+
+
 
 W~dowodzie hipotezy Taita użyjemy rozpiętości wielomianu Jonesa:
 

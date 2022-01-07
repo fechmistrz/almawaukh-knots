@@ -28,17 +28,9 @@ Niech $X$ będzie skończonym kwandlem, zaś $K$ węzłem.
 Elementy $x \in X$ będą dla nas kolorami, którymi oznaczymy długie łuki na diagramie węzła $K$.
 Gdy trzy kolory spotykają się przy jednym skrzyżowaniu, definiujemy funkcję $\triangleright \colon X \times X \to X$, jak na rysunku.
 To znaczy: kiedy łuk o kolorze $x$ przechodzi pod łukiem koloru $y$, staje się łukiem w kolorze $x \triangleright y$.
-
 \begin{comment}
 \[
-    \begin{tikzpicture}[scale=0.18, baseline=0]
-        \path[TIKZ_ARCH,Latex-] (-4,0) -- (4,8);
-        \path[TIKZ_ARCH] (4,0) -- (1,3);
-        \path[TIKZ_ARCH] (-1,5) -- (-4,8);
-        \node[darkblue] at (-4, 0)[above left] {$y$};
-        \node[darkblue] at (4, 0)[above right] {$x \triangleright y$};
-        \node[darkblue] at (-4, 8)[below left] {$x$};
-    \end{tikzpicture}
+    \LargeMinusCrossingQuandle
 \]
 \end{comment}
 
@@ -73,79 +65,27 @@ Teraz możemy przetłumaczyć ruchy Reidemeistera w aksjomaty kwandli.
 
 \begin{proof}
     Musimy pokazać, że etykiety na diagramiem przed każdym ruchem Reidemeistera wyznaczają jednoznacznie układ etykiet po tym ruchu.
-    Pierwszy ruch:
+    Pierwszy i drugi ruch:
 \begin{comment}
-    \[
-        \begin{tikzpicture}[baseline=-0.65ex,scale=0.07]
-        \begin{knot}[clip width=5,flip crossing/.list={1}]
-            \strand[semithick,Latex-] (15, 0) [in=up,out=left] to (-5, -7);
-            \strand[semithick] (-5, -7) [in=down,out=down] to (5, -7);
-            \strand[semithick] (5, -7) [in=right,out=up] to (-15, 0);
-            \node[darkblue] at (-15, 0)[left] {$x$};
-            \node[darkblue] at (15, 0)[right] {$x \triangleright x$};
-        \end{knot}
-        \end{tikzpicture}
-        \stackrel{R_1}{\cong} \,\,
-        \begin{tikzpicture}[baseline=-0.65ex,scale=0.07]
-        \begin{knot}[clip width=5]
-            \strand[semithick,-Latex] (-15, 0) to (15, 0);
-            \node[darkblue] at (-15, 0)[left] {$x$};
-        \end{knot}
-        \end{tikzpicture}
-    \]
-\end{comment}
-    Drugi ruch:
-\begin{comment}
-    \[
-        \begin{tikzpicture}[baseline=-0.65ex,scale=0.07]
-        \begin{knot}[clip width=4, flip crossing/.list={1,2}]
-            \strand[semithick,-Latex] (-10, -4) to (-7, -4) [in=left, out=right] to (0, 4) [in=left, out=right] to (7, -4) to (10, -4) to (15, -4);
-            \strand[semithick] (-10, 4) to (-7, 4) [in=left, out=right] to (0, -4) [in=left, out=right] to (7, 4) to (10, 4) to (15, 4);
-            \node[darkblue] at (-10, -4)[left] {$y$};
-            \node[darkblue] at (-10, 4)[left] {$x$};
-            \node[darkblue] at (0, 4) [above] {$y \triangleright x$};
-            \node[darkblue] at (15, -4) [right] {$x \triangleleft (y \triangleright x)$};
-        \end{knot}
-        \end{tikzpicture}
-        \stackrel{R_2}{\cong} \,\,
-        \begin{tikzpicture}[baseline=-0.65ex,scale=0.07]
-        \begin{knot}[clip width=4]
-            \strand[semithick,-Latex] (-10, -4) to (-7, -4) [in=left, out=right] to (0, -1) [in=left, out=right] to (7, -4) to (10, -4) to (15, -4);
-            \strand[semithick] (-10, 4) to (-7, 4) [in=left, out=right] to (0, 1) [in=left, out=right] to (7, 4) to (10, 4) to (15, 4);
-            \node[darkblue] at (-10, -4)[left] {$y$};
-            \node[darkblue] at (-10, 4)[left] {$x$};
-        \end{knot}
-        \end{tikzpicture}
-    \]
+    \begin{figure}[H]
+        \begin{minipage}[b]{.48\linewidth}
+        \[
+            \LargeReidemeisterOneRightQuandleProof
+            \stackrel{R_1}{\cong}
+            \LargeReidemeisterOneStraightQuandleProof
+        \]
+        \end{minipage}
+        \begin{minipage}[b]{.48\linewidth}
+        \[
+            \LargeReidemeisterTwoQuandleA \cong \LargeReidemeisterTwoQuandleB
+        \]
+        \end{minipage}
+    \end{figure}
 \end{comment}
     Trzeci ruch:
 \begin{comment}
     \[
-        \begin{tikzpicture}[baseline=-0.65ex,scale=0.07]
-        \begin{knot}[clip width=5, flip crossing/.list={3}]
-            \node[darkblue] at (-10, 10) [left] {$z$};
-            \strand[semithick,-Latex] (-10, 10) [in=left, out=right] to (10,-10) to (15,-10);
-            \node[darkblue] at (-10, 0) [left] {$y$};
-            \strand[semithick,-Latex] (-10, 0) [in=left, out=right] to (0, 10) [in=left, out=right] to (10, 0) to (15, 0);
-            \node[darkblue] at (-10, -10) [left] {$x$};
-            \strand[semithick,-Latex] (-10, -10) [in=left, out=right] to (10,10) to (15,10);
-            \node[darkblue] at (0, 10) [above] {$y \triangleright z$};
-            \node[darkblue] at (15, 10) [right] {$(x \triangleright z) \triangleright (y \triangleright z)$};
-        \end{knot}
-        \end{tikzpicture}
-        \stackrel{R_3}{\cong} \,\,
-        \begin{tikzpicture}[baseline=-0.65ex,scale=0.07]
-        \begin{knot}[clip width=5, flip crossing/.list={3}]
-            \node[darkblue] at (-10, 10) [left] {$z$};
-            \strand[semithick,-Latex] (-10, 10) [in=left, out=right] to (10,-10)  to (15, -10);
-            \node[darkblue] at (-10, 0) [left] {$y$};
-            \strand[semithick,-Latex] (-10, 0) [in=left, out=right] to (0, -10) [in=left, out=right] to (10, 0) to (15, 0);
-            \node[darkblue] at (-10, -10) [left] {$x$};
-            \strand[semithick,-Latex] (-10, -10) [in=left, out=right] to (10,10) to (15, 10);
-            \node[darkblue] at (15, 10) [right] {$(x \triangleright y) \triangleright z$};
-        \end{knot}
-        \end{tikzpicture}
-        \qedhere
+        \LargeReidemeisterThreeQuandleA \cong \LargeReidemeisterThreeQuandleB \qedhere
     \]
 \end{comment}
 \end{proof}
@@ -248,26 +188,9 @@ Półka stanowi uogólnienie dwóch obiektów -- wraków i wrzecion.
 Wraki są naturalnym niezmiennikiem węzłów obramowanych, bo dobrze współgrają z II, III oraz podwójnym I ruchem Reidemeistera, który to nie zmienia spinu diagramu:
 \begin{comment}
 \[
-    \begin{tikzpicture}[baseline=-0.65ex,scale=0.07]
-    \begin{knot}[clip width=5,flip crossing/.list={1}]
-        \strand[semithick] (15, 0) [in=up,out=left] to (-5, -7);
-        \strand[semithick] (-5, -7) [in=down,out=down] to (5, -7);
-        \strand[semithick] (5, -7) [in=right,out=up] to (-15, 0);
-        \strand[semithick,Latex-] (45, 0) [in=up,out=left] to (25, -7);
-        \strand[semithick] (25, -7) [in=down,out=down] to (35, -7);
-        \strand[semithick] (35, -7) [in=right,out=up] to (15, 0);
-        \node[darkblue] at (-15, 0)[left] {$x$};
-        \node[darkblue] at (15, 0)[above] {$x \triangleright x$};
-        \node[darkblue] at (45, 0)[right] {$x$};
-    \end{knot}
-    \end{tikzpicture}
+    \LargeReidemeisterOneLeftRightQuandleProof
     \cong
-    \begin{tikzpicture}[baseline=-0.65ex,scale=0.07]
-    \begin{knot}[clip width=5]
-        \strand[semithick,-Latex] (-15, 0) to (15, 0);
-        \node[darkblue] at (-15, 0)[left] {$x$};
-    \end{knot}
-    \end{tikzpicture}
+    \LargeReidemeisterOneStraightQuandleProofRotated
 \]
 \end{comment}
 

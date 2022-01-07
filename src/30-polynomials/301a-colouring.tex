@@ -4,18 +4,11 @@
 \index{równanie kolorujące}%
     Wielomianowe równanie kolorujące związane ze skrzyżowaniem
 \begin{comment}
-    \[\begin{tikzpicture}[baseline=-0.65ex, scale=0.12]
-    \useasboundingbox (-5, -5) rectangle (5,5);
-    \begin{knot}[clip width=5, end tolerance=1pt, flip crossing/.list={1}]
-        \strand[semithick] (-5,5) to (5,-5);
-        \strand[semithick,-Latex] (-5,-5) to (5,5);
-        \node[darkblue] at (5, 5)[below right] {$a$};
-        \node[darkblue] at (5, -5)[above right] {$b$};
-        \node[darkblue] at (-5, 5)[below left] {$c$};
-    \end{knot}
-    \end{tikzpicture}\]
+    \[
+        \LargePlusCrossingLabel
+    \]
 \end{comment}
-    splotu zorientowanego to $a + tc - ta - b = 0$.
+    splotu zorientowanego to $g + tk - tg - h = 0$.
     Tylko orientacja górnego łuku ma znaczenie.
 \end{definition}
 
@@ -23,7 +16,7 @@ Istotnie, wystarczy podstawić tutaj $t = -1$, by otrzymać szczególną definic
 
 \begin{definition}[wielomian Alexandera]
 \label{def:alexander_polynomial}%
-    Ustalmy diagram $D$ zorientowanego splotu $L$, gdzie nie ma żadnej krzywej zamkniętej (niewęzła $\LittleUnknot$).
+    Ustalmy diagram $D$ zorientowanego splotu $L$, gdzie nie ma żadnej krzywej zamkniętej (niewęzła $\SmallUnknot$).
     Przypiszmy etykiety $x_0, \ldots, x_m$ do włókien oraz $0, \ldots, m$ do skrzyżowań diagramu $D$.
     Niech $p_{ij}$ będzie współczynnikiem przy włóknie $x_j$ w~wielomianowym równaniu kolorującym nad wierzchołkiem $i$.
     Z macierzy $P=(p_{ij})$ wykreślmy po jednej kolumnie i~wierszu.

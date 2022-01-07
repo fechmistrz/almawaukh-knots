@@ -39,22 +39,13 @@ Pozwala to zapisać warunek kolorowalności równaniem algebraicznym, niezależn
     \label{def:colouring_equation}
     Niech $L$ będzie splotem, zaś $n$ liczbą naturalną.
     Mówimy, że splot $L$ jest kolorowalny modulo $n$, jeśli posiada diagram, którego włóknom można przypisać liczby całkowite $0, \ldots, n - 1$ tak, by
-    \begin{enumerate}[leftmargin=*]
+    \begin{enumerate}
         \item istniały dwa włókna różnych kolorów,
         \item równanie $a + b \equiv 2c$ modulo $n$ było spełnione przy każdym skrzyżowaniu:
     \end{enumerate}
 \begin{comment}
     \[
-        \begin{tikzpicture}[baseline=-0.65ex, scale=0.12]
-            \useasboundingbox (-5, -5) rectangle (5,5);
-            \begin{knot}[clip width=5, end tolerance=1pt, flip crossing/.list={1}]
-                \strand[semithick] (-5,5) to (5,-5);
-                \strand[semithick] (-5,-5) to (5,5);
-                \node[darkblue] at (5, 5)[below right] {$c$};
-                \node[darkblue] at (5, -5)[above right] {$b$};
-                \node[darkblue] at (-5, 5)[below left] {$a$};
-            \end{knot}
-        \end{tikzpicture}.
+        \LargePlusCrossingColouring
     \]
 \end{comment}
     Takie przyporządkowanie nazywamy kolorowaniem.
@@ -74,83 +65,28 @@ Kolorowanie nazywamy trywialnym, jeśli używa tylko jednego koloru.
     Wystarczy sprawdzić, jak ruchy Reidemeistera zmieniają kolory.
     Pierwszy i~drugi:
 \begin{comment}
-    \[
-        \fbox{
-        \begin{tikzpicture}[baseline=-0.65ex,scale=0.07]
-        \begin{knot}[clip width=5]
-            \strand[semithick] (-10,10) .. controls (-10,2) and (-10,2) .. (-6,-2);
-            \strand[semithick] (-10,-10) .. controls (-10,-2) and (-10,-1) .. (-9,0);
-
-            \strand[semithick] (-7,1) -- (-6,2);
-            \strand[semithick] (-6,2) .. controls (2,9) and (2,-9) .. (-6,-2);
-            \node[darkblue] at (-10, 10)[below left] {$a$};
-            \node[darkblue] at (-10, -10)[above left] {$b \equiv a$};
-        \end{knot}
-        \end{tikzpicture}
-        $\stackrel{R_1}{\cong} \,\,$
-        \begin{tikzpicture}[baseline=-0.65ex,scale=0.07]
-        \begin{knot}[clip width=5]
-            \strand[semithick] (0,10) -- (0,-10);
-            \node[darkblue] at (0, 0)[left] {$a$};
-        \end{knot}
-        \end{tikzpicture}}
-        %%%
-        \quad \fbox{
-        \begin{tikzpicture}[baseline=-0.65ex,scale=0.07]
-        \begin{knot}[clip width=5]
-            \strand[semithick] (4,-10) .. controls (4,-4) and (-4,-4) .. (-4,0);
-            \node[darkblue] at (-4, -10)[above left] {$d \equiv b$};
-            \strand[semithick] (4,10) .. controls (4, 4) and (-4, 4) .. (-4,0);
-            \node[darkblue] at (4, 10)[below right] {$a$};
-            \strand[semithick] (-4,-10) .. controls (-4,-4) and (4,-4) .. (4,0);
-            \node[darkblue] at (4, 0) [right] {$c \equiv 2a-b$};
-            \strand[semithick] (-4, 10) .. controls (-4, 4) and (4,4) .. (4,0);
-            \node[darkblue] at (-4, 10) [below left] {$b$};
-        \end{knot}
-        \end{tikzpicture}
-        $\stackrel{R_2}{\cong} \,\,$
-        \begin{tikzpicture}[baseline=-0.65ex,scale=0.07]
-        \begin{knot}[clip width=5]
-            \strand[semithick] (4,-10) .. controls (4,-4) and (1,-4) .. (1,0);
-            \strand[semithick] (4,10) .. controls (4, 4) and (1, 4) .. (1,0);
-            \strand[semithick] (-4,-10) .. controls (-4,-4) and (-1,-4) .. (-1,0);
-            \strand[semithick] (-4,10) .. controls (-4, 4) and (-1,4) .. (-1,0);
-        \end{knot}
-        \end{tikzpicture}}
-    \]
+    \begin{figure}[H]
+    \centering
+    %
+    \begin{minipage}[b]{.45\linewidth}
+        \[
+            \LargeReidemeisterOneLeftProof \stackrel{R_1}{\cong} \LargeReidemeisterOneStraightProof
+        \]
+    \end{minipage}
+    %
+    \begin{minipage}[b]{.45\linewidth}
+        \[
+            \LargeReidemeisterTwoColouringA \stackrel{R_2}{\cong} \LargeReidemeisterTwoB
+        \]
+    \end{minipage}
+    \end{figure}
 \end{comment}
     Trzeci ruch także nie wymaga skomplikowanych rachunków.
     Najkrótszy łuk na diagramach ma kolor $2a-c$ po lewej oraz $2b-c$ po prawej stronie.
 \begin{comment}
     \[
-     \fbox{
-        \begin{tikzpicture}[baseline=-0.65ex,scale=0.07]
-        \begin{knot}[clip width=5, flip crossing/.list={1,2,3}]
-            \node[darkblue] at (-10, 10) [above] {$b$};
-            \node[darkblue] at (10, 10) [above] {$c$};
-            \node[darkblue] at (-10, -10) [below] {$2a-2b+c$};
-            \node[darkblue] at (10, -10) [below] {$2a-b$};
-            \node[darkblue] at (-10, -2) [left] {$a$};
-            \strand[semithick] (-10,-10) -- (10,10);
-            \strand[semithick] (-10,10) -- (10,-10);
-            \strand[semithick] (-10,-2) .. controls (-4, -2) and (-4,8) .. (0,8);
-            \strand[semithick] (10,-2) .. controls (4, -2) and (4,8) .. (0,8);
-        \end{knot}
-        \end{tikzpicture}
-        $\stackrel{R_3}{\cong} \,\,$
-        \begin{tikzpicture}[baseline=-0.65ex,scale=0.07]
-        \begin{knot}[clip width=5, flip crossing/.list={1,2,3}]
-            \node[darkblue] at (-10, 10) [above] {$b$};
-            \node[darkblue] at (10, 10) [above] {$c$};
-            \node[darkblue] at (-10, -10) [below] {$2a-2b+c$};
-            \node[darkblue] at (10, -10) [below] {$2a-b$};
-            \node[darkblue] at (10, 2) [right] {$a$};
-            \strand[semithick] (-10,-10) -- (10,10);
-            \strand[semithick] (-10,10) -- (10,-10);
-            \strand[semithick] (-10,2) .. controls (-4, 2) and (-4,-8) .. (0,-8);
-            \strand[semithick] (10,2) .. controls (4, 2) and (4,-8) .. (0,-8);
-        \end{knot}
-        \end{tikzpicture}} \qedhere
+        \LargeReidemeisterThreeColouringA \cong \LargeReidemeisterThreeColouringB
+        \qedhere
     \]
 \end{comment}
 \end{proof}
@@ -211,36 +147,20 @@ Będziemy potrzebować pomocniczej definicji.
 Ustalmy węzeł $K$ oraz dowolne uszachowienie dla jego diagramu.
 Skojarzmy z~każdym skrzyżowaniem równanie kolorujące, zgodnie z~poniższym schematem:
 \begin{comment}
-\[\begin{tikzpicture}[baseline=-0.65ex, scale=0.12]
-    \useasboundingbox (-5, -12) rectangle (5,7);
-    \begin{knot}[clip width=5, end tolerance=1pt, flip crossing/.list={1}]
-        \strand[semithick] (-5,5) to (5,-5);
-        \strand[semithick] (-5,-5) to (5,5);
-        \fill[blue!20!white] (-4, 5) to (0, 1) to (4, 5);
-        \fill[blue!20!white] (-4, -5) to (0, -1) to (4, -5);
-        \node[darkblue] at (-5, -5)[left] {$a$};
-        \node[darkblue] at (-5, +5)[left] {$b$};
-        \node[darkblue] at (+5, -5)[right] {$c$};
-        \node[darkblue] at (+5, +5)[right] {$a$};
-        \node[darkblue] at (0, -10) {$+a-b+a-c=0 \mod n$};
-    \end{knot}
-    \end{tikzpicture}
-    \quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad
-    \begin{tikzpicture}[baseline=-0.65ex, scale=0.12]
-    \useasboundingbox (-5, -12) rectangle (5,7);
-    \begin{knot}[clip width=5, end tolerance=1pt, flip crossing/.list={1}]
-        \strand[semithick] (-5,5) to (5,-5);
-        \strand[semithick] (-5,-5) to (5,5);
-        \fill[blue!20!white] (5, -4) to (1, 0) to (5, 4);
-        \fill[blue!20!white] (-5, -4) to (-1, 0) to (-5, 4);
-        \node[darkblue] at (-5, -5)[left] {$a$};
-        \node[darkblue] at (-5, +5)[left] {$b$};
-        \node[darkblue] at (+5, -5)[right] {$c$};
-        \node[darkblue] at (+5, +5)[right] {$a$};
-        \node[darkblue] at (0, -10) {$-a+b-a+c=0 \mod n$};
-    \end{knot}
-    \end{tikzpicture}
-\]
+\begin{figure}[H]
+    \begin{minipage}[b]{.48\linewidth}
+    \[
+        \LargeCrossingChessboardA
+    \]
+    \subcaption{$+a-b+a-c=0 \mod n$}
+    \end{minipage}
+    \begin{minipage}[b]{.48\linewidth}
+    \[
+        \LargeCrossingChessboardB
+    \]
+    \subcaption{$-a+b-a+c=0 \mod n$}
+    \end{minipage}
+\end{figure}
 \end{comment}
 
 \begin{proposition}
@@ -277,16 +197,7 @@ Dotychczas kolorowaliśmy diagramy węzłów liczbami $0, 1, 2, \ldots, n-1$, cz
     Mówimy, że zorientowany węzeł $K$ jest etykietowalny grupą $G$ generowaną przez elementy $g_1, \ldots, g_n$, jeśli posiada diagram, którego włóknom przypisano elementy $g_1, \ldots, g_n$ tak, by równanie $gk=hg$ było spełnione przy każdym skrzyżowaniu ($g$: włókno biegnące górą, $k$: bo jego lewej stronie, $h$: po prawej).
 \begin{comment}
     \[
-        \begin{tikzpicture}[baseline=-0.65ex, scale=0.12]
-            \useasboundingbox (-5, -5) rectangle (5,5);
-            \begin{knot}[clip width=5, end tolerance=1pt, flip crossing/.list={1}]
-                \strand[semithick] (-5,5) to (5,-5);
-                \strand[semithick, -Latex] (-5,-5) to (5,5);
-                \node[darkblue] at (5, 5)[below right] {$g$};
-                \node[darkblue] at (5, -5)[above right] {$h$};
-                \node[darkblue] at (-5, 5)[below left] {$k$};
-            \end{knot}
-        \end{tikzpicture}
+        \LargePlusCrossingLabel
     \]
 \end{comment}
 \end{definition}
