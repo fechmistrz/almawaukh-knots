@@ -36,33 +36,6 @@
     \end{knot}
 \end{tikzpicture}}
 
-\newcommand{\SREDNIAWYLeftCrossing} {\begin{tikzpicture}[baseline=-0.65ex, scale=0.06]
-    \useasboundingbox (-7, -7) rectangle (7, 7);
-    \begin{knot}[clip width=4, end tolerance=1pt]
-        \strand[red,thick,] (-5, -5) to (5, 5);
-        \strand[red,thick,] (-5, 5) to (5, -5);
-    \end{knot}
-\end{tikzpicture}}
-
-% used in proof that 2nd Reidemeister move does not change Kauffman bracket
-\newcommand{\SREDNIAWYLeftCrossingLow} {\begin{tikzpicture}[baseline=-0.65ex, scale=0.06]
-    \useasboundingbox (-7, -7) rectangle (7, 7);
-    \begin{knot}[clip width=4, end tolerance=1pt]
-        \strand[red,thick,] (5, -5) .. controls (5, -2) and (-5, -2) .. (-5, 0);
-        \strand[red,thick,] (5, 5) to (5, 0);
-        \strand[red,thick,] (-5, -5) .. controls (-5, -2) and (5, -2) .. (5, 0);
-        \strand[red,thick,] (-5, 5) to (-5, 0);
-    \end{knot}
-\end{tikzpicture}}
-
-\newcommand{\SREDNIAWYRightCrossing} {\begin{tikzpicture}[baseline=-0.65ex, scale=0.06]
-    \useasboundingbox (-7, -7) rectangle (7, 7);
-    \begin{knot}[clip width=4, end tolerance=1pt, flip crossing/.list={1}]
-        \strand[red,thick,] (-5, -5) to (5, 5);
-        \strand[red,thick,] (-5, 5) to (5, -5);
-    \end{knot}
-\end{tikzpicture}}
-
 \newcommand{\LittleLeftCrossing} {\begin{tikzpicture}[baseline=-0.65ex, scale=0.03]
     \useasboundingbox (-5, -5) rectangle (5, 5);
     \begin{knot}[clip width=5, end tolerance=1pt]
@@ -84,36 +57,6 @@
 
 %%%%%%%%%% LEFT/RIGHT SMOOTHING, BIG/SMALL START %%%%%%%%%%
 
-\newcommand{\LeftCrossSmoothing} {\begin{tikzpicture}[baseline=-0.65ex, scale=0.1]
-    \begin{knot}[clip width=5, end tolerance=1pt]
-        \strand[red,thick,] (-5, -5) [in=135, out=45] to (5, -5);
-        \strand[red,thick,] (-5, 5) [in=-135, out=-45] to (5, 5);
-    \end{knot}
-\end{tikzpicture}}
-
-\newcommand{\RightCrossSmoothing} {\begin{tikzpicture}[baseline=-0.65ex, scale=0.1]
-    \begin{knot}[clip width=5, end tolerance=1pt]
-        \strand[red,thick,] (-4, -5) to [out=45, in=-45] (-4, 5);
-        \strand[red,thick,] (4, -5) to [out=135, in=-135] (4, 5);
-    \end{knot}
-\end{tikzpicture}}
-
-\newcommand{\SREDNIAWYLeftSmoothing} {\begin{tikzpicture}[baseline=-0.65ex,scale=0.06]
-    \useasboundingbox (-7, -7) rectangle (7, 7);
-    \begin{knot}[clip width=4, end tolerance=1pt]
-        \strand[red,thick,] (-5, -5) [in=135, out=45] to (5, -5);
-        \strand[red,thick,] (-5, 5) [in=-135, out=-45] to (5, 5);
-    \end{knot}
-\end{tikzpicture}}
-
-\newcommand{\SREDNIAWYRightSmoothing} {\begin{tikzpicture}[baseline=-0.65ex,scale=0.06]
-    \useasboundingbox (-7, -7) rectangle (7, 7);
-    \begin{knot}[clip width=4, end tolerance=1pt]
-        \strand[red,thick,] (-4, -5) to [out=45, in=-45] (-4, 5);
-        \strand[red,thick,] (4, -5) to [out=135, in=-135] (4, 5);
-    \end{knot}
-\end{tikzpicture}}
-
 \newcommand{\LittleLeftSmoothing} {\begin{tikzpicture}[baseline=-0.65ex,scale=0.03]
     \useasboundingbox (-5, -5) rectangle (5, 5);
     \begin{knot}[clip width=5, end tolerance=1pt]
@@ -134,92 +77,9 @@
 
 %%%%%%%%%% REIDEMEISTER-1 START %%%%%%%%%%
 
-% for skein relation defining Kauffman F polynomial start
-\newcommand{\SREDNIAWYReidemeisterIaRight} {\begin{tikzpicture}[baseline=-0.65ex,scale=0.06]
-    \useasboundingbox (-7, -7) rectangle (7, 7);
-    \begin{knot}[clip width=4, end tolerance=1pt]
-        \strand[red,thick,] (-5, -5) [in=left, out=60] to  (3, 5)  [in=up, out=right]   to (5, 0);
-        \strand[red,thick,] (-5, 5)  [in=left, out=-60] to (3, -5) [in=down, out=right] to (5, 0);
-    \end{knot}
-\end{tikzpicture}}
-
-\newcommand{\SREDNIAWYReidemeisterIaLeft} {\begin{tikzpicture}[baseline=-0.65ex,scale=0.06]
-    \useasboundingbox (-7, -7) rectangle (7, 7);
-    \begin{knot}[clip width=4, end tolerance=1pt]
-        \strand[red,thick,] (-5, 5)  [in=left, out=-60] to (3, -5) [in=down, out=right] to (5, 0);
-        \strand[red,thick,] (-5, -5) [in=left, out=60]  to (3, 5)  [in=up, out=right]   to (5, 0);
-    \end{knot}
-\end{tikzpicture}}
-
-\newcommand{\SREDNIAWYReidemeisterIaLeftFirstSmoothering} {\begin{tikzpicture}[baseline=-0.65ex,scale=0.06]
-    \useasboundingbox (-7, -7) rectangle (7, 7);
-    \begin{knot}[clip width=4, end tolerance=1pt]
-        \strand[red,thick,] (-5, 5)  [in=left, out=-60] to (-2, 1.5)  [in=left, out=right] to (3, 5)  [in=up]   to (5, 0);
-        \strand[red,thick,] (-5, -5) [in=left, out=60] to  (-2, -1.5) [in=left, out=right] to (3, -5) [in=down] to (5, 0);
-    \end{knot}
-\end{tikzpicture}}
-
-\newcommand{\SREDNIAWYReidemeisterIaLeftSecondSmoothering} {\begin{tikzpicture}[baseline=-0.65ex,scale=0.06]
-    \useasboundingbox (-7, -7) rectangle (7, 7);
-    \begin{knot}[clip width=4, end tolerance=1pt]
-        \strand[red,thick,] (-5, -5) [in=down, out=up] to (-3.5, 0) to (-5, 5);
-        \strand[red,thick,] (-1, 0) [in=left, out=up] to (3, 5) [in=up, out=right] to (5, 0);
-        \strand[red,thick,] (-1, 0) [in=left, out=down] to (3, -5) [in=down, out=right] to (5, 0);
-    \end{knot}
-\end{tikzpicture}}
-
-\newcommand{\SREDNIAWYReidemeisterIb} {\begin{tikzpicture}[baseline=-0.65ex,scale=0.06]
-    \useasboundingbox (-2, -7) rectangle (2, 7);
-    \begin{knot}[clip width=4, end tolerance=1pt]
-        \strand[red,thick,] (0, -6.65) to (0, 6);
-    \end{knot}
-\end{tikzpicture}}
-
 %%%%%%%%%% REIDEMEISTER-1 END %%%%%%%%%%
 
 %%%%%%%%%% REIDEMEISTER-2 START %%%%%%%%%%
-
-\newcommand{\SingularDoubleReidemeisterIIa} {\begin{tikzpicture}[baseline=-0.65ex,scale=0.1]
-    \useasboundingbox (-7, -7) rectangle (7, 7);
-    \begin{knot}[clip width=5, end tolerance=1pt]
-        \draw[thick,red] (5, -5) .. controls (5, -2) and (-5, -2) .. (-5, 0);
-        \strand[red,thick,blue,-latex] (5, 5) .. controls (5, 2) and (-5, 2) .. (-5, 0);
-        \draw[thick,yellow] (-5, -5) .. controls (-5, -2) and (5, -2) .. (5, 0);
-        \strand[red,thick,-latex] (-5, 5) .. controls (-5, 2) and (5, 2) .. (5, 0);
-        \draw[thick,] (0, -2.2) circle (1);
-    \end{knot}
-\end{tikzpicture}}
-
-\newcommand{\SREDNIAWYReidemeisterIIa} {\begin{tikzpicture}[baseline=-0.65ex,scale=0.06]
-    \useasboundingbox (-7, -7) rectangle (7, 7);
-    \begin{knot}[clip width=4, end tolerance=1pt]
-        \strand[red,thick,] (5, -5) .. controls (5, -2) and (-5, -2) .. (-5, 0);
-        \strand[red,thick,] (5, 5) .. controls (5, 2) and (-5, 2) .. (-5, 0);
-        \strand[red,thick,] (-5, -5) .. controls (-5, -2) and (5, -2) .. (5, 0);
-        \strand[red,thick,] (-5, 5) .. controls (-5, 2) and (5, 2) .. (5, 0);
-    \end{knot}
-\end{tikzpicture}}
-
-\newcommand{\SREDNIAWYReidemeisterIIaHorizontal} {\begin{tikzpicture}[baseline=-0.65ex,scale=0.05]
-    \useasboundingbox (-9.5, -7) rectangle (9.5, 7);
-    \begin{knot}[clip width=4, end tolerance=1pt]
-        \strand[red,thick,] (-7.5, -5) .. controls (-3, -5) and (-3, 5) .. (0, 5);
-        \strand[red,thick,] (7.5, -5) .. controls (3, -5) and (3, 5) .. (0, 5);
-        \strand[red,thick,] (-7.5, 5) .. controls (-3, 5) and (-3, -5) .. (0, -5);
-        \strand[red,thick,] (7.5, 5) .. controls (3, 5) and (3, -5) .. (0, -5);
-    \end{knot}
-\end{tikzpicture}}
-
-% used in proof...
-\newcommand{\SREDNIAWYReidemeisterIIaSmoothed} {\begin{tikzpicture}[baseline=-0.65ex,scale=0.06]
-    \useasboundingbox (-7, -7) rectangle (7, 7);
-    \begin{knot}[clip width=4, end tolerance=1pt]
-        \strand[red,thick,] (5, -5) .. controls (5, -3) and (-5, -3) .. (-5, -1);
-        \strand[red,thick,] (-5, -5) .. controls (-5, -3) and (5, -3) .. (5, -1);
-        \strand[red,thick,] (-5, -1) [in=left, out=up] to (0, 1) to [in=up, out=right] (5, -1);
-        \strand[red,thick,] (-5, 5) [in=left, out=down] to (0, 3) to [in=down, out=right] (5, 5);
-    \end{knot}
-\end{tikzpicture}}
 
 \newcommand{\VirtualOmegaVa} {\begin{tikzpicture}[baseline=-0.65ex,scale=0.15]
     \useasboundingbox (-7, -7) rectangle (7, 7);
@@ -308,90 +168,9 @@
     \end{knot}
 \end{tikzpicture}}
 
-\newcommand{\SREDNIAWYReidemeisterIIIa} {\begin{tikzpicture}[baseline=-0.65ex,scale=0.06]
-    \useasboundingbox (-7, -7) rectangle (7, 7);
-    \begin{knot}[clip width=4, flip crossing/.list={1, 2, 3}, end tolerance=1pt]
-        \strand[red,thick,] (-5, -5) -- (5, 5);
-        \strand[red,thick,] (-5, 5) -- (5, -5);
-        \strand[red,thick,] (-5, 0) .. controls (-3, 0) and (-3, 5) .. (0, 5) .. controls (3, 5) and (3, 0) .. (5, 0);
-    \end{knot}
-\end{tikzpicture}}
-
-\newcommand{\SREDNIAWYReidemeisterIIIaFlipped} {\begin{tikzpicture}[baseline=-0.65ex,scale=0.06]
-    \useasboundingbox (-7, -7) rectangle (7, 7);
-    \begin{knot}[clip width=4, flip crossing/.list={1, 2, 3}, end tolerance=1pt]
-        \strand[red,thick,] (-5, -5) -- (5, 5);
-        \strand[red,thick,] (-5, 5) -- (5, -5);
-        \strand[red,thick,] (-5, 0) .. controls (-3, 0) and (-3, -5) .. (0, -5) .. controls (3, -5) and (3, 0) .. (5, 0);
-    \end{knot}
-\end{tikzpicture}}
-
-\newcommand{\SREDNIAWYReidemeisterIIIb} {\begin{tikzpicture}[baseline=-0.65ex,scale=0.06]
-    \useasboundingbox (-7, -7) rectangle (7, 7);
-    \begin{knot}[clip width=4, flip crossing/.list={1, 2, 3}, end tolerance=1pt]
-        \strand[red,thick,] (-5, 5) [in=-120, out=-60] to (5, 5);
-        \strand[red,thick,] (-5, -5) [in=120, out=60] to (5, -5);
-        \strand[red,thick,] (-5, 0) .. controls (-3, 0) and (-3, 5) .. (0, 5) .. controls (3, 5) and (3, 0) .. (5, 0);
-    \end{knot}
-\end{tikzpicture}}
-
-\newcommand{\SREDNIAWYReidemeisterIIIbFlipped} {\begin{tikzpicture}[baseline=-0.65ex,scale=0.06]
-    \useasboundingbox (-7, -7) rectangle (7, 7);
-    \begin{knot}[clip width=4, flip crossing/.list={1, 2, 3}, end tolerance=1pt]
-        \strand[red,thick,] (-5, 5) [in=-120, out=-60] to (5, 5);
-        \strand[red,thick,] (-5, -5) [in=120, out=60] to (5, -5);
-        \strand[red,thick,] (-5, 0) .. controls (-3, 0) and (-3, -5) .. (0, -5) .. controls (3, -5) and (3, 0) .. (5, 0);
-    \end{knot}
-\end{tikzpicture}}
-
-\newcommand{\SREDNIAWYReidemeisterIIIc} {\begin{tikzpicture}[baseline=-0.65ex,scale=0.06]
-    \useasboundingbox (-7, -7) rectangle (7, 7);
-    \begin{knot}[clip width=4, flip crossing/.list={1, 2, 3}, end tolerance=1pt]
-        \strand[red,thick,] (-5, -5) to [out=30, in=-30] (-5, 5);
-        \strand[red,thick,] (5, -5) to [out=150, in=-150] (5, 5);
-        \strand[red,thick,] (-6, 0) .. controls (-3, 0) and (-3, 5) .. (0, 5) .. controls (3, 5) and (3, 0) .. (6, 0);    
-    \end{knot}
-\end{tikzpicture}}
-
-\newcommand{\SREDNIAWYReidemeisterIIIcFlipped} {\begin{tikzpicture}[baseline=-0.65ex,scale=0.06]
-    \useasboundingbox (-7, -7) rectangle (7, 7);
-    \begin{knot}[clip width=4, flip crossing/.list={1, 2, 3}, end tolerance=1pt]
-        \strand[red,thick,] (-5, -5) to [out=30, in=-30] (-5, 5);
-        \strand[red,thick,] (5, -5) to [out=150, in=-150] (5, 5);
-        \strand[red,thick,] (-6, 0) .. controls (-3, 0) and (-3, -5) .. (0, -5) .. controls (3, -5) and (3, 0) .. (6, 0);    
-    \end{knot}
-\end{tikzpicture}}
-
-\newcommand{\SREDNIAWYReidemeisterIIId} {\begin{tikzpicture}[baseline=-0.65ex,scale=0.06]
-    \useasboundingbox (-7, -7) rectangle (7, 7);
-    \begin{knot}[clip width=4, flip crossing/.list={1, 2, 3}, end tolerance=1pt]
-        \strand[red,thick,] (-5, 5) [in=-120, out=-60] to (5, 5);
-        \strand[red,thick,] (-5, -5) [in=120, out=60] to (5, -5);
-        \strand[red,thick,] (-5, 0) to (5, 0);
-    \end{knot}
-\end{tikzpicture}}
-
-\newcommand{\SREDNIAWYReidemeisterIIIe} {\begin{tikzpicture}[baseline=-0.65ex,scale=0.06]
-    \useasboundingbox (-7, -7) rectangle (7, 7);
-    \begin{knot}[clip width=4, flip crossing/.list={1, 2, 3}, end tolerance=1pt]
-        \strand[red,thick,] (-5, -5) to [out=30, in=-30] (-5, 5);
-        \strand[red,thick,] (5, -5) to [out=150, in=-150] (5, 5);
-        \strand[red,thick,] (-6, 0) to (6, 0);
-    \end{knot}
-\end{tikzpicture}}
-
 %%%%%%%%%% REIDEMEISTER-3 END %%%%%%%%%%
 
 %%%%%%%%%% SKEIN START %%%%%%%%%%
-
-\newcommand{\skeinplus} {\begin{tikzpicture}[baseline=-0.65ex,scale=0.1]
-    \useasboundingbox (-7, -7) rectangle (7, 5);
-    \begin{knot}[clip width=5, end tolerance=1pt]
-        \strand[red,thick, -latex] (-5, -5) to (5, 5);
-        \strand[red,thick,latex-] (-5, 5) to (5, -5);
-        \node[darkblue] at (0, -4)[below] {$L_+$};
-    \end{knot}
-\end{tikzpicture}}
 
 \newcommand{\SREDNIAWYSkeinPlus} {\begin{tikzpicture}[baseline=-0.65ex,scale=0.06]
     \useasboundingbox (-7, -5) rectangle (7, 5);
@@ -401,29 +180,11 @@
     \end{knot}
 \end{tikzpicture}}
 
-\newcommand{\skeinminus} {\begin{tikzpicture}[baseline=-0.65ex,scale=0.1]
-    \useasboundingbox (-7, -7) rectangle (7, 5);
-    \begin{knot}[clip width=5, end tolerance=1pt, flip crossing/.list={1}]
-        \strand[red,thick, -latex] (-5, -5) to (5, 5);
-        \strand[red,thick,latex-] (-5, 5) to (5, -5);
-        \node[darkblue] at (0, -4)[below] {$L_-$};
-    \end{knot}
-\end{tikzpicture}}
-
 \newcommand{\SREDNIAWYSkeinMinus} {\begin{tikzpicture}[baseline=-0.65ex,scale=0.06]
     \useasboundingbox (-7, -5) rectangle (7, 5);
     \begin{knot}[clip width=4, end tolerance=1pt, flip crossing/.list={1}]
         \strand[red,thick, -Latex] (-5, -5) to (5, 5);
         \strand[red,thick,Latex-] (-5, 5) to (5, -5);
-    \end{knot}
-\end{tikzpicture}}
-
-\newcommand{\skeinzero} {\begin{tikzpicture}[baseline=-0.65ex,scale=0.1]
-    \useasboundingbox (-7, -7) rectangle (7, 5);
-    \begin{knot}[clip width=5, end tolerance=1pt, flip crossing/.list={1}]
-        \strand[red,thick, -latex] (-5, -5) to [out=45, in=-45] (-5, 5);
-        \strand[red,thick, -latex] (5, -5) to [out=135, in=-135] (5, 5);
-        \node[darkblue] at (0, -4)[below] {$L_0$};
     \end{knot}
 \end{tikzpicture}}
 
