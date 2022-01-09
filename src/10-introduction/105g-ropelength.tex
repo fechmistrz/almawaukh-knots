@@ -8,24 +8,23 @@ Długość sznurowa, najsłabiej poznany niezmiennik numeryczny, pochodzi z~fizy
     Niech $L$ będzie splotem o długości $l$ oraz grubości $\tau$: posiada rurowe otoczenie bez samoprzecięć z~przekrojem poprzecznym o~promieniu $\tau$.
     Iloraz
     \begin{equation}
-        \operatorname{len} L = \frac l \tau
+        \ropelength L = \frac l \tau
     \end{equation}
     nazywamy długością sznurową splotu.
 \end{definition}
 
-Przez wiele lat zastanawiano się, czy można zawiązać węzeł ze sznura o~długości jednej stopy i~promieniu jednego cala lub równoważnie, czy $\operatorname{len} K \le 12$ dla pewnego węzła $K$.
-Na początku XXI wieku wiedzieliśmy z \cite{cantarella02}, że najkrótszy węzeł ma długość co najmniej $10.726$, potem Diao udzielił negatywnej odpowiedzi na to pytanie w \cite[s. 14]{diao03}.
+Przez wiele lat zastanawiano się: czy można zawiązać węzeł ze sznura o~długości jednej stopy i~promieniu jednego cala?
+Lub równoważnie, czy $\ropelength K \le 12$ dla pewnego węzła $K$?
+Na początku XXI wieku wiedzieliśmy z \cite{cantarella02}, że najkrótszy węzeł ma długość co najmniej $(2 + \sqrt 2)\pi \approx 10.726$, potem Diao udzielił negatywnej odpowiedzi na to pytanie w~\cite[s. 14]{diao03}.
 
 Rozumowanie \cite{denne06} oparte o~czterosieczne pokazuje, że długość sznurowa nietrywialnego węzła wynosi co najmniej $15.66$.
 Ponieważ eksperymenty komputerowe pokazują, że długość trójlistnika nie przekracza $16.372$, oszacowanie to jest dość ostre.
-
-% Węzeł realizujący długość sznurową jest klasy $C^1,1$.
 
 Prowadzono obszerne poszukiwania na temat zależności między długością sznurową i~innymi niezmiennikami.
 Mamy na przykład:
 
 \begin{proposition}
-    Istnieją stałe $c_1, c_2$ takie, że $c_1 \crossing^{3/4} K \le \operatorname{len} K \le c_2 \crossing^{3/2} K$.
+    Istnieją stałe $c_1, c_2$ takie, że $c_1 \crossing^{3/4} K \le \ropelength K \le c_2 \crossing^{3/2} K$.
 \end{proposition}
 
 Udowodniono, że dolnym ograniczeniem na czynnik $c_1$ jest $(4\pi/11)^{3/4} \approx 1.105$ (gdyż tak pisze Cantarella i~inni w~\cite[tw. 23]{cantarella02}).
@@ -33,7 +32,7 @@ Wiemy też, że stała $c_1$ nie może przekraczać $12.64$ ze względu na węze
 
 Klotz, Maldonado \cite{klotz21} piszą, że Diao dostał lepsze dolne ograniczenie (lepsze niż ,,3/4'') dla węzłów do 1850 skrzyżowań (!!!):
 \begin{equation}
-    \frac 12 \left(17.334 + \sqrt{17.334^2 + 64 \pi \crossing K}\right) \le \operatorname{len} K.
+    \frac 12 \left(17.334 + \sqrt{17.334^2 + 64 \pi \crossing K}\right) \le \ropelength K.
 \end{equation}
 
 Dowód górnego ograniczenia opiera się na cyklach Hamiltona w~grafach zanurzonych w~kratach liczbowych \cite{yu04} i zostało później poprawione:
@@ -41,14 +40,14 @@ Dowód górnego ograniczenia opiera się na cyklach Hamiltona w~grafach zanurzon
 % Ograniczenie to realizowane jest przez pewne węzły torusowe oraz sploty Hopfa. - wikipedia o c_1
 
 \begin{proposition}
-    $\operatorname{len} K = O(\crossing K \cdot \log^5(\crossing K)).$
+    $\ropelength K = O(\crossing K \cdot \log^5(\crossing K)).$
 \end{proposition}
 
 \begin{proof}
     Świeży wynik z \cite{diao19}, którego dowód wykorzystuje kraty liczbowe.
 \end{proof}
 
-Jakościowy wynik znaleźliśmy znowu w~\cite{klotz21}: zachodzi $\operatorname{len} L \le a_u \crossing K \log^5 \crossing K$ (nie tylko dla węzłów, ale też splotów), przy czym stała $a_u$ musi być większa od $8\pi/\log^5 2 \approx 78.5$, by dobrze ograniczała splot Hopfa.
+Jakościowy wynik znaleźliśmy znowu w~\cite{klotz21}: zachodzi $\ropelength L \le a_u \crossing K \log^5 \crossing K$ (nie tylko dla węzłów, ale też splotów), przy czym stała $a_u$ musi być większa od $8\pi/\log^5 2 \approx 78.5$, by dobrze ograniczała splot Hopfa.
 
 Długość sznurowa nie pojawia się w~dalszych rozdziałach.
 
