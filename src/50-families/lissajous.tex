@@ -122,6 +122,7 @@ Wielomian $\alexander(t) = A_0 + A_1(t+1/t) + \ldots + A_n(t^n + 1/t^n)$ jest kw
     Włókniste węzły o nieparzystym genusie nie są węzłami Lissajous.
 \end{corollary}
 
+%=% Lamm
 \begin{proof}
     Wynika to z~naszego wygodnego przeformułowania oraz stwierdzenia 8.33 w książce \cite{burde14}: jeśli $K$ jest włóknistym węzłem o genusie $g$, to wielomian Alexandera $\alexander_K$ jest stopnia $2g$ i~ma wiodący współczynnik $\pm 1$.
 \end{proof}
@@ -139,12 +140,15 @@ Wielomian $\alexander(t) = A_0 + A_1(t+1/t) + \ldots + A_n(t^n + 1/t^n)$ jest kw
     Wtedy jego faktor jest trywialny i~kongruencja \ref{eqn:lissajous_squared} daje $\alexander_K(t) \equiv 1 \mod 2$.
 \end{proof}
 
+%=% Lamm
 \begin{corollary}
+\index{węzeł!włóknisty}%
     Dwumostowe węzły włókniste nie są węzłami Lissajous.
 \end{corollary}
 
 Można skorzystać z tego samego argumentu, co w dowodzie wniosku \ref{cor:lissajous_fibered} oraz \ref{cor:lissajous_twobridge}.
 
+%=% Lamm
 \begin{proposition}
     Niech $p, q$ będą względnie pierwszymi liczbami różnymi od $0, \pm 1$, zaś $K$ węzłem.
     Wtedy $(p, q)$-kabel węzła $K$ nie jest węzłem Lissajous.
@@ -157,13 +161,15 @@ Celowo pomijamy ją w bibliografii, prawdopodobnie chodzi o zwykłe węzły sate
     Niech $L$ będzie $(p, q)$-kablem węzła $K$.
     Seifert pokazał w \cite{seifert50}, że
     \begin{equation}
-        \alexander_L(t) = \frac{(t^{pq}-1)(t-1)}{(t^p-1)(t^q-1)} \alexander_K(t^p).
+        \alexander_L(t) = \frac{(t^{pq}-1)(t-1)}{(t^p-1)(t^q-1)} \alexander_K(t^p),
     \end{equation}
-    Dwa najwyższe współczynniki w wielomianie ułamkowym to $\pm 1$, a skoro $|p| > 1$, dwa najwyższe współczynniki $\alexander_L$ to także $\pm 1$.
+    przy czym wyjątkowo wielomian $\alexander$ nie jest symetryczny w $t$ oraz $1/t$, tylko unormowany.
+    Dwa najwyższe współczynniki w wielomianie ,,ułamkowym'' to $\pm 1$, a skoro $|p| > 1$, dwa najwyższe współczynniki $\alexander_L$ to także $\pm 1$.
     ,,Wygodne sformułowanie'' kończy dowód.
 \end{proof}
 
 \begin{corollary}
+\index{węzeł!torusowy}%
     Nietrywialne węzły torusowe nie są węzłami Lissajous.
 \end{corollary}
 
@@ -172,9 +178,11 @@ Celowo pomijamy ją w bibliografii, prawdopodobnie chodzi o zwykłe węzły sate
 \end{proof}
 
 \begin{corollary}
-    Nietrywialne węzły algebraniczne nie są węzłami Lissajous.
-    % TODO: co to są węzły algebraiczne?
+    Nietrywialne węzły algebraiczne nie są węzłami Lissajous.
 \end{corollary}
+
+Co to są węzły algebraiczne?
+Nie wiem.
 
 \begin{proof}
     Wynika to z ogólniejszego stwierdzenia: jeśli spełniony jest warunek $|p_n|, |q_n| > 1$, to iterowane węzły torusowe typu $((p_n, q_n), (p_1, q_1))$ nie są węzłami Lissajous.
@@ -192,10 +200,11 @@ Znaleźli go Hoste z Zirbel w~\cite{zirbel06}:
 
 Węzły bilardowe to zamknięte trajektorie kuli, która zostaje wystrzelona z jednej ze ścian sześcianu, odbija się pod takim samym kątem, pod jakim pada na ściany.
 \index{węzeł!bilardowy}%
-Jones, Przytycki pokazali w \cite{jones98}, że węzły bilardowe to dokładnie węzły Lissajous i zadali pytanie, czy każdy węzeł można zrealizować jako trajektorię kuli w jakimś wielościanie.
+Jones, Przytycki pokazali w~\cite{jones98}, że węzły bilardowe to dokładnie węzły Lissajous i~zadali pytanie, czy każdy węzeł można zrealizować jako trajektorię kuli w~jakimś wielościanie.
 
 Odpowiedź jest pozytywna.
 Koseleff, Pecker w~\cite{koseleff14} korzystając z~twierdzenia Manturowa
+\index{twierdzenie!Manturowa (o kwazitorycznych warkoczach)}%
 (każdy splot jest domknięciem kwazitorycznego warkocza)
 pokazują, że każdy węzeł ma diagram, który jest wielokątem gwiaździstym.
 Użyte zostało twierdzenie Kroneckera z~1884 roku: jeśli liczby $\theta_0 = 1, \theta_1, \ldots, \theta_k$ są liniowo niezależne nad ciałem $\Q$, to zbiór punktów $(\lfloor n\theta_i \rfloor_{i=0}^k)_{n=0}^\infty$ leży gęsto w kostce jednostkowej.
