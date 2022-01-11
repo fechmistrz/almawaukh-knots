@@ -88,8 +88,20 @@ Murasugi prezentuje w~swojej książce \cite{murasugi96} przyjemny dowód opiera
     Sfera $S^3$ powstaje z~powierzchni dwóch węzłów trywialnych z~wnętrzem ($D^2 \times S^1$) przez wzajemne sklejenie południka i~równoleżnika z~równoleżnikiem i~południkiem.
 \end{lemma}
 
+\begin{proposition}
+    Niech $K$ będzie nietrywialnym węzłem, którego grupa ma nietrywialne centrum.
+    Wtedy $K$ jest węzłem torusowym.
+    % Kawauchi: The torus knots are characterized as the only knots whose groups have non-trivial centers (cf. Corollary 6.3.6).
+\end{proposition}
+
+\begin{proof}
+    Najpierw pokazali to Murasugi \cite{murasugi61}, Neuwirth \cite{neuwirth61} przy dodatkowym założeniu, że węzeł $K$ jest alternujący,
+    wkrótce po tym Burde, Zieschang znaleźli dowód w ogólnym przypadku \cite{burde66}.
+\end{proof}
+
 Przejdźmy do podania wartości różnych niezmienników.
 
+\subsection{Niezmienniki wielomianowe węzłów torusowych}
 \begin{proposition}
     Niech $L = T_{p, q}$ będzie splotem torusowym o $d$ ogniwach, różnym od $T_{0, 0}$.
 \index{wielomian!Alexandera}%
@@ -189,7 +201,8 @@ Wartości wielomianu Jonesa podajemy bez dowodu:
     \end{equation}
 \end{proposition}
 
-Podamy teraz wartości całkowitoliczbowych niezmienników dla węzłów torusowych przy założeniu, że $q$ lub $r$ nie jest zerem.
+\subsection{Niezmienniki liczbowe węzłów torusowych}
+Podamy teraz wartości całkowitoliczbowych niezmienników dla węzłów torusowych przy założeniu, że $p$ lub $q$ nie jest zerem.
 Nietrywialne węzły torusowe są pierwsze i~odwracalne, ale mają niezerową sygnaturę, więc nie są chiralne.
 Wiedział to Schreier w 1924.
 % TODO: \cite schreier24?
@@ -280,7 +293,7 @@ Dowód został odnaleziony w~latach 1993-1995 przy użyciu tzw. \emph{gauge theo
 \label{prp:torus_unknotting_number}%
     Dla względnie pierwszych $p, q > 0$ mamy
     \begin{equation}
-        u(T_{p, q}) = \frac 12 (p - 1)(q - 1),
+        \unknotting T_{p, q} = \frac 12 (p - 1)(q - 1),
     \end{equation}
 \end{proposition}
 
@@ -288,7 +301,10 @@ Dowód został odnaleziony w~latach 1993-1995 przy użyciu tzw. \emph{gauge theo
 % https://mathscinet.ams.org/mathscinet-getitem?mr=2729272
 
 \begin{proof}
-    Patrz prace \cite{kronheimer93} oraz \cite{kronheimer95}.
+    ,,Jeśli $X$ jest jednospójną, gładką, domkniętą, zorientowaną 4-rozmaitością taką, że $b^+ < 3$ jest\footnote{wymiar maksymalnej dodatniej podprzedstrzeni dla formy przecięć (intersection form) drugiej homologii.} nieparzyste i taką, że wielomianowy niezmiennik Donaldsona jest nietrywialny, to genus każdej zorientowanej, gładko zanurzonej powierzchni $F$ (poza dwoma wyjątkami, których nie rozumiemy) spełnia nierówność $2g - 2 \ge F \cdot F$'' to stwierdzenie, jakie razem z~technicznymi lematami można znaleźć w \cite{kronheimer93}.
+    Geometryczne elementy dowodu znalazły się w drugiej części, \cite{kronheimer95}.
+
+    Wnioskiem z głównego twierdzenia jest dowód hipotezy Milnora.
     % This last result was proved by F. B. Kronheimer and T. S. Mrowka in [Kronheimer-Mrowka 1993], who determined the 4-dimensional genus of T(p, q) (defined in 12.3) by applying gauge theory to an embedded surface in a 4-manifold.
     % https://web.math.princeton.edu/~petero/GridHomologyBook.pdf strona 4
 \end{proof}
@@ -320,17 +336,6 @@ Według Murasugiego dowód znajduje się w \cite{schubert54}.
     Bez straty ogólności niech $p > q > 0$.
     Skoro węzeł $K$ powstaje z~$q$-warkocza $(\sigma_{q-1} \ldots \sigma_2\sigma_1)^p$,
     indeks $b(K)$ nie przekracza $q = br(K)$.
-\end{proof}
-
-\begin{proposition}
-    Niech $K$ będzie nietrywialnym węzłem, którego grupa ma nietrywialne centrum.
-    Wtedy $K$ jest węzłem torusowym.
-    % Kawauchi: The torus knots are characterized as the only knots whose groups have non-trivial centers (cf. Corollary 6.3.6).
-\end{proposition}
-
-\begin{proof}
-    Najpierw pokazali to Murasugi \cite{murasugi61}, Neuwirth \cite{neuwirth61} przy dodatkowym założeniu, że węzeł $K$ jest alternujący,
-    wkrótce po tym Burde, Zieschang znaleźli dowód w ogólnym przypadku \cite{burde66}.
 \end{proof}
 
 \index{węzeł!torusowy|)}%
