@@ -86,6 +86,23 @@ Reszta tej podsekcji nie jest wymagana do zrozumienia macierzy Seiferta, przyjrz
     Wśród wszystkich powierzchni Seiferta węzła $K$ istnieje co najmniej jedna o minimalnym genusie, jej genus nazywamy 3-genusem węzła $K$ i oznaczamy także przez $\genus$.
 \end{definition}
 
+Jeżeli nie powoduje to nieporozumień, zamiast 3-genus można pisać po prostu genus.
+
+\begin{proposition}
+    \label{prp:genus_detects_unknot}
+    Genus wykrywa niewęzły: $K$ jest niewęzłem wtedy i tylko wtedy, gdy $g(K) = 0$.
+\end{proposition}
+
+\begin{proof}
+    Niech $K$ będzie węzłem o genusie $0$.
+    Z~charakteryzacji powierzchni wynika, że jego powierzchnia Seiferta to suma spójna $0$ torusów, to znaczy kula z tyloma otworami, ile $K$ ma ogniw.
+    Innymi słowy, powierzchnią Seiferta węzła $K$ jest dysk, którego brzeg stanowi niewęzeł.
+    To pokazuje, że implikacja w lewo jest prawdziwa.
+
+    Implikacja w prawo jest oczywista.
+\end{proof}
+
+\subsubsection{Ograniczanie genusu z dołu}
 Znalezienie 3-genusu dowolnego węzła sprawia te same trudności, co wyznaczenie jego liczby gordyjskiej.
 Dowolna powierzchnia Seiferta zadaje ograniczenie z góry.
 Z dołu 3-genus można szacować przy użyciu wielomianu Alexandera:
@@ -106,7 +123,6 @@ Fakt ten znalazłem w podręczniku Murasugiego \cite[s. 131]{murasugi96}.
 
 To dolne ograniczenie jest realizowane przez pewną powierzchnię Seiferta dla każdego pierwszego węzła o~co najwyżej 11 skrzyżowaniach poza siedmioma wyjątkami: 11n42, 11n67, 11n97 ($g = 2$), 11n34, 11n45, 11n73 oraz 11n152 ($g = 3$).
 % warto byłoby dodać jakiś kod pozwalający sprawdzić, czemu akurat te węzły
-Jeżeli nie powoduje to nieporozumień, zamiast 3-genus można pisać po prostu genus.
 
 \begin{proposition}
     Niech $K$ będzie węzłem, zaś $M$ jego macierzą Seiferta.
@@ -119,6 +135,8 @@ Floer zdefiniował w~\cite{floer90} przestrzeń wektorową nazywaną teraz homol
 Ta homologia rozkłada się na sumę prostą przestrzeni własnych wyróżnionego endomorfizmu, ich charakterystyki Eulera są współczynnikami wielomianu Alexandera.
 Pozwala to na dokładniejsze szacowanie genusu węzła, patrz prace Ozsvátha, Szabó \cite{szabo03} i Ghigginiego \cite{ghiggini08}.
 
+
+\subsubsection{Ograniczanie genusu z góry}
 Z góry genus ograniczony jest przez kilka klasycznych niezmienników numerycznych.
 Zanim to pokażemy, przytoczymy techniczny lemat udowodniony przez Yamadę (\cite{yamada87}):
 
@@ -160,100 +178,7 @@ Powyższe stwierdzenie występuje bez dowodu (bez?) w \cite[s. 17]{kawauchi96}.
 \index{indeks skrzyżowaniowy}
 \end{corollary}
 
-Czy w definicji genusu można ograniczyć się do powierzchni Seiferta, które pochodzą od algorytmu Seiferta?
-Niestety, poza pewnymi wyjątkami, nie.
-Zanim przekonamy się, dlaczego tak jest, zdefiniujmy jeszcze dwa niezmienniki.
-
-\begin{definition}[genus kanoniczny]
-\index{genus!kanoniczny}%
-    Niech $K$ będzie węzłem.
-    Najmniejszy z genusów powierzchni Seiferta węzła $K$, które pochodzą z~algorytmu Seiferta, nazywamy genusem klasycznym i~oznaczamy symbolem $\operatorname{g_c} K$ lub krótko $g_c$.
-\end{definition}
-
-Stojmenow \cite{stoimenow08} opisał diagramy węzłów o~kanonicznym genusie równym 2.
-Część z~jego wyników przenosi się na genus 3.
-Jak sam pisze, sklasyfikowane wcześniej węzły o~genusie (kanonicznym) 1 okazały się być zbyt wąską klasą.
-
-Pod koniec lat pięćdziesiątych Crowell i~Murasugi niezależnie zauważyli, że algorytm Seiferta zastosowany do alternującego diagramu zawsze daje powierzchnię o~minimalnej powierzchni.
-Ich kombinatoryczne uzasadnienie było dość zawiłe, elementarny dowód podał Gabai w \cite{gabai86}.
-
-Dubel trójlistnika ma genus równy $1$, ale algorytm Seiferta zastosowany wobec węzła produkuje powierzchnie o genusie co najmniej $3$, jak przewiduje ograniczenie znalezione przez Mortona w \cite[twierdzenie 2]{morton86}:
-
-\begin{proposition}
-    Niech $P(v, z)$ będzie wersją wielomianu HOMFLY spełniającą zależność
-    \begin{equation}
-        \frac 1v P_+ - vP_- = zP_0.
-    \end{equation}
-    Wtedy $M = \max \deg_z P(v, z) \le 2g_c$.
-\end{proposition}
-
-Nierówność Mortona jest równością dla wielu klas węzłów, w tym alternujących (Crowell, Murasugi), jednorodnych (które stanowią uogólnienie węzłów alternujących, Cromwell w \cite{cromwell89}), whiteheadowskich dubli węzłów dwumostowych (Nakamura w \cite{nakamura06}, Tripp w \cite{tripp02}) albo precli (Brittenham, Jensen \cite{brittenham06}).
-\index{nierówność Mortona}%
-\index{węzeł!alternujący}%
-\index{węzeł!jednorodny}%
-\index{dubel Whiteheada}%
-\index{węzeł!dwumostowy}%
-\index{precel}%
-Stojmenow pokazał, że staje się równością dla węzłów o co najwyżej 12 skrzyżowaniach i znalazł przykład węzła, dla którego jest ostra.
-
-\begin{definition}[genus wolny]
-\index{genus!wolny}
-    Niech $K$ będzie węzłem.
-    Minimalny genus spośród powierzchni Seiferta węzła $K$, których dopełnienie w 3-sferze jest ciałem z rączkami, nazywamy genusem wolnym i~oznaczamy $g_f$.
-\index{ciało z rączkami}
-\end{definition}
-
-Dopełnienie powierzchni Seiferta jest zawsze ciałem z rączkami, więc mamy oczywiste nierówności
-\begin{equation}
-    g \le g_f \le g_c.
-\end{equation}
-
-Morton w 1986 roku pokazał, że genus pewnych węzłów nie jest realizowany przez żaden diagram do którego stosuje się algorytm Seiferta, choćby $10_{165}$.
-Patrz \cite{morton86}.
-
-Moriah, matematyk izraelski, rozwiązał problem postawiony dekadę wcześniej przez Kirby'ego \cite{kirby78}: jak duża może być różnica $g_f - g$?
-
-\begin{proposition}
-    Niech $K$ będzie węzłem, $D_k(K)$ jego dublem Whiteheada z $k \neq 0$ skręceniami, zaś $B_n(K)$ to $n$-krotne nakrycie cykliczne sfery $S^3$ rozgałęzione nad węzłem $K$.
-    Jeżeli ranga pierwszej grupy homologii $B_{|4k+1|}(K)$ wynosi $r$, to
-    \begin{equation}
-        g_f(D_k(K)) \ge \frac {2r-1} {|8k+2|}.
-    \end{equation}
-\end{proposition}
-
-\begin{proof}
-    Praca \cite{moriah87}.
-    Dowód opiera się na chirurgii węzłów i splotów w sferze $S^3$.
-\end{proof}
-
-\begin{corollary}
-    Niech $K$ bedzie sumą spójną $n$ trójlistników, połóżmy $k = -1$.
-    Wtedy pierwsza grupa homologii ma rangę $r = 2n$ i~genus wolny jest nieograniczony
-    \begin{equation}
-        g_f(D_{-1}(3_1^n)) \ge \frac {4n-1} {6},
-    \end{equation}
-    podczas gdy zwykły genus to $g(D_{-1}(3_1^n)) = 1$.
-\end{corollary}
-
-Kobayashi oraz Kobayashi \cite{kobayashi96} wskazali nieskończoną rodzinę węzłów nieograniczonego genusu, dla której
-\begin{equation}
-    g_c(K) = \frac 32 g_f(K) = 2g(K).
-\end{equation}
-% znam ich ze Stojmenow - Knots of (canonical) genus two
-
-\begin{proposition}
-    \label{prp:genus_detects_unknot}
-    Genus wykrywa niewęzły: $K$ jest niewęzłem wtedy i tylko wtedy, gdy $g(K) = 0$.
-\end{proposition}
-
-\begin{proof}
-    Niech $K$ będzie węzłem o genusie $0$.
-    Z~charakteryzacji powierzchni wynika, że jego powierzchnia Seiferta to suma spójna $0$ torusów, to znaczy kula z tyloma otworami, ile $K$ ma ogniw.
-    Innymi słowy, powierzchnią Seiferta węzła $K$ jest dysk, którego brzeg stanowi niewęzeł.
-    To pokazuje, że implikacja w lewo jest prawdziwa.
-
-    Implikacja w prawo jest oczywista.
-\end{proof}
+\subsubsection{Genus a rozkład na sumę węzłów pierwszych}
 
 \begin{proposition}
     \label{prp:genus_of_sum}
@@ -308,18 +233,20 @@ Przebiega w dwóch etapach: najpierw pokazuje się, że genus sumy nie jest wię
 \end{comment}
 
     Usunięcie paska daje powierzchnie Seiferta dla $M_J$ oraz $M_K$ takie, że
-    \[
+    \begin{equation}
         g(M_J)+g(M_K)=g(M_{J\#K})=g(J\#K).
-    \]
-    Oznacza to, że $g(J)+g(K)\leqslant g(M_J)+g(M_K)=g(J\#K)$ i~tak naprawdę mamy równość.
+    \end{equation}
+    Oznacza to, że $g(J) + g(K) \le g(M_J) + g(M_K) = g(J\#K)$ i~mamy równość.
 \end{proof}
+
+Jesteśmy wreszcie w~stanie podać prawdziwy dowód faktu \ref{first_time_sum_is_trivial}.
 
 \begin{corollary}
     \label{cor:connected_sum_no_inverses}
     Jeśli suma spójna dwóch węzłów jest niewęzłem, to oba składniki także nim są.
 \end{corollary}
 
-Powrócimy teraz do węzłów pierwszych (definicja \ref{def:prime_knot}).
+Powrócimy teraz do węzłów pierwszych.
 \index{węzeł!pierwszy}%
 
 \begin{proposition}
@@ -328,7 +255,7 @@ Powrócimy teraz do węzłów pierwszych (definicja \ref{def:prime_knot}).
 \end{proposition}
 
 \begin{proof}
-    Załóżmy nie wprost, że $K = K_1 \# K_2$ jest sumą dwóch nietrywialnych węzłów.
+    Załóżmy nie wprost, że węzeł $K = K_1 \# K_2$ jest sumą dwóch nietrywialnych węzłów.
     Z~faktu \ref{prp:genus_of_sum} wynika wtedy, że $g(K) = g(K_1) + g(K_2)$.
     Zatem jeden z węzłów $K_1, K_2$ ma genus zero i jest trywialny, wbrew naszemu założeniu.
 \end{proof}
@@ -336,7 +263,8 @@ Powrócimy teraz do węzłów pierwszych (definicja \ref{def:prime_knot}).
 Implikacja odwrotna jest fałszywa: pięciolistnik jest pierwszy, ale jego genus wynosi $2$.
 
 \begin{proposition}
-    Każdy węzeł można zapisać jako suma spójna pewnej liczby węzłów pierwszych (niewęzeł jest sumą pustej rodziny węzłów).
+    Każdy węzeł można zapisać jako suma spójna pewnej liczby węzłów pierwszych.
+    Niewęzeł jest sumą pustej rodziny węzłów.
 \end{proposition}
 
 \begin{proof}
@@ -370,6 +298,7 @@ Schubert podał geometryczny dowód oparty o powierzchnie Seiferta; wyraził go 
 Praca Schuberta korzysta z twierdzenia Alexandera, że 2-sfera w przestrzeni $\R^3$ ogranicza dysk, i jego odpowiednika dla torusów w $S^3$.
 
 Hashizume \cite{hashizume58} rozszeszył wyniki Schuberta do splotów.
+% trzeba wspomnieć, że to wymaga adaptacji definicji sumy spójnej, bo wcześniej dopuszczaliśmy tylko węzły jako składniki. Remedium = Kawauchi.
 
 \begin{proposition}
     \label{prp:infinitely_many_prime_knots}
@@ -451,6 +380,119 @@ Hashizume \cite{hashizume58} rozszeszył wyniki Schuberta do splotów.
     Wynika stąd, że genus wynosi $\frac 12 (1 - (1+2n) + (2+2n)) = 1$, ponieważ wyznacznik ma wartość $4n+1$,
     węzły $(2n+2)_1$ nie są trywialne i~są parami różne.
 \end{proof}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\subsubsection{Genus kanoniczny, genus wolny}
+
+Czy w definicji genusu można ograniczyć się do tych powierzchni Seiferta, które pochodzą od algorytmu Seiferta?
+Niestety, poza pewnymi wyjątkami, nie.
+Zanim przekonamy się, dlaczego tak jest, zdefiniujmy jeszcze dwa niezmienniki.
+
+\begin{definition}[genus kanoniczny]
+\index{genus!kanoniczny}%
+    Niech $K$ będzie węzłem.
+    Najmniejszy z genusów powierzchni Seiferta węzła $K$, które pochodzą z~algorytmu Seiferta, nazywamy genusem klasycznym i~oznaczamy symbolem $\operatorname{g_c} K$ lub krótko $g_c$.
+\end{definition}
+
+Stojmenow \cite{stoimenow08} opisał diagramy węzłów o~kanonicznym genusie równym 2.
+Część z~jego wyników przenosi się na genus 3.
+Jak sam pisze, sklasyfikowane wcześniej węzły o~genusie (kanonicznym) 1 okazały się być zbyt wąską klasą.
+
+Pod koniec lat pięćdziesiątych Crowell i~Murasugi niezależnie zauważyli, że algorytm Seiferta zastosowany do alternującego diagramu zawsze daje powierzchnię o~minimalnej powierzchni.
+Ich kombinatoryczne uzasadnienie było dość zawiłe, elementarny dowód podał Gabai w \cite{gabai86}.
+
+Dubel trójlistnika ma genus równy $1$, ale algorytm Seiferta zastosowany wobec węzła produkuje powierzchnie o genusie co najmniej $3$, jak przewiduje ograniczenie znalezione przez Mortona w \cite[twierdzenie 2]{morton86}:
+
+\begin{proposition}
+    Niech $P(v, z)$ będzie wersją wielomianu HOMFLY spełniającą zależność
+    \begin{equation}
+        \frac 1v P_+ - vP_- = zP_0.
+    \end{equation}
+    Wtedy $M = \max \deg_z P(v, z) \le 2g_c$.
+\end{proposition}
+
+Nierówność Mortona jest równością dla wielu klas węzłów, w tym alternujących (Crowell, Murasugi), jednorodnych\footnote{Uogólnienie węzłów alternujących.} (Cromwell w \cite{cromwell89}), whiteheadowskich dubli węzłów dwumostowych (Nakamura w \cite{nakamura06}, Tripp w \cite{tripp02}) albo precli (Brittenham, Jensen \cite{brittenham06}).
+\index{nierówność Mortona}%
+\index{węzeł!alternujący}%
+\index{węzeł!jednorodny}%
+\index{dubel Whiteheada}%
+\index{węzeł!dwumostowy}%
+\index{precel}%
+Stojmenow pokazał, że staje się równością dla węzłów o co najwyżej 12 skrzyżowaniach i znalazł przykład węzła, dla którego jest ostra.
+
+\begin{definition}[genus wolny]
+\index{genus!wolny}
+    Niech $K$ będzie węzłem.
+    Minimalny genus spośród powierzchni Seiferta węzła $K$, których dopełnienie w 3-sferze jest ciałem z rączkami, nazywamy genusem wolnym i~oznaczamy $g_f$.
+\index{ciało z rączkami}
+\end{definition}
+
+Dopełnienie powierzchni Seiferta jest zawsze ciałem z rączkami, więc mamy oczywiste nierówności
+\begin{equation}
+    g \le g_f \le g_c.
+\end{equation}
+Jak duża może być różnica między kolejnymi genusami?
+Już Kirby \cite[problem 1.20a]{kirby78} chciał znać oszacowania różnicy $g_f - g$.
+Morton \cite{morton86} pokazał, że genus pewnych węzłów nie jest realizowany przez żaden diagram do którego stosuje się algorytm Seiferta, choćby $10_{165}$.
+Moriah, matematyk izraelski, rozwiązał problem Kirby'ego dekadę później:
+
+\begin{proposition}
+    Niech $K$ będzie węzłem, $D_k(K)$ jego dublem Whiteheada z $k \neq 0$ skręceniami, zaś $B_n(K)$ to $n$-krotne nakrycie cykliczne sfery $S^3$ rozgałęzione nad węzłem $K$.
+    Jeżeli ranga pierwszej grupy homologii $B_{|4k+1|}(K)$ wynosi $r$, to
+    \begin{equation}
+        g_f(D_k(K)) \ge \frac {2r-1} {|8k+2|}.
+    \end{equation}
+\end{proposition}
+
+\begin{proof}
+    Praca \cite{moriah87}.
+    Dowód opiera się na chirurgii węzłów i splotów w sferze $S^3$.
+\end{proof}
+
+\begin{corollary}
+    Niech $K$ bedzie sumą spójną $n$ trójlistników, połóżmy $k = -1$.
+    Wtedy pierwsza grupa homologii ma rangę $r = 2n$ i~genus wolny jest nieograniczony
+    \begin{equation}
+        g_f(D_{-1}(3_1^n)) \ge \frac {4n-1} {6},
+    \end{equation}
+    podczas gdy zwykły genus to $g(D_{-1}(3_1^n)) = 1$.
+\end{corollary}
+
+Kawauchi \cite{kawauchi94} zbadał węzeł $K_m$, sumę spójną $m$ kopii skręconego whiteheadowskiego dubla trójlistnika, i policzył, że różnica $g_c(K_m) - g(K_m)$ wynosi $2m$.
+Wreszcie Kobayashi oraz Kobayashi \cite{kobayashi96} wskazali nieskończoną rodzinę węzłów nieograniczonego genusu, dla której
+\begin{equation}
+    g_c(K) = \frac 32 g_f(K) = 2g(K).
+\end{equation}
+% znam ich ze Stojmenow - Knots of (canonical) genus two
 
 \index{genus|)}
 
