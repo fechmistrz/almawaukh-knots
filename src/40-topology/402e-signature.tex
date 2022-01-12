@@ -1,7 +1,8 @@
 \subsection{Sygnatura}
-\index{sygnatura|(}
+\index{sygnatura|(}%
 Sygnatura jest kolejnym niezmiennikiem, do zdefiniowania których wystarczy znać macierz Seiferta.
 Pochodzi prawdopodobnie z lat sześdziesiątych (Trotter \cite{trotter62} dla węzłów, Murasugi \cite{murasugi65} dla splotów).
+% z recenzji do 275415
 
 \begin{definition}[sygnatura]
 \label{def:signature}%
@@ -14,7 +15,7 @@ Pochodzi prawdopodobnie z lat sześdziesiątych (Trotter \cite{trotter62} dla w�
 \end{definition}
 
 \begin{proposition}
-    \label{prp:signature_additive}
+\label{prp:signature_additive}%
     Sygnatura jest addytywna: $\sigma(K_1 \shrap \ldots \shrap K_n) = \sum_{k=1}^n \sigma(K_k)$.
 \end{proposition}
 
@@ -34,9 +35,9 @@ Wiem o tym z \cite[s. 127]{murasugi96}.
 \end{proof}
 
 \begin{corollary}
+\index{liczba mostowa}%
 \label{no_relation_signature_bridge}%
     Nie istnieje bezpośredni związek między sygnaturą i~liczbą mostową.
-\index{liczba mostowa}%
 \end{corollary}
 
 \begin{proof}
@@ -45,9 +46,9 @@ Wiem o tym z \cite[s. 127]{murasugi96}.
 \end{proof}
 
 \begin{proposition}
-\label{prp:signature_mirror_reverse}
 \index{lustro}%
 \index{rewers}%
+\label{prp:signature_mirror_reverse}%
     Niech $L$ będzie splotem.
     Wtedy $\sigma(mL) = -\sigma(L)$ oraz $\sigma(rL) = \sigma(L)$.
 \end{proposition}
@@ -62,8 +63,8 @@ O tym także wiem z \cite[s. 127]{murasugi96}.
 \end{proof}
 
 \begin{corollary}
-\label{cor:acheiral_signature}%
 \index{węzeł!achiralny}%
+\label{cor:acheiral_signature}%
     Jeśli $K$ jest węzłem achiralnym, to $\sigma(K) = 0$.
 \end{corollary}
 
@@ -73,9 +74,9 @@ Jak można przekonać się ze standardowego diagramu węzła prostego, ten jest 
 Pisaliśmy coś o tym na stronie \pageref{two_sums_of_two_trefoils}.
 
 \begin{proposition}
+\index{wielomian!Alexandera}%
     Niech $L$ będzie węzłem.
     Jeśli $\alexander_K(t) \equiv 1$, to $\sigma (K) = 0$.
-\index{wielomian!Alexandera}%
 \end{proposition}
 
 Założenie $\alexander_K(t) \equiv 1$ jest spełnione przez cztery węzły pierwsze do 12 skrzyżowań, są to $11n34, 11n42, 12n313$ oraz $12n430$.
@@ -87,6 +88,7 @@ Założenie $\alexander_K(t) \equiv 1$ jest spełnione przez cztery węzły pier
 Istnieje równoważna definicja, która nie wymaga czasochłonnego wyznaczania macierzy Seiferta.
 
 \begin{proposition}
+\index{relacja kłębiasta}%
     Sygnatura to niezmiennik topologiczny zadany kłębiastą relacją rekurencyjną:
     \begin{itemize}[leftmargin=*]
     \itemsep0em
@@ -94,7 +96,6 @@ Istnieje równoważna definicja, która nie wymaga czasochłonnego wyznaczania m
         \item $\sigma (K_+) - \sigma (K_-) \in \{0, 2\}$,
         \item $4 \mid \sigma (K)$ wtedy i~tylko wtedy, gdy $\conway(2i) > 0$ (wielomian Conwaya).
     \end{itemize}
-\index{relacja kłębiasta}%
 \end{proposition}
 
 \begin{proof}
@@ -124,6 +125,7 @@ Dla 311 spośród pozostałych mamy równość $2u = |\sigma|$.
 W~\cite{shinohara71} Shinohara pokazał, że dla każdej pary nieujemnych liczb całkowitych $m, n$ istnieje węzeł $K$ o wyznaczniku $4m+1$ ($8m+5$, $4m+3$) oraz sygnaturze bez znaku $8n$ ($8n+4$, $4n+2$).
 \index{wyznacznik}%
 Ponadto, jeśli $m$ nie dzieli się przez $3$, istnieje węzeł o wyznaczniku $8m+1$ i sygnaturze bez znaku $8n+4$.
+% skąd to? Ohtsuki?
 
 Czas na raczej niezbyt użyteczną ciekawostkę.
 
@@ -157,7 +159,7 @@ Mówimy, że funkcja zdefiniowana na okręgu jest zbalansowana, jeżeli w każdy
 Livingston podał pełną charakteryzację zbilansowanych sygnatur Levine'a-Tristrama dla węzłów, analogiczny problem dla splotów wydaje się być wciąż otwarty.
 
 \begin{proposition}
-    \label{balanced_iff_four_conditions}
+\label{balanced_iff_four_conditions}%
     Funkcja zbalansowana $\sigma \colon S^1 \to \Z$ jest realizowana jako sygnatura pewnego węzła wtedy i tylko wtedy, gdy:
     \begin{enumerate}
         \item dla każdego $\omega \in S^1$ mamy $\sigma(\omega) = \sigma(\overline{\omega})$
