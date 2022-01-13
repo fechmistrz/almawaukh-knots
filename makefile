@@ -18,26 +18,11 @@ draft: prepare chapter-draft release
 prepare:
 	mkdir -p build
 
-precommit:
-	./src/merridew/bibliography_sort.py --bib src/knot_theory.bib
-	ack -l ' ' | grep -v makefile | xargs sed -i 's/ / /g' || true
-	for i in $$(find src -type f -iname '*.tex'); do \
-		{ echo "" && echo "" && cat "$$i" && echo "" && echo ""; } > temporary-file; \
-		cat -s temporary-file > "$$i"; \
-		rm temporary-file; \
-		perl -p -i -e 's/\t/    /g' "$$i"; \
-	done;
-	python3 tools/translate_polish_english.py <(grep -r src -E -e '% DICTIONARY;.*;.*;.*' -h) > src/90-appendix/dictionary.tex
-	diff \
-		<(grep -Ehor src/ -e '\\label\{.*\}'  | sed -r 's/^\\label//g' | sort -u) \
-		<(grep -Ehor src/ -e '\\(page)?ref\{[^}]*\}' | sed -r -e 's/^\\ref//g' -e 's/^\\pageref//g'   | sort -u) | sort -k 2 \
-		&& echo "No broken/unused references found"
-
 chapter-all: build/knot-theory.pdf
 
 chapter-draft: build/draft-knot-theory.pdf
 
-build/knot-theory.pdf: src/knot-theory.tex src/*/*.tex
+build/knot-theory.pdf: src/knot-theory.tex src/knot_theory.bib src/*/*.tex
 	$(call make_pdf)
 
 build/draft-knot-theory.pdf: src/*-*/*.tex
@@ -48,14 +33,27 @@ build/draft-knot-theory.pdf: src/*-*/*.tex
 	mv src/include/head.tex.bak src/include/head.tex
 	mv build/knot-theory.pdf build/draft-knot-theory.pdf
 
-release:
-	cp build/*knot-theory.pdf ./
-
 src/00-meta-latex/new_diagrams.tex: tools/diagram_rules/*.py
 	{ echo "#!/usr/bin/env python3"; echo "diagram_commands = dict()"; cat tools/diagram_rules/*.py; cat tools/write_diagram_rules.py; } > tools/write_diagram_rules_2.py
 	python tools/write_diagram_rules_2.py > src/00-meta-latex/new_diagrams.tex
 	rm tools/write_diagram_rules_2.py
 
+release:
+	cp build/*knot-theory.pdf ./
 
 clean:
 	rm -rf build *.pdf
+
+lint:
+	./src/merridew/bibliography_sort.py --bib src/knot_theory.bib
+	ack -l ' ' | grep -v makefile | xargs sed -i 's/ / /g' || true
+	for i in $$(find src -type f -iname '*.tex'); do \
+		{ echo "" && echo "" && cat "$$i" && echo "" && echo ""; } | cat -s > temporary-file; \
+		if ! diff temporary-file "$$i"; then mv -v temporary-file "$$i"; else rm temporary-file; fi; \
+		perl -p -i -e 's/\t/    /g' "$$i"; \
+	done;
+	python3 tools/translate_polish_english.py <(grep -r src -E -e '% DICTIONARY;.*;.*;.*' -h) > src/90-appendix/dictionary.tex
+	diff \
+		<(grep -Ehor src/ -e '\\label\{.*\}'  | sed -r 's/^\\label//g' | sort -u) \
+		<(grep -Ehor src/ -e '\\(page)?ref\{[^}]*\}' | sed -r -e 's/^\\ref//g' -e 's/^\\pageref//g' | sort -u) | sort -k 2 \
+		&& echo "No broken/unused references found"
