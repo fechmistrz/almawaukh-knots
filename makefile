@@ -20,10 +20,12 @@ prepare:
 
 precommit:
 	./src/merridew/bibliography_sort.py --bib src/knot_theory.bib
-	ack -l ' ' | xargs sed -i 's/ / /g' || true
+	ack -l ' ' | grep -v makefile | xargs sed -i 's/ / /g' || true
 	for i in $$(find src -type f -iname '*.tex'); do \
-	    sed '$$a\' $$i > file && mv file $$i; \
-	    perl -p -i -e 's/\t/    /g' "$$i"; \
+		{ echo "" && echo "" && cat "$$i" && echo "" && echo ""; } > temporary-file; \
+		cat -s temporary-file > "$$i"; \
+		rm temporary-file; \
+		perl -p -i -e 's/\t/    /g' "$$i"; \
 	done;
 	python3 tools/translate_polish_english.py <(grep -r src -E -e '% DICTIONARY;.*;.*;.*' -h) > src/90-appendix/dictionary.tex
 	diff \
