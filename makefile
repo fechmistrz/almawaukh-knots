@@ -47,12 +47,13 @@ clean:
 lint:
 	./src/merridew/bibliography_sort.py --bib src/knot_theory.bib
 	ack -l ' ' | grep -v makefile | xargs sed -i 's/ / /g' || true
-	for i in $$(find src -type f -iname '*.tex'); do \
+	for i in $$(find src -type f -iname '*.tex' | grep -v 'src/90-appendix/dictionary.tex'); do \
 		{ echo "" && echo "" && cat "$$i" && echo "" && echo ""; } | cat -s > temporary-file; \
 		if ! diff temporary-file "$$i"; then mv -v temporary-file "$$i"; else rm temporary-file; fi; \
 		perl -p -i -e 's/\t/    /g' "$$i"; \
 	done;
-	python3 tools/translate_polish_english.py <(grep -r src -E -e '% DICTIONARY;.*;.*;.*' -h) > src/90-appendix/dictionary.tex
+	python3 tools/translate_polish_english.py <(grep -r src -E -e '% DICTIONARY;.*;.*;.*' -h) > src/90-appendix/dictionary_tmp.tex
+	if ! diff src/90-appendix/dictionary{,_tmp}.tex; then mv -v src/90-appendix/dictionary{_tmp,}.tex; else rm src/90-appendix/dictionary_tmp.tex; fi; 
 	diff \
 		<(grep -Ehor src/ -e '\\label\{.*\}'  | sed -r 's/^\\label//g' | sort -u) \
 		<(grep -Ehor src/ -e '\\(page)?ref\{[^}]*\}' | sed -r -e 's/^\\ref//g' -e 's/^\\pageref//g' | sort -u) | sort -k 2 \
