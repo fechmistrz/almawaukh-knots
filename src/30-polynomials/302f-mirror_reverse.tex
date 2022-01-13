@@ -1,0 +1,147 @@
+
+\subsection{Lustra, rewersy. Sumy}
+% \subsection{Odwrotności, lustra i~sumy}
+Wielomian Jonesa nie wykrywa orientacji splotu.
+
+\begin{proposition}
+    Niech $L$ będzie zorientowanym splotem.
+    Wtedy $\jones(rL)=\jones(L)$.
+\index{rewers}%
+\end{proposition}
+
+\begin{proof}
+    Aby obliczyć wielomian rewersu, wykorzystujemy te same diagramy kłębiaste,
+    jak dla zwykłego, a~przy tym nie zmieniamy znaku żadnego skrzyżowania.
+\end{proof}
+
+Ale czasami potrafi odróżnić splot od jego lustra:
+
+\begin{proposition}
+    Niech $L$ będzie zorientowanym splotem.
+    Wtedy $\jones(mL)(t)=\jones(L)(t^{-1})$.
+\index{lustro}%
+\end{proposition}
+
+\begin{proof}
+    Zauważmy, że diagramy $L_-$ oraz $L_+$ są wzajemnymi lustrami.
+    Dlatego każda relacja kłębiasta dla splotu postaci
+    \begin{equation}
+        t^{-1} \jones(L_+)(t) - t\jones(L_-)(t) + (t^{-1/2} - t^{1/2}) \jones(L_0)(t) = 0
+    \end{equation}
+    odpowiada pewnej relacji dla lustra splotu:
+    \begin{equation}
+        -t\jones(L_+)(t) + t^{-1} \jones(L_-)(t) + (t^{-1/2} - t^{1/2}) \jones(L_0)(t) = 0,
+    \end{equation}
+    co po zamianie zmiennych $t \mapsto t^{-1}$ i przemnożeniu przez $-1$ daje
+    \begin{equation}
+        -t^{-1} \jones(L_+)(t^{-1}) + t \jones(L_-)(t^{-1}) + (t^{1/2} - t^{-1/2}) \jones(L_0)(t^{-1}) = 0.
+    \end{equation}
+
+    Patrz też: Florian Gellert, Kombinatorische Invarianten, strona 12.
+\end{proof}
+
+\begin{corollary}
+    \label{cor:joines_of_amphicheiral}
+    Jeśli $K$ jest węzłem zwierciadlanym, to wielomian $\jones_K$ jest symetryczny.
+\index{węzeł!zwierciadlany}
+\end{corollary}
+
+Implikacja odwrotna nie zachodzi na mocy wniosku \ref{cor:acheiral_signature}: węzeł $9_{42}$ ma symetryczny wielomian Jonesa, ale niezerową sygnaturę.
+\index{sygnatura}%
+Poniżej trzynastu skrzyżowań taka sytuacja ma miejsce dla dokładnie czternastu węzłów pierwszych.
+% 9_42, 10_125, 11n_19, 11n_24, 11n_82, 12a_0669, 12a_1171, 12a_1179, 12a_1205, 12n_0362, 12n_0506, 12n_0562, 12n_0571, 12n_0821
+
+Równość $\jones(mL)(t)=\jones(L)(t^{-1})$ nie jest spełniona dla trójlistnika, zatem ten nie jest równoważny ze swoim lustrem.
+Wcześniej pokazał to z~dużo większym wysiłkiem Dehn, patrz przykład \ref{exm:trefoil_is_chiral}.
+
+\begin{corollary}
+    Wielomian Jonesa nie zależy od orientacji węzła.
+    Nie jest to prawdą dla splotów.
+\end{corollary}
+
+\begin{proof}
+    Każdy węzeł ma tylko dwie orientacje, splot może mieć ich $2^n$, gdzie $n$ to liczba składowych.
+\end{proof}
+
+\begin{proposition}
+    \label{prp:jones_multiplicative_1}
+    Niech $L_1, L_2$ będą zorientowanymi splotami.
+    Wtedy
+    \begin{equation}
+        \jones(L_1 \sqcup L_2) = (-t^{1/2} - t^{-1/2}) \jones(L_1) \jones(L_2).
+    \end{equation}
+\end{proposition}
+
+\begin{proof}
+    Wybierzmy diagramy $D_1, D_2$ dla splotów $L_1, L_2$.
+    Po podstawieniu $t^{1/2} = A^{-2}$ widzimy, że chcemy pokazać
+    \begin{equation}
+        (-A)^{-3w(D_1 \sqcup D_2)} \langle D_1 \sqcup D_2 \rangle
+        =
+        (-A^2 - A^{-2})(-A)^{-3(w(D_1) + w(D_2))} \langle D_1 \rangle \langle D_2 \rangle.
+    \end{equation}
+
+    Oczywiście $w(D_1 \sqcup D_2) = w(D_1) + w(D_2)$, więc wystarczy udowodnić, że
+    \begin{equation}
+        \langle D_1 \sqcup D_2 \rangle = (-A^2 - A^{-2}) \langle D_1 \rangle \langle D_2 \rangle.
+    \end{equation}
+
+    Oznaczmy przez $f_1(D_1)$, $f_2(D_1)$ odpowiednio lewą i~prawą stronę ostatniego równania.
+    Są to wielomiany Laurenta, które zależą tylko od $D_1$.
+    Aksjomaty Kauffmana pozwalają na pokazanie, że obie funkcje mają następujące własności:
+    \begin{align}
+        f_i(\SmallUnknot)            & = (-A^2 - A^{-2}) \langle D_2 \rangle \\
+        f_i(D_1 \sqcup \SmallUnknot) & = (-A^2 - A^{-2}) f_i(D_1) \\
+        f_i(\LittleRightCrossing)     & = A f_i(\LittleRightSmoothing) + A^{-1} f_i(\LittleLeftSmoothing).
+    \end{align}
+    Ponieważ powyższe tożsamości wystarczają do wyznaczenia wartości funkcji $f_i$ dla dowolnego diagramu $D_1$, dochodzimy do wniosku, że $f_1 \equiv f_2$.
+    To kończy dowód.
+\end{proof}
+
+\begin{proposition}
+\label{prp:jones_multiplicative_2}%
+\index{relacja kłębiasta}%
+    Niech $K_1, K_2$ będą zorientowanymi węzłami.
+    Wtedy
+    \begin{equation}
+        \jones(K_1 \# K_2) = \jones(K_1) \jones(K_2).
+    \end{equation}
+\end{proposition}
+
+\begin{proof}
+    Rozpatrzmy sploty
+\begin{comment}
+    \begin{figure}[H]
+    \centering
+        %
+        \begin{minipage}[b]{.3\linewidth}
+            \[
+                \MediumJonesShrapA
+            \]
+        \end{minipage}
+        %
+        \begin{minipage}[b]{.3\linewidth}
+            \[
+                \MediumJonesShrapB
+            \]
+        \end{minipage}
+        %
+        \begin{minipage}[b]{.3\linewidth}
+            \[
+                \MediumJonesShrapAB
+            \]
+        \end{minipage}
+    \end{figure}
+\end{comment}
+    Relacja kłębiasta orzeka w tym przypadku, że
+    \begin{equation}
+        t^{-1} \jones(K_1 \# K_2) - t \jones(K_1 \# K_2) + (t^{-1/2} - t^{1/2}) \jones(K_1 \sqcup K_2) = 0.
+    \end{equation}
+    Ostatni składnik sumy można rozwinąć na mocy faktu \ref{prp:jones_multiplicative_1}.
+    Po uporządkowaniu dostaniemy:
+    \begin{equation}
+        (t^{-1} - t) \jones(K_1 \# K_2) - (t^{-1} - t) \jones(K_1) \jones(K_2) = 0,
+    \end{equation}
+    a stąd widać już prawdziwość dowodzonej tezy.
+\end{proof}
+

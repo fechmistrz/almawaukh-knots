@@ -1,0 +1,72 @@
+
+\subsection{Relacja kłębiasta}
+Dotychczas wyznaczyliśmy wielomian Jonesa jedynie dla splotów trywialnych (fakt \ref{prp:jones_trivial_link}).
+Dlaczego?
+Chociaż klamra Kauffmana to użyteczne narzędzie podczas dowodzenia różnych teoretycznych własności, niezbyt nadaje się do obliczeń, szczególnie ręcznych.
+Na szczęście wtedy z pomocą przychodzi:
+
+\begin{definition}
+    Niech $L$ będzie zorientowanym splotem.
+    Wielomian Laurenta $\jones_L(t) \in \Z[t^{\pm 1/2}]$, który spełnia relację kłębiastą
+\index{relacja kłębiasta}%
+    \begin{equation}
+        t^{-1} \jones(L_+) - t\jones(L_-) + (t^{-1/2} - t^{1/2}) \jones(L_0) = 0
+    \end{equation}
+    z warunkiem brzegowym $\jones(\SmallUnknot) = 1$, nazywamy wielomianem Jonesa.
+\end{definition}
+
+\begin{proof}
+Niech
+\begin{comment}
+\begin{equation}
+    L_+ = \MediumMinusCrossing
+    \quad\quad
+    L_- = \MediumPlusCrossing
+    \quad\quad
+    L_0 = \MediumAlphaSmoothing
+    \quad\quad
+    L_\infty = \MediumBetaSmoothing
+\end{equation}
+\end{comment}
+% TODO: zdefiniować je raz, a dobrze.
+% ack -l 'L_\+'
+% src/30-polynomials/alexander.tex
+% src/30-polynomials/jones-kauffman.tex
+% src/30-polynomials/blmho.tex
+% src/30-polynomials/homfly.tex
+% src/00-meta-latex/diagrams.tex
+(oznaczenia te są standardowe i pozwalają oszczędzić trochę miejsca).
+NIE SĄ - KOLIZJA OZNACZEŃ?Wyraźmy wielomian Jonesa przez klamrę Kauffmana i~spin.
+Chcemy pokazać, że
+\begin{align}
+    & A^{4}(-A)^{-3w(L_+)}\bracket{L_+} \\
+    - & A^{-4}(-A)^{-3w(L_-)}\bracket{L_0} \\
+    + & (A^2-A^{-2})(-A)^{-3w(L_0)}\bracket{L_0} = 0.
+\end{align}
+
+Ale $w(L_\pm) = w(L_0)\pm 1$, zatem to jest równoważne z
+
+\begin{equation}
+    -A \bracket{L_+} +
+    A^{-1} \bracket{L_-} +
+    (A^2-A^{-2}) \bracket{L_0} =0.
+\end{equation}
+
+Z definicji klamry Kauffmana wnioskujemy, że
+
+\begin{equation}
+    \begin{cases}
+        \bracket{L_+} = A\bracket{L_0} + A^{-1}\bracket{L_\infty} \\
+        \bracket{L_-} = A\bracket{L_\infty} + A^{-1}\bracket{L_0}
+    \end{cases}
+\end{equation}
+
+Pierwsze równanie przemnóżmy przez $A$, drugie przez $A^{-1}$, a~następnie dodajmy je do siebie.
+Wtedy otrzymamy
+\begin{equation}
+    A\bracket{L_+} - A^{-1}\bracket{L_-} =
+    A^2 (\bracket{L_0} - \bracket{L_\infty}),
+\end{equation}
+quod erat demonstrandum.
+\end{proof}
+

@@ -1,0 +1,89 @@
+
+\subsection{Wartości w pierwiastkach jedności}
+Niech $\jones$ będzie wielomianem Jonesa splotu $L$ o~$n$ składowych spójności.
+Jego wartości w~niektórych pierwiastkach jedności są związane z~innymi niezmiennikami węzłów.
+I tak przyjmując oznaczenie $\omega_k = \exp(2\pi i/k)$ mamy
+
+\begin{proposition}
+    \label{prp:jones_at_roots_of_unity}
+    $\jones_L(\omega_3) = 1$.
+\end{proposition}
+
+\begin{proposition}
+    $\jones_L(1) = (-2)^{n-1}$.
+\end{proposition}
+
+\begin{proof}
+    Jak wkrótce się przekonamy, to proste wnioski z~relacji kłębiastej.
+    Explicite wskazał je Jones w \cite[twierdzenie 14, 15]{jones85}.
+\end{proof}
+
+\begin{proposition}
+    Pochodna w punkcie $t = 1$ znika: $\jones'_L(1) = 0$.
+\end{proposition}
+
+\begin{proof}
+    Twierdzenie 16 w \cite{jones85}.
+\end{proof}
+
+\begin{proposition}
+    $V_L(\omega_6) = \pm i^{n-1} \cdot (\sqrt 3i)^r$, gdzie $r$ jest rangą pierwszej grupy homologii podwójnego rozgałęzionego nakrycia $L$ nad $\Z_3$.
+\end{proposition}
+
+\begin{proof}
+    Znak $\pm$ został wyznaczony przez Lipsona w \cite{lipson86}, praca ta zawiera też odsyłacz do wyprowadzenia reszty wzoru.
+\end{proof}
+
+\begin{proposition}
+    Liczba trzy-kolorowań splotu $L$ wynosi $3|\jones_L(\omega_6)|^2$.
+\end{proposition}
+
+\begin{proof}
+    Patrz \cite{przytycki98}.
+\end{proof}
+
+\begin{proposition}
+    Jeśli $L$ jest właściwym splotem (indeks zaczepienia każdej składowej o~resztę splotu jest parzysty), to $\jones_L(i) = (-\sqrt 2)^{n-1}(-1)^{\operatorname{Arf} L}$.
+    W przeciwnym razie $\jones_L(i) = 0$.
+\end{proposition}
+
+\begin{proof}
+    Równość tę pokazał Murakami w~1986 roku (\cite{murakami86}).
+\end{proof}
+
+\begin{proposition}
+    Niech $G$ będzie pierwszą grupą homologii podwójnego nakrycia $S^3$ rozgałęzionego nad składowymi.
+    Jeśli $G$ jest torsyjna, to $\jones_L(-1) = |G|$.
+    W przeciwnym razie $\jones_L(-1) = 0$.
+\end{proposition}
+
+\begin{proof}
+    ???? % TODO
+\end{proof}
+
+Nie jest znana topologiczna interpretacja wielomianu Jonesa (którą posiada wielomian Alexandera) ani charakteryzacja poza warunkami koniecznymi z~pięciu faktów powyżej.
+
+\begin{corollary}
+    Niech $K$ będzie węzłem.
+    Wtedy
+    \begin{align}
+        \jones(1) & = 1 \\
+        \jones(-1) & = \pm \det K \\
+        \jones(i) & = \begin{cases}
+            1 & \text{dla } \alexander(-1) \equiv \pm 1 \mod 8 \\
+            -1 & \text{w przeciwnym razie.}
+        \end{cases}
+    \end{align}
+\end{corollary}
+
+Poza powyżej opisanymi przypadkami, wartości wielomianu Jonesa nie można znaleźć w~czasie wielomianowym od ilości skrzyżowań na diagramie (jest to problem $\#P$-trudny).
+
+% Czemu wielomian Jonesa jest wielomianem?
+% Odpowiedniki wielomianu Jonesa dla węzłów w~3-rozmaitościach innych niż sfera $S^3$ nie są wielomianami, ale funkcjami z~pierwiastków jedności w~zbiór elementów całkowitch\footnote{algebraic integers} (jak podaje J. Roberts).
+
+% Koniec sekcji Relacja kłębiasta
+% Koniec podsekcji Wielomian Jonesa
+
+\index{klamra Kauffmana|)}
+
+% Koniec podsekcji Nawias Kauffmana
