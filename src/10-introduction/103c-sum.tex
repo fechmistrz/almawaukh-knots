@@ -162,8 +162,26 @@ Dużo później pokażemy, że działaniu $\shrap$ brakuje elementów przeciwnyc
     (To jedyne miejsce w~całej książce, gdzie użyte zostają węzły dzikie.
 \end{proof}
 
-Prawdziwy dowód oparty jest na topologii algebraicznej, stanowi bezpośredni wniosek z~faktów \ref{prp:genus_detects_unknot} oraz \ref{prp:genus_of_sum}.
+W poprzednim wydaniu książki znajdowała się informacja, że dla dowodu tego faktu trzeba przytoczyć narzędzia topologii algebraicznej: powierzchnie Seiferta i~genus; wtedy jest to bezpośredni wniosek z~faktów \ref{prp:genus_detects_unknot} oraz \ref{prp:genus_of_sum}.
 O~tym samym dowodzie wspomina Kawauchi \cite[s. 33]{kawauchi96}, a~fakt nazywa twierdzeniem o~nieanulowaniu.
+Okazuje się jednak, że elementarny dowód istnieje!
+% odkryte w https://aperiodical.com/2018/07/the-big-internet-math-off-round-1-jim-propp-v-zoe-griffiths/
+
+Trzeba zajrzeć do \cite[s. 18-20]{kauffman95} dla dwóch rysunków tamże.
+
+\begin{proof}
+    (Na podstawie \cite[s. 18-20]{kauffman95}).
+    Wyobraźmy sobie, że węzeł oraz torus połykająco-podążający $T$ został zawieszony między dwiema ścianami pokoju i~załóżmy nie wprost, że suma $K = K_1 \shrap K_2$ jest trywialna.
+    Wtedy pewien homeomorfizm pokoju, który nie rusza ścian, prostuje sumę (zamienia pozornie zaplątany węzeł $K$ w odcinek $L$). 
+
+    Niech $\pi$ będzie dowolną płaszczyzną zawierającą wyprostowaną sumę $K$.
+    Tnie część wspólną torusa $T$ oraz ścian w czterech punktach, oznaczmy je $A, B$ (na lewej ścianie) oraz $C, D$ (na prawej).
+    Zauważmy, że $\pi$ tnie $T$ w łukach, które wychodzą z $A, B, C, D$ oraz pewnych zamkniętych krzywych.
+    Łuk wychodzący z~punktu $A$ nie może łączyć go z punktami $B$ lub $D$, ponieważ te leżą po drugiej stronie odcinka $L$ na płaszczyźnie $\pi$.
+    
+    Łuk $AC$ przedstawia niewęzeł.
+    Jednocześnie jest on obrazem pewnego łuku, który łączył końce torusa $T$, zatem musi być równoważny z~węzłem-towarzyszem.
+\end{proof}
 
 Półgrupę węzłów z~operacją sumy spójnej można uczynić grupą na dwa sposoby: albo zmieniając działanie, albo osłabiając równoważność węzłów.
 Drugi pomysł jest lepszy niż pierwszy.
