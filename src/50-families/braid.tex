@@ -8,8 +8,8 @@ Dla nas inspiracją była wspaniała praca przeglądowa poświęcona warkoczom, 
 O dwóch punktach $(d_1, t_1)$, $(d_2, t_2)$ w~walcu $B^2 \times [0, 1] \subseteq \R^3$ powiemy, że łączący je odcinek jest malejący, jeśli $t_1 > t_2$.
 Łamana malejąca to taka, która jest złożona z~odcinków malejących.
 
-% DICTIONARY;braid;warkocz
-% DICTIONARY;strand;pasmo
+% DICTIONARY;braid;warkocz;-
+% DICTIONARY;strand;pasmo ...;warkocz
 \begin{definition}[warkocz]
 \index{pasmo warkocza}%
 Teoriomnogościową sumę parami rozłącznych łamanych malejących, które łączą zbiory $\{x_1, \ldots, x_n\} \times \{1\}$ oraz $\{x_1, \ldots, x_n\} \times \{0\}$, nazywamy warkoczem o~$n$ pasmach.
@@ -134,7 +134,7 @@ Generatory $\sigma_i$ posiadają prostą interpretację graficzną:
 
 Jeśli zapomnimy, jak poszczególne pasma krzyżują się, każdy warkocz staje się permutacją zbioru $n$-elementowego.
 To odwzorowanie jest ,,na'' i zgodne ze składaniem warkoczy, dlatego wyznacza homomorfizm $B_n \to S_n$.
-% DICTIONARY;braid, pure;warkocz, czysty
+% DICTIONARY;pure;czysty;warkocz
 \index{warkocz!czysty}%
 Jego jądro stanowi podgrupa warkoczy czystych, czyli takich, że początek i~koniec każdego pasma znajdują się w~tej samej pozycji.
 
@@ -168,11 +168,13 @@ Nie istnieje żaden węzeł, którego grupą podstawową byłaby jednak $B_n$ dl
 Natomiast asferyczna, niezwarta 3-rozmaitość nie może mieć grupy podstawowej $\Z^3$.
 Musimy niestety pominąć czysto kohomologiczny dowód\footnote{Głodny wiedzy Czytelnik powinien odwiedzić \url{https://math.stackexchange.com/a/2119984}.} faktu, ale zaiste prowadzi to do sprzeczności.
 
-% DICTIONARY;closure of braid;domknięcie warkocza
-Każdy warkocz można domknąć do węzła, łącząc punkty $(x_i, 1)$ oraz $(x_i, 0)$
+\subsection{Warkocze a sploty}
+% DICTIONARY;closure of ...;domknięcie ...;warkocz
+Każdy warkocz można domknąć do węzła, łącząc ze sobą punkty $(x_i, 1)$ oraz $(x_i, 0)$
 łamanymi, których rzuty do płaszczyzny diagramu nie przecinają się.
 \index{warkocz!domknięcie warkocza}%
 Nie wiadomo, kto wymyślił operację domykania warkoczy, ale była ona z pewnością znana Alexanderowi: rozpatrywano je jeszcze przed samymi warkoczami.
+% TODO: rysunek w TikZ, jak się domyka.
 
 Niech $b \in B_n$ będzie słowem zapisanym na standardowych generatorach.
 Oznaczmy przez $b_+$, $b_-$ nieznakowaną sumę dodatnich, ujemnych wykładników.
@@ -225,6 +227,7 @@ Cały czas chodzi o słowa w grupie warkoczy, oczywiście.
 % TODO: kto to pokazał? wg Kawauchiego, Murasugi w 82 ale widziałem gdzieś informację, że Garside był pierwszy.
 % a może Jones 1985?
 
+\subsection{Reprezentacja Burau}
 Na zakończenie sekcji wspomnijmy o~macierzowej reprezentacji Burau, wprowadzonej do matematyki w latach trzydziestych zeszłego wieku \cite{burau33}.
 \index{reprezentacja Burau}%
 Wyznaczona jest ona przez obrazy generatorów:
@@ -251,6 +254,7 @@ nietrywialnego węzła, którego wielomianem HOMFLY jest $1$,
 natomiast odpowiedź pozytywna raczej nie ma aż tak dramatycznych następstw.
 % The first nonfaithful Burau representations were found by John A. Moody without the use of computer, using a notion of winding number or contour integration.[3] A more conceptual understanding, due to Darren D. Long and Mark Paton[4] interprets the linking or winding as coming from Poincaré duality in first homology relative to the basepoint of a covering space, and uses the intersection form (traditionally called Squier's Form as Craig Squier was the first to explore its properties).[5] Stephen Bigelow combined computer techniques and the Long–Paton theorem to show that the Burau representation is not faithful for n ≥ 5.[6][7][8] Bigelow moreover provides an explicit non-trivial element in the kernel as a word in the standard generators of the braid group: let
 
+\subsection{Grupy warkoczy w algebrze}
 Grupy $B_n$ mogą być obiektem badań algebry bez związku z~teorią węzłów.
 
 \begin{proposition}
