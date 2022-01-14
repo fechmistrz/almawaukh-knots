@@ -88,15 +88,27 @@ Ich defekty modulo $3$ to $1$ i~$2$, zatem są różne.
 \begin{proposition}
 \label{prp:bankwitz}%
 \index{indeks skrzyżowaniowy}
-    Wyznacznik splotu alternującego $L$ jest nie mniejszy od jego indeksu skrzyżowaniowego: $\det L \ge \crossing L$.
+    Niech $L$ będzie splotem alternującym.
+    Wtedy $\det L \ge \crossing L$.
 \end{proposition}
 
-W ten sposób pokazano, że niealternujące węzły istnieją: $\det 8_{19} = 3 < 8 = \crossing 8_{19}$.
-Bankwitz podał w 1930 niepoprawny dowód dla specjalnego przypadku, kiedy $L$ jest węzłem.
-Pierwszy pełny dowód, oparty o teorię grafów, przedstawił blisko trzy dekady później Crowell w \cite{crowell59}.
-Znalazł też mocniejszą nierówność $\det L + 3 \ge \crossing L$ dla pierwszych, alternujących splotów, które nie są $(2, n)$-torusowe.
-To prawie wystarczyło do rozstrzygnięcia, które z węzłów o mniej niż 10 skrzyżowaniach są alternujące.
-Otwartym problemem pozostały $9_{45}$, $9_{47}$, $9_{48}$ oraz $9_{49}$.
+Pierwszy niepoprawny dowód pochodzi od Bankwitza \cite{bankwitz30}, który w 1930 roku ograniczył się do węzłów.
+Poprawny dowód pojawił się dopiero trzy dekady później, kiedy Crowell \cite{crowell59} oparł się o~teoriografową pracę Whittneya.
+Spośród 84 diagramów pierwszych węzłów na końcu podręcznika Reidemeistera, 11 ma niealternujący diagram.
+Crowell pokazał, że 7 z~tych 11 przedstawia niealternujące węzły.
+
+\begin{example}
+    $\det 8_{19} = 3 < 8 = \crossing 8_{19}$, więc węzeł $8_{19}$ jest niealternujący.
+    Podobnie dowodzi się, że $9_{42}$, $10_{124}$, $10_{132}$, $10_{139}$, $10_{140}$, $10_{145}$, $10_{153}$, $10_{161}$, 21 węzłów pierwszych o~11 skrzyżowaniach oraz 75 węzłów pierwszych o~12 skrzyżowaniach nie są alternujące.
+\end{example}
+
+Niealternujących węzłów o 11 (odpowiednio: 12) skrzyżowaniach jest 185 (888), zatem ta prosta nierówność nie daje niesamowitch efektów.
+Ale Crowell znalazł też mocniejsze ograniczenie:
+
+\begin{proposition}
+    Niech $L$ będzie pierwszym, alternującym splotem, który nie jest $(2, n)$-torusowy.
+    Wtedy $\det L + 3 \ge 2 \crossing L$
+\end{proposition}
 
 Wyznacznik jest blisko związany z kolorowaniami.
 
