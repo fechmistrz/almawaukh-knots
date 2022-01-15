@@ -35,7 +35,7 @@ build/draft-knot-theory.pdf: src/*-*/*.tex
 
 src/00-meta-latex/new_diagrams.tex: tools/diagram_rules/*.py
 	{ echo "#!/usr/bin/env python3"; echo "diagram_commands = dict()"; cat tools/diagram_rules/*.py; cat tools/write_diagram_rules.py; } > tools/write_diagram_rules_2.py
-	python tools/write_diagram_rules_2.py > src/00-meta-latex/new_diagrams.tex
+	python3 tools/write_diagram_rules_2.py > src/00-meta-latex/new_diagrams.tex
 	rm tools/write_diagram_rules_2.py
 
 release:
