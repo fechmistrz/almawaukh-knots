@@ -103,7 +103,7 @@ diagram_commands["CrossingChessboardA"] = {
         "\\node[first_colour] at (+5, -5)[right] {$c$};",
         "\\node[first_colour] at (+5, +5)[right] {$a$};",
     ],
-    "sizes": ["Large"],
+    "sizes": ["Huge"],
     "flip": ["1"],
 }
 diagram_commands["CrossingChessboardB"] = {
@@ -117,7 +117,7 @@ diagram_commands["CrossingChessboardB"] = {
         "\\node[first_colour] at (+5, -5)[right] {$c$};",
         "\\node[first_colour] at (+5, +5)[right] {$a$};",
     ],
-    "sizes": ["Large"],
+    "sizes": ["Huge"],
     "flip": ["1"],
 }
 
