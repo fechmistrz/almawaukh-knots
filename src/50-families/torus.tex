@@ -222,14 +222,17 @@ Wiedział to Schreier w 1924.
         \sigma(p, q) = \begin{cases}
              q^2 + \sigma(p-2q, p) - R_2(p)       & \text{jeśli } 2q < p \\
              q^2 - 1                              & \text{jeśli } 2q = p \\
-             q^2 - \sigma(2q - p, q) + R_2(r) - 2 & \text{jeśli } 2q > p \ge q
+             q^2 - \sigma(2q - p, q) + R_2(r) - 2 & \text{jeśli } 2q > p > q \\
+             q^2/2 + R_2(q)/2 - 1                 & \text{jeśli } p = q
+             % czwarte stanowi algebraiczne przekształcenie trzeciego dla p >= q
         \end{cases}
     \end{equation}
     z warunkami brzegowymi: $\sigma(p, q) = \sigma(q, p)$, $\sigma(1, q) = 0$, $\sigma(2, q) = q-1$.
 \end{proposition}
 
-\begin{proof}
-    Dowód zawiera praca \cite{litherland81}.
+\begin{proof}[Niedowód]
+    Gordon, Litherland, Murasugi \cite[tw. 5.2]{litherland81} używają niezmiennika acyklicznego\footnote{Z angielskiego null-homologous, czyli o trywialnych zredukowanych grupach homologii.} splotu $L$ w zorientowanej 3-rozmaitości $M$ w połączeniu z jego $m$-krotnym rozgałęzionym nakryciem cyklicznym.
+    Wspominają też, że można dowieść tego używając wzoru Hirzebrucha, ale nie robią tego.
 \end{proof}
 
 Borodzik niedawno przyjrzał się dokładniej sygnaturom węzłów torusowych.
