@@ -39,7 +39,11 @@ src/00-meta-latex/new_diagrams.tex: tools/diagram_rules/*.py tools/write_diagram
 	rm tools/write_diagram_rules_2.py
 
 release:
-	cp build/*knot-theory.pdf ./
+	for i in build/*knot-theory.pdf; do \
+		if [[ "$$i" -nt "$$(basename "$$i")" ]]; then \
+			cp "$$i" .; \
+		fi; \
+	done
 
 clean:
 	rm -rf build *.pdf
