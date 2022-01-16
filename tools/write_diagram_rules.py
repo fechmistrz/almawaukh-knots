@@ -16,7 +16,7 @@ def generate_command(command_name, command_details):
     bound1, bound2, bound3, bound4 = -5, -5, 5, 5
     if "Huge" in command_name:
         scale = 0.25001
-        clip = 15
+        clip = 12
         bound1, bound3 = -7, 7
     elif "Large" in command_name:
         scale = 0.15001

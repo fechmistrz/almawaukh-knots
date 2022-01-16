@@ -13,7 +13,7 @@ diagram_commands["PlusCrossingColouring"] = {
         "\\node[first_colour] at (5, -5)[above right] {$b$};",
         "\\node[first_colour] at (-5, 5)[below left] {$a$};",
     ],
-    "sizes": ["Large"],
+    "sizes": ["Huge"],
 }
 diagram_commands["PlusCrossingLabel"] = {
     "lines": [

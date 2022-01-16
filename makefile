@@ -33,7 +33,7 @@ build/draft-knot-theory.pdf: src/*-*/*.tex
 	mv src/include/head.tex.bak src/include/head.tex
 	mv build/knot-theory.pdf build/draft-knot-theory.pdf
 
-src/00-meta-latex/new_diagrams.tex: tools/diagram_rules/*.py
+src/00-meta-latex/new_diagrams.tex: tools/diagram_rules/*.py tools/write_diagram_rules.py
 	{ echo "#!/usr/bin/env python3"; echo "diagram_commands = dict()"; cat tools/diagram_rules/*.py; cat tools/write_diagram_rules.py; } > tools/write_diagram_rules_2.py
 	python3 tools/write_diagram_rules_2.py > src/00-meta-latex/new_diagrams.tex
 	rm tools/write_diagram_rules_2.py
