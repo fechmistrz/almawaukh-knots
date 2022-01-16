@@ -3,6 +3,7 @@
 \index{prezentacja Wirtingera|(}
 Wiemy więc już trochę o~nowym niezmienniku, ale nie umiemy go jeszcze wyznaczać.
 Jak zauważył Wilhelm Wirtinger około roku 1905, a więc jeszcze przed narodzinami teorii węzłów, grupa węzła zawsze posiada pewną specjalną prezentację, nazwaną na jego cześć prezentacją Wirtingera.
+\index[persons]{Wirtinger, Wilhelm}%
 Jest to skończona prezentacja, w~której wszystkie relacje są postaci $w g_i w^{-1} = g_j$, gdzie $w$ to pewne słowo na generatorach, $g_1, \ldots, g_k$.
 Przedstawimy ją zaraz ze względu na użyteczność w~rachunkach, dowodząc jednocześnie jej istnienia.
 
@@ -55,7 +56,7 @@ Przedstawimy ją zaraz ze względu na użyteczność w~rachunkach, dowodząc jed
 
 \begin{corollary}
     Niech $G$ będzie grupą węzła.
-    Wtedy jej abelianizacją jest $G^{\operatorname{ab}} = \Z$.
+    Wtedy jej abelianizacją jest $G^{\operatorname{ab}} \cong \Z$.
 \end{corollary}
 
 \begin{proof}
@@ -65,14 +66,15 @@ Przedstawimy ją zaraz ze względu na użyteczność w~rachunkach, dowodząc jed
     Można też zauważyć, że abelianizacją grupy podstawowej węzła jest pierwsza grupa homologii okręgu, czyli $\Z$.
 \end{proof}
 
-Michel Kervaire w \cite{kervaire65} pokazał, jakie własności musi posiadać grupa węzła (i~wiemy o~tym, bo przeczytaliśmy książkę Kawauchiego, w tym \cite[tw. 14.1.1]{kawauchi96}):
+Michel Kervaire w \cite{kervaire65} pokazał, jakie własności musi posiadać grupa węzła (i~wiemy o~tym, bo przeczytaliśmy książkę Kawauchiego, w~tym \cite[tw. 14.1.1]{kawauchi96}):
 \index[persons]{Kervaire, Michel}%
 
 \begin{proposition}
+\index{południk}%
+\index{homologia!druga grupa homologii}%
     Niech $G$ będzie grupą węzła $S^n \subseteq S^{n+2}$.
     Wtedy:
-    \begin{enumerate}[leftmargin=*]
-        \itemsep0em
+    \begin{enumerate}
         \item grupa $G$ jest skończenie prezentowana,
         \item abelianizacja $G/G'$ jest nieskończoną grupą cykliczną,
         \item druga grupa homologii $H_2(G) = 0$ jest trywialna,
@@ -81,7 +83,7 @@ Michel Kervaire w \cite{kervaire65} pokazał, jakie własności musi posiadać g
 \end{proposition}
 
 Wyżej wymienione warunki konieczne są także wystarczające, jeżeli $n \ge 3$, jednakże problem pełnej charakteryzacji w~czwartym wymiarze jest otwarty.
-Warunki 2. i 3. wynikają z~dualności Alexandera, zaś 1. i 4. stanowią przeformułowanie prezentacji Wirtingera.
+Warunki 2. i 3. wynikają z~dualności\footnote{Niech $X$ będzie zwartą, lokalnie ściągalną podprzestrzenią sfery $S^n$. Wtedy $\tilde {H}_{q}(S^n \setminus X) \cong \tilde H^{n-q-1}(X)$. Założenie o~lokalnej ściągalności można pominąć, jeśli pracuje się z kohomologią Čecha.} Alexandera, zaś 1. i 4. stanowią przeformułowanie prezentacji Wirtingera.
 
 \index{prezentacja Wirtingera|)}
 
