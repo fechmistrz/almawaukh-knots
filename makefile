@@ -7,7 +7,7 @@ PDFLATEX_FLAGS = -shell-escape -halt-on-error -output-directory ../build/
 define make_pdf
   export max_print_line=$$(tput cols); \
   cd src && pdflatex $(PDFLATEX_FLAGS) knot-theory.tex && cp knot_theory.bib ../build/knot_theory.bib; \
-  cd ../build && bibtex knot-theory \
+  cd ../build && bibtex knot-theory; \
   cd ../src && ./merridew/fix_bbl_authors.py ../build/knot-theory.bbl && pdflatex $(PDFLATEX_FLAGS) knot-theory.tex && pdflatex $(PDFLATEX_FLAGS) knot-theory.tex; \
   cd ..;
 endef
