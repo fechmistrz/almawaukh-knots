@@ -1,0 +1,130 @@
+\subsection{Diagramy cięciw, układy ciężarów, algebra chińskich znaków}
+
+Okazuje się, że wartość niezmiennika Wasiljewa $v$ nie zależy wprost od tego, jak zaplątany jest węzeł osobliwy $K$, ale od tego, jak ułożone są wierzchołki wzdłuż węzła. Standardową metodą kodowania tej informacji jest diagram cięciw.
+
+\begin{definition}[diagram cięciw]
+% DICTIONARY;chord;cięciw;diagram
+\index{diagram cięciw}%
+    Zorientowany okrąg razem z~$2n$ punktami leżącymi na nim (oraz~połączonymi w pary) z~dokładnością do zachowujących orientację homeomorfizmów nazywamy diagramem cięciw rzędu $n$, albo stopnia $n$.
+\end{definition}
+
+\begin{comment}
+\begin{figure}[H]
+    \centering
+    \begin{minipage}[b]{.18\linewidth}
+        \[\LargeChordDiagramA\]
+        \subcaption{}
+    \end{minipage}
+    \begin{minipage}[b]{.18\linewidth}
+        \[\LargeChordDiagramB\]
+        \subcaption{}
+    \end{minipage}
+    \begin{minipage}[b]{.18\linewidth}
+        \[\LargeChordDiagramC\]
+        \subcaption{}
+    \end{minipage}
+    \begin{minipage}[b]{.18\linewidth}
+        \[\LargeChordDiagramD\]
+        \subcaption{}
+    \end{minipage}
+    \begin{minipage}[b]{.18\linewidth}
+        \[\LargeChordDiagramE\]
+        \subcaption{}
+    \end{minipage}
+    \caption{Wszystkie pięć diagramów cięciw stopnia 3}
+\end{figure}
+\end{comment}
+
+\begin{tobedone}
+    Jak zamienić węzeł w diagram cięciw?
+\end{tobedone}
+
+\begin{proposition}
+    Niech $K_1, K_2$ będą dwoma osobliwymi węzłami o~tym samym diagramie cięciw, zaś $v$~niezmiennikiem Wasiljewa.
+    Wtedy $v(K_1) = v(K_2)$.
+\end{proposition}
+
+\begin{proof}
+    Umieśćmy węzły osobliwe $K_1, K_2$ w przestrzeni tak, by ich wierzchołki oraz obie gałęzie wychodzące z wierzchołków leżały tak samo. Wtedy można tak zdeformować łuki $K_1$ tak, by jedynymi osobliwościami, jakie się pojawią lub znikną, były podwójne punkty.
+    Teraz kłębiasta Wasiljewa mówi, że wartość $v$ nie zmienia się podczas tego procesu, zatem $v(K_1) = v(K_2)$, co należało okazać.
+    % chmutov12
+    % TODO: (\cite{duzhin12}, prop. 3.4.2)
+\end{proof}
+
+\begin{definition}[symbol niezmiennika]
+\index{symbol niezmiennika (osobliwego)}%
+    Niech $v$ będzie niezmiennikiem Wasiljewa.
+    Obcięcie $v$ do zbioru węzłów osobliwych o~dokładnie $n$ wierzchołkach traktowane jako funkcja ze zbioru diagramów cięciw nazywamy symbolem tego niezmiennika.
+\end{definition}
+
+Jeśli $v_1, v_2$ są niezmiennikami Wasiljewa rzędu co najwyżej $n$ o~tych samych symbolach, to ich różnica jest niezmiennikiem rzędu co najwyżej $n - 1$.
+Oznacza to, że przestrzeń $\mathcal V_n/\mathcal V_{n-1}$ pokrywa się z przestrzenią wszystkich symboli niezmienników Wasiljewa rzędu co najwyżej $n$.
+Zbiór diagramów cięciw rzędu $n$ jest skończony, więc przestrzeń funkcji na tym zbiorze też jest skończona, a zatem przestrzenie $\mathcal V_n$ są skończonego wymiaru.
+
+Stojmenow w \cite{stoimenow001} znalazł jakościowy wynik bez praktycznego znaczenia (ponieważ już dla $k = 4$ musielibyśmy znać wszystkie węzły o 36 skrzyżowaniach, a~jeszcze ich nie znamy, stan na 2021 rok).
+\index[persons]{Stojmenow, Aleksander}%
+Dokładniej:
+
+\begin{proposition}
+    Niezmiennik Wasiljewa rzędu co najwyżej $k$ jest jednoznacznie określony przez wartości, jakie przyjmuje na alternujących węzłach o co najwyżej $2k^2 + k$ skrzyżowaniach.
+\end{proposition}
+
+Symbol nie jest byle jaką funkcją, spełnia dwie relacje:
+\index{relacje 1T i 4T}%
+\begin{comment}
+\begin{figure}[H]
+    \[
+        \LargeOneTerm \mapsto 0
+    \]
+    \caption{Relacja ,,one-term'' (1T albo FI?)}
+\end{figure}
+oraz
+\begin{figure}[H]
+    \[
+        \LargeFourTermA - \LargeFourTermB + \LargeFourTermC - \LargeFourTermD \mapsto 0.
+    \]
+    \caption{Relacja ,,four-term'' (4T)}
+\end{figure}
+\end{comment}
+
+Diagramy mogą mieć więcej cięciw z końcami tam, gdzie linia jest kropkowana, natomiast wszystkie końce cięciw na czarnych, pogrubionych łukach zostały zaznaczone explicite.
+
+Zastosowaliśmy tutaj mały skrót dla oszczędności miejsca: oczywiście nie umiemy jeszcze odejmować od siebie diagramów, dlatego powyższe relacje należy rozumieć tak, że na każdym diagramie liczymy symbol niezmiennika i porównujemy tak otrzymane liczby zespolone.
+
+\begin{definition}[układ ciężarów]
+% DICTIONARY;weight system;układ ciężarów;-
+\index{układ ciężarów}%
+    Funkcję określoną na zbiorze diagramów $n$ cięciw, która spełnia relacje 1T oraz 4T, nazywamy układem ciężarów.
+\end{definition}
+
+Okazuje się, że wszystkie zależności, jakie występują między niezmiennikami Wasiljewa, są konsekwencjami relacji 1T oraz 4T.
+Mówi o~tym głębokie twierdzenie Koncewicza:
+
+\begin{proposition}
+    Każdy układ ciężarów jest symbolem pewnego niezmiennika Wasiljewa. % rzędu co najwyżej $n$ - nie mieści się, przenosi samo $n$ do nowej linii.
+\end{proposition}
+
+\begin{proof}
+    Koncewicz w \cite{kontsevich93}. % chmutow12/chmutov11 theorem 3.4
+\end{proof}
+
+\begin{definition}[chiński znak]
+    Spójny graf złożony z pojedynczego zorientowanego okręgu oraz pewnej liczby niezorientowanych, kreskowanych linii, które mogą się spotykać w~jednym z dwóch typów wierzchołków:
+    \begin{itemize}
+        \item wewnętrznych wierzchołkach, gdzie spotykają się trzy kreskowane linie;
+        \item zewnętrznych wierzchołkach, gdzie kreskowane linie kończą się na okręgu.
+    \end{itemize}
+    Wierzchołki wewnętrzne są zorientowane, zgodnie lub przeciwnie do ruchu wskazówek zegara.
+\end{definition}
+
+Diagramy cięciw modulo relacja 4T jest tym samym, co algebra chińskich znaków modulo relacja STU.
+% DICTIONARY;algebra of Chinese characters;algebra chińskich znaków;-
+\index{algebra!chińskich znaków}%
+W~tej drugiej spełnione są jeszcze relacje AS oraz IHX, nie mam siły tego rysować, ale wszystko można znaleźć w pracy Bar-Natana \cite{barnatan_95}.
+\index[persons]{Bar-Natan, Dror}%
+
+\begin{tobedone}
+% DICTIONARY;actuality table;tablica rzeczywistości;-
+    \index{tablica rzeczywistości?}
+    Actuality tables.
+\end{tobedone}

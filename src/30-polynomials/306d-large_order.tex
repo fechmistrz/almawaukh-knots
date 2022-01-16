@@ -1,0 +1,192 @@
+
+\subsection{Niezmienniki Wasiljewa wyższych rzędów}
+(Na podstawie początku pracy Czmutowa \cite{chmutov12}).
+\index[persons]{Czmutow, Siergiej}%
+Niech $\mathcal V_n$ będzie zbiorem niezmienników Wasiljewa rzędu co najwyżej $n$, o~wartościach w zbiorze liczb zespolonych $\C$.
+Z definicji \ref{def:vassiliev_order} wynika, że $\mathcal V_n$ jest przestrzenią wektorową nad ciałem $\C$ oraz $\mathcal V_n \subseteq \mathcal V_{n+1}$ i mamy rosnącą filtrację
+\begin{equation}
+    \mathcal V_0 \subseteq \mathcal V_1 \subseteq \mathcal V_2 \subseteq \ldots \subseteq \mathcal V := \bigcup_{n=0}^\infty \mathcal V_n.
+\end{equation}
+
+Oznaczmy wymiar przestrzeni $\mathcal V_n / \mathcal V_{n-1}$ przez $d_n$.
+Dla wyższych rzędów nie dość, że nie znamy dokładnych wartości ciągu $d_n$, to dolne i górne ograniczenia asymptotyczne są od siebie bardzo różne: górne jest niemalże silnią, dolne natomiast jest podwykładnicze.
+
+% https://people.math.osu.edu/chmutov.1/talks/2015/talk-KinW-XL-2015.pdf ? strona 22
+% Chmutov, Duzhin. Mostovoy - Introduction to Vassiliev Knot Invariants, strona 432
+\begin{proposition}
+    $d_n < (2n-1)!!$.
+\end{proposition}
+
+\begin{proof}
+\index[persons]{Czmutow, Siergiej}%
+\index[persons]{Dużin, Siergiej}%
+    Czmutow, Dużin \cite{duzhin94}.
+\end{proof}
+
+\begin{proposition}
+    $d_n < (n-1)!$.
+\end{proposition}
+
+\begin{proof}
+\index[persons]{Czmutow, Siergiej}%
+\index[persons]{Dużin, Siergiej}%
+    Czmutow, Dużin \cite{chmutovduzhin94}.
+\end{proof}
+
+\begin{proposition}
+    $d_n < \frac 12 (n-2)!$.
+\end{proposition}
+
+\begin{proof}
+\index[persons]{Ng, Ka}%
+    Ng \cite{ng98}.
+\end{proof}
+
+\begin{proposition}
+    Ciąg $d_n$ rośnie wolniej niż $n! \cdot (11/10)^n$.
+\end{proposition}
+
+\begin{proof}
+\index[persons]{Stojmenow, Aleksander}%
+    Stojmenow \cite{stoimenow98}.
+\end{proof}
+
+\begin{proposition}
+    $d_n \lesssim n! / (2 \log 2 + O(1))^n$.
+\end{proposition}
+
+\begin{proof}
+\index[persons]{Bollobás, Béla}%
+\index[persons]{Riordan, Oliver}%
+    Bollobás, Riordan \cite{bollobas00}.
+\end{proof}
+
+\begin{proposition}
+    Niech $a < \frac 1 6 \pi^2$ będzie stałą.
+    Wtedy
+    \begin{equation}
+        \dim \mathcal V_n / \mathcal V_{n-1} \lesssim \frac{n!}{a^n}.
+    \end{equation}
+\end{proposition}
+
+\begin{proof}
+\index[persons]{Zagier, Don}%
+    Zagier \cite{zagier01} znalazł to ograniczenie przy użyciu szeregów Dirichleta.
+\end{proof}
+
+Zanim przejdziemy do ograniczeń z dołu, zdefinujmy jeszcze jedną przestrzeń, $\mathcal P_n \subseteq \mathcal V_n$.
+Składa się z~tych niezmienników Wasiljewa, które są jednocześnie morfizmami, to znaczy spełniają równość $v(K_1 \shrap K_2) = v(K_1) + v(K_2)$.
+Każdy niezmiennik jest wielomianową kombinacją niezmienników pierwotnych (elementów $\mathcal P_n$).
+
+% https://people.math.osu.edu/chmutov.1/talks/2015/talk-KinW-XL-2015.pdf ? strona 32
+% Chmutov, Duzhin. Mostovoy - Introduction to Vassiliev Knot Invariants, strona 434
+\begin{proposition}
+    $\dim \mathcal P_n \ge 1$.
+\end{proposition}
+
+\begin{proof}
+\index[persons]{Czmutow, Siergiej}%
+\index[persons]{Dużin, Siergiej}%
+\index[persons]{Lando, Siergiej}%
+    Czmutow, Dużin, Lando \cite{duzhin94}.
+\end{proof}
+
+\begin{proposition}
+    $\dim \mathcal P_n \ge [n/2]$.
+\end{proposition}
+
+\begin{proof}
+\index[persons]{Czmutow, Siergiej}%
+\index[persons]{Melvin, Paul}%
+\index[persons]{Morton, Hugh}%
+\index[persons]{Warczenko, Aleksander}%
+    Melvin, Morton \cite{melvin95}, Czmutow, Warczenko \cite{varchenko97}.
+\end{proof}
+
+\begin{proposition}
+    $\dim \mathcal P_n \gtrsim \frac{1}{96} n^2$.
+\end{proposition}
+
+\begin{proof}
+\index[persons]{Czmutow, Siergiej}%
+    Czmutow \cite{duzhin96}.
+\end{proof}
+
+\begin{proposition}
+    $\dim \mathcal P_n \gtrsim n^{\log_b n}$ dla $b > 4$.
+\end{proposition}
+
+\begin{proof}
+\index[persons]{Czmutow, Siergiej}%
+\index[persons]{Dużin, Siergiej}%
+    Czmutow, Dużin \cite{duzhin99}.
+\end{proof}
+
+\begin{proposition}
+    $\dim \mathcal P_n \gtrsim \exp (\pi \sqrt{n/3})$.
+\end{proposition}
+
+\begin{proof}
+\index[persons]{Czmutow, Siergiej}%
+\index[persons]{Koncewicz, Maksim}%
+    Koncewicz w faksie do Czmutowa z 1997 roku. :)
+\end{proof}
+
+\begin{proposition}
+    $\dim \mathcal P_n \gtrsim \exp (c \sqrt{n})$ dla każdej stałej $c < \pi \sqrt{2/3}$.
+\end{proposition}
+
+\begin{proof}
+\index[persons]{Dasbach, Oliver}%
+    Dasbach \cite{dasbach00} pracuje z~algebrą skończonych grafów, których wierzchołki są stopnia 1 lub 3, modulo relacje IHX i~antysymetrii.
+    Pojawiają się też układy ciężarów pochodzące od algebry Liego $\mathfrak{gl}(N)$, dzięki którym można użyć pewnych dobrze znanych wyników z teorii algebr Liego i~teorii liczb.
+\end{proof}
+
+Praca \cite{dasbach00} ma tylko 11 stron, ale jest zamknięta w sobie i (zdaniem Birman) przykładem czytelności.
+Ograniczenie Dasbacha pozostaje najlepsze (stan na 2011 rok).
+
+\begin{corollary}
+    Niech $a < \frac 1 6 \pi^2$ będzie stałą.
+    Wtedy
+    \begin{equation}
+        \exp \left(\frac {n}{\log_a n} \right) \lesssim \dim \mathcal V_n / \mathcal V_{n-1}.
+    \end{equation}
+\end{corollary}
+
+\begin{proof}
+\index[persons]{Dasbach, Oliver}%
+    Dasbach w \cite{dasbach00}.
+\end{proof}
+
+% Chmutov, Duzhin. Mostovoy - Introduction to Vassiliev Knot Invariants, strona 432
+Dokładny wymiar przestrzeni $\mathcal V_n$ jest znany tylko dla $n \le 12$.
+Poniższa tabela ma dość ciekawą historię.
+Wasiljew znalazł ręcznie wartości w kolumnach dla $n \le 4$ w 1990 roku.
+\index[persons]{Wasiljew, Wiktor}%
+Potem Bar-Natan napisał komputerowy program rozwiazujący pewne równania liniowe i~znalazł tak wymiary przestrzeni $\mathcal V_n$ dla $n \le 9$, miało to miejsce w roku 1993.
+\index[persons]{Bar-Natan, Dror}%
+Wreszcie Kneissler cztery lata później znalazł dolne oraz górne ograniczenia: dolne oparte o znaczone powierzchnie, górne pochodzące od algebry Vogela (\cite{kneissler97}).
+\index[persons]{Kneissler, Jan}%
+\index{algebra Vogela}%
+Dla $n \le 12$ ograniczenia te pokrywają się!
+
+% Chmutov, Duzhin. Mostovoy - Introduction to Vassiliev Knot Invariants, strona 432
+{
+\renewcommand*{\arraystretch}{1.4} % bez tego wiersze mają minimalną wysokość, by pomieścić litery = ciasno
+\footnotesize
+\begin{longtable}{lcccccccccccccc}
+\hline
+    $n$ & $0$ & $1$ & $2$ & $3$ & $4$ & $5$ & $6$ & $7$ & $8$ & $9$ & $10$ & $11$ & $12$ \\ \hline \endhead
+    $\dim \mathcal V_n$ & $1$ & $1$ & $2$ & $3$ & $6$ & $10$ & $19$ & $33$ & $60$ & $104$ & $184$ & $316$ & $548$ \\
+    $\dim \mathcal V_n / \mathcal V_{n-1}$ & $1$ & $0$ & $1$ & $1$ & $3$ & $4$ & $9$ & $14$ & $27$ & $44$ & $80$ & $132$ & $232$ \\
+    \hline
+\end{longtable}
+\normalsize
+}
+
+
+% kneissler97 podaje inny ciąg: 0, 1, 1, 2, 3, 5, 8, 12, 18, 27, 39, 55... (rk Pm), nasz nazywając (rk Am / rk Arm)
+% Am: Z<circle diagrams of degree m> / Z<STU relations>
+% Arm: Am / Z<FI relations>
+% Pm: podmoduł Am generowany przez spójne diagramy
+
