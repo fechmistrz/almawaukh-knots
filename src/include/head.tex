@@ -3,7 +3,21 @@
 
 \usepackage{comment}
 \includecomment{comment}
-\usepackage{makeidx}
+
+\usepackage{imakeidx}
+% forced by -output-directory option in makefile
+% see https://tex.stackexchange.com/a/564296
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\imki@putindex
+  {\imki@exec{\imki@program \imki@options #1.idx}}
+  {\imki@exec{cd ../build;\imki@program\imki@options#1.idx}}
+  {\message{Patch succeeded in imki@putindex}}
+  {\errmessage{Patch failed in imki@putindex}}
+\makeatother
+\makeindex[title=Skorowidz]
+\makeindex[name=persons,title=Indeks osób]
+
 \usepackage{enumitem}
 \usepackage{booktabs}
 \usepackage{longtable}
@@ -19,10 +33,6 @@
 \definecolor{first_colour}{HTML}{A15D98}
 \input{00-meta-latex/diagrams}
 
-% makes compilation faster, breaks few diagrams
-% \usetikzlibrary{external}
-% \tikzexternalize[prefix=tikz/]
-
 \definecolor{lightgray}{gray}{0.9} % define lightgray
 \let\oldtabular\tabular % alternate rowcolors for all tables
 \let\endoldtabular\endtabular
@@ -35,10 +45,5 @@
 {\rowcolors{2}{white}{lightgray}\oldlongtable}
 {\endoldlongtable}
 
-% \author{Leon Suwalski}
-% \title{Krótkie wprowadzenie do teorii węzłów (wersja robocza)}
-% \date{2018}
-
-\makeindex
 \begin{document}
 
