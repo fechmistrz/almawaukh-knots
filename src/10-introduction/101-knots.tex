@@ -3,23 +3,24 @@
 Największą różnicą między węzłami matematycznymi oraz tymi z~prawdziwego jest życia jest to, że te pierwsze nie mają luźnych końców.
 Można przyjąć nieidealną, naiwną definicję:
 
-\begin{definition}[węzeł]
+\begin{definition}[naiwny węzeł]
     Ciągłe oraz różnowartościowe odwzorowanie $S^1 \to \R^3$ nazywamy węzłem.
 \end{definition}
 
-\subsubsection{Rozróżnianie mutantów}
-Żaden wielomianowy niezmiennik opisany w~tej książce nie potrafi odróżnić od siebie węzłów $11n_{34}$ oraz $11n_{42}$.
-Okazuje się, że niewielomianowe niezmienniki też często są bezradne.
+\emph{Ostrzeżenie}.
+Przytoczymy teraz techniczny opis, jak naprawić naiwną definicję węzła. 
+Jeśli czyni to życie lżejszym, to przy pierwszym czytaniu można przyjąć prostszą definicję\footnote{Węzeł jest obrazem funkcji $f \colon \R \to \R^3$ klasy $C^\infty$, której pochodna nie znika w żadnym punkcie i która spełnia warunek $f(x_1) = f(x_2) \iff x_1 - x_2 \in \Z$} i przejść do definicji \ref{def:link} splotu, ale nie mam pojęcia, jak uprościć izotopię otaczającą.
 
-Niestety, dopuszcza ona patologiczne z~kombinatorycznego punktu widzenia węzły dzikie, jak ten z~rysunku \ref{fig:wild_knot}:
+Niestety, naiwna definicja dopuszcza ona patologiczne z~kombinatorycznego punktu widzenia węzły dzikie, jak ten z~rysunku \ref{fig_wild_knot}.
 
 \begin{comment}
-\begin{figure}
+\begin{figure}[H]
     \centering
-    \label{fig:wild_knot}
-    \includegraphics[width=0.5\linewidth]{wild_knot.png}
-    \caption{Węzeł dziki}
+    \includegraphics[width=0.44\linewidth]{wild_knot.png}
+    \caption[caption-for-lof-1]{Węzeł dziki, źródło: Wikimedia{\footnotemark}.}
+    \label{fig_wild_knot}
 \end{figure}
+\footnotetext{\url{https://upload.wikimedia.org/wikipedia/commons/2/2f/Wildknot.svg}}
 \end{comment}
 
 Zastanówmy się, jakim formalizmem opisać manipulowanie fizycznym sznurkiem, by wykluczyć węzły dzikie z~naszych rozważań.
@@ -37,6 +38,7 @@ Ta ostatnia uwzględnia, jak węzeł leży w~przestrzeni i okazuje się być wł
 % DICTIONARY;isotopy;izotopia;-
 % DICTIONARY;ambient;otaczająca;izotopia
 \begin{definition}[izotopia otaczająca]
+\index{izotopia otaczająca}%
     Niech $N, M$ będą rozmaitościami, zaś $K_1, K_2 \colon N \to M$ włożeniami.
     Ciągłe odwzorowanie $F \colon M \times [0,1] \to M$ spełniające następujące warunki:
     \begin{enumerate}
@@ -57,8 +59,8 @@ Izotopia otaczająca nie pozwala na ściąganie zaplątanych fragmentów do punk
 % DICTIONARY;tame;poskromiony;węzeł
 % DICTIONARY;wild;dziki;węzeł
 \begin{definition}[węzeł]
-    \label{def:knot}
-    \index{węzeł}
+\index{węzeł}%
+\label{def:knot}%
     Gładkie włożenie $S^1 \to \R^3$ otaczająco izotopijne z~zamkniętą łamaną bez samoprzecięć nazywamy węzłem poskromionym.
     Dwa węzły są równoważne, jeśli istnieje pomiędzy nimi izotopia otaczająca.
 \end{definition}
@@ -68,50 +70,55 @@ dlatego jeśli nie zaznaczono inaczej, od teraz pisząc węzeł mamy na myśli w
 Istnieje jeszcze jedna, konkurencyjna definicja węzłów równoważnych:
 
 \begin{proposition}
-    \label{def:equivalent_knots_2}
+\label{def:equivalent_knots_2}%
     Dwa węzły są równoważne, gdy jeden z~nich jest obrazem drugiego przez zachowujący orientację homeomorfizm $\R^3 \to \R^3$.
 \end{proposition}
 
 Stwierdzenie to przestaje być prawdziwe po zastąpieniu przestrzeni $\R^m$ przez $S^m$.
 
 \begin{proof}
+\index[persons]{Milnor, John}%
     Podany niżej dowód pochodzi z~książki ,,Topology from the differentiable viewpoint'' Johna Milnora.
     Musimy pokazać, że dyfeomorfizm $f \colon \R^m \to \R^m$ jest gładko izotopijny z~identycznością.
     Translacje są izotopiami, więc bez straty ogólności zakładamy, że $f(0) = 0$.
     Pochodna $f$ w~zerze jest dana wzorem $\mathrm{d}f_0(x) = \lim_{t \to 0} f(tx) /t$,
     naturalną definicję izotopii $F \colon \R^m \times [0, 1] \to \R^m$ stanowi więc
-    \[
+    \begin{equation}
         F(x, t) = \begin{cases}
             \mathrm{d}f_0(x) & t = 0 \\
             f(tx) / t & 0 < t \le 1
         \end{cases} .
-    \]
+    \end{equation}
 
     Funkcja $F$ jest gładka, gdyż na mocy lematu Hadamarda funkcja $f$ zapisuje się jako suma $x_1 g_1(x) + \ldots + x_mg_m(x)$, gdzie funkcje $g_i$ są gładkie, co jakoś kończy dowód.
 \end{proof}
 
-Formalnie węzły to pewne odwzorowania, więc prawidłowym sposobem na zapisanie, że są izotopijne (czyli dla nas: równe), jest $K_1 \simeq K_2$.
+Formalnie węzły to pewne odwzorowania, więc prawidłowym sposobem na zapisanie, że są izotopijne (czyli dla nas: równe), jest $K_1 \cong K_2$.
 Ponieważ nie prowadzi to do problemów, będziemy jednak stosować zapis $K_1 = K_2$.
-Jednocześnie często węzeł (jako odwzorowanie) nie będzie odróżniany od obrazu tego odwzorowania.
+Jednocześnie często węzeł jako odwzorowanie nie będzie odróżniany od obrazu tego odwzorowania.
 
 % DICTIONARY;link;splot;-
 % DICTIONARY;component;ogniwo splotu;-
 \begin{definition}[splot, ogniwo]
-    \index{splot}
-    Sumę parami rozłącznych węzłów $K_1, K_2, \ldots, K_n$ nazywamy splotem.
-    Składniki sumy nazywamy ogniwami.
+\index{splot}%
+\label{def:link}%
+    Sumę parami rozłącznych węzłów
+    \begin{equation}
+        L = K_1 \sqcup K_2 \sqcup \ldots K_n
+    \end{equation}
+    nazywamy splotem, a~składniki sumy -- ogniwami.
 \end{definition}
 
 Przez analogię do węzłów mówimy, że dwa sploty są takie same, jeśli jeden jest obrazem drugiego przez zachowujący orientację homeomorfizm $\R^3 \to \R^3$.
 W~takiej sytuacji obydwa sploty mają tyle samo ogniw.
 
 \begin{example}
-    \index{splot!Hopfa}
+\index{splot!Hopfa}%
     Splot Hopfa to najprostszy splot nietrywialny, którym w~1931 r. zajmował się Heinz Hopf, topolog niemiecki, w~ramach badań nad tzw. rozwłóknieniem (Hopf fibration).
 \end{example}
 
 \begin{example}
-    \index{splot!Whiteheada}
+\index{splot!Whiteheada}%
     Whitehead w~1934 odkrył kontrprzykład do nieudanego dowodu hipotezy Poincarego.
     Był nim splot o~dwóch składowych przedstawiony na poniższym rysunku.
 \end{example}
@@ -137,8 +144,8 @@ W roku 1987 pokazano, że istnieją co najwyżej dwa węzły o~zadanym dopełnie
 Dwa lata później poznaliśmy pozytywną odpowiedź na pytanie Tietzego: każdy węzeł jest wyznaczony jednoznacznie przez swoje dopełnienie.
 
 \begin{theorem}[Gordon, Luecke, 1989]
-    \label{thm:gordon_luecke}
-    \index{twierdzenie!Gordona-Lueckego}
+\index{twierdzenie!Gordona-Lueckego}%
+\label{thm:gordon_luecke}%
     Poskromione węzły o~homeomorficznych (z zachowaniem orientacji) dopełnieniach są wzajemnie izotopijne.
 \end{theorem}
 
@@ -147,6 +154,7 @@ Dwa lata później poznaliśmy pozytywną odpowiedź na pytanie Tietzego: każdy
 \index[persons]{Luecke, John}%
     Wynika to z~ogólniejszego stwierdzenia:
     nietrywialna chirurgia Dehna na węźle w~3-sferze nigdy nie daje 3-sfery.
+\index{chirurgia Dehna}
     Pełny dowód zawiera praca \cite{gordon89}.
 \end{proof}
 
@@ -160,7 +168,7 @@ Poniższa definicja nie jest nam jeszcze potrzebna, ale wygodnie przytoczyć ją
 
 % DICTIONARY;splittable;rozszczepialny;splot
 \begin{definition}[rozszczepialność]
-    \index{splot!rozszczepialny}
+\index{splot!rozszczepialny}%
     Jeżeli splot $L$ można zanurzyć w przestrzeni $\R^3$ tak, że niektóre jego ogniwa będą leżeć nad pewną rozłączną ze splotem płaszczyzną, zaś pozostałe pod nią, to powiemy, że splot $L$ jest rozszczepialny.
 \end{definition}
 
@@ -171,8 +179,8 @@ Liczbę nierozszczepialnych splotów, pierwszych lub złożonych, zebrano w tabe
 \footnotesize
 \begin{longtable}{lccccccccc}
     \hline
-    \textbf{skrzyżowania}  &  0  &  1  &  2  &  3  &  4  &  5  &  6   &  7   &  8   \\  \hline  \endhead
-    sploty                 &  1  &  0  &  1  &  1  &  3  &  4  &  15  &  24  &  82  \\
+    \textbf{skrzyżowania} & 0 & 1 & 2 & 3 & 4 & 5 &  6 &  7 &  8 \\ \hline \endhead
+    sploty                & 1 & 0 & 1 & 1 & 3 & 4 & 15 & 24 & 82 \\
     \hline
 \end{longtable}
 \normalsize
@@ -198,4 +206,6 @@ Są jeszcze węzły wirtualne, zespawane (iloraz węzłów wirtualnych przez ruc
 Ta książka nie zawiera zbyt wiele informacji o wspomnianych bytach.
 % http://katlas.org/ester/weldedknots/explanations.html
 % koniec sekcji Węzły i sploty
+
+\end{document}
 
