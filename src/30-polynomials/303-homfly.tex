@@ -6,22 +6,18 @@ Po tym, jak Jones przedstawił światu swój wielomian w~1984 roku, matematycy
 zaczęli szukać jego uogólnienia zależnego nie od jednej, lecz dwóch zmiennych.
 Pierwszym takim węzłowym niezmiennikiem okazał się wielomian HOMFLY.
 Jego nazwa pochodzi od sześciu odkrywców: Hoste, Ocneanu, Millett, Freyd, Lickorish, Yetter z~pracy \cite{homfly85}.
+\index[persons]{Freyd, Peter}%
+\index[persons]{Hoste, Jim}%
+\index[persons]{Lickorish, William}%
+\index[persons]{Millett, Kenneth}%
+\index[persons]{Ocneanu, Adrian}%
+\index[persons]{Yetter, David}%
 
 Dwa lata później i~niezależnie od nich, Przytycki z~Traczykiem otrzymał ten sam obiekt w~\cite{przytycki87}.
+\index[persons]{Przytycki, Józef}%
+\index[persons]{Traczyk, Paweł}%
 Ich nazwiska czasami są pomijane, gdyż polska poczta była spowolniona w tamtym czasie przez ruch solidarnościowy, pisze o tym Michael McDaniel w artykule ,,Knots to You''.
 W przeciwnym razie używa się skrótu HOMFLY-PT.
-
-% To compute the HOMFLY-PT polynomial, one starts from an oriented link diagram? and uses the following rules:
-
-% PP is an isotopy invariant (thus, unchanged by Reidemeister moves).
-
-% P(unknot)=1P(\text{unknot}) = 1
-
-% Let L +L_+, L −L_-, and L 0L_0 be links which are the same except for one part where they differ according to the diagrams below. Then, depending on the choice of variables:
-% l⋅P(L +)+l −1⋅P(L −)+m⋅P(L 0)=0l \cdot P(L_+) + l^{-1} \cdot P(L_-) + m \cdot P(L_0) = 0.
-% a⋅P(L +)−a −1⋅P(L −)=z⋅P(L 0)a \cdot P(L_+) - a^{-1} \cdot P(L_-) = z \cdot P(L_0). (Sometimes ν\nu is used instead of aa)
-% α −1⋅P(L +)−α⋅P(L −)=z⋅P(L 0)\alpha^{-1} \cdot P(L_+) - \alpha \cdot P(L_-) = z \cdot P(L_0).
-% Using three variables: x⋅P(L +)+y⋅P(L −)+z⋅P(L 0)=0x \cdot P(L_+) + y \cdot P(L_-) + z \cdot P(L_0) = 0.
 
 \begin{definition}[wielomian HOMFLY]
 \index{relacja kłębiasta}%
@@ -59,17 +55,11 @@ Murasugi podaje tam jako ćwiczenie równości:
     S(x, y, z) & = P(\sqrt{y/x}, z/\sqrt{xy}).
 \end{align}
 
-% Jednorodny wielomian HOMFLY niesie taką samą informację jak jego wersja o~dwóch zmiennych.
-% Istotnie, jeśli podstawimy $z = 1$, dostaniemy wielomian dwóch zmiennych.
-% W~drugą stronę wystarczy każdy wyraz przemnożyć przez pewną potęgę $z$, by ten był stopnia zero.
-% Wygodniej jest jednak nałożyć inny warunek, $xy=1$, co prowadzi do definicji \ref{def:homfly}.
-% Ja to pisałem chyba z jakiejś polskiej książki, której nie mogę już znaleźć...
-
 Relacja kłębiasta pozwala wywnioskować własności wielomianu sumy spójnej i~prostej.
 Potrzebować będziemy lematu:
 
 \begin{lemma}
-    \label{lem:homfly_unlinks}
+\label{lem:homfly_unlinks}%
     Wielomianem HOMFLY dla niesplotu o~$n$ składowych jest
     \begin{equation}
         P(U_n) = \left(-\frac{l+1/l}{m}\right)^{n-1}.
@@ -88,7 +78,8 @@ Można potraktować to jako proste ćwiczenie z~indukcji matematycznej, pozostaw
 \end{proposition}
 
 Dowód przebiega analogicznie do dowodu ,,multiplikatywności'' wielomianów Alexandera (fakty \ref{prp:alexander_multiplicative}) oraz Jonesa (fakt \ref{prp:jones_multiplicative_1}, \ref{prp:jones_multiplicative_2}).
-Patrz \url{https://math.stackexchange.com/a/399405}.
+
+Patrz też \url{https://math.stackexchange.com/a/399405}.
 
 \begin{proof}
     Każdy splot $L$ jest kombinacją liniową (o współczynnikach będących wielomianami w~$m$ oraz $l$) niesplotów $U_k$ o~różnej liczbie składowych $k$.
@@ -129,11 +120,10 @@ Teraz powołamy się na lemat \ref{lem:unknotting_well_defined}.
     Niech $L$ będzie splotem, którego wielomian HOMFLY próbujemy wyznaczyć.
     Ustalmy jego dowolny diagram i~wybierzmy jedno ze skrzyżowań, które należy odwrócić, by uzyskać niesplot.
     Takie skrzyżowanie istnieje na mocy lematu \ref{lem:unknotting_well_defined}.
+    Początkowy diagram odpowiada albo $L_+$, albo $L_-$ w relacji kłębiastej dla tego skrzyżowania; jego wielomian jest różnicą wielomianów pozostałych dwóch diagramów (o~mniejszej liczbie skrzyżowań!).
+    Powtarzając procedurę dojdziemy do splotów trywialnych.
 
-    Początkowy diagram odpowiada $L_+$ lub $L_-$, relacja kłębiasta pozwala na uzyskanie wielomianu wyjściowego splotu zależnego od wielomianu splotu z
-    diagramem, na którym jest mniej skrzyżowań oraz splotu, który jest ,,jedno skrzyżowanie bliżej'' niesplotu.
-
-    Powtarzając tę procedurę dojdziemy w~pewnym momencie do splotów trywialnych, gdzie powołujemy się na wniosek \ref{lem:homfly_unlinks}.
+    Jeśli powołamy się na wniosek \ref{lem:homfly_unlinks}, dowód zostanie zakończony.
 \end{proof}
 
 Porównajmy wielomian HOMFLY ze znanymi już wielomianami Alexandera $\alexander$ oraz Jonesa $\jones$.
@@ -152,16 +142,6 @@ Na przykład $4_1$ oraz $11n_{19}$ mają różne tylko wielomiany Alexandera, za
 
     Wielomian HOMFLY odróżnia $11_{388}$ od swojego odbicia, wielomiany Jonesa i~Conwaya nie, więc jest istotnie mocniejszy.
 \end{proof}
-
-Wielomian HOMFLY jest niezmiennikiem splotów zorientowanych, ale możemy go użyć także do porównywania obiektów bez orientacji.
-Jeśli wielomiany dwóch splotów, niezależnie od orientacji ich ogniw, są zawsze różne, to same sploty też są różne.
-DUnfield, Garoufalidis, Szumakowicz, Thistlethwaite w~\cite{dunfield10} znaleźli diagram pewnego węzła o~75 skrzyżowaniach, którego kablowe mutacje zachowują wielomiany Jonesa oraz Alexandera, ale nie zachowują wielomianu HOMFLY.
-\index[persons]{Dunfield, Nathan}%
-\index[persons]{Garoufalidis, Stavros}%
-\index[persons]{Shumakovitch, Alexander}%
-\index[persons]{Thistlethwaite, Morwen}%
-\index{węzeł!o 75 skrzyżowaniach}%
-Wiadomo, że jeśli istnieje prostszy przykład, to ma co najmniej 13 skrzyżowań.
 
 Pomimo swej mocy nie jest jednak niezmiennikiem zupełnym, nigdy nie odróżnia od siebie mutantów (to fakt \ref{mutants_and_homfly}).
 \index{mutant}%
@@ -241,6 +221,16 @@ Co bardziej dramatyczne, Kanenobu wskazał przy użyciu elementarnych metod (!) 
     Autor twierdzi, że dowód włóknistości, taśmowości i~bycia genusu $2$ zamieścił wcześniej w~\cite{kanenobu81}, ale to jest po francusku.
 \end{proof}
 
+Wielomian HOMFLY jest niezmiennikiem splotów zorientowanych, ale możemy go użyć także do porównywania obiektów bez orientacji.
+Jeśli wielomiany dwóch splotów, niezależnie od orientacji ich ogniw, są zawsze różne, to same sploty też są różne.
+Dunfield, Garoufalidis, Szumakowicz, Thistlethwaite w~\cite{dunfield10} znaleźli diagram pewnego węzła o~75 skrzyżowaniach, którego kablowe mutacje zachowują wielomiany Jonesa oraz Alexandera, ale nie zachowują wielomianu HOMFLY.
+\index[persons]{Dunfield, Nathan}%
+\index[persons]{Garoufalidis, Stavros}%
+\index[persons]{Shumakovitch, Alexander}%
+\index[persons]{Thistlethwaite, Morwen}%
+\index{węzeł!o 75 skrzyżowaniach}%
+Wiadomo, że jeśli istnieje prostszy przykład, to ma co najmniej 13 skrzyżowań.
+
 Zaletą wielomianu HOMFLY jest to, że często wykrywa chiralność (węzeł chiralny nie jest równoważny swemu lustrzanemu odbiciu), ale nie odróżnia enancjomerów węzłów $9_{42}$, $10_{48}$, $10_{71}$, $10_{91}$, $10_{104}$, oraz $10_{125}$.
 Wśród węzłów do 10 skrzyżowań dokładnie dwa opierają się testom chiralności opartym na niezmiennikach HOMFLY oraz Kauffmana: $9_{42}$ oraz $10_{71}$.
 Do jej wykrycia potrzebna jest na przykład $SU(2)$-teoria Cherna-Simonsa, wyjaśniona w~kolejnej wersji tego skryptu.
@@ -248,9 +238,6 @@ Do jej wykrycia potrzebna jest na przykład $SU(2)$-teoria Cherna-Simonsa, wyja�
 % A POLYNOMIAL INVARIANT OF ORIENTED LINKS W. B. R. LICKORISH and KENNETH C. MILLET
 % Example 16 - książka
 
-% TODO: Dla każdego splotu $L$ o~$k$ składowych, $P_L(x,y) - 1$ jest krotnością $x+y-1$, zaś $P_L(x,y) + (-1)^K$ jest krotnością $x +y + 1$, zatem wielomian HOMFLY nigdy nie jest zerem. Uwaga: to jest inna parametryzacja!
-
 \index{wielomian!HOMFLY|)}
 
 % Koniec sekcji Wielomian HOMFLY
-
