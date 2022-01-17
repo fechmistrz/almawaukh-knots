@@ -26,6 +26,7 @@ Prosty rachunek pokazuje wpływ drugiego ruchu Reidemeistera na klamrę:
 Aby zachodziła ostatnia równość wystarczy przyjąć $B = A^{-1}$, co wymusza na nas wartość trzeciego parametru: $C = -A^2 - A^{-2}$.
 W ten sposób odkryliśmy definicję.
 
+% DICTIONARY;Kauffman bracket;klamra Kauffmana;-
 \begin{definition}[klamra Kauffmana]
     \label{def:kauffman_bracket}
     Wielomian Laurenta $\bracket{D}$ dla diagramu splotu $D$ zmiennej $A$,
@@ -61,7 +62,7 @@ Drugi aksjomat jest wariacją na temat relacji kłębiastej.
     Zauważmy, że ostatni (i później pierwszy) aksjomat pozwala wyznaczyć wartość klamry Kauffmana dla każdego niesplotu w tylu krokach, ile ogniw ma niesplot.
 
     Pozostał krok indukcyjny.
-    Załóżmy, że wyznaczyliśmy już wartości klamry dla każdego diagramu o $n$ skrzyżowaniach i chcemy ją obliczyć dla kolejnego splotu z diagramem o~$n + 1$ skrzyżowaniach.
+    Załóżmy, że wyznaczyliśmy już wartości klamry dla każdego diagramu o $n$ skrzyżowaniach i~chcemy ją obliczyć dla kolejnego splotu z~diagramem o~$n + 1$ skrzyżowaniach.
     Pozwala na to drugi aksjomat, usuwający jedno ze skrzyżowań.
 \end{proof}
 
@@ -127,8 +128,8 @@ korzystaliśmy tu z~własności drugiego ruchu.
 
 Pierwszy ruch Reidemeistera jest jedynym, co powstrzymuje klamrę Kauffmana przed byciem niezmiennikiem węzłów.
 Jeżeli przypomnimy sobie, że na mocy lematu \ref{lem:writhe_reidemeister} spin nie jest niezmiennikiem z tego samego powodu, odkryjemy ,,trik Kauffmana'': niedoskonałości tych dwóch obiektów znoszą się wzajemnie.
-\index{trik Kauffmana}%
 \index{spin}%
+\index{trik Kauffmana}%
 
 \begin{definition}
 \label{def:jones_polynomial}%
@@ -142,6 +143,7 @@ Jeżeli przypomnimy sobie, że na mocy lematu \ref{lem:writhe_reidemeister} spin
 
 Sama klamra odegrała ważną rolę podczas unifikacji wielomianu Jonesa oraz innych niezmienników kwantowych.
 W szczególności pozwoliła na uogólnienie go do niezmiennika 3-rozmaitości.
+%=% źródło: "Bracket polynomial" na en-wiki (bez wpisu w bibliografii :/)
 
 \begin{proposition}
     Wielomian Jonesa jest niezmiennikiem zorientowanych splotów.
@@ -154,9 +156,9 @@ W szczególności pozwoliła na uogólnienie go do niezmiennika 3-rozmaitości.
     Niech
 \begin{comment}
     \begin{equation}
-        D_1 = \LargeReidemeisterOneLeft,
+        D_1 := \LargeReidemeisterOneLeft,
         \quad\quad\quad
-        D_2 = \LargeReidemeisterOneStraight
+        D_2 := \LargeReidemeisterOneStraight.
     \end{equation}
 \end{comment}
     Jak zauważyliśmy już wcześniej, II i III ruch nie zmienia ani spinu, ani klamry Kauffmana.
