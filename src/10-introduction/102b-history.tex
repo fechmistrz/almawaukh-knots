@@ -2,20 +2,25 @@
 \subsection{Historia tablic węzłów}
 % DICTIONARY;knot table;tablica węzłów;-
 Pierwszą osobą, która podjęła się szukania węzłów, był Peter Guthrie Tait, szkocki fizyk.
-Razem z Thomsonem (lordem Kelvinem) wierzyli, że węzły są kluczem do zrozumienia widma spektroskopowego różnych pierwiastków: na przykład atom sodu mógł być splotem Hopfa ze względu na dwie linie emisyjne.
-Eksperyment Michelsona-Morleya z 1887 roku zabił ich ,,wirową teorię atomu'', ale nie miało to znaczenia dla teorii węzłów jako działu matematyki.
+\index[persons]{Tait, Peter}%
+Razem z~Thomsonem (lordem Kelvinem) wierzyli, że węzły są kluczem do zrozumienia widma spektroskopowego różnych pierwiastków: na przykład atom sodu mógł być splotem Hopfa ze względu na dwie linie emisyjne.
+\index[persons]{Thomson, William (lord Kelvin)}%
+Eksperyment Michelsona-Morleya z~1887 roku zabił ich ,,wirową teorię atomu'', ale nie miało to znaczenia dla teorii węzłów jako działu matematyki.
 
-Używana po dziś dzień strategia, którą przyjął Tait, jest stosunkowa prosta: narysować wszysktie możliwe diagramy o~zadanym indeksie skrzyżowaniowym, po czym połączyć ze sobą te, które przedstawiają jeden węzeł.
+Używana po dziś dzień strategia, którą przyjął Tait, jest stosunkowa prosta: narysować wszystkie możliwe diagramy o~zadanym indeksie skrzyżowaniowym, po czym połączyć ze sobą te, które przedstawiają jeden węzeł.
 Na potrzeby pierwszego etapu Tait wymyślił schemat kodowania diagramów.
 Opiszemy później jego ulepszenie, kod Dowkera-Thistlethwaite'a.
 
 \subsubsection{Siedem i mniej skrzyżowań}
 Tait wykorzystując swoją notację podał w~1876 pierwszą tablicę piętnastu węzłów o~mniej niż ośmiu skrzyżowaniach.
 Nie należy traktować tego jako skromny wynik: nie miał on do dyspozycji żadnych twierdzeń topologicznych do odróżniania węzłów.
-Onieśmielony przez liczbę możliwych ciągów dla kolejnych indeksów skrzyżowaniowych, powstrzymał się przed rozszerzaniem swojej tablicy.
+Onieśmielony przez liczbę możliwych kodów dla kolejnych indeksów skrzyżowaniowych, powstrzymał się przed rozszerzaniem swojej tablicy.
 To właśnie grupowanie diagramów przedstawiających ten sam węzeł, a~nie samo szukanie wszystkich możliwych diagramów, sprawia trudność.
 
-Aby sobie pomóc, Tait znalazł lokalną modyfikację diagramu, która nie zmienia indeksu skrzyżowaniowego, znaną obecnie\footnote{Dla Taita ,,flype'' było innym ruchem, prostyą transformacją związaną ze zmianą wyboru nieskończonego obszaru, ale mało kto teraz o tym pamięta. Dowiedzieliśmy się o tym z pracy \cite{menasco93}, której autorzy dowiedzieli się o tym od Claude'a Webera.} jako flype.
+Aby sobie pomóc, Tait znalazł lokalną modyfikację diagramu, która nie zmienia indeksu skrzyżowaniowego, znaną obecnie\footnote{Dla Taita ,,flype'' było innym ruchem, prostą transformacją związaną ze zmianą wyboru nieskończonego obszaru, ale mało kto teraz o tym pamięta. Dowiedzieliśmy się o tym z pracy \cite{menasco93}; Menasco i~Thistlethwaite dowiedzieli się o~tym od Claude'a Webera.} jako flype.
+\index[persons]{Menasco, William}%
+\index[persons]{Thistlethwaite, Morwen}%
+\index[persons]{Weber, Claude}
 \index{flype}
 Flype to stary szkocki czasownik oznaczający ,,wykręcać na drugą stronę''.
 
@@ -45,11 +50,13 @@ Flype to stary szkocki czasownik oznaczający ,,wykręcać na drugą stronę''.
 \]
 \end{comment}
 
-Inną taktykę szukania węzłów przyjał wielebny Thomas Kirkman\footnote{Oto jak Kirkman definiował węzeł w stu słowach: ,,By a Knot of $n$ crossings, I understand a reticulation of any number of meshes of two or more edges, whose summits, all tessaraces, are each a single crossing, as when you cross your forefingers straight or slightly curved, so as not to linK them, and such meshes that every thread is either seen, when the projection of the Knot with its $n$ crossings and no more is drawn in double lines, or conceived by the reader of its course when drawn in single line, to pass alternately under and over the threads to which it comes at successive crossings.''}: zaczynał od małego zbioru "nieredukowalnych" rzutów, do których systematycznie dokładał skrzyżowania.
+Inną taktykę szukania węzłów przyjał wielebny Thomas Kirkman\footnote{Oto jak Kirkman definiował węzeł w stu słowach: ,,By a Knot of $n$ crossings, I understand a reticulation of any number of meshes of two or more edges, whose summits, all tessaraces, are each a single crossing, as when you cross your forefingers straight or slightly curved, so as not to link them, and such meshes that every thread is either seen, when the projection of the Knot with its $n$ crossings and no more is drawn in double lines, or conceived by the reader of its course when drawn in single line, to pass alternately under and over the threads to which it comes at successive crossings.''}: zaczynał od małego zbioru "nieredukowalnych" rzutów, do których systematycznie dokładał skrzyżowania.
+\index[persons]{Kirkman, Thomas}%
 % wielebny => Adams, s. 31
 Tait przeczytał pracę Kirkmana, po czym w~latach 1884/1885 opracował listę węzłów alternujących o~mniej niż 11 skrzyżowaniach.
 % Kirkman miał wtedy 78 lat!
 Tuż przed oddaniem jej do druku odkrył inny spis węzłów stworzony przez amerykańskiego naukowca Charlesa Little'a.
+\index[persons]{Little, Charles}%
 Znalazł wtedy jeden duplikat u~siebie, natomiast u Little'a jeden duplikat i~jedno pominięcie.
 
 \subsubsection{Dziesięć skrzyżowań}
@@ -59,19 +66,27 @@ Dowód znaleziono wiele lat później, niealternujące są $8_{19}$, $8_{20}$, $
 Patrz twierdzenie \ref{prp:bankwitz}.
 Little pracował przez sześć lat (1893 -- 1899) i~znalazł 43 niealternujące węzły o~10 skrzyżowaniach.
 Żadnego nie pominął, ale trafił mu się jeden duplikat.
+\index[persons]{Little, Charles}%
 
 W kolejnych dziesięcioleciach nie nastąpił znaczący postęp, zarówno w~rozszerzaniu tablic jak i~sprawdzaniu tych już istniejących.
 Haseman \cite{haseman18} w~1918 roku znalazła achiralne węzły o~12 (takich jest 54, praca Haseman podaje 61, ponieważ zawiera 7 duplikatów) i~14 skrzyżowaniach.
+\index[persons]{Haseman, Mary}%
 % AMPHICHEIRALS ACCORDING TO TAIT AND HASEMAN
 W 1927 roku Alexander z~Briggsem przy użyciu pierwszej grupy homologii rozgałęzionego nakrycia cyklicznego (!) potrafili odróżnić od siebie dowolne dwa węzły (z~pominięciem 3 par) o~co najwyżej 9 skrzyżowaniach \cite{briggs27}.
+\index[persons]{Briggs, ?}%
+\index[persons]{Alexander, James}%
 Reidemeister poradził sobie z~tymi wyjątkami w~1932 roku, korzystając z~indeksu zaczepienia i~homomorfizmów z~grupy węzła na grupy diedralne \cite{reidemeister32}.
+\index[persons]{Reidemeister, Kurt}%
 % branch curves in irregular covers associated to homomorphisms of the knot group onto dihedral groups
 
 \subsubsection{Jedenaście skrzyżowań}
 Dopiero John Conway w~latach sześćdziesiątych minionego wieku znalazł pierwsze węzły o~mniej niż 12 skrzyżowaniach oraz wszystkie sploty o~mniej niż 11 skrzyżowaniach w~oparciu o~pomysły Kirkmana.
+\index[persons]{Conway, John}%
 % An enumeration of knots and links, 1970.
 Zajęło mu to jedynie kilka godzin!
 Metoda Conwaya jest tak dobra, że używamy jej po dziś dzień, na przykład Tuzun, Sikora zweryfikowali dzięki niej hipotezę \ref{con:jones} do 24 skrzyżowań.
+\index[persons]{Tuzun, ?}%
+\index[persons]{Sikora, ?}%
 
 Conway znalazł 1 duplikat oraz 11 pominięć w~starych tablicach Little'a, ale sam popełnił 4 pominięcia.
 Przeoczył między innymi słynny duplikat w~niealternującej tablicy, parę Perko.
@@ -81,6 +96,7 @@ Przeoczył między innymi słynny duplikat w~niealternującej tablicy, parę Per
 Przyczyną było prawdopodobnie to, że dwa diagramy miały różny spin:
 % DICTIONARY;2-pass move;2-przejście;-
 Little błędnie twierdził, że spin minimalnego diagramu jest niezmiennikiem, gdyż błędnie założył, że 2-przejścia oraz flype wystarczają do zmiany dowolnego minimalnego diagramu w~inny.
+\index[persons]{Little, Charles}%
 
 Naprawienie błędu tego błędu zajęło chwilę: pominęcia w~tablicy Conwaya znalazł Caudron około 1980 roku \cite{caudron82}.
 \index[persons]{Caudron, Alain}%
@@ -94,11 +110,12 @@ Z~nielicznymi niealgebraicznymi węzłami do 11 skrzyżowań poradził sobie Per
 % through hand calculation of homological invariants (in particular linking invariants) of finite branched coverings for those knots that are not covered by Bonahon and Siebenmann’s result described in Subsection 4.1. See [268] for an interesting historical note.
 
 \subsubsection{Trzynaście skrzyżowań}
-Na początku lat osiemdziesiątych Dowker i~Thistlethwaite \cite{dowker83} stabularyzowali z~pomocą komputera węzły do 13 skrzyżowań.
+Na początku lat osiemdziesiątych ubiegłego wieku Dowker i~Thistlethwaite \cite{dowker83} z~pomocą komputera stablicowali węzły do 13 skrzyżowań.
 \index[persons]{Dowker, Clifford}%
 \index[persons]{Thistlethwaite, Morwen}%
 Przez blisko dekadę nic się nie działo, aż wreszcie grupa studentów wygrała dostęp do superkomputera Cray.
 Razem z~Hoste znaleźli alternujące węzły do 14 skrzyżowań, jednocześnie sprawdzając istniejące tabele Thistlethwaite'a.
+% TODO: B. Arnold, M. Au, C. Candy, K. Erdener, J. Fan, R. Flynn, J. Hoste, R.J. Muir, and D. Wu, Tabulating alternating knots through 14 crossings
 \index[persons]{Hoste, Jim}%
 
 \subsubsection{Szesnaście skrzyżowań}
@@ -114,15 +131,20 @@ Artykuł \cite{thistlethwaite98} zawiera informację, że jego autorzy szukają 
 \index[persons]{Thistlethwaite, Morwen}%
 \index[persons]{Weeks, Jeff}%
 W 2004 Flint, Rankin oraz Schermann \cite{rankin04} znaleźli alternujące węzły do 22 skrzyżowań (obliczenia na stacji roboczej z procesorem Xeon oraz 3 gigabajtami pamięci zajęły około 45 godzin), po czym długo nie działo się nic.
-\index[persons]{Flint, ?}%
-\index[persons]{Rankin, ?}%
-\index[persons]{Schermann, ?}%
+\index[persons]{Flint, Ortho}%
+\index[persons]{Rankin, Stuart}%
+\index[persons]{Schermann, John}%
 Dopiero w 2020 Burton \cite{burton20} stablicował węzły pierwsze do 19 skrzyżowań: \emph{,,Here we extend the tables from 16 to 19 crossings, with a total of 352 152 252 distinct non-trivial prime knots.''}
-\index[persons]{Burton, ?}%
+\index[persons]{Burton, Benjamin}%
 
 \subsubsection{Sploty}
 Cerf \cite{cerf98} pisze, że Conway znalazł wcześniej sploty do 10 skrzyżowań \cite{conway70}, zaś Caudron \cite{caudron82} poprawił wynik do 11 skrzyżowań, ale wszystkie te sploty są niezorientowane, a~naukowcy potrzebują zorientowanych.
+\index[persons]{Cerf, Corinne}%
+\index[persons]{Conway, John}%
+\index[persons]{Caudron, Alain}%
 Problem został zaadresowany najpierw przez Dolla i Hoste'a \cite{doll91}, którzy wydali na mikrofilmie tablicę splotów zorientowanych do 9 skrzyżowań, ale ich diagramy nie zawsze pasowały do tych narysowanych w~książce Rolfsena.
+\index[persons]{Doll, Helmut}%
+\index[persons]{Hoste, Jim}%
 
 Cerf obiecuje pogodzić punkty widzenia Rolfsena oraz Dolla/Hoste'a i tworzy własną tablicę zorientowanych splotów do 11 skrzyżowań.
 Sprawdziła jednocześnie poprawność starszych tablic Conwaya -- i nie znalazła żadnych błędów.
