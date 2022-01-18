@@ -1,0 +1,134 @@
+
+\subsection{Wyznacznik}
+\index{wyznacznik|(}
+\begin{definition}[wyznacznik]
+\label{def:determinant}%
+    Wyznacznikiem splotu nazywamy wyznacznik macierzy kolorującej $A$ bez znaku: $\det K := |\det A_K|$.
+    Za wyznacznik niewęzła przyjmujemy liczbę $1$.
+\end{definition}
+
+Pokażemy później (po poznaniu grupy kolorującej, czyli we wniosku \ref{cor:determinant_invariant}) lub jeszcze później (po wprowadzeniu wielomianu Alexandera, w~dowodzie faktu \ref{alexander_invariance}), że wyznacznik splotu jest dobrze określony: nie zależy on od wyboru etykietowania, minora macierzy oraz diagramu i~że jest niezmiennikiem.
+Teraz ograniczymy się do jego kilku własności.
+
+% Każde $p$-kolorowanie węzła $n$-mostowego jest wyznaczone przez kolory $n$ mostów
+% % To brzmi podejrzanie: więc przestrzeń kolorowań ma wymiar co najwyżej $n$ i~defekt modulo $p$ nie przekracza $\operatorname{br} - 1$.
+% Wnioskujemy stąd, że $(3,3,3)$-precel nie jest dwumostowy.
+
+% \begin{proof}
+%     \emph{Krok pierwszy}.
+%     Pokażemy, że żaden ruch Reidemeistera nie zmienia wyznacznika.
+%     \begin{enumerate}
+%         \item \emph{Ruch $R_1$}. Diagram przed lub po ruchu zawiera co najmniej jedno włókno, które łączy tunel z~mostem pewnego skrzyżowania.
+%         \item \emph{Ruch $R_2$}.
+%         \item \emph{Ruch $R_3$}.
+%     \end{enumerate}
+
+%     \emph{Krok drugi}.
+%     Niech $A_{i,j}$ oznacza minor powstały przez skreślenie $i$-tego wiersza oraz $j$-tej kolumny.
+%     Pokażemy, że wartość wyznacznika nie zależy od wyboru $i$ oraz $j$.
+
+%     Niech $X$ będzie macierzą $k \times k$ złożoną z~samych jedynek.
+%     Suma elementów w~każdej kolumnie oraz każdym wierszu macierzy $A + X$ wynosi $k$, ponieważ znaki równań zostały dobrze wybrane.
+%     Wykonujemy kolejno operacje:
+%     \begin{enumerate}
+%         \item Dodajemy do $i$-tego wiersza sumę pozostałych.
+%         \item Dodajemy do $j$-tej kolumny sumę pozostałych.
+%         Teraz $i$-ty wiersz oraz $j$-ta kolumna zawierają wyrazy $k$ z~wyjątkiem $a_{ij}$, który wynosi $k^2$.
+%         \item Wyciągamy $k$ z~$i$-tego wiersza przed wyznacznik.
+%         \item Odejmujemy $i$-ty wiersz od pozostałych.
+%     \end{enumerate}
+%     Rozwinięcie Laplace'a względem $j$-tej kolumny mówi, że $|\det (A+X)| = k^2 |(-1)^{i+j} \det A_{i,j}|$, co kończy dowód drugiego kroku.
+
+%     \emph{Krok trzeci}.
+%     Pokażemy, że zmiana etykietowania nie zmienia wyznacznika.
+% \end{proof}
+
+\begin{proposition}
+\index{indeks skrzyżowaniowy}%
+\label{prp:bankwitz}%
+    Niech $L$ będzie splotem alternującym.
+    Wtedy $\det L \ge \crossing L$.
+\end{proposition}
+
+Pierwszy niepoprawny dowód pochodzi od Bankwitza \cite{bankwitz30}, który w 1930 roku ograniczył się do węzłów.
+\index[persons]{Bankwitz, Carl}%
+Poprawny dowód pojawił się dopiero trzy dekady później, kiedy Crowell \cite{crowell59} oparł się o~teoriografową pracę Whittneya.
+\index[persons]{Crowell, Richard}%
+\index[persons]{Whittney, ?}%
+Spośród 84 diagramów pierwszych węzłów na końcu podręcznika Reidemeistera, 11 ma niealternujący diagram.
+Crowell pokazał, że 7 z~tych 11 przedstawia niealternujące węzły.
+
+\begin{example}
+    $\det 8_{19} = 3 < 8 = \crossing 8_{19}$, więc węzeł $8_{19}$ jest niealternujący.
+    Podobnie dowodzi się, że $9_{42}$, $10_{124}$, $10_{132}$, $10_{139}$, $10_{140}$, $10_{145}$, $10_{153}$, $10_{161}$, 21 węzłów pierwszych o~11 skrzyżowaniach oraz 75 węzłów pierwszych o~12 skrzyżowaniach nie są alternujące.
+\end{example}
+
+Niealternujących węzłów o 11 (odpowiednio: 12) skrzyżowaniach jest 185 (888), zatem ta prosta nierówność nie daje niesamowitch efektów.
+Ale Crowell znalazł też mocniejsze ograniczenie:
+
+\begin{proposition}
+    Niech $L$ będzie pierwszym, alternującym splotem, który nie jest $(2, n)$-torusowy.
+    Wtedy $\det L + 3 \ge 2 \crossing L$
+\end{proposition}
+
+Wyznacznik jest blisko związany z kolorowaniami.
+
+\begin{lemma}
+    Niech $A$ będzie macierzą $r \times r$ o całkowitych wyrazach.
+    Istnieje niezerowy wektor $x \in (\Z/n\Z)^r$ taki, że $Ax \equiv 0 \mod n$ wtedy i tylko wtedy, gdy liczby $\det A$ oraz $n$ nie są względnie pierwsze.
+\end{lemma}
+
+\begin{proof}
+    Z~algebry liniowej wiemy, że dla pewnych odwracalnych całkowitoliczbowych macierzy $C, R$ macierz $RAC = \operatorname{diag}(a_1, \ldots, a_m)$ jest diagonalna: to postać normalna Smitha.
+    Istnieje odpowiedniość między niezerowymi rozwiązaniami równania $Ax \equiv 0$ oraz $Dy \equiv 0$, mamy bowiem $x \equiv Cy$, zatem bez straty ogólności możemy przyjąć, że macierz $A$ jest diagonalna.
+
+    Istnieje niezerowy wektor $x$ taki, że $Ax \equiv 0 \mod n$ wtedy i tylko wtedy, jeśli istnieją $x_1, \ldots, x_m \in \Z/n\Z$, nie wszystkie zerowe, że dla każdego $i$ mamy $a_ix_i \equiv 0 \mod n$.
+    Oznacza to, że dla pewnego $i$ liczby $a_i, n$ nie są względnie pierwsze.
+    Macierz $A$ jest diagonalna, więc jej wyznacznik ma postać $\det A = \pm |a_1| \cdot \ldots \cdot |a_m|$.
+    Wnioskujemy stąd, że liczby $\det A, n$ także nie są względnie pierwsze.
+\end{proof}
+
+\begin{proposition}
+\label{prp:colour_determinant}%
+    Splot $L$ koloruje się modulo $n$ wtedy i~tylko wtedy, gdy liczby $\det L$ oraz $n$ nie są względnie pierwsze.
+\end{proposition}
+
+\begin{proof}
+    Wybierzmy diagram dla splotu $L$ z uporządkowanymi łukami i skrzyżowaniami.
+    Bez straty ogólności ograniczmy się do tych kolorowań, gdzie $x_0 = 0$.
+    Kolorowanie modulo $n$ istnieje dokładnie wtedy, gdy istnieje niezerowy wektor $(x_1, x_2, \ldots, x_m)$ taki, że $Ax \equiv 0 \mod n$.
+    Na mocy lematu oraz definicji $\det L = |\det A|$, dowód zostaje zakończony.
+\end{proof}
+
+\begin{corollary}
+\index{węzeł!niewidzialny}%
+    Jeżeli wyznacznik splotu $L$ wynosi $\det L = 1$, to splot $L$ jest niewidzialny.
+\end{corollary}
+
+\begin{corollary}
+    Jeżeli wyznacznik splotu $L$ wynosi $\det L = 0$, to splot $L$ koloruje się modulo wszystkie liczby naturalne.
+\end{corollary}
+
+\begin{corollary}
+\index{splot!rozszczepialny}%
+    Jeśli splot $L$ jest rozszczepialny, to jego wyznacznik wynosi $0$.
+\end{corollary}
+
+Poniższy problem pochodzi od Stojmenowa.
+\index[persons]{Stojmenow, Aleksander}%
+
+\begin{conjecture}[problem 12.25 w \cite{ohtsuki02}]
+    Niech $n$ będzie nieparzystą sumą dwóch kwadratów.
+    Czy istnieje pierwszy, alternujący, achiralny węzeł o~wyznaczniku $n$?
+\end{conjecture}
+
+Oto, co już wiemy.
+Dla $n = 1, 9, 49$ oraz być może pewnej liczby $n > 2000$ niebędącej kwadratem, taki węzeł nie istnieje.
+Jeśli istnieje achiralny węzeł o wyznaczniku $n$, to $n$ jest nieparzystą sumą dwóch kwadratów (Hartley \cite{hartley79}).
+\index[persons]{Hartley, Richard}%
+Implikacja odwrotna także jest prawdziwa, od węzła można dodatkowo żądać bycia pierwszym lub alternującym, ale nie zawsze obydwu warunków jednocześnie.
+Patrz też \cite{stoimenow05}.
+\index[persons]{Stojmenow, Aleksander}%
+
+\index{wyznacznik|)}
+

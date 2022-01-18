@@ -1,0 +1,78 @@
+
+\subsection{Macierz Goeritza}
+\index{macierz!Goeritza|(}
+Istnieje jeszcze jedna kombinatoryczna metoda badania węzłów, która prowadzi między innymi do pojęcia wyznacznika.
+Tuż przed wojną Lebrecht Goeritz pokazał, jak diagram węzła wyznacza specjalną formę kwadratową.
+\index[persons]{Goeritz, Lebrecht}%
+Nieco później Trotter zmodyfikował jego pomysł, by sygnatura formy stanowiła niezmiennik splotów.
+\index[persons]{Trotter, Hale}%
+Gordon, Litherland ujednolicili dwa wyżej wymienione podejścia w~pracy \cite{litherland81}.
+\index[persons]{Litherland, ?}%
+\index[persons]{Gordon, Cameron}%
+My opiszemy krótko macierz Goeritza.
+
+Ustalmy uszachowiony diagram $D$ dla splotu $L$.
+\index{uszachowienie}%
+Oznaczmy białe obszary $0, 1, \ldots, m$, przy czym $0$ jest obszarem nieograniczonym.
+Przydzielmy skrzyżowaniom znaki:
+\begin{comment}
+\begin{figure}[H]
+    \begin{minipage}[b]{.48\linewidth}
+    \[
+        \LargePlusCrossingChessboard
+    \]
+    \end{minipage}
+    \begin{minipage}[b]{.48\linewidth}
+    \[
+        \LargeMinusCrossingChessboard
+    \]
+    \end{minipage}
+\end{figure}
+\end{comment}
+
+\begin{definition}
+    Macierz Goeritza powstaje przez skreślenie z~macierzy $G_+$ jednego wiersza oraz jednej kolumny:
+    \begin{equation}
+        G_+=\begin{pmatrix}
+        G_{00} & \cdots & G_{0m} \\
+        \vdots & \ddots & \vdots \\
+        G_{m0} & \cdots & G_{mm}
+        \end{pmatrix},
+    \end{equation}
+    gdzie jeśli $i\neq j$, to $G_{ij}$ jest sumą znaków skrzyżowań przyległych do $i$ oraz $j$.
+    Dla $i = j$, $G_{ii}$ jest minus sumą znaków skrzyżowań wokół $j$-tego obszaru.
+\end{definition}
+
+
+Macierz $G_+$ posiada dwie własności pozwalające wykryć proste błędy rachunkowe: jest symetryczna, a~jej kolumny i~wiersze sumują się do zera.
+Jest przy tym zazwyczaj mniejsza od macierzy kolorującej.
+
+\begin{proposition}
+    Niech $K$ będzie ustalonym węzłem, $G$ jego macierzą Goeritza, zaś $A$ macierzą kolorującą.
+    Z~dokładnością do znaku, obie macierze mają ten sam wyznacznik: $\det G = \pm \det A$.
+\end{proposition}
+
+Nie możemy niestety podać dowodu tego faktu, wymaga bowiem znajomości topologii algebraicznej, której wolelibyśmy nie zakładać.
+Macierz Goeritza nie jest niezmiennikiem splotów.
+Mamy jednak:
+
+\begin{proposition}
+    Niech $D_1, D_2$ będą dwoma diagramami ustalonego splotu.
+    Wtedy macierz Goeritza $G_2$ można otrzymać z macierzy $G_1$ w skończonej liczbie kroków:
+    \begin{itemize}
+        \item zamiany macierzy $G$ na $PGP^{-1}$, gdzie $P$ i~$P^{-1}$ mają całkowite wyrazy
+        \item dopisania lub skreślenia $\pm 1$ na końcu przekątnej (dla węzłów) albo $-1, 0, 1$ (dla splotów).
+    \end{itemize}
+\end{proposition}
+
+\begin{proof}
+\index[persons]{Goeritz, Lebrecht}%
+\index[persons]{Kneser, Martin}%
+\index[persons]{Kyle, Roger}%
+\index[persons]{Puppe, Dieter}%
+    Patrz prace: Goeritza \cite{goeritz33} i późniejsze, Knesera, Puppego \cite{kneser53} oraz Kyle'a \cite{kyle54}.
+    % znalazłem te dowody w https://arxiv.org/pdf/0909.1118.pdf
+\end{proof}
+
+\index{macierz!Goeritza|)}
+
