@@ -141,17 +141,18 @@ Jak piszą Coward, Lackenby w \cite{coward11}, istnieje funkcja $f \colon \N \ti
 \index[persons]{Coward, Alexander}%
 \index[persons]{Lackenby, Marc}%
 Wynika to z oczywistego faktu, że istnieje skończenie wiele spójnych diagramów o danej liczbie skrzyżowań oraz twierdzenia Reidemeistera.
-Okazuje się jednak, że od funkcji $f$ można żądać, by była obliczalna i faktycznie, główny wynik \cite{coward11} orzeka, że
+Okazuje się jednak, że od funkcji $f$ można żądać, by była obliczalna
+(a to jest chyba równoważne istnienia algorytmu rozpoznającego, czy dwa diagramy przedstawiają jeden węzeł)
+% http://people.dm.unipi.it/martelli/Cortona/Lackenby.pdf 7 of 90
+i faktycznie, główny wynik \cite{coward11} orzeka, że
 \begin{equation}
     f(n_1, n_2) = 2^{2^{\ldots^{2^{n_1 + n_2}}}}
 \end{equation}
 jest taką funkcją.
-Piętrowa potęga liczy sobie aż $10^{1000000 (n_1 + n_2)}$ warstw, ale przynajmniej jest jawnie zdefiniowana.
-Natomiast jeżeli $n_2 = 0$, czyli drugi diagram przedstawia niewęzeł, wystarcza $(236n_1)^{11}$ ruchów, to świeższy wynik samego Lackenby'ego \cite{lackenby15}.
+Piętrowa potęga liczy sobie aż $10^{1000000 (n_1 + n_2)}$ warstw.
 
-\begin{tobedone}
-    Przedstawić rozumowanie (piramidka z węzłami), dlaczego to nie jest takie oczywiste.
-\end{tobedone}
+Natomiast jeżeli $n_2 = 0$, czyli drugi diagram przedstawia niewęzeł, ,,wystarcza'' $(236n_1)^{11}$ ruchów, przy czym liczba skrzyżowań podczas transformacji nigdy nie przekracza $49c^2$: to świeższy wynik samego Lackenby'ego \cite{lackenby15}.
+%=% W lackenby15 cytuje Hassa, Lagariasa z 2001 -- podobne, ale gorsze ograniczenie górne
 
 Hayashi \cite{hayashi05} dowiódł, że liczbę ruchów Reidemeistera potrzebnych, by rozszczepić splot można ograniczyć z góry na podstawie indeksu skrzyżowaniowego.
 \index[persons]{Hayashi, ?}%
