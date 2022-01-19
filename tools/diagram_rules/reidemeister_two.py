@@ -42,8 +42,8 @@ diagram_commands["ReidemeisterTwoLinkingA"] = {
         "\\strand[thick] (-2.5, -5) to [in=down, out=up] (2.5, 0);",
         "\\strand[thick] (2.5, 5) to [in=up, out=down] (-2.5, 0);",
         "\\strand[thick] (2.5, -5) to [in=down, out=up] (-2.5, 0);",
-        "\\node[blue] at (-4,2.5)[left] {$a$};",
-        "\\node[blue] at (-4,-2.5)[left] {$-a$};",
+        "\\node[first_colour] at (-4,2.5)[left] {$a$};",
+        "\\node[first_colour] at (-4,-2.5)[left] {$-a$};",
     ],
     "sizes": ["MedLar"],
 }
