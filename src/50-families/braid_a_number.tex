@@ -28,6 +28,9 @@ Ohyama \cite{ohyama93} pokazał:
 
 Dowód korzysta z grafu Seiferta splotu.
 Wśród pierwszych węzłów do 10 skrzyżowań mamy równość dziesięć razy: dla $4_1$, $6_1$, $8_1$, $8_3$, $8_{12}$, $10_1$, $10_3$, $10_{13}$, $10_{35}$, $10_{58}$.
+%=% PANDAS
+%=% >>> knots = [x for x in d.query('crossing_number == 2 * braid_index - 2 and crossing_number < 11')["name"]]; print(len(knots), knots)
+%=% 10 ['4_1', '6_1', '8_1', '8_3', '8_12', '10_1', '10_3', '10_13', '10_35', '10_58']
 
 \begin{proposition}[nierówność Mortona-Franksa-Williamsa]
     Niech $L$ będzie zorientowanym splotem, zaś $\operatorname{span}_\alpha$ różnicą między największym i najmniejszym stopniem zmiennej $\alpha$ wielomianu HOMFLY zmiennych $\alpha, z$.
