@@ -4,8 +4,8 @@
 \index{węzeł!Lissajous|(}%
 Węzły Lissajous zdefiniowali Bogle, Hearst, Jones i Stoiłow \cite{bogle94} jako węzły, których pewien diagram jest krzywą Lissajous.
 \index[persons]{Bogle, Miles}%
-\index[persons]{Hearst, ?}%
-\index[persons]{Jones, ?}%
+\index[persons]{Hearst, John}%
+\index[persons]{Jones, Vaughan}%
 \index[persons]{Stoiłow, Luben}%
 
 \begin{definition}[węzeł Lissajous]
@@ -23,6 +23,8 @@ Bez straty ogólności możemy założyć, że $\varphi_z = 0$.
 Dodatkowo stałe $n_x, n_y, n_z$ muszą być parami względnie pierwsze.
 
 Wiele węzłów jest węzłami Lissajous:
+
+% TODO: przepisać wszystkie!
 
 \begin{example}
     Dla $n_x = 3$, $n_y = 2$, $n_z = 7$, $\varphi_x = 7/10$, $\varphi_y = 2/10$ mamy węzeł $5_2$.
@@ -51,9 +53,9 @@ Jest wiele węzłów Lissajous:
         \varphi_y = \frac{\pi}{n_z}, \quad
         \varphi_z = 0
     \end{equation}
+    posiada sygnaturę $\sigma = a+b-ab-1$ i genus $g = -\sigma/2$.
 \index{sygnatura}%
 \index{genus}%
-    posiada sygnaturę $\sigma = a+b-ab-1$ i genus $g = -\sigma/2$.
 \end{proof}
 
 Węzły Lissajous są bardzo symetryczne.
@@ -92,7 +94,7 @@ To nakłada ograniczenia na wielomian Alexandera.
     W przeciwnym razie możemy powołać się na fakt \ref{prp:lissajous_two_periodic} oraz \ref{prp:murasugi_periodic} (z $n=2^1$ oraz $\lambda = 1$).
     Dostaniemy równość
     \begin{equation}
-        \label{eqn:lissajous_squared}
+\label{eqn:lissajous_squared}%
         \alexander_K(t) \equiv \alexander^2_{J}(t) \mod 2,
     \end{equation}
     która kończy dowód.
