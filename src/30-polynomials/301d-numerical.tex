@@ -1,7 +1,7 @@
 
 \subsection{Wielomian Alexandera a niezmienniki numeryczne}
 \begin{proposition}
-    \label{prp:alexander_determinant}
+\label{prp:alexander_determinant}%
     Niech $L$ będzie zorientowanym splotem.
     Wtedy $|\alexander_L(-1)| = \det L$.
 \end{proposition}
@@ -13,12 +13,12 @@
 \begin{proposition}
     Wielomian Alexandera zadaje ograniczenie na indeks skrzyżowaniowy:
     \begin{equation}
-        \deg \alexander_K(t) < \crossing K.
+        \operatorname{span} \alexander_K(t) < \crossing K.
     \end{equation}
 \end{proposition}
 
 Być może istnieje bezpośredni dowód tej nierówności, ale jedyne uzasadnienie, jakie znam, opiera się na fakcie \ref{prp:alexander_genus} oraz wniosku \ref{cor:crossing_genus} -- czyli własnościach genusu.
-\index{genus}
+\index{genus}%
 
 \begin{proposition}
     Tylko skończenie wiele węzłów alternujących może mieć ten sam wielomian Alexandera.
@@ -30,6 +30,8 @@ Być może istnieje bezpośredni dowód tej nierówności, ale jedyne uzasadnien
     Z faktu \ref{prp:bankwitz} wynika, że indeks skrzyżowaniowy węzłów $K_n$ jest wspólnie ograniczony: $c_k \le \det K_n = \det K$.
     To prowadzi do sprzeczności: węzłów o~danym indeksie skrzyżowaniowym jest tylko skończenie wiele.
 \end{proof}
+
+Wielomian Alexandera nie nakłada żadnych ograniczeń na liczbę gordyjską, wspominamy o~tym w dowodzie faktu \ref{balanced_iff_four_conditions}.
 
 % koniec podsekcji Wielomian Alexandera a niezmienniki numeryczne
 
