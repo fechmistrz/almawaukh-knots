@@ -1,0 +1,102 @@
+
+\subsubsection{Genus kanoniczny, genus wolny}
+% DICTIONARY;free;wolny;genus
+% DICTIONARY;canonical;kanoniczny;genus
+% DICTIONARY;genus;genus;-
+Czy w definicji genusu można ograniczyć się do tych powierzchni Seiferta, które pochodzą od algorytmu Seiferta?
+Niestety, poza pewnymi wyjątkami, nie.
+Zanim przekonamy się, dlaczego tak jest, zdefiniujmy jeszcze dwa niezmienniki.
+
+\begin{definition}[genus kanoniczny]
+\index{genus!kanoniczny}%
+    Niech $K$ będzie węzłem.
+    Najmniejszy z genusów powierzchni Seiferta węzła $K$, które pochodzą z~algorytmu Seiferta, nazywamy genusem klasycznym i~oznaczamy symbolem $\operatorname{g_c} K$ lub krótko $g_c$.
+\end{definition}
+
+Stojmenow \cite{stoimenow08} opisał diagramy węzłów o~kanonicznym genusie równym 2.
+\index[persons]{Stojmenow, Aleksander}%
+Część z~jego wyników przenosi się na genus 3.
+Jak sam pisze, sklasyfikowane wcześniej węzły o~genusie (kanonicznym) 1 okazały się być zbyt wąską klasą.
+
+Pod koniec lat pięćdziesiątych Crowell i~Murasugi niezależnie zauważyli, że algorytm Seiferta zastosowany do alternującego diagramu zawsze daje powierzchnię o~minimalnej powierzchni.
+\index[persons]{Crowell, ?}%
+\index[persons]{Murasugi, Kunio}%
+Ich kombinatoryczne uzasadnienie było dość zawiłe, elementarny dowód podał Gabai w \cite{gabai86}.
+\index[persons]{Gabai, David}%
+
+Dubel trójlistnika ma genus równy $1$, ale algorytm Seiferta zastosowany wobec węzła produkuje powierzchnie o genusie co najmniej $3$, jak przewiduje ograniczenie znalezione przez Mortona w \cite[twierdzenie 2]{morton86}:
+
+\begin{proposition}
+    Niech $P(v, z)$ będzie wersją wielomianu HOMFLY spełniającą zależność
+    \begin{equation}
+        \frac 1v P_+ - vP_- = zP_0.
+    \end{equation}
+    Wtedy $M = \max \deg_z P(v, z) \le 2g_c$.
+\end{proposition}
+
+Nierówność Mortona jest równością dla wielu klas węzłów, w tym
+\index{nierówność Mortona}%
+alternujących (Crowell, Murasugi),
+\index[persons]{Crowell, ?}%
+\index[persons]{Murasugi, Kunio}%
+\index{węzeł!alternujący}%
+jednorodnych\footnote{Uogólnienie węzłów alternujących.} (Cromwell w \cite{cromwell89}),
+\index{węzeł!jednorodny}%
+\index[persons]{Cromwell, Peter}%
+whiteheadowskich dubli węzłów dwumostowych (Nakamura w \cite{nakamura06}, Tripp w \cite{tripp02}) albo
+\index{dubel Whiteheada}%
+\index{węzeł!dwumostowy}%
+\index[persons]{Nakamura, Takuji}%
+\index[persons]{Tripp, ?}%
+precli (Brittenham, Jensen \cite{brittenham06}).
+\index[persons]{Brittenham, Mark}%
+\index[persons]{Jensen, ?}%
+\index{precel}%
+Stojmenow pokazał, że staje się równością dla węzłów o co najwyżej 12 skrzyżowaniach i znalazł przykład węzła, dla którego jest ostra.
+\index[persons]{Stoimenow, Alexander}%
+
+\begin{definition}[genus wolny]
+\index{ciało z rączkami}%
+\index{genus!wolny}%
+    Niech $K$ będzie węzłem.
+    Minimalny genus spośród powierzchni Seiferta węzła $K$, których dopełnienie w 3-sferze jest ciałem z rączkami, nazywamy genusem wolnym i~oznaczamy $g_f$.
+\end{definition}
+
+Dopełnienie powierzchni Seiferta jest zawsze ciałem z rączkami, więc mamy oczywiste nierówności
+\begin{equation}
+    g \le g_f \le g_c.
+\end{equation}
+Jak duża może być różnica między kolejnymi genusami?
+Już Kirby \cite[problem 1.20a]{kirby78} chciał znać oszacowania różnicy $g_f - g$.
+Morton \cite{morton86} pokazał, że genus pewnych węzłów nie jest realizowany przez żaden diagram do którego stosuje się algorytm Seiferta, choćby $10_{165}$.
+Moriah, matematyk izraelski, rozwiązał problem Kirby'ego dekadę później:
+
+\begin{proposition}
+    Niech $K$ będzie węzłem, $D_k(K)$ jego dublem Whiteheada z $k \neq 0$ skręceniami, zaś $B_n(K)$ to $n$-krotne nakrycie cykliczne sfery $S^3$ rozgałęzione nad węzłem $K$.
+    Jeżeli ranga pierwszej grupy homologii $B_{|4k+1|}(K)$ wynosi $r$, to
+    \begin{equation}
+        g_f(D_k(K)) \ge \frac {2r-1} {|8k+2|}.
+    \end{equation}
+\end{proposition}
+
+\begin{proof}
+    Praca \cite{moriah87}.
+    Dowód opiera się na chirurgii węzłów i splotów w sferze $S^3$.
+\end{proof}
+
+\begin{corollary}
+    Niech $K$ bedzie sumą spójną $n$ trójlistników, połóżmy $k = -1$.
+    Wtedy pierwsza grupa homologii ma rangę $r = 2n$ i~genus wolny jest nieograniczony
+    \begin{equation}
+        g_f(D_{-1}(3_1^n)) \ge \frac {4n-1} {6},
+    \end{equation}
+    podczas gdy zwykły genus to $g(D_{-1}(3_1^n)) = 1$.
+\end{corollary}
+
+Kawauchi \cite{kawauchi94} zbadał węzeł $K_m$, sumę spójną $m$ kopii skręconego whiteheadowskiego dubla trójlistnika, i policzył, że różnica $g_c(K_m) - g(K_m)$ wynosi $2m$.
+Wreszcie Kobayashi oraz Kobayashi \cite{kobayashi96} wskazali nieskończoną rodzinę węzłów nieograniczonego genusu, dla której
+\begin{equation}
+    g_c(K) = \frac 32 g_f(K) = 2g(K).
+\end{equation}
+% znam ich ze Stojmenow - Knots of (canonical) genus two
+

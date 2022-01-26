@@ -1,0 +1,45 @@
+
+\subsubsection{Ograniczanie genusu z góry}
+Z góry genus ograniczony jest przez kilka klasycznych niezmienników numerycznych.
+Zanim to pokażemy, przytoczymy techniczny lemat udowodniony przez Yamadę (\cite{yamada87}):
+\index[persons]{Yamada, Shuji}%
+% Morton MathSciNet: "The proof uses an ingenious direct algorithm to alter the projection without changing the number of Seifert circles"
+
+\begin{proposition}
+    \label{prp:seifert_circles_braid}
+    Niech $L$ będzie splotem, zaś $\operatorname{s} L$ minimalną liczbą okręgów Seiferta, które dostajemy ze wszystkich możliwych diagramów splotu $L$.
+    Wtedy $\operatorname{s} L = \braid L$ jest równe indeksowi warkoczowemu.
+\index{indeks warkoczowy}%
+\end{proposition}
+
+Powyższe stwierdzenie występuje bez dowodu (bez?) w \cite[s. 17]{kawauchi96}.
+
+\begin{proposition}
+    Niech $L$ będzie splotem.
+    Wtedy $\crossing L - \braid L - \operatorname{\mu} L + 2 \ge 2 \genus L$.
+\end{proposition}
+
+\begin{proof}
+    Ustalmy minimalny diagram $D$ dla splotu $L$ i zastosujmy do niego algorytm Seiferta.
+    Dostaniemy tak $s$ okręgów Seiferta oraz powierzchnię o genusie $g$.
+    Fakt \ref{prp:seifert_euler_characteristics} mówiący, że $\chi = s - c$, można przekształcić do
+    \begin{equation}
+        g = \frac{c + 2 - s - \mu(K)}{2}.
+    \end{equation}
+    Z~minimalności diagramu wynika, że $c = \crossing L$.
+    Fakt \ref{prp:seifert_circles_braid} mówi, że $s \ge \braid L$.
+    Nierówność $g \ge \genus L$ wynika z~definicji genusu.
+    Z powyższych rozważań wynika, że
+    \begin{equation}
+        \crossing L + 2 \ge 2 \genus L + \braid L + \operatorname{\mu} L,
+    \end{equation}
+    a to jest równoważnie nierówności, której prawdziwości dowodzimy.
+\end{proof}
+
+\begin{corollary}
+    \label{cor:crossing_genus}
+    Niech $K$ będzie węzłem.
+    Wtedy $\crossing K \ge 2 \genus K$.
+\index{indeks skrzyżowaniowy}
+\end{corollary}
+
