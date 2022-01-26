@@ -1,7 +1,28 @@
 
 \subsection{Różniczki Foxa (definicja trzecia)}
-Sekcja w przygotowaniu\footnote{Patrz \url{https://math.berkeley.edu/~hutching/teach/215b-2004/yu.pdf}.}.
-% TODO: różniczki Foxa a wielomian Alexandera
+% Na podstawie https://math.berkeley.edu/~hutching/teach/215b-2004/yu.pdf ?
+\begin{tobedone}
+$\frac {\partial}{\partial x_i} 1 = 0$ oraz $\frac{partial}{\partial x_i} = \delta_{ij}$ oraz $\frac{\partial}{\partial x_i} x_j^{-1} = - \delta_{ij} x^{-1}_j$.
+Mamy też $\frac{\partial}{\partial x_i} ux_j = \frac{\partial}{\partial x_i}u + u \frac{\partial}{\partial x_i} x_j$
+Wolna pochodna to odwzorowanie $F = (x_1, \ldots, x_n) \to \Z[F]$.
+\end{tobedone}
+
+\begin{tobedone}
+Niech $G = \pi_1(X)$.
+Istnieje homomorfizm $\phi \colon F \to G$ który można przedłużyć do $\Z[F] \to \Z[G]$.
+Niech $\psi \colon \Z[G] \to \Lambda = \Z[t, 1/t]$ tak, że $\psi(x_i) = t$.
+$\psi$ jest abelianizacją $\Z[G]$ i $\psi(G)$ jest nieskończona, cykliczna.
+Z każdą prezentacją grupy $G$ o $n$ zmiennych i $n-1$ relacjach można związać macierz $(n-1) \times n$ -- jakobian -- tak, że jej $ij$-ty wyraz to $\psi\phi(\partial x_i / \partial x_j)$.
+Ideał generowany przez minory $(n-1) \times (n-1)$ to ideał Alexandera.
+Można pokazać przy użyciu tw. Tietzego, że jest niezmiennikiem węzłów i nie zależy od prezentacji grupy.
+% 3 43-46
+% 4 126-127
+\end{tobedone}
+
+\begin{tobedone}
+Pierwsza grupa homologii okręgu to $\Z$, jest abelianizacją grupy węzła.
+Ideał jest zatem główny, a jego generatory nazywa się wielomianem Alexandera.
+\end{tobedone}
 
 % koniec podsekcji Różniczki Foxa
 
