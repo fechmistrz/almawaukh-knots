@@ -6,9 +6,9 @@ Chociaż klamra Kauffmana to użyteczne narzędzie podczas dowodzenia różnych 
 Na szczęście wtedy z pomocą przychodzi:
 
 \begin{definition}
+\index{relacja kłębiasta}%
     Niech $L$ będzie zorientowanym splotem.
     Wielomian Laurenta $\jones_L(t) \in \Z[t^{\pm 1/2}]$, który spełnia relację kłębiastą
-\index{relacja kłębiasta}%
     \begin{equation}
         t^{-1} \jones(L_+) - t\jones(L_-) + (t^{-1/2} - t^{1/2}) \jones(L_0) = 0
     \end{equation}
@@ -45,7 +45,6 @@ Chcemy pokazać, że
 \end{align}
 
 Ale $w(L_\pm) = w(L_0)\pm 1$, zatem to jest równoważne z
-
 \begin{equation}
     -A \bracket{L_+} +
     A^{-1} \bracket{L_-} +
@@ -53,13 +52,10 @@ Ale $w(L_\pm) = w(L_0)\pm 1$, zatem to jest równoważne z
 \end{equation}
 
 Z definicji klamry Kauffmana wnioskujemy, że
-
-\begin{equation}
-    \begin{cases}
-        \bracket{L_+} = A\bracket{L_0} + A^{-1}\bracket{L_\infty} \\
-        \bracket{L_-} = A\bracket{L_\infty} + A^{-1}\bracket{L_0}
-    \end{cases}
-\end{equation}
+\begin{align}
+    \bracket{L_+} & = A\bracket{L_0} + A^{-1}\bracket{L_\infty} \\
+    \bracket{L_-} & = A\bracket{L_\infty} + A^{-1}\bracket{L_0}
+\end{align}
 
 Pierwsze równanie przemnóżmy przez $A$, drugie przez $A^{-1}$, a~następnie dodajmy je do siebie.
 Wtedy otrzymamy
