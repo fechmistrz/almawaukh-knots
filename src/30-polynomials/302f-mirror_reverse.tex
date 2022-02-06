@@ -1,12 +1,11 @@
 
 \subsection{Lustra, rewersy. Sumy}
-% \subsection{Odwrotności, lustra i~sumy}
-Wielomian Jonesa nie wykrywa orientacji splotu.
+Wielomian Jonesa nie wykrywa orientacji splotu:
 
 \begin{proposition}
+\index{rewers}%
     Niech $L$ będzie zorientowanym splotem.
     Wtedy $\jones(rL)=\jones(L)$.
-\index{rewers}%
 \end{proposition}
 
 \begin{proof}
@@ -17,9 +16,9 @@ Wielomian Jonesa nie wykrywa orientacji splotu.
 Ale czasami potrafi odróżnić splot od jego lustra:
 
 \begin{proposition}
+\index{lustro}%
     Niech $L$ będzie zorientowanym splotem.
     Wtedy $\jones(mL)(t)=\jones(L)(t^{-1})$.
-\index{lustro}%
 \end{proposition}
 
 \begin{proof}
@@ -41,30 +40,34 @@ Ale czasami potrafi odróżnić splot od jego lustra:
 \end{proof}
 
 \begin{corollary}
-    \label{cor:joines_of_amphicheiral}
-    Jeśli $K$ jest węzłem zwierciadlanym, to wielomian $\jones_K$ jest symetryczny.
 \index{węzeł!zwierciadlany}
+\label{cor:joines_of_amphicheiral}%
+    Jeśli $K$ jest węzłem zwierciadlanym, to wielomian $\jones_K$ jest symetryczny.
 \end{corollary}
 
 Implikacja odwrotna nie zachodzi na mocy wniosku \ref{cor:acheiral_signature}: węzeł $9_{42}$ ma symetryczny wielomian Jonesa, ale niezerową sygnaturę.
 \index{sygnatura}%
 Poniżej trzynastu skrzyżowań taka sytuacja ma miejsce dla dokładnie czternastu węzłów pierwszych.
 % 9_42, 10_125, 11n_19, 11n_24, 11n_82, 12a_0669, 12a_1171, 12a_1179, 12a_1205, 12n_0362, 12n_0506, 12n_0562, 12n_0571, 12n_0821
+% TODO: uwzględnić kod programu, który to znalazł
 
 Równość $\jones(mL)(t)=\jones(L)(t^{-1})$ nie jest spełniona dla trójlistnika, zatem ten nie jest równoważny ze swoim lustrem.
 Wcześniej pokazał to z~dużo większym wysiłkiem Dehn, patrz przykład \ref{exm:trefoil_is_chiral}.
+\index[persons]{Dehn, Max}%
 
 \begin{corollary}
     Wielomian Jonesa nie zależy od orientacji węzła.
-    Nie jest to prawdą dla splotów.
 \end{corollary}
+
+Nie jest to prawdą dla splotów.
 
 \begin{proof}
     Każdy węzeł ma tylko dwie orientacje, splot może mieć ich $2^n$, gdzie $n$ to liczba składowych.
 \end{proof}
 
 \begin{proposition}
-    \label{prp:jones_multiplicative_1}
+\index{suma niespójna}%
+\label{prp:jones_multiplicative_1}%
     Niech $L_1, L_2$ będą zorientowanymi splotami.
     Wtedy
     \begin{equation}
@@ -101,6 +104,7 @@ Wcześniej pokazał to z~dużo większym wysiłkiem Dehn, patrz przykład \ref{e
 \begin{proposition}
 \label{prp:jones_multiplicative_2}%
 \index{relacja kłębiasta}%
+\index{suma spójna}%
     Niech $K_1, K_2$ będą zorientowanymi węzłami.
     Wtedy
     \begin{equation}
