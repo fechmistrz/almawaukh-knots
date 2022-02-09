@@ -69,7 +69,7 @@ with open("knotinfo_raw.txt") as f:
         words = line.strip().split("\t")
         if "age" not in line and "_" in line:
             for j in range(205):
-                knowledge[underscore_names[j]].append(words[j])
+                knowledge[underscore_names[j]].append(words[j].strip())
 # now the date is grouped by columns, not rows
 
 for underscore_name in underscore_names:
