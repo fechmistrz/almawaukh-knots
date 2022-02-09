@@ -94,7 +94,7 @@ def print_summary(d):
 	print("\\end{longtable}")
 	print("\\normalsize")
 
-with open("knotinfo_parsed.json") as f:
+with open(sys.argv[2]) as f:
 	data = json.load(f)
 	if sys.argv[1] == "all":
 		list_values(data)

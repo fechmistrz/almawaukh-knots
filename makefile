@@ -38,6 +38,12 @@ src/00-meta-latex/new_diagrams.tex: tools/diagram_rules/*.py tools/write_diagram
 	python3 tools/write_diagram_rules_2.py > src/00-meta-latex/new_diagrams.tex
 	rm tools/write_diagram_rules_2.py
 
+src/90-appendix/table_invariants_summary.tex: tools/convert_knotinfo_json_to_table.py tools/knotinfo_parsed.json
+	python3 tools/convert_knotinfo_json_to_table.py summary tools/knotinfo_parsed.json > src/90-appendix/table_invariants_summary.tex
+
+src/90-appendix/table_invariants.tex: tools/convert_knotinfo_json_to_table.py tools/knotinfo_parsed.json
+	python3 tools/convert_knotinfo_json_to_table.py all tools/knotinfo_parsed.json > src/90-appendix/table_invariants.tex
+
 release:
 	for i in build/*knot-theory.pdf; do \
 		if [[ "$$i" -nt "$$(basename "$$i")" ]]; then \
