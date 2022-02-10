@@ -22,7 +22,7 @@ chapter-all: build/knot-theory.pdf
 
 chapter-draft: build/draft-knot-theory.pdf
 
-build/knot-theory.pdf: src/knot-theory.tex src/knot_theory.bib src/*/*.tex
+build/knot-theory.pdf: src/knot-theory.tex src/knot_theory.bib src/*/*.tex src/90-appendix/table_invariants_summary.tex src/90-appendix/table_invariants.tex
 	$(call make_pdf)
 
 build/draft-knot-theory.pdf: src/*-*/*.tex
