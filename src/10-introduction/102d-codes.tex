@@ -1,8 +1,10 @@
 
 \subsection{Metody kodowania}
 \subsubsection{Notacja Gaußa}
-\index{notacja!Gaußa}
+\index{notacja!Gaußa|(}%
 Pierwszymi osobami, które zajmowały się węzłami, był prawdopodobnie Gauß oraz jego uczeń, Listing.
+\index[persons]{Gauß, Carl}%
+\index[persons]{Listing, Johann}%
 Gauß wprowadził indeks zaczepienia dwóch węzłów jako pewna całka oraz notację dla węzłów.
 Wybierzmy punkt na diagramie, który nie jest skrzyżowaniem i przemierzajmy go zgodnie z~orientacją.
 Gdy mijamy nowe skrzyżowania, przypisujemy im kolejne liczby $1, 2, \ldots$, zaś dla starych skrzyżowań przepisujemy numer.
@@ -30,9 +32,12 @@ Kiedy mijamy skrzyżowanie drugi raz, stawiamy minus przed liczbą, jeżeli skrz
 Nazywa się to rozszerzonym kodem Gaußa.
 W naszym przykładzie, rozszerzony kod to 1 -2 3 -4 5 6 -7 -8 \textbf{-4} -9 \textbf{-2} -10 8 11 \textbf{6 -1 -10 3 9 -5 -11 -7}, pogrubione liczby odpowiadają drugim przejściom.
 
+\index{notacja!Gaußa|)}%
+
+
 \subsubsection{Notacja Dowkera-Thistlethwaite'a}
 \index{notacja!Taita}
-\index{notacja!Dowkera-Thistlethwaite'a}
+\index{notacja!Dowkera-Thistlethwaite'a|(}
 Poprawia nieopisaną tutaj notację Taita, opisana po raz pierwszy w~pracy \cite{dowker83}.
 \index[persons]{Dowker, Clifford}%
 \index[persons]{Thistlethwaite, Morwen}%
@@ -66,8 +71,10 @@ a(n) & = \frac{1}{n} \sum_{d\mid n} \left(\frac{n}{d}\right)^d \cdot u \left(d, 
 
 Kilka początkowych wartości to $a_3 = 1, 2, 5, 20, 87, 616, 4843, 44128, 444621, \ldots$ (ciąg A002484 w OEIS).
 
+\index{notacja!Dowkera-Thistlethwaite'a|)}%
+
 \subsubsection{Notacja Alexandera-Briggsa}
-\index{notacja!Alexandera-Briggsa}
+\index{notacja!Alexandera-Briggsa|(}%
 W~1927 roku Alexander, Briggs wprowadzili zupełnie inny sposób oznaczania węzłów -- wtedy do 9 skrzyżowań, ale przedłużoną do 10 skrzyżowań przez Rolfsena i używaną po dziś dzień.
 Do opisu węzła używa się dwóch liczb: jego indeksu skrzyżowaniowanego z dolnym indeksem, oznaczającym miejsce w tablicy~węzłów.
 I~tak węzły o~ośmiu skrzyżowaniach to $8_1, 8_2, \ldots,$ $8_{21}$.
@@ -89,8 +96,10 @@ Ze strony internetowej Stojmenowa dowiedzieliśmy się jeszcze czegoś.
 Kolejność Rolfsena dla węzłów o 10 skrzyżowaniach obala nomenklaturę Little'a niealternujących oraz nadpisuje numerowanie Taita dla alternujących węzłów.
 Alexander, Briggs zrobili wcześniej to samo dla 9 lub mniej skrzyżowań.
 
+\index{notacja!Alexandera-Briggsa|)}%
+
 \subsubsection{Notacja Conwaya}
-\index{notacja!Conwaya}
+\index{notacja!Conwaya}%
 Wprowadzona przez Conwaya w~pracy \cite{conway70}.
 Wymaga znajomości supłów, więc przedstawiamy ją w sekcji supłów: definicji \ref{conway_notation}.
 
@@ -116,6 +125,7 @@ Oto ich lista:
     \item suma spójna takich samych trójlistników to węzeł babski,
 % DICTIONARY;square knot;węzeł prosty/płaski
     \item suma spójna lustrzanych trójlistników to węzeł prosty albo płaski (dość niefortunna nazwa),
+% TODO: nigdzie w ksiażce nie ma definicji notacji A-B dla splotów?
     \item splot $2_1^2$ (L2a1) to splot Hopfa,
     \item splot $4_1^2$ (L4a1) to węzeł Solomona (!),
     \item splot $5_1^2$ (L5a1) to splot Whiteheada,
