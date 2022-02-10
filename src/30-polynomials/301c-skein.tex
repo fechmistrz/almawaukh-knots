@@ -2,6 +2,7 @@
 \subsection{Relacja kłębiasta (definicja druga)}
 
 \begin{definition}[relacja kłębiasta]
+% TODO: uwspólnić definicje relacji kłębiastych?
 \index{relacja kłębiasta}%
     Niech $L$ będzie zorientowanym splotem z ustalonym diagramem oraz skrzyżowaniem.
     Oznaczmy przez $L_+, L_-, L_0$ trzy diagramy splotów, które różnią się jedynie na małym obszarze wokół ustalonego skrzyżowania:
@@ -28,6 +29,8 @@
     Mówimy, że niezmiennik zorientowanych splotów $f$ spełnia relację kłębiastą, jeżeli wartości $f(L_+)$, $f(L_-)$ i $f(L_0)$ są związane pewnym wielomianowym równaniem, niezależnie od wyboru splotu $L$.
 \end{definition}
 
+% DICTIONARY;skein;kłąb;-
+% DICTIONARY;skein relation;relacja kłębiasta;-
 Termin ,,skein'' (kłąb) wprowadził Conway około roku 1970, kontynuując tradycję używania słów, które kojarzą się ze sznurkami.
 \index[persons]{Conway, John}%
 Czasami mówi się o relacji motkowej, my nie zamierzamy używać tego synonimu.
@@ -53,7 +56,8 @@ Spełnia wtedy zależność
 Relacja kłębiasta wystarcza do wyznaczenia $\alexander_L$ każdego splotu na mocy lematu \ref{lem:unknotting_well_defined}.
 
 \begin{proposition}
-    \label{prp:alexander_unlinks}
+\index{splot!rozszczepialny}%
+\label{prp:alexander_unlinks}
     Niech $L$ będzie splotem rozszczepialnym.
     Wtedy $\alexander_L(t) \equiv 0$.
 \end{proposition}
@@ -71,7 +75,9 @@ Relacja kłębiasta wystarcza do wyznaczenia $\alexander_L$ każdego splotu na m
 Implikacja w drugą stronę jest fałszywa.
 Niech $\sigma_* = \sigma_{2} \sigma_{3}^{-2} \sigma_{2}$.
 Domknięcie warkocza $\sigma_{1} \sigma_* \sigma_{1} \sigma_{3} \sigma_* \sigma_{1} \sigma_{3} \sigma_* \sigma_{3}$ nie jest rozszczepialne, ale jego wielomian Alexandera jest zerem.
-\index{warkocz}
+% TODO: nie potrafię znaleźć, kto pierwszy odkrył takie warkocze
+% patrz też https://math.stackexchange.com/questions/3740577/why-the-multivariate-alexander-polynomial-of-l14n63195-is-zero
+\index{warkocz}%
 Warkocze poznamy w rozdziale piątym.
 
 \begin{corollary}
