@@ -4,8 +4,8 @@ Zaczniemy od przyjrzenia się powierzchniom.
 Niektóre stwierdzenia będziemy przyjmować bez dowodu, by nie rozwodzić się za bardzo nad topologią.
 
 \begin{definition}
-    \index{powierzchnia}
-    Powierzchnia to dwuwymiarowa rozmaitość topologiczna $M \subseteq \R^n$.
+\index{powierzchnia}%
+    Dwuwymiarową rozmaitość topologiczną $M \subseteq \R^n$ nazywamy powierzchnią.
 \end{definition}
 
 Rozmaitość to obiekt, który wygląda lokalnie jak przestrzeń euklidesowa: każdy jej punkt $x \in M$ posiada otwarte otoczenie homeomorficzne z~otwartą kulą.
@@ -14,9 +14,10 @@ Istnieje ogólniejsze pojęcie, to jest rozmaitość z~brzegiem: każdy jej punk
 Zwartą powierzchnię bez brzegu nazywamy domkniętą.
 
 Powierzchnię nazywamy orientowalną, jeśli nie istnieje na niej zamknięta krzywa, podczas pokonywania której odwraca się kierownica.
+\index{powierzchnia!orientowalna}%
 Orientowalne są dokładnie te powierzchnie, które nie zawierają w sobie kopii wstęgi Möbiusa.
 
-\index{powierzchnia Seiferta|(}%
+\index{powierzchnia!Seiferta|(}%
 Najważniejsze dla nas są powierzchnie Seiferta:
 
 \begin{definition}[powierzchnia Seiferta]
@@ -46,12 +47,11 @@ Najważniejsze dla nas są powierzchnie Seiferta:
 % \end{center}
 % \end{example}
 
-Nie każde uszachowienie diagramu węzła prowadzi do powierzchni Seiferta:
-widać to po standardowym diagramie trójlistnika.
+Nie każde uszachowienie diagramu węzła prowadzi do powierzchni Seiferta: widać to po standardowym diagramie trójlistnika.
 Pomimo to...
 
 \begin{proposition}
-    \label{prp:seifert_exists}
+\label{prp:seifert_exists}%
     Każdy węzeł posiada powierzchnię Seiferta.
 \end{proposition}
 
@@ -60,6 +60,7 @@ Powyższe stwierdzenie uzasadnili Pontriagin oraz Frankl w~1930 roku, my jednak 
 % Frankl, F.; Pontrjagin, L. (1930). "Ein Knotensatz mit Anwendung auf die Dimensionstheorie". Math. Annalen (in German). 102 (1): 785–789. doi:10.1007/BF01782377.
 
 \begin{proof}
+\index{algorytm!Seiferta|(}%
     Wybierzmy diagram $D$ dla węzła oraz orientację,
     a~następnie wyprostujmy wszystkie skrzyżowania zgodnie z~ich orientacją:
 \begin{comment}
@@ -81,12 +82,13 @@ Powyższe stwierdzenie uzasadnili Pontriagin oraz Frankl w~1930 roku, my jednak 
 
     Dyski są dwustronne, więc ich górnej stronie przypisujemy znak $+$,
     jeśli tylko brzeg jest zorientowany dodatnio i~$-$ w~przeciwnym razie.
+\index{algorytm!Seiferta|)}%
 \end{proof}
 
 Powierzchnia Seiferta dziedziczy orientację po węźle.
 Nawet niewinne odwrócenie jednego z ogniw splotu potrafi istotnie zmienić jego powierzchnię, dlatego potrzebna jest ostrożność!
 
-\index{powierzchnia Seiferta|)}%
+\index{powierzchnia!Seiferta|)}%
 
 % Węzeł jest rozwłókniony dokładnie wtedy, gdy stanowi grzbiet pewnego 'open book decomposition' $S^3$.
 
