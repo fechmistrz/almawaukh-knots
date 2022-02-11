@@ -12,12 +12,12 @@ Zgodnie z ,,klasyczną'' definicją, między odwracaniem kolejnych skrzyżowań 
 Obie definicje są równoważne: tłumaczy to książka Adamsa \cite[s. 58]{adams94}.
 
 \begin{lemma}
-    \label{lem:unknotting_well_defined}
+\label{lem:unknotting_well_defined}%
     W dowolnym rzucie splotu można odwrócić pewne skrzyżowania tak, by uzyskać diagram niesplotu.
 \end{lemma}
 
 \begin{proof}
-    Bez straty ogólności założę, że diagram przedstawia węzeł.
+    Bez straty ogólności załóźmy, że diagram przedstawia węzeł.
     Ustalmy zatem diagram węzła i~wybierzmy jakiś początkowy punkt na nim, różny od skrzyżowania wraz z~kierunkiem, wzdłuż którego będziemy przemierzać węzeł.
     Za każdym razem, kiedy odwiedzamy nowe skrzyżowanie, zmieniamy je w~razie potrzeby na takie, przez które przemieszczamy się wzdłuż górnego łuku.
     Skrzyżowań już odwiedzonych nie zmieniamy wcale.
@@ -32,20 +32,27 @@ Obie definicje są równoważne: tłumaczy to książka Adamsa \cite[s. 58]{adam
     Oznacza to, że nasza procedura przekształciła początkowy diagram w~diagram niewęzła, co należało okazać.
 \end{proof}
 
-W pracy \cite{shimizu14} Shimizu rozpatruje różne operacje, które rozwiązują węzły lub sploty.
-\index[persons]{Shimizu, ?}%
+Shimizu w pracy \cite{shimizu14} rozpatruje różne operacje, które rozwiązują węzły lub sploty.
+\index[persons]{Shimizu, Ayaka}%
 Nie będziemy się nimi zajmować, podamy tylko przykład: zamiana pod- i nadskrzyżowań wokół obszaru na diagramie rozwiązuje węzły, ale nie sploty; kontrprzykładem jest splot Hopfa.
 \index{splot!Hopfa}%
-Patrz też \cite[s. 141-154]{kawauchi96}.
+Patrz też, co pisze Kawauchi w \cite[s. 141-154]{kawauchi96}.
 
 Dla każdego nietrywialnego splotu istnieje diagram wymagający odwrócenia dowolnie wielu skrzyżowań.
-Wcześniej Nakanishi znalazł 2-gordyjski diagram 1-gordyjskiego węzła $6_2$ (\cite{nakanishi83}) oraz udowodnił, że każdy nietrywialny węzeł ma diagram, który nie jest 1-gordyjski (\cite{nakanishi96}).
+Wcześniej Nakanishi \cite{nakanishi83} znalazł 2-gordyjski diagram 1-gordyjskiego węzła $6_2$ oraz udowodnił, że każdy nietrywialny węzeł ma diagram, który nie jest 1-gordyjski (trzynaście lat później, w \cite{nakanishi96}).
 \index[persons]{Nakanishi, Yasutaka}%
-Dowód zawiera\footnote{Czy to oznacza, że praca Nakanishiego jednak nie zawiera dowodu?} praca \cite{taniyama09} Taniyamy.
+Jego wyniki uogólnia praca Taniyamy \cite{taniyama09}:
 \index[persons]{Taniyama, Kouki}%
+
+\begin{proposition}
+    Dla każdego $n \in \N$ istnieje diagram $D$ nietrywialnego splotu $L$ taki, że $\unknotting D \ge n$.
+\end{proposition}
+
 Pokazany jest tam jeszcze jeden godny uwagi fakt.
-Jeśli liczba gordyjska diagramu $D$ wynosi $\frac 12 (\crossing D - 1)$, co jest maksymalną możliwą wartością zgodnie z~naszym prostym ograniczeniem,
-to węzeł jest $(2,p)$-torusowy albo wygląda jak diagram niewęzła po pierwszym ruchu Reidemeistera.
+
+\begin{proposition}
+    Jeśli liczba gordyjska diagramu $D$ wynosi $\frac 12 (\crossing D - 1)$, co jest maksymalną możliwą wartością zgodnie z~naszym prostym ograniczeniem, to węzeł jest $(2,p)$-torusowy albo wygląda jak diagram niewęzła po pierwszym ruchu Reidemeistera.
+\end{proposition}
 
 \input{10-introduction/105ba-unknotting_one}
 
@@ -57,7 +64,7 @@ to węzeł jest $(2,p)$-torusowy albo wygląda jak diagram niewęzła po pierwsz
 
 \input{10-introduction/105be-metric}
 
-\index{liczba gordyjska|)}
+\index{liczba gordyjska|)}%
 
 % Koniec podsekcji Liczba gordyjska
 
