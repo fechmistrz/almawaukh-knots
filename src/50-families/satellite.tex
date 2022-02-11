@@ -1,8 +1,8 @@
 
-\section{Węzły satelitarne} % (fold)
+\section{Węzły satelitarne}
 
-% meridian - południk
-% longitude - równoleżnik
+% DICTIONARY;meridian;południk;-
+% DICTIONARY;longitude;równoleżnik;-
 Załóżmy, że w dopełnieniu pewnego splotu został zanurzony torus.
 Jeżeli jest ściśliwy, to albo równoleżnikl torusa ogranicza dysk w dopełnieniu splotu~i torus jest niezawęźlony, albo południk ogranicza dysk w dopełnieniu splotu i~splot nie przebiega wzdłuż torusa.
 Żadna z~tych sytuacji nie jest ciekawa.
@@ -35,14 +35,29 @@ Ponieważ dla trójlistnika $k = 3$, napotkali się tylko na satelity owijające
 Nie spodziewano się żadnego satelity ósemki, gdyż wtedy $k = 4$, zatem każdy satelita miałby co najmniej $4 \cdot 2^2 + 1 = 17$ skrzyżowań: dodatkowe $+1$ jest potrzebne, by nie dostać splotu o~dwóch ogniwach.
 
 Najprostszy satelita ma 13 skrzyżowań.
+Ze strony internetowej programu Regina można dowiedzieć się dokładniej, jak wygląda rozkład satelitów wśród małych węzłów:
 
-\begin{example}[swallow-follow torus]
+\renewcommand*{\arraystretch}{1.4}
+\footnotesize
+\begin{longtable}{lccccccc}
+    \hline
+    \textbf{skrzyżowania} & 13 & 14 & 15 & 16 & 17 & 18 & 19 \\ \hline \endhead
+    węzły pierwsze, satelitarne & 2 & 2 & 6 & 10 & 29 & 86 & 245 \\
+    \hline
+\end{longtable}
+\normalsize
+
+Razem 380 węzłów.
+
+\begin{example}[torus połykająco-podążający]
+% DICTIONARY;swallow-follow;połykająco-podążający;torus
+% DICTIONARY;torus;torus;-
     Klasa węzłów satelitarnych obejmuje węzły złożone.
-    W ich przypadku można wskazać pewien szczególny torus nieściśliwy -- połykający pierwszy składnik, a~potem podążający za drugim:\footnote{Źródło: \url{https://mcm-www.jwu.ac.jp/~hayashic/semi/07/07i/07i.html}}
+    W ich przypadku można wskazać pewien szczególny torus nieściśliwy -- połykający pierwszy składnik, a~potem podążający za drugim:\footnote{Źródło obrazka: \url{https://mcm-www.jwu.ac.jp/~hayashic/semi/07/07i/07i.html}}
     \begin{figure}[H]
         \centering
         \includegraphics[width=0.75\linewidth]{../data/mixed/follow-swallow.png}
-        \caption[something]{Torus połykająco-podążający. Źródło: strona internetowa\footnote{\url{https://mcm-www.jwu.ac.jp/~hayashic/semi/07/07i/07i.html}.} C. Hayashiego.}
+        \caption[something]{Torus połykająco-podążający. Źródło: strona internetowa  C. Hayashiego.}
     \end{figure}
 \end{example}
 
@@ -50,15 +65,16 @@ Schubert pokazał, że zorientowane klasy izotopii węzłów w~$S^3$ tworzą wol
 \index[persons]{Schubert, Horst}%
 Dowód to uważna analiza nieściśliwych torusów obecnych w~dopełnieniu sumy spójnej.
 To doprowadziło go do definicji węzłów satelitarnych i~towarzyszących w~przełomowej pracy \cite{schubert53} oraz zunifikowało teorię 3-rozmaitości z teorią węzłów.
-Patrz też \cite{motegi97} (Wikipedia mówi, że zapis węzła jako satelity nie jest jednoznaczny, a~tu mogą być przykłady.)
+Może warto zapoznać się z pracą Motegiego \cite{motegi97}?
+Wikipedia mówi, że zapis węzła jako satelity nie jest jednoznaczny, a~tam mogą być przykłady.
 %=% https://en.wikipedia.org/wiki/Satellite_knot#cite_ref-7
 
 Na brzegu torusa $V$ można wprowadzić pewien układ współrzędnych: południk to pętla właściwa w $\partial V$, która ogranicza dysk w $V$, natomiast równoleżnik to pętla w $\partial V$, która spotyka południk raz.
 Z~dokładnością do izotopii południk jest jeden, ale równoleżnik nie.
-Gdy indeks zaczepienia równoleżnika oraz rdzenia torusa wynosi zero, mówimy, że równoleżnik jest preferowany.
+Równoleżnik preferowany to taki, którego indeks zaczepienia z~rdzeniem torusa wynosi zero.
 
 \begin{definition}[dubel Whiteheada]
-    \index{dubel Whiteheada}
+\index{dubel Whiteheada}%
     Jeżeli $P \subseteq W$ jest skręconym jednokrotnie niewęzłem, to węzeł $S$ nazywamy dublem Whiteheada.
 \end{definition}
 
@@ -66,11 +82,12 @@ Każdy węzeł posiada nieskończenie wiele dubli Whiteheada: wystarczy rozcią�
 
 Wyróżnia się pewien szczególny homeomorfizm $h$, który przenosi południk i preferowany równoleżnik $W$ na południk i preferowany równoleżnik $V$.
 Nazywamy go wiernym.
-% faithful
+% DICTIONARY;faithful homeomorphism;homomorfizm wierny;-
 O dublu względem wiernego homeomorfizmu mówimy, że jest nieskręcony.
+% TODO: skąd powyższe zdanie? jak jest nieskręcony po angielsku?
 
 \begin{definition}[węzeł kablowy]
-    \index{węzeł!kablowy}
+\index{węzeł!kablowy}%
     Niech $h \colon W \to V$ będzie wiernym homeomorfizmem, zaś $P$ węzłem $(p, q)$-torusowym.
     Satelitę $S$ nazywamy węzłem $(p, q)$-kablowym albo krótko kablem.
 \end{definition}
@@ -93,6 +110,7 @@ Niewęzeł nie ma nietrywialnych węzłów towarzyszących.
 \end{definition}
 
 Sploty bez właściwych towarzyszy określa się zazwyczaj terminem ,,atoroidalny''.
+\index{splot!atoroidalny}%
 Patrz też diagram przedstawiony w \cite{cromwell04} na stronie 83.
 
 \begin{proposition}
@@ -104,7 +122,7 @@ Patrz też diagram przedstawiony w \cite{cromwell04} na stronie 83.
 \end{proof}
 
 Niektóre węzły przedstawiają się jako satelity w~dokładnie jeden sposób, inne nie.
-Rok 1979 przyniósł amerykańską pracę \cite{jaco79} oraz niemiecką książkę\footnote{Według recenzji Hempela, najważniejsze tam jest twierdzenie klasyfikacyjne: niech $M_1, M_2$ będą 3-rozmaitościami Hakena z brzegiem, zaś $V_1, V_2$ ich podrozmaitościami charakterystycznymi, wtedy każda homotopijna równoważność $f \colon M_1 \to M_2$ można zdeformować tak, że jest homeomorfizmem między domknięciami: $M_1 \setminus V_1$ oraz $M_2 \setminus V_2$ i~homotopijną równoważnością między $V_1$ oraz $V_2$.} \cite{johannson79}, gdzie niezależnie od siebie opisano jednoznaczny rozkład, nazywany teraz rozkładem Jaco-Shalena-Johannsona:
+Rok 1979 przyniósł amerykańską pracę \cite{jaco79} oraz niemiecką książkę\footnote{Według recenzji Hempela, najważniejsze tam jest twierdzenie klasyfikacyjne: niech $M_1, M_2$ będą 3-rozmaitościami Hakena \index{rozmaitość Hakena} z brzegiem, zaś $V_1, V_2$ ich podrozmaitościami charakterystycznymi, wtedy każda homotopijna równoważność $f \colon M_1 \to M_2$ można zdeformować tak, że jest homeomorfizmem między domknięciami: $M_1 \setminus V_1$ oraz $M_2 \setminus V_2$ i~homotopijną równoważnością między $V_1$ oraz $V_2$.} \cite{johannson79}, gdzie niezależnie od siebie opisano jednoznaczny rozkład, nazywany teraz rozkładem Jaco-Shalena-Johannsona:
 \index[persons]{Jaco, William}%
 \index[persons]{Shalen, Peter}%
 \index[persons]{Johannson, Klaus}%
@@ -114,7 +132,9 @@ Rok 1979 przyniósł amerykańską pracę \cite{jaco79} oraz niemiecką książk
     Istnieje wtedy jedyna z dokładnością do izotopii minimalna rodzina rozłącznie zanurzonych nieściśliwych torusów tak, że każda składowa 3-rozmaitości powstałej przez rozcinanie wzdluż torusów jest atoroidalna lub włóknistą przestrzenią Seiferta ($S^1$-wiązką nad dwuwymiarowym orbifoldem).
 \end{proposition}
 
-Jest on związany z operacją splatania (ang. \emph{splicing}), będącej uogólnieniem budowania satelitów.
+Jest on związany z operacją złączania (ang. \emph{splicing}), będącej uogólnieniem budowania satelitów, sumy spójnej, dubli Whiteheada i kasowania ogniwa.
+% https://arxiv.org/pdf/math/0506523.pdf
+% DICTIONARY;splicing;złączanie;-
 Hipotezę o jedyności rozkładu wysnuł wcześniej Waldhausen.
 \index[persons]{Waldhausen, Friedhelm}%
 
