@@ -5,10 +5,11 @@
 Jones otrzymał swój wielomian jako efekt uboczny badań nad algebrami operatorów: wziął ,,ślad'' pewnej reprezentacji warkoczy w~algebrę, która miała ważne znaczenie w~mechanice statystycznej.
 \index[persons]{Jones, Vaughan}%
 Jego praca \cite{jones85} jest bardzo zwięzła, nam pomogła książka \cite[s. 85-103]{kauffman91} oraz strona ,,Aharonov–Jones–Landau algorithm'' z angielskiej Wikipedii.
+\index{algorytm!Aharonova-Jonesa-Landaua}%
 
 % książka Kauffmana
 \begin{definition}[algebra Temperleya-Lieba]
-\index{algebra Temperleya-Lieba}%
+\index{algebra!Temperleya-Lieba}%
     Niech $R$ będzie przemiennym pierścieniem, w~którym ustalono element $\delta \in R$.
     Wtedy $R$-algebrę $TL_n(\delta)$ generowaną przez elementy $e_1, \ldots, e_{n-1}$, które związane są relacjami
     \begin{align}
@@ -51,11 +52,11 @@ To prawie są warkocze.
 \end{comment}
 
 Dla ustalonej liczby zespolonej $A$, funkcja $\rho_A \colon B_n \to TL_n(\delta)$ zadana na generatorach grupy warkoczy: $\rho_A(\sigma_i) = AU_i + A^{-1}$.
-Bezpośredni rachunek pokazuje, że jest reprezentacją, jeśli $\delta = -A^2-A^{-2}$
+Bezpośredni rachunek pokazuje, że jest reprezentacją, jeśli $\delta = -A^2-A^{-2}$.
 
 % książka Kauffmana
 \begin{definition}[algebra Jonesa]
-\index{algebra Jonesa}%
+\index{algebra!Jonesa}%
     Niech $R$ będzie przemiennym pierścieniem, zaś $\tau$ skalarem, który komutuje ze wszystkimi innymi elementami.
     Wtedy $R$-algebrę $TL_n(\tau)$ generowaną przez elementy $e_1, \ldots, e_{n-1}$, związanymi relacjami
     \begin{align}
@@ -71,17 +72,19 @@ Kauffman pisze, że algebry są ze sobą związane: jeśli położymy $e_i = \de
 % artykuł na Wiki
 \begin{definition}[ślad Markowa]
 \index{sZZZlad@ślad Markowa}%
-    Niech $T \in TL_n(\delta)$ będzie elementem algebry Temperleya-Lieba będącym iloczynem generatorów $e_1, \ldots, e_{n-1}$, którego domknięcie rozpada się na $m$ składowych spójności.
-    Śladem Markowa elementu $K$ nazywamy wielkość $\operatorname{tr} K = \delta^{m-n}$.
+    Niech $K \in TL_n(\delta)$ będzie elementem algebry Temperleya-Lieba, iloczynem generatorów $e_1, \ldots, e_{n-1}$, którego domknięcie rozpada się na $m$ składowych spójności.
+    Śladem Markowa elementu $K$ nazywamy wielkość $\trace K = \delta^{m-n}$.
 \end{definition}
 
-Ślad Markowa przedłuża się liniowo do całej algebry Temperleya-Lieba i jest prawdziwym śladem: spełnia warunki $\operatorname{tr} (1) = 1$ oraz $\operatorname{tr} (T_1T_2) = \operatorname{tr} (T_2T_1)$.
-Ma też dodatkową własność, że jeśli $w$ jest słowem na literach $e_1, e_2, \ldots, e_{i-1}$, to $\operatorname{tr}(we_i) = \delta^{-1} \operatorname{tr} (w)$.
+Ślad Markowa przedłuża się liniowo do całej algebry Temperleya-Lieba i jest prawdziwym śladem: spełnia warunki $\trace (1) = 1$ oraz $\trace (T_1T_2) = \trace (T_2T_1)$.
+Ma też dodatkową własność, że jeśli $w$ jest słowem na literach $e_1, e_2, \ldots, e_{i-1}$, to $\trace(we_i) = \delta^{-1} \trace (w)$.
 
-Jones skorzystał z twierdzeń Alexandera i Markowa, złożył ze sobą funkcje $\operatorname{tr}$ oraz $\rho_A$ oraz znormalizował wynik.
+Jones skorzystał z twierdzeń Alexandera i Markowa, złożył ze sobą funkcje $\trace$ oraz $\rho_A$ oraz znormalizował wynik.
+\index{twierdzenie!Alexandera}%
+\index{twierdzenie!Markowa}%
 Dostał tak niezmiennik splotów $L$ (domknięć warkoczy $B$):
 \begin{equation}
-    V_L(A^{-4}) = (-A)^{3 \writhe D} \delta^{n-1} (\operatorname{tr} \circ \rho_A)(B).
+    V_L(A^{-4}) = (-A)^{3 \writhe D} \delta^{n-1} (\trace \circ \rho_A)(B).
 \end{equation}
 
 % Koniec podsekcji Oryginalna praca Jonesa
