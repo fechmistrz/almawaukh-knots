@@ -4,7 +4,7 @@ Ponieważ dopełnienie dowolnego splotu, zarówno w przestrzeni $\R^3$ jak i $S^
 Dzięki temu poniższa definicja ma sens:
 
 \begin{definition}
-    \index{grupa!splotu}
+\index{grupa!splotu}%
     Niech $L$ będzie splotem.
     Grupę podstawową jego dopełnienia, $\pi_1(\R^3 \setminus L)$, nazywamy grupą splotu i oznaczamy $\pi(L)$.
 \end{definition}
@@ -15,15 +15,15 @@ Nie należy ich mylić: zazwyczaj nie są izomorficzne, grupa węzła ma dużo w
 Podamy najpierw kilka przykładów węzłów oraz ich grup.
 
 \begin{example}
-    Niewęzeł: $\Z$.
+    Grupa niewęzła: $\Z$.
 \end{example}
 
 Z twierdzenia o pętli, czyli uogólnienia lematu Dehna wynika, że niewęzeł jest jedynym węzłem, którego grupą podstawową jest $\Z$.
 % https://math.stackexchange.com/questions/3468034/knot-group-is-mathbbz-iff-k-is-the-unknot
 
 \begin{example}
-    \label{exm:trefoil_group}
-    Trójlistnik: $\langle x, y \mid x^2 = y^3\rangle$.
+\label{exm:trefoil_group}%
+    Grupa trójlistnika: $\langle x, y \mid x^2 = y^3\rangle$.
 \end{example}
 
 \begin{proof}
@@ -40,10 +40,11 @@ Z twierdzenia o pętli, czyli uogólnienia lematu Dehna wynika, że niewęzeł j
     prawdziwych na mocy transformacji Tietzego.
 \end{proof}
 
-Trójlistnik jest węzłem $(3, 2)$-torusowym, więc powyższy przykład stanowi szczególny przypadek grupy węzła torusowego:
+Trójlistnik jest węzłem $(3, 2)$-torusowym, więc powyższy przykład stanowi szczególny przypadek grupy węzła torusowego.
+Jej wyznaczenie to popularne ćwiczenie w~podręcznikach topologii algebraicznej:
 
 \begin{example}
-    Węzeł $(p,q)$-torusowy: $\langle x, y \mid x^p = y^q \rangle$.
+    Grupa węzła $(p,q)$-torusowego: $\langle x, y \mid x^p = y^q \rangle$.
 \end{example}
 
 \begin{proof}
@@ -51,11 +52,11 @@ Trójlistnik jest węzłem $(3, 2)$-torusowym, więc powyższy przykład stanowi
 \end{proof}
 
 \begin{example}
-    Węzeł ósemkowy: $\langle x, y \mid yxy^{{-1}}xy=xyx^{{-1}}yx \rangle$.
+    Grupa ósemki: $\langle x, y \mid yxy^{{-1}}xy=xyx^{{-1}}yx \rangle$.
 \end{example}
 
 \begin{example}
-    Splot Hopfa: $\Z \oplus \Z$.
+    Grupa splotu Hopfa: $\Z \oplus \Z$.
 \end{example}
 
 Jak wspomina Kawauchi, z klasyfikacji abelowych grup podstawowych 3-rozmaitości wynika, że $\Z$ oraz $\Z \oplus \Z$ są jedynymi przemiennymi grupami splotów i podaje w formie ćwiczenia informację, że splot Hopfa oraz niewęzeł to jedyne sploty o przemiennej grupie \cite[s. 83]{kawauchi96}.
@@ -92,6 +93,8 @@ Twierdzenie odwrotne do faktu \ref{prop:knot_group_invariant} jest prawdziwe w k
 \end{proposition}
 
 ,,\emph{The group of a prime knot does not, however, necessarily determine the topological type of the exterior. Dehn hips on certain “essential” solid tori in the exteriors of torus knots and of cable knots produce Haken manifolds that are homotopically equivalent but not homeomorphic to the original exteriors and that, in fact, cannot be imbedded in $S^3$}'' (Whitten, \cite{whitten87}).
+\index{rozmaitość Hakena}%
+\index{rozmaitość Hakena}%
 
 \begin{proof}
 \index[persons]{Gordon, Cameron}%
@@ -100,16 +103,17 @@ Twierdzenie odwrotne do faktu \ref{prop:knot_group_invariant} jest prawdziwe w k
     % to jest kopia \cite[s. 76]{kawauchi96}
     Whitten pokazał w \cite{whitten87}, że węzły o~izomorficznych grupach mają homeomorficzne dopełnienia.
     Wkrótce po tym Gordon, Luecke udowodnili w~\cite{gordon89}, że nietrywialna chirurgia Dehna na nietrywialnym węźle nigdy nie daje sfery $S^3$, a~stąd wynika, że każdy homeomorfizm dopełnień węzłów można przedłużyć do homeomorfizmu $S^3$ w~siebie posyłającego jeden węzeł na drugi jako zbiory.
+\index{chirurgia Dehna}%
 \end{proof}
 
-Kawauchi proponuje jako proste ćwiczenie \cite[s. 73]{kawauchi96} pokazanie, że grupa sumy niespójnej splotów $L_1, L_2$ jest izomorficzna z wolnym produktem $\pi(L_1) * \pi(L_2)$, a następnie przytacza twierdzenie:
+Kawauchi \cite[s. 73]{kawauchi96} proponuje jako proste ćwiczenie  pokazanie, że grupa sumy niespójnej splotów $L_1, L_2$ jest izomorficzna z wolnym produktem $\pi(L_1) * \pi(L_2)$, a następnie przytacza twierdzenie:
 
 \begin{proposition}
-
     Niech $L \subseteq S^3$ będzie splotem.
     Następujące warunki są równoważne:
     \begin{enumerate}
         \item splot $L$ nie jest rozszczepialny,
+\index{splot!rozszczepialny}%
         \item splot $L$ jest niewęzłem lub jego dopełnienie jest rozmaitością Hakena o~nieściśliwym brzegu,
 \index{rozmaitość Hakena}%
         \item grupa podstawowa splotu $L$ jest nierozkładalna względem produktu wolnego.
