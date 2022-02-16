@@ -10,6 +10,7 @@ Oryginalna praca Alexandera była jednak bliższa duchem pomysłom Dehna.
 
 % DICTIONARY;Fox derivative;pochodna Foxa;-
 \begin{definition}[pochodna Foxa]
+\label{def:fox_derivative}%
     Niech $G$ będzie wolną grupą generowaną przez (niekoniecznie skończony) podzbiór $\{g_i\}_{i \in I}$.
     Odwzorowanie $\partial/\partial g_i \colon G \to \Z G$ spełniające trzy aksjomaty:
     \begin{align}
@@ -20,6 +21,11 @@ Oryginalna praca Alexandera była jednak bliższa duchem pomysłom Dehna.
     gdzie $\delta_{ij}$ oznacza deltę Kroneckera, nazywamy pochodną cząstkową Foxa.
 \end{definition}
 
+Fox opublikował w~Annals of Mathematics cykl pięciu artykułów \cite{fox53}, \cite{fox54}, \cite{fox56}, \cite{fox58}, \cite{fox60} poświęconych wolnemu rachunkowi różniczkowemu.
+\index[persons]{Fox, Ralph}%
+Definicja \ref{def:fox_derivative} jest tylko małym wycinkiem tego cyklu.
+nLab wspomina jeszcze o ,,\emph{a nice introduction in} \cite{crowell63}'', podręczniku Crowella, Foxa.
+
 Ustalmy prezentację grupy węzła z $n$ relacjami (słowami) $w_1, \ldots, w_n$ nad $n$-literowym alfabetem $x_1, \ldots, x_n$.
 Zdefiniujmy następnie macierz Jacobiego wymiaru $n \times n$, elementami której są pochodne Foxa słów $w_i$ względem zmiennych $x_j$:
 \index{macierz Jacobiego}%
@@ -28,11 +34,8 @@ Zdefiniujmy następnie macierz Jacobiego wymiaru $n \times n$, elementami które
 \end{equation}
 
 Wykreślmy z macierzy $J$ najpierw jedną kolumnę oraz jeden wiersz z tej macierzy, po czym podstawmy za wszystkie litery zmienną $t$ i policzmy wyznacznik.
-Otrzymaliśmy znowu wielomian Alexandera.
-Fox napisał cykl pięciu artykułów \cite{fox53}, \cite{fox54}, \cite{fox56}, \cite{fox58}, \cite{fox60} poświęcony wolnemu rachunkowi różniczkowemu, powyższa definicja jest tylko małym wycinkiem tego cyklu opublikowanego w Annals of Mathematics.
-\index[persons]{Fox, Ralph}%
-
-nLab wspomina jeszcze o \emph{a nice introduction in} \cite{crowell63}, podręczniku Crowella, Foxa.
+Otrzymaliśmy znowu wielomian Alexandera!
+\index{wielomian!Alexandera}%
 
 \index{pochodna Foxa|)}%
 
