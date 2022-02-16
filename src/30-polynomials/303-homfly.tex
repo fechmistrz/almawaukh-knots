@@ -1,6 +1,6 @@
 
 \section{Wielomian HOMFLY}
-\index{wielomian!HOMFLY|(}
+\index{wielomian!HOMFLY|(}%
 
 Po tym, jak Jones przedstawił światu swój wielomian w~1984 roku, matematycy
 zaczęli szukać jego uogólnienia zależnego nie od jednej, lecz dwóch zmiennych.
@@ -60,7 +60,7 @@ Potrzebować będziemy lematu:
 
 \begin{lemma}
 \label{lem:homfly_unlinks}%
-    Wielomianem HOMFLY dla niesplotu o~$n$ składowych jest
+    Wielomianem HOMFLY dla niesplotu o~$n$ ogniwach jest
     \begin{equation}
         P(U_n) = \left(-\frac{l+1/l}{m}\right)^{n-1}.
     \end{equation}
@@ -217,7 +217,8 @@ Co bardziej dramatyczne, Kanenobu wskazał przy użyciu elementarnych metod (!) 
         \item węzły $K(p,q)$ i $K(p', q')$ mają ten sam wielomian Jonesa (HOMFLY) wtedy i tylko wtedy, gdy $p+q = p'+q'$ (lemat 3).
     \end{enumerate}
     Wynika stąd, że węzły $K(p, q)$, gdzie $p \ge q$, są parami różne.
-    Dalej, węzeł $K(p,q)$ jest amfichiralny wtedy i tylko wtedy, gdy $p + q = 0$, zawsze trzymostowy (lemat 4) i hiperboliczny dokładnie wtedy, gdy $(p, q) \neq (0, 0)$.
+ 
+    Dalej, węzeł $K(p,q)$ jest zawsze trzymostowy (lemat 4); prawie zawsze hiperboliczny (chyba że $p = q = 0$); zwierciadlany wtedy i tylko wtedy, gdy $p + q = 0$.
     Autor twierdzi, że dowód włóknistości, taśmowości i~bycia genusu $2$ zamieścił wcześniej w~\cite{kanenobu81}, ale to jest po francusku.
 \end{proof}
 
@@ -226,19 +227,22 @@ Jeśli wielomiany dwóch splotów, niezależnie od orientacji ich ogniw, są zaw
 Dunfield, Garoufalidis, Szumakowicz, Thistlethwaite w~\cite{dunfield10} znaleźli diagram pewnego węzła o~75 skrzyżowaniach, którego kablowe mutacje zachowują wielomiany Jonesa oraz Alexandera, ale nie zachowują wielomianu HOMFLY.
 \index[persons]{Dunfield, Nathan}%
 \index[persons]{Garoufalidis, Stavros}%
-\index[persons]{Shumakovitch, Alexander}%
+\index[persons]{Szumakowicz, Alexander}%
 \index[persons]{Thistlethwaite, Morwen}%
 \index{węzeł!o 75 skrzyżowaniach}%
 Wiadomo, że jeśli istnieje prostszy przykład, to ma co najmniej 13 skrzyżowań.
 
 Zaletą wielomianu HOMFLY jest to, że często wykrywa chiralność (węzeł chiralny nie jest równoważny swemu lustrzanemu odbiciu), ale nie odróżnia enancjomerów węzłów $9_{42}$, $10_{48}$, $10_{71}$, $10_{91}$, $10_{104}$, oraz $10_{125}$.
+\index{enancjomer}%
 Wśród węzłów do 10 skrzyżowań dokładnie dwa opierają się testom chiralności opartym na niezmiennikach HOMFLY oraz Kauffmana: $9_{42}$ oraz $10_{71}$.
+\index{węzeł!9-42}%
+\index{węzeł!10-71}%
 Do jej wykrycia potrzebna jest na przykład $SU(2)$-teoria Cherna-Simonsa, wyjaśniona w~kolejnej wersji tego skryptu.
 
 % A POLYNOMIAL INVARIANT OF ORIENTED LINKS W. B. R. LICKORISH and KENNETH C. MILLET
 % Example 16 - książka
 
-\index{wielomian!HOMFLY|)}
+\index{wielomian!HOMFLY|)}%
 
 % Koniec sekcji Wielomian HOMFLY
 
