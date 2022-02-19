@@ -1,6 +1,6 @@
 
 \section{Grupa kolorująca}
-\index{grupa kolorująca|(}
+\index{grupa kolorująca|(}%
 
 \begin{definition}
 \label{def:colouring_group}%
@@ -11,7 +11,7 @@
 
 \begin{proposition}
 \label{prp:colourings_are_morphisms}%
-    Splot $L$ koloruje się modulo $n$, wtedy i  ~tylko wtedy gdy istnieje nietrywialny homomorfizm $\operatorname{Col}(L) \to \Z/n\Z$.
+    Splot $L$ koloruje się modulo $n$, wtedy i~tylko wtedy gdy istnieje nietrywialny homomorfizm $\operatorname{Col}(L) \to \Z/n\Z$.
 \end{proposition}
 
 \begin{proof}
@@ -28,12 +28,19 @@
 \index{wyznacznik}%
 \label{cor:knot_determinant_odd}%
     Niech $K$ będzie węzłem.
-    Wtedy $\det K$ jest liczbą nieparzystą.
+    Wtedy jego wyznacznik, $\det K$, jest liczbą nieparzystą.
 \end{corollary}
 
 \begin{proof}
     Bezpośredni wniosek z faktów \ref{prp:no_colourings_mod_2} oraz \ref{prp:colourings_are_morphisms}.
 \end{proof}
+
+Homomorfizm $\operatorname{Col} (L) \to \Z/n\Z$ nie musi być surjekcją, zatem...
+
+\begin{proposition}
+    Niech splot $L$ koloruje się modulo $n$.
+    Wtedy koloruje się też modulo $mn$, dla każdego $m \in \N$.
+\end{proposition}
 
 \begin{proposition}
     Grupa kolorująca jest z dokładnością do izomorfizmu niezmiennikiem węzłów.
@@ -54,7 +61,7 @@ Następnie znajdźmy macierz diagonalną $D = \operatorname{diag}(d_1, \ldots, d
 Z~algebry liniowej wiemy, że to zawsze się uda: macierz $D$ nazywamy postacią normalną Smitha.
 Wtedy funkcja
 \begin{equation}
-    f(x) \colon \Z^m/A^t \Z^m \to \Z^m / D\Z^m, \quad f(x) = C^t x
+    f(x) \colon \frac{\Z^m}{A^t \Z^m} \to \frac{\Z^m}{D\Z^m}, \quad f(x) = C^t x
 \end{equation}
 stanowi izomorfizm, a~skoro $D$ jest macierzą diagonalną, to
 \begin{equation}
@@ -69,7 +76,7 @@ Podsumujmy.
 \end{proposition}
 
 \begin{corollary}
-    Grupa kolorująca splotu $L$ jest skończona wtedy i tylko wtedy, gdy wyznacznik $\det L$ tego splotu jest niezerowy.
+    Grupa kolorująca splotu $L$ jest skończona wtedy i tylko wtedy, gdy wyznacznik tego splotu, $\det L$, jest niezerowy.
 \end{corollary}
 
 \begin{proof}
