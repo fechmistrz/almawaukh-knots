@@ -1,6 +1,8 @@
 
-\subsection{Sploty o~dwóch mostach} % (fold)
-\label{sub:twobridge}
+\subsection{Sploty o~dwóch mostach}
+\label{sub:twobridge}%
+\index{węzeł!wymierny|see {węzeł dwumostowy}}%
+\index{węzeł!dwumostowy|(}%
 Zajmiemy się teraz związkiem supłów z liczbą mostową.
 Wiemy, że węzeł trywialny jest jednomostowy, następne w hierarchii są sploty dwumostowe.
 Nazywa się je także wymiernymi, po angielsku czasami \emph{4-plats}.
@@ -21,6 +23,11 @@ Mają co najwyżej dwie składowe i~są odwracalne \cite[s. 211]{burde14}.
 \end{corollary}
 
 \begin{proof}
+% TODO: coś tu jest nie tak.
+% złożony => satelitarny
+% niesatelitarny => pierwszy
+% ale nie ma implikacji:
+% pierwszy => niesatelitarny!
     Skorzystajmy z trychotomii Thurstona: węzły dwumostowe są pierwsze, zatem nie są satelitarne.
     Pozostało rozpatrzyć przypadek, kiedy nie są hiperboliczne.
     Teza wynika wtedy bezpośrednio z faktu \ref{prp:torus_bridge_number}, który głosi, że $\bridge (T_{p, q}) = \min\{|p|, |q|\}$.
@@ -28,6 +35,7 @@ Mają co najwyżej dwie składowe i~są odwracalne \cite[s. 211]{burde14}.
 
 \begin{proposition}
     Pierwsze węzły trzymostowe są $(\pm 3, n)$-torusowe albo hiperboliczne.
+\index{węzeł!trzymostowy}%
 \end{proposition}
 
 \begin{proof}
@@ -69,6 +77,8 @@ Przez analogię do supłów, definiujemy ułamek łańcuchowy
 \end{equation}
 
 \begin{tobedone}
+\index{postać normalna!Conwaya}%
+\index{postać normalna!Schuberta}%
     To jest postać normalna Conwaya, ale mamy jeszcze postać Schuberta - \cite[s. 21]{kawauchi96}.
 \end{tobedone}
 
@@ -160,6 +170,8 @@ Murasugi (twierdzenie 9.3.5) twierdzi, że dowód znajduje się u Ernsta, Sumner
 \end{proposition}
 
 Wygląda na to, że jedynym niewyznaczonym do końca klasycznym niezmiennikiem jest liczba gordyjska.
+
+\index{węzeł!dwumostowy|)}%
 
 % Koniec podsekcji Sploty o~dwóch mostach
 
