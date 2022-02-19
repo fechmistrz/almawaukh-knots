@@ -1,7 +1,8 @@
 
 \subsection{Diagramy cięciw, układy ciężarów, algebra chińskich znaków}
 
-Okazuje się, że wartość niezmiennika Wasiljewa $v$ nie zależy wprost od tego, jak zaplątany jest węzeł osobliwy $K$, ale od tego, jak ułożone są wierzchołki wzdłuż węzła. Standardową metodą kodowania tej informacji jest diagram cięciw.
+Okazuje się, że wartość niezmiennika Wasiljewa $v$ nie zależy wprost od tego, jak zaplątany jest węzeł osobliwy $K$, ale od tego, jak ułożone są wierzchołki wzdłuż węzła.
+Standardową metodą kodowania tej informacji jest diagram cięciw.
 
 \begin{definition}[diagram cięciw]
 % DICTIONARY;chord;cięciw;diagram
@@ -9,9 +10,9 @@ Okazuje się, że wartość niezmiennika Wasiljewa $v$ nie zależy wprost od teg
     Zorientowany okrąg razem z~$2n$ punktami leżącymi na nim (oraz~połączonymi w pary) z~dokładnością do zachowujących orientację homeomorfizmów nazywamy diagramem cięciw rzędu $n$, albo stopnia $n$.
 \end{definition}
 
-\begin{comment}
 \begin{figure}[H]
     \centering
+\begin{comment}
     \begin{minipage}[b]{.18\linewidth}
         \[\LargeChordDiagramA\]
         \subcaption{}
@@ -32,9 +33,9 @@ Okazuje się, że wartość niezmiennika Wasiljewa $v$ nie zależy wprost od teg
         \[\LargeChordDiagramE\]
         \subcaption{}
     \end{minipage}
+\end{comment}
     \caption{Wszystkie pięć diagramów cięciw stopnia 3}
 \end{figure}
-\end{comment}
 
 Jak zamienić węzeł osobliwy w diagram cięciw?
 Wybierzmy dowolny punkt na węźle, różny od wierzchołka i~przemierzmy węzeł.
@@ -51,7 +52,7 @@ Wreszcie połączmy ze sobą liczby, które występują na tych samych skrzyżow
 
 \begin{proof}
     Umieśćmy węzły osobliwe $K_1, K_2$ w przestrzeni tak, by ich wierzchołki oraz obie gałęzie wychodzące z wierzchołków leżały tak samo. Wtedy można tak zdeformować łuki $K_1$ tak, by jedynymi osobliwościami, jakie się pojawią lub znikną, były podwójne punkty.
-    Teraz kłębiasta Wasiljewa mówi, że wartość $v$ nie zmienia się podczas tego procesu, zatem $v(K_1) = v(K_2)$, co należało okazać.
+    Teraz relacja akłębiasta Wasiljewa mówi, że wartość $v$ nie zmienia się podczas tego procesu, zatem $v(K_1) = v(K_2)$, co należało okazać.
     % chmutov12
     % TODO: (\cite{duzhin12}, prop. 3.4.2)
 \end{proof}
@@ -76,21 +77,23 @@ Dokładniej:
 
 Symbol nie jest byle jaką funkcją, spełnia dwie relacje:
 \index{relacje 1T i 4T}%
-\begin{comment}
 \begin{figure}[H]
+\begin{comment}
     \[
         \LargeOneTerm \mapsto 0
     \]
+\end{comment}
     \caption{Relacja ,,one-term'' (1T albo FI?)}
 \end{figure}
 oraz
 \begin{figure}[H]
+\begin{comment}
     \[
         \LargeFourTermA - \LargeFourTermB + \LargeFourTermC - \LargeFourTermD \mapsto 0.
     \]
+\end{comment}
     \caption{Relacja ,,four-term'' (4T)}
 \end{figure}
-\end{comment}
 
 Diagramy mogą mieć więcej cięciw z końcami tam, gdzie linia jest kropkowana, natomiast wszystkie końce cięciw na czarnych, pogrubionych łukach zostały zaznaczone explicite.
 
@@ -131,6 +134,7 @@ Jest to pięknie zilustrowane w \cite[sekcja 3.7]{duzhin12}.
 Diagramy cięciw modulo relacja 4T jest tym samym, co algebra chińskich znaków modulo relacja STU.
 % DICTIONARY;algebra of Chinese characters;algebra chińskich znaków;-
 \index{algebra!chińskich znaków}%
+\index{chiński znak|see {algebra chińskich znaków}}%
 W~tej drugiej spełnione są jeszcze relacje AS oraz IHX, nie mam siły tego rysować, ale wszystko można znaleźć w pracy Bar-Natana \cite{barnatan_95}.
 \index[persons]{Bar-Natan, Dror}%
 
