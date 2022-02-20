@@ -18,7 +18,6 @@ Sami nie rozumiemy go zbyt dobrze, dlatego zreferujemy tylko tekst Kawauchiego \
     Dysk $D$, kiedy potrzebuje mieć nazwę, też jest dyskiem plastrowym.
 \end{definition}
 
-
 Następujące węzły o~mniej niż jedenastu skrzyżowaniach są plastrowe: $6_1$, $8_{8}$, $8_{9}$, $8_{20}$, $9_{27}$, $9_{41}$, $9_{46}$, $10_{3}$, $10_{22}$, $10_{35}$, $10_{42}$, $10_{48}$, $10_{75}$, $10_{87}$, $10_{99}$, $10_{123}$, $10_{129}$, $10_{137}$, $10_{140}$, $10_{153}$ oraz $10_{155}$.
 \index{węzeł!Conwaya}
 Wśród pierwszych węzłów do dwunastu skrzyżowań najdłużej opierał się węzeł Conwaya, aż Lisa Piccirillo \cite{piccirillo20} pokazała, że nie jest plastrowy.
@@ -38,7 +37,6 @@ Wiele wyników, jakie podamy w tej sekcji, pochodzi z artykułu Foxa, Milnora \c
     Wtedy $(\operatorname{cl} (S^3 \setminus B), \operatorname{cl} (K \setminus K \cap B)) \times [0,1]$ jest parą złożoną z 4-kuli i lokalnie płaskiego dysku, który jest świadkiem plastrowości węzła $K \shrap mr K$.
 \end{proof}
 
-
 \begin{proposition}
     Albo wszystkie trzy węzły $K_1, K_2, K_1 \shrap K_2$ są plastrowe, albo co najwyżej jeden z~nich.
 \end{proposition}
@@ -51,7 +49,6 @@ Wiele wyników, jakie podamy w tej sekcji, pochodzi z artykułu Foxa, Milnora \c
     Wybierzmy 3-kule $B_1, B_3$ wewnątrz $S^3$ tak, że domknięcie $K_1 \setminus B_1 \cap K_1$ jest trywialnym łukiem w domknięciu $S^3 \setminus B_1$.
     Wtedy coś tam dalej, ale nie warto tego przepisywać, bo i tak za trudne na tę książkę.
 \end{proof}
-
 
 Pierwszym poważnym wynikiem z dziedziny teorii węzłów plastrowych, pochodzącym jeszcze z pracy \cite{fox66}, był:
 
@@ -73,7 +70,6 @@ Pierwszym poważnym wynikiem z dziedziny teorii węzłów plastrowych, pochodzą
 Ten prosty test stwierdza, że 2743 spośród 2977 węzłów o mniej niż 13 skrzyżowaniach nie jest plastrowych.
 % TODO: podać program tłumaczący, czemu tak jest?
 
-
 \begin{proposition}
 % TODO: skąd to stwierdzenie?
 \index{sygnatura}%
@@ -88,7 +84,6 @@ Ten prosty test stwierdza, że 2743 spośród 2977 węzłów o mniej niż 13 skr
     Patrz też twierdzenie 8.8 z~artykułu \cite{murasugi65}.
     Praca "Infinite Order Amphicheiral Knots". (Charles Livingston, 2001) -- chyba nie?
 \end{tobedone}
-
 
 Test ten eliminuje kolejne 45 węzłów poniżej 13 skrzyżowań.
 % TODO: podać program tłumaczący, czemu tak jest?
@@ -120,10 +115,14 @@ Ostatni fakt, jaki podamy we wprowadzeniu, to jedno z niewielu miejsc w całej k
     Freedman w \cite[tw. 1.13]{freedman82}.
 \end{proof}
 
-Implikacja \ref{prp:trivial_alexander_implies_slice} przestaje być prawdziwa po przejściu do kategorii PL.
-Dość klarownie różnicę między kategoriami TOP i PL tłumaczy Gompf w~\cite{gompf86}, wspomniane jest tam także twierdzenie Donaldsona, kluczowy składnik w~uzasadnieniu tej różnicy.
+Implikacja \ref{prp:trivial_alexander_implies_slice} przestaje być prawdziwa po przejściu z kategorii TOP do DIFF.
+% Encyclopedia of Knot Theory pod redakcją Colin Adams, Erica Flapan, Allison Henrich, Louis H. Kauffman, Lewis D. Ludwig, Sam Nelson, około strony 453 lub 454: "but many knots with Alexander polynomial one are not smoothly slice [9]"
+Wydawało mi się kiedyś, że Gompf \cite{gompf86} dobrze tłumaczy tę różnicę przy użyciu twierdzenia Donaldsona.
 \index[persons]{Gompf, Robert}%
-% TODO: nie jestem pewien, czy akurat między TOP i PL. Sprawdzić.
+Dzisiaj wiem, że nic nie wiem.
+
+Encyklopedia węzłów\footnote{,,Encyclopedia of knot theory'', niedostępna jeszcze w MathSciNet.} \cite{citation_missing_on_purpose} odsyła do Donaldsona \cite{donaldson83} właśnie.
+% https://www.routledge.com/Encyclopedia-of-Knot-Theory/Adams-Flapan-Henrich-Kauffman-Ludwig-Nelson/p/book/9781138297845
 
 \input{50-families/slice-concordance}
 
