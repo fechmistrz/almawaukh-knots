@@ -1,60 +1,62 @@
 
 \section{Węzły plastrowe i taśmowe}
 \label{sec:slice}
-Węzły plastrowe i taśmowe oraz pojęcie kobordyzmu, które wkrótce opiszemy, należą do świata 4-wymiarowej teorii węzłów.
-Nie zapoznamy się z nią bliżej oraz nie podamy naszego ulubionego odniesienia do tego tematu w~literaturze, ponieważ sami nie rozumiemy go zbyt dobrze.
-Wszystko zaczęło się od artykułu \cite{fox66} Foxa, Milnora.
+Węzły plastrowe i taśmowe oraz pojęcie kobordyzmu należą do świata 4-wymiarowej teorii węzłów.
+Sami nie rozumiemy go zbyt dobrze, dlatego zreferujemy tylko tekst Kawauchiego \cite[s. 155-1XX]{kawauchi96} i nie podamy ulubionego odniesienia do tematu w~literaturze.
 
-%%% Kawauchi 155:
-
-\begin{definition}[płaski dysk]
-    Niech $D \subseteq B^4$ będzie dyskiem posiadającym otoczenie $N$, kopię zbioru $D \times I^2$, która przecina sferę $S^3$ dokładnie w $\partial D \times I^2$.
-    Mówimy wtedy, że dysk $D$ jest płaski.
-\end{definition}
-
-\begin{tobedone}
-    Płaski? Lokalnie płaski?
-    \cite[s. 155]{kawauchi96}
-\end{tobedone}
-
+% DICTIONARY;plastrowy;slice;węzeł
 \begin{definition}[węzeł plastrowy]
-    \index{węzeł!plastrowy}
-    % z \cite{gompf86}
-    Niech $K$ będzie takim węzłem w $S^3 = \partial B^4$, który ogranicza gładko zanurzony 2-dysk w $B^4$.
-    O węźle $K$ mówimy wtedy, że jest plastrowy.
+\index{węzeł!plastrowy}%
+    Węzeł $K$ w sferze $S^3$, który jest brzegiem lokalnie płaskiego, właściwego dysku $D$ w kuli $B^4$ nazywamy węzłem plastrowym. % Kawauchi 155
+    % % z \cite{gompf86}
+    % Niech $K$ będzie takim węzłem w $S^3 = \partial B^4$, który ogranicza gładko zanurzony 2-dysk w $B^4$.
+    % O węźle $K$ mówimy wtedy, że jest plastrowy.
     % stare:
     % Niech $K \subseteq S^3$ będzie takim węzłem, że w kuli $B^4$ istnieje płaski dysk $D$ taki, że $K = \partial D = D \cap S^3$.
     % Wtedy $K$ nazywamy węzłem plastrowym.
+
+    Dysk $D$, kiedy potrzebuje mieć nazwę, też jest dyskiem plastrowym.
 \end{definition}
+
 
 Następujące węzły o~mniej niż jedenastu skrzyżowaniach są plastrowe: $6_1$, $8_{8}$, $8_{9}$, $8_{20}$, $9_{27}$, $9_{41}$, $9_{46}$, $10_{3}$, $10_{22}$, $10_{35}$, $10_{42}$, $10_{48}$, $10_{75}$, $10_{87}$, $10_{99}$, $10_{123}$, $10_{129}$, $10_{137}$, $10_{140}$, $10_{153}$ oraz $10_{155}$.
 \index{węzeł!Conwaya}
-Wśród pierwszych węzłów do dwunastu skrzyżowań najdłużej opierał się węzeł Conwaya, aż Piccirillo pokazała w~\cite{piccirillo20}, że nie jest plastrowy.
+Wśród pierwszych węzłów do dwunastu skrzyżowań najdłużej opierał się węzeł Conwaya, aż Lisa Piccirillo \cite{piccirillo20} pokazała, że nie jest plastrowy.
 \index[persons]{Piccirillo, Lisa}%
+
+Wiele wyników, jakie podamy w tej sekcji, pochodzi z artykułu Foxa, Milnora \cite{fox66}, od którego wszystko się zaczęło.
+\index[persons]{Fox, Ralph}%
+\index[persons]{Milnor, John}%
 
 \begin{proposition}
     Niech $K$ będzie węzłem.
     Wtedy $K \shrap mr K$ jest węzłem plastrowym.
 \end{proposition}
 
-\begin{proof}[Niedowód]
-\index[persons]{Fox, Ralph}%
-\index[persons]{Milnor, John}%
-    Pierwszy był Fox z Milnorem \cite{fox66}, patrz także lemat 12.1.2.2 w \cite{kawauchi96}.
+\begin{proof}
+    Kawauchi \cite[s. 155]{kawauchi96} pisze: wybierzmy 3-kulę $B \subseteq S^3$ taką, że $K \cap B$ jest trywialnym łukiem w $B$.
+    Wtedy $(\operatorname{cl} (S^3 \setminus B), \operatorname{cl} (K \setminus K \cap B)) \times [0,1]$ jest parą złożoną z 4-kuli i lokalnie płaskiego dysku, który jest świadkiem plastrowości węzła $K \shrap mr K$.
 \end{proof}
+
 
 \begin{proposition}
     Albo wszystkie trzy węzły $K_1, K_2, K_1 \shrap K_2$ są plastrowe, albo co najwyżej jeden z~nich.
 \end{proposition}
 
-\begin{proof}[Niedowód]
-    Lemat 12.1.2.3 w \cite{kawauchi96}.
+\begin{proof}
+    Kawauchi \cite[s. 155]{kawauchi96} pisze: załóżmy, że $K_1, K_2$ są plastrowe, z plastrowymi dyskami $D_1, D_2 \subseteq B^4$.
+    Wtedy suma brzegowa\footnote{Cokolwiek to jest...} $(B^4, D_1) \natural (B^4, D_2)$ pokazuje, że węzeł $K_1 \shrap K_2$ jest plastrowy.
+
+    Załóżmy teraz, że $K_1, K_3 = K_1 \shrap K_2$ są plastrowe, z plastrowymi dyskami $D_1, D_3 \subseteq B_4$.
+    Wybierzmy 3-kule $B_1, B_3$ wewnątrz $S^3$ tak, że domknięcie $K_1 \setminus B_1 \cap K_1$ jest trywialnym łukiem w domknięciu $S^3 \setminus B_1$.
+    Wtedy coś tam dalej, ale nie warto tego przepisywać, bo i tak za trudne na tę książkę.
 \end{proof}
+
 
 Pierwszym poważnym wynikiem z dziedziny teorii węzłów plastrowych, pochodzącym jeszcze z pracy \cite{fox66}, był:
 
 \begin{proposition}[warunek Foxa-Milnora]
-    \index{warunek!Foxa-Milnora}
+\index{warunek!Foxa-Milnora}%
     Niech $K$ będzie węzłem plastrowym.
     Wtedy jego wielomian Alexandera jest postaci $\alexander(t) = f(t) f(1/t)$ dla pewnego wielomianu Laurenta $f \in \Z[t, 1/t]$.
 \end{proposition}
@@ -65,14 +67,16 @@ Pierwszym poważnym wynikiem z dziedziny teorii węzłów plastrowych, pochodzą
 \end{corollary}
 
 \begin{proof}
-    Mamy $\det K = |\alexander(-1)| = f(-1) f(-1)$.
+    Mamy $\det K = |\alexander_K(-1)| = f(-1) f(-1)$.
 \end{proof}
 
 Ten prosty test stwierdza, że 2743 spośród 2977 węzłów o mniej niż 13 skrzyżowaniach nie jest plastrowych.
+% TODO: podać program tłumaczący, czemu tak jest?
+
 
 \begin{proposition}
-    \index{sygnatura}
-%label{prp:slice_signature}
+% TODO: skąd to stwierdzenie?
+\index{sygnatura}%
     Niech $K$ będzie węzłem plastrowym.
     Wtedy $\sigma(K) = 0$.
 \end{proposition}
@@ -85,7 +89,9 @@ Ten prosty test stwierdza, że 2743 spośród 2977 węzłów o mniej niż 13 skr
     Praca "Infinite Order Amphicheiral Knots". (Charles Livingston, 2001) -- chyba nie?
 \end{tobedone}
 
+
 Test ten eliminuje kolejne 45 węzłów poniżej 13 skrzyżowań.
+% TODO: podać program tłumaczący, czemu tak jest?
 
 \begin{proposition}
     \index{niezmiennik!Arfa}
@@ -98,20 +104,26 @@ Test ten eliminuje kolejne 45 węzłów poniżej 13 skrzyżowań.
     Wynika stąd przystawanie $\det K \equiv 1 \mod 8$, które w~połączeniu z warunkiem Murasugiego (fakt \ref{prp:arf_murasugi}) daje $\operatorname{Arf} K = 0$.
 \end{proof}
 
+% TODO: podać program tłumaczący, czemu tak jest? tzn. czy coś to eliminuje więcej, jak tak to ile?
+
+Ostatni fakt, jaki podamy we wprowadzeniu, to jedno z niewielu miejsc w całej książce, gdzie dotykamy różnic między kategorią TOP oraz PL.
+
 \begin{proposition}
-    \label{prp:trivial_alexander_implies_slice}
+\label{prp:trivial_alexander_implies_slice}%
     Niech $K$ będzie węzłem w kategorii TOP.
     Jeżeli jego wielomian Alexandera jest trywialny: $\alexander_K(t) \equiv 1$, to węzeł $K$ jest plastrowy.
 \end{proposition}
 
 \begin{proof}
 \index[persons]{Freedman, Michael}%
+% Twierdzenie łatwo napotkać czytając o węzłach plastrowych, ale jawnie nikomu się nie chce wskazać dowodu. Informację, że to jest tw. 1.13b znalazłem wreszcie w https://arxiv.org/pdf/1504.01064.pdf
     Freedman w \cite[tw. 1.13]{freedman82}.
 \end{proof}
 
 Implikacja \ref{prp:trivial_alexander_implies_slice} przestaje być prawdziwa po przejściu do kategorii PL.
 Dość klarownie różnicę między kategoriami TOP i PL tłumaczy Gompf w~\cite{gompf86}, wspomniane jest tam także twierdzenie Donaldsona, kluczowy składnik w~uzasadnieniu tej różnicy.
 \index[persons]{Gompf, Robert}%
+% TODO: nie jestem pewien, czy akurat między TOP i PL. Sprawdzić.
 
 \input{50-families/slice-concordance}
 
