@@ -72,6 +72,8 @@ def invisible_knots(knots):
 
 def bankwitz_application(knots):
     examples = dict()
+    crowell = dict()
+    torus_knots = ["3_1", "5_1", "7_1", "8_19", "9_1", "10_124", "11a_367"]
     for knot in knots.itertuples():
         cr = knot.crossing_number
         det = knot.determinant
@@ -79,8 +81,17 @@ def bankwitz_application(knots):
             if cr not in examples:
                 examples[cr] = list()
             examples[cr].append(knot.name)
-
+        elif not knot.alternating and knot.name not in torus_knots and knot.determinant + 3 < 2 * knot.crossing_number:
+            if cr not in crowell:
+                crowell[cr] = list()
+            crowell[cr].append(knot.name)
+            
+    print("Nonalternating knots because det < cr:")
     for k, v in examples.items():
+        print(f"{len(v)} knot(s) with cr = {k}: {', '.join(v)}")
+
+    print("Nonalternating knots because det + 3 < 2cr:")
+    for k, v in crowell.items():
         print(f"{len(v)} knot(s) with cr = {k}: {', '.join(v)}")
 
     return
