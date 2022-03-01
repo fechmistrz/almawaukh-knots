@@ -49,7 +49,7 @@ def unknotting_sigma(knots):
     for knot in knots.itertuples():
         if knot.crossing_number >= 12:
             continue
-        
+
         all_knots = all_knots + 1
         if ".." in str(knot.unknotting_number):
             unknown_knots = unknown_knots + 1
@@ -63,14 +63,10 @@ def unknotting_sigma(knots):
 
 
 with open("knotinfo_parsed.json") as f:
-    query = '2 + crossing_number == 2 * braid_index'
     all_knots = pd.DataFrame(json.load(f)) 
-    filtered_knots = [x for x in all_knots.query(query)["name"]]
-    
-    print(f"{len(filtered_knots)} results!")
-    for x in filtered_knots:
-        continue
-        print(x)
+
+    # query = '2 + crossing_number == 2 * braid_index'
+    # filtered_knots = [x for x in all_knots.query(query)["name"]]
 
     # jones_collisions(all_knots)
     # trivial_alexander(all_knots)
