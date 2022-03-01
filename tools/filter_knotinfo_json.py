@@ -28,6 +28,40 @@ def jones_collisions(knots):
     return
 
 
+def trivial_alexander(knots):
+    print("Knots with trivial Alexander polynomial:")
+    for knot in knots.itertuples():
+        # print(knot)
+        alexander = eval(knot.alexander_polynomial_vector)
+        alexander_span = alexander[1] - alexander[0]
+        if alexander_span == 0:
+            print(knot.name)
+    return
+
+
+def unknotting_sigma(knots):
+    print("Knots that satisfy 2u >= sigma?")
+
+    all_knots = 0
+    unknown_knots = 0
+    double_sigma = 0
+
+    for knot in knots.itertuples():
+        if knot.crossing_number >= 12:
+            continue
+        
+        all_knots = all_knots + 1
+        if ".." in str(knot.unknotting_number):
+            unknown_knots = unknown_knots + 1
+        elif 2 * int(knot.unknotting_number) == abs(knot.signature):
+            double_sigma = double_sigma + 1
+
+    print(f"{all_knots} (all knots)")
+    print(f"{unknown_knots} (unknown crossing number)")
+    print(f"{double_sigma} (2u = |sigma|)")
+    return
+
+
 with open("knotinfo_parsed.json") as f:
     query = '2 + crossing_number == 2 * braid_index'
     all_knots = pd.DataFrame(json.load(f)) 
@@ -39,3 +73,7 @@ with open("knotinfo_parsed.json") as f:
         print(x)
 
     # jones_collisions(all_knots)
+    # trivial_alexander(all_knots)
+    # unknotting_sigma(all_knots)
+
+    # print("Koniec psot.")
