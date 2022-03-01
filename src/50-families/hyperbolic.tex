@@ -1,13 +1,13 @@
 
 \section{Węzły hiperboliczne}
-\index{węzeł!hiperboliczny|(}
-\label{sec:hyperbolic}
+\index{węzeł!hiperboliczny|(}%
+\label{sec:hyperbolic}%
 Jak pisaliśmy w~sekcji \ref{sec:mutant}, słynne węzły Conwaya oraz Kinoshity-Terasakiego odróżnił od siebie po raz pierwszy Riley.
-\index[persons]{Riley, Robert}
+\index[persons]{Riley, Robert}%
 \index{węzeł!Conwaya}%
 \index{węzeł!Kinoshity-Terasakiego}%
 Zbadał paraboliczne reprezentacje ich grup w~skończoną grupę prostą $PSL(2, 7)$, co doprowadziło go do odkrycia struktury hiperbolicznej w~dopełnieniu ósemki \cite{riley75}.
-\index{ósemka}
+\index{węzeł!4-1}%
 % https://arxiv.org/pdf/2002.00564.pdf
 Zainspirowany tym wynikiem Thurston najpierw rozłożył dopełnienie ósemki na dwa idealne wielościany, a~potem znacznie uogólnił swój przykład.
 
@@ -51,33 +51,38 @@ Wiedzę o~węzłach hiperbolicznych można czerpać także z~artykułu Weeksa \c
 Thurston podejrzewał, że każda 3-rozmaitość rozkłada się wzdłuż sfer i~nieściśliwych torusów na części wyposażone w~jedną z~ośmiu kanonicznych geometrii:
 \begin{itemize}
 \item sferyczną $S^3$, albo euklidesową $E^3$, albo hiperboliczną $H^3$,
-\item $S^2 \times \R$, albo $H^2 \times \R$,
-\item uniwersalne nakrycie $SL(2, \R)$,
-\item geometrię Sol albo geometrię Nil.
+\item albo $S^2 \times \R$, albo $H^2 \times \R$,
+\item albo uniwersalne nakrycie $SL(2, \R)$,
+\item albo geometrię Sol albo geometrię Nil.
 \end{itemize}
 Nie umiał podać pełnego uzasadnienia, w~pracy \cite{thurston82} udowodnił swoje przypuszczenie dla rozmaitości Hakena.
-\index{rozmaitość Hakena}
+\index{rozmaitość Hakena}%
 Dowód hipotezy geometryzacyjnej dostarczył mniej więcej dwie dekady później Perelman, nie to jest jednak dla nas najważniejsze.
+\index[persons]{Perelman, Grigorij}%
 \index{hipoteza!geometryzacyjna Thurstona}
 Z przełomowych prac Thurstona z~lat 70. oraz 80. wynika coś ciekawszego: że dopełnienie węzła jest rozmaitością włóknistą Seiferta, toroidalną albo hiperboliczną.
+\index{rozmaitość włóknista Seiferta}%
+\index{rozmaitość toroidalna}%
+\index{rozmaitość hiperboliczna}%
 Innymi słowy, Thurston przedstawił trychotomię:
 
 \begin{theorem}
-    \index{twierdzenie!Thurstona}
+\index{twierdzenie!Thurstona}%
+\index{węzeł!satelitarny}%
+\index{węzeł!torusowy}%
     Każdy węzeł jest satelitarny, torusowy albo hiperboliczny.
-    \index{węzeł!satelitarny}
-    \index{węzeł!torusowy}
 \end{theorem}
 % luźno związane: http://www.deltami.edu.pl/temat/matematyka/topologia/2012/12/27/%William_Thurston_i_hipoteza_geometryzacyjna/
 
 \begin{proof}
-    Thurston w~\cite[wniosek 2.5]{thurston82}.
+    Thurston \cite[wniosek 2.5]{thurston82}.
 \end{proof}
 
 % https://mathoverflow.net/a/289359 : hyperbolic, toroidal (that is, satellite), or Seifert fibered
 
 Węzły hiperboliczne stanowią najliczniejszą i~najmniej zrozumianą rodzinę węzłów.
 Sam Nead, użytkownik portalu MathOverflow napisał, że kryterium Thurstona dzięki maszynerii JSJ oraz pracom innych osób można wysłowić algebraicznie.
+\index{rozkład Jaco-Shalena-Johannsona}%
 
 \begin{proposition}
     % There is a topological criterion due to Thurston.  Using the JSJ machine (and work of many others) this criterion can also be phrased algebraically.  I'll essay these below.  Please note that the situation is much simpler for knots.  To answer your question most directly, here is the desired reference to Wikipedia.
@@ -90,8 +95,8 @@ Sam Nead, użytkownik portalu MathOverflow napisał, że kryterium Thurstona dzi
     %  - $L$ has no component that is an "undisturbed satellite knot".  Equivalently, $X$ contains no essential torus.
     %  - $L$ is not a torus knot. Equivalently, $X$ contains no essential annulus. These last two topological properties are equivalent to $\pi$ not containing a copy of $\ZZ^2$.
     % Then $X$ admits a hyperbolic structure.
-    Niech $L$ będzie splotem, który nie rozszczepia się, nie jest niewęzłem, nie posiada wśród ogniw niezakłóconego węzła satelitarnego oraz nie jest węzłem torusowym.
-    \index{splot!rozszczepialny}
+    Niech $L$ będzie splotem, który nie rozszczepia się, nie jest niewęzłem, nie posiada wśród ogniw niezakłóconego węzła satelitarnego\footnote{,,undisturbed satellite knot''} oraz nie jest węzłem torusowym.
+\index{splot!rozszczepialny}%
     Wtedy $L$ jest hiperboliczny.
 \end{proposition}
 
@@ -109,18 +114,18 @@ Sam Nead, użytkownik portalu MathOverflow napisał, że kryterium Thurstona dzi
     Patrz \url{https://mathoverflow.net/a/153327}.
 \end{proof}
 
-Czas na podanie jakichś przykładów węzłów hiperbolicznych, za \cite{adams05}.
+Czas na podanie jakichś przykładów węzłów hiperbolicznych, za Adamsem \cite{adams05}.
 
 \begin{proposition}
     Każdy alternujący, pierwszy, oraz nierozszczepialny splot jest albo 2-warkoczem (a zatem, torusowy) albo hiperboliczny.
-    \index{węzeł!alternujący}
-    \index{węzeł!pierwszy}
-    \index{węzeł!rozszczepialny}
+\index{splot!rozszczepialny}%
+\index{węzeł!alternujący}%
+\index{węzeł!pierwszy}%
 \end{proposition}
 
 \begin{proof}
-\index[persons]{Menasco, William}%
     Menasco \cite{menasco84} pokazał, że dopełnienie alternującego węzła nie zawiera nieściśliwych nieperyferyjnych torusów.
+\index[persons]{Menasco, William}%
     To w~połączeniu z~unifikacyjnym twierdzeniem Thurstona dla rozmaitości Hakena kończy dowód.
 \index{rozmaitość Hakena}%
     % zarys dowodu zz MathSciNet
@@ -128,12 +133,20 @@ Czas na podanie jakichś przykładów węzłów hiperbolicznych, za \cite{adams0
 
 \begin{proposition}
     Nietrywialne pierwsze prawie alternujące węzły są torusowe albo hiperboliczne.
-    \index{węzeł!pierwszy}
-    \index{węzeł!prawie alternujący}
+\index{węzeł!pierwszy}%
+\index{węzeł!prawie alternujący}%
 \end{proposition}
 
 \begin{proof}
     Grupa studentów pod opieką Adamsa w \cite{brock92}.
+\index[persons]{Adams, Colin}%
+\index[persons]{Brock, Jeffrey}%
+\index[persons]{Bugbee, John}%
+\index[persons]{Comar, Timothy}%
+\index[persons]{Faigin, Keith}%
+\index[persons]{Huston, Amy}%
+\index[persons]{Joseph, Anne}%
+\index[persons]{Pesikoff, David}%
 \end{proof}
 
 \begin{proposition}
@@ -242,7 +255,7 @@ W pracy \cite{malyutin16} Malutin pokazał jednak, że to przypuszczenie jest sp
     \index{węzeł!satelitarny}
 \end{conjecture}
 
-Lackenby pokazał w~\cite{lackenby14}, że jeśli $K$ jest satelitą z~towarzyszem $L$, to $\crossing K \ge 10^{-13} \crossing L$.
+Lackenby \cite{lackenby14} pokazał, że jeśli $K$ jest satelitą z~towarzyszem $L$, to $\crossing K \ge 10^{-13} \crossing L$.
 \index[persons]{Lackenby, Marc}%
 
 \begin{conjecture}
