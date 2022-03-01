@@ -70,6 +70,22 @@ def invisible_knots(knots):
     return
 
 
+def bankwitz_application(knots):
+    examples = dict()
+    for knot in knots.itertuples():
+        cr = knot.crossing_number
+        det = knot.determinant
+        if det < cr:
+            if cr not in examples:
+                examples[cr] = list()
+            examples[cr].append(knot.name)
+
+    for k, v in examples.items():
+        print(f"{len(v)} knot(s) with cr = {k}: {', '.join(v)}")
+
+    return
+
+
 with open("knotinfo_parsed.json") as f:
     all_knots = pd.DataFrame(json.load(f)) 
 
@@ -80,5 +96,6 @@ with open("knotinfo_parsed.json") as f:
     # trivial_alexander(all_knots)
     # unknotting_sigma(all_knots)
     # invisible_knots(all_knots)
+    # bankwitz_application(all_knots)
 
     # print("Koniec psot.")
