@@ -62,6 +62,14 @@ def unknotting_sigma(knots):
     return
 
 
+def invisible_knots(knots):
+    print("Invisible knots (with det = 1):")
+    for knot in knots.itertuples():
+        if knot.determinant == 1:
+            print(knot.name)
+    return
+
+
 with open("knotinfo_parsed.json") as f:
     all_knots = pd.DataFrame(json.load(f)) 
 
@@ -71,5 +79,6 @@ with open("knotinfo_parsed.json") as f:
     # jones_collisions(all_knots)
     # trivial_alexander(all_knots)
     # unknotting_sigma(all_knots)
+    # invisible_knots(all_knots)
 
     # print("Koniec psot.")
