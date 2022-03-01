@@ -97,6 +97,22 @@ def bankwitz_application(knots):
     return
 
 
+def alexander_genus(knots):
+    examples = dict()
+    print("Knots for which span Delta/2 < g without equality:")
+    for knot in knots.itertuples():
+        alexander = eval(knot.alexander_polynomial_vector)
+        span = abs(alexander[1] - alexander[0])
+        g = knot.three_genus
+        if 2*g - span <= 1:
+            continue
+        if g not in examples:
+            examples[g] = list()
+        examples[g].append(knot.name)
+    for k, v in examples.items():
+        print(f"g = {k}, knots: {', '.join(v)}")
+    return
+
 with open("knotinfo_parsed.json") as f:
     all_knots = pd.DataFrame(json.load(f)) 
 
@@ -108,5 +124,6 @@ with open("knotinfo_parsed.json") as f:
     # unknotting_sigma(all_knots)
     # invisible_knots(all_knots)
     # bankwitz_application(all_knots)
+    # alexander_genus(all_knots)
 
     # print("Koniec psot.")
