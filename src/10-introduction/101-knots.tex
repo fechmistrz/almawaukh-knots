@@ -13,15 +13,15 @@ Jeśli czyni to życie lżejszym, to przy pierwszym czytaniu można przyjąć pr
 
 Niestety, naiwna definicja dopuszcza ona patologiczne z~kombinatorycznego punktu widzenia węzły dzikie, jak ten z~rysunku \ref{fig_wild_knot}.
 
-\begin{comment}
 \begin{figure}[H]
     \centering
+\begin{comment}
     \includegraphics[width=0.44\linewidth]{wild_knot.png}
+\end{comment}
     \caption[caption-for-lof-1]{Węzeł dziki, źródło: Wikimedia{\footnotemark}.}
     \label{fig_wild_knot}
 \end{figure}
 \footnotetext{\url{https://upload.wikimedia.org/wikipedia/commons/2/2f/Wildknot.svg}}
-\end{comment}
 
 Zastanówmy się, jakim formalizmem opisać manipulowanie fizycznym sznurkiem, by wykluczyć węzły dzikie z~naszych rozważań.
 Nie można użyć izotopii (dwa węzły są izotopijne, jeśli istnieje ciągła funkcja $F \colon S^1 \times [0, 1] \to \R^3$ taka, że $F(-, 0)$ jest pierwszym, zaś $F(-,1)$ drugim węzłem), gdyż każdy węzeł jest izotopijny z punktem:
@@ -114,11 +114,13 @@ W~takiej sytuacji obydwa sploty mają tyle samo ogniw.
 
 \begin{example}
 \index{splot!Hopfa}%
+\index[persons]{Hopf, Heinz}%
     Splot Hopfa to najprostszy splot nietrywialny, którym w~1931 r. zajmował się Heinz Hopf, topolog niemiecki, w~ramach badań nad tzw. rozwłóknieniem (Hopf fibration).
 \end{example}
 
 \begin{example}
 \index{splot!Whiteheada}%
+\index[persons]{Whitehead, John}%
     Whitehead w~1934 odkrył kontrprzykład do nieudanego dowodu hipotezy Poincarego.
     Był nim splot o~dwóch składowych przedstawiony na poniższym rysunku.
 \end{example}
@@ -139,22 +141,24 @@ W~takiej sytuacji obydwa sploty mają tyle samo ogniw.
 \end{comment}
 
 Jeśli dwa węzły są równoważne, to ich dopełnienia są oczywiście homeomorficzne.
-Pytanie o~prawdziwość implikacji odwrotnej jako pierwszy zadał najprawdopodobniej  Tietze \cite{tietze08} w~1908 roku.
+Pytanie o~prawdziwość implikacji odwrotnej jako pierwszy zadał najprawdopodobniej Tietze \cite{tietze08} w~1908 roku.
+\index[persons]{Tietze, Heinrich}%
 W roku 1987 pokazano, że istnieją co najwyżej dwa węzły o~zadanym dopełnieniu (Culler, Gordon, Luecke, Shalen \cite{culler87}).
+\index[persons]{Culler, Marc}%
+\index[persons]{Shalen, Peter}%
 Dwa lata później poznaliśmy pozytywną odpowiedź na pytanie Tietzego: każdy węzeł jest wyznaczony jednoznacznie przez swoje dopełnienie.
 
 \begin{theorem}[Gordon, Luecke, 1989]
+\index[persons]{Gordon, Cameron}%
+\index[persons]{Luecke, John}%
 \index{twierdzenie!Gordona-Lueckego}%
 \label{thm:gordon_luecke}%
     Poskromione węzły o~homeomorficznych (z zachowaniem orientacji) dopełnieniach są wzajemnie izotopijne.
 \end{theorem}
 
 \begin{proof}[Niedowód]
-\index[persons]{Gordon, Cameron}%
-\index[persons]{Luecke, John}%
-    Wynika to z~ogólniejszego stwierdzenia:
-    nietrywialna chirurgia Dehna na węźle w~3-sferze nigdy nie daje 3-sfery.
-\index{chirurgia Dehna}
+    Wynika to z~ogólniejszego stwierdzenia: nietrywialna chirurgia Dehna na węźle w~3-sferze nigdy nie daje 3-sfery i teorii Cerfa.
+\index{chirurgia Dehna}%
     Pełny dowód zawiera praca \cite{gordon89}.
 \end{proof}
 
@@ -204,6 +208,6 @@ Mamy na przykład węzły obramowane:
 % DICTIONARY;long;długi;węzeł
 Są jeszcze węzły wirtualne, zespawane (iloraz węzłów wirtualnych przez ruch znany jako ,,nadskrzyżowania komutują''), długie (gdzie końce nie są ze sobą zszyte, ale umieszczone tak daleko, że są nieosiągalne) i inne.
 Ta książka nie zawiera zbyt wiele informacji o wspomnianych bytach.
-% http://katlas.org/ester/weldedknots/explanations.html
+% xx
 % koniec sekcji Węzły i sploty
 
