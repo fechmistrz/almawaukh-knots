@@ -113,6 +113,23 @@ def alexander_genus(knots):
         print(f"g = {k}, knots: {', '.join(v)}")
     return
 
+
+def genus_prime(knots):
+    genus_one = list()
+    genus_more = list()
+    print("Does genus often detect primality?")
+    for knot in knots.itertuples():
+        g = knot.three_genus
+        if g == 1:
+            genus_one.append(knot.name)
+        else:
+            genus_more.append(knot.name)
+
+    print(f"{len(genus_one)} knots with g = 1: {', '.join(genus_one)}")
+    print(f"{len(genus_more)} knots with g > 1")
+    return
+
+
 with open("knotinfo_parsed.json") as f:
     all_knots = pd.DataFrame(json.load(f)) 
 
@@ -125,5 +142,6 @@ with open("knotinfo_parsed.json") as f:
     # invisible_knots(all_knots)
     # bankwitz_application(all_knots)
     # alexander_genus(all_knots)
+    # genus_prime(all_knots)
 
     # print("Koniec psot.")

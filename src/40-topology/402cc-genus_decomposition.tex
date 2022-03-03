@@ -3,7 +3,7 @@
 
 \begin{proposition}
     \label{prp:genus_of_sum}
-    Jeśli $J, K$ są węzłami, to $g (J \shrap K) = g(J) + g(K)$.
+    Jeśli $K_1, K_2$ są węzłami, to $\genus (K_1 \shrap K_2) = \genus (K_1) + \genus (K_2)$.
 \end{proposition}
 
 Poniższy dowód pochodzi od Schuberta (\cite{schubert49}), został tylko zapisany we współczesnym języku.
@@ -11,9 +11,9 @@ Poniższy dowód pochodzi od Schuberta (\cite{schubert49}), został tylko zapisa
 Przebiega w dwóch etapach: najpierw pokazuje się, że genus sumy nie jest większy od sumy genusów składników, a następnie, że nie jest od niej mniejszy.
 
 \begin{proof}
-    Pokażemy najpierw, że $g(J \# K) \le g(J) + g(K)$.
-    Wybierzmy powierzchnie Seiferta $M_J$ oraz $M_K$ dla $J$ oraz $K$ o~minimalnym genusie.
-    Suma $J \shrap K$ powstaje z~$J$ oraz $K$, podobnie jest z~powierzchniami Seiferta:
+    Pokażemy najpierw, że $\genus (K_1 \# K_2) \le \genus (K_1) + \genus (K_2)$.
+    Wybierzmy powierzchnie Seiferta $M_1$ oraz $M_2$ dla $K_1$ oraz $K_2$ o~minimalnym genusie.
+    Suma $K_1 \shrap K_2$ powstaje z~$K_1$ oraz $K_2$, podobnie jest z~powierzchniami Seiferta:
 \begin{comment}
     \begin{figure}[H]
         \centering
@@ -33,20 +33,21 @@ Przebiega w dwóch etapach: najpierw pokazuje się, że genus sumy nie jest wię
     \end{figure}
 \end{comment}
 
-    Skoro $M_{J\#K}$ powstaje z~$M_J \sqcup M_K$ przez dołączenie paska do brzegu, mamy
+    Skoro $M_{\#}$ powstaje z~$M_1 \sqcup M_2$ przez dołączenie paska do brzegu, mamy
     \begin{equation}
-        \chi(M_{J\#K}) = \chi(M_J \sqcup M_K) - 1 = \chi(M_J) + \chi(M_K)-1,
+        \chi(M_{\#}) = \chi(M_1 \sqcup M_2) - 1 = \chi(M_1) + \chi(M_2)-1,
     \end{equation}
     a~przez to
     \begin{equation}
-        g(M_{J\#K}) = \frac{1-\chi(M_{J\#K})}{2} =
-        \frac{1-\chi(M_{J})}{2} + \frac{1-\chi(M_{K})}{2}
+        \genus (M_{\#}) = \frac{1-\chi(M_{\#})}{2} =
+        \frac{1-\chi(M_1)}{2} + \frac{1-\chi(M_2)}{2}
         % = %g(M_J)+g(M_K)
-        = g(J) + g(K).
+        = \genus(K_1) + \genus(K_2).
     \end{equation}
     To kończy dowód pierwszej nierówności.
-    Pokażemy jeszcze, że $g(J \# K) \ge g(J)+g(K)$.
-    Zaczynamy od powierzchni Seiferta $M_{J\#K}$ dla $J\#K$ o~minimalnym genusie $g(M_{J\#K})$ równym $g(J\#K)$.
+
+    Pokażemy jeszcze, że $\genus (K_1 \# K_2) \ge \genus (K_1) + g(K_2)$.
+    Zaczynamy od powierzchni Seiferta $M_{\#}$ dla $K_1 \# K_2$ o~minimalnym genusie $\genus (M_{\#})$ równym $\genus (K_1 \# K_2)$.
     Poprzez wykonanie chirurgii na powierzchni, możemy przyjąć specjalną postać jak w~poprzednim dowodzie:
 \begin{comment}
     \[
@@ -54,17 +55,17 @@ Przebiega w dwóch etapach: najpierw pokazuje się, że genus sumy nie jest wię
     \]
 \end{comment}
 
-    Usunięcie paska daje powierzchnie Seiferta dla $M_J$ oraz $M_K$ takie, że
+    Usunięcie paska daje powierzchnie Seiferta dla $M_1$ oraz $M_2$ takie, że
     \begin{equation}
-        g(M_J)+g(M_K)=g(M_{J\#K})=g(J\#K).
+        \genus(M_1) + \genus(M_2) = \genus(M_{\#}) = \genus(K_1 \# K_2).
     \end{equation}
-    Oznacza to, że $g(J) + g(K) \le g(M_J) + g(M_K) = g(J\#K)$ i~mamy równość.
+    Oznacza to, że $\genus(K_1) + \genus(K_2) \le \genus(M_1) + \genus(M_2) = \genus(K_1 \# K_2)$ i~mamy równość.
 \end{proof}
 
-Jesteśmy wreszcie w~stanie podać prawdziwy dowód faktu \ref{first_time_sum_is_trivial}.
+Jesteśmy wreszcie w~stanie podać ,,prawdziwy dowód'' faktu \ref{first_time_sum_is_trivial}.
 
 \begin{corollary}
-    \label{cor:connected_sum_no_inverses}
+\label{cor:connected_sum_no_inverses}%
     Jeśli suma spójna dwóch węzłów jest niewęzłem, to oba składniki także nim są.
 \end{corollary}
 
@@ -73,7 +74,7 @@ Powrócimy teraz do węzłów pierwszych.
 
 \begin{proposition}
     Niech $K$ będzie węzłem.
-    Jeśli $g(K) = 1$, to $K$ jest węzłem pierwszym.
+    Jeśli $\genus (K) = 1$, to $K$ jest węzłem pierwszym.
 \end{proposition}
 
 \begin{proof}
@@ -83,6 +84,9 @@ Powrócimy teraz do węzłów pierwszych.
 \end{proof}
 
 Implikacja odwrotna jest fałszywa: pięciolistnik jest pierwszy, ale jego genus wynosi $2$.
+Spośród 2977 węzłów pierwszych do 12 skrzyżowań, tylko 23 posiada genus równy jeden.
+Są to: $3_{1}$, $4_{1}$, $5_{2}$, $6_{1}$, $7_{2}$, $7_{4}$, $8_{1}$, $8_{3}$, $9_{2}$, $9_{5}$, $9_{35}$, $9_{46}$, $10_{1}$, $10_{3}$, $11a_{247}$, $11a_{343}$, $11a_{362}$, $11a_{363}$, $11n_{139}$, $11n_{141}$, $12a_{803}$, $12a_{1166}$ oraz $12a_{1287}$.
+% ZWERYFIKOWANO: funkcja genus_prime
 
 \begin{proposition}
     Każdy węzeł można zapisać jako suma spójna pewnej liczby węzłów pierwszych.
@@ -90,19 +94,19 @@ Implikacja odwrotna jest fałszywa: pięciolistnik jest pierwszy, ale jego genus
 \end{proposition}
 
 \begin{proof}
-    Dowodzimy przez indukcję względem genusu $g(K)$.
-    Przypadek bazowy $g(K) = 0$ jest oczywisty, gdyż wtedy $K$ to niewęzeł.
+    Dowodzimy przez indukcję względem genusu $\genus (K)$.
+    Przypadek bazowy $\genus (K) = 0$ jest oczywisty, gdyż wtedy $K$ to niewęzeł.
     Załóżmy więc, że fakt zachodzi dla węzłów $J$ genusu co najwyżej $n$.
     Niech $K$ będzie genusu $n + 1$.
 
     Jeśli $K$ jest pierwszy, nie ma czego dowodzić.
     W przeciwnym razie jest równoważny z~$J_1 \shrap J_2$, gdzie $J_1$ i~$J_2$ są nietrywialne.
-    Mamy $g(J_1) + g(J_2) = g(K)$ oraz $g(J_1),g(J_2) \ge 1$.
-    Zatem $g(J_1), g(J_2) \le n$.
+    Mamy $\genus (J_1) + \genus (J_2) = g(K)$ oraz $\genus(J_1), \genus(J_2) \ge 1$.
+    Zatem $\genus(J_1), \genus(J_2) \le n$.
     Na mocy hipotezy indukcyjnej, $J_1$ oraz $J_2$ są równoważne sumom
     \[
-        J_1 \cong K_1\#\cdots\# K_s,\qquad
-        J_2 \cong K_{s+1}\#\cdots\# K_r,
+        J_1 \cong K_1 \# \cdots \# K_s, \qquad
+        J_2 \cong K_{s+1} \# \cdots \# K_r,
     \]
     gdzie $K_i$ są pierwsze.
     Zatem $K$ jest równoważny z~$K_1\#\cdots\# K_r$, co kończy dowód.
@@ -122,10 +126,10 @@ Praca Schuberta korzysta z twierdzenia Alexandera, że 2-sfera w przestrzeni $\R
 
 Hashizume \cite{hashizume58} rozszeszył wyniki Schuberta do splotów.
 \index[persons]{Hashizume, Yoko}%
-% trzeba wspomnieć, że to wymaga adaptacji definicji sumy spójnej, bo wcześniej dopuszczaliśmy tylko węzły jako składniki. Remedium = Kawauchi.
+% TODO trzeba wspomnieć, że to wymaga adaptacji definicji sumy spójnej, bo wcześniej dopuszczaliśmy tylko węzły jako składniki. Remedium = Kawauchi.
 
 \begin{proposition}
-    \label{prp:infinitely_many_prime_knots}
+\label{prp:infinitely_many_prime_knots}%
     Istnieje nieskończenie wiele węzłów pierwszych.
 \end{proposition}
 
