@@ -130,6 +130,33 @@ def genus_prime(knots):
     return
 
 
+def symmetric_not_acheiral(knots):
+    signature_zero = []
+    signature_nonzero = []
+    for knot in knots.itertuples():
+        if knot.symmetry_type not in ["reversible", "chiral"]:
+            continue
+
+        poly = eval(knot.jones_polynomial_vector)
+        if sum(poly[:2]) != 0:
+            continue
+
+        poly = poly[2:]
+        if poly != poly[::-1]:
+            continue
+
+        if knot.signature == 0:
+            signature_zero.append(knot.name)
+        else:
+            signature_nonzero.append(knot.name)
+
+    print ("Symmetric Jones polynomial, chiral")
+    print (f"{len(signature_zero)} knots with signature zero: {', '.join(signature_zero)}")
+    print (f"{len(signature_nonzero)} knots with signature zero: {', '.join(signature_nonzero)}")
+    return
+
+
+
 with open("knotinfo_parsed.json") as f:
     all_knots = pd.DataFrame(json.load(f)) 
 
@@ -143,5 +170,6 @@ with open("knotinfo_parsed.json") as f:
     # bankwitz_application(all_knots)
     # alexander_genus(all_knots)
     # genus_prime(all_knots)
+    # symmetric_not_acheiral(all_knots)
 
     # print("Koniec psot.")

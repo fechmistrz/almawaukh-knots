@@ -36,22 +36,21 @@ Ale czasami potrafi odróżnić splot od jego lustra:
         -t^{-1} \jones(L_+)(t^{-1}) + t \jones(L_-)(t^{-1}) + (t^{1/2} - t^{-1/2}) \jones(L_0)(t^{-1}) = 0.
     \end{equation}
 
-    Patrz też: Florian Gellert, Kombinatorische Invarianten, strona 12.
+    Patrz też: \cite[s. 12]{gellert09}.
 \end{proof}
 
 \begin{corollary}
-\index{węzeł!zwierciadlany}
+\index{węzeł!zwierciadlany}%
 \label{cor:joines_of_amphicheiral}%
     Jeśli $K$ jest węzłem zwierciadlanym, to wielomian $\jones_K$ jest symetryczny.
 \end{corollary}
 
 Implikacja odwrotna nie zachodzi na mocy wniosku \ref{cor:acheiral_signature}: węzeł $9_{42}$ ma symetryczny wielomian Jonesa, ale niezerową sygnaturę.
 \index{sygnatura}%
-Poniżej trzynastu skrzyżowań taka sytuacja ma miejsce dla dokładnie czternastu węzłów pierwszych.
-% 9_42, 10_125, 11n_19, 11n_24, 11n_82, 12a_0669, 12a_1171, 12a_1179, 12a_1205, 12n_0362, 12n_0506, 12n_0562, 12n_0571, 12n_0821
-% TODO: uwzględnić kod programu, który to znalazł
+Poniżej trzynastu skrzyżowań kontrprzykładów z niezerową sygnaturą jest 14 ($9_{42}$, $10_{125}$, $11n_{19}$, $11n_{24}$, $11n_{82}$, $12a_{669}$, $12a_{1171}$, $12a_{1179}$, $12a_{1205}$, $12n_{362}$, $12n_{506}$, $12n_{562}$, $12n_{571}$, $12n_{821}$), z zerową -- kolejne 28.
+% ZWERYFIKOWANO: funkcja symmetric_not_acheiral
 
-Równość $\jones(mL)(t)=\jones(L)(t^{-1})$ nie jest spełniona dla trójlistnika, zatem ten nie jest równoważny ze swoim lustrem.
+Równość $\jones(mL)(t) = \jones(L)(t^{-1})$ nie jest spełniona dla trójlistnika, zatem ten nie jest równoważny ze swoim lustrem.
 Wcześniej pokazał to z~dużo większym wysiłkiem Dehn, patrz przykład \ref{exm:trefoil_is_chiral}.
 \index[persons]{Dehn, Max}%
 
