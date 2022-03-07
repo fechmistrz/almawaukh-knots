@@ -156,6 +156,44 @@ def symmetric_not_acheiral(knots):
     return
 
 
+def count_fibered(knots):
+    print("Counting fibered prime knots with small crossing number")
+    neuwirth = dict()
+    for knot in knots.itertuples():
+        cr = knot.crossing_number
+        if knot.fibered:
+            if cr not in neuwirth:
+                neuwirth[cr] = list()
+            neuwirth[cr].append(knot.name)
+
+    for k, v in neuwirth.items():
+        print(f"{k} crossings: {len(v)} prime knots")
+
+    return
+
+
+def alexander_fibered(knots):
+    print("Knots with good (monic, ...) Alexander polynomial that are not fibered")
+    notfibered_alexander_one = dict()
+    for knot in knots.itertuples():
+        alexander = eval(knot.alexander_polynomial_vector)
+        a1, a2 = alexander[2], alexander[-1]
+
+        # fibered => alexander starts/ends with +- 1
+        antecedent = knot.fibered
+        consequent = (a1 in [-1, 1] and a2 in [-1, 1])
+
+        if consequent and not antecedent:
+            cr = knot.crossing_number
+            if cr not in notfibered_alexander_one:
+                notfibered_alexander_one[cr] = list()
+            notfibered_alexander_one[cr].append(knot.name)
+
+    for k, v in notfibered_alexander_one.items():
+        print(f"{k} crossings: {len(v)} prime knots ({', '.join(v)})")
+
+    return
+
 
 with open("knotinfo_parsed.json") as f:
     all_knots = pd.DataFrame(json.load(f)) 
@@ -171,5 +209,7 @@ with open("knotinfo_parsed.json") as f:
     # alexander_genus(all_knots)
     # genus_prime(all_knots)
     # symmetric_not_acheiral(all_knots)
+    # count_fibered(all_knots)
+    alexander_fibered(all_knots)
 
     # print("Koniec psot.")

@@ -25,7 +25,7 @@ Rozkład liczby węzłów rozwłóknionych wśród węzłów pierwszych wygląda
 \item 11 skrzyżowań -- 256 węzłów,
 \item 12 skrzyżowań -- 873 węzły.
 \end{itemize}
-% query = 'fibered == True' + grep + nl
+% ZWERYFIKOWANO: funkcja count_fibered
 
 Lwia część analizy węzłów o 12 skrzyżowaniach została wykonana przez Stojmenowa i~Hirasawę, jak podaje baza danych KnotInfo \cite{knotinfo22}.
 % źródło: https://knotinfo.math.indiana.edu/descriptions/fibered.html
@@ -37,25 +37,32 @@ Lwia część analizy węzłów o 12 skrzyżowaniach została wykonana przez Sto
     Pierwszy i~ostatni współczynnik wielomianu Alexandera węzła rozwłóknionego to $\pm 1$.
 \end{proposition}
 
-Kryterium to jest wystarczające dla węzłów pierwszych o co najwyżej 10 skrzyżowaniach oraz alternujących, ale znany jest przykład niewłóknistego węzła o 21 skrzyżowaniach, którego wielomian Alexandera ma postać $t^4 - t^3 + t^2 - t +1$.
+% Kryterium to jest wystarczające dla węzłów pierwszych o co najwyżej 10 skrzyżowaniach oraz alternujących, ale znany jest przykład niewłóknistego węzła o 21 skrzyżowaniach, którego wielomian Alexandera ma postać $t^4 - t^3 + t^2 - t +1$.
+% TODO: ustalić, czemu tak dużo skrzyżowań (z której książki ten fakt?). Sam wynik wydaje się być folklorem, tzn. nie wiadomo kto pierwszy to pokazał.
 
-\begin{proposition}
+Kryterium to jest wystarczające dla węzłów pierwszych o co najwyżej 10 skrzyżowaniach, ale $11n_{34}$, $11n_{42}$, $11n_{73}$ oraz osiemnaście węzłów pierwszych o 12 skrzyżowaniach nie są rozwłóknione mimo tego, jak wygląda ich wielomian Alexandera.
+% ZWERYFIKOWANO: funkcja alexander_fibered
+
+\begin{example}
 \index{węzeł!skręcony}%
     Niech $K$ będzie węzłem skręconym z $n$ półskrętami.
+\index{wielomian!Alexandera}%
     Wtedy jego wielomianem Alexandera jest
     \begin{equation}
         \alexander_n(t) = n \cdot \left(t + \frac 1 t \right) - (2n+1),
     \end{equation}
     więc węzeł $K$ nie jest rozwłókniony, chyba że $n = 1$.
-\end{proposition}
+\end{example}
 
 \begin{corollary}
+% TODO: węzeł dokerski do indeksu?
     $2$-skręcony węzeł $6_1$ (węzeł dokerski) nie jest rozwłókniony.
 \end{corollary}
 
 Rolfsen \cite[s. 326]{rolfsen76} podaje jako ćwiczenie w swojej książce:
 
 \begin{proposition}
+\index{suma spójna}%
     Rodzina węzłów rozwłóknionych jest zamknięta na branie sum spójnych.
 \end{proposition}
 
