@@ -1,8 +1,21 @@
 #!/usr/bin/env python3
-# TODO: implement argparse
 # usage: python3 translate_polish_english.py <(grep -r path-to-theory-of-knots/src -E -e '% DICTIONARY;.*;.*;.*' -h)
+
+# converts this:
+# % DICTIONARY;braid;warkocz;-
+# % DICTIONARY;strand;pasmo ...;warkocz
+# % DICTIONARY;pure;czysty;warkocz
+# % DICTIONARY;closure of ...;domknięcie ...;warkocz
+# % DICTIONARY;braid number;liczba warkoczowa;-
+# into this:
+# \item \textbf{warkocz}: braid (\emph{czysty}: pure, \emph{domknięcie ...}: closure of ..., \emph{pasmo ...}: strand)
+
+# TODO: implement argparse
 import logging
 import sys
+
+# TODO: add argparse option to handle logging levels
+# logging.basicConfig(level=logging.INFO)
 
 top_level_entries = dict()
 second_level_unparsed = list()
