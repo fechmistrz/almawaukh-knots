@@ -15,8 +15,13 @@ Długość sznurowa, najsłabiej poznany niezmiennik numeryczny, pochodzi z~fizy
 \end{definition}
 
 Przez wiele lat zastanawiano się: czy można zawiązać węzeł ze sznura o~długości jednej stopy i~promieniu jednego cala?
-Lub równoważnie, czy $\ropelength K \le 12$ dla pewnego węzła $K$?
-Na początku XXI wieku wiedzieliśmy dzięki Cantarelli, Kusnerowi, Sullivanowi \cite{cantarella02}, że najkrótszy węzeł ma długość co najmniej $(2 + \sqrt 2)\pi \approx 10.726$, potem Diao udzielił negatywnej odpowiedzi na to pytanie w~\cite[s. 14]{diao03}.
+Lub równoważnie:
+
+\begin{conjecture}
+    Czy istnieje nietrywialny węzęł $K$ taki, że $\ropelength K \le 12$?
+\end{conjecture}
+
+Na początku XXI wieku wiedzieliśmy dzięki Cantarelli, Kusnerowi, Sullivanowi \cite{cantarella02}, że najkrótszy węzeł ma długość co najmniej $(2 + \sqrt 2)\pi \approx 10.726$, krótko po tym Diao \cite[s. 14]{diao03} udzielił negatywnej odpowiedzi na pytanie.
 \index[persons]{Cantarella, Jason}%
 \index[persons]{Kusner, Robert}%
 \index[persons]{Sullivan, John}%
@@ -36,19 +41,21 @@ Mamy na przykład:
 \end{proposition}
 
 Udowodniono, że dolnym ograniczeniem na czynnik $c_1$ jest $(4\pi/11)^{3/4} \approx 1.105$ (gdyż tak pisze Cantarella i~inni w~\cite[tw. 23]{cantarella02}).
-Wiemy też, że stała $c_1$ nie może przekraczać $12.64$ ze względu na węzeł torusowy $T(3, 5)$, przeczytaliśmy o~tym w~\cite{klotz21}.
+Wiemy też dzięki Klotzowi i Maldonado \cite{klotz21}, że stała $c_1$ nie może przekraczać $12.64$, w przeciwnym razie nierówność nie zachodziłaby dla węzła torusowego $T(3, 5)$.
+\index[persons]{Klotz, Alexander}%
+\index[persons]{Maldonado, Matthew}%
 
 Klotz, Maldonado \cite{klotz21} piszą, że Diao dostał lepsze dolne ograniczenie (lepsze niż ,,3/4'') dla węzłów do 1850 skrzyżowań (!!!):
 \begin{equation}
     \frac 12 \left(17.334 + \sqrt{17.334^2 + 64 \pi \crossing K}\right) \le \ropelength K.
 \end{equation}
 
-Dowód górnego ograniczenia opiera się na cyklach Hamiltona w~grafach zanurzonych w~kratach liczbowych (Yu \cite{yu04}) i zostało później poprawione:
+Dowód górnego ograniczenia opiera się na cyklach Hamiltona w~grafach zanurzonych w~kratach liczbowych (Yu \cite{yu04}) i również zostało później poprawione:
 
 % Ograniczenie to realizowane jest przez pewne węzły torusowe oraz sploty Hopfa. - wikipedia o c_1
 
 \begin{proposition}
-    $\ropelength K = O(\crossing K \cdot \log^5(\crossing K)).$
+    $\ropelength K = O(\crossing K \cdot \log^5(\crossing K))$.
 \end{proposition}
 
 \begin{proof}
