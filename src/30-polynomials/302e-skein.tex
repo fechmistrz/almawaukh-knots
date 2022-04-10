@@ -15,19 +15,9 @@ Na szczęście wtedy z pomocą przychodzi:
     z warunkiem brzegowym $\jones(\SmallUnknot) = 1$, nazywamy wielomianem Jonesa.
 \end{definition}
 
+Symbole $L_+, L_-, L_0$ objaśnione są przy definicji \ref{skein_symbols}.
+
 \begin{proof}
-Niech
-\begin{comment}
-\begin{equation}
-    L_+ = \MediumMinusCrossing
-    \quad\quad
-    L_- = \MediumPlusCrossing
-    \quad\quad
-    L_0 = \MediumAlphaSmoothing
-    \quad\quad
-    L_\infty = \MediumBetaSmoothing
-\end{equation}
-\end{comment}
 % TODO: zdefiniować je raz, a dobrze.
 % ack -l 'L_\+'
 % src/30-polynomials/alexander.tex
@@ -35,8 +25,7 @@ Niech
 % src/30-polynomials/blmho.tex
 % src/30-polynomials/homfly.tex
 % src/00-meta-latex/diagrams.tex
-(oznaczenia te są standardowe i pozwalają oszczędzić trochę miejsca).
-NIE SĄ - KOLIZJA OZNACZEŃ?Wyraźmy wielomian Jonesa przez klamrę Kauffmana i~spin.
+Wyraźmy wielomian Jonesa przez klamrę Kauffmana i~spin.
 Chcemy pokazać, że
 \begin{align}
     & A^{4}(-A)^{-3w(L_+)}\bracket{L_+} \\
@@ -53,8 +42,8 @@ Ale $w(L_\pm) = w(L_0)\pm 1$, zatem to jest równoważne z
 
 Z definicji klamry Kauffmana wnioskujemy, że
 \begin{align}
-    \bracket{L_+} & = A\bracket{L_0} + A^{-1}\bracket{L_\infty} \\
-    \bracket{L_-} & = A\bracket{L_\infty} + A^{-1}\bracket{L_0}
+    \bracket{L_+} & = A\bracket{L_0} + A^{-1}\bracket{L_\infty}, \\
+    \bracket{L_-} & = A\bracket{L_\infty} + A^{-1}\bracket{L_0}.
 \end{align}
 
 Pierwsze równanie przemnóżmy przez $A$, drugie przez $A^{-1}$, a~następnie dodajmy je do siebie.
