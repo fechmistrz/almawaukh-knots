@@ -1,6 +1,6 @@
 
 \section{Kwandle i wraki}
-\index{kwandel|(}
+\index{kwandel|(}%
 
 Sekcja ta powstała częściowo w~oparciu o~notatki autorstwa Bergera, Geriga\footnote{dostępne pod adresem \url{https://scholar.harvard.edu/files/gerig/files/knotnotes.pdf}} oraz Bergera, Flannery'ego i~Sumnichta\footnote{dostępne pod adresem \url{https://github.com/thyrgle/191_Final_Project/blob/master/paper.pdf}}.
 \index[persons]{Berger, Andrew}%
@@ -12,7 +12,7 @@ Aksjomaty grupy stanowią uogólnienie symetrii, ponieważ składanie symetrii j
 Aksjomaty kwandli odzwierciedlać będą ruchy Reidemeistera.
 \index{ruchy Reidemeistera}%
 
-David Joyce zapytany o znaczenie słowa \emph{quandle} odpowiedział: \emph{,,I needed a usable word. “Distributive algebra” had too many syllables. Piffle was already taken. I tried trindle and quagle, but they didn’t seem right, so I went with quandle.''}.
+David Joyce zapytany o znaczenie słowa \emph{quandle} odpowiedział: \emph{,,I needed a usable word. Distributive algebra had too many syllables. Piffle was already taken. I tried trindle and quagle, but they didn’t seem right, so I went with quandle''}.
 \index[persons]{Joyce, David}%
 
 % DICTIONARY;quandle;kwandel;-
@@ -43,13 +43,14 @@ To znaczy: kiedy łuk o kolorze $x$ przechodzi pod łukiem koloru $y$, staje si�
 Ta definicja pochodzi z~nieopublikowanej korespondencji między Johnem Conwayem i~Gavenem Wraithem, którzy w 1959 byli studentami I stopnia na uniwersytecie w Cambridge.
 \index[persons]{Conway, John}%
 \index[persons]{Wraith, Gaven}%
+% index: uniwersytet w Cambridge? a są inne?
 Ponownie odkryto ją w latach 80. XX wieku: Joyce w 1982 po raz pierwszy nazwał te obiekty kwandlami, Matwiejow w tym samym roku jako grupoidy rozdzielne, Brieskorn w 1986 jako zbiory automorficzne.
 \index[persons]{Joyce, David}%
 \index[persons]{Matwiejow, Siergiej}%
 % https://ru.wikipedia.org/wiki/Матвеев,_Сергей_Владимирович
 \index[persons]{Brieskorn, Egbert}%
-\index{zbiór automorficzny|see {kwandel}}%
 \index{grupoid rozdzielny|see {kwandel}}%
+\index{zbiór automorficzny|see {kwandel}}%
 
 Drugi aksjomat nazywa się czasem odwracalnością z prawej strony: znając $x \triangleright y$ oraz $y$ możemy odtworzyć element $x$, jednak znając $x$ być może nie jesteśmy w stanie odtworzyć elementu $y$.
 Jedyny element $x$ taki, że $x \triangleright y = z$ nazwijmy $y \triangleleft z$.
@@ -57,13 +58,14 @@ To pozwala podać trochę inną definicję kwandli, my nie będziemy jej nigdy u
 
 \begin{definition}
     Zbiór $X$ z dwuargumentowymi działaniami $\triangleright, \triangleleft$ taki, że dla wszystkich $x, y, z \in X$ zachodzi:
-    \begin{align*}
-    x \triangleright x = x \triangleleft x & = x \\
+    \begin{align}
+    x \triangleleft x & = x \\
+    x \triangleright x & = x \\
     (x \triangleleft y) \triangleright x & = y \\
     x \triangleleft (y \triangleright x) & = y \\
      (x \triangleright z) \triangleright (y \triangleright z) & = (x \triangleright y) \triangleright z \\
     (x \triangleleft y) \triangleleft (x \triangleleft z) & = x \triangleleft (y \triangleleft z)
-    \end{align*}
+    \end{align}
     nazywamy kwandlem.
 \end{definition}
 
@@ -143,14 +145,17 @@ Joyce w swojej rozprawie doktorskiej przypisał każdemu węzłowi $K$ pewien sz
 Definicja tego obiektu jest dość zawiła: łuki diagramu są generatorami, zaś skrzyżowania odpowiadają za relacje.
 Joyce pokazał, że kwandel $Q(K)$ wyznacza węzeł $K$ jednoznacznie z dokładnością do orientacji.
 Nie czyni to jednak nowego niezmiennika użytecznym, gdyż wyznaczenie go nawet w najprostszych przypadkach stanowi trudność.
-Niebrzydowski, Przytycki pokazali w 2009 roku, że kwandel podstawowy trójlistnika jest izomorficzny z~rzutowym pierwotnym podkwandlem pewnych odwzorowań liniowych przestrzeni symplektycznej $\Z \oplus \Z$, cokolwiek to znaczy: patrz \cite{niebrzydowski09}.
+Niebrzydowski, Przytycki \cite{niebrzydowski09} pokazali na przykład w 2009, że
 \index[persons]{Niebrzydowski, Maciej}%
 \index[persons]{Przytycki, Józef}%
 % We prove that the fundamental quandle of the trefoil knot is isomorphic to the projective primitive subquandle of transvections of the symplectic space Z ⊕ Z. The last quandle can be identified with the Dehn quandle of the torus and the cord quandle on a 2-sphere with four punctures.
 
+\begin{example}
+    Kwandel podstawowy trójlistnika  jest izomorficzny z~pewnym rzutowym pierwotnym podkwandlem\footnote{Cokolwiek to znaczy!} odwzorowań liniowych przestrzeni symplektycznej $\Z \oplus \Z$
+\end{example}
+
 Aksjomaty grupy można wzmacniać (grupy abelowe) lub osłabiać (monoidy).
 Podobnie czyni się z aksjomatami kwandli.
-\index{węzeł!obramowany}
 Kwandle inwolutywne odpowiadają węzłom bez orientacji, wraki dobrze opisują węzły obramowane, i tak dalej.
 \index{węzeł!niezorientowany}%
 % TODO: w zorientowanym dać patrz też do niezorientowanego?
@@ -163,6 +168,7 @@ Kwandle inwolutywne odpowiadają węzłom bez orientacji, wraki dobrze opisują 
 \end{definition}
 
 Kwandle inwolutywne badał jako pierwszy Mituhisa Takasaki (1943).
+\index[persons]{Takasaki, Mituhisa}%
 Szukał niełącznej struktury, która dobrze opisywałaby odbicia w skończonej geometrii.
 
 % DICTIONARY;shelf;półka;-
@@ -234,7 +240,7 @@ Conway nazwał wraki wrakami (\emph{wracks}), by częściowo zażartować z~nazw
 Obecnie dominuje określenie \emph{racks}.
 
 Jak wyglądały poszukiwania małych kwandli?
-Dionisio, Lopes \cite{lopes03} znaleźli 10 kwandli Alexandera, które odróżniają 249 węzłów pierwszych do 10 skrzyżowań.
+Dionísio, Lopes \cite{lopes03} znaleźli 10 kwandli Alexandera, które odróżniają 249 węzłów pierwszych do 10 skrzyżowań.
 \index[persons]{Dionísio, Miguel}%
 \index[persons]{Lopes, Pedro}%
 Po upływie prawie dekady Vendramin \cite{vendramin12} wytropił wszystkie 431 kwandli spójnych rzędu 35 lub mniejszego.
@@ -258,4 +264,3 @@ Dużo otwartych problemów dotyczących kwandli można znaleźć w \cite[s. 455-
 \index{kwandel|)}
 
 % Koniec sekcji Kwandle i wraki
-
