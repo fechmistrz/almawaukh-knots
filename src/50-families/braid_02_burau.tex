@@ -1,0 +1,32 @@
+
+\subsection{Reprezentacja Burau}
+Na zakończenie sekcji wspomnijmy o~macierzowej reprezentacji Burau, wprowadzonej do matematyki w latach trzydziestych zeszłego wieku \cite{burau33}.
+\index[persons]{Burau, Werner}%
+\index{reprezentacja Burau}%
+Wyznaczona jest ona przez obrazy generatorów:
+\begin{equation}
+    \varphi(\sigma_i) = I_{i-1} \oplus \begin{pmatrix}
+        1-t & t \\
+        1   & 0
+    \end{pmatrix} \oplus I_{n-i-1}
+\end{equation}
+Reprezentacja $\varphi$ jest wierna dla $n = 2, 3$, wiedziano o~tym od jakiegoś czasu. % wiedział to Magnus w 1969: https://mathscinet.ams.org/mathscinet-getitem?mr=264062
+% dowód ma też Kassel, Turaev - strona 110
+Moody \cite{moody91} pokazał, że reprezentacja nie jest wierna dla $n > 8$, Long, Paton \cite{paton93} ulepszyli jego podejście i~poprawili jego wynik do niewierności dla $n > 5$.
+\index[persons]{Moody, John}%
+\index[persons]{Paton, Mark}%
+\index[persons]{Long, Darren}%
+% Paton = Mark https://www.genealogy.math.ndsu.nodak.edu/id.php?id=139714
+Ich kontrukcja korzysta z~pewnej zamkniętej krzywej na sześciokrotnie przekłutym dysku o~pewnych cechach homologicznych.
+Podobnymi metodami Bigelow pokazał u schyłku stulecia \cite{bigelow99}, że jeśli
+\index[persons]{Bigelow, Stephen}%
+\begin{align}
+    \psi_1 & = \sigma_3^{{-1}}\sigma_2\sigma_1^2\sigma_2\sigma_4^3\sigma_3\sigma_2, \\
+\psi_2 & = \sigma_4^{{-1}}\sigma_3\sigma_2\sigma_1^{{-2}}\sigma_2\sigma_1^2\sigma_2^2\sigma_1\sigma_4^5,
+\end{align}
+to komutator $[\psi_1^{{-1}}\sigma_4\psi_1,\psi_2^{{-1}}\sigma_4\sigma_3\sigma_2\sigma_1^2\sigma_2\sigma_3\sigma_4\psi_2]$ należy do jądra.
+Czy reprezentacja Burau dla $B_4$ jest wierna?
+Negatywna odpowiedź na to pytanie prawie na pewno prowadziłaby do
+nietrywialnego węzła, którego wielomianem HOMFLY jest $1$,
+natomiast odpowiedź pozytywna raczej nie ma aż tak dramatycznych następstw.
+% The first nonfaithful Burau representations were found by John A. Moody without the use of computer, using a notion of winding number or contour integration.[3] A more conceptual understanding, due to Darren D. Long and Mark Paton[4] interprets the linking or winding as coming from Poincaré duality in first homology relative to the basepoint of a covering space, and uses the intersection form (traditionally called Squier's Form as Craig Squier was the first to explore its properties).[5] Stephen Bigelow combined computer techniques and the Long–Paton theorem to show that the Burau representation is not faithful for n ≥ 5.[6][7][8] Bigelow moreover provides an explicit non-trivial element in the kernel as a word in the standard generators of the braid group: let

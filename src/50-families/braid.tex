@@ -1,10 +1,13 @@
 
 \section{Warkocze}
-\label{sec:braid}
-\index{warkocz|(}
+\label{sec:braid}%
+\index{warkocz|(}%
 Warkocze, a dokładniej grupa warkoczy, rozważane po raz pierwszy były niejawnie przez Hurwitza w~1885 roku oraz jawnie przez Artina czterdzieści lat później.
 \index[persons]{Artin, Emil}%
-Dla nas inspiracją była wspaniała praca przeglądowa poświęcona warkoczom, \cite{birman05}, ale także notatki z~kursu zorganizowanego w~Pau \cite{gonzalez11}.
+Dla nas inspiracją była wspaniała praca przeglądowa Birman i Brendle poświęcona warkoczom, \cite{birman05}, ale także notatki Gonzáleza-Menesesa z~kursu zorganizowanego w~Pau \cite{gonzalez11}.
+\index[persons]{Birman, Joan}%
+\index[persons]{Brendle, Tara}%
+\index[persons]{González-Meneses, Juan}%
 
 O dwóch punktach $(d_1, t_1)$, $(d_2, t_2)$ w~walcu $B^2 \times [0, 1] \subseteq \R^3$ powiemy, że łączący je odcinek jest malejący, jeśli $t_1 > t_2$.
 Łamana malejąca to taka, która jest złożona z~odcinków malejących.
@@ -182,199 +185,15 @@ Nie istnieje żaden węzeł, którego grupą podstawową byłaby jednak $B_n$ dl
 Natomiast asferyczna, niezwarta 3-rozmaitość nie może mieć grupy podstawowej $\Z^3$.
 Musimy niestety pominąć czysto kohomologiczny dowód\footnote{Głodny wiedzy Czytelnik powinien odwiedzić \url{https://math.stackexchange.com/a/2119984}.} faktu, ale zaiste prowadzi to do sprzeczności.
 
-\subsection{Warkocze a sploty}
-% DICTIONARY;closure of ...;domknięcie ...;warkocz
-Każdy warkocz można domknąć do węzła, łącząc ze sobą punkty $(x_i, 1)$ oraz $(x_i, 0)$
-łamanymi, których rzuty do płaszczyzny diagramu nie przecinają się.
-\index{warkocz!domknięcie warkocza}%
-Nie wiadomo, kto wymyślił operację domykania warkoczy, ale była ona z pewnością znana Alexanderowi: rozpatrywano je jeszcze przed samymi warkoczami.
-\index[persons]{Alexander, James}%
-% TODO: rysunek w TikZ, jak się domyka.
+\input{50-families/braid_01_closure}
 
-Niech $b \in B_n$ będzie słowem zapisanym na standardowych generatorach.
-Oznaczmy przez $b_+$, $b_-$ nieznakowaną sumę dodatnich, ujemnych wykładników.
-Jeśli $b_+ - 3b_- \ge n$, to domknięcie warkocza $b$ nie jest achiralne (twierdzenie 5 z~\cite{jones85}).
-\index{węzeł!achiralny}%
+\input{50-families/braid_02_burau}
 
-\begin{theorem}[Alexander, 1923]
-%label{thm:alexander}
-     Każdy splot powstaje przez domknięcie pewnego warkocza.
-     \index{twierdzenie!Alexandera}
-\end{theorem}
-
-\begin{proof}[Niedowód]
-\index[persons]{Alexander, James}%
-\index[persons]{Morton, Hugh}%
-\index[persons]{Yamada, Shuji}%
-\index[persons]{Vogel, Pierre}%
-    W kolejności chronologicznej:
-    najpierw Alexander \cite{alexander23},
-    a po blisko połowie wieku Morton \cite{mortonhr86},
-    Yamada \cite{yamada87} (co daje łatwy do zaimplementowania program komputerowy)
-    i~Vogel \cite{vogel90} (ulepszający algorym Yamady).
-\end{proof}
-
-Manturow \cite{manturov02} pokazał, że od warkocza można wymagać kwazitoryczności.
-\index[persons]{Manturow, Wasilij}%
-
-\begin{theorem}[Markow, 1936]
-\index{twierdzenie!Markowa}%
-\label{markov_theorem}
-    Dwa domknięte warkocze są równoważne jako sploty wtedy i~tylko wtedy,
-    gdy jeden powstaje z~drugiego przez ciąg
-    sprzężeń: $z_1 \mapsto z_2 z_1 z_2^{-1}$ oraz procesów Markowa,
-    które zastępują $n$-warkocz $\beta$ przez $(n+1)$-warkocz $\beta\sigma_n^{\pm 1}$.
-\end{theorem}
-
-\begin{proof}
-\index[persons]{Birman, Joan}%
-\index[persons]{Menasco, William}%
-\index[persons]{Morton, Hugh}%
-\index[persons]{Traczyk, Paweł}%
-    Kompletny i~godny naśladowania dowód znajduje się w~trudno dostępnej książce \cite{birman74} Birman, więc warto sprawdzić inne, opublikowane później materiały:
-    Morton opisał w~\cite{mortonhr86} przepiękną, a~przy tym elementarną ideę ,,nitkowania'',
-    potem Traczyk podał w~\cite{traczyk98} czysto kombinatoryczne, dwuwymiarowe uzasadnienie oparte o~okręgi Seiferta,
-    wreszcie mamy też artykuł \cite{birman02} napisany przez Birman i~Menasco.
-\end{proof}
-
-Pierwsze sformułowanie twierdzenia pochodzące od Markowa \cite{markov36} korzystało z trzech ruchów, jeden z~nich stanowił uogólnienie II ruchu Reidemeistera.
-Trzy lata później Weinberg zauważył w~\cite{weinberg39}, że wystarczą dwa ruchy.
-\index[persons]{Weinberg, Noah}%
-% Weinberg = Ной Вайнберг: http://www.mathsoc.spb.ru/history/Odynec_2020.pdf
-Lambropoulou, Rourke przedstawili w~\cite{lambropoulou97} wersję twierdzenia wymagającą tylko jednego ruchu.
-\index[persons]{Lambropoulou, Sofia}%
-\index[persons]{Rourke, Colin}%
-
-Historia twierdzenia Markowa jest raczej dramatyczna: Markow przedstawił swój dowód ustnie, ale nigdy go nie opublikował, zostawiając to zadanie swojemu uczniowi, Weinbergowi.
-Ten jednak został zabity podczas wojny, wkrótce po opublikowaniu pierwszej pracy na temat teorii węzłów i na dokładny dowód trzeba było czekać do publikacji Birman \cite{birman74} blisko 40 lat.
-\index[persons]{Birman, Joan}%
-
-Twierdzenie \ref{markov_theorem} mówi nam, że teoria węzłów bada klasy równoważności w~grupie warkoczy.
-Zarówno problem słowa (czy dwa słowa w~grupie przedstawiają ten sam jej element?) jak i~problem sprzężoności (czy dwa słowa w~grupie są sprzężone?) są rozwiązane, ale nadal nie mamy algorytmu, który mówiłby, czy dwa słowa w~grupie są równoważne w~sensie Markowa.
-Cały czas chodzi o słowa w grupie warkoczy, oczywiście.
-% TODO: kto to pokazał? wg Kawauchiego, Murasugi w 82 ale widziałem gdzieś informację, że Garside był pierwszy.
-% a może Jones 1985?
-
-\subsection{Reprezentacja Burau}
-Na zakończenie sekcji wspomnijmy o~macierzowej reprezentacji Burau, wprowadzonej do matematyki w latach trzydziestych zeszłego wieku \cite{burau33}.
-\index[persons]{Burau, Werner}%
-\index{reprezentacja Burau}%
-Wyznaczona jest ona przez obrazy generatorów:
-\begin{equation}
-    \varphi(\sigma_i) = I_{i-1} \oplus \begin{pmatrix}
-        1-t & t \\
-        1   & 0
-    \end{pmatrix} \oplus I_{n-i-1}
-\end{equation}
-Reprezentacja $\varphi$ jest wierna dla $n = 2, 3$, wiedziano o~tym od jakiegoś czasu. % wiedział to Magnus w 1969: https://mathscinet.ams.org/mathscinet-getitem?mr=264062
-% dowód ma też Kassel, Turaev - strona 110
-Moody \cite{moody91} pokazał, że reprezentacja nie jest wierna dla $n > 8$, Long, Paton \cite{paton93} ulepszyli jego podejście i~poprawili jego wynik do niewierności dla $n > 5$.
-\index[persons]{Moody, John}%
-\index[persons]{Paton, Mark}%
-\index[persons]{Long, Darren}%
-% Paton = Mark https://www.genealogy.math.ndsu.nodak.edu/id.php?id=139714
-Ich kontrukcja korzysta z~pewnej zamkniętej krzywej na sześciokrotnie przekłutym dysku o~pewnych cechach homologicznych.
-Podobnymi metodami Bigelow pokazał u schyłku stulecia \cite{bigelow99}, że jeśli
-\index[persons]{Bigelow, Stephen}%
-\begin{align}
-    \psi_1 & = \sigma_3^{{-1}}\sigma_2\sigma_1^2\sigma_2\sigma_4^3\sigma_3\sigma_2, \\
-\psi_2 & = \sigma_4^{{-1}}\sigma_3\sigma_2\sigma_1^{{-2}}\sigma_2\sigma_1^2\sigma_2^2\sigma_1\sigma_4^5,
-\end{align}
-to komutator $[\psi_1^{{-1}}\sigma_4\psi_1,\psi_2^{{-1}}\sigma_4\sigma_3\sigma_2\sigma_1^2\sigma_2\sigma_3\sigma_4\psi_2]$ należy do jądra.
-Czy reprezentacja Burau dla $B_4$ jest wierna?
-Negatywna odpowiedź na to pytanie prawie na pewno prowadziłaby do
-nietrywialnego węzła, którego wielomianem HOMFLY jest $1$,
-natomiast odpowiedź pozytywna raczej nie ma aż tak dramatycznych następstw.
-% The first nonfaithful Burau representations were found by John A. Moody without the use of computer, using a notion of winding number or contour integration.[3] A more conceptual understanding, due to Darren D. Long and Mark Paton[4] interprets the linking or winding as coming from Poincaré duality in first homology relative to the basepoint of a covering space, and uses the intersection form (traditionally called Squier's Form as Craig Squier was the first to explore its properties).[5] Stephen Bigelow combined computer techniques and the Long–Paton theorem to show that the Burau representation is not faithful for n ≥ 5.[6][7][8] Bigelow moreover provides an explicit non-trivial element in the kernel as a word in the standard generators of the braid group: let
-
-\subsection{Grupy warkoczy w algebrze}
-Grupy $B_n$ mogą być obiektem badań algebry bez związku z~teorią węzłów.
-
-\begin{proposition}
-    Grupa warkoczy $B_n$ jest beztorsyjna dla każdego $n \ge 1$.
-\end{proposition}
-
-Istnieje wiele dowodów tego faktu: pierwszy korzystał z~krótkich ciągów dokładnych (Fadell, Neuwirth \cite{neuwirth62}), później podano oparty o~struktury Garside'a (Garside \cite{garside69}), czysto teoriogrupowy pochodzi od Dyera \cite{dyer80}.
-\index[persons]{Dyer, Joan}%
-\index[persons]{Fadell, Edward}%
-\index[persons]{Garside, Frank}%
-\index[persons]{Neuwirth, Lee}%
-My przedstawimy inne rozumowanie, opisując przy tym ciekawy sam w~sobie porządek Dehornoya\footnote{W 1989 roku udowodniono, że pewien aksjomat teorii mnogości, $I_3$, dotyczący dużych liczb kardynalnych implikuje istnienie algebraicznej struktury zwanej acykliczną półką (nie mylić z naszymi półkami).
-To pociąga decydowalność problemu słowa dla prawa $x(yz) = (xy)(xz)$, coś co nie jest wprost związane z dużymi liczbami kardynalnymi.
-Dehornoy w 1992 roku podał przykład acyklicznej półki na grupie warkoczy $B_\infty$.}.% z artykułu "Dehornoy order na wiki"
-\index{porządek Dehornoya}%
-
-\begin{proof}
-\index[persons]{Dehornoy, Patrick}%
-    Mówimy, że grupa $G$ jest lewo-porządkowalna, jeśli można wyposażyć ją w~zupełny porządek $<$, niezmienniczy na mnożenie z lewej strony.
-    To znaczy, dla każdych $a, b, c \in G$, z~nierówności $a < b$ wynika $ca < cb$.
-    Wtedy zbiór $P = \{g \in G \mid e < g\}$ nazywamy półgrupą elementów dodatnich.
-    Łatwo widać, że $G$ jest sumą rozłączną $P \sqcup \{e\} \sqcup P^{-1}$.
-    Odwrotnie, każde takie rozbicie wyznacza porządek: wystarczy zdefiniować $a < b \iff a^{-1}b \in P$.
-
-    Dehornoy znalazł taki porządek dla grupy warkoczowej $B_n$ w~\cite{dehornoy94}.
-    Za zbiór $P$ elementów dodatnich wziął te słowa na standardowych generatorach, które dla pewnego $i$ zawierają $\sigma_i$, ale nie $\sigma_i^{-1}$ ani $\sigma_j^{\pm 1}$ dla $j < i$.
-    Pokazanie, że $P$ jest półgrupą nie sprawia trudności, ale tego, że jest dobrze określonym zbiorem stanowi bardzo nietrywialne zadanie.
-
-    Lewo-porządkowalna grupa jest beztorsyjna.
-    Istotnie, ustalmy element $g \in G$ różny od elementu neutralnego.
-    Bez straty ogólności niech $e < g$, przemnóżmy tę nierówność stronami przez $g$.
-    Dostaniemy tak nową nierówność $g < g^2$.
-    Powtarzając proces otrzymujemy łańcuch $e < g < g^2 < g^3 < \ldots$.
-    Skoro $<$ jest porządkiem, nie jest możliwe by któryś z elementów $g^n$ był neutralny.
-\end{proof}
-
-Dowód uproszczono: Fenn, Greene, Rolfsen, Rourke i Wiest podali cztery lata później bezpośrednie geometryczne rozumowanie, które prowadzi do takiego samego porządku jak ten z pracy Dehornoya; patrz \cite{fenn99}.
-\index[persons]{Fenn, Roger}%
-\index[persons]{Greene, Joshua}%
-\index[persons]{Rolfsen, Dale}%
-\index[persons]{Rourke, Colin}%
-\index[persons]{Wiest, Bertold}%
-Dziesięć lat później dostaliśmy jeszcze pracę Bacardita, Dicksa \cite{bacardit09}
-\index[persons]{Bacardit, Lluís}%
-\index[persons]{Dicks, Warren}%
-
-\begin{proposition}
-    Grupa warkoczy $B_n$ jest grupą Hopfa dla każdego $n \ge 1$: nie jest izomorficzna z żadnym ze swoich właściwych ilorazów.
-\end{proposition}
-
-\begin{proof}
-\index[persons]{Malcew, Anatolij}%
-% https://en.wikipedia.org/wiki/Anatoly_Maltsev
-\index[persons]{Magnus, Wilhelm}%
-    Podręcznik \cite{magnus66} dobrze wyjaśnia różne idee stojące za dowodem, który podamy.
-
-    Mówimy, że grupa $G$ jest rezydualnie skończona, jeśli przekrój jej podgrup skończonego indeksu jest trywialny.
-    Łatwo widać, że własność ta przenosi się na wszystkie podgrupy grupy $G$.
-    Baumslag zauważył, że jeśli grupa $G$ jest skończenie generowana i~rezydualnie skończona, to grupa jej automorfizmów $\operatorname{Aut} G$ jest rezydualnie skończona.
-    Grupa $G = \Z^2$ spełnia te założenia.
-    Wolna grupa $F_2$ jest podgrupą grupy automorfizmów $\Z^2$, na przykład
-    \begin{equation}
-        F_2 \simeq \left\langle
-        \begin{pmatrix}
-            1 & 2 \\
-            0 & 1
-        \end{pmatrix},
-        \begin{pmatrix}
-            1 & 0 \\
-            2 & 1
-        \end{pmatrix}
-        \right\rangle \subseteq \operatorname{Aut} \Z^2.
-    \end{equation}
-    Wszystkie grupy wolne $F_n$, $n \in \N$, są podgrupami grupy $F_2$, dlatego także są rezydualnie skończone, a z nimi grupa warkoczy, gdyż $B_n \subseteq \operatorname{Aut} F_n$.
-
-    Malcew pokazał, że skończenie generowana i~rezydualnie skończona grupa jest grupą Hopfa.
-    Krótki dowód tego faktu można znaleźć w~sekcji 6.5 książki Magnusa \cite{magnus66}.
-\end{proof}
-
-Czy grupy warkoczy są liniowe?
-Przez długi czas był to problem otwarty, potem Krammer \cite{krammer00} pokazał, że $B_4$ jest liniowa, następnie metodami topologicznymi Bigelow \cite{bigelow01} dowiódł, że wszystkie grupy $B_n$ są liniowe, a wkrótce po tym Krammer \cite{krammer02} uogólnił swoje algebraiczne rozumowanie także do wszystkich grup $B_n$.
-\index[persons]{Krammer, Daan}%
-\index[persons]{Bigelow, Stephen}%
+\input{50-families/braid_03_algebra}
 
 \input{50-families/braid_a_number}
 
-\index{warkocz|)}
+\index{warkocz|)}%
 
 % Koniec sekcji warkocze
 

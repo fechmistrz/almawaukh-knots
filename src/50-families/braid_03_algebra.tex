@@ -1,0 +1,85 @@
+
+\subsection{Grupy warkoczy w algebrze}
+Grupy $B_n$ mogą być obiektem badań algebry bez związku z~teorią węzłów.
+
+\begin{proposition}
+    Grupa warkoczy $B_n$ jest beztorsyjna dla każdego $n \ge 1$.
+\end{proposition}
+
+Istnieje wiele dowodów tego faktu: pierwszy korzystał z~krótkich ciągów dokładnych (Fadell, Neuwirth \cite{neuwirth62}), później podano oparty o~struktury Garside'a (Garside \cite{garside69}), czysto teoriogrupowy pochodzi od Dyera \cite{dyer80}.
+\index[persons]{Dyer, Joan}%
+\index[persons]{Fadell, Edward}%
+\index[persons]{Garside, Frank}%
+\index[persons]{Neuwirth, Lee}%
+My przedstawimy inne rozumowanie, opisując przy tym ciekawy sam w~sobie porządek Dehornoya\footnote{W 1989 roku udowodniono, że pewien aksjomat teorii mnogości, $I_3$, dotyczący dużych liczb kardynalnych implikuje istnienie algebraicznej struktury zwanej acykliczną półką (nie mylić z naszymi półkami).
+To pociąga decydowalność problemu słowa dla prawa $x(yz) = (xy)(xz)$, coś co nie jest wprost związane z dużymi liczbami kardynalnymi.
+Dehornoy w 1992 roku podał przykład acyklicznej półki na grupie warkoczy $B_\infty$.}.% z artykułu "Dehornoy order na wiki"
+\index{porządek Dehornoya}%
+
+\begin{proof}
+\index[persons]{Dehornoy, Patrick}%
+    Mówimy, że grupa $G$ jest lewo-porządkowalna, jeśli można wyposażyć ją w~zupełny porządek $<$, niezmienniczy na mnożenie z lewej strony.
+    To znaczy, dla każdych $a, b, c \in G$, z~nierówności $a < b$ wynika $ca < cb$.
+    Wtedy zbiór $P = \{g \in G \mid e < g\}$ nazywamy półgrupą elementów dodatnich.
+    Łatwo widać, że $G$ jest sumą rozłączną $P \sqcup \{e\} \sqcup P^{-1}$.
+    Odwrotnie, każde takie rozbicie wyznacza porządek: wystarczy zdefiniować $a < b \iff a^{-1}b \in P$.
+
+    Dehornoy znalazł taki porządek dla grupy warkoczowej $B_n$ w~\cite{dehornoy94}.
+    Za zbiór $P$ elementów dodatnich wziął te słowa na standardowych generatorach, które dla pewnego $i$ zawierają $\sigma_i$, ale nie $\sigma_i^{-1}$ ani $\sigma_j^{\pm 1}$ dla $j < i$.
+    Pokazanie, że $P$ jest półgrupą nie sprawia trudności, ale tego, że jest dobrze określonym zbiorem stanowi bardzo nietrywialne zadanie.
+
+    Lewo-porządkowalna grupa jest beztorsyjna.
+    Istotnie, ustalmy element $g \in G$ różny od elementu neutralnego.
+    Bez straty ogólności niech $e < g$, przemnóżmy tę nierówność stronami przez $g$.
+    Dostaniemy tak nową nierówność $g < g^2$.
+    Powtarzając proces otrzymujemy łańcuch $e < g < g^2 < g^3 < \ldots$.
+    Skoro $<$ jest porządkiem, nie jest możliwe by któryś z elementów $g^n$ był neutralny.
+\end{proof}
+
+Dowód uproszczono: Fenn, Greene, Rolfsen, Rourke i Wiest podali cztery lata później bezpośrednie geometryczne rozumowanie, które prowadzi do takiego samego porządku jak ten z pracy Dehornoya; patrz \cite{fenn99}.
+\index[persons]{Fenn, Roger}%
+\index[persons]{Greene, Joshua}%
+\index[persons]{Rolfsen, Dale}%
+\index[persons]{Rourke, Colin}%
+\index[persons]{Wiest, Bertold}%
+Dziesięć lat później dostaliśmy jeszcze pracę Bacardita, Dicksa \cite{bacardit09}
+\index[persons]{Bacardit, Lluís}%
+\index[persons]{Dicks, Warren}%
+
+\begin{proposition}
+    Grupa warkoczy $B_n$ jest grupą Hopfa dla każdego $n \ge 1$: nie jest izomorficzna z żadnym ze swoich właściwych ilorazów.
+\end{proposition}
+
+\begin{proof}
+\index[persons]{Malcew, Anatolij}%
+% https://en.wikipedia.org/wiki/Anatoly_Maltsev
+\index[persons]{Magnus, Wilhelm}%
+    Podręcznik \cite{magnus66} dobrze wyjaśnia różne idee stojące za dowodem, który podamy.
+
+    Mówimy, że grupa $G$ jest rezydualnie skończona, jeśli przekrój jej podgrup skończonego indeksu jest trywialny.
+    Łatwo widać, że własność ta przenosi się na wszystkie podgrupy grupy $G$.
+    Baumslag zauważył, że jeśli grupa $G$ jest skończenie generowana i~rezydualnie skończona, to grupa jej automorfizmów $\operatorname{Aut} G$ jest rezydualnie skończona.
+    Grupa $G = \Z^2$ spełnia te założenia.
+    Wolna grupa $F_2$ jest podgrupą grupy automorfizmów $\Z^2$, na przykład
+    \begin{equation}
+        F_2 \simeq \left\langle
+        \begin{pmatrix}
+            1 & 2 \\
+            0 & 1
+        \end{pmatrix},
+        \begin{pmatrix}
+            1 & 0 \\
+            2 & 1
+        \end{pmatrix}
+        \right\rangle \subseteq \operatorname{Aut} \Z^2.
+    \end{equation}
+    Wszystkie grupy wolne $F_n$, $n \in \N$, są podgrupami grupy $F_2$, dlatego także są rezydualnie skończone, a z nimi grupa warkoczy, gdyż $B_n \subseteq \operatorname{Aut} F_n$.
+
+    Malcew pokazał, że skończenie generowana i~rezydualnie skończona grupa jest grupą Hopfa.
+    Krótki dowód tego faktu można znaleźć w~sekcji 6.5 książki Magnusa \cite{magnus66}.
+\end{proof}
+
+Czy grupy warkoczy są liniowe?
+Przez długi czas był to problem otwarty, potem Krammer \cite{krammer00} pokazał, że $B_4$ jest liniowa, następnie metodami topologicznymi Bigelow \cite{bigelow01} dowiódł, że wszystkie grupy $B_n$ są liniowe, a wkrótce po tym Krammer \cite{krammer02} uogólnił swoje algebraiczne rozumowanie także do wszystkich grup $B_n$.
+\index[persons]{Krammer, Daan}%
+\index[persons]{Bigelow, Stephen}%

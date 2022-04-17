@@ -1,0 +1,73 @@
+
+\subsection{Warkocze a sploty}
+% DICTIONARY;closure of ...;domknięcie ...;warkocz
+Każdy warkocz można domknąć do węzła, łącząc ze sobą punkty $(x_i, 1)$ oraz $(x_i, 0)$
+łamanymi, których rzuty do płaszczyzny diagramu nie przecinają się.
+\index{warkocz!domknięcie warkocza}%
+Nie wiadomo, kto wymyślił operację domykania warkoczy, ale była ona z pewnością znana Alexanderowi: rozpatrywano je jeszcze przed samymi warkoczami.
+\index[persons]{Alexander, James}%
+% TODO: rysunek w TikZ, jak się domyka.
+
+Niech $b \in B_n$ będzie słowem zapisanym na standardowych generatorach.
+Oznaczmy przez $b_+$, $b_-$ nieznakowaną sumę dodatnich, ujemnych wykładników.
+Jeśli $b_+ - 3b_- \ge n$, to domknięcie warkocza $b$ nie jest achiralne (twierdzenie 5 z~\cite{jones85}).
+\index{węzeł!achiralny}%
+
+\begin{theorem}[Alexander, 1923]
+%label{thm:alexander}
+     Każdy splot powstaje przez domknięcie pewnego warkocza.
+     \index{twierdzenie!Alexandera}
+\end{theorem}
+
+\begin{proof}[Niedowód]
+\index[persons]{Alexander, James}%
+\index[persons]{Morton, Hugh}%
+\index[persons]{Yamada, Shuji}%
+\index[persons]{Vogel, Pierre}%
+    W kolejności chronologicznej:
+    najpierw Alexander \cite{alexander23},
+    a po blisko połowie wieku Morton \cite{mortonhr86},
+    Yamada \cite{yamada87} (co daje łatwy do zaimplementowania program komputerowy)
+    i~Vogel \cite{vogel90} (ulepszający algorym Yamady).
+\end{proof}
+
+Manturow \cite{manturov02} pokazał, że od warkocza można wymagać kwazitoryczności.
+\index[persons]{Manturow, Wasilij}%
+
+\begin{theorem}[Markow, 1936]
+\index{twierdzenie!Markowa}%
+\label{markov_theorem}
+    Dwa domknięte warkocze są równoważne jako sploty wtedy i~tylko wtedy,
+    gdy jeden powstaje z~drugiego przez ciąg
+    sprzężeń: $z_1 \mapsto z_2 z_1 z_2^{-1}$ oraz procesów Markowa,
+    które zastępują $n$-warkocz $\beta$ przez $(n+1)$-warkocz $\beta\sigma_n^{\pm 1}$.
+\end{theorem}
+
+\begin{proof}
+\index[persons]{Birman, Joan}%
+\index[persons]{Menasco, William}%
+\index[persons]{Morton, Hugh}%
+\index[persons]{Traczyk, Paweł}%
+    Kompletny i~godny naśladowania dowód znajduje się w~trudno dostępnej książce \cite{birman74} Birman, więc warto sprawdzić inne, opublikowane później materiały:
+    Morton opisał w~\cite{mortonhr86} przepiękną, a~przy tym elementarną ideę ,,nitkowania'',
+    potem Traczyk podał w~\cite{traczyk98} czysto kombinatoryczne, dwuwymiarowe uzasadnienie oparte o~okręgi Seiferta,
+    wreszcie mamy też artykuł \cite{birman02} napisany przez Birman i~Menasco.
+\end{proof}
+
+Pierwsze sformułowanie twierdzenia pochodzące od Markowa \cite{markov36} korzystało z trzech ruchów, jeden z~nich stanowił uogólnienie II ruchu Reidemeistera.
+Trzy lata później Weinberg zauważył w~\cite{weinberg39}, że wystarczą dwa ruchy.
+\index[persons]{Weinberg, Noah}%
+% Weinberg = Ной Вайнберг: http://www.mathsoc.spb.ru/history/Odynec_2020.pdf
+Lambropoulou, Rourke przedstawili w~\cite{lambropoulou97} wersję twierdzenia wymagającą tylko jednego ruchu.
+\index[persons]{Lambropoulou, Sofia}%
+\index[persons]{Rourke, Colin}%
+
+Historia twierdzenia Markowa jest raczej dramatyczna: Markow przedstawił swój dowód ustnie, ale nigdy go nie opublikował, zostawiając to zadanie swojemu uczniowi, Weinbergowi.
+Ten jednak został zabity podczas wojny, wkrótce po opublikowaniu pierwszej pracy na temat teorii węzłów i na dokładny dowód trzeba było czekać do publikacji Birman \cite{birman74} blisko 40 lat.
+\index[persons]{Birman, Joan}%
+
+Twierdzenie \ref{markov_theorem} mówi nam, że teoria węzłów bada klasy równoważności w~grupie warkoczy.
+Zarówno problem słowa (czy dwa słowa w~grupie przedstawiają ten sam jej element?) jak i~problem sprzężoności (czy dwa słowa w~grupie są sprzężone?) są rozwiązane, ale nadal nie mamy algorytmu, który mówiłby, czy dwa słowa w~grupie są równoważne w~sensie Markowa.
+Cały czas chodzi o słowa w grupie warkoczy, oczywiście.
+% TODO: kto to pokazał? wg Kawauchiego, Murasugi w 82 ale widziałem gdzieś informację, że Garside był pierwszy.
+% a może Jones 1985?
