@@ -1,0 +1,47 @@
+\subsubsection{Siedem i mniej skrzyżowań}
+Tait wykorzystując swoją notację podał w~1876 pierwszą tablicę piętnastu węzłów o~mniej niż ośmiu skrzyżowaniach.
+Nie należy traktować tego jako skromny wynik: nie miał on do dyspozycji żadnych twierdzeń topologicznych do odróżniania węzłów.
+Onieśmielony przez liczbę możliwych kodów dla kolejnych indeksów skrzyżowaniowych, powstrzymał się przed rozszerzaniem swojej tablicy.
+To właśnie grupowanie diagramów przedstawiających ten sam węzeł, a~nie samo szukanie wszystkich możliwych diagramów, sprawia trudność.
+
+Aby sobie pomóc, Tait znalazł lokalną modyfikację diagramu, która nie zmienia indeksu skrzyżowaniowego, znaną obecnie\footnote{Dla Taita ,,flype'' było innym ruchem, prostą transformacją związaną ze zmianą wyboru nieskończonego obszaru, ale mało kto teraz o tym pamięta. Dowiedzieliśmy się o tym z pracy \cite{menasco93}; Menasco i~Thistlethwaite dowiedzieli się o~tym od Claude'a Webera.} jako flype.
+\index[persons]{Menasco, William}%
+\index[persons]{Thistlethwaite, Morwen}%
+\index[persons]{Weber, Claude}
+\index{flype}
+Flype to stary szkocki czasownik oznaczający ,,wykręcać na drugą stronę''.
+
+\begin{comment}
+\[
+\begin{tikzpicture}[baseline=-0.65ex, scale=0.1]
+\begin{knot}[clip width=5, end tolerance=1pt, flip crossing/.list={1}]
+    \strand[thick] (-21, -5) [in=180, out=0] to (-7, 5);
+    \strand[thick] (-21, 5) [in=180, out=0] to (-7, -5);
+    \draw (-7, -7) rectangle (7, 7);
+    \node at (0, 0) {\Huge {$T$}};
+    \draw[thick] (7, -5) to (21, -5);
+    \draw[thick] (7, 5) to (21, 5);
+\end{knot}
+\end{tikzpicture}
+\quad \cong_{\mathrm{flype}} \quad
+\begin{tikzpicture}[baseline=-0.65ex, scale=0.1]
+\begin{knot}[clip width=5, end tolerance=1pt]
+    \strand[thick] (21, -5) [in=0, out=180] to (7, 5);
+    \strand[thick] (21, 5) [in=0, out=180] to (7, -5);
+    \draw (-7, -7) rectangle (7, 7);
+    \node at (0, 0) {\rotatebox[origin=c]{-180}{\Huge $T$}};
+    \draw[thick] (-7, -5) to (-21, -5);
+    \draw[thick] (-7, 5) to (-21, 5);
+\end{knot}
+\end{tikzpicture}
+\]
+\end{comment}
+
+Inną taktykę szukania węzłów przyjał wielebny Thomas Kirkman\footnote{Oto jak Kirkman definiował węzeł w stu słowach: ,,By a Knot of $n$ crossings, I understand a reticulation of any number of meshes of two or more edges, whose summits, all tessaraces, are each a single crossing, as when you cross your forefingers straight or slightly curved, so as not to link them, and such meshes that every thread is either seen, when the projection of the Knot with its $n$ crossings and no more is drawn in double lines, or conceived by the reader of its course when drawn in single line, to pass alternately under and over the threads to which it comes at successive crossings.''}: zaczynał od małego zbioru "nieredukowalnych" rzutów, do których systematycznie dokładał skrzyżowania.
+\index[persons]{Kirkman, Thomas}%
+% wielebny => Adams, s. 31
+Tait przeczytał pracę Kirkmana, po czym w~latach 1884/1885 opracował listę węzłów alternujących o~mniej niż 11 skrzyżowaniach.
+% Kirkman miał wtedy 78 lat!
+Tuż przed oddaniem jej do druku odkrył inny spis węzłów stworzony przez amerykańskiego naukowca Charlesa Little'a.
+\index[persons]{Little, Charles}%
+Znalazł wtedy jeden duplikat u~siebie, natomiast u Little'a jeden duplikat i~jedno pominięcie.
