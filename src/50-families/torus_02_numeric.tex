@@ -1,0 +1,99 @@
+\subsection{Niezmienniki wielomianowe węzłów torusowych}
+\begin{proposition}
+    Niech $L = T_{p, q}$ będzie splotem torusowym o $d$ ogniwach, różnym od $T_{0, 0}$.
+\index{wielomian!Alexandera}%
+    Wtedy jego wielomianem Alexandera jest
+    \begin{equation}
+        \alexander_L(t) = (-1)^{d-1} \frac{(1-t)(1 - t^{pq/d})^d}{(1-t^p)(1-t^q)} \cdot t^{-(p-1)(q-1)/2}.
+    \end{equation}
+\end{proposition}
+
+Przypadek $p = 2$ wymaga prostego rozumowania indukcyjnego.
+Samo ćwiczenie pojawia się w~wielu podręcznikach topologii.
+Pełny dowód można znaleźć w~\cite[przykład 9.15]{burde14}, gdzie wyznaczono jakobian prezentacji grupy węzła $\langle x, y \mid x^py^{-q}\rangle$.
+
+Inne podejście, formułę Seiferta-Torresa, prezentuje przeglądowa praca Turaewa \cite{turaev86}.
+\index{formuła Seiferta-Torresa}
+
+\begin{proof}
+    Macierz Seiferta węzła torusowego $L = T_{p, q}$ ma nieskomplikowaną blokową budowę i posłuży nam do znalezienia wielomianu Alexandera wzorem $\alexander = \det (M - tM^t)$.
+    % Rachunki są nieco uciążliwe.
+    \begin{equation}
+        M = \begin{bmatrix}
+            B & & & & \\
+            -B & B & & & \\
+            & \ddots & \ddots & & \\
+            & & \ddots & B & \\
+            & & & -B & B
+        \end{bmatrix},
+    \end{equation}
+    złożona z~$(q-1)^2$ bloków o~wymiarach $(p-1) \times (p-1)$:
+    \begin{equation}
+        B = \begin{bmatrix}
+            -1 & & & & \\
+            1 & -1 & & & \\
+            & 1 & \ddots & & \\
+            & & \ddots & -1 & \\
+            & & & 1 & -1
+        \end{bmatrix}.
+    \end{equation}
+    Rachunki pozostawiamy Czytelnikowi jako ćwiczenie.
+\end{proof}
+
+\begin{corollary}
+    Niech $K = T_{p, q}$ będzie węzłem torusowym.
+    Wtedy jego wielomianem Alexandera jest
+    \begin{equation}
+         \alexander(t) = \frac{(t^{pq}-1)(t-1)}{(t^p-1)(t^q-1)}.
+    \end{equation}
+\end{corollary}
+
+\begin{corollary}
+    Wielomian Alexandera odróżnia od siebie węzły $(2,n)$-torusowe.
+\end{corollary}
+
+\begin{proof}
+    Mamy $\alexander(T_{2,n})(t) = (t^n+1) / (t+1)$, więc $\deg \alexander (T_{2,n}) = n - 1$.
+\end{proof}
+
+Znajomość wielomianu Alexandera wystarcza na szczęście do podania pełnej klasyfikacji węzłów torusowych bez uciążliwego dowodu.
+
+\begin{proposition}
+    Niech $p, q, r, s$ będą liczbami całkowitymi.
+    Następujące warunki są równoważne:
+    \begin{itemize}
+        \item węzły torusowe $T_{q, r}$ oraz $T_{p, s}$ są równoważne,
+        \item $\{q, r\} = \{p, s\}$ lub $\{q, r\} = \{-p, -s\}$.
+    \end{itemize}
+\end{proposition}
+
+\begin{proof}
+    Ograniczymy się do przypadku, gdy $p, q, r, s \ge 2$.
+    Tylko jedna implikacja wymaga dowodu, w~prawo.
+    Bez straty ogólności załóżmy więc, że $q > r$, $p > s$.
+    Skoro węzły $T_{q, r}$ i~$T_{p,s}$ są równoważne, to porównanie najwyższych współczynników w~ich wielomianach Alexandera daje równość $(q-1)(r-1) = (p-1)(s-1)$.
+    Wymnożenie wszystkiego prowadzi do czterech przypadków: $s = r$, $s = ps$, $qr = r$, $qr = ps$, z~których dwa środkowe nie mogą zachodzić (gdyż $p, q > 1$).
+    Z czwartego wynika, że $qr \le s < ps$, czyli sprzeczność.
+\end{proof}
+
+Kawauchi pisze, że wcześniej klasyfikacja węzłów torusowych wynikała z klasyfikacji wolnych produktów $(\Z/p) * (\Z/q)$, które są ilorazami grup węzłów torusowych \cite{schreier24}.
+
+Wartości wielomianu Jonesa podajemy bez dowodu:
+
+\begin{proposition}
+\index{klamra Kauffmana}%
+    Klamra Kauffmana spełnia zależność rekurencyjną
+    \begin{equation}
+        \bracket{T_{2, n}} = A \bracket{T_{2,n-1}} + (-1)^{n-1} A^{2-3n}
+    \end{equation}
+    z warunkiem brzegowym $\bracket{T_{2,1}} = -A^3$.
+\end{proposition}
+
+\begin{proposition}
+\index{wielomian!Jonesa}%
+    Niech $L = T_{p, q}$ będzie węzłem torusowym.
+    Wtedy jego wielomianem Jonesa jest
+    \begin{equation}
+        \jones(t) = \frac {{\sqrt t}^{(p-1)(q-1)}}{1-t^2} \cdot (1 - t^{p+1} - t^{q+1} + t^{p+q}).
+    \end{equation}
+\end{proposition}
