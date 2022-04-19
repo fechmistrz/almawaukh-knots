@@ -6,13 +6,14 @@ Niezmienniki znane w~tym czasie nie były dostatecznie mocne, by sprostać temu 
 Conway wprowadził pojęcie supła i~chociaż wszystkich węzłów nie można z~nich uzyskać, teoria została pchnięta do przodu.
 Supły stanowią budulec splotów takich jak na przykład precle z~definicji \ref{def:pretzel}.
 
-Sekcja oparta jest na podręczniku Murasugiego \cite{murasugi96} i~pracach \cite{conway70}, \cite{kauffman97}, \cite{kauffman04}, a~także \cite{schubert56}.
+Sekcja oparta jest na podręczniku Murasugiego \cite{murasugi96} i~pracach Conwaya \cite{conway70}, Kauffmana, Goldmana \cite{kauffman97}, Kauffmana, Lambropoulou \cite{kauffman04}, a~także Schuberta \cite{schubert56}.
 \index[persons]{Conway, John}%
 \index[persons]{Goldman, Jay}%
 \index[persons]{Kauffman, Louis}%
 \index[persons]{Lambropoulou, Sofia}%
 \index[persons]{Schubert, Horst}%
-Supły występują także w polskojęzycznym artykule \cite{janiak04}, ten zawiera jednak nieprzyjemną pułapkę: wprowadza konwencję sprzeczną z~powszechnie akceptowaną notacją.
+
+Supły występują także w polskojęzycznym artykule Janiak-Osajcy, Pogody \cite{janiak04}, ale ten zawiera nieprzyjemną pułapkę: wprowadza notację sprzeczną z~powszechnie akceptowaną.
 \index[persons]{Janiak-Osajca, Agnieszka}%
 \index[persons]{Pogoda, Zdzisław}%
 
@@ -47,7 +48,7 @@ Podobnie jak dla węzłów, pojawia się naturalne pytanie o~równoważność dw
 Jest tak wtedy, gdy istnieje homeomorfizm kuli na siebie, który przekształca jeden supeł na drugi, ale nie rusza sfery otaczającej.
 Dla diagramów odpowiada to ruchom Reidemeistera, nie mamy jednak prawa opuszczać kuli zawierającej supeł.
 
-Dużo dokładniej mówi o tym Turajew:
+Dużo dokładniej mówi o tym Turajew \cite{turaev90}:
 \index[persons]{Turajew, Władimir}%
 
 \begin{proposition}
@@ -62,30 +63,23 @@ Dużo dokładniej mówi o tym Turajew:
 
     Zdefiniujmy cztery słowa:
     \begin{align}
-        A & = (\downarrow \downarrow \curvearrowright) \circ (\downarrow \downarrow \uparrow \curvearrowright \downarrow) \circ (\downarrow \downarrow X_\pm \downarrow \downarrow) \circ (\downarrow \inversedcurvearrowright \uparrow \downarrow \downarrow) \circ (\inversedcurvearrowright \downarrow \downarrow) \\
-        B & = (\curvearrowleft \downarrow \downarrow) \circ (\downarrow \curvearrowleft \uparrow \downarrow \downarrow) \circ (\downarrow \downarrow X_\pm \downarrow \downarrow) \circ (\downarrow \downarrow \uparrow \inversedcurvearrowleft \downarrow) \circ (\downarrow \downarrow \inversedcurvearrowleft) \\
-        T & = (\curvearrowleft \uparrow \downarrow) \circ (\downarrow X_- \downarrow) \circ (\downarrow \uparrow \inversedcurvearrowleft) \\
-        Y & = (\uparrow \downarrow \curvearrowright) \circ (\downarrow X_+ \downarrow) \circ (\inversedcurvearrowright \uparrow \downarrow)
+        A & = (\downarrow \, \downarrow \, \curvearrowright) \circ (\downarrow \, \downarrow \, \uparrow \, \curvearrowright \, \downarrow) \circ (\downarrow \, \downarrow X_\pm \downarrow \, \downarrow) \circ (\downarrow \inversedcurvearrowright \, \uparrow \, \downarrow \, \downarrow) \circ (\inversedcurvearrowright \downarrow \, \downarrow) \\
+        B & = (\curvearrowleft \, \downarrow \, \downarrow) \circ (\downarrow \, \curvearrowleft \, \uparrow \, \downarrow \, \downarrow) \circ (\downarrow \, \downarrow X_\pm \downarrow \, \downarrow) \circ (\downarrow \, \downarrow \, \uparrow  \inversedcurvearrowleft \downarrow) \circ (\downarrow \, \downarrow \inversedcurvearrowleft) \\
+        T & = (\curvearrowleft \, \uparrow \, \downarrow) \circ (\downarrow X_- \downarrow) \circ (\downarrow \, \uparrow \inversedcurvearrowleft) \\
+        Y & = (\uparrow \, \downarrow \, \curvearrowright) \circ (\downarrow X_+ \downarrow) \circ (\inversedcurvearrowright \uparrow \, \downarrow)
     \end{align}
     Kategoria OTa jest generowana przez morfizmy $\inversedcurvearrowright, \inversedcurvearrowleft, \curvearrowright, \curvearrowleft, X_+, X_-$ oraz przedstawiana przez nie razem z relacjami:
     \begin{align}
-        (\curvearrowright \uparrow) \circ (\uparrow \inversedcurvearrowright) = & \uparrow \, = (\uparrow \curvearrowleft) \circ (\inversedcurvearrowleft \uparrow) \\
-        (\curvearrowleft \downarrow) \circ (\downarrow \inversedcurvearrowleft) = & \downarrow \, = (\downarrow \curvearrowright) \circ (\inversedcurvearrowright \downarrow) \\
+        (\curvearrowright \, \uparrow) \circ (\uparrow \inversedcurvearrowright) = & \uparrow \, = (\uparrow \, \curvearrowleft) \circ (\inversedcurvearrowleft \uparrow) \\
+        (\curvearrowleft \, \downarrow) \circ (\downarrow \inversedcurvearrowleft) = & \downarrow \, = (\downarrow \, \curvearrowright) \circ (\inversedcurvearrowright \downarrow) \\
         A & = B \\
-        X_+ \circ X_- & = X_- \circ X_+ = \, \uparrow \uparrow \\
+        X_+ \circ X_- & = X_- \circ X_+ = \, \uparrow \, \uparrow \\
         (X_+ \uparrow) \circ (\uparrow X_-) \circ (X_+ \uparrow) & = (\uparrow X_+) \circ (X_+ \uparrow) \circ (\uparrow X_+) \\
-        (\uparrow \curvearrowright) \circ (X_\pm \downarrow) \circ (\uparrow \inversedcurvearrowleft) & = \, \uparrow \\
-        Y \circ T = \, \downarrow \uparrow, & \quad T \circ Y = \, \uparrow \downarrow
+        (\uparrow \, \curvearrowright) \circ (X_\pm \downarrow) \circ (\uparrow \inversedcurvearrowleft) & = \, \uparrow \\
+        Y \circ T = \, \downarrow \, \uparrow, & \quad T \circ Y = \, \uparrow \, \downarrow
     \end{align}
 \end{proposition}
 
-Patrz też \cite[s. 29-30]{duzhin12} (Czmutow, Dużin, Mostovoy przygotowali tam śliczne rysunki) albo \cite[s. 31]{schieber18}, gdzie Schieber przedstawił wariant z~ruchami Reidemeistera i~ciętymi diagramami.
-\index[persons]{Czmutow, Siergiej}%
-\index[persons]{Dużin, Siergiej}%
-\index[persons]{Mostovoy, Jacob}%
-\index[persons]{Schieber, Nathaniel}%
-% sliced diagrams
-% DICTIONARY;sliced;cięty;diagram
 
 \begin{proof}
     Dowód twierdzenia oraz graficzne przedstawienie relacji z kategorii OTa zawiera praca Turajewa \cite{turaev90}.
@@ -94,6 +88,14 @@ Patrz też \cite[s. 29-30]{duzhin12} (Czmutow, Dużin, Mostovoy przygotowali tam
     Trzecie od końca równanie to geometryczny wariant równania Yanga-Baxtera.
 \index{równanie Yanga-Baxtera}%
 % TODO: przerysować... do kodu
+
+Patrz też \cite[s. 29-30]{duzhin12} (Czmutow, Dużin, Mostovoy przygotowali tam śliczne rysunki) albo \cite[s. 31]{schieber18} (gdzie Schieber przedstawił ruchy Reidemeistera i~cięte diagramy).
+\index[persons]{Czmutow, Siergiej}%
+\index[persons]{Dużin, Siergiej}%
+\index[persons]{Mostovoy, Jacob}%
+\index[persons]{Schieber, Nathaniel}%
+% sliced diagrams
+% DICTIONARY;sliced;cięty;diagram
 \end{proof}
 
 Wszystkich supłów jest bardzo dużo, więc ograniczymy się do końca rozdziału do pewnej ich regularnej rodziny.
