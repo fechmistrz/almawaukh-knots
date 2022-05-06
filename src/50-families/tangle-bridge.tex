@@ -44,6 +44,8 @@ Oto reguła, zgodnie z~którą wybieramy znaki liczb $a_i$:
 jeśli $i$ jest nieparzyste, prawy skręt jest dodatni, jeśli parzyste -- lewy jest dodatni.
 Sam diagram oznaczamy $C(a_1, \ldots, a_{2k+1})$ i~nazywamy postacią normalną Conwaya.
 
+% Conway Normal Form: kawauchi96, strona 24
+
 \begin{proposition}
     % Murasugi proposition 9.3.2
     Sploty dwumostowe są alternujące.
@@ -71,22 +73,28 @@ Parę względnie pierwszych liczb $(\alpha, \beta)$ nazywamy typem węzła dwumo
 
 \begin{proposition}
     \label{prp:tangle_equivalence}
-    Dwumostowe sploty typów $(\alpha, \beta)$ oraz $(\alpha', \beta')$ są, pomijając orientację, równoważne wtedy i~tylko wtedy, gdy spełniony jest jeden z warunków:
-    \begin{itemize}
-        \item $\alpha = \alpha'$ oraz $\beta \equiv \beta' \pmod \alpha$,
-        \item $\alpha = \alpha'$ oraz $\beta \beta' \equiv 1 \pmod \alpha$.
-    \end{itemize}
+    Dwumostowe sploty typów $(\alpha, \beta)$ oraz $(\alpha', \beta')$ są równoważne wtedy i tylko wtedy, gdy spełnione są warunki:
+    \begin{equation}
+        \begin{cases}
+            \alpha = \alpha' \\
+            \beta^{\pm 1} \equiv \beta' \pmod {2 \alpha}
+        \end{cases}
+    \end{equation}
+    Gdyby rozpatrywać niezorientowane sploty, drugie przystawanie upraszcza się: wystarczy, że będzie zachodzić modulo $\alpha$.
 \end{proposition}
 
-% Burde, Zieschang 2013: strona 212, dowód tego.
-
-\begin{tobedone}
-    \cite[s. 23]{kawauchi96}: czasem $2\alpha$ zamiast $\alpha$.
-\end{tobedone}
-
 \begin{proof}
-    Dowód opiera się na tym, że podwójnie cykliczna przestrzeń nakrywająca rozcięta wzdłuż splotu jest przestrzenią soczewkową typu $(\alpha, \beta)$.
-    Nie definiowaliśmy nawet tych przestrzeni, szczegóły można znaleźć w~podręczniku \cite{murasugi96} albo \cite{schubert56}.
+    Słabsza wersja twierdzenia bierze się z klasyfikacji przestrzeni soczewkowych oraz tego, że podwójnie rozgałęziona przestrzeń nakryciowa dwumostowego splotu typu $(\alpha, \beta)$ to przestrzeń soczewkowa typu $(\alpha, \beta)$.
+    % two-fold branched cyclic spaces?
+    (Nie definiujemy w~tej książce, czym są przestrzenie soczewkowe).
+    Burde, Zieschang \cite[s. 212]{burde14} wspominają tu prace Reidemeistera \cite{reidemeisterXX}, Brody'ego \cite{brodyXX} oraz Turajewa \cite{turaevXX}.
+    % TODO: Reidemeister, K., 1935: Homotopieringe und Linsenräume. Abh. Math. Sem. Univ. Hamburg, 11 (1935), 102–109
+    % TODO: Brody, E. J., 1960: The topological classification of lens spaces. Ann. of Math., 71 (1960), 163–184
+
+    Dowód mocnej wersji znajduje się u Schuberta \cite{schubert56} albo Turajewa \cite{turaevXX}, a zapewne także Murasugiego \cite[s. ?]{murasugi96}.
+    % TODO: napisałem ?, bo nie wiem która strona i nie chce mi się dziś sprawdzać
+    % TODO: schubert56 - to ma prawie 40 stron!
+    % TODO: nie mam bibliografii do zieschanga-2013, a w zieschangu-2003 nie ma turaeva, więc nie wiem, co tu tak naprawdę jest cytowane :D
 \end{proof}
 
 \begin{proposition}
@@ -98,6 +106,7 @@ Parę względnie pierwszych liczb $(\alpha, \beta)$ nazywamy typem węzła dwumo
 
 \begin{proof}
     Wynika to z tego, że lustrem splotu typu $(\alpha, \beta)$ jest splot typu $(\alpha, -\beta)$ oraz faktu \ref{prp:tangle_equivalence}.
+    Explicite pisze o tym Kawauchi \cite[s. 24]{kawauchi96}.
 \end{proof}
 
 \begin{proposition}
