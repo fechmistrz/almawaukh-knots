@@ -11,8 +11,8 @@ FIELDS = [
 	("determinant", "det", None),
 	("signature", "$\\sigma$", None),
 	# ("arf_invariant", "Arf", None),
-	("conway_polynomial_vector", "$\\conway$", lambda x: "+".join(x.replace("{", "").replace("}", "").replace(" ", "").replace('"', "").split(",")[2:]).replace("+-", "-")),
-	("symmetry_type", "symetria", lambda x: {"reversible": "odwracalny", "chiral": "chiralny", "fully amphicheiral": "caLkowicie", "positive amphicheiral": "+zwierciadlany", "negative amphicheiral": "-zwierciadlany"}.get(x, x + "???")),
+	("conway_polynomial_vector", "$\\conway$", lambda x: "+".join(x.replace("{", "").replace("}", "").replace(" ", "").replace('"', "").split(",")[2:]).replace("+-", "-").replace("]", "")),
+	("symmetry_type", "symetria", lambda x: {"reversible": "odwracalny", "chiral": "chiralny", "fully amphicheiral": "całkowicie", "positive amphicheiral": "+zwierciadlany", "negative amphicheiral": "-zwierciadlany"}.get(x, x + "???")),
 	("alternating", "alt.", lambda x: {True: "tak", False: "nie"}.get(x, "???")),
 ]
 
@@ -32,6 +32,9 @@ def list_values(d):
 			value = d[key][i]
 			if function is not None:
 				value = function(value)
+			if key == "bridge_index" and value in [2, "2"]:
+				p, q = d["two_bridge_notation"][i].split("/")
+				value = f"{{}}^{{{p}}}{{\\mskip -5mu/\\mskip -3mu}}_{{{q}}}"
 			value = str(value)
 			if key not in ("symmetry_type", "alternating"):
 				value = f"${value}$"
