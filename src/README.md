@@ -23,3 +23,9 @@ Terminy specyficzne dla teorii węzłów powinny mieć wspomniane angielskie odp
 Bulbulator, który jest jednocześnie jagodowy i truskawkowy nazywamy smacznym.
 % DICTIONARY;yummy;smaczny;bulbulator
 ```
+
+Wyszukiwanie tego samego nazwiska z roznie zapisanymi imionami:
+```
+grep AUTHOR ./src/knot_theory.bib | grep -Eo '\{.*\}' | sed -r 's/ and /\n/g' | tr -d '{}' | sort | uniq > tmp.txt
+awk 'NR==FNR{c[$1]++;next} c[$1]>1' tmp.txt tmp.txt
+```
