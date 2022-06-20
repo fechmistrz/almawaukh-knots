@@ -1,7 +1,6 @@
 
 \section{Etykietowanie}
-
-\index{etykietowanie|(}
+\index{etykietowanie|(}%
 
 \begin{definition}[etykietowanie]
     Mówimy, że zorientowany węzeł $K$ jest etykietowalny grupą $G$ generowaną przez elementy $g_1, \ldots, g_n$, jeśli posiada diagram, którego włóknom przypisano elementy $g_1, \ldots, g_n$ tak, by równanie $gk=hg$ było spełnione przy każdym skrzyżowaniu ($g$: włókno biegnące górą, $k$: bo jego lewej stronie, $h$: po prawej).
@@ -61,10 +60,16 @@ Historycznie, prezentacja Wirtingera była pierwsza, zaś etykietowania odkryto 
 
 \begin{proposition}[Perko]
     Niech $K$ będzie węzłem.
-    Jeżeli jest etykietowalny grupą $S_3$, to jest etykietowalny także grupą $S_4$.
+    Następujące warunki są równoważne: $K$ jest etykietowalny grupą $S_3$, $K$ jest etykietowalny grupą $S_4$.
 \end{proposition}
+% https://faculty.etsu.edu/gardnerr/Knot-Theory/Notes-Livingston/Livingston-Knot-5-2.pdf
+
+\begin{proof}
+    Dowód zajmuje tylko kilka stron i składa się z dwóch części: po pierwsze, istnieje epimorfizm $S_4 \to S_3$, ponieważ $S_4$ ma podgrupę czwórkową Kleina, więc epimorfizmy $G \to S_4$ można opuszczać do epimorfizmów $G \to S_3$.
+    Po drugie, Perko pokazuje jak podnosić epimorfizmy $G \to S_3$ do epimorfizmów $G \to S_4$, patrz \cite{perko75}.
+\end{proof}
 
 Nie znam innych nietrywialnych faktów dotyczących etykietowań.
 
-\index{etykietowanie|)}
+\index{etykietowanie|)}%
 
