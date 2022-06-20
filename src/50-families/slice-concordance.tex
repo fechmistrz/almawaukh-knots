@@ -1,71 +1,70 @@
 
 %%% Kawauchi 156:
 \subsection{Zgodność}
-Wprowadzimy teraz relację równoważności na zbiorze węzłów, która prowadzi przez fakt \ref{prp:cobordant_iff_sum_slice} do alternatywnej definicji węzłów plastrowych.
+Zgodność jest relacją równoważności na zbiorze węzłów, która prowadzi do nowej definicji węzłów plastrowych (patrz fakt \ref{prp:concordant_iff_sum_slice}).
+My przytaczamy jej definicję z pracy Gompfa \cite{gompf86}:
 
 \begin{definition}[zgodność]
-    \index{kobordyzm}
-    \index{zgodność}
-    % Dwa węzły $K_0, K_1$ takie, że istnieje lokalnie płaski, zorientowany, właściwy pierścień $C$ taki, że $C \cap S^3 \times i = K_i \times i$, nazywamy zgodnymi.
-    % Dwa sploty $K, L \subseteq S^n$ nazywamy zgodnymi (z angielskiego \emph{concordant}), jeśli istnieje włożenie $f \colon K \times [0,1] \to S^n \times [0,1]$ spełniające dwa warunki: $f(K \times 0) = K \times 0$ oraz $f(K \times 1) = L \times 1$.
-    Dwa węzły $K_0, K_1$ nazywamy (gładko) zgodnymi, jeżeli istnieje gładko zanurzony pierścień w $S^3 \times I$, którego brzegiem jest zbiór $K_0 \times 0 \cup K_1 \times 1$.
-        % z \cite{gompf86}
+\index{zgodność}%
+\index{węzeł!zgodny|see {zgodność}}%
+    Dwa węzły $K_0, K_1$ nazywamy (gładko) zgodnymi, jeżeli istnieje gładko zanurzony pierścień w $S^3 \times I$, którego brzegiem jest zbiór $K_0 \times \{0\} \cup K_1 \times \{1\}$.
 \end{definition}
 
-W języku angielskim przez zgodność rozumie się zazwyczaj \emph{concordance}, rzadziej termin \emph{cobordism}.
+Kawauchi \cite[s. 156]{kawauchi96} pisze ,,Two knots (...) are knot cobordant (or concordant)'', więc tak jak wielu innych autorów nie odróżnia więc węzłów kobordantnych od zgodnych.
+Mamy zamiar zrobić dokładnie to samo: różnica między tymi terminami jest subtelna; węzły zgodne są też kobordantne, ale implikacja w drugą stronę nie zachodzi (wiemy o~tym z~tekstu Blanlœila ,,Cobordism and Concordance of Knots'') chyba, że pracuje się z węzłami sferycznmi, a tak jest w klasycznej teorii węzłów.
+\index[persons]{Blanloeil, Vincent}%
+% https://www.maths.ed.ac.uk/~v1ranick/papers/blanloeil
+% Concordant knots are cobordant, but the converse is not true in general.
+% "Cobordism and Concordance of Knots" by Vincent Blanlœil
+
+Dlatego my będziemy zawsze pisać o węzłach zgodnych i nigdy o kobordantnynch.
 
 \begin{proposition}
-    \label{prp:cobordant_iff_sum_slice}
-    Dwa węzły $K_1, K_2$ są zgodne wtedy i tylko wtedy, gdy suma $mr K_0 \shrap K_1$ jest plastrowa.
+\label{prp:concordant_iff_sum_slice}%
+    Dwa węzły $K_1, K_2$ są zgodne wtedy i tylko wtedy, gdy suma $(mr K_0) \shrap K_1$ jest plastrowa.
 \end{proposition}
 
 \begin{proof}
-    Ćwiczenie 12.1.3 w \cite{kawauchi96}.
+    Ćwiczenie 12.1.3 w książce Kawauchiego \cite{kawauchi96}.
 \end{proof}
 
 \begin{definition}
     Węzeł zgodny z~niewęzłem nazywamy plastrowym.
 \end{definition}
 
-,,Bycie zgodnym'' jest relacją równoważności, słabszą od bycia izotopijnym.
+,,Bycie zgodnym'' jest relacją równoważności, słabszą od ,,bycia izotopijnym'', ale chyba mocniejszą od ,,bycia homotopijnym''.
 % ale mocniejszą od homotopii?
 % izotopia: https://encyclopediaofmath.org/wiki/Cobordism_of_knots
+% homotopia: https://en.wikipedia.org/wiki/Link_concordance By its nature, link concordance is an equivalence relation. It is weaker than isotopy, and stronger than homotopy: isotopy implies concordance implies homotopy. A link is a slice link if it is concordant to the unlink.
 Klasę abstrakcji węzła $K$ oznaczamy przez $[K]$.
 
 \begin{definition}[grupa zgodności]
-    \index{grupa!zgodności}
+\index{grupa!zgodności}%
     Niech $C^1$ oznacza iloraz zbioru wszystkich węzłów przez relację zgodności.
     Zbiór $C^1$ wyposażony w~działanie
     \begin{equation}
         [K_1] + [K_2] = [K_1 \shrap K_2]
     \end{equation}
     staje się grupą abelową, nazywaną grupą zgodności.
-    Jej elementem eneutralnym jest klasa abstrakcji niewęzła.
+    Jej elementem neutralnym jest klasa abstrakcji niewęzła.
     Elementem przeciwnym do $[K]$ jest $[mr K]$.
 \end{definition}
 
 %%% Kawauchi 157:
 
-Niech $\Theta$ oznacza rodzinę macierzy Seiferta, kwadratowych macierzy $V$ o całkowitych wyrazach takich, że $\det (V - V^T) = 1$.
-Mówimy, macierz $V \in \Theta$ jest zerowo kobordantna, jeśli istnieje całkowitoliczbowa macierz $P$ o~wyznaczniku równym $\pm 1$, że
+Niech $\Theta$ oznacza rodzinę macierzy Seiferta węzłów (czyli kwadratowych macierzy $V$ o~całkowitych wyrazach takich, że $\det (V - V^T) = 1$).
+Mówimy, że macierz $V \in \Theta$ jest zerowo kobordantna, jeżeli jest postaci
 \begin{equation}
     V = P \begin{pmatrix} 0 & V_{21} \\ V_{12} & V_{22} \end{pmatrix} P^{-1}
 \end{equation}
-\index{macierz!unimodularnie sprzężona}
-Takie macierze nazywamy unimodularnie sprzężonymi.
+dla pewnej całkowitoliczbowej macierzy $P$ o~wyznaczniku $\pm 1$; takie macierze nazywamy unimodularnie sprzężonymi.
+\index{macierz!unimodularnie sprzężona}%
+Każda zerowo kobordantna macierz $V \in \Theta$ stanowi macierz Seiferta pewnego plastrowego węzła $K$.
+Kawauchi nazywa te węzły algebraicznie plastrowymi i~mówi, że to dokładnie węzły, które ograniczają izotropowe powierzchnie w kuli $B^4$, więc każdy węzeł plastrowy jest algebraicznie plastrowy.
 
-\begin{proposition}
-    Niech $V \in \Theta$ będzie macierzą zerowo kobordantną.
-    Wtedy istnieje plastrowy węzeł $K$, którego macierzą Seiferta jest $V$.
-\end{proposition}
-
-\begin{proof}
-    Fakt 12.2.1 w \cite{kawauchi96}.
-\end{proof}
-
-Przez analogię, o dwóch macierzach $V_1, V_2 \in \Theta$ mówimy, że są kobordantne, jeżeli $(-V_1) \oplus V_2$ jest zerowo kobordantna.
-Kobordyzm jest znowu relacją równoważności, iloraz $\Theta$ przez nią oznaczamy przez $G_-$, a elementy tego ilorazu jako $[V]$.
-Wyposażony w działanie $[V_1] + [V_2] = [V_1 \oplus V_2]$ staje się grupą abelową.
+Suma $(-V) \oplus V$ jest zerowo kobordantna dla każdej macierzy $V \in \Theta$.
+To (chyba to) inspiruje Kawauchiego do wprowadzenia kolejnej definicji: dwie macierze $V_1, V_2 \in \Theta$ nazywa kobordantnymi, jeżeli $(-V_1) \oplus V_2$ jest zerowo kobordantna.
+Kobordyzm stanowi relację równoważności na $\Theta$ -- iloraz $\Theta$ przez tę relację oznacza się $G_-$, jest grupą abelową.
 
 \begin{proposition}
     % Kawauchi 12.2.8
@@ -73,21 +72,22 @@ Wyposażony w działanie $[V_1] + [V_2] = [V_1 \oplus V_2]$ staje się grupą ab
 \end{proposition}
 
 \begin{proof}
-    Funkcja $\psi$ jest dobrze określona na mocy faktu \ref{prp:cobordant_to_algebraic_is_algebraic}, jest homomorfizmem jak wynika z dowodu faktu \ref{prp:signature_additive}.
-    To, że jest ,,na'', jest wnioskiem z \cite[s. 62]{kawauchi96}
+    Nie umiem nic sam udowodnić, więc wymienię tylko trzy odsyłacze: z faktu \ref{prp:cobordant_to_algebraic_is_algebraic} wynika, że odwzorowanie $\psi$ jest dobrze określone, dowód faktu \ref{prp:signature_additive} pokazuje, że $\psi$ jest homomorfizmem, zaś w \cite[s. 62]{kawauchi96} można przeczytać, dlaczego jest ,,na''.
 \end{proof}
 
-Funkcję $\psi$ rozpatrywał Levine \cite{levine69}.
+Funkcję $\psi$ rozpatrywał Levine \cite{levine69} w latach sześćdziesiątych.
 \index[persons]{Levine, Jerome}%
-Casson, Gordon pokazali w latach 70., że jej jądro jest niepuste \cite{gordon78}.
+Po mniej niż dekadzie Casson, Gordon \cite{gordon78} wskazali nietrywialne elementy jądra.
 \index[persons]{Gordon, Cameron}%
 \index[persons]{Casson, Andrew}%
+% to wyżej wiem z kawauchi98, "Supplementary notes for Chapter 12"
+Potem był wynik Jianga \cite{jiang81}, że jądro nie jest skończenie generowalne, bo zawiera izomorficzną kopię $\Z^\infty$, a~jeszcze później Livingstona \cite{livingston99}, że zawiera też kopię $(\Z/2\Z)^\infty$.
+% to wyżej wiem z https://mathscinet.ams.org/mathscinet-getitem?mr=2179265, pierwsze strony tekstu (nie recenzji)
 
 \begin{proposition}
-    % Dowód tego faktu jest pominięty nawet w pracy Kawauchiego
     $G_- \cong \Z^\infty \oplus (\Z/4\Z)^\infty \oplus (\Z/2\Z)^\infty$.
-    % TODO: (Livingston: A SURVEY OF CLASSICAL KNOT CONCORDANCE)
-    % The application of abelian knot invariants (those determined by the cohomology of abelian covers or, equivalently, by the Seifert form) to concordance culminated in 1969 with Levine’s classification of higher dimensional knot concordance, [62, 63], which applied in the classical dimension to give a surjective homomorphism $\varphi \colon C \to \Z^\infty \oplus \Z_2^\infty \oplus \Z_4^\infty$.
-    % In 1975 Casson and Gordon [8, 9] proved that Levine’s homomorphism is not an isomorphism, constructing nontrivial elements in the kernel, and Jiang expanded on this to show that the kernel contains a subgroup isomorphic to $\Z_2^\infty$.
 \end{proposition}
+
+Kawauchi \cite[s. 161]{kawauchi96} bez uzasadnienia postanawia nie przytoczyć dowodu tego faktu, ale opowiada krótko, jaka jest idea przewodnia i odsyła wprost do pracy Levine'a.
+Na dalszych stronach jego pracy przeglądowej pojawiają się jakieś formy kwadratowe oraz uogólnienia wszystkiego do zgodności splotów, ale ja wracam nocnym pociągiem, więc nie mam siły o tym pisać.
 
