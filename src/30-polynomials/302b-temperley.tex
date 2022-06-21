@@ -4,7 +4,7 @@
 % https://en.wikipedia.org/wiki/Jones_polynomial
 Jones otrzymał swój wielomian jako efekt uboczny badań nad algebrami operatorów: wziął ,,ślad'' pewnej reprezentacji warkoczy w~algebrę, która miała ważne znaczenie w~mechanice statystycznej.
 \index[persons]{Jones, Vaughan}%
-Jego praca \cite{jones85} jest bardzo zwięzła, nam pomogła książka \cite[s. 85-103]{kauffman91} oraz strona ,,Aharonov–Jones–Landau algorithm'' z angielskiej Wikipedii.
+Jego praca \cite{jones85} jest bardzo zwięzła, nam oświecenie przyniosła dopiero książka Kauffmana \cite[s. 85-103]{kauffman91} oraz strona ,,Aharonov–Jones–Landau algorithm'' z angielskiej Wikipedii.
 \index{algorytm!Aharonova-Jonesa-Landaua}%
 
 % książka Kauffmana
@@ -67,22 +67,26 @@ Bezpośredni rachunek pokazuje, że jest reprezentacją, jeśli $\delta = -A^2-A
     dla $|i-j| \ge 2$, nazywamy algebrą Jonesa.
 \end{definition}
 
-Kauffman pisze, że algebry są ze sobą związane: jeśli położymy $e_i = \delta^{-1} U_i$ oraz $\tau = \delta^{-2}$, to aksjomaty (Jonesa) są spełnione.
+Kauffman pisze, że algebry są ze sobą związane: jeśli ustalimy swoją ulubioną algebrę Temperleya-Lieba, a potem położymy $e_i = \delta^{-1} U_i$ oraz $\tau = \delta^{-2}$, to aksjomaty Jonesa są spełnione.
 
 % artykuł na Wiki
 \begin{definition}[ślad Markowa]
 \index{sZZZlad@ślad Markowa}%
     Niech $K \in TL_n(\delta)$ będzie elementem algebry Temperleya-Lieba, iloczynem generatorów $e_1, \ldots, e_{n-1}$, którego domknięcie rozpada się na $m$ składowych spójności.
-    Śladem Markowa elementu $K$ nazywamy wielkość $\trace K = \delta^{m-n}$.
+    Wielkość
+    \begin{equation}
+        \trace K = \delta^{m-n}
+    \end{equation}
+    nazywamy śladem Markowa elementu $K$.
 \end{definition}
 
 Ślad Markowa przedłuża się liniowo do całej algebry Temperleya-Lieba i jest prawdziwym śladem: spełnia warunki $\trace (1) = 1$ oraz $\trace (T_1T_2) = \trace (T_2T_1)$.
 Ma też dodatkową własność, że jeśli $w$ jest słowem na literach $e_1, e_2, \ldots, e_{i-1}$, to $\trace(we_i) = \delta^{-1} \trace (w)$.
 
-Jones skorzystał z twierdzeń Alexandera i Markowa, złożył ze sobą funkcje $\trace$ oraz $\rho_A$ oraz znormalizował wynik.
+Jones skorzystał z twierdzeń Alexandera i Markowa dotyczących warkoczy, złożył ze sobą funkcje $\trace$ oraz $\rho_A$ oraz znormalizował wynik.
 \index{twierdzenie!Alexandera}%
 \index{twierdzenie!Markowa}%
-Dostał tak niezmiennik splotów $L$ (domknięć warkoczy $B$):
+Dostał tak niezmiennik splotów $L$ domknięć warkoczy $B$:
 \begin{equation}
     V_L(A^{-4}) = (-A)^{3 \writhe D} \delta^{n-1} (\trace \circ \rho_A)(B).
 \end{equation}
