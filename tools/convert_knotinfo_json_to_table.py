@@ -8,7 +8,7 @@ FIELDS = [
 	("unknotting_number", "u", None),
 	("braid_index", "$\\braid$", None),
 	("bridge_index", "$\\bridge$", None),
-	("determinant", "det", None),
+	("determinant", "$\\det$", None),
 	("signature", "$\\sigma$", None),
 	# ("arf_invariant", "Arf", None),
 	("conway_polynomial_vector", "$\\conway$", lambda x: "+".join(x.replace("{", "").replace("}", "").replace(" ", "").replace('"', "").split(",")[2:]).replace("+-", "-").replace("]", "")),
