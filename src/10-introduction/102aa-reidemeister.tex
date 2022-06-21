@@ -1,0 +1,106 @@
+
+\subsection{Ruchy Reidemeistera}
+
+Każdy węzeł ma zatem wiele diagramów; mając dane dwa różne chcielibyśmy wiedzieć, czy przedstawiają ten sam węzeł.
+Kurt Reidemeister podał proste kryterium rozstrzygające ten problem w~latach dwudziestych ubiegłego wieku.
+\index[persons]{Reidemeister, Kurt}%
+Najpierw zdefiniujmy trzy lokalne operacje na diagramach.
+
+% DICTIONARY;Reidemeister/Turaev/... move;ruch Reidemeistera/Turajewa/...;-
+\begin{definition}[ruchy Reidemeistera]
+\index{ruch!Reidemeistera}%
+    Trzy gatunki lokalnych deformacji diagramu splotu:
+    \begin{figure}[H]
+    \centering
+    %
+    \begin{minipage}[b]{.3\linewidth}
+        \[
+            \LargeReidemeisterOneLeft \stackrel{R_1}{\cong} \LargeReidemeisterOneStraight
+        \]
+        \subcaption{ruch $R_1$}
+    \end{minipage}
+    %
+    \begin{minipage}[b]{.3\linewidth}
+        \[
+            \LargeReidemeisterTwoA \stackrel{R_2}{\cong} \LargeReidemeisterTwoB
+        \]
+        \subcaption{ruch $R_2$}
+    \end{minipage}
+    %
+    \begin{minipage}[b]{.35\linewidth}
+        \[
+            \LargeReidemeisterThreeA \stackrel{R_3}{\cong} \LargeReidemeisterThreeB
+        \]
+        \subcaption{ruch $R_3$}
+    \end{minipage}
+    \end{figure}
+    skręcenie lub rozkręcenie ($R_1$), wsunięcie lub rozsunięcie ($R_2$) oraz przesunięcie łuku przez skrzyżowanie ($R_3$) nazywamy ruchami Reidemeistera.
+\end{definition}
+
+Ruch $R_i$ operuje więc na $i$ łukach diagramu.
+Reidemeister w~swojej pierwszej pracy przyjął inną kolejność, jego drugi ruch jest naszym pierwszym.
+
+\begin{theorem}[Reidemeister, 1927]
+\label{thm:reidemeister}%
+\index{twierdzenie!Reidemeistera}%
+\index[persons]{Reidemeister, Kurt}%
+    Niech $D_1, D_2$ będą diagramami dwóch splotów $L_1, L_2$.
+    Sploty $L_1, L_2$ są takie same wtedy i tylko wtedy, gdy diagram $D_2$ można otrzymać z $D_1$ wykonując skończony ciąg ruchów Reidemeistera oraz gładkich deformacji łuków, bez zmiany biegu skrzyżowań.
+\end{theorem}
+
+Dowód podali niezależnie Reidemeister \cite{reidemeister27} oraz Alexander, Briggs \cite{briggs27}.
+\index[persons]{Briggs, Garland}%
+\index[persons]{Alexander, James}%
+Twierdzenie Reidemeistera jest prawdziwe także dla splotów zorientowanych, wtedy jednak w każdym ruchu trzeba uwzględnić wszystkie możliwe orientacje łuków.
+
+\begin{proof}
+\index[persons]{Burde, Gerhard}%
+\index[persons]{Murasugi, Kunio}%
+\index[persons]{Prasołow, Wiktor}%
+\index[persons]{Sosiński, Aleksiej}%
+\index[persons]{Zieschang, Heiner}%
+    Szkielet dowodu można znaleźć w~książce Burdego i~Zieschanga \cite[s. 9-11]{burde14}.
+    Kluczowe pomysły zawiera też \cite[s. 11-12]{prasolov97} Prasołowa i~Sosińskiego.
+    Innym przystępnym źródłem jest podręcznik \cite[s. 50-56]{murasugi96} Murasugiego.
+\end{proof}
+
+Trace \cite{trace83} zauważył, że dwa diagramy jednego węzła są związane tylko II i III ruchem (ale nie I) wtedy i tylko wtedy, gdy mają ten sam spin oraz indeks punktu względem krzywej (,,winding number'').
+\index[persons]{Trace, Bruce}%
+Z prac Östlunda \cite{ostlund01}, Manturowa\footnote{Niestety nie wiem, o które strony tej książki chodzi.} \cite{manturov04} oraz Haggego \cite{hagge06} wynika, że dla każdego węzła istnieje para diagramów, do przejścia między którymi trzeba wykorzystać wszystkie trzy ruchy.
+\index[persons]{Östlund, Olof}%
+\index[persons]{Manturow, Wasilij}%
+\index[persons]{Hagge, Tobias}%
+% praca Haggego nazywa się "Every Reidemeister move is needed for each knot type" ale nawet w MathSciNecie wspomnieni są Ostlund i Manturow, więc zostawiam. Tekst skopiowany z Wiki
+Coward \cite{coward06} zademonstrował, że nawet jeśli wszystkie trzy ruchy są potrzebne, można je wykonywać w specjalnej kolejności: najpierw tylko I ruchy, potem tylko II ruchy, następnie tylko III ruchy i znowu II ruchy.
+\index[persons]{Coward, Alexander}%
+
+W praktyce twierdzenia \ref{thm:reidemeister} nie stosuje się bezpośrednio do diagramów splotów.
+Mając dane dwa spójne diagramy tego samego splotu trudno znaleźć jest ciąg ruchów przekształcający jeden z nich w drugi.
+Załóżmy, że widać na nich odpowiednio $n_1, n_2$ skrzyżowań.
+Jak piszą Coward, Lackenby w \cite{coward11}, istnieje funkcja $f \colon \N \times \N \to \N$ taka, że między dwoma diagramami można przejść wykonując co najwyżej $f(n_1, n_2)$ ruchów.
+\index[persons]{Coward, Alexander}%
+\index[persons]{Lackenby, Marc}%
+Wynika to z oczywistego faktu, że istnieje skończenie wiele spójnych diagramów o danej liczbie skrzyżowań oraz twierdzenia Reidemeistera.
+Okazuje się jednak, że od funkcji $f$ można żądać, by była obliczalna
+(a to jest chyba równoważne istnienia algorytmu rozpoznającego, czy dwa diagramy przedstawiają jeden węzeł)
+% http://people.dm.unipi.it/martelli/Cortona/Lackenby.pdf 7 of 90
+i faktycznie, główny wynik \cite{coward11} orzeka, że
+\begin{equation}
+    f(n_1, n_2) = 2^{2^{\ldots^{2^{n_1 + n_2}}}}
+\end{equation}
+jest taką funkcją.
+Piętrowa potęga liczy sobie aż $10^{1000000 (n_1 + n_2)}$ warstw.
+
+Natomiast jeżeli $n_2 = 0$, czyli drugi diagram przedstawia niewęzeł, ,,wystarcza'' $(236n_1)^{11}$ ruchów, przy czym liczba skrzyżowań podczas transformacji nigdy nie przekracza $49c^2$: to świeższy wynik samego Lackenby'ego \cite{lackenby15}, gdzie poprawił wcześniejsze oszacowania Hassa, Lagariasa.
+
+Hayashi \cite{hayashi05} dowiódł, że liczbę ruchów Reidemeistera potrzebnych, by rozszczepić splot można ograniczyć z góry na podstawie indeksu skrzyżowaniowego.
+\index[persons]{Hayashi, Chuichiro}%
+
+% DICTIONARY;invariant;niezmiennik;-
+Zamiast tego definiuje się niezmienniki, czyli funkcje ze zbioru wszystkich diagramów, które nie zmieniają swojej wartości podczas wykonywania ruchów Reidemeistera.
+Kiedy pewien niezmiennik przyjmuje różne wartości na dwóch diagramach, te przedstawiają dwa istotnie różne sploty.
+Gdy wartości są te same, nie dostajemy żadnej informacji.
+Sploty mogą być równoważne albo nie.
+Niezmienniki będą nam stale towarzyszyć w~wędrówce po krainie węzłów.
+
+% koniec sekcji Ruchy Reidemeistera

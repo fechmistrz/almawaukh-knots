@@ -1,0 +1,71 @@
+
+\subsection{Wykrywanie niewęzła}
+Wolfgang Haken \cite{haken61} podał przepis na wykrycie diagramu niewęzła i rozwiązał częściowo jeden z~ważniejszych problemów teorii węzłów.
+\index{niewęzeł}
+\index[persons]{Haken, Wolfgang}%
+Długo nikt nie podjął się implementacji tego algorytmu\footnote{Moritz Epple pisze ,,this algorithm was extremely impractical'', w recenzji z MathSciNet proponuje, żeby przed przeczytaniem pełnej niepotrzebnych dygresji pracy Hakena poznać artykuł \cite{schubert61} Schuberta.}, udało się to Burtonowi, Budneyowi oraz Petterssonowi w~komputerowym programie Regina\footnote{Dostępny pod adresem \url{https://regina-normal.github.io/}.} na przełomie tysiącleci.
+\index[persons]{Epple, Moritz}%
+\index[persons]{Burton, Benjamin}%
+\index[persons]{Budney, Ryan}%
+\index[persons]{Pettersson, William}%
+%=% https://mathscinet.ams.org/mathscinet-getitem?mr=141107
+% DICTIONARY;incompressible;nieściśliwy;-
+Burton, Rubinstein i~Tillman pokazali w~pracy \cite{burton12}, jak sprawdzać, czy powierzchnia normalna na striangulowanej 3-rozmaitości jest (nie)ściśliwa w~czasie wykładniczym.
+\index[persons]{Rubinstein, Joachim}%
+\index[persons]{Tillman, Stephan}%
+To okazało się wystarczyć do udzielenia negatywnej odpowiedzi na pytanie Thurstona: ,,czy przestrzeń Seiferta-Webera jest rozmaitością Hakena?'', a zatem wykraczającego poza poziom tej pracy.
+\index[persons]{Thurston, William}%
+\index{przestrzeń!Seiferta-Webera}%
+\index{rozmaitość!Hakena}%
+
+SnapPea\footnote{Dostępny pod adresem \url{http://geometrygames.org/SnapPea/index.html}.} to inny popularny wśród niskowymiarowych topologów program pozwalający badać hiperboliczne 3-rozmaitości, patrz sekcja \ref{sec:hyperbolic}.
+
+Wiadomo, że genus oraz zredukowana kohomologia Chowanowa wykrywa niewęzły (fakty \ref{prp:genus_detects_unknot}, \ref{khovanov_detects_unknot}) i nie wiadomo, czy wielomian Jonesa to robi (hipoteza \ref{con:jones}).
+\index{genus}%
+\index{homologia!Chowanowa}%
+\index{wielomian!Jonesa}%
+Od dawna wiadomo, że wielomian Alexandera nie wykrywa niewęzła (fakt \ref{alexander_no_detects_unknot}).
+\index{wielomian!Alexandera}%
+W lutym 2021 Lackenby ogłosił nowy algorytm rozpoznający niewęzły w~quasiwielomianowym czasie.
+% i nie zrobił tego w THE EFFICIENT CERTIFICATION OF KNOTTEDNESS AND THURSTON NORM, bo to wyszło na arxiv w 2016
+\index[persons]{Lackenby, Marc}%
+
+Wyśmienitym punktem wyjścia do poszukiwań trudnych niewęzłów jest praca \cite{schleimer21}, dzieło Burtona, Changa, Löffler, Maarten, de Mesmay, Maria, Schleimera, Sedgwicka oraz Spreera.
+\index[persons]{Burton, Benjamin}%
+\index[persons]{Chang, Hsien-Chih}%
+\index[persons]{de Mesmay, Arnaud}%
+\index[persons]{Löffler, Maarten}%
+\index[persons]{Maria, Clément}%
+\index[persons]{Schleimer, Saul}%
+\index[persons]{Sedgwick, Eric}%
+\index[persons]{Spreer, Jonatha}%
+Cytuje ona artykuł Lackenby'a \cite{lackenby15}, gdzie poznaliśmy przykład Goeritza \cite{goeritz34} z 1934 roku diagramu niewęzła o 11 skrzyżowaniach, który można zmienić w~zwykły diagram niewęzła tylko zwiększając po drodze liczbę skrzyżowań.
+\index[persons]{Goeritz, Lebrecht}%
+\index{niewęzeł!Goeritza}%
+Autorzy przywołują jeszcze klasyczny przykład Freedmana, He, Wanga \cite{freedman94}; ale też podstępne niewęzły Hakena, Ochiai, Thistlethwaite'a oraz mocno doświadczalną pracę Petronio, Zanellatiego \cite{zanellati16}.
+\index[persons]{Freedman, Michael}%
+\index[persons]{He, Zheng-Xu}%
+\index[persons]{Wang, Zhenghan}%
+\index{niewęzeł!Freedmana}%
+\index[persons]{Petronio, Carlo}%
+\index[persons]{Zanellati, Adolfo}%
+
+\begin{comment}
+\begin{figure}[H]
+    \begin{minipage}[b]{.32\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{../data/missing.jpg}
+        \subcaption{normalny}
+    \end{minipage}
+    \begin{minipage}[b]{.32\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{../data/missing.jpg}
+        \subcaption{Goritza}
+    \end{minipage}
+    \begin{minipage}[b]{.32\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{../data/missing.jpg}
+        \subcaption{Freedmana}
+    \end{minipage}
+\end{figure}
+\end{comment}
