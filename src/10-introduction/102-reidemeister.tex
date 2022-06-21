@@ -1,11 +1,76 @@
 
 \section{Diagramy. Ruchy Reidemeistera}
 
-\input{10-introduction/102a-diagrams}
+Chociaż w~świetle definicji \ref{def:knot} węzły są pewnymi regularnymi podzbiorami przestrzeni $\R^3$, z~kombinatorycznego punktu widzenia wygodniej jest rysować je na płaszczyźnie.
 
-\input{10-introduction/102b-history}
+% DICTIONARY;oriented;zorientowany;węzeł
+\begin{definition}[orientacja]
+\index{węzeł!zorientowany}%
+\index{orientacja|see {węzeł zorientowany}}%
+    Węzeł, w~którym wybrano kierunek, w~którym należy się po nim poruszać, nazywamy zorientowanym.
+    Splot nazywamy zorientowanym, jeśli wszystkie jego ogniwa traktowane jako węzły są zorientowane.
+\end{definition}
 
-\input{10-introduction/102c-tait}
+Orientację na diagramie zaznaczamy małą strzałką wskazującą kierunek poruszania się.
 
-\input{10-introduction/102d-codes}
+% DICTIONARY;shadow;cień;-
+\begin{definition}
+\index{cień}%
+    Rzut węzła $K \subseteq \R^3$ na płaszczyznę nazywamy cieniem.
+\end{definition}
 
+% DICTIONARY;crossing;skrzyżowanie;-
+\begin{definition}[skrzyżowanie]
+\index{skrzyżowanie}%
+    Podwójny punkt w cieniu nazywamy skrzyżowaniem.
+\end{definition}
+
+% DICTIONARY;diagram;diagram;-
+\begin{definition}[diagram]
+\index{diagram}%
+    Cień razem z~informacją o~tym, jak przebiegają skrzyżowania i pozbawiony katastrof: potrójnych przecięć, stycznych czy dziobów nazywamy diagramem.
+    % TODO: Narysować katastrofy
+\end{definition}
+
+\begin{definition}[włókno]
+\index{włókno}%
+    Fragment diagramu, który biegnie między dwoma kolejnymi tunelami, czyli podskrzyżowaniami, nazywamy włóknem.
+\end{definition}
+
+\begin{definition}[nić]
+\index{nić}%
+    Fragment diagramu, który biegnie między dwoma kolejnymi skrzyżowaniami, nazywamy nicią.
+\end{definition}
+
+Nici powstają z włókien przez rozcięcie ich przy każdym nadskrzyżowaniu.
+
+\begin{proposition}
+    Niech $L$ będzie splotem.
+    Jego diagramy tworzą otwarty i~gęsty podzbiór wszystkich rzutów.
+\end{proposition}
+
+Kawauchi \cite[s. 7]{kawauchi96} wspomina w tym miejscu podręcznik Crowella, Foxa \cite[s. 7]{crowell63}.
+To samo jest na przykład u Burdego, Zieschanga, Heusenera \cite[s. 10]{burde14}.
+
+\begin{proof}
+    Rzut splotu na równoległe płaszczyzny jest taki sam, a te można sparametryzować prostymi przechodzącymi przez początek układu współrzędnych, które tworzą przestrzeń rzutową $\R \mathbb P^2$.
+    Niech $S$ będzie zbiorem prostych, które dają złe rzuty.
+    Wystarczy pokazać jego nigdziegęstość.
+    Okazuje się, że $S$ jest też jednowymiarowy.
+\end{proof}
+
+\begin{corollary}
+    Każdy splot posiada diagram.
+\end{corollary}
+
+\input{10-introduction/102a-reidemeister}
+
+\input{10-introduction/102b-hardunknots}
+
+\input{10-introduction/102c-alternating}
+
+\input{10-introduction/102d-history}
+
+\input{10-introduction/102e-tait}
+
+\input{10-introduction/102f-codes}
