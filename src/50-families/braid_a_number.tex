@@ -12,6 +12,7 @@ Tylko jeden węzeł ma liczbę warkoczową $1$, jest to niewęzeł.
 Dwuwarkoczowe są dokładnie węzły torusowe typu $(2, n)$ dla $|n| \ge 3$.
 Węzły spełniające $\braid (K) = 3$ nie zostały jeszcze sklasyfikowane.
 Liczba warkoczowa splotu zależy od orientacji ogniw i~trudno wyznacza się w~ogólnym przypadku.
+Znamy ją między innymi dla węzłów torusowych (fakt \ref{cor:torus_braid_number}).
 
 \begin{proposition}
     Węzeł o~$n$ skrzyżowaniach można zapleść na $n - 1$ pasmach: $\crossing K \ge 1 + \braid K$.
@@ -52,13 +53,22 @@ Dowód podali niezależnie Franks, Williams \cite{franks87} i Morton \cite{morto
 Wielomian Alexandera wykrywa czasami węzły, których nie otrzyma się przez domykanie ,,małych'' warkoczy.
 \index{wielomian!Alexandera}%
 Przytoczone tu wyniki pochodzą z pracy \cite{jones85} Jonesa, gdzie nie ma jednak ich dowodów.
-Jeśli $|\alexander(i)| > 3$, to węzeł nie jest domknięciem 3-warkocza (wniosek 23).
-Ta implikacja jest skuteczna przy 43 z 59 węzłów o mniej niż 10 skrzyżowaniach.
-Wydawało się, że ,,jeśli zaś spełniona jest nierówność $|\alexander (\exp (2\pi i / 5))| > 13/2$, nie jest on domknięciem 4-warkocza'' (wniosek 24), ale Stojmenow \cite{stoimenow02} odkrył po latach, że węzeł $13_{9221}$ spełnia $\alexander(\omega_5) = 19\sqrt{5} - 49 \approx -6.51$.
-Dlatego zaproponował słabszy wynik (z dowodem) i zastąpił ograniczenie dolne przez $6 + 2 \sqrt{5} \approx 10.47$.
-Prawdopodobnie nie istnieją podobne warunki dla 5-warkoczy.
 
-Znamy liczby warkoczowe między innymi węzłów torusowych (fakt \ref{cor:torus_braid_number}).
+\begin{proposition}
+    Jeśli $|\alexander_K(i)| > 3$, to węzeł $K$ nie jest domknięciem 3-warkocza.
+\end{proposition}
+
+Ta implikacja, \cite[wniosek 23]{jones85}, jest skuteczna przy 43 z 59 węzłów pierwszych o mniej niż 10 skrzyżowaniach.
+Jones \cite[wniosek 24]{jones85} zasugerował, że domknięcia 4-warkoczy spełniają podobną nierówność $|\alexander (\exp (2\pi i / 5))| \le 13/2$, ale Stojmenow \cite{stoimenow02} odkrył po wielu latach, dlaczego nikt nigdy nie podał dowodu tego faktu.
+Węzeł $13_{9221}$ ma liczbę warkoczową 4, jego wielomian Alexandera przyjmuje wartość $\alexander(\omega_5) = 19\sqrt{5} - 49 \approx -6.51$.
+
+Udało mu się za to udowodnić słabszą implikację ($6 + 2 \sqrt{5} \approx 10.47$):
+
+\begin{proposition}
+    Jeśli $|\alexander_K(\exp(2\pi i/5))| > 6 + 2 \sqrt{5}$, to węzeł $K$ nie jest domknięciem 4-warkocza.
+\end{proposition}
+
+Prawdopodobnie nie istnieją podobne warunki dla 5-warkoczy.
 
 \index{liczba warkoczowa|)}%
 
