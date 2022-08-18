@@ -1,105 +1,594 @@
 digraph G {
-	{ node [style=filled,color=green]
-		"Heinrich\nTietze" "Garland\nBriggs"
-		"Alexander\nStoimenow" "Andrew\nLipson"
+	{ node
+		[style=filled,color=green1]
+		"Andrew\nLipson"
 		"Andrew\nTristram" "Dror\nBar-Natan"
-		"Jozef\nPrzytycki" "Marc\nLackenby"
+		"Jozef\nPrzytycki" 
 		"Morwen\nThistlethwaite" "Raymond\nLickorish"
-		"Vladimir\nTuraev" "Ralph\nFox" "Kunio\nMurasugi"
-		"Louis\nKauffman" "Richard\nHartley" "Paweł\nTraczyk"
-		"Lebrecht\nGoeritz" "Paolo\nLisca"
-		"Max\nDehn" "James\nAlexander"
+		"Vladimir\nTuraev" 
+		 
+		"Lebrecht\nGoeritz" 
+		 "James\nAlexander"
 		"Werner\nBurau" "Charles\nLivingston"
-		"Mikhail\nKhovanov" "Wolfgang\nHaken" "Emil\nArtin"; }
+		  "Emil\nArtin"; }
 
+	# initial nodes - all advisors added to tree
+	{ node
+		[style=filled,color=green]
+
+		"Aleksey\nSosinskii"
+		"Alexander\nShumakovitch"
+		"Alexander\nStoimenow" 
+		"Alexander\nVarchenko"
+		"Colin\nRourke"
+		"John\nMilnor"
+		"Andreas\nFloer"
+		"Anthony\nConway"
+		"Bertold\nWiest"
+		"Adam\nSikora"
+		"Carl\nSundberg"
+		"Christian\nKassel"
+		"Clifford\nDowker"
+		"Cole\nGiller"
+		"Dale\nRolfsen"
+		"David\nYetter"
+		"Oliver\nDasbach"
+		"Dirk\nVertigan"
+		"Donald\nSolitar"
+		"Emil\nArtin"
+		"Friedhelm\nWaldhausen"
+		"Garland\nBriggs"
+		"George\nMostow"
+		"Gerhard\nBurde"
+		"Gregor\nMasbaum"
+		"Heinrich\nTietze" 
+		"Jacqueline\nJensen"
+		"James\nAlexander"
+		"Jeffrey\nWeeks"
+		"Jeffrey\nWeeks"
+		"Jennifer\nSchultens"
+		"Joan\nBirman"
+		"John\nLuecke"
+		"Jonathan\nSpreer"
+		"Kunio\nMurasugi"
+		"Kurt\nReidemeister"
+		"Laura Taalman"
+		"Laurence\nSiebenmann"
+		"Leandro\nVendramin"
+		"Lisa\nPiccirillo"
+		"Louis\nKauffman"
+		"Maciej\nNiebrzydowski"
+		"Marc\nCuller"
+		"Marc\nLackenby"
+		"Martin\nScharlemann"
+		"Max\nDehn"
+		"Michel\nBoileau"
+		"Mikhail\nKhovanov"
+		"Norbert\nWielenberg"
+		"Olof-Petter\nÖstlund"
+		"Paolo\nLisca"
+		"Paweł\nTraczyk"
+		"Peter\nCromwell"
+		"Peter\nFreyd"
+		"Pierre\nVogel"
+		"Ralph\nFox" 
+		"Richard\nHartley" 
+		"Richard\nLitherland"
+		"Robert\nGompf"
+		"Robert\nRiley"
+		"Ryan\nBlair"
+		"Sazdanovic\nRadmila"
+		"Sergei\nChmutov"
+		"Slavik\nJablan"
+		"Stephen\nBigelow"
+		"Steven\nBleiler"
+		"Susan\nHermiller"
+		"Swatee\nNaik"
+		"Tobias\nHagge"
+		"Tomasz\nMrowka"
+		"Vassily\nManturov"
+		"William\nMenasco"
+		"William\nThurston" 
+		"Wolfgang\nHaken"
+		"Yoav\nMoriah"
+		"Young\nSik Huh"
+		"Zdzisław\nPogoda"
+	; }
+
+
+
+
+
+
+
+
+	{ node [style=filled,color=gray]
+"Adams,\nColin C."
+
+
+# "Oneil,\nKaitlyn"
+# "Kobayashi,\nTsuyoshi"
+# "Brownell,\nKathryn"
+# "Bogle,\nMiles G. V."
+	# "Kanenobu,\nTaizo"
+# "Flynn,\nRichard"
+# "Hillman,\nJonathan A."
+
+# "Ozawa,\nMakoto"
+# "Brendle,\nTara E."
+# "Shalen,\nPeter B."
+# "Pecker,\nDaniel"
+# "Shinohara,\nYaichi"
+# "Por,\nAttila"
+# "Dunfield,\nNathan M."
+# "Listing,\nJohann B."
+# "Liechti,\nLivio"
+# "Kjuchukova,\nAlexandra"
+
+# "Schermann,\nJohn"
+# "Brandt,\nRobert D."
+# "Chow,\nWei-Liang"
+# "Clark,\nWilliam E."
+# "Teragaito,\nMasakazu"
+# "Candy,\nChristoper"
+# "Jin,\nGyo T."
+# "Henrich,\nAllison"
+# "Kirk,\nPaul A."
+# "Borodzik,\nMaciej"
+# "Diao,\nYuanan"
+# "Conway,\nJohn H."
+# "Williams,\nRobert F."
+
+# "Woo,\nAlexander K."
+# "Sumners,\nDe Witt W."
+
+# "Zagier,\nDon"
+# "Au,\nMichael"
+# "Robertello,\nRaymond A."
+# "Hayashi,\nChuichiro"
+# "Cao,\nChun"
+# "Maldonado,\nMatthew"
+# "Koseleff,\nPierre V."
+# "Prasad,\nGopal"
+# "Saito,\nMasahico"
+# "Jiang,\nBoju"
+# "Feustel,\nCharles D."
+# "Fukuhama,\nSatoshi"
+# "Bar-Natan,\nDror"
+# "Bonahon,\nFrancis"
+
+# "Pesikoff,\nDavid"
+# "Yoshida,\nKen'ichi"
+# "Bernhard,\nJames A."
+# "Ziegler,\nUta"
+# "Gibson,\nWilliam"
+# "Gonz'alez-Meneses,\nJuan"
+# "Randell,\nRichard"
+# "Oh,\nSeungsang"
+# "Bohnenblust,\nFrederic"
+# "Gambaudo,\nJean-Marc"
+# "He,\nZheng-Xu"
+# "Sakai,\nTsuyoshi"
+
+# "Caudron,\nAlain"
+# "Eliahou,\nShalom"
+# "Gilbert,\nEdgar N."
+# "Crans,\nAlissa S."
+# "Rong,\nYongwu"
+# "Tejada,\nD'ebora M."
+# "Lin,\nXiao-Song"
+# "Duzhin,\nSergei V."
+# "Elrifai,\nElsayed A."
+# "Ishikawa,\nMasaharu"
+# "Cha,\nJae C."
+# "Greene,\nJoshua E."
+# "Long,\nDarren D."
+# "Dicks,\nWarren"
+# "Hilden,\nHugh M."
+# "Wu,\nDanny"
+# "Denne,\nElizabeth"
+# "Casson,\nAndrew J."
+# "Hearst,\nJohn E."
+
+# "Whitehead,\nJohn H. C."
+# "Thompson,\nAbigail"
+# "Wendt,\nHilmar"
+# "Gilmer,\nPatrick M."
+
+# "Lyndon,\nRoger C."
+# "Dion'isio,\nMiguel"
+# "Jaco,\nWilliam H."
+# "Tripp,\nJames J."
+# "Malyutin,\nAndrei V."
+
+# "Taniyama,\nKouki"
+# "Rankin,\nStuart"
+# "Goodrick,\nRichard E."
+# "Magnus,\nWilhelm"
+# "Milley,\nPeter"
+# "Karrass,\nAbraham"
+
+# "Musick,\nChad"
+# "Ozsv'ath,\nPeter"
+# "Muir,\nRobs J."
+# "Arnold,\nBrian"
+# "Kyle,\nRoger H."
+# "Ernst,\nClaus"
+# "Ng,\nKa Y."
+# "McCabe,\nCynthia L."
+
+# "Kervaire,\nMichel A."
+# "Coward,\nAlexander"
+# "Lannes,\nJean"
+# "Bae,\nYongju"
+# "Kobayashi,\nMasako"
+# "Kneissler,\nJan A."
+# "Crowell,\nRichard"
+# "Meyerhoff,\nRobert G."
+# "Melvin,\nPaul M."
+# "Yasuhara,\nAkira"
+# "Huston,\nAmy M."
+# "Riordan,\nOliver"
+# "Cochran,\nThomas D."
+# "Masai,\nHidetoshi"
+# "Ohtsuki,\nTomotada"
+# "Friedl,\nStefan"
+# "Franks,\nJohn"
+# "Kim,\nSe-Goo"
+# "Gabai,\nDavid"
+# "Brennan,\nBevin M."
+# "Fenn,\nRoger"
+# "Menasco,\nWilliam W."
+# "March'e,\nJulien"
+# "Ghiggini,\nPaolo"
+# "Moody,\nJohn A."
+# "Ruberman,\nDaniel"
+# "Haseman,\nMary G."
+# "Polyak,\nMichael"
+# "Burton,\nBenjamin A."
+# "Dyer,\nJoan L."
+# "Van Buskirk,\nJames"
+# "Agol,\nIan"
+# "Hoste,\nJim"
+# "Schleimer,\nSaul"
+# "Velazquez,\nRoman"
+
+# "Yu,\nXingxing"
+# "Garoufalidis,\nStavros"
+# "Comar,\nTimothy D."
+# "Futer,\nDavid"
+# "Freedman,\nMichael H."
+# "Hashizume,\nYoko"
+# "Elhamdadi,\nMohamed"
+# "Trace,\nBruce"
+# "Ghys,\n'Etienne"
+# "Lamm,\nChristoph"
+# "Ohyama,\nYoshiyuki"
+# "Nelson,\nSam"
+# "Tollefson,\nJeffrey L."
+# "Villanueva,\nPaul"
+# "Kinoshita,\nShin'ichi"
+# "Yamada,\nShuji"
+# "Lando,\nSergei K."
+# "Livingston,\nCharles"
+# "Oleszkiewicz,\nKrzysztof"
+# "Welsh,\nDominic J. A."
+# "Fadell,\nEdward"
+# "Kontsevich,\nMaxim"
+# "Janiak-Osajca,\nAgnieszka"
+# "Burau,\nWerner"
+# "Mesmay,\nArnaud"
+# "Sedgwick,\nEric"
+# "Joseph,\nAnne M."
+
+# "Koutschan,\nChristoph"
+# "Sullivan,\nJohn M."
+# "Owens,\nBrendan"
+# "Jones,\nVaughan F. R."
+# "Markov,\nAndrei A."
+# "Gruber,\nHermann"
+# "Kalfagianni,\nEfstratia"
+# "Greene,\nMichael T."
+# "Ho,\nChi-Fai"
+# "Tillmann,\nStephan"
+# "Trotter,\nHale F."
+# "Lipson,\nAndrew S."
+# "Flint,\nOrtho"
+# "Schreier,\nOtto"
+# "Lopes,\nPedro"
+# "Millett,\nKenneth C."
+
+# "Maria,\nCl'ement"
+# "Gordon,\nCameron McA."
+# "Nakamura,\nTakuji"
+# "Erdener,\nKaan"
+# "Doll,\nHelmut"
+# "Krammer,\nDaan"
+# "Tuzun,\nRobert E."
+# "Heusener,\nMichael"
+# "Calvo,\nJorge A."
+# "Moore,\nAllison H."
+# "Chang,\nHsien-Chih"
+
+# "Hosokawa,\nFujitsugu"
+# "Crowell,\nRichard H."
+# "Kohn,\nPeter D."
+# "Cantarella,\nJason"
+# "Brock,\nJeffrey F."
+# "Klotz,\nAlexander R."
+# "Brittenham,\nMark W."
+# "Johannson,\nKlaus"
+# "Murakami,\nJun"
+# "Cooper,\nDaryl"
+# "Miyazawa,\nYasuyuki"
+# "Lee,\nIn S."
+# "Kusner,\nRobert B."
+# "Bass,\nHyman"
+# "Stanford,\nTed"
+# "Turner,\nPaul"
+# "Rubinstein,\nJoachim H."
+
+# "Dehornoy,\nPatrick"
+# "Kuperberg,\nGreg"
+
+# "Sakuma,\nMakoto"
+# "Hatcher,\nAllen"
+# "Donaldson,\nSimon K."
+
+# "Weinberg,\nNoah"
+# "Kim,\nPaik-Kee"
+# "Bollob'as,\nB'ela"
+# "Morgan,\nJohn W."
+# "Puppe,\nDieter"
+# "Zhang,\nXingru"
+# "Szab'o,\nZolt'an"
+# "Hodgson,\nCraig"
+# "Kohno,\nToshitake"
+# "Paton,\nMark"
+# "Lambropoulou,\nSofia"
+# "Bugbee,\nJohn"
+# "Motegi,\nKimihiko"
+# "Bacardit,\nLlu'is"
+# "Whitten,\nWilbur"
+# "Read,\nRonald C."
+# "Wang,\nZhenghan"
+# "Peluso,\nAda"
+# "Colberg,\nErin"
+# "Kodama,\nKouzi"
+# "Stoilov,\nLuben"
+# "Oertel,\nUlrich"
+# "Faigin,\nKeith A."
+# "Jabuka,\nStanislav"
+# "Neumann,\nWalter D."
+# "Hougardy,\nStefan"
+# "Tanaka,\nToshifumi"
+;
+}
+
+
+	# terminal nodes - no advisor known
+	{ node
+		[style=filled,color=red]
+		"Victor\nPuiseux"
+		"Danilo\nBlanuša"
+		"Giuseppe\nDoveri"
+		"Riccardo\nBenedetti"
+		"John\nHammersley" 
+		"Maxwell\nNewman"
+		"Gustav\nBauer"
+		"Charles\nHermite"
+		"Akio\nKawauchi"
+		"Joseph\nvon Littrow"
+	; }
+
+	# people not present in MathGeneProj
+	{ node 
+		[style=filled,color=orange]
+		"James\nFan"
+		"Maarten\nLoffler"
+		"Mario\nEudave-Munoz"
+		"Yasutaka\nNakanishi"
+		"Zirbel\nLaura"
+		# "Greilsheimer,\nDeborah L."
+		# "Kondo,\nHisako"
+		# "Perko,\nKenneth A."
+		# "Murakami,\nHitoshi"
+		# "Negami,\nSeiya"
+		# "Oyamaguchi,\nNatsumi"
+		# "Prasolov,\nVictor V."
+		# "Schieber,\nNathaniel B."
+		# "Shimizu,\nAyaka"
+		# "Terasaka,\nHidetaka"
+		# "Cerf,\nCorinne"
+
+		# "Yeatman,\nTimothy"
+		# "Zanellati,\nAdolfo"
+	}
+
+
+
+	"Abraham\nKästner"  -> "Heinrich\nBrandes" -> "Heinrich\nScherk";
+	"Abraham\nKästner" -> "Bernhard\nThibaut" -> "Christoph\nGudermann" -> "Karl\nWeierstraß" -> "Nicolai\nBugaev" -> "Dimitri\nEgorov" -> "Nikolai\nLuzin" -> "Lyudmila\nKeldysh" -> "Aleksey\nSosinskii";
+	"Abraham\nKästner" -> "Georg\nLichtenberg" -> "Johann\nBartels";
+	"Abraham\nKästner" -> "Johann\nBartels";
+	"Adam\nSedgwick" -> "William\nHopkins" -> "Francis\nGalton" ->  "Karl\nPearson" -> "Philip\nHall" -> "Alfred\nGoldie" -> "John\nMcConnell" -> "Timothy\nHodges" -> "Margarita\nToro";
+	"Alexander\nVarchenko" -> "Sergei\nChmutov" -> "Alexander\nStoimenow";
+	"Andreas\nvon Ettingshausen" -> "Viktor\nvon Lang" -> "Franz\nExner" -> "Fritz\nHasenöhrl" -> "Karl\nHerzfeld" -> "John\nWheeler" -> "Arthur\nWightman" -> "Arthur\nJaffe" -> "Clifford\nTaubes" -> "Tomasz\nMrowka";
+	"Andrei\nMarkov" -> "Veniamin\nKagan" -> "Petr\nRashevskii" -> "Anatoly\nFomenko" -> "Vassily\nManturov";
 	"August\nKunzek" -> "Francesco\nRossetti" -> "Andrea\nNaccari" -> "Angelo\nBattelli" -> "Luigi\nPuccianti" -> "Enrico\nFermi" -> "Geoffrey\nChew" -> "David\nGross" -> "Edward\nWitten" -> "Dror\nBar-Natan";
+	"Augustin\nCauchy" -> "Mikhail\nOstrogradsky";
+	"Benjamin\nPeirce" -> "Joseph\nLovering" -> "John\nTrowbridge" -> "Wallace\nSabine" -> "Percy\nBridgman" -> "Edwin\nKemble" -> "Richard\nDuffin" ;
+	"Beno\nEckmann" -> "Michel\nKervaire";
 	"Bernard\nBolzano" -> "Franz\nMoth";
-	"Johann\nPfaff" -> "Carl\nGauß" -> "Christian\nGerling" -> "Julius\nPlücker" -> "Felix\nKlein" -> "Carl\nLindemann" -> "David\nHilbert" -> "Max\nDehn" -> "Wilhelm\nMagnus" -> "Joan\nBirman" -> "Jozef\nPrzytycki";
+	"Bernt\nHolmboe" -> "Carl\nBjerknes" -> "Sophus\nLie" ;
+	"Cameron\nGordon" -> "Richard\nLitherland";
+	"Cameron\nGordon" -> "Yoav\nMoriah";
+	"Carl\nGauß" -> "Friedrich\nBessel" -> "Heinrich\nScherk" -> "Ernst\nKummer" -> "Nicolai\nBugaev";
+	"Carl\nGauß" -> "Johann\nEncke" -> "Leopold\nKronecker" -> "Kurt\nHensel" -> "Helmut\nHasse" -> "Wolfgang\nFranz" -> "Ralph\nStöcker";
+	"Carl\nGauß" -> "Johann\nListing";
 	"Carl\nJacobi" -> "Wilhelm\nScheibner" -> "William\nStory";
+	"Carl\nNeumann" -> "Emil\nWeyr" -> "Wilhelm\nWirtinger" -> "Wilhelm\nBlaschke" -> "Shing-Shen\nChern" -> "Howard\nGarland" -> "Igor\nFrenkel" -> "Mikhail\nKhovanov";
+	"Cato\nGuldberg" -> "Sophus\nLie" -> "Elie\nCartan";
+	"Charles\nEhresmann" -> "André\nHaefliger" -> "Claude\nWeber" -> "David\nCimasoni" -> "Anthony\nConway";
+	"Charles\nHermite" -> "Jules\nTannery" -> "Jacques\nHadamard";
+	"Charles\nHermite" -> "Marie\nHumbert" -> "Gaston\nJulia";
+	"Charles\nLivingston" -> "Swatee\nNaik";
+	"Christopher\nZeeman" -> "Colin\nRourke" -> "Bertold\nWiest"
+	"Christopher\nZeeman" -> "David\nEpstein" -> "Elmer\nRees" -> "Jacob\nMostovoy";
+	"Christopher\nZeeman" -> "John\nHudson" -> "Cameron\nGordon" -> "John\nLuecke" -> "Lisa\nPiccirillo";
+	"Danilo\nBlanuša" -> "Mileva\nPrvanović" -> "Neda\nBokan" -> "Slavik\nJablan";
+	"David\nEpstein" -> "Hugh\nMorton" -> "Peter\nCromwell";
+	"David\nHilbert" -> "Erhard\nSchmidt" -> "Heinz\nHopf" -> "Michel\nKervaire";
+	"David\nHilbert" -> "Erich\nHecke" -> "Kurt\nReidemeister" -> "Gerhard\nBurde";
+	"David\nHilbert" -> "Richard\nCourant" -> "William\nFeller" -> "Hale\nTrotter";
+	"David\nHilbert" -> "Robert\nKönig" -> "Karl-Heinrich\nWeise" -> "Wolfgang\nHaken";
+	"Eduardo\nCaballé" -> "José\nUde" -> "Tomás\nBachiller" ;
+	"Eliakim\nMoore" -> "George\nBirkhoff" -> "Robert\nCarmichael" -> "Harold\nMott-Smith" -> "Richard\nDuffin" -> "Raoul\nBott" -> "Stephen\nSmale" -> "Morris\nHirsch" -> "William\nThurston" -> "Steven\nKerckhoff" -> "Jessica\nPurcell";
+	"Eliakim\nMoore" -> "Robert\nMoore";
 	"Elmar\nVogt" -> "Alexander\nStoimenow";
+	"Emil\nArtin" -> "Alexander\nMacBeath" -> "David\nSingerman";
 	"Enno\nDirksen" -> "Carl\nJacobi" -> "Otto\nHesse" -> "Heinrich\nWeber" -> "Friedrich\nLevi" -> "William\nThrelfall" -> "Herbert\nSeifert";
+	"Enrico\nBetti" -> "Gregorio\nRicci-Curbastro";
+	"Erhard\nSchmidt" -> "Martin\nKneser";
+	"Erich\nHecke" -> "Heinrich\nBehnke" -> "Friedrich\nHirzebruch";
+	"Ernst\nKummer" -> "Hermann\nSchwarz" -> "Leopold\nFejér" -> "Marcel\nRiesz" -> "Einar\nHille" -> "Cassius\nTulcea" -> "Nicolae\nDinculeanu";
+	"Ernst\nLindelöf" -> "Rolf\nNevanlinna" -> "Lars\nAhlfors";
+	"Felix\nKlein" -> "Adolf\nWeiler" -> "Marcel\nGrossmann" -> "Ferdinand\nGonseth";
+	"Felix\nKlein" -> "Friedrich\nEngel";
+	"Felix\nKlein" -> "Ludwig\nBieberbach" -> "Heinz\nHopf";
+	"Felix\nKlein" -> "Maxime\nBôcher" -> "Griffith\nEvans" -> "John\nGergen" -> "Walter\nRudin" -> "Carl\nSundberg";
+	"Ferdinand\nLindemann" -> "Alfred\nLoewy" -> "Wolfgang\nKrull" -> "Peter\nDombrowski" -> "Dirk\nFerus" -> "Wolfgang\nKühnel";
+	"Ferdinand\nLindemann" -> "Arnold\nSommerfeld" -> "Gregor\nWentzel" -> "Res\nJost" -> "Eduard\nZehnder" -> "Andreas\nFloer";
+	"Ferdinand\nLindemann" -> "Hermann\nMinkowski" -> "Constantin\nCarathéodory" -> "Ernst\nPeschl" -> "Peter\nDombrowski";
+	"Ferdinand\nLindemann" -> "Oskar\nPerron" -> "Ernst\nPeschl";
 	"Franz\nvon Gerstner" -> "Franz\nMoth" -> "Francesco\nRossetti";
 	"Friedrich\nRichelot" -> "Carl\nNeumann" -> "William\nStory" -> "Solomon\nLefschetz" -> "Shaun\nWylie" -> "Christopher\nZeeman" -> "Raymond\nLickorish" -> "Marc\nLackenby";
+	"Frigyes\nRiesz" -> "Tibor\nRadó" -> "Paul\nReichelderfer" -> "Edward\nFadell" -> "James\nvan Buskirk" -> "Steven\nBleiler";
+	"Gaston\nDarboux" -> "Elie\nCartan" -> "Charles\nEhresmann" -> "Valentin\nPoénaru" -> "Pierre\nVogel";
+	"Gaston\nDarboux" -> "Stanisław\nZaremba" -> "Wacław\nSierpiński";
+	"Gaston\nDarboux" -> "Émile\nBorel" -> "Paul\nMontel" -> "Henri\nCartan" -> "Max\nKaroubi" -> "Jean-Louis\nLoday" -> "Christian\nKassel";
+	"Gaston\nJulia" -> "Claude\nChevalley" -> "Gerhard\nHochschild" -> "Andrzej\nBiałynicki-Birula" -> "Paweł\nTraczyk";
+	"Georg\nLichtenberg"  -> "Heinrich\nBrandes"
+	"Georg\nLichtenberg" -> "Bernhard\nThibaut"
 	"Georg\nvon Vega" -> "Ignaz\nLindner" -> "Andreas\nvon Ettingshausen" -> "Francesco\nRossetti";
+	"Gerhard\nBurde" -> "Ralph\nStöcker" -> "Andreas\nFloer";
+	"Giuseppe\nDoveri" -> "Enrico\nBetti" -> "Ulisse\nDini" -> "Gregorio\nRicci-Curbastro" -> "Tullio\nLevi-Civita" -> "Octav\nOnicescu" -> "Nicolae\nDinculeanu" -> "Serban\nStratila" -> "Adrian\nOcneanu"; 
+	"Godfrey\nHardy" -> "Donald\nSpencer";
+	"Graham\nHigman" -> "Howard\nHoare" -> "David\nSingerman" -> "Robert\nRiley";
+	"Gustav\nBauer" -> "Alfred\nLoewy";
+	"Gustav\nDirichlet" -> "Leopold\nKronecker";
+	"Gustav\nHerglotz" -> "Emil\nArtin";
+	"Gustav\nvon Escherich" -> "Heinrich\nTietze";
+	"Gustav\nvon Escherich" -> "Wilhelm\nWirtinger";
+	"Gösta\nMittag-Leffler" -> "Robert\nMellin" -> "Ernst\nLindelöf" -> "Lars\nAhlfors" -> "Albert\nMarden" -> "Norbert\nWielenberg";
 	"Heiner\nZieschang" -> "Elmar\nVogt";
+	"Heinz\nHopf" -> "Friedrich\nHirzebruch" -> "Friedhelm\nWaldhausen";
+	"Heinz\nHopf" -> "Hans\nSamelson" -> "Allen\nHatcher" -> "Mark\nBrittenham";
+	"Henri\nLebesgue" -> "Zygmunt\nJaniszewski" -> "Kazimierz\nKuratowski";
 	"Herbert\nSeifert" -> "Hilmar\nWendt";
 	"Herbert\nSeifert" -> "Horst\nSchubert";
-	"David\nHilbert" -> "Erich\nHecke" -> "Kurt\nReidemeister" -> "Gerhard\nBurde";
+	"Hermann\nMinkowski" -> "Louis\nKollros" -> "Ferdinand\nGonseth" -> "Hans\nSamelson";
+	"Hermann\nSchwarz" -> "Leon\nLichtenstein" -> "Hermann\nBoerner" -> "Klaus\nRoggenkamp" -> "Wolfgang\nKimmerle" -> "Jonathan\nSpreer";
+	"Hermann\nvon Helmholtz" -> "Friedrich\nSchottky";
+	"Jean\nd'Alembert" -> "Pierre-Simon\nLaplace" -> "Siméon\nPoisson";
+	"Jerome\nLevine" -> "Gyo\nTaek Jin" -> "Young\nSik Huh";
+	"Jerome\nLevine" -> "Stefan\nFriedl";
+	"Johann\nBernoulli" -> "Leonhard\nEuler" -> "Joseph\nLagrange" -> "Siméon\nPoisson";
+	"Johann\nPfaff" -> "August\nMöbius" -> "Otto\nFiedler" -> "Marcel\nGrossmann" ;
+	"Johann\nPfaff" -> "Carl\nGauß" -> "Christian\nGerling" -> "Julius\nPlücker" -> "Felix\nKlein" -> "Ferdinand\nLindemann" -> "David\nHilbert" -> "Max\nDehn" -> "Wilhelm\nMagnus" -> "Joan\nBirman" -> "Józef\nPrzytycki" -> "Sazdanovic\nRadmila";
+	"Johann\nPfaff" -> "Johann\nBartels" -> "Nikolai\nLobachevsky" -> "Nikolai\nBrashman";
+	"John\nHammersley" -> "Dominic\nWelsh" -> "Dirk\nVertigan";
+	"John\nLittlewood" -> "Donald\nSpencer" -> "Phillip\nGriffiths" -> "Howard\nGarland";
+	"John\nLittlewood" -> "Harold\nDavenport" -> "John\nConway";
+	"John\nMilnor" -> "Laurence\nSiebenmann" -> "Michel\nBoileau";
+	"John\nWhitehead" -> "Graham\nHigman" -> "Frank\nGarside";
+	"Joseph\nLagrange" -> "Jean-Baptiste\nFourier" -> "Gustav\nDirichlet";
+	"Joseph\nSerret" -> "Camille\nJordan" -> "Marie\nHumbert";
+	"Joseph\nvon Littrow" -> "Nikolai\nBrashman" -> "Pafnuty\nChebyshev" -> "Alexander\nKorkin" -> "Dmitry\nGrave" -> "Boris\nDelone" -> "Alexandre\nVinogradov" -> "Sergei\nDuzhin";
+	"José\nFreyre" -> "Tomás\nBachiller" -> "Francisco\nRaduán" -> "Jose Maria\nMontesinos";
+	"Józef\nPrzytycki" -> "Maciej\nNiebrzydowski";
+	"Karl-Heinrich\nWeise" -> "Jens\nMennicke" -> "Fritz\nGrunewald" -> "Oliver\nDasbach";
+	"Karl\nWeierstraß" -> "Friedrich\nSchottky" -> "Leon\nLichtenstein";
+	"Karl\nWeierstraß" -> "Hermann\nSchwarz";
+	"Kunio\nMurasugi" -> "Richard\nHartley";
 	"Kurt\nReidemeister" -> "Heiner\nZieschang";
 	"Kurt\nReidemeister" -> "Karl\nBankwitz";
 	"Kurt\nReidemeister" -> "Lebrecht\nGoeritz";
 	"Kurt\nReidemeister" -> "Werner\nBurau";
+	"Lazarus\nFuchs" -> "Ludwig\nSchlesinger" -> "Abraham\nPlessner" -> "Vladimir\nRokhlin" -> "Oleg\nViro" -> "Vladimir\nTuraev";
+	"Leonhard\nEuler" -> "Stepan\nRumovsky" -> "Nikolai\nLobachevsky";
+	"Leopold\nFejér" -> "Tibor\nRadó";
+	"Leopold\nKronecker" -> "Ludwig\nSchlesinger";
+	"Louis\nThenard" -> "Joseph\nLiouville";
+	"Martin\nScharlemann" -> "Jennifer\nSchultens";
+	"Martin\nScharlemann" -> "Ryan\nBlair";
+	"Maxwell\nNewman" -> "Sze-Tsen\nHu" -> "Micheal\nDyer" -> "Jacqueline\nJensen";
+	"Michel\nChasles" -> "Gaston\nDarboux" -> "Émile\nPicard" -> "Gaston\nJulia";
+	"Michel\nChasles" -> "Valerian\nLigin" -> "Dmitrii\nZeiyliger" -> "Nikolai\nChetaev" -> "Valentin\nRumyantsev" -> "Anatoly\nFomenko";
+	"Mikhail\nLomonosov" -> "Stepan\nRumovsky";
+	"Morris\nHirsch" -> "William\nGoldman";
+	"Nikolai\nLuzin" -> "Andrei\nKolmogorov" -> "Vladimir\nArnold" -> "Alexander\nVarchenko";
+	"Norman\nSteenrod" -> "Edwin\nSpanier" -> "Morris\nHirsch";
+	"Norman\nSteenrod" -> "Jerome\nLevine";
+	"Norman\nSteenrod" -> "Peter\nFreyd" -> "David\nYetter";
+	"Oleg\nViro" -> "Alexander\nShumakovitch";
+	"Oleg\nViro" -> "Olof-Petter\nÖstlund";
+	"Oswald\nVeblen" -> "James\nAlexander" -> "Garland\nBriggs";
+	"Oswald\nVeblen" -> "Robert\nMoore" -> "Raymond\nWilder" -> "Morton\nCurtis" -> "John\nMorgan" -> "Paolo\nLisca";
 	"Otto\nHesse" -> "Carl\nNeumann";
+	"Otto\nHölder" -> "Emil\nArtin";
 	"Otto\nHölder" -> "William\nThrelfall" -> "Hilmar\nWendt";
-	"Rudolf\nLipschitz" -> "Felix\nKlein";
-	"Sergei\nChmutov" -> "Alexander\nStoimenow";
-	"Siméon\nPoisson" -> "Michel\nChasles" -> "Hubert\nNewton" -> "Eliakim\nMoore" -> "Oswald\nVeblen" -> "John\nWhitehead" -> "Michael\nBarratt" -> "Morwen\nThistlethwaite";
+	"Otto\nSchreier" -> "Emanuel\nSperner" -> "Kurt\nLeichtweiß" -> "Bernd\nWegner" -> "Wolfgang\nKühnel" -> "Jonathan\nSpreer";
+	"Pafnuty\nChebyshev" -> "Andrei\nMarkov" -> "Georgy\nVoronoy" -> "Wacław\nSierpiński" -> "Stefan\nMazurkiewicz" -> "Karol\nBorsuk" -> "Samuel\nEilenberg" -> "David\nBuchsbaum" -> "Peter\nFreyd";
+	"Pafnuty\nChebyshev" -> "Konstantin\nPosse" -> "Veniamin\nKagan";
+	"Paul\nMontel" -> "Miron\nNicolescu" -> "Ciprian\nFoias" -> "Adrian\nOcneanu";
+	"Philip\nHall" -> "Garrett\nBirkhoff" -> "George\nMostow";
+	"Pierre\nVogel" -> "Gregor\nMasbaum";
+	"Ralph\nFox" -> "Guillermo\nTorres-Diaz";
+	"Ralph\nFox" -> "John\nMilnor";
+	"Ralph\nFox" -> "John\nStallings" -> "Marc\nCuller";
+	"Ralph\nFox" -> "Lee\nNeuwirth";
+	"Ralph\nFox" -> "Richard\nCrowell";
+	"Raoul\nBott" -> "Daniel\nQuillen" -> "Kenneth\nBrown" -> "Susan\nHermiller";
 	"Raymond\nLickorish" -> "Andrew\nLipson";
 	"Raymond\nLickorish" -> "Andrew\nTristram";
-	"Lazarus\nFuchs" -> "Ludwig\nSchlesinger" -> "Abraham\nPlessner" -> "Vladimir\nRokhlin" -> "Oleg\nViro" -> "Vladimir\nTuraev";
-	"Wilhelm\nScheibner" -> "Friedrich\nEngel" -> "Abraham\nPlessner";
-	"Felix\nKlein" -> "Friedrich\nEngel";
-	"Oswald\nVeblen" -> "James\nAlexander" -> "Garland\nBriggs";
-	"Leopold\nKronecker" -> "Ludwig\nSchlesinger";
-	"Solomon\nLefschetz" -> "Ralph\nFox";
-	"Kunio\nMurasugi" -> "Richard\nHartley";
+	"Riccardo\nBenedetti" -> "Carlo\nPetronio";
+	"Robert\nMoore" -> "Cecil\nBurgess" -> "James\nCannon" -> "Colin\nAdams";
+	"Robert\nMoore" -> "Eldon\nDyer" -> "Robion\nKirby" -> "Charles\nLivingston";
+	"Robert\nMoore" -> "Steve\nArmentrout" -> "Joseph\nMartin" -> "Dale\nRolfsen";
+	"Robion\nKirby" -> "Cole\nGiller";
+	"Robion\nKirby" -> "Martin\nScharlemann"
+	"Robion\nKirby" -> "Robert\nGompf";
+	"Robion\nKirby" -> "Stephen\nBigelow";
+	"Robion\nKirby" -> "Tomasz\nMrowka";
+	"Robion\nKirby" -> "William\nMenasco";
+	"Rudolf\nLipschitz" -> "Felix\nKlein";
+	"Shing-Shen\nChern"-> "Joseph\nWolf" -> "Juan\nTirao" -> "Nicolás\nAndruskiewitsch" -> "Matías\nGraña" -> "Leandro\nVendramin";
+	"Siméon\nPoisson" -> "Gustav\nDirichlet" -> "Carl\nBjerknes";
+	"Siméon\nPoisson" -> "Joseph\nLiouville" -> "Nicolai\nBugaev";
+	"Siméon\nPoisson" -> "Michel\nChasles" -> "Hubert\nNewton" -> "Eliakim\nMoore" -> "Oswald\nVeblen" -> "John\nWhitehead" -> "Michael\nBarratt" -> "Morwen\nThistlethwaite";
+	"Siméon\nPoisson" -> "Mikhail\nOstrogradsky" -> "Nikolai\nBrashman";
+	"Solomon\nLefschetz" -> "Clifford\nDowker";
 	"Solomon\nLefschetz" -> "Norman\nSteenrod" -> "George\nWhitehead" -> "John\nMoore" -> "William\nBrowder" -> "Louis\nKauffman";
-"Gaston\nJulia" -> "Claude\nChevalley" -> "Gerhard\nHochschild" -> "Andrzej\nBiałynicki-Birula" -> "Paweł\nTraczyk";
-
-"Oswald\nVeblen" -> "Robert\nMoore" -> "Raymond\nWilder" -> "Morton\nCurtis" -> "John\nMorgan" -> "Paolo\nLisca";
-"Eliakim\nMoore" -> "Robert\nMoore";
-"Carl\nNeumann" -> "Emil\nWeyr" -> "Wilhelm\nWirtinger" -> "Wilhelm\nBlaschke" -> "Shing-Shen\nChern" -> "Howard\nGarland" -> "Igor\nFrenkel" -> "Mikhail\nKhovanov";
-"Wilhelm\nScheibner" -> "Emil\nWeyr";
-"Gustav\nvon Escherich" -> "Wilhelm\nWirtinger";
-"John\nLittlewood" -> "Donald\nSpencer" -> "Phillip\nGriffiths" -> "Howard\nGarland";
-"Godfrey\nHardy" -> "Donald\nSpencer";
-
-"Johann\nBernoulli" -> "Leonhard\nEuler" -> "Joseph\nLagrange" -> "Siméon\nPoisson";
-"Jean\nd'Alembert" -> "Pierre-Simon\nLaplace" -> "Siméon\nPoisson";
-"Robert\nMoore" -> "Eldon\nDyer" -> "Robion\nKirby" -> "Charles\nLivingston";
-"Carl\nGauß" -> "Johann\nListing";
-"Gustav\nvon Escherich" -> "Heinrich\nTietze";
-"Gustav\nHerglotz" -> "Emil\nArtin";
-"Otto\nHölder" -> "Emil\nArtin";
-"Ralph\nFox" -> "Guillermo\nTorres-Diaz";
-"Ralph\nFox" -> "Richard\nCrowell";
-"Ralph\nFox" -> "John\nMilnor";
-"David\nHilbert" -> "Robert\nKönig" -> "Karl-Heinrich\nWeise" -> "Wolfgang\nHaken";
-"Ralph\nFox" -> "Lee\nNeuwirth";
-"David\nHilbert" -> "Richard\nCourant" -> "William Feller" -> "Hale\nTrotter";
-"David\nHilbert" -> "Erhard\nSchmidt" -> "Heinz\nHopf" -> "Michel\nKervaire";
-"Felix\nKlein" -> "Ludwig\nBieberbach" -> "Heinz\nHopf";
-"Beno\nEckmann" -> "Michel\nKervaire";
-"Heinz\nHopf" -> "Friedrich\nHirzebruch" -> "Friedhelm\nWaldhausen";
-"Erich\nHecke" -> "Heinrich\nBehnke" -> "Friedrich\nHirzebruch";
-"John\nWhitehead" -> "Graham\nHigman" -> "Frank Garside";
-"Norman\nSteenrod" -> "Jerome\nLevine";
-"John\nLittlewood" -> "Harold\nDavenport" -> "John\nConway";
-"Graham\nHigman" -> "Howard\nHoare" -> "David\nSingerman" -> "Robert\nRiley";
-"Emil\nArtin" -> "Alexander\nMacBeath" -> "David\nSingerman";
-"José\nFreyre" -> "Tomás\nBachiller" -> "Francisco\nRaduán" -> "Jose Maria\nMontesinos";
-"Eduardo\nCaballé" -> "José\nUde" -> "Tomás\nBachiller" ;
-"Robert\nMoore" -> "Steve\nArmentrout" -> "Joseph\nMartin" -> "Dale\nRolfsen";
-"Eliakim\nMoore" -> "George\nBirkhoff" -> "Robert\nCarmichael" -> "Harold\nMott-Smith" -> "Richard\nDuffin" -> "Raoul\nBott" -> "Stephen\nSmale" -> "Morris\nHirsch" -> "William\nThurston" -> "Steven\nKerckhoff" -> "Jessica\nPurcell";
-"Benjamin\nPeirce" -> "Joseph\nLovering" -> "John\nTrowbridge" -> "Wallace\nSabine" -> "Percy\nBridgman" -> "Edwin\nKemble" -> "Richard\nDuffin" ;
-"Norman\nSteenrod" -> "Edwin\nSpanier" -> "Morris\nHirsch";
-# "Riccardo\nBenedetti" -> "Carlo\nPetronio";
-"Jerome\nLevine" -> "Stefan\nFriedl";
-"Robert\nMoore" -> "Cecil\nBurgess" -> "James\nCannon" -> "Colin\nAdams";
-"Joseph\nvon Littrow" -> "Nikolai\nBrashman" -> "Pafnuty\nChebyshev" -> "Alexander\nKorkin" -> "Dmitry\nGrave" -> "Boris\nDelone" -> "Alexandre\nVinogradov" -> "Sergei\nDuzhin";
-"Johann\nPfaff" -> "Johann\nBartels" -> "Nikolai\nLobachevsky" -> "Nikolai\nBrashman";
-"Abraham\nKästner" -> "Johann\nBartels";
-"Abraham\nKästner" -> "Georg\nLichtenberg" -> "Johann\nBartels";
-"Leonhard\nEuler" -> "Stepan\nRumovsky" -> "Nikolai\nLobachevsky";
-"Mikhail\nLomonosov" -> "Stepan\nRumovsky";
-"Siméon\nPoisson" -> "Mikhail\nOstrogradsky" -> "Nikolai\nBrashman";
-"Augustin\nCauchy" -> "Mikhail\nOstrogradsky";
-"Christopher\nZeeman" -> "David\nEpstein" -> "Elmer\nRees" -> "Jacob\nMostovoy";
-"Edmund\nWhittaker" -> "William\nHodge" -> "Michael\nAtiyah" -> "Peter\nKronheimer";
-"Robion\nKirby" -> "Tomasz\nMrowka";
-"Andreas\nvon Ettingshausen" -> "Viktor\nvon Lang" -> "Franz\nExner" -> "Fritz\nHasenöhrl" -> "Karl\nHerzfeld" -> "John\nWheeler" -> "Arthur\nWightman" -> "Arthur\nJaffe" -> "Clifford\nTaubes" -> "Tomasz\nMrowka";
+	"Solomon\nLefschetz" -> "Ralph\nFox";
+	"Stanisław\nZaremba" -> "Stanisław\nGołąb" -> "Andrzej\nZajtz" -> "Zdzisław\nPogoda";
+	"Stefan\nMazurkiewicz" -> "Kazimierz\nKuratowski" -> "Samuel\nEilenberg";
+	"Terence\nWall" -> "Andrew\nCasson" -> "Stephen\nBigelow";
+	"Victor\nPuiseux" -> "Camille\nJordan";
+	"Vladimir\nArnold" -> "Sergei\nChmutov";
+	"Wilhelm\nBlaschke" -> "Emanuel\nSperner";
+	"Wilhelm\nMagnus" -> "Donald\nSolitar";
+	"Wilhelm\nMagnus" -> "Friedrich\nSchäfke" -> "Dirk\nFerus";
+	"Wilhelm\nScheibner" -> "Emil\nWeyr";
+	"Wilhelm\nScheibner" -> "Friedrich\nEngel" -> "Abraham\nPlessner";
+	"William\nBrowder" -> "Michael\nFreedman" -> "Zhenghan\nWang" -> "Tobias\nHagge";
+	"William\nBrowder" -> "William\nPardon" -> "Laura\nTaalman";
+	"William\nHopkins" -> "Arthur\nCayley" -> "Andrew\nForsyth" -> "Edmund\nWhittaker" -> "William\nHodge" -> "Michael\nAtiyah" -> "Peter\nKronheimer";
+	"William\nHopkins" -> "Edward\nRouth" -> "George\nDarwin" -> "Edmund\nWhittaker";
+	"William\nHopkins" -> "Isaac\nTodhunter" -> "Edward\nRouth";
+	"William\nThurston" -> "Jeffrey\nWeeks";
+	"William\nThurston" -> "William\nGoldman" -> "Adam\nSikora";
+	"Émile\nBorel" -> "Henri\nLebesgue" -> "Paul\nMontel";
+	"Émile\nPicard" -> "Jacques\nHadamard" -> "Szolem\nMandelbrojt" -> "John\nGergen";
+	"Émile\nPicard" -> "Stanisław\nZaremba";
 }
-
-
-
-
