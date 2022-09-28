@@ -1,0 +1,1933 @@
+
+
+@article {tietze08,
+    AUTHOR = {Tietze, Heinrich F. F.},
+    MRNUMBER = {1547755},
+    TITLE = {\"{U}ber die topologischen {I}nvarianten mehrdimensionaler {M}annigfaltigkeiten},
+
+@article {dehn14,
+    AUTHOR = {Dehn, Max W.},
+    MRNUMBER = {1511799},
+    TITLE = {Die beiden {K}leeblattschlingen},
+
+@book {haseman18,
+    AUTHOR = {Haseman, Mary G.},
+    MRNUMBER = {2936036},
+    TITLE = {On knots, with a census of the amphicheirals with twelve crossings},
+
+@article {alexander23,
+    AUTHOR = {Alexander, James W.},
+    TITLE = {A Lemma on Systems of Knotted Curves},
+
+@article {schreier24,
+    AUTHOR = {Schreier, Otto},
+    MRNUMBER = {3069424},
+    TITLE = {\"{U}ber die gruppen {$A^aB^b=1$}},
+
+@article {artin25,
+    AUTHOR = {Artin, Emil},
+    MRNUMBER = {3069440},
+    TITLE = {Theorie der {Z}\"{o}pfe},
+
+@article {briggs27,
+    AUTHOR = {Alexander, James W. and Briggs, Garland B.},
+    MRNUMBER = {1502807},
+    TITLE = {On types of knotted curves},
+
+@article {reidemeister27,
+    AUTHOR = {Reidemeister, Kurt},
+    MRNUMBER = {3069462},
+    TITLE = {Elementare {B}egr\"{u}ndung der {K}notentheorie},
+
+@article {alexander28,
+    AUTHOR = {Alexander, James W.},
+    MRNUMBER = {1501429},
+    TITLE = {Topological invariants of knots and links},
+
+@article {bankwitz30,
+    AUTHOR = {Bankwitz, Carl},
+    MRNUMBER = {1512619},
+    TITLE = {\"{U}ber die {T}orsionszahlen der alternierenden {K}noten},
+
+@article {goeritz33,
+    AUTHOR = {Goeritz, Lebrecht},
+    MRNUMBER = {1545364},
+    TITLE = {Knoten und quadratische {F}ormen},
+
+@article {magnus34,
+    AUTHOR = {Magnus, Wilhelm},
+    MRNUMBER = {1512913},
+    TITLE = {\"{U}ber {A}utomorphismen von {F}undamentalgruppen berandeter {F}l\"{a}chen},
+
+@article {burau33,
+    AUTHOR = {Burau, Werner},
+    MRNUMBER = {3069652},
+    TITLE = {\"{U}ber {Z}opfgruppen und gleichsinnig verdrillte {V}erkettungen},
+
+@article {markov36,
+    AUTHOR = {Markov, Andrei A.},
+    TITLE = {\"{U}ber die freie \"{A}quivalenz der geschlossenen Z\"{o}pfe},
+
+@article {seifert35,
+    AUTHOR = {Seifert, Herbert K. J.},
+    MRNUMBER = {1512955},
+    TITLE = {\"{U}ber das {G}eschlecht von {K}noten},
+
+@article {dehn36,
+    AUTHOR = {Dehn, Max},
+    MRNUMBER = {1555418},
+    TITLE = {\"{U}ber kombinatorische {T}opologie},
+
+@article {wendt37,
+    AUTHOR = {Wendt, Hilmar},
+    MRNUMBER = {1545700},
+    TITLE = {Die gordische {A}ufl\"{o}sung von {K}noten},
+
+@article {whitehead37,
+    AUTHOR = {Whitehead, John H. C.},
+    TITLE = {On Doubled Knots},
+
+@article {weinberg39,
+    AUTHOR = {Weinberg, Noah},
+    TITLE = {{Sur l'\'equivalence libre des tresses ferm\'ees.}},
+
+@article {bohnenblust47,
+    AUTHOR = {Bohnenblust, Frederic},
+    MRNUMBER = {19088},
+    TITLE = {The algebraical braid group},
+
+@article {chow48,
+    AUTHOR = {Chow, Wei-Liang},
+    MRNUMBER = {26050},
+    TITLE = {On the algebraical braid group},
+
+@article {schubert49,
+    AUTHOR = {Schubert, Horst},
+    MRNUMBER = {0031733},
+    TITLE = {Die eindeutige {Z}erlegbarkeit eines {K}notens in {P}rimknoten},
+
+@article {fox50,
+    AUTHOR = {Fox, Ralph H.},
+    MRNUMBER = {37510},
+    TITLE = {On the total curvature of some tame knots},
+
+@article {seifert50,
+    AUTHOR = {Seifert, Herbert K. J.},
+    MRNUMBER = {0035436},
+    TITLE = {On the homology invariants of knots},
+
+@article {fox52,
+    AUTHOR = {Fox, Ralph H.},
+    MRNUMBER = {0048024},
+    TITLE = {On the complementary domains of a certain pair of inequivalent knots},
+
+@article {fox53,
+    AUTHOR = {Fox, Ralph H.},
+    MRNUMBER = {53938},
+    TITLE = {Free differential calculus. {I}. {D}erivation in the free group ring},
+
+@article {kneser53,
+    AUTHOR = {Kneser, Martin and Puppe, Dieter},
+    MRNUMBER = {56607},
+    TITLE = {Quadratische {F}ormen und {V}erschlingungsinvarianten von {K}noten},
+
+@article {schubert53,
+    AUTHOR = {Schubert, Horst},
+    MRNUMBER = {0072482},
+    TITLE = {Knoten und {V}ollringe},
+
+@article {torres53,
+    AUTHOR = {Torres, Guillermo},
+    MRNUMBER = {52104},
+    TITLE = {On the {A}lexander polynomial},
+
+@article {fox54,
+    AUTHOR = {Fox, Ralph H.},
+    MRNUMBER = {62125},
+    TITLE = {Free differential calculus. {II}. {T}he isomorphism problem of groups},
+
+@article {kyle54,
+    AUTHOR = {Kyle, Roger H.},
+    MRNUMBER = {62438},
+    TITLE = {Branched covering spaces and the quadratic forms of links},
+
+@article {schubert54,
+    AUTHOR = {Schubert, Horst},
+    MRNUMBER = {0072483},
+    TITLE = {\"Uber eine numerische {K}noteninvariante},
+
+@article {fox56,
+    AUTHOR = {Fox, Ralph H.},
+    MRNUMBER = {95876},
+    TITLE = {Free differential calculus. {III}. {S}ubgroups},
+
+@article {gilbert56,
+    AUTHOR = {Gilbert, Edgar N.},
+    MRNUMBER = {90568},
+    TITLE = {Knots and classes of m\'{e}nage permutations},
+
+@article {schubert56,
+    AUTHOR = {Schubert, Horst},
+    MRNUMBER = {0082104},
+    TITLE = {Knoten mit zwei {B}r\"ucken},
+
+@article {kinoshita57,
+    AUTHOR = {Kinoshita, Shin'ichi and Terasaka, Hidetaka},
+    MRNUMBER = {0098386},
+    TITLE = {On unions of knots},
+
+@article {fox58,
+    AUTHOR = {Chen, Kuo T. and Fox, Ralph H. and Lyndon, Roger C.},
+    MRNUMBER = {102539},
+    TITLE = {Free differential calculus. {IV}. {T}he quotient groups of the lower central series},
+
+@article {hashizume58,
+    AUTHOR = {Hashizume, Yoko},
+    MRNUMBER = {102821},
+    TITLE = {On the uniqueness of the decomposition of a link},
+
+@article {hosokawa58,
+    AUTHOR = {Hosokawa, Fujitsugu},
+    MRNUMBER = {102820},
+    TITLE = {On {$\nabla $}-polynomials of links},
+
+@article {murasugi58,
+    AUTHOR = {Murasugi, Kunio},
+    MRNUMBER = {99664},
+    TITLE = {On the genus of the alternating knot. {I}, {II}},
+
+@article {murasugi59,
+    AUTHOR = {Murasugi, Kunio},
+    MRNUMBER = {99666},
+    TITLE = {On the {A}lexander polynomial of the alternating knot},
+
+@article {crowell59,
+    AUTHOR = {Crowell, Richard H.},
+    MRNUMBER = {0099667},
+    TITLE = {Nonalternating links},
+
+@article {fox60,
+    AUTHOR = {Fox, Ralph H.},
+    MRNUMBER = {111781},
+    TITLE = {Free differential calculus. {V}. {T}he {A}lexander matrices re-examined},
+
+@article {haken61,
+    AUTHOR = {Haken, Wolfgang},
+    MRNUMBER = {0141106},
+    TITLE = {Theorie der {N}ormalfl\"achen},
+
+@article {murasugi61,
+    AUTHOR = {Murasugi, Kunio},
+    MRNUMBER = {133819},
+    TITLE = {Remarks on torus knots},
+
+@article {neuwirth61,
+    AUTHOR = {Neuwirth, Lee},
+    MRNUMBER = {133818},
+    TITLE = {A note on torus knots and links determined by their groups},
+
+@article {schubert61,
+    AUTHOR = {Schubert, Horst},
+    MRNUMBER = {141107},
+    TITLE = {Bestimmung der {P}rimfaktorzerlegung von {V}erkettungen},
+
+@article {fadell62,
+    AUTHOR = {Fadell, Edward and Van Buskirk, James},
+    MRNUMBER = {141128},
+    TITLE = {The braid groups of {$E^{2}$} and {$S^{2}$}},
+
+@inproceedings {fox62,
+    AUTHOR = {Fox, Ralph H.},
+    MRNUMBER = {0140100},
+    TITLE = {Some problems in knot theory},
+
+@article {neuwirth62,
+    AUTHOR = {Fadell, Edward and Neuwirth, Lee},
+    MRNUMBER = {141126},
+    TITLE = {Configuration spaces},
+
+@article {trotter62,
+    AUTHOR = {Trotter, Hale F.},
+    MRNUMBER = {0143201},
+    TITLE = {Homology of group systems with applications to knot theory},
+
+@book {crowell63,
+    AUTHOR = {Crowell, Richard H. and Fox, Ralph H.},
+    MRNUMBER = {0146828},
+    TITLE = {Introduction to knot theory},
+
+@article {trotter63,
+    AUTHOR = {Trotter, Hale F.},
+    MRNUMBER = {0158395},
+    TITLE = {Non-invertible knots exist},
+
+@incollection {kervaire65,
+    AUTHOR = {Kervaire, Michel A.},
+    MRNUMBER = {0178475},
+    TITLE = {On higher dimensional knots},
+
+@article {murasugi65,
+    AUTHOR = {Murasugi, Kunio},
+    MRNUMBER = {0171275},
+    TITLE = {On a certain numerical invariant of link types},
+
+@article {robertello65,
+    AUTHOR = {Robertello, Raymond A.},
+    MRNUMBER = {182965},
+    TITLE = {An invariant of knot cobordism},
+
+@article {burde66,
+    AUTHOR = {Burde, Gerhard and Zieschang, Heiner},
+    MRNUMBER = {210113},
+    TITLE = {Eine {K}ennzeichnung der {T}orusknoten},
+
+@article {fox66,
+    AUTHOR = {Fox, Ralph H. and Milnor, John W.},
+    MRNUMBER = {211392},
+    TITLE = {Singularities of {$2$}-spheres in {$4$}-space and cobordism of knots},
+
+@book {magnus66,
+    AUTHOR = {Magnus, Wilhelm and Karrass, Abraham and Solitar, Donald},
+    MRNUMBER = {0207802},
+    TITLE = {Combinatorial group theory: {P}resentations of groups in terms of generators and relations},
+
+@incollection {milnor68,
+    AUTHOR = {Milnor, John W.},
+    MRNUMBER = {0242163},
+    TITLE = {Infinite cyclic coverings},
+
+@article {waldhausen68,
+    AUTHOR = {Waldhausen, Friedhelm},
+    MRNUMBER = {224099},
+    TITLE = {On irreducible {$3$}-manifolds which are sufficiently large},
+
+@article {garside69,
+    AUTHOR = {Garside, Frank A.},
+    MRNUMBER = {248801},
+    TITLE = {The braid group and other groups},
+
+@article {levine69,
+    AUTHOR = {Levine, Jerome},
+    MRNUMBER = {246314},
+    TITLE = {Knot cobordism groups in codimension two},
+
+@article {murasugi69,
+    AUTHOR = {Murasugi, Kunio},
+    MRNUMBER = {238301},
+    TITLE = {The {A}rf invariant for knot types},
+
+@article {tristram69,
+    AUTHOR = {Tristram, Andrew G.},
+    MRNUMBER = {248854},
+    TITLE = {Some cobordism invariants for links},
+
+@incollection {conway70,
+    AUTHOR = {Conway, John H.},
+    MRNUMBER = {0258014},
+    TITLE = {An enumeration of knots and links, and some of their algebraic properties},
+
+@article {levine70,
+    AUTHOR = {Levine, Jerome},
+    MRNUMBER = {0266226},
+    TITLE = {An algebraic classification of some knots of codimension two},
+
+@article {murasugi71,
+    AUTHOR = {Murasugi, Kunio},
+    MRNUMBER = {0292060},
+    TITLE = {On periodic knots},
+
+@article {riley71,
+    AUTHOR = {Riley, Robert},
+    MRNUMBER = {0295332},
+    TITLE = {Homomorphisms of knot groups on finite groups},
+
+@article {shinohara71,
+    AUTHOR = {Shinohara, Yaichi},
+    MRNUMBER = {275415},
+    TITLE = {On the signature of knots and links},
+
+@article {goodrick72,
+    AUTHOR = {Goodrick, Richard E.},
+    MRNUMBER = {315693},
+    TITLE = {Two bridge knots are alternating knots},
+
+@article {montesinos73,
+    AUTHOR = {Montesinos, Jos\'{e} M.},
+    MRNUMBER = {341467},
+    TITLE = {Seifert manifolds that are ramified two-sheeted cyclic coverings},
+
+@book {mostow73,
+    AUTHOR = {Mostow, George D.},
+    MRNUMBER = {0385004},
+    TITLE = {Strong rigidity of locally symmetric spaces},
+
+@article {prasad73,
+    AUTHOR = {Prasad, Gopal},
+    MRNUMBER = {385005},
+    TITLE = {Strong rigidity of {${\bf Q}$}-rank {$1$} lattices},
+
+@book {birman74,
+    AUTHOR = {Birman, Joan S.},
+    MRNUMBER = {0375281},
+    TITLE = {Braids, links, and mapping class groups},
+
+@book {reidemeister32,
+    AUTHOR = {Reidemeister, Kurt},
+    MRNUMBER = {0345089},
+    TITLE = {Knotentheorie},
+
+@incollection {montesinos75,
+    AUTHOR = {Montesinos, Jos\'{e} M.},
+    MRNUMBER = {0380802},
+    TITLE = {Surgery on links and double branched covers of {$S^{3}$}},
+
+@article {riley75,
+    AUTHOR = {Riley, Robert},
+    MRNUMBER = {412416},
+    TITLE = {A quadratic parabolic group},
+
+@book {rolfsen76,
+    AUTHOR = {Rolfsen, Dale},
+    MRNUMBER = {0515288},
+    TITLE = {Knots and links},
+
+@article {sakai77,
+    AUTHOR = {Sakai, Tsuyoshi},
+    MRNUMBER = {494064},
+    TITLE = {A remark on the {A}lexander polynomials of knots},
+
+@article {feustel78,
+    AUTHOR = {Feustel, Charles D. and Whitten, Wilbur},
+    MRNUMBER = {511562},
+    TITLE = {Groups and complements of knots},
+
+@inproceedings {gordon78,
+    AUTHOR = {Casson, Andrew J. and Gordon, Cameron McA.},
+    MRNUMBER = {520521},
+    TITLE = {On slice knots in dimension three},
+
+@incollection {kirby78,
+    AUTHOR = {Kirby, Rob},
+    MRNUMBER = {520548},
+    TITLE = {Problems in low dimensional manifold theory},
+
+@article {rosenstiehl78,
+    AUTHOR = {Rosenstiehl, Pierre and Read, Ronald C.},
+    MRNUMBER = {505877},
+    TITLE = {On the principal edge tripartition of a graph},
+
+@phdthesis {bonahon79,
+    AUTHOR = {Bonahon, Francis},
+    TITLE = {Involutions et fibr{\'e}s de Seifert dans les vari{\'e}t{\'e}s de dimension 3},
+
+@article {bonahon80,
+    AUTHOR = {Bonahon, Francis and Siebenmann, Laurent},
+    TITLE = {Les nœuds algébriques},
+
+@article {hartley79,
+    AUTHOR = {Hartley, Richard and Kawauchi, Akio},
+    MRNUMBER = {543095},
+    TITLE = {Polynomials of amphicheiral knots},
+
+@article {jaco79,
+    AUTHOR = {Jaco, William H. and Shalen, Peter B.},
+    MRNUMBER = {539411},
+    TITLE = {Seifert fibered spaces in {$3$}-manifolds},
+
+@book {johannson79,
+    AUTHOR = {Johannson, Klaus},
+    MRNUMBER = {551744},
+    TITLE = {Homotopy equivalences of {$3$}-manifolds with boundaries},
+
+@article {kondo79,
+    AUTHOR = {Kondo, Hisako},
+    MRNUMBER = {539606},
+    TITLE = {Knots of unknotting number {$1$} and their {A}lexander polynomials},
+
+@inproceedings {litherland79,
+    AUTHOR = {Litherland, Richard A.},
+    MRNUMBER = {547456},
+    TITLE = {Signatures of iterated torus knots},
+
+@inproceedings {riley79,
+    AUTHOR = {Riley, Robert},
+    MRNUMBER = {547459},
+    TITLE = {An elliptical path from parabolic representations to hyperbolic structures},
+
+@book {boileau80,
+    AUTHOR = {Boileau, Michel and Siebenmann, Laurent},
+    TITLE = {A planar classification of pretzel knots and Montesinos knots},
+
+@article {dyer80,
+    AUTHOR = {Dyer, Joan L.},
+    MRNUMBER = {580857},
+    TITLE = {The algebraic braid groups are torsion-free: an algebraic proof},
+
+@article {hartley80,
+    AUTHOR = {Hartley, Richard},
+    MRNUMBER = {570907},
+    TITLE = {Knots and involutions},
+
+@article {perko80,
+    AUTHOR = {Perko, Kenneth A.},
+    TITLE = {Invariants of 11-crossing knots},
+
+@article {tollefson80,
+    AUTHOR = {Kim, Paik-Kee and Tollefson, Jeffrey L.},
+    MRNUMBER = {584691},
+    TITLE = {Splitting the {PL} involutions of nonprime {$3$}-manifolds},
+
+@article {hillman81,
+    AUTHOR = {Hillman, Jonathan A.},
+    MRNUMBER = {591967},
+    TITLE = {The {T}orres conditions are insufficient},
+
+@article {kanenobu81,
+    AUTHOR = {Kanenobu, Taizo},
+    MRNUMBER = {633997},
+    TITLE = {Module d'{A}lexander des n\oe uds fibr\'{e}s et polyn\^{o}me de {H}osokawa des lacements fibr\'{e}s},
+
+@article {litherland81,
+    AUTHOR = {Gordon, Cameron McA. and Litherland, Richard A. and Murasugi, Kunio},
+    MRNUMBER = {617628},
+    TITLE = {Signatures of covering links},
+
+@article {whitten81,
+    AUTHOR = {Whitten, Wilbur},
+    MRNUMBER = {638190},
+    TITLE = {Inverting double knots},
+
+@inproceedings {wielenberg81,
+    AUTHOR = {Wielenberg, Norbert J.},
+    MRNUMBER = {624835},
+    TITLE = {Hyperbolic {$3$}-manifolds which share a fundamental polyhedron},
+
+@book {caudron82,
+    AUTHOR = {Caudron, Alain},
+    MRNUMBER = {679310},
+    TITLE = {Classification des n\oe uds et des enlacements},
+
+@article {freedman82,
+    AUTHOR = {Freedman, Michael H.},
+    MRNUMBER = {679066},
+    TITLE = {The topology of four-dimensional manifolds},
+
+@article {giller82,
+    AUTHOR = {Giller, Cole A.},
+    MRNUMBER = {642331},
+    TITLE = {A family of links and the {C}onway calculus},
+
+@inproceedings {perko82,
+    AUTHOR = {Perko, Kenneth A.},
+    MRNUMBER = {696625},
+    TITLE = {Primality of certain knots},
+
+@article {thurston82,
+    AUTHOR = {Thurston, William P.},
+    MRNUMBER = {648524},
+    TITLE = {Three-dimensional manifolds, {K}leinian groups and hyperbolic geometry},
+
+@book {adams83,
+    AUTHOR = {Adams, Colin C.},
+    MRNUMBER = {2633211},
+    TITLE = {Hyperbolic structures on link complements},
+
+@article {donaldson83,
+    AUTHOR = {Donaldson, Simon K.},
+    MRNUMBER = {710056},
+    TITLE = {An application of gauge theory to four-dimensional topology},
+
+@article {dowker83,
+    AUTHOR = {Dowker, Clifford H. and Thistlethwaite, Morwen B.},
+    MRNUMBER = {702617},
+    TITLE = {Classification of knot projections},
+
+@book {kauffman83,
+    AUTHOR = {Kauffman, Louis H.},
+    MRNUMBER = {712133},
+    TITLE = {Formal knot theory},
+
+@article {livingston83,
+    AUTHOR = {Livingston, Charles},
+    MRNUMBER = {711524},
+    TITLE = {Knots which are not concordant to their reverses},
+
+@article {nakanishi83,
+    AUTHOR = {Nakanishi, Yasutaka},
+    MRNUMBER = {749196},
+    TITLE = {Unknotting numbers and knot diagrams with the minimum crossings},
+
+@article {sakai83,
+    AUTHOR = {Sakai, Tsuyoshi},
+    MRNUMBER = {724739},
+    TITLE = {Polynomials of invertible knots},
+
+@article {trace83,
+    AUTHOR = {Trace, Bruce},
+    MRNUMBER = {719004},
+    TITLE = {On the {R}eidemeister moves of a classical knot},
+
+@article {bleiler84,
+    AUTHOR = {Bleiler, Steven A.},
+    MRNUMBER = {757839},
+    TITLE = {A note on unknotting number},
+
+@article {menasco84,
+    AUTHOR = {Menasco, William W.},
+    MRNUMBER = {721450},
+    TITLE = {Closed incompressible surfaces in alternating knot and link complements},
+
+@book {morgan84,
+    AUTHOR = {Morgan, John W. and Bass, Hyman},
+    MRNUMBER = {758459},
+    TITLE = {The {S}mith conjecture},
+
+@article {oertel84,
+    AUTHOR = {Oertel, Ulrich},
+    MRNUMBER = {732067},
+    TITLE = {Closed incompressible surfaces in complements of star links},
+
+@article {homfly85,
+    AUTHOR = {Freyd, Peter and Yetter, David and Hoste, Jim and Lickorish, William B. R. and Millett, Kenneth C. and Ocneanu, Adrian},
+    MRNUMBER = {776477},
+    TITLE = {A new polynomial invariant of knots and links},
+
+@article {jones85,
+    AUTHOR = {Jones, Vaughan F. R.},
+    MRNUMBER = {766964},
+    TITLE = {A polynomial invariant for knots via von {N}eumann algebras},
+
+@article {lannes85,
+    AUTHOR = {Lannes, Jean},
+    MRNUMBER = {800002},
+    TITLE = {Sur l'invariant de {K}ervaire des n\oe uds classiques},
+
+@incollection {lickorish85,
+    AUTHOR = {Lickorish, William B. R.},
+    MRNUMBER = {813107},
+    TITLE = {The unknotting number of a classical knot},
+
+@article {murasugi85,
+    AUTHOR = {Murasugi, Kunio},
+    MRNUMBER = {802722},
+    TITLE = {On the {A}lexander polynomial of alternating algebraic knots},
+
+@article {neumann85,
+    AUTHOR = {Neumann, Walter D. and Zagier, Don},
+    MRNUMBER = {815482},
+    TITLE = {Volumes of hyperbolic three-manifolds},
+
+@article {scharlemann85,
+    AUTHOR = {Scharlemann, Martin G.},
+    MRNUMBER = {808108},
+    TITLE = {Unknotting number one knots are prime},
+
+@article {brandt86,
+    AUTHOR = {Brandt, Robert D. and Lickorish, William B. R. and Millett, Kenneth C.},
+    MRNUMBER = {837528},
+    TITLE = {A polynomial invariant for unoriented knots and links},
+
+@incollection {casson86,
+    AUTHOR = {Casson, Andrew J. and Gordon, Cameron McA.},
+    MRNUMBER = {900252},
+    TITLE = {Cobordism of classical knots},
+
+@article {gabai86,
+    AUTHOR = {Gabai, David},
+    MRNUMBER = {823442},
+    TITLE = {Genera of the arborescent links},
+
+@article {gompf86,
+    AUTHOR = {Gompf, Robert E.},
+    MRNUMBER = {842430},
+    TITLE = {Smooth concordance of topologically slice knots},
+
+@book {ho86,
+    AUTHOR = {Ho, Chi-Fai},
+    MRNUMBER = {2635346},
+    TITLE = {On polynomial invariants for knots and links},
+
+@article {kanenobu86,
+    AUTHOR = {Kanenobu, Taizo},
+    MRNUMBER = {831406},
+    TITLE = {Infinitely many knots with the same polynomial invariant},
+
+@article {kanenobumurakami86,
+    AUTHOR = {Kanenobu, Taizo and Murakami, Hitoshi},
+    MRNUMBER = {857949},
+    TITLE = {Two-bridge knots with unknotting number one},
+
+@article {lipson86,
+    AUTHOR = {Lipson, Andrew S.},
+    MRNUMBER = {848859},
+    TITLE = {An evaluation of a link polynomial},
+
+@article {morton86,
+    AUTHOR = {Morton, Hugh R.},
+    MRNUMBER = {809504},
+    TITLE = {Seifert circles and knot polynomials},
+
+@article {mortonhr86,
+    AUTHOR = {Morton, Hugh R.},
+    MRNUMBER = {817666},
+    TITLE = {Threading knot diagrams},
+
+@article {murakami86,
+    AUTHOR = {Murakami, Hitoshi},
+    MRNUMBER = {833206},
+    TITLE = {A recursive calculation of the {A}rf invariant of a link},
+
+@article {turaev86,
+    AUTHOR = {Turaev, Vladimir G.},
+    MRNUMBER = {832411},
+    TITLE = {Reidemeister torsion in knot theory},
+
+@article {culler87,
+    AUTHOR = {Culler, Marc and Gordon, Cameron McA. and Luecke, John and Shalen, Peter B.},
+    MRNUMBER = {881270},
+    TITLE = {Dehn surgery on knots},
+
+@article {ernst87,
+    AUTHOR = {Ernst, Claus and Sumners, De Witt W.},
+    MRNUMBER = {898150},
+    TITLE = {The growth of the number of prime knots},
+
+@article {franks87,
+    AUTHOR = {Franks, John and Williams, Robert F.},
+    MRNUMBER = {896009},
+    TITLE = {Braids and the {J}ones polynomial},
+
+@article {kauffman87,
+    AUTHOR = {Kauffman, Louis H.},
+    MRNUMBER = {899057},
+    TITLE = {State models and the {J}ones polynomial},
+
+@article {kohno87,
+    AUTHOR = {Kohno, Toshitake},
+    MRNUMBER = {927394},
+    TITLE = {Monodromy representations of braid groups and {Y}ang-{B}axter equations},
+
+@article {lickorish87,
+    AUTHOR = {Lickorish, William B. R. and Millett, Kenneth C.},
+    MRNUMBER = {880512},
+    TITLE = {A polynomial invariant of oriented links},
+
+@article {lipson87,
+    AUTHOR = {Lickorish, William B. R. and Lipson, Andrew S.},
+    MRNUMBER = {884479},
+    TITLE = {Polynomials of {$2$}-cable-like links},
+
+@article {luecke87,
+    AUTHOR = {Gordon, Cameron McA. and Luecke, John},
+    MRNUMBER = {886439},
+    TITLE = {Only integral {D}ehn surgeries can yield reducible manifolds},
+
+@article {moriah87,
+    AUTHOR = {Moriah, Yoav},
+    MRNUMBER = {870804},
+    TITLE = {On the free genus of knots},
+
+@article {murasugi87,
+    AUTHOR = {Murasugi, Kunio},
+    MRNUMBER = {895570},
+    TITLE = {Jones polynomials and classical conjectures in knot theory},
+
+@article {przytycki87,
+    AUTHOR = {Przytycki, J\'ozef H. and Traczyk, Pawe\l{}},
+    MRNUMBER = {894448},
+    TITLE = {Conway algebras and skein equivalence of links},
+
+@article {ruberman87,
+    AUTHOR = {Ruberman, Daniel},
+    MRNUMBER = {906585},
+    TITLE = {Mutation and volumes of knots in {$S^3$}},
+
+@article {thistlethwaite87,
+    AUTHOR = {Thistlethwaite, Morwen B.},
+    MRNUMBER = {899051},
+    TITLE = {A spanning tree expansion of the {J}ones polynomial},
+
+@article {whitten87,
+    AUTHOR = {Whitten, Wilbur},
+    MRNUMBER = {880506},
+    TITLE = {Knot complements and groups},
+
+@article {yamada87,
+    AUTHOR = {Yamada, Shuji},
+    MRNUMBER = {894383},
+    TITLE = {The minimal number of {S}eifert circles equals the braid index of a link},
+
+@article {lickorish88,
+    AUTHOR = {Lickorish, William B. R. and Thistlethwaite, Morwen B.},
+    MRNUMBER = {966948},
+    TITLE = {Some links with nontrivial polynomials and their crossing-numbers},
+
+@article {millett88,
+    AUTHOR = {Lickorish, William B. R. and Millett, Kenneth C.},
+    MRNUMBER = {934822},
+    TITLE = {The new polynomial invariants of knots and links},
+
+@incollection {morton88,
+    AUTHOR = {Morton, Hugh R.},
+    MRNUMBER = {975095},
+    TITLE = {Polynomials from braids},
+
+@article {murasugi88,
+    AUTHOR = {Murasugi, Kunio},
+    MRNUMBER = {988581},
+    TITLE = {An estimate of the bridge index of links},
+
+@article {thistlethwaite88,
+    AUTHOR = {Thistlethwaite, Morwen B.},
+    MRNUMBER = {948102},
+    TITLE = {On the {K}auffman polynomial of an adequate link},
+
+@article {thompson88,
+    AUTHOR = {Scharlemann, Martin and Thompson, Abigail},
+    MRNUMBER = {929535},
+    TITLE = {Unknotting number, genus, and companion tori},
+
+@incollection {traczyk88,
+    AUTHOR = {Morton, Hugh R. and Traczyk, Pawe\l{}},
+    MRNUMBER = {975096},
+    TITLE = {The {J}ones polynomial of satellite links around mutants},
+
+@article {bonahon89,
+    AUTHOR = {Bonahon, Francis and Siebenmann, Laurent},
+    TITLE = {Geometric splittings of knots, and Conway’s algebraic knots},
+
+@article {cromwell89,
+    AUTHOR = {Cromwell, Peter R.},
+    MRNUMBER = {1002465},
+    TITLE = {Homogeneous links},
+
+@article {gordon89,
+    AUTHOR = {Gordon, Cameron McA. and Luecke, John},
+    MRNUMBER = {965210},
+    TITLE = {Knots are determined by their complements},
+
+@article {kanenobu89,
+    AUTHOR = {Kanenobu, Taizo},
+    MRNUMBER = {1010195},
+    TITLE = {Relations between the {J}ones and {$Q$} polynomials for {$2$}-bridge and {$3$}-braid links},
+
+@article {kirk89,
+    AUTHOR = {Kirk, Paul A.},
+    MRNUMBER = {974988},
+    TITLE = {Mutations of homology spheres and {C}asson's invariant},
+
+@article {kobayashi89,
+    AUTHOR = {Kobayashi, Tsuyoshi},
+    MRNUMBER = {1023526},
+    TITLE = {Minimal genus {S}eifert surfaces for unknotting number {$1$} knots},
+
+@article {kobayashi989,
+    AUTHOR = {Kobayashi, Tsuyoshi},
+    MRNUMBER = {977926},
+    TITLE = {Generalized unknotting operations and tangle decompositions},
+
+@article {kobayashitsuyoshi89,
+    AUTHOR = {Kobayashi, Tsuyoshi},
+    MRNUMBER = {1040421},
+    TITLE = {Fibered links and unknotting operations},
+
+@article {przytycki89,
+    AUTHOR = {Przytycki, J\'{o}zef H.},
+    MRNUMBER = {1001611},
+    TITLE = {Equivalence of cables of mutants of knots},
+
+@article {turaev90,
+    AUTHOR = {Turaev, Vladimir G.},
+    MRNUMBER = {1024455},
+    TITLE = {Operator invariants of tangles, and {$R$}-matrices},
+
+@article {ernst90,
+    AUTHOR = {Ernst, Claus and Sumners, De Witt W.},
+    MRNUMBER = {1068451},
+    TITLE = {A calculus for rational tangles: applications to {DNA} recombination},
+
+@incollection {floer90,
+    AUTHOR = {Floer, Andreas},
+    MRNUMBER = {1171893},
+    TITLE = {Instanton homology, surgery, and knots},
+
+@article {kauffman90,
+    AUTHOR = {Kauffman, Louis H.},
+    MRNUMBER = {958895},
+    TITLE = {An invariant of regular isotopy},
+
+@article {vogel90,
+    AUTHOR = {Vogel, Pierre},
+    MRNUMBER = {1036132},
+    TITLE = {Representation of links by braids: a new algorithm},
+
+@misc {barnatan91,
+    AUTHOR = {Bar-Natan, Dror},
+    TITLE = {Weights of {F}eynman diagrams and the {V}assiliev knot invariants},
+
+@article {doll91,
+    AUTHOR = {Doll, Helmut and Hoste, Jim},
+    MRNUMBER = {1094946},
+    TITLE = {A tabulation of oriented links},
+
+@book {kauffman91,
+    AUTHOR = {Kauffman, Louis H.},
+    MRNUMBER = {1141156},
+    TITLE = {Knots and physics},
+
+@article {kohn91,
+    AUTHOR = {Kohn, Peter D.},
+    MRNUMBER = {1079893},
+    TITLE = {Two-bridge links with unlinking number one},
+
+@article {moody91,
+    AUTHOR = {Moody, John A.},
+    MRNUMBER = {1098347},
+    TITLE = {The {B}urau representation of the braid group {$B_n$} is unfaithful for large {$n$}},
+
+@article {murasugi91,
+    AUTHOR = {Murasugi, Kunio},
+    MRNUMBER = {1000333},
+    TITLE = {On the braid index of alternating links},
+
+@article {negami91,
+    AUTHOR = {Negami, Seiya},
+    MRNUMBER = {1069741},
+    TITLE = {Ramsey theorems for knots, links and spatial graphs},
+
+@article {zhang91,
+    AUTHOR = {Zhang, Xingru},
+    MRNUMBER = {1076582},
+    TITLE = {Unknotting number one knots are prime: a new proof},
+
+@book {benedetti92,
+    AUTHOR = {Benedetti, Riccardo and Petronio, Carlo},
+    MRNUMBER = {1219310},
+    TITLE = {Lectures on hyperbolic geometry},
+
+@article {brock92,
+    AUTHOR = {Adams, Colin C. and Brock, Jeffrey F. and Bugbee, John and Comar, Timothy D. and Faigin, Keith A. and Huston, Amy M. and Joseph, Anne M. and Pesikoff, David},
+    MRNUMBER = {1184114},
+    TITLE = {Almost alternating links},
+
+@incollection {kodama92,
+    AUTHOR = {Kodama, Kouzi and Sakuma, Makoto},
+    MRNUMBER = {1177431},
+    TITLE = {Symmetry groups of prime knots up to {$10$} crossings},
+
+@incollection {welsh92,
+    AUTHOR = {Welsh, Dominic J. A.},
+    MRNUMBER = {1218230},
+    TITLE = {On the number of knots and links},
+
+@article {birman93,
+    AUTHOR = {Birman, Joan S. and Lin, Xiao-Song},
+    MRNUMBER = {1198809},
+    TITLE = {Knot polynomials and {V}assiliev's invariants},
+
+@article {kohn93,
+    AUTHOR = {Kohn, Peter},
+    MRNUMBER = {1250780},
+    TITLE = {Unlinking two component links},
+
+@incollection {kontsevich93,
+    AUTHOR = {Kontsevich, Maxim},
+    MRNUMBER = {1237836},
+    TITLE = {Vassiliev's knot invariants},
+
+@article {kronheimer93,
+    AUTHOR = {Kronheimer, Peter B. and Mrowka, Tomasz S.},
+    MRNUMBER = {1241873},
+    TITLE = {Gauge theory for embedded surfaces. {I}},
+
+@book {livingston93,
+    AUTHOR = {Livingston, Charles},
+    MRNUMBER = {1253070},
+    TITLE = {Knot theory},
+
+@article {menasco93,
+    AUTHOR = {Menasco, William W. and Thistlethwaite, Morwen B.},
+    MRNUMBER = {1230928},
+    TITLE = {The classification of alternating links},
+
+@article {ohyama93,
+    AUTHOR = {Ohyama, Yoshiyuki},
+    MRNUMBER = {1200324},
+    TITLE = {On the minimal crossing number and the braid index of links},
+
+@article {paton93,
+    AUTHOR = {Long, Darren D. and Paton, Mark},
+    MRNUMBER = {1217079},
+    TITLE = {The {B}urau representation is not faithful for {$n\geq 6$}},
+
+@incollection {rolfsen93,
+    AUTHOR = {Rolfsen, Dale},
+    MRNUMBER = {1257910},
+    TITLE = {The quest for a knot with trivial {J}ones polynomial: diagram surgery and the {T}emperley-{L}ieb algebra},
+
+@book {adams94,
+    AUTHOR = {Adams, Colin C.},
+    MRNUMBER = {1266837},
+    TITLE = {The knot book},
+
+@article {adams994,
+    AUTHOR = {Adams, Colin C.},
+    MRNUMBER = {1273788},
+    TITLE = {Toroidally alternating knots and links},
+
+@article {bernhard94,
+    AUTHOR = {Bernhard, James A.},
+    MRNUMBER = {1265448},
+    TITLE = {Unknotting numbers and minimal knot diagrams},
+
+@article {bogle94,
+    AUTHOR = {Bogle, Miles G. V. and Hearst, John E. and Jones, Vaughan F. R. and Stoilov, Luben},
+    MRNUMBER = {1279916},
+    TITLE = {Lissajous knots},
+
+@incollection {chmutov94,
+    AUTHOR = {Chmutov, Sergei V. and Duzhin, Sergei V. and Lando, Sergei K.},
+    MRNUMBER = {1310598},
+    TITLE = {Vassiliev knot invariants. {II}. {I}ntersection graph conjecture for trees},
+
+@article {chmutovduzhin94,
+    AUTHOR = {Chmutov, Sergei V. and Duzhin, Sergei V.},
+    MRNUMBER = {1279917},
+    TITLE = {An upper bound for the number of {V}assiliev knot invariants},
+
+@article {cray94,
+    AUTHOR = {Arnold, Brian and Au, Michael and Candy, Christoper and Erdener, Kaan and Fan, James and Flynn, Richard and Muir, Robs J. and Wu, Danny and Hoste, Jim},
+    MRNUMBER = {1304393},
+    TITLE = {Tabulating alternating knots through {$14$} crossings},
+
+@article {dehornoy94,
+    AUTHOR = {Dehornoy, Patrick},
+    MRNUMBER = {1214782},
+    TITLE = {Braid groups and left distributive operations},
+
+@incollection {duzhin94,
+    AUTHOR = {Chmutov, Sergei V. and Duzhin, Sergei V. and Lando, Sergei K.},
+    MRNUMBER = {1310599},
+    TITLE = {Vassiliev knot invariants. {III}. {F}orest algebra and weighted graphs},
+
+@article {kawauchi94,
+    AUTHOR = {Kawauchi, Akio},
+    MRNUMBER = {1309992},
+    TITLE = {On coefficient polynomials of the skein polynomial of an oriented link},
+
+@article {masbaum94,
+    AUTHOR = {Masbaum, Gregor and Vogel, Pierre},
+    MRNUMBER = {1272656},
+    TITLE = {{$3$}-valent graphs and the {K}auffman bracket},
+
+@article {rong94,
+    AUTHOR = {Rong, Yongwu},
+    MRNUMBER = {1286928},
+    TITLE = {Mutation and {W}itten invariants},
+
+@article {barnatan95,
+    AUTHOR = {Bar-Natan, Dror},
+    MRNUMBER = {1338783},
+    TITLE = {Polynomial invariants are polynomial},
+
+@article {barnatan_95,
+    AUTHOR = {Bar-Natan, Dror},
+    MRNUMBER = {1318886},
+    TITLE = {On the {V}assiliev knot invariants},
+
+@article {barnatandror95,
+    AUTHOR = {Bar-Natan, Dror},
+    MRNUMBER = {1321289},
+    TITLE = {Vassiliev homotopy string link invariants},
+
+@article {eudave95,
+    AUTHOR = {Eudave-Mu\~{n}oz, Mario},
+    MRNUMBER = {1318165},
+    TITLE = {Essential tori obtained by surgery on a knot},
+
+@incollection {kauffman95,
+    AUTHOR = {Kauffman, Louis H.},
+    MRNUMBER = {1364188},
+    TITLE = {Knot logic},
+
+@article {kronheimer95,
+    AUTHOR = {Kronheimer, Peter B. and Mrowka, Tomasz S.},
+    MRNUMBER = {1308489},
+    TITLE = {Gauge theory for embedded surfaces. {II}},
+
+@article {melvin95,
+    AUTHOR = {Melvin, Paul M. and Morton, Hugh R.},
+    MRNUMBER = {1328734},
+    TITLE = {The coloured {J}ones function},
+
+@article {ohyama95,
+    AUTHOR = {Ohyama, Yoshiyuki},
+    MRNUMBER = {1234630},
+    TITLE = {Vassiliev invariants and similarity of knots},
+
+@article {cromwell96,
+    AUTHOR = {Morton, Hugh R. and Cromwell, Peter R.},
+    MRNUMBER = {1395780},
+    TITLE = {Distinguishing mutants by knot polynomials},
+
+@misc {duzhin96,
+    AUTHOR = {Chmutov, Sergei V.},
+    TITLE = {A quadratic lower bound for the number of primitive {V}assiliev invariants},
+
+@book {kawauchi96,
+    AUTHOR = {Kawauchi, Akio},
+    MRNUMBER = {1417494},
+    TITLE = {A survey of knot theory},
+
+@article {kobayashi96,
+    AUTHOR = {Kobayashi, Masako and Kobayashi, Tsuyoshi},
+    MRNUMBER = {1373811},
+    TITLE = {On canonical genus and free genus of knot},
+
+@book {murasugi96,
+    AUTHOR = {Murasugi, Kunio},
+    MRNUMBER = {1391727},
+    TITLE = {Knot theory and its applications},
+
+@article {nakanishi96,
+    AUTHOR = {Nakanishi, Yasutaka},
+    MRNUMBER = {1342035},
+    TITLE = {Union and tangle},
+
+@article {stanford96,
+    AUTHOR = {Stanford, Ted},
+    MRNUMBER = {1398378},
+    TITLE = {Braid commutators and {V}assiliev invariants},
+
+@article {wang96,
+    AUTHOR = {Lin, Xiao-Song and Wang, Zhenghan},
+    MRNUMBER = {1420350},
+    TITLE = {Integral geometry of plane curves and knot invariants},
+
+@article {greilsheimer97,
+    AUTHOR = {Adams, Colin C. and Brennan, Bevin M. and Greilsheimer, Deborah L. and Woo, Alexander K.},
+    MRNUMBER = {1452436},
+    TITLE = {Stick numbers and composition of knots and links},
+
+@article {hougardy97,
+    AUTHOR = {Dasbach, Oliver T. and Hougardy, Stefan},
+    MRNUMBER = {1464581},
+    TITLE = {Does the {J}ones polynomial detect unknottedness?},
+
+@article {jin97,
+    AUTHOR = {Jin, Gyo T.},
+    MRNUMBER = {1452441},
+    TITLE = {Polygon indices and superbridge indices of torus knots and links},
+
+@article {kauffman97,
+    AUTHOR = {Goldman, Jay R. and Kauffman, Louis H.},
+    MRNUMBER = {1436484},
+    TITLE = {Rational tangles},
+
+@misc {kneissler97,
+    AUTHOR = {Kneissler, Jan A.},
+    TITLE = {The number of primitive Vassiliev invariants up to degree 12},
+
+@article {lackenby97,
+    AUTHOR = {Lackenby, Marc},
+    MRNUMBER = {1464913},
+    TITLE = {Surfaces, surgery and unknotting operations},
+
+@incollection {lambropoulou97,
+    AUTHOR = {Lambropoulou, Sofia and Rourke, Colin P.},
+    MRNUMBER = {1465027},
+    TITLE = {Markov's theorem in {$3$}-manifolds},
+
+@article {lamm97,
+    AUTHOR = {Lamm, Christoph},
+    MRNUMBER = {1446188},
+    TITLE = {There are infinitely many {L}issajous knots},
+
+@book {lickorish97,
+    AUTHOR = {Lickorish, William B. R.},
+    MRNUMBER = {1472978},
+    TITLE = {An introduction to knot theory},
+
+@incollection {motegi97,
+    AUTHOR = {Motegi, Kimihiko},
+    MRNUMBER = {1474519},
+    TITLE = {Knot types of satellite knots and twisted knots},
+
+@article {naik97,
+    AUTHOR = {Naik, Swatee},
+    MRNUMBER = {1458233},
+    TITLE = {New invariants of periodic knots},
+
+@book {prasolov97,
+    AUTHOR = {Prasolov, Victor V. and Sossinsky, Alexei B.},
+    MRNUMBER = {1414898},
+    TITLE = {Knots, links, braids and 3-manifolds},
+
+@book {thurston97,
+    AUTHOR = {Thurston, William P.},
+    MRNUMBER = {1435975},
+    TITLE = {Three-dimensional geometry and topology. {V}ol. 1},
+
+@article {varchenko97,
+    AUTHOR = {Chmutov, Sergei V. and Varchenko, Alexander N.},
+    MRNUMBER = {1410469},
+    TITLE = {Remarks on the {V}assiliev knot invariants coming from {${\rm sl}_2$}},
+
+@misc {cerf98,
+    AUTHOR = {Cerf, Corinne},
+    TITLE = {Atlas of oriented knots and links},
+
+@article {jablan98,
+    AUTHOR = {Jablan, Slavik V.},
+    MRNUMBER = {1698290},
+    TITLE = {Unknotting number and {$\infty$}-unknotting number of a knot},
+
+@incollection {jones98,
+    AUTHOR = {Jones, Vaughan F. R. and Przytycki, J\'{o}zef H.},
+    MRNUMBER = {1634454},
+    TITLE = {Lissajous knots and billiard knots},
+
+@article {mccabe98,
+    AUTHOR = {McCabe, Cynthia L.},
+    MRNUMBER = {1643867},
+    TITLE = {An upper bound on edge numbers of {$2$}-bridge knots and links},
+
+@article {miyazawa98,
+    AUTHOR = {Miyazawa, Yasuyuki},
+    MRNUMBER = {1606374},
+    TITLE = {The {J}ones polynomial of an unknotting number one knot},
+
+@article {ng98,
+    AUTHOR = {Ng, Ka Y.},
+    MRNUMBER = {1489214},
+    TITLE = {Groups of ribbon knots},
+
+@incollection {przytycki98,
+    AUTHOR = {Przytycki, J\'{o}zef H.},
+    MRNUMBER = {1634462},
+    TITLE = {{$3$}-coloring and other elementary invariants of knots},
+
+@incollection {randell98,
+    AUTHOR = {Randell, Richard},
+    MRNUMBER = {1634464},
+    TITLE = {Invariants of piecewise-linear knots},
+
+@incollection {scharlemann98,
+    AUTHOR = {Scharlemann, Martin G.},
+    MRNUMBER = {1628751},
+    TITLE = {Crossing changes},
+
+@article {stoimenow98,
+    AUTHOR = {Stoimenow, Alexander},
+    MRNUMBER = {1611987},
+    TITLE = {Enumeration of chord diagrams and an upper bound for {V}assiliev invariants},
+
+@article {sundberg98,
+    AUTHOR = {Sundberg, Carl and Thistlethwaite, Morwen B.},
+    MRNUMBER = {1609591},
+    TITLE = {The rate of growth of the number of prime alternating links and tangles},
+
+@article {thistlethwaite98,
+    AUTHOR = {Hoste, Jim and Thistlethwaite, Morwen B. and Weeks, Jeff},
+    MRNUMBER = {1646740},
+    TITLE = {The first 1,701,936 knots},
+
+@incollection {traczyk98,
+    AUTHOR = {Traczyk, Pawe\l{}},
+    MRNUMBER = {1634469},
+    TITLE = {A new proof of {M}arkov's braid theorem},
+
+@article {bigelow99,
+    AUTHOR = {Bigelow, Stephen J.},
+    MRNUMBER = {1725480},
+    TITLE = {The {B}urau representation is not faithful for {$n=5$}},
+
+@article {cooper99,
+    AUTHOR = {Cooper, Daryl and Lickorish, William B. R.},
+    MRNUMBER = {1605940},
+    TITLE = {Mutations of links in genus {$2$} handlebodies},
+
+@article {duzhin99,
+    AUTHOR = {Chmutov, Sergei V. and Duzhin, Sergei V.},
+    MRNUMBER = {1674810},
+    TITLE = {A lower bound for the number of {V}assiliev knot invariants},
+
+@article {fenn99,
+    AUTHOR = {Fenn, Roger and Greene, Michael T. and Rolfsen, Dale and Rourke, Colin P. and Wiest, Bertold},
+    MRNUMBER = {1725462},
+    TITLE = {Ordering the braid groups},
+
+@article {fukuhama99,
+    AUTHOR = {Fukuhama, Satoshi and Ozawa, Makoto and Teragaito, Masakazu},
+    MRNUMBER = {1714299},
+    TITLE = {Genus one, three-bridge knots are pretzel},
+
+@misc {murakami99,
+    AUTHOR = {Murakami, Jun},
+    TITLE = {Finite type invariants detecting the mutant knots},
+
+@article {ruberman99,
+    AUTHOR = {Ruberman, Daniel},
+    MRNUMBER = {1730660},
+    TITLE = {Mutation and gauge theory. {I}. {Y}ang-{M}ills invariants},
+
+@incollection {traczyk99,
+    AUTHOR = {Traczyk, Pawe\l{}},
+    MRNUMBER = {1701685},
+    TITLE = {A criterion for signed unknotting number},
+
+@article {yamada00,
+    AUTHOR = {Yamada, Shuji},
+    TITLE = {How to find knots with unit {J}ones polynomials},
+
+@article {bollobas00,
+    AUTHOR = {Bollob\'{a}s, B\'{e}la and Riordan, Oliver},
+    MRNUMBER = {1780590},
+    TITLE = {Linearized chord diagrams and an upper bound for {V}assiliev invariants},
+
+@article {dasbach00,
+    AUTHOR = {Dasbach, Oliver T.},
+    MRNUMBER = {1806948},
+    TITLE = {On the combinatorial structure of primitive {V}assiliev invariants. {III}. {A} lower bound},
+
+@article {khovanov00,
+    AUTHOR = {Khovanov, Mikhail},
+    MRNUMBER = {1740682},
+    TITLE = {A categorification of the {J}ones polynomial},
+
+@article {krammer00,
+    AUTHOR = {Krammer, Daan},
+    MRNUMBER = {1804157},
+    TITLE = {The braid group {$B_4$} is linear},
+
+@article {stoimenow00,
+    AUTHOR = {Stoimenow, Alexander},
+    MRNUMBER = {1795879},
+    TITLE = {Rational knots and a theorem of {K}anenobu},
+
+@article {yasuhara00,
+    AUTHOR = {Murakami, Hitoshi and Yasuhara, Akira},
+    MRNUMBER = {1690998},
+    TITLE = {Four-genus and four-dimensional clasp number of a knot},
+
+@article {bigelow01,
+    AUTHOR = {Bigelow, Stephen J.},
+    MRNUMBER = {1815219},
+    TITLE = {Braid groups are linear},
+
+@article {calvo01,
+    AUTHOR = {Calvo, Jorge A.},
+    MRNUMBER = {1822491},
+    TITLE = {Geometric knot spaces and polygonal isotopy},
+
+@article {cao01,
+    AUTHOR = {Cao, Chun and Meyerhoff, Robert G.},
+    MRNUMBER = {1869847},
+    TITLE = {The orientable cusped hyperbolic {$3$}-manifolds of minimum volume},
+
+@article {ostlund01,
+    AUTHOR = {\"Ostlund, Olof P.},
+    MRNUMBER = {1871226},
+    TITLE = {Invariants of knot diagrams and relations among {R}eidemeister moves},
+
+@article {polyak01,
+    AUTHOR = {Polyak, Michael and Viro, Oleg},
+    MRNUMBER = {1839698},
+    TITLE = {On the {C}asson knot invariant},
+
+@article {stoimenow001,
+    AUTHOR = {Stoimenow, Alexander},
+    MRNUMBER = {1839701},
+    TITLE = {On finiteness of {V}assiliev invariants and a proof of the {L}in-{W}ang conjecture via braiding polynomials},
+
+@article {stoimenow01,
+    AUTHOR = {Stoimenow, Alexander},
+    MRNUMBER = {1810143},
+    TITLE = {Some examples related to 4-genera, unknotting numbers and knot polynomials},
+
+@article {thistlethwaite01,
+    AUTHOR = {Thistlethwaite, Morwen},
+    MRNUMBER = {1831681},
+    TITLE = {Links with trivial {J}ones polynomial},
+
+@article {zagier01,
+    AUTHOR = {Zagier, Don},
+    MRNUMBER = {1860536},
+    TITLE = {Vassiliev invariants and a strange identity related to the {D}edekind eta-function},
+
+@article {barnatan02,
+    AUTHOR = {Bar-Natan, Dror},
+    MRNUMBER = {1917056},
+    TITLE = {On {K}hovanov's categorification of the {J}ones polynomial},
+
+@article {birman02,
+    AUTHOR = {Birman, Joan S. and Menasco, William W.},
+    MRNUMBER = {1905686},
+    TITLE = {On {M}arkov's theorem},
+
+@article {cantarella02,
+    AUTHOR = {Cantarella, Jason and Kusner, Robert B. and Sullivan, John M.},
+    MRNUMBER = {1933586},
+    TITLE = {On the minimum ropelength of knots and links},
+
+@book {hatcher02,
+    AUTHOR = {Hatcher, Allen},
+    MRNUMBER = {1867354},
+    TITLE = {Algebraic topology},
+
+@article {ishikawa02,
+    AUTHOR = {Gibson, William and Ishikawa, Masaharu},
+    MRNUMBER = {1924054},
+    TITLE = {Links and {G}ordian numbers associated with generic immersions of intervals},
+
+@article {krammer02,
+    AUTHOR = {Krammer, Daan},
+    MRNUMBER = {1888796},
+    TITLE = {Braid groups are linear},
+
+@article {manturov02,
+    AUTHOR = {Manturov, Vassily O.},
+    MRNUMBER = {1881552},
+    TITLE = {A combinatorial representation of links by quasitoric braids},
+
+@incollection {ohtsuki02,
+    AUTHOR = {Ohtsuki, Tomotada},
+    MRNUMBER = {2065029},
+    TITLE = {Problems on invariants of knots and 3-manifolds},
+
+@misc {thurston02,
+    AUTHOR = {Thurston, William P.},
+    TITLE = {{T}he {G}eometry and {T}opology of {T}hree-{M}anifolds},
+
+@article {tripp02,
+    AUTHOR = {Tripp, James J.},
+    MRNUMBER = {1949777},
+    TITLE = {The canonical genus of {W}hitehead doubles of a family torus knots},
+
+@article {diao03,
+    AUTHOR = {Diao, Yuanan},
+    MRNUMBER = {1953620},
+    TITLE = {The lower bounds of the lengths of thick knots},
+
+@article {eliahou03,
+    AUTHOR = {Eliahou, Shalom and Kauffman, Louis H. and Thistlethwaite, Morwen B.},
+    MRNUMBER = {1928648},
+    TITLE = {Infinite families of links with trivial {J}ones polynomial},
+
+@misc {gruber03,
+    AUTHOR = {Gruber, Hermann},
+    TITLE = {Estimates for the minimal crossing number},
+
+@article {lopes03,
+    AUTHOR = {Dion\'{\i}sio, Miguel and Lopes, Pedro},
+    MRNUMBER = {2017983},
+    TITLE = {Quandles at finite temperatures. {II}},
+
+@article {ozsvath03,
+    AUTHOR = {Ozsv\'{a}th, Peter and Szab\'{o}, Zolt\'{a}n},
+    MRNUMBER = {1988285},
+    TITLE = {Heegaard {F}loer homology and alternating knots},
+
+@article {schultens03,
+    AUTHOR = {Schultens, Jennifer},
+    MRNUMBER = {2018265},
+    TITLE = {Additivity of bridge numbers of knots},
+
+@article {stoimenow03,
+    AUTHOR = {Stoimenow, Alexander},
+    MRNUMBER = {2004964},
+    TITLE = {Positive knots, closed braids and the {J}ones polynomial},
+
+@article {szabo03,
+    AUTHOR = {Ozsv\'{a}th, Peter and Szab\'{o}, Zolt\'{a}n},
+    MRNUMBER = {2026543},
+    TITLE = {Knot {F}loer homology and the four-ball genus},
+
+@book {crans04,
+    AUTHOR = {Crans, Alissa S.},
+    MRNUMBER = {2706291},
+    TITLE = {Lie 2-algebras},
+
+@book {cromwell04,
+    AUTHOR = {Cromwell, Peter R.},
+    MRNUMBER = {2107964},
+    TITLE = {Knots and links},
+
+@article {diao04,
+    AUTHOR = {Diao, Yuanan},
+    MRNUMBER = {2101230},
+    TITLE = {The additivity of crossing numbers},
+
+@article {janiak04,
+    AUTHOR = {Janiak-Osajca, Agnieszka and Pogoda, Zdzis{\l}aw},
+    TITLE = {Węz\l y, supły i u\l amki},
+
+@article {kauffman04,
+    AUTHOR = {Kauffman, Louis H. and Lambropoulou, Sofia},
+    MRNUMBER = {2074397},
+    TITLE = {On the classification of rational tangles},
+
+@book {manturov04,
+    AUTHOR = {Manturov, Vassily O.},
+    MRNUMBER = {2068425},
+    TITLE = {Knot theory},
+
+@article {marche04,
+    AUTHOR = {March\'{e}, Julien},
+    MRNUMBER = {2113901},
+    TITLE = {A computation of the {K}ontsevich integral of torus knots},
+
+@article {rankin04,
+    AUTHOR = {Rankin, Stuart and Flint, Ortho and Schermann, John},
+    MRNUMBER = {2039118},
+    TITLE = {Enumerating the prime alternating knots. {I}},
+
+@article {stoimenow04,
+    AUTHOR = {Stoimenow, Alexander},
+    MRNUMBER = {2106240},
+    TITLE = {Polynomial values, the linking form and unknotting numbers},
+
+@article {viro04,
+    AUTHOR = {Viro, Oleg},
+    MRNUMBER = {2128056},
+    TITLE = {Khovanov homology, its definitions and ramifications},
+
+@article {yu04,
+    AUTHOR = {Diao, Yuanan and Ernst, Claus and Yu, Xingxing},
+    MRNUMBER = {2023409},
+    TITLE = {Hamiltonian knot projections and lengths of thick knots},
+
+@incollection {adams05,
+    AUTHOR = {Adams, Colin C.},
+    MRNUMBER = {2179259},
+    TITLE = {Hyperbolic knots},
+
+@incollection {birman05,
+    AUTHOR = {Birman, Joan S. and Brendle, Tara E.},
+    MRNUMBER = {2179260},
+    TITLE = {Braids: a survey},
+
+@misc {chmutov05,
+    AUTHOR = {Chmutov, Sergei V. and Duzhin, Sergei V.},
+    TITLE = {The Kontsevich integral},
+
+@article {gambaudo05,
+    AUTHOR = {Gambaudo, Jean-Marc and Ghys, \'{E}tienne},
+    MRNUMBER = {2233695},
+    TITLE = {Braids and signatures},
+
+@article {hayashi05,
+    AUTHOR = {Hayashi, Chuichiro},
+    MRNUMBER = {2178061},
+    TITLE = {The number of {R}eidemeister moves for splitting a link},
+
+@article {kim05,
+    AUTHOR = {Kim, Se-Goo and Livingston, Charles},
+    MRNUMBER = {2195064},
+    TITLE = {Knot mutation: 4-genus of knots and algebraic concordance},
+
+@article {nakanishi05,
+    AUTHOR = {Nakanishi, Yasutaka},
+    MRNUMBER = {2124552},
+    TITLE = {A note on unknotting number. {II}},
+
+@article {stoimenow05,
+    AUTHOR = {Stoimenow, Alexander},
+    MRNUMBER = {2171693},
+    TITLE = {Square numbers, spanning trees and invariants of achiral knots},
+
+@article {szabo05,
+    AUTHOR = {Ozsv\'{a}th, Peter and Szab\'{o}, Zolt\'{a}n},
+    MRNUMBER = {2136532},
+    TITLE = {Knots with unknotting number one and {H}eegaard {F}loer homology},
+
+@misc {taalman05,
+    AUTHOR = {Brownell, Kathryn and Oneil, Kaitlyn and Taalman, Laura},
+    TITLE = {Counting m-coloring classes of knots and links},
+
+@article {vertigan05,
+    AUTHOR = {Vertigan, Dirk},
+    MRNUMBER = {2201454},
+    TITLE = {The computational complexity of {T}utte invariants for planar graphs},
+
+@incollection {weeks05,
+    AUTHOR = {Weeks, Jeff},
+    MRNUMBER = {2179268},
+    TITLE = {Computation of hyperbolic structures in knot theory},
+
+@misc {brittenham06,
+    AUTHOR = {Brittenham, Mark and Jensen, Jacqueline},
+    TITLE = {Canonical genus and the Whitehead doubles of pretzel knots},
+
+@article {coward06,
+    AUTHOR = {Coward, Alexander},
+    MRNUMBER = {2240911},
+    TITLE = {Ordering the {R}eidemeister moves of a classical knot},
+
+@article {denne06,
+    AUTHOR = {Denne, Elizabeth and Diao, Yuanan and Sullivan, John M.},
+    MRNUMBER = {2207788},
+    TITLE = {Quadrisecants give new lower bounds for the ropelength of a knot},
+
+@article {elrifai06,
+    AUTHOR = {Elrifai, Elsayed A.},
+    MRNUMBER = {2165277},
+    TITLE = {On stick number of knots and links},
+
+@article {gordon06,
+    AUTHOR = {Gordon, Cameron McA. and Luecke, John},
+    MRNUMBER = {2263059},
+    TITLE = {Knots with unknotting number 1 and essential {C}onway spheres},
+
+@article {hagge06,
+    AUTHOR = {Hagge, Tobias J.},
+    MRNUMBER = {2170571},
+    TITLE = {Every {R}eidemeister move is needed for each knot type},
+
+@article {nakamura06,
+    AUTHOR = {Nakamura, Takuji},
+    MRNUMBER = {2283412},
+    TITLE = {On the crossing number of 2-bridge knot and the canonical genus of its {W}hitehead double},
+
+@misc {zirbel06,
+    AUTHOR = {Hoste, Jim and Zirbel, Laura},
+    TITLE = {Lissajous knots and knots with Lissajous projections},
+
+@article {barnatan07,
+    AUTHOR = {Bar-Natan, Dror},
+    MRNUMBER = {2320156},
+    TITLE = {Fast {K}hovanov homology computations},
+
+@article {lisca07,
+    AUTHOR = {Lisca, Paolo},
+    MRNUMBER = {2302495},
+    TITLE = {Lens spaces, rational balls and the ribbon conjecture},
+
+@misc {stoimenow07,
+    AUTHOR = {Stoimenow, Alexander},
+    TITLE = {Non-triviality of the Jones polynomial and the crossing numbers of amphicheiral knots},
+
+@article {ghiggini08,
+    AUTHOR = {Ghiggini, Paolo},
+    MRNUMBER = {2450204},
+    TITLE = {Knot {F}loer homology detects genus-one fibred knots},
+
+@article {owens08,
+    AUTHOR = {Owens, Brendan},
+    MRNUMBER = {2388097},
+    TITLE = {Unknotting information from {H}eegaard {F}loer homology},
+
+@article {stoimenow08,
+    AUTHOR = {Stoimenow, Alexander},
+    MRNUMBER = {2443760},
+    TITLE = {Knots of (canonical) genus two},
+
+@article {bacardit09,
+    AUTHOR = {Bacardit, Llu\'{\i}s and Dicks, Warren},
+    MRNUMBER = {2502938},
+    TITLE = {Actions of the braid group, and new algebraic proofs of results of {D}ehornoy and {L}arue},
+
+@misc {gellert09,
+    AUTHOR = {Gellert, Florian},
+    TITLE = {Kombinatorische Invarianten},
+
+@article {lackenby09,
+    AUTHOR = {Lackenby, Marc},
+    MRNUMBER = {2574742},
+    TITLE = {The crossing number of composite knots},
+
+@article {meyerhoff09,
+    AUTHOR = {Gabai, David and Meyerhoff, Robert G. and Milley, Peter},
+    MRNUMBER = {2525782},
+    TITLE = {Minimum volume cusped hyperbolic three-manifolds},
+
+@article {niebrzydowski09,
+    AUTHOR = {Niebrzydowski, Maciej and Przytycki, J\'{o}zef H.},
+    MRNUMBER = {2583322},
+    TITLE = {The quandle of the trefoil knot as the {D}ehn quandle of the torus},
+
+@article {tanaka09,
+    AUTHOR = {Stoimenow, Alexander and Tanaka, Toshifumi},
+    MRNUMBER = {2595755},
+    TITLE = {Mutation and the colored {J}ones polynomial},
+
+@article {taniyama09,
+    AUTHOR = {Taniyama, Kouki},
+    MRNUMBER = {2554334},
+    TITLE = {Unknotting numbers of diagrams of a given nontrivial knot are unbounded},
+
+@article {agol10,
+    AUTHOR = {Agol, Ian},
+    MRNUMBER = {2661571},
+    TITLE = {The minimal volume orientable hyperbolic 2-cusped 3-manifolds},
+
+@article {borodzik10,
+    AUTHOR = {Borodzik, Maciej and Oleszkiewicz, Krzysztof},
+    MRNUMBER = {2733048},
+    TITLE = {On the signatures of torus knots},
+
+@article {dunfield10,
+    AUTHOR = {Dunfield, Nathan M. and Garoufalidis, Stavros and Shumakovitch, Alexander and Thistlethwaite, Morwen B.},
+    MRNUMBER = {2657370},
+    TITLE = {Behavior of knot invariants under genus 2 mutation},
+
+@article {gompf10,
+    AUTHOR = {Gompf, Robert E. and Scharlemann, Martin G. and Thompson, Abigail},
+    MRNUMBER = {2740649},
+    TITLE = {Fibered knots and potential counterexamples to the property 2{R} and slice-ribbon conjectures},
+
+@article {stoimenow10,
+    AUTHOR = {Stoimenow, Alexander},
+    MRNUMBER = {2665776},
+    TITLE = {Tabulating and distinguishing mutants},
+
+@article {coward11,
+    AUTHOR = {Coward, Alexander and Lackenby, Marc},
+    MRNUMBER = {2775133},
+    TITLE = {Unknotting genus one knots},
+
+@article {gonzalez11,
+    AUTHOR = {Gonz\'{a}lez-Meneses, Juan},
+    MRNUMBER = {2830088},
+    TITLE = {Basic results on braid groups},
+
+@article {greene11,
+    AUTHOR = {Greene, Joshua E. and Jabuka, Stanislav},
+    MRNUMBER = {2808326},
+    TITLE = {The slice-ribbon conjecture for 3-stranded pretzel knots},
+
+@article {huh11,
+    AUTHOR = {Huh, Youngsik and Oh, Seungsang},
+    MRNUMBER = {2806342},
+    TITLE = {An upper bound on stick number of knots},
+
+@article {kronheimer11,
+    AUTHOR = {Kronheimer, Peter B. and Mrowka, Tomasz S.},
+    MRNUMBER = {2805599},
+    TITLE = {Khovanov homology is an unknot-detector},
+
+@article {burton12,
+    AUTHOR = {Burton, Benjamin A. and Rubinstein, Joachim H. and Tillmann, Stephan},
+    MRNUMBER = {2846358},
+    TITLE = {The {W}eber-{S}eifert dodecahedral space is non-{H}aken},
+
+@incollection {chmutov12,
+    AUTHOR = {Chmutov, Sergei V.},
+    MRNUMBER = {2885230},
+    TITLE = {Combinatorics of {V}assiliev invariants},
+
+@book {duzhin12,
+    AUTHOR = {Chmutov, Sergei V. and Duzhin, Sergei V. and Mostovoy, Jacob},
+    MRNUMBER = {2962302},
+    TITLE = {Introduction to {V}assiliev knot invariants},
+
+@article {garoufalidis12,
+    AUTHOR = {Garoufalidis, Stavros and Koutschan, Christoph},
+    MRNUMBER = {2988577},
+    TITLE = {The noncommutative {$A$}-polynomial of {$(-2,3,n)$} pretzel knots},
+
+@article {hilden12,
+    AUTHOR = {Hilden, Hugh M. and Montesinos, Jos\'{e} M. and Tejada, D\'{e}bora M. and Toro, Margarita M.},
+    MRNUMBER = {3007934},
+    TITLE = {On the classification of 3-bridge links},
+
+@misc {musick12,
+    AUTHOR = {Musick, Chad},
+    TITLE = {Minimal bridge projections for 11-crossing prime knots},
+
+@article {pecker12,
+    AUTHOR = {Pecker, Daniel},
+    MRNUMBER = {2994045},
+    TITLE = {Poncelet's theorem and billiard knots},
+
+@incollection {shumakovitch12,
+    AUTHOR = {Shumakovitch, Alexander},
+    MRNUMBER = {2884045},
+    TITLE = {Khovanov homology theories and their applications},
+
+@article {vendramin12,
+    AUTHOR = {Vendramin, Leandro},
+    MRNUMBER = {2926571},
+    TITLE = {On the classification of quandles of low order},
+
+@article {adams13,
+    AUTHOR = {Adams, Colin C.},
+    MRNUMBER = {3037297},
+    TITLE = {Triple crossing number of knots and links},
+
+@incollection {hodgson13,
+    AUTHOR = {Hodgson, Craig and Masai, Hidetoshi},
+    MRNUMBER = {3186679},
+    TITLE = {On the number of hyperbolic 3-manifolds of a given volume},
+
+@article {yoshida13,
+    AUTHOR = {Yoshida, Ken'ichi},
+    MRNUMBER = {3130632},
+    TITLE = {The minimal volume orientable hyperbolic 3-manifold with 4 cusps},
+
+@article {borodzik14,
+    AUTHOR = {Borodzik, Maciej and Friedl, Stefan},
+    MRNUMBER = {3250270},
+    TITLE = {The unknotting number and classical invariants {II}},
+
+@book {burde14,
+    AUTHOR = {Burde, Gerhard and Zieschang, Heiner and Heusener, Michael},
+    MRNUMBER = {3156509},
+    TITLE = {Knots},
+
+@article {clark13,
+    AUTHOR = {Clark, William E. and Elhamdadi, Mohamed and Saito, Masahico and Yeatman, Timothy},
+    MRNUMBER = {3253967},
+    TITLE = {Quandle colorings of knots and applications},
+
+@incollection {koseleff14,
+    AUTHOR = {Koseleff, Pierre V. and Pecker, Daniel},
+    MRNUMBER = {3220481},
+    TITLE = {Every knot is a billiard knot},
+
+@article {lackenby14,
+    AUTHOR = {Lackenby, Marc},
+    MRNUMBER = {3331616},
+    TITLE = {The crossing number of satellite knots},
+
+@article {shimizu14,
+    AUTHOR = {Shimizu, Ayaka},
+    MRNUMBER = {3238313},
+    TITLE = {Region crossing change is an unknotting operation},
+
+@article {borodzik15,
+    AUTHOR = {Borodzik, Maciej and Friedl, Stefan},
+    MRNUMBER = {3325733},
+    TITLE = {The unknotting number and classical invariants, {I}},
+
+@article {kuperberg15,
+    AUTHOR = {Kuperberg, Greg},
+    MRNUMBER = {3354608},
+    TITLE = {How hard is it to approximate the {J}ones polynomial?},
+
+@article {lackenby15,
+    AUTHOR = {Lackenby, Marc},
+    MRNUMBER = {3418524},
+    TITLE = {A polynomial upper bound on {R}eidemeister moves},
+
+@misc {przytycki15,
+    AUTHOR = {Przytycki, J\'ozef H.},
+    TITLE = {Przygody badacza węzłów},
+
+@article {gilmer16,
+    AUTHOR = {Gilmer, Patrick M. and Livingston, Charles},
+    MRNUMBER = {3556282},
+    TITLE = {Signature jumps and {A}lexander polynomials for links},
+
+@article {liechti16,
+    AUTHOR = {Liechti, Livio},
+    MRNUMBER = {3466832},
+    TITLE = {Signature, positive {H}opf plumbing and the {C}oxeter transformation},
+
+@misc {malyutin16,
+    AUTHOR = {Malyutin, Andrei V.},
+    TITLE = {On the question of genericity of hyperbolic knots},
+
+@article {zanellati16,
+    AUTHOR = {Petronio, Carlo and Zanellati, Adolfo},
+    TITLE = {Algorithmic simplification of knot diagrams: New moves and experiments},
+
+@article {greene17,
+    AUTHOR = {Greene, Joshua E.},
+    MRNUMBER = {3694566},
+    TITLE = {Alternating links and definite surfaces},
+
+@article {turner17,
+    AUTHOR = {Turner, Paul},
+    MRNUMBER = {3627709},
+    TITLE = {Five lectures on {K}hovanov homology},
+
+@misc {cha18,
+    AUTHOR = {Cha, Jae C. and Livingston, Charles},
+    TITLE = {Unknown values in the table of knots},
+
+@article {livingston18,
+    AUTHOR = {Livingston, Charles},
+    MRNUMBER = {3834675},
+    TITLE = {Signature functions of knots},
+
+@misc {schieber18,
+    AUTHOR = {Schieber, Nathaniel B.},
+    TITLE = {A computational approach to tangles},
+
+@article {tuzun18,
+    AUTHOR = {Tuzun, Robert E. and Sikora, Adam S.},
+    MRNUMBER = {3786783},
+    TITLE = {Verification of the {J}ones unknot conjecture up to 22 crossings},
+
+@article {diao19,
+    AUTHOR = {Diao, Yuanan and Ernst, Claus and Por, Attila and Ziegler, Uta},
+    MRNUMBER = {4077436},
+    TITLE = {The ropelengths of knots are almost linear in terms of their crossing numbers},
+
+@misc {malyutin19,
+    AUTHOR = {Malyutin, Andrei V.},
+    TITLE = {Hyperbolic links are not generic},
+
+@incollection {purcell19,
+    AUTHOR = {Futer, David and Kalfagianni, Efstratia and Purcell, Jessica S.},
+    MRNUMBER = {3986038},
+    TITLE = {A survey of hyperbolic knot theory},
+
+@article {sazdanovic19,
+    AUTHOR = {Nelson, Sam and Oyamaguchi, Natsumi and Sazdanovic, Radmila},
+    MRNUMBER = {4106586},
+    TITLE = {Psyquandles, singular knots and pseudoknots},
+
+@article {bae20,
+    AUTHOR = {Bae, Yongju and Lee, In S.},
+    MRNUMBER = {4157337},
+    TITLE = {On {A}lexander polynomials of pretzel links},
+
+@article {blair20,
+    AUTHOR = {Blair, Ryan and Kjuchukova, Alexandra and Velazquez, Roman and Villanueva, Paul},
+    MRNUMBER = {4101339},
+    TITLE = {Wirtinger systems of generators of knot groups},
+
+@incollection {burton20,
+    AUTHOR = {Burton, Benjamin A.},
+    MRNUMBER = {4117738},
+    TITLE = {The next 350 million knots},
+
+@article {piccirillo20,
+    AUTHOR = {Piccirillo, Lisa},
+    MRNUMBER = {4076631},
+    TITLE = {The {C}onway knot is not slice},
+
+@misc {purcell20,
+    AUTHOR = {Purcell, Jessica S.},
+    TITLE = {Hyperbolic Knot Theory},
+
+@incollection {sakuma20,
+    AUTHOR = {Sakuma, Makoto},
+    MRNUMBER = {4264576},
+    TITLE = {A survey of the impact of {T}hurston's work on knot theory},
+
+@article {brittenham21,
+    AUTHOR = {Brittenham, Mark W. and Hermiller, Susan M.},
+    MRNUMBER = {4346654},
+    TITLE = {A {C}ounterexample to the {B}ernhard--{J}ablan {U}nknotting {C}onjecture},
+
+@incollection {conway19,
+    AUTHOR = {Conway, Anthony},
+    MRNUMBER = {4294761},
+    TITLE = {The {L}evine-{T}ristram signature: a survey},
+
+@article {klotz21,
+    AUTHOR = {Klotz, Alexander R. and Maldonado, Matthew},
+    MRNUMBER = {4329844},
+    TITLE = {The ropelength of complex knots},
+
+@article {tuzun21,
+    AUTHOR = {Tuzun, Robert E. and Sikora, Adam S.},
+    MRNUMBER = {4259507},
+    TITLE = {Verification of the {J}ones unknot conjecture up to 24 crossings},
+
+@misc {knotinfo22,
+    AUTHOR = {Livingston, Charles and Moore, Allison H.},
+    TITLE = {KnotInfo: Table of Knot Invariants},
