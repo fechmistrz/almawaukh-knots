@@ -841,11 +841,6 @@
     MRNUMBER = {1024455},
     TITLE = {Operator invariants of tangles, and {$R$}-matrices},
 
-@article {ernst90,
-    AUTHOR = {Ernst, Claus and Sumners, De Witt W.},
-    MRNUMBER = {1068451},
-    TITLE = {A calculus for rational tangles: applications to {DNA} recombination},
-
 @incollection {floer90,
     AUTHOR = {Floer, Andreas},
     MRNUMBER = {1171893},
@@ -1926,3 +1921,5 @@
 @misc {knotinfo22,
     AUTHOR = {Livingston, Charles and Moore, Allison H.},
     TITLE = {KnotInfo: Table of Knot Invariants},
+
+https://mathscinet.ams.org/mathscinet-getitem?mr=2074397
