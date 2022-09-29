@@ -1380,11 +1380,6 @@
     MRNUMBER = {1924054},
     TITLE = {Links and {G}ordian numbers associated with generic immersions of intervals},
 
-@article {krammer02,
-    AUTHOR = {Krammer, Daan},
-    MRNUMBER = {1888796},
-    TITLE = {Braid groups are linear},
-
 @article {manturov02,
     AUTHOR = {Manturov, Vassily O.},
     MRNUMBER = {1881552},
