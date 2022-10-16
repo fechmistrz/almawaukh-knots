@@ -19,11 +19,6 @@
     AUTHOR = {Alexander, James W.},
     TITLE = {A Lemma on Systems of Knotted Curves},
 
-@article {schreier24,
-    AUTHOR = {Schreier, Otto},
-    MRNUMBER = {3069424},
-    TITLE = {\"{U}ber die gruppen {$A^aB^b=1$}},
-
 @article {artin25,
     AUTHOR = {Artin, Emil},
     MRNUMBER = {3069440},
@@ -686,11 +681,6 @@
     AUTHOR = {Ernst, Claus and Sumners, De Witt W.},
     MRNUMBER = {898150},
     TITLE = {The growth of the number of prime knots},
-
-@article {franks87,
-    AUTHOR = {Franks, John and Williams, Robert F.},
-    MRNUMBER = {896009},
-    TITLE = {Braids and the {J}ones polynomial},
 
 @article {kauffman87,
     AUTHOR = {Kauffman, Louis H.},
@@ -1715,10 +1705,6 @@
     AUTHOR = {Hilden, Hugh M. and Montesinos, Jos\'{e} M. and Tejada, D\'{e}bora M. and Toro, Margarita M.},
     MRNUMBER = {3007934},
     TITLE = {On the classification of 3-bridge links},
-
-@misc {musick12,
-    AUTHOR = {Musick, Chad},
-    TITLE = {Minimal bridge projections for 11-crossing prime knots},
 
 @article {pecker12,
     AUTHOR = {Pecker, Daniel},
