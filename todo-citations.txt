@@ -463,11 +463,6 @@
     MRNUMBER = {580857},
     TITLE = {The algebraic braid groups are torsion-free: an algebraic proof},
 
-@article {hartley80,
-    AUTHOR = {Hartley, Richard},
-    MRNUMBER = {570907},
-    TITLE = {Knots and involutions},
-
 @article {perko80,
     AUTHOR = {Perko, Kenneth A.},
     TITLE = {Invariants of 11-crossing knots},
