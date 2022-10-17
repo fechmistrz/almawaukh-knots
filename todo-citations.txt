@@ -1330,11 +1330,6 @@
     MRNUMBER = {1831681},
     TITLE = {Links with trivial {J}ones polynomial},
 
-@article {zagier01,
-    AUTHOR = {Zagier, Don},
-    MRNUMBER = {1860536},
-    TITLE = {Vassiliev invariants and a strange identity related to the {D}edekind eta-function},
-
 @article {barnatan02,
     AUTHOR = {Bar-Natan, Dror},
     MRNUMBER = {1917056},
