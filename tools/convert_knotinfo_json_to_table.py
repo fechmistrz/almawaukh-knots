@@ -53,6 +53,7 @@ def list_values(d):
 	print("\\hline")
 	print("\\end{longtable}")
 	print("\\normalsize")
+	print("")
 
 def print_summary(d):
 	print("\\renewcommand*{\\arraystretch}{1.4}")
@@ -96,6 +97,7 @@ def print_summary(d):
 	print("\\hline")
 	print("\\end{longtable}")
 	print("\\normalsize")
+	print("")
 
 with open(sys.argv[2]) as f:
 	data = json.load(f)
