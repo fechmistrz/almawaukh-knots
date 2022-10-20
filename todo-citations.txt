@@ -1,5 +1,3 @@
-
-
 @article {tietze08,
     AUTHOR = {Tietze, Heinrich F. F.},
     MRNUMBER = {1547755},
