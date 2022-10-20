@@ -1386,11 +1386,6 @@
     MRNUMBER = {1988285},
     TITLE = {Heegaard {F}loer homology and alternating knots},
 
-@article {schultens03,
-    AUTHOR = {Schultens, Jennifer},
-    MRNUMBER = {2018265},
-    TITLE = {Additivity of bridge numbers of knots},
-
 @article {stoimenow03,
     AUTHOR = {Stoimenow, Alexander},
     MRNUMBER = {2004964},
