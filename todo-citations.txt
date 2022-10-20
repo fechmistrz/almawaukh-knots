@@ -742,11 +742,6 @@
     MRNUMBER = {894383},
     TITLE = {The minimal number of {S}eifert circles equals the braid index of a link},
 
-@article {lickorish88,
-    AUTHOR = {Lickorish, William B. R. and Thistlethwaite, Morwen B.},
-    MRNUMBER = {966948},
-    TITLE = {Some links with nontrivial polynomials and their crossing-numbers},
-
 @article {millett88,
     AUTHOR = {Lickorish, William B. R. and Millett, Kenneth C.},
     MRNUMBER = {934822},
@@ -1324,11 +1319,6 @@
     AUTHOR = {Stoimenow, Alexander},
     MRNUMBER = {1810143},
     TITLE = {Some examples related to 4-genera, unknotting numbers and knot polynomials},
-
-@article {thistlethwaite01,
-    AUTHOR = {Thistlethwaite, Morwen},
-    MRNUMBER = {1831681},
-    TITLE = {Links with trivial {J}ones polynomial},
 
 @article {barnatan02,
     AUTHOR = {Bar-Natan, Dror},
