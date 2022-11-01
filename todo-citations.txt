@@ -42,11 +42,6 @@
     MRNUMBER = {1512619},
     TITLE = {\"{U}ber die {T}orsionszahlen der alternierenden {K}noten},
 
-@article {goeritz33,
-    AUTHOR = {Goeritz, Lebrecht},
-    MRNUMBER = {1545364},
-    TITLE = {Knoten und quadratische {F}ormen},
-
 @article {magnus34,
     AUTHOR = {Magnus, Wilhelm},
     MRNUMBER = {1512913},
@@ -119,11 +114,6 @@
     MRNUMBER = {53938},
     TITLE = {Free differential calculus. {I}. {D}erivation in the free group ring},
 
-@article {kneser53,
-    AUTHOR = {Kneser, Martin and Puppe, Dieter},
-    MRNUMBER = {56607},
-    TITLE = {Quadratische {F}ormen und {V}erschlingungsinvarianten von {K}noten},
-
 @article {schubert53,
     AUTHOR = {Schubert, Horst},
     MRNUMBER = {0072482},
@@ -138,11 +128,6 @@
     AUTHOR = {Fox, Ralph H.},
     MRNUMBER = {62125},
     TITLE = {Free differential calculus. {II}. {T}he isomorphism problem of groups},
-
-@article {kyle54,
-    AUTHOR = {Kyle, Roger H.},
-    MRNUMBER = {62438},
-    TITLE = {Branched covering spaces and the quadratic forms of links},
 
 @article {schubert54,
     AUTHOR = {Schubert, Horst},
