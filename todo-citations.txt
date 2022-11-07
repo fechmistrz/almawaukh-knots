@@ -1018,11 +1018,6 @@
     MRNUMBER = {1328734},
     TITLE = {The coloured {J}ones function},
 
-@article {ohyama95,
-    AUTHOR = {Ohyama, Yoshiyuki},
-    MRNUMBER = {1234630},
-    TITLE = {Vassiliev invariants and similarity of knots},
-
 @article {cromwell96,
     AUTHOR = {Morton, Hugh R. and Cromwell, Peter R.},
     MRNUMBER = {1395780},
@@ -1051,11 +1046,6 @@
     AUTHOR = {Nakanishi, Yasutaka},
     MRNUMBER = {1342035},
     TITLE = {Union and tangle},
-
-@article {stanford96,
-    AUTHOR = {Stanford, Ted},
-    MRNUMBER = {1398378},
-    TITLE = {Braid commutators and {V}assiliev invariants},
 
 @article {wang96,
     AUTHOR = {Lin, Xiao-Song and Wang, Zhenghan},
