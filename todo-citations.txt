@@ -1223,11 +1223,6 @@
     AUTHOR = {Yamada, Shuji},
     TITLE = {How to find knots with unit {J}ones polynomials},
 
-@article {bollobas00,
-    AUTHOR = {Bollob\'{a}s, B\'{e}la and Riordan, Oliver},
-    MRNUMBER = {1780590},
-    TITLE = {Linearized chord diagrams and an upper bound for {V}assiliev invariants},
-
 @article {dasbach00,
     AUTHOR = {Dasbach, Oliver T.},
     MRNUMBER = {1806948},
