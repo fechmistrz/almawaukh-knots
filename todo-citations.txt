@@ -720,11 +720,6 @@
     MRNUMBER = {880506},
     TITLE = {Knot complements and groups},
 
-@article {yamada87,
-    AUTHOR = {Yamada, Shuji},
-    MRNUMBER = {894383},
-    TITLE = {The minimal number of {S}eifert circles equals the braid index of a link},
-
 @article {millett88,
     AUTHOR = {Lickorish, William B. R. and Millett, Kenneth C.},
     MRNUMBER = {934822},
