@@ -1,6 +1,6 @@
 
 \subsection{Definicja kombinatoryczna -- klamra Kauffmana}
-\index{klamra Kauffmana|(}
+\index{klamra Kauffmana|(}%
 Klamra Kauffmana to wielomian Laurenta jednej zmiennej zdefiniowany w pracy \cite{kauffman87} z 1987 roku, oparty na ruchach Reidemeistera.
 \index[persons]{Kauffman, Louis}%
 Dzięki swojej prostocie mógł być odkryty na początku XX wieku, nim jeszcze maszyneria teorii węzłów została rozwinięta.
@@ -10,7 +10,9 @@ Przede wszystkim żądamy, by niewęzłowi przypisany był wielomian $1$: $\brac
 Po drugie chcemy wyznaczać nawiasy znając je dla prostszych splotów, co zapiszemy symbolicznie:
 \begin{comment}
 \begin{equation}
-    \bracket{\MediumMinusCrossing} = A \bracket{\MediumAlphaSmoothing} + B \bracket{\MediumBetaSmoothing}
+    \bracket{\MediumMinusCrossing} =
+    A \bracket{\MediumAlphaSmoothing} +
+    B \bracket{\MediumBetaSmoothing}
 \end{equation}
 \end{comment}
 Zależy nam też na tym, by móc dodać do splotu trywialną składową: $\langle L \cup \SmallUnknot \rangle = C \langle L \rangle$.
@@ -28,7 +30,7 @@ W ten sposób odkryliśmy definicję.
 
 % DICTIONARY;Kauffman bracket;klamra Kauffmana;-
 \begin{definition}[klamra Kauffmana]
-    \label{def:kauffman_bracket}
+\label{def:kauffman_bracket}%
     Wielomian Laurenta $\bracket{D}$ dla diagramu splotu $D$ zmiennej $A$,
     który jest niezmienniczy ze względu na gładkie deformacje diagramu,
     a~przy tym spełnia trzy poniższe aksjomaty:
@@ -79,47 +81,47 @@ Przedstawimy teraz wpływ ruchów Reidemeistera na nasz nowy wielomian.
 \end{lemma}
 
 \begin{proof}
-Pierwszy ruch Reidemeistera:
+    Pierwszy ruch Reidemeistera:
 \begin{comment}
-\begin{align}
-    \bracket{\MediumReidemeisterOneLeft} & \stackrel{K2}{=} A
-    \bracket{\MediumReidemeisterOneSmoothA} +
-    A^{-1} \bracket{\MediumReidemeisterOneSmoothB} \\ & \stackrel{K3}{=}
-    A \bracket{\MediumReidemeisterOneStraight} +
-    A^{-1}(-A^{-2}-A^2) \bracket{\MediumReidemeisterOneStraight} =
-    -A^{-3}\bracket{\MediumReidemeisterOneStraight}
-\end{align}
+    \begin{align}
+        \bracket{\MediumReidemeisterOneLeft} & \stackrel{K2}{=} A
+        \bracket{\MediumReidemeisterOneSmoothA} +
+        A^{-1} \bracket{\MediumReidemeisterOneSmoothB} \\ & \stackrel{K3}{=}
+        A \bracket{\MediumReidemeisterOneStraight} +
+        A^{-1}(-A^{-2}-A^2) \bracket{\MediumReidemeisterOneStraight} =
+        -A^{-3}\bracket{\MediumReidemeisterOneStraight}
+    \end{align}
 \end{comment}
 
-Dla drugiego ruchu:
+    Dla drugiego ruchu:
 \begin{comment}
-\begin{align}
-    \bracket{\MediumKauffmanReidemeisterTwoA} & \stackrel{K2}{=}
-    A \bracket{\MediumKauffmanReidemeisterTwoB} +
-    A^{-1} \bracket{\MediumKauffmanReidemeisterTwoC} \\ & \stackrel{K1}{=}
-    -A^{-2} \bracket{\MediumBetaSmoothing} +
-    A^{-1} \bracket{\MediumKauffmanReidemeisterTwoC} \\ & \stackrel{K2}{=}
-    -A^{-2} \bracket{\MediumBetaSmoothing} +
-    A^{-1}A \bracket{\MediumAlphaSmoothing} +
-    A^{-1}A^{-1} \bracket{\MediumBetaSmoothing} \\ & =
-    \bracket{\MediumAlphaSmoothing}
-\end{align}
+    \begin{align}
+        \bracket{\MediumKauffmanReidemeisterTwoA} & \stackrel{K2}{=}
+        A \bracket{\MediumKauffmanReidemeisterTwoB} +
+        A^{-1} \bracket{\MediumKauffmanReidemeisterTwoC} \\ & \stackrel{K1}{=}
+        -A^{-2} \bracket{\MediumBetaSmoothing} +
+        A^{-1} \bracket{\MediumKauffmanReidemeisterTwoC} \\ & \stackrel{K2}{=}
+        -A^{-2} \bracket{\MediumBetaSmoothing} +
+        A^{-1}A \bracket{\MediumAlphaSmoothing} +
+        A^{-1}A^{-1} \bracket{\MediumBetaSmoothing} \\ & =
+        \bracket{\MediumAlphaSmoothing}
+    \end{align}
 \end{comment}
 
-Dla trzeciego ruchu:
+    Dla trzeciego ruchu:
 \begin{comment}
-\begin{align}
-\bracket{\MediumKauffmanReidemeisterThreeA} & \stackrel{K2}{=}
-A \bracket{\MediumKauffmanReidemeisterThreeB} +
-A^{-1} \bracket{\MediumKauffmanReidemeisterThreeC} \stackrel{R2}{=}
-A \bracket{\MediumKauffmanReidemeisterThreeD} +
-A^{-1} \bracket{\MediumKauffmanReidemeisterThreeE} \\ & \stackrel{R2}{=}
-A \bracket{\MediumKauffmanReidemeisterThreeFlippedB} +
-A^{-1} \bracket{\MediumKauffmanReidemeisterThreeFlippedC} \stackrel{K2}{=}
-\bracket{\MediumKauffmanReidemeisterThreeFlippedA},
-\end{align}
+    \begin{align}
+    \bracket{\MediumKauffmanReidemeisterThreeA} & \stackrel{K2}{=}
+    A \bracket{\MediumKauffmanReidemeisterThreeB} +
+    A^{-1} \bracket{\MediumKauffmanReidemeisterThreeC} \stackrel{R2}{=}
+    A \bracket{\MediumKauffmanReidemeisterThreeD} +
+    A^{-1} \bracket{\MediumKauffmanReidemeisterThreeE} \\ & \stackrel{R2}{=}
+    A \bracket{\MediumKauffmanReidemeisterThreeFlippedB} +
+    A^{-1} \bracket{\MediumKauffmanReidemeisterThreeFlippedC} \stackrel{K2}{=}
+    \bracket{\MediumKauffmanReidemeisterThreeFlippedA},
+    \end{align}
 \end{comment}
-korzystaliśmy tu z~własności drugiego ruchu.
+    korzystaliśmy tu z~własności drugiego ruchu.
 \end{proof}
 
 \begin{corollary}
@@ -142,14 +144,20 @@ Jeżeli przypomnimy sobie, że na mocy lematu \ref{lem:writhe_reidemeister} spin
 \end{definition}
 
 Sama klamra odegrała ważną rolę podczas unifikacji wielomianu Jonesa oraz innych niezmienników kwantowych.
-W szczególności pozwoliła na uogólnienie go do niezmiennika 3-rozmaitości, jak głosi artykuł ,,Bracket polynomial'' na angielskiej Wikipedii.
+% źródło R-T, K: https://encyclopediaofmath.org/wiki/Kauffman_bracket_polynomial
+% źródło D: https://en.wikipedia.org/wiki/Reshetikhin–Turaev_invariant
+Korzystając z niej, ruchów i rachunku Kirby'ego (i być może chirurgii Dehna) konstruuje się niezmienniki Reszetichina-Turajewa, czyli coś co nas przerasta i czego nie opiszemy.
+\index[persons]{Reszetichin, Nikolaj}%
+\index[persons]{Turajew, Władymir}%
+\index{chirurgia Dehna}%
+\index{niezmiennik Reszetichina-Turajewa}%
+\index{rachunek Kirby'ego}%
 
 \begin{proposition}
     Wielomian Jonesa jest niezmiennikiem zorientowanych splotów.
 \end{proposition}
 
 \begin{proof}
-    %Skorzystamy z~tego, że indeks zaczepienia jest niezmiennikiem.
     Pokażemy niezmienniczość wyrażenia $(-A)^{-3w(D)}\langle D\rangle$ na ruchy Reidemeistera.
 
     Niech
