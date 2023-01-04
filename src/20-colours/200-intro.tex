@@ -9,7 +9,7 @@ Mówimy, że nie jest zupeły: istnieją różne węzły, którym przypisuje te 
 Problem ten będzie powtarzać się dla prawie wszystkich późniejszych niezmienników, z wyjątkiem dopiero całki Koncewicza (patrz sekcja \ref{sec:vassiliev}).
 
 \section{Kolorowanie splotów}
-\index{kolorowalność|(}
+\index{kolorowalność|(}%
 
 Przygodę z kolorowaniami rozpoczyna się zazwyczaj od trójkolorowalności.
 Jest to pewna cecha diagramów, którą można posiadać albo nie.
@@ -37,7 +37,7 @@ Pozwala to zapisać warunek kolorowalności równaniem algebraicznym, niezależn
 
 \begin{definition}[kolorowanie]
 \index{równanie kolorujące}%
-    \label{def:colouring_equation}
+\label{def:colouring_equation}%
     Niech $L$ będzie splotem, zaś $n$ liczbą naturalną.
     Mówimy, że splot $L$ jest kolorowalny modulo $n$, jeśli posiada diagram, którego włóknom można przypisać liczby całkowite $0, \ldots, n - 1$ tak, by
     \begin{enumerate}
@@ -58,7 +58,7 @@ Opierając się na definicji oraz ruchach Reidemeistera możemy wykazać pierwsz
 Kolorowanie nazywamy trywialnym, jeśli używa tylko jednego koloru.
 
 \begin{proposition}
-    \label{prp:colouring_invariance}
+\label{prp:colouring_invariance}%
     Własność ,,być $n$-kolorowalnym'' jest niezmiennikiem węzłów.
 \end{proposition}
 
@@ -97,7 +97,7 @@ Sama kolorowalność nie mówi wiele, splot jest kolorowalny lub nie.
 Dowód faktu \ref{prp:colouring_invariance} pokazuje coś więcej: liczba kolorowań, być może trywialnych, jest mocniejszym niezmiennikiem.
 
 \begin{lemma}
-    \label{lem:colouring_arc}
+\label{lem:colouring_arc}%
     Ustalmy diagram $D$ dla węzła z~wybranym łukiem, oraz kolor $k \in \{0, \ldots, n - 1\}$.
     Bez straty ogólności możemy założyć, że krótki łuk jest koloru $k$.
 \end{lemma}
@@ -109,7 +109,7 @@ Kolorem tym zazwyczaj jest $0$.
 \end{proof}
 
 \begin{proposition}
-    \label{prp:no_colourings_mod_2}
+\label{prp:no_colourings_mod_2}%
     Żaden węzeł nie koloruje się modulo dwa.
 \end{proposition}
 
@@ -129,8 +129,7 @@ Kolorem tym zazwyczaj jest $0$.
 
 Sploty rozszczepialne są $n$-kolorowalne dla każdego $n \ge 2$, można skorzystać z~tego samego schematu kolorowania.
 \index{splot!rozszczepialny}%
-Pierścienie Boromeuszy nie kolorują się modulo trzy, nie są zatem rozszczepialne.
-% TODO: pierścienie Boromeuszy nie są nigdzie zdefiniowane
+Pierścienie Boromeuszy\footnote{Pierścienie Boromeuszy pojawiają się w tej książce dokładnie dwa razy: tutaj oraz w podpodsekcji~\ref{sssec:link_names}. Jest to nierozszczepialny splot o trzech ogniwach, który rozszczepia się po usunięciu dowolnego z ogniw (sploty o tej własności nazywa się czasami splotami Brunna). Jest alternujący, algebraiczny i hiperboliczny.} nie kolorują się modulo trzy, nie są zatem rozszczepialne.
 \index{pierścienie Boromeuszy}%
 
 Sploty, które nie są kolorowalne modulo $n$ dla żadnej liczby $n \in \N$ nazywa się czasem niewidzialnymi, tę własność mają dwa węzły pierwsze o dziesięciu skrzyżowaniach ($10_{124}$, $10_{153}$), cztery o jedenastu ($11n_{34}$, $11n_{42}$, $11n_{49}$, $11n_{116}$) oraz jedenaście o dwunastu ($12n_{19}$, $12n_{121}$, $12n_{210}$, $12n_{214}$, $12n_{242}$, $12n_{292}$, $12n_{309}$, $12n_{313}$, $12n_{318}$, $12n_{430}$, $12n_{473}$).
@@ -167,7 +166,7 @@ Skojarzmy z~każdym skrzyżowaniem równanie kolorujące, zgodnie z~poniższym s
 \end{comment}
 
 \begin{proposition}
-    \label{prp:colouring_sum_zero}
+\label{prp:colouring_sum_zero}%
     Sumą równań kolorujących o dobrze wybranych znakach jest $0 \equiv 0 \mod n$.
 \end{proposition}
 
@@ -198,5 +197,5 @@ Dotychczas kolorowaliśmy diagramy węzłów liczbami $0, 1, 2, \ldots, n-1$, cz
 
 \input{20-colours/200b-labels}
 
-\index{kolorowalność|)}
+\index{kolorowalność|)}%
 
