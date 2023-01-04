@@ -685,11 +685,6 @@
     MRNUMBER = {886439},
     TITLE = {Only integral {D}ehn surgeries can yield reducible manifolds},
 
-@article {moriah87,
-    AUTHOR = {Moriah, Yoav},
-    MRNUMBER = {870804},
-    TITLE = {On the free genus of knots},
-
 @article {murasugi87,
     AUTHOR = {Murasugi, Kunio},
     MRNUMBER = {895570},
