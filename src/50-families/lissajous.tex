@@ -91,7 +91,7 @@ To nakłada ograniczenia na wielomian Alexandera.
     Jeśli wszystkie częstotliwości są nieparzyste, węzeł jest silnie dodatnio achiralny.
     Wtedy wielomian $\alexander(x)$ jest kwadratem w pierścieniu $\Z[x]$ (pokazano to w \cite{hartley79}).
 
-    W przeciwnym razie możemy powołać się na fakt \ref{prp:lissajous_two_periodic} oraz \ref{prp:murasugi_periodic} (z $n=2^1$ oraz $\lambda = 1$).
+    W przeciwnym razie możemy powołać się na fakt~\ref{prp:lissajous_two_periodic} oraz~\ref{prp:murasugi_periodic} (z $n=2^1$ oraz $\lambda = 1$).
     Dostaniemy równość
     \begin{equation}
 \label{eqn:lissajous_squared}%
@@ -108,8 +108,8 @@ Tylko pierwszy z nich jest na pewno węzłem Lissajous (stan na 2018).
     Trójlistnik oraz ósemka nie są węzłami Lissajous.
 \end{example}
 
-Wygodnie jest przeformułować warunek z faktu \ref{prp:lissajous_alexander} do następującej postaci.
-Wielomian $\alexander(t) = A_0 + A_1(t+1/t) + \ldots + A_n(t^n + 1/t^n)$ jest kwadratem modulo $2$ wtedy i tylko wtedy, gdy współczynniki $A_{2k+1}$ są parzyste dla $k \ge 0$.
+Wygodnie jest przeformułować warunek z faktu~\ref{prp:lissajous_alexander} do następującej postaci.
+Wielomian $\alexander(t) = A_0 + A_1(t+1/t) + \cdots + A_n(t^n + 1/t^n)$ jest kwadratem modulo $2$ wtedy i tylko wtedy, gdy współczynniki $A_{2k+1}$ są parzyste dla $k \ge 0$.
 
 \begin{corollary}
 \index{niezmiennik!Arfa}%
@@ -117,9 +117,9 @@ Wielomian $\alexander(t) = A_0 + A_1(t+1/t) + \ldots + A_n(t^n + 1/t^n)$ jest kw
 \end{corollary}
 
 \begin{proof}
-    Niech $\alexander(t) = A_0 + A_1(t+1/t) + \ldots + A_n(t^n + 1/t^n)$ będzie  wielomianem Alexandera.
-    Wtedy $\alexander_K(1) = \pm 1$, zatem $0 = \pm 1 + A_0 + 2A_1 + \ldots + 2A_n$.
-    Możemy teraz odjąć to od $\alexander_K(-1) = A_0 - 2A_1 \pm \ldots$, by uzyskać $\alexander_K(-1) = \pm 1 - 4A_1 - 4A_3 - \ldots$.
+    Niech $\alexander(t) = A_0 + A_1(t+1/t) + \cdots + A_n(t^n + 1/t^n)$ będzie  wielomianem Alexandera.
+    Wtedy $\alexander_K(1) = \pm 1$, zatem $0 = \pm 1 + A_0 + 2A_1 + \cdots + 2A_n$.
+    Możemy teraz odjąć to od $\alexander_K(-1) = A_0 - 2A_1 \pm \cdots$, by uzyskać $\alexander_K(-1) = \pm 1 - 4A_1 - 4A_3 - \cdots$.
     Razem z wygodnym przeformułowaniem daje to $\alexander_K(-1) \equiv \pm 1 \mod 8$, co w połączeniu z~\ref{prp:arf_murasugi} kończy dowód.
 \end{proof}
 
@@ -144,7 +144,7 @@ Wielomian $\alexander(t) = A_0 + A_1(t+1/t) + \ldots + A_n(t^n + 1/t^n)$ jest kw
 \begin{proof}
     Nietrywialny węzeł o dwóch mostach nie może być silnie dodatnio achiralny (patrz \cite{hartley79}).
     Jeśli jest węzłem Lissajous, jedna z jego częstotliwości okazuje się być parzysta.
-    Wtedy jego faktor jest trywialny i~kongruencja \ref{eqn:lissajous_squared} daje $\alexander_K(t) \equiv 1 \mod 2$.
+    Wtedy jego faktor jest trywialny i~kongruencja~\ref{eqn:lissajous_squared} daje $\alexander_K(t) \equiv 1 \mod 2$.
 \end{proof}
 
 %=% Lamm
@@ -153,7 +153,7 @@ Wielomian $\alexander(t) = A_0 + A_1(t+1/t) + \ldots + A_n(t^n + 1/t^n)$ jest kw
     Dwumostowe węzły rozwłóknione nie są węzłami Lissajous.
 \end{corollary}
 
-Można skorzystać z tego samego argumentu, co w dowodzie wniosku \ref{cor:lissajous_fibered} oraz \ref{cor:lissajous_twobridge}.
+Można skorzystać z tego samego argumentu, co w dowodzie wniosku~\ref{cor:lissajous_fibered} oraz~\ref{cor:lissajous_twobridge}.
 
 %=% Lamm
 \begin{proposition}
