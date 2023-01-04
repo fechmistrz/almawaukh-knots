@@ -963,11 +963,6 @@
     MRNUMBER = {1309992},
     TITLE = {On coefficient polynomials of the skein polynomial of an oriented link},
 
-@article {masbaum94,
-    AUTHOR = {Masbaum, Gregor and Vogel, Pierre},
-    MRNUMBER = {1272656},
-    TITLE = {{$3$}-valent graphs and the {K}auffman bracket},
-
 @article {rong94,
     AUTHOR = {Rong, Yongwu},
     MRNUMBER = {1286928},
