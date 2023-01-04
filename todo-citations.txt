@@ -79,11 +79,6 @@
     AUTHOR = {Weinberg, Noah},
     TITLE = {{Sur l'\'equivalence libre des tresses ferm\'ees.}},
 
-@article {bohnenblust47,
-    AUTHOR = {Bohnenblust, Frederic},
-    MRNUMBER = {19088},
-    TITLE = {The algebraical braid group},
-
 @article {chow48,
     AUTHOR = {Chow, Wei-Liang},
     MRNUMBER = {26050},
