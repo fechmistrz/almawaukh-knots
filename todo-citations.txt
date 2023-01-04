@@ -1130,11 +1130,6 @@
     MRNUMBER = {1643867},
     TITLE = {An upper bound on edge numbers of {$2$}-bridge knots and links},
 
-@article {miyazawa98,
-    AUTHOR = {Miyazawa, Yasuyuki},
-    MRNUMBER = {1606374},
-    TITLE = {The {J}ones polynomial of an unknotting number one knot},
-
 @article {ng98,
     AUTHOR = {Ng, Ka Y.},
     MRNUMBER = {1489214},
