@@ -1539,11 +1539,6 @@
     MRNUMBER = {2525782},
     TITLE = {Minimum volume cusped hyperbolic three-manifolds},
 
-@article {niebrzydowski09,
-    AUTHOR = {Niebrzydowski, Maciej and Przytycki, J\'{o}zef H.},
-    MRNUMBER = {2583322},
-    TITLE = {The quandle of the trefoil knot as the {D}ehn quandle of the torus},
-
 @article {tanaka09,
     AUTHOR = {Stoimenow, Alexander and Tanaka, Toshifumi},
     MRNUMBER = {2595755},
