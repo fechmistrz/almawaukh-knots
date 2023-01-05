@@ -818,11 +818,6 @@
     MRNUMBER = {1141156},
     TITLE = {Knots and physics},
 
-@article {kohn91,
-    AUTHOR = {Kohn, Peter D.},
-    MRNUMBER = {1079893},
-    TITLE = {Two-bridge links with unlinking number one},
-
 @article {moody91,
     AUTHOR = {Moody, John A.},
     MRNUMBER = {1098347},
