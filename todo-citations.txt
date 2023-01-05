@@ -650,11 +650,6 @@
     MRNUMBER = {832411},
     TITLE = {Reidemeister torsion in knot theory},
 
-@article {culler87,
-    AUTHOR = {Culler, Marc and Gordon, Cameron McA. and Luecke, John and Shalen, Peter B.},
-    MRNUMBER = {881270},
-    TITLE = {Dehn surgery on knots},
-
 @article {ernst87,
     AUTHOR = {Ernst, Claus and Sumners, De Witt W.},
     MRNUMBER = {898150},
