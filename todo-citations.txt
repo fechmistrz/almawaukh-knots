@@ -1316,11 +1316,6 @@
     AUTHOR = {Gruber, Hermann},
     TITLE = {Estimates for the minimal crossing number},
 
-@article {lopes03,
-    AUTHOR = {Dion\'{\i}sio, Miguel and Lopes, Pedro},
-    MRNUMBER = {2017983},
-    TITLE = {Quandles at finite temperatures. {II}},
-
 @article {ozsvath03,
     AUTHOR = {Ozsv\'{a}th, Peter and Szab\'{o}, Zolt\'{a}n},
     MRNUMBER = {1988285},
