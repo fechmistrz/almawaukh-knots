@@ -1725,11 +1725,6 @@
     AUTHOR = {Schieber, Nathaniel B.},
     TITLE = {A computational approach to tangles},
 
-@article {tuzun18,
-    AUTHOR = {Tuzun, Robert E. and Sikora, Adam S.},
-    MRNUMBER = {3786783},
-    TITLE = {Verification of the {J}ones unknot conjecture up to 22 crossings},
-
 @article {diao19,
     AUTHOR = {Diao, Yuanan and Ernst, Claus and Por, Attila and Ziegler, Uta},
     MRNUMBER = {4077436},
