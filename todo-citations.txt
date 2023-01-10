@@ -476,11 +476,6 @@
     MRNUMBER = {679066},
     TITLE = {The topology of four-dimensional manifolds},
 
-@article {giller82,
-    AUTHOR = {Giller, Cole A.},
-    MRNUMBER = {642331},
-    TITLE = {A family of links and the {C}onway calculus},
-
 @inproceedings {perko82,
     AUTHOR = {Perko, Kenneth A.},
     MRNUMBER = {696625},
