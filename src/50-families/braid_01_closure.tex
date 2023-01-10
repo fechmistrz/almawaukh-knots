@@ -1,8 +1,7 @@
 
 \subsection{Warkocze a sploty}
 % DICTIONARY;closure of ...;domknięcie ...;warkocz
-Każdy warkocz można domknąć do węzła, łącząc ze sobą punkty $(x_i, 1)$ oraz $(x_i, 0)$
-łamanymi, których rzuty do płaszczyzny diagramu nie przecinają się.
+Każdy warkocz można domknąć do węzła, łącząc ze sobą punkty $(x_i, 1)$ oraz $(x_i, 0)$ łamanymi, których rzuty do płaszczyzny diagramu nie przecinają się.
 \index{warkocz!domknięcie warkocza}%
 Nie wiadomo, kto wymyślił operację domykania warkoczy, ale była ona z pewnością znana Alexanderowi: rozpatrywano je jeszcze przed samymi warkoczami.
 \index[persons]{Alexander, James}%
@@ -14,16 +13,16 @@ Jeśli $b_+ - 3b_- \ge n$, to domknięcie warkocza $b$ nie jest achiralne (twier
 \index{węzeł!achiralny}%
 
 \begin{theorem}[Alexander, 1923]
-\label{thm:alexander}
+\index{twierdzenie!Alexandera}%
+\label{thm:alexander}%
      Każdy splot powstaje przez domknięcie pewnego warkocza.
-     \index{twierdzenie!Alexandera}
 \end{theorem}
 
 \begin{proof}[Niedowód]
     W kolejności chronologicznej:
     najpierw Alexander \cite{alexander23},
 \index[persons]{Alexander, James}%
-    a po blisko połowie wieku Morton \cite{mortonhr86},
+    a~po blisko połowie wieku Morton \cite{mortonhr86},
 \index[persons]{Morton, Hugh}%
     Yamada \cite{yamada87} (co daje łatwy do zaimplementowania program komputerowy)
 \index[persons]{Yamada, Shuji}%
@@ -45,17 +44,18 @@ Manturow \cite{manturov02} pokazał, że od warkocza można wymagać kwazitorycz
 \end{theorem}
 
 \begin{proof}
-\index[persons]{Birman, Joan}%
-\index[persons]{Menasco, William}%
-\index[persons]{Morton, Hugh}%
-\index[persons]{Traczyk, Paweł}%
     Kompletny i~godny naśladowania dowód znajduje się w~trudno dostępnej książce \cite{birman74} Birman, więc warto sprawdzić inne, opublikowane później materiały:
+\index[persons]{Birman, Joan}%
     Morton opisał w~\cite{mortonhr86} przepiękną, a~przy tym elementarną ideę ,,nitkowania'',
+\index[persons]{Morton, Hugh}%
     potem Traczyk podał w~\cite{traczyk98} czysto kombinatoryczne, dwuwymiarowe uzasadnienie oparte o~okręgi Seiferta,
+\index[persons]{Traczyk, Paweł}%
     wreszcie mamy też artykuł \cite{birman02} napisany przez Birman i~Menasco.
+\index[persons]{Menasco, William}%
 \end{proof}
 
-Pierwsze sformułowanie twierdzenia pochodzące od Markowa \cite{markov36} korzystało z trzech ruchów, jeden z~nich stanowił uogólnienie II ruchu Reidemeistera.
+Pierwsze sformułowanie twierdzenia pochodzące od Markowa \cite{markov36} korzystało z~trzech ruchów, jeden z~nich stanowił uogólnienie II ruchu Reidemeistera.
+\index[persons]{Markow, Andrej}%
 Trzy lata później Weinberg zauważył w~\cite{weinberg39}, że wystarczą dwa ruchy.
 \index[persons]{Weinberg, Noah}%
 % Weinberg = Ной Вайнберг: http://www.mathsoc.spb.ru/history/Odynec_2020.pdf
@@ -64,12 +64,12 @@ Lambropoulou, Rourke przedstawili w~\cite{lambropoulou97} wersję twierdzenia wy
 \index[persons]{Rourke, Colin}%
 
 Historia twierdzenia Markowa jest raczej dramatyczna: Markow przedstawił swój dowód ustnie, ale nigdy go nie opublikował, zostawiając to zadanie swojemu uczniowi, Weinbergowi.
-Ten jednak został zabity podczas wojny, wkrótce po opublikowaniu pierwszej pracy na temat teorii węzłów i na dokładny dowód trzeba było czekać do publikacji Birman \cite{birman74} blisko 40 lat.
+Ten jednak został zabity podczas wojny, wkrótce po opublikowaniu pierwszej pracy na temat teorii węzłów i~na dokładny dowód trzeba było czekać do publikacji Birman \cite{birman74} blisko 40 lat.
 \index[persons]{Birman, Joan}%
 
 Twierdzenie~\ref{markov_theorem} mówi nam, że teoria węzłów bada klasy równoważności w~grupie warkoczy.
 Zarówno problem słowa (czy dwa słowa w~grupie przedstawiają ten sam jej element?) jak i~problem sprzężoności (czy dwa słowa w~grupie są sprzężone?) są rozwiązane, ale nadal nie mamy algorytmu, który mówiłby, czy dwa słowa w~grupie są równoważne w~sensie Markowa.
-Cały czas chodzi o słowa w grupie warkoczy, oczywiście.
+Cały czas chodzi o~słowa w~grupie warkoczy, oczywiście.
 % TODO: kto to pokazał? wg Kawauchiego około strony 18, Murasugi w 1982 ale widziałem gdzieś informację, że Garside był pierwszy.
 % a może Jones 1985?
 

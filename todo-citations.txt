@@ -52,10 +52,6 @@
     MRNUMBER = {3069652},
     TITLE = {\"{U}ber {Z}opfgruppen und gleichsinnig verdrillte {V}erkettungen},
 
-@article {markov36,
-    AUTHOR = {Markov, Andrei A.},
-    TITLE = {\"{U}ber die freie \"{A}quivalenz der geschlossenen Z\"{o}pfe},
-
 @article {seifert35,
     AUTHOR = {Seifert, Herbert K. J.},
     MRNUMBER = {1512955},
