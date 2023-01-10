@@ -1,7 +1,7 @@
 
 \subsection{Objętość hiperboliczna}
 
-\index{objętość|(}
+\index{objętość|(}%
 \begin{definition}[objętość]
     Niech $L$ będzie splotem hiperbolicznym.
     Objętość dopełnienia $L$ względem zupełnej metryki hiperbolicznej nazywamy objętością splotu $L$ i~oznaczamy $\volume L$.
@@ -24,7 +24,8 @@ Jak zobaczymy później, żaden węzeł nie ma mniejszej objętości.
 \end{example}
 
 W encyklopedii Wolfram Mathworld znajduje się informacja, że $5_2$ oraz pewien węzeł o~dwunastu skrzyżowaniach mają tę samą objętość, prawdopodobnie chodzi tu o~$12n_{242}$, który znany jest także jako $(-2, 3, 7)$-precel.
-\index{precel!(-2, 3, 7)}
+\index{precel!(-2, 3, 7)}%
+\index{węzeł!12n-242}%
 
 \begin{example}
     $\volume 6_1 \approx 3.16396$.
@@ -43,22 +44,24 @@ W encyklopedii Wolfram Mathworld znajduje się informacja, że $5_2$ oraz pewien
 \end{example}
 
 \begin{example}
+\index{para Perko}%
     Niech $K$ będzie jednym z~dwóch węzłów w~parze Perko.
     Wtedy $\volume K \approx 5.63877$.
-    \index{para Perko}
 \end{example}
 
-Praca \cite{purcell19} wspomina kilka przyjemnych ograniczeń, jakie musi spełniać objętość.
+Praca Futera, Kalfagianni, Purcell \cite{purcell19} wspomina kilka przyjemnych ograniczeń, jakie musi spełniać objętość.
 \index[persons]{Futer, David}%
 \index[persons]{Kalfagianni, Efstratia}%
 \index[persons]{Purcell, Jessica}%
-Aby je przytoczyć, musimy najpierw zdefiniować dwie stałe: $v_4$ oraz $v_8$, odpowiednio objętość idealnego czworościanu\footnote{Albo rozmaitości Giesekinga, powstałej z czworościanu przez usunięcie  wierzchołków i sklejenie ściany 012 z 310 oraz 023 z 321. Dopełnienie ósemki jest podwójnym nakryciem tej rozmaitości.\index{rozmaitość!Giesekinga}} oraz ośmiościanu foremnego w~$\mathbb H^3$.
+Aby je przytoczyć, musimy najpierw zdefiniować dwie stałe: $v_4$ oraz $v_8$, odpowiednio objętość idealnego czworościanu\footnote{Albo rozmaitości Giesekinga, powstałej z~czworościanu przez usunięcie  wierzchołków i~sklejenie ściany 012 z~310 oraz 023 z~321. Dopełnienie ósemki jest podwójnym nakryciem tej rozmaitości.\index{rozmaitość!Giesekinga}} oraz ośmiościanu foremnego w~$\mathbb H^3$.
 Mamy
-\begin{align}
-    v_4 & = \int_{0}^{2\pi/3} \log(2 \cos(\theta/2)) \,\mathrm{d}\theta \approx 1.01494\,16064, \\
+\begin{alignat}{2}
+    v_4 & = \int_{0}^{2\pi/3} \log(2 \cos(\theta/2)) \,\mathrm{d}\theta & {}\approx{} & 1.01494\,16064, \\
     % https://en.wikipedia.org/wiki/Gieseking_manifold
-    v_8 & = 4 \sum_{n=0}^\infty \frac{(-1)^n}{(2n+1)^2} \approx 3.66386\,23767. % ... 08876060218414059729536443096597497126688537065 ... \ldots
-\end{align}
+    % N[Integrate[Log[2Cos[t/2]], {t, 0, 2Pi/3}], 100]
+    v_8 & = 4 \sum_{n=0}^\infty \frac{(-1)^n}{(2n+1)^2} &{}\approx{}& 3.66386\,23767.
+    % 4N[Catalan, 100]
+\end{alignat}
 
 I tak najpierw Adams pokazał w~swojej rozprawie doktorskiej \cite{adams83}:
 \index[persons]{Adams, Colin}%
@@ -71,7 +74,7 @@ I tak najpierw Adams pokazał w~swojej rozprawie doktorskiej \cite{adams83}:
     \end{equation}
 \end{proposition}
 
-A trzy dekady później poprawił wswój wynik w~\cite{adams13}:
+A trzy dekady później poprawił swój wynik w~\cite{adams13}:
 
 \begin{proposition}
     Niech $D$ będzie diagramem hiperbolicznego splotu o~$\crossing L \ge 5$ skrzyżowaniach.
@@ -84,12 +87,16 @@ A trzy dekady później poprawił wswój wynik w~\cite{adams13}:
 Jego metoda polega na podzieleniu dopełnienia splotu na czterościany i~ośmiościany oraz policzeniu ich.
 To, w~połączeniu ze znanymi ograniczeniami na objętość ,,cegiełek'', wystarcza.
 Podział na ośmiościany zaproponował Dylan (nie William!) Thurston.
+\index[persons]{Thurston, Dylan}%
 % wiem to z purcell19
 
 Thurston zauważył \cite[s. 365]{thurston82}, że tylko skończenie wiele hiperbolicznych 3-rozmaitości może mieć tę samą objętość -- wynika to z~prac Gromowa i~Jørgensena.
+\index[persons]{Thurston, William}%
 Następnie Wielenberg przedstawił w~\cite{wielenberg81} przykłady pokazujące, że istnieją dowolnie duże kolizje wśród węzłów hiperbolicznych: pewne podgrupy klasycznej grupy Picarda działają jako izometrie na górną półprzestrzestrzeń hiperboliczną wymiaru 3 mają podstawowe wielościany, które są takie same jako zbiory, ale różnią się jeśli chodzi o~utożsamienie ze sobą ścian.
+\index[persons]{Wielenberg, Norbert}%
 
 Chociaż mutanty mają tę samą objętość hiperboliczną (fakt~\ref{mutants_the_same_volume}), to praktyka pokazuje, że ten niezmiennik dobrze wspomaga proces tablicowania węzłów.
+\index{mutant}%
 
 \begin{proposition}
     Zbiór
@@ -100,14 +107,19 @@ Chociaż mutanty mają tę samą objętość hiperboliczną (fakt~\ref{mutants_t
 \end{proposition}
 
 \begin{proof}[Niedowód]
-    Zdaniem angielskiej Wikipedii, dowód jest gdzieś w~\cite{neumann85} (gdzie Neumann znajduje eleganckie oszacowanie zmiany objętości po wykonaniu chirurgii Dehna), ja tego nie widzę.
+    Zdaniem angielskiej Wikipedii, dowód jest gdzieś w~\cite{neumann85} (gdzie Neumann, Zagier znajdują eleganckie oszacowanie zmiany objętości po wykonaniu chirurgii Dehna), ja tego nie widzę.
+\index[persons]{Neumann, Walter}%
+\index[persons]{Zagier, Don}%
     %=% wikipedia - angielski artykuł "hyperbolic volume" 
-    Hodgson, Masa \cite{hodgson13} sugerują, że dowód da się znaleźć w notatkach Thurstona \cite{thurston02}.
+    Hodgson, Masai \cite{hodgson13} sugerują, żeby przeczytać notatki Thurstona \cite{thurston02}.
+\index[persons]{Hodgson, Craig}%
+\index[persons]{Masai, Hidetoshi}%
     % TODO: https://mathscinet.ams.org/mathscinet-getitem?mr=648524 sugeruje, że to jest tam: "The order type of the set of all volumes of hyperbolic 3-manifolds is ω^ω."
+    Jeszcze jedną wzmiankę znalazłem w \cite[s. 365]{thurston82}, starszej pracy Thurstona.
 \end{proof}
 
 W dowolnej rodzinie węzłów istnieje element o~najmniejszej objętości.
-Przytoczę teraz przykłady konkretnych rodzin i najmniejszych węzłów, za Futerem, Kalfagiannim, Purcell \cite[s. 16-17]{purcell19} oraz Hodgsonem, Masaiem\cite[s. 1-99]{hodgson13}.
+Przytoczę teraz przykłady konkretnych rodzin i~najmniejszych węzłów, za Futerem, Kalfagianni, Purcell \cite[s. 16-17]{purcell19} oraz Hodgsonem, Masaiem \cite[s. 1-99]{hodgson13}.
 \index[persons]{Futer, David}%
 \index[persons]{Kalfagianni, Efstratia}%
 \index[persons]{Purcell, Jessica}%
@@ -115,12 +127,14 @@ Przytoczę teraz przykłady konkretnych rodzin i najmniejszych węzłów, za Fut
 \index[persons]{Masai, Hidetoshi}%
 
 \begin{proposition}
-%label{prp:eight_least_hyperbolic}
+\index{ósemka|see {węzeł 4-1}}%
+\index{węzeł!4-1}%
     Żaden węzeł nie ma mniejszej objętości hiperbolicznej od ósemki.
-    \index{ósemka}
 \end{proposition}
 
 \begin{proof}
+\index{Cao, Chun}%
+\index[persons]{Meyerhoff, Robert}%
     Cao, Meyerhoff w~\cite{cao01} przeanalizowali pakowania horokul w~uniwersalnym nakryciu związanym z~rozmaitościami.
     Doszli do wniosku, że nie ma tam dostatecznieo wolnego miejsca, jeżeli szpic (cusp) nie jest odpowiedniego rozmiaru.
     Trzykrotnie wspierają się przy tym pomocą komputera, by sprawdzić, że określone warunki są spełnione we wszystkich punktach danej przestrzeni parametrów.
@@ -130,15 +144,16 @@ Przytoczę teraz przykłady konkretnych rodzin i najmniejszych węzłów, za Fut
 % DICTIONARY;cusped;szpiczasta;rozmaitość
 % DICTIONARY;manifold;rozmaitość;-
 \index{splot!Whiteheada}%
-\index{ósemka}%
-    Wśród orientowalnych 3-rozmaitości ze szpicem\footnote{rozmaitość szpiczasta -- niezwarte, zupełne hiperboliczne rozmaitości ze skończoną objętością Riemanna} najmniejszą objętość posiada dopełnienie ósemki oraz jego bliźniak, otrzymany przez $(5, 1)$-chirurgię jednego z~ogniw splotu Whiteheada.
-% sformułowanie wygląda jak z "THE MINIMAL VOLUME ORIENTABLE HYPERBOLIC 3-MANIFOLD WITH 4 CUSPS"
+    Wśród orientowalnych 3-rozmaitości ze szpicem\footnote{rozmaitości szpiczaste -- niezwarte, zupełne hiperboliczne rozmaitości ze skończoną objętością Riemanna} najmniejszą objętość posiada dopełnienie ósemki oraz jego bliźniak, otrzymany przez $(5, 1)$-chirurgię jednego z~ogniw splotu Whiteheada.
+% TODO: sformułowanie wygląda jak z "THE MINIMAL VOLUME ORIENTABLE HYPERBOLIC 3-MANIFOLD WITH 4 CUSPS"
 \end{proposition}
 
-Klasa rozmaitości wspomniana w fakcie obejmuje dopełnienia hiperbolicznych węzłów.
+Klasa rozmaitości wspomniana w~fakcie obejmuje dopełnienia hiperbolicznych węzłów.
 Powyższy fakt także został wzięty z~pracy \cite{cao01}.
 
-Meyerhoff nie przestawał pracować nad rozmaitościami o~małych objętościach i~osiem lat później w~\cite{meyerhoff09} przedstawił z Gabaiem, Milleyem bez dowodu (obiecali pokazać go później):
+Meyerhoff nie przestawał pracować nad rozmaitościami o~małych objętościach i~osiem lat później w~\cite{meyerhoff09} przedstawił z~Gabaiem, Milleyem bez dowodu (obiecali pokazać go później):
+\index[persons]{Gabai, David}%
+\index[persons]{Milley, Peter}%
 
 \begin{proposition}
 \index{program SnapPy}%
@@ -162,17 +177,19 @@ Udało mi się rozszyfrować niektóre nazwy.
 W tej samej pracy możemy jeszcze znaleźć informację, że:
 
 \begin{proposition}
-    Istnieje dokładnie jedna domknięta hiperboliczna 3-rozmaitość o najmniejszej objętości, rozmaitość Weeksa.
+    Istnieje dokładnie jedna domknięta hiperboliczna 3-rozmaitość o~najmniejszej objętości, rozmaitość Weeksa.
 \end{proposition}
 
-Rozmaitość Weeksa została odkryta przez Jeffreya Weeksa w jego rozprawie doktorskiej (1985) oraz niezależnie przez Matwiejewa, Fomenko (1988).
-\index{rozmaitość!Weeksa}
+Rozmaitość Weeksa została odkryta przez Jeffreya Weeksa w~jego rozprawie doktorskiej (1985) oraz niezależnie przez Matwiejewa, Fomenko (1988).
+\index{rozmaitość!Weeksa}%
+\index[persons]{Weeks, Jeffrey}%
+\index[persons]{Fomenko, Matwiejew}%
 Powstaje ona przez wykonanie $(5, 2)$ oraz $(5, 1)$ chirurgii Dehna na dopełnieniu splotu Whiteheada, zaś jej objętość wynosi w~przybliżeniu $0.94270$. % https://oeis.org/A126774
-\index{splot!Whiteheada}
+\index{splot!Whiteheada}%
 
 Następna jest rozmaitość Meyerhoffa, powstała po $(5, 1)$ chirurgii na dopełnieniu ósemki.
 \index{rozmaitość!Meyerhoffa}
-Meyerhoff sugerował w 1987, że ma najmniejszą objętość, ale okazało się potem, że ta wynosi $\approx 0.98136$.
+Meyerhoff sugerował w~1987, że ma najmniejszą objętość, ale okazało się potem, że ta wynosi $\approx 0.98136$.
 
 \begin{proposition}
     Wśród orientowalnych 3-rozmaitości o~dwóch szpicach najmniejszą objętość mają splot Whiteheada oraz $(-2, 3, 8)$-precel.
@@ -185,7 +202,8 @@ Meyerhoff sugerował w 1987, że ma najmniejszą objętość, ale okazało się 
 Ich objętość wynosi $v_8$.
 
 \begin{proof}[Szkic dowodu]
-    Agol \cite{agol10} korzystając z metod topologicznych dowodzi istnienia ,,niezbędnej''\footnote{z angielskiego essential} powierzchni, która zadaje dolne ograniczenie na objętość i skutecznie krępuje rozmaitości, które mogą to ograniczenie zrealizować.
+\index[persons]{Agol, Ian}%
+    Agol \cite{agol10} korzystając z~metod topologicznych dowodzi istnienia ,,niezbędnej''\footnote{z angielskiego essential} powierzchni, która zadaje dolne ograniczenie na objętość i skutecznie krępuje rozmaitości, które mogą to ograniczenie zrealizować.
 \end{proof}
 
 Przypadek trzech szpiców nie jest zbyt dobrze zrozumiany.
@@ -195,9 +213,10 @@ Przypadek trzech szpiców nie jest zbyt dobrze zrozumiany.
 \end{proposition}
 
 \begin{proof}
-    Rozumowanie Yoshidy \cite{yoshida13} oparte o pracę Agola.
+\index[persons]{Yoshida, Kenichi}%
+    Rozumowanie Yoshidy \cite{yoshida13} oparte o~pracę Agola.
     Objętość splotu wynosi $2v_8$.
 \end{proof}
 
-\index{objętość|)}
+\index{objętość|)}%
 
