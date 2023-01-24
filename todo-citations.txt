@@ -1590,11 +1590,6 @@
     MRNUMBER = {2962302},
     TITLE = {Introduction to {V}assiliev knot invariants},
 
-@article {garoufalidis12,
-    AUTHOR = {Garoufalidis, Stavros and Koutschan, Christoph},
-    MRNUMBER = {2988577},
-    TITLE = {The noncommutative {$A$}-polynomial of {$(-2,3,n)$} pretzel knots},
-
 @article {hilden12,
     AUTHOR = {Hilden, Hugh M. and Montesinos, Jos\'{e} M. and Tejada, D\'{e}bora M. and Toro, Margarita M.},
     MRNUMBER = {3007934},
