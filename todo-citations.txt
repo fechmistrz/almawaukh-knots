@@ -1590,11 +1590,6 @@
     MRNUMBER = {3007934},
     TITLE = {On the classification of 3-bridge links},
 
-@article {pecker12,
-    AUTHOR = {Pecker, Daniel},
-    MRNUMBER = {2994045},
-    TITLE = {Poncelet's theorem and billiard knots},
-
 @incollection {shumakovitch12,
     AUTHOR = {Shumakovitch, Alexander},
     MRNUMBER = {2884045},
