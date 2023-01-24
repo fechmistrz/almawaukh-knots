@@ -1116,11 +1116,6 @@
     MRNUMBER = {1634464},
     TITLE = {Invariants of piecewise-linear knots},
 
-@incollection {scharlemann98,
-    AUTHOR = {Scharlemann, Martin G.},
-    MRNUMBER = {1628751},
-    TITLE = {Crossing changes},
-
 @article {stoimenow98,
     AUTHOR = {Stoimenow, Alexander},
     MRNUMBER = {1611987},
