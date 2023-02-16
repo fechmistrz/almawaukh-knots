@@ -110,11 +110,6 @@
     MRNUMBER = {0072482},
     TITLE = {Knoten und {V}ollringe},
 
-@article {torres53,
-    AUTHOR = {Torres, Guillermo},
-    MRNUMBER = {52104},
-    TITLE = {On the {A}lexander polynomial},
-
 @article {fox54,
     AUTHOR = {Fox, Ralph H.},
     MRNUMBER = {62125},
