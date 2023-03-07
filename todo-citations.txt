@@ -1405,10 +1405,6 @@
     MRNUMBER = {2136532},
     TITLE = {Knots with unknotting number one and {H}eegaard {F}loer homology},
 
-@misc {taalman05,
-    AUTHOR = {Brownell, Kathryn and Oneil, Kaitlyn and Taalman, Laura},
-    TITLE = {Counting m-coloring classes of knots and links},
-
 @article {vertigan05,
     AUTHOR = {Vertigan, Dirk},
     MRNUMBER = {2201454},
