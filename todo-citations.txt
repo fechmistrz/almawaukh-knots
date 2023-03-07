@@ -1764,3 +1764,13 @@
     TITLE = {KnotInfo: Table of Knot Invariants},
 
 https://mathscinet.ams.org/mathscinet-getitem?mr=2074397
+
+@article {litherland78,
+    AUTHOR = {Gordon, Cameron McA. and Litherland, Richard A.},
+    TITLE = {On the signature of a link},
+}
+
+@incollection {przytycki11,
+    AUTHOR = {Przytycki, J\'{o}zef H.},
+    TITLE = {From {G}oeritz matrices to quasi-alternating links},
+}
