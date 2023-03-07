@@ -446,11 +446,6 @@
     MRNUMBER = {633997},
     TITLE = {Module d'{A}lexander des n\oe uds fibr\'{e}s et polyn\^{o}me de {H}osokawa des lacements fibr\'{e}s},
 
-@article {litherland81,
-    AUTHOR = {Gordon, Cameron McA. and Litherland, Richard A. and Murasugi, Kunio},
-    MRNUMBER = {617628},
-    TITLE = {Signatures of covering links},
-
 @article {whitten81,
     AUTHOR = {Whitten, Wilbur},
     MRNUMBER = {638190},
