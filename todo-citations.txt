@@ -57,11 +57,6 @@
     MRNUMBER = {1512955},
     TITLE = {\"{U}ber das {G}eschlecht von {K}noten},
 
-@article {dehn36,
-    AUTHOR = {Dehn, Max},
-    MRNUMBER = {1555418},
-    TITLE = {\"{U}ber kombinatorische {T}opologie},
-
 @article {wendt37,
     AUTHOR = {Wendt, Hilmar},
     MRNUMBER = {1545700},
