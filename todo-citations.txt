@@ -1234,11 +1234,6 @@
     MRNUMBER = {1905686},
     TITLE = {On {M}arkov's theorem},
 
-@article {cantarella02,
-    AUTHOR = {Cantarella, Jason and Kusner, Robert B. and Sullivan, John M.},
-    MRNUMBER = {1933586},
-    TITLE = {On the minimum ropelength of knots and links},
-
 @book {hatcher02,
     AUTHOR = {Hatcher, Allen},
     MRNUMBER = {1867354},
