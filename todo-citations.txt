@@ -1695,11 +1695,6 @@
     MRNUMBER = {3986038},
     TITLE = {A survey of hyperbolic knot theory},
 
-@article {sazdanovic19,
-    AUTHOR = {Nelson, Sam and Oyamaguchi, Natsumi and Sazdanovic, Radmila},
-    MRNUMBER = {4106586},
-    TITLE = {Psyquandles, singular knots and pseudoknots},
-
 @article {bae20,
     AUTHOR = {Bae, Yongju and Lee, In S.},
     MRNUMBER = {4157337},

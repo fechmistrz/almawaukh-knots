@@ -130,12 +130,12 @@ diagram_commands["VirtualReidemeisterThreeA"] = {
         "\\strand[thick] (-4, -4) to (-0.25, -0.25);",
         "\\strand[thick] (0.25, 0.25) to (5, 5);",
         # up arrow
+        "\\strand[thick,-latex] (-4, 4) to (-5, 5);",
         "\\strand[thick] (5, -5) to (0.25, -0.25);",
         "\\strand[thick] (-0.25, 0.25) to (-4, 4);",
-        "\\strand[thick,-latex] (-4, 4) to (-5, 5);",
         # background arrow
+        "\\strand[thick,-latex] (5, 0) to (4, 0);",
         "\\strand[thick] (-5, 0) [in=left, out=right] to (-4, 0) to (0, 5) to (4, 0);",
-        "\\strand[thick,-latex] (4, 0) to (5, 0);"
         # singular crossing
         "\\draw[thick,fill=black] (0, 0) circle (0.5);",
     ],
@@ -150,12 +150,12 @@ diagram_commands["VirtualReidemeisterThreeB"] = {
         "\\strand[thick] (-4, -4) to (-0.25, -0.25);",
         "\\strand[thick] (0.25, 0.25) to (5, 5);",
         # up arrow
+        "\\strand[thick,-latex] (-4, 4) to (-5, 5);",
         "\\strand[thick] (5, -5) to (0.25, -0.25);",
         "\\strand[thick] (-0.25, 0.25) to (-4, 4);",
-        "\\strand[thick,-latex] (-4, 4) to (-5, 5);",
         # background arrow
+        "\\strand[thick,-latex] (5, 0) to (4, 0);",
         "\\strand[thick] (-5, 0) [in=left, out=right] to (-4, 0) to (0, -5) to (4, 0);",
-        "\\strand[thick,-latex] (4, 0) to (5, 0);"
         # singular crossing
         "\\draw[thick,fill=black] (0, 0) circle (0.5);",
     ],
@@ -170,12 +170,12 @@ diagram_commands["VirtualReidemeisterThreeC"] = {
         "\\strand[thick] (-4, -4) to (-0.25, -0.25);",
         "\\strand[thick] (0.25, 0.25) to (5, 5);",
         # up arrow
+        "\\strand[thick,-latex] (-4, 4) to (-5, 5);",
         "\\strand[thick] (5, -5) to (0.25, -0.25);",
         "\\strand[thick] (-0.25, 0.25) to (-4, 4);",
-        "\\strand[thick,-latex] (-4, 4) to (-5, 5);",
         # background arrow
+        "\\strand[thick,-latex] (5, 0) to (4, 0);"
         "\\strand[thick] (-5, 0) [in=left, out=right] to (-4, 0) to (0, 5) to (4, 0);",
-        "\\strand[thick,-latex] (4, 0) to (5, 0);"
         # singular crossing
         "\\draw[thick,fill=black] (0, 0) circle (0.5);",
     ],
@@ -189,12 +189,12 @@ diagram_commands["VirtualReidemeisterThreeD"] = {
         "\\strand[thick] (-4, -4) to (-0.25, -0.25);",
         "\\strand[thick] (0.25, 0.25) to (5, 5);",
         # up arrow
+        "\\strand[thick,-latex] (-4, 4) to (-5, 5);",
         "\\strand[thick] (5, -5) to (0.25, -0.25);",
         "\\strand[thick] (-0.25, 0.25) to (-4, 4);",
-        "\\strand[thick,-latex] (-4, 4) to (-5, 5);",
         # background arrow
+        "\\strand[thick,-latex] (5, 0) to (4, 0);"
         "\\strand[thick] (-5, 0) [in=left, out=right] to (-4, 0) to (0, -5) to (4, 0);",
-        "\\strand[thick,-latex] (4, 0) to (5, 0);"
         # singular crossing
         "\\draw[thick,fill=black] (0, 0) circle (0.5);",
     ],
