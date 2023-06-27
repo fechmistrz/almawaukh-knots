@@ -68,5 +68,10 @@ lint:
 		<(grep -Ehor src/ -e '\\(page)?ref\{[^}]*\}' | sed -r -e 's/^\\ref//g' -e 's/^\\pageref//g' | sort -u) | sort -k 2 \
 		&& echo "No broken/unused references found"
 
+shuffle:
+	grep '@' todo-citations.txt | nl | shuf -n 20 | tr -s ' ' | sort -V | awk '{print $$2 " " $$3}'
+
+
 tools/knotinfo_parsed.json: tools/convert_knotinfo_to_json.py tools/knotinfo_raw.txt
 	cd tools && ./convert_knotinfo_to_json.py
+
