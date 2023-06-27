@@ -1096,11 +1096,6 @@
     MRNUMBER = {1634462},
     TITLE = {{$3$}-coloring and other elementary invariants of knots},
 
-@incollection {randell98,
-    AUTHOR = {Randell, Richard},
-    MRNUMBER = {1634464},
-    TITLE = {Invariants of piecewise-linear knots},
-
 @article {stoimenow98,
     AUTHOR = {Stoimenow, Alexander},
     MRNUMBER = {1611987},
@@ -1359,11 +1354,6 @@
 @misc {chmutov05,
     AUTHOR = {Chmutov, Sergei V. and Duzhin, Sergei V.},
     TITLE = {The Kontsevich integral},
-
-@article {gambaudo05,
-    AUTHOR = {Gambaudo, Jean-Marc and Ghys, \'{E}tienne},
-    MRNUMBER = {2233695},
-    TITLE = {Braids and signatures},
 
 @article {hayashi05,
     AUTHOR = {Hayashi, Chuichiro},
