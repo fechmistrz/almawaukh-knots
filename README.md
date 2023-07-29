@@ -12,7 +12,6 @@ Opowiada o...
 
 Na końcu jest trochę diagramów o niskim indeksie skrzyżowaniowym; tablice z wartościami niezmienników, żeby nie musieć ich szukać jeszcze raz; słowniczek polsko-angielski i całkiem długa bibliografia.
 
-
 ## Budowanie ze źródeł
 
 **UWAGA**: Wydania (dostępne w sekcji Releases, np. wersja 0.1 albo 0.2 albo późniejsze) szybko się deaktualizują, najnowsze notatki są dostępne zawsze pod [tym samym adresem](http://www.math.uni.wroc.pl/~s265342/files/knot-theory.pdf).
@@ -27,4 +26,28 @@ bibtex knot-theory
 makeindex knot-theory
 pdflatex knot-theory.tex
 pdflatex knot-theory.tex
+i```
+
+## Do zrobienia
+Naprawić `./src/merridew/bibliography_sort.py --bib src/knot_theory.bib`:
+```
+WARNING: Found unexpected fields: ['archiveprefix', 'eprint', 'primaryclass'] in brittenham06 (@misc)
+WARNING: Found unexpected fields: ['archiveprefix', 'eprint', 'primaryclass'] in cha18 (@misc)
+WARNING: Found unexpected fields: ['archiveprefix', 'eprint', 'primaryclass'] in chmutov05 (@misc)
+WARNING: Found unexpected fields: ['archiveprefix', 'eprint', 'primaryclass'] in gruber03 (@misc)
+WARNING: Found unexpected fields: ['archiveprefix', 'eprint', 'primaryclass'] in kneissler97 (@misc)
+WARNING: Found unexpected fields: ['archiveprefix', 'eprint', 'primaryclass'] in malyutin16 (@misc)
+WARNING: Found unexpected fields: ['archiveprefix', 'eprint', 'primaryclass'] in malyutin19 (@misc)
+WARNING: Found unexpected fields: ['archiveprefix', 'eprint', 'primaryclass'] in musick12 (@misc)
+WARNING: Found unexpected fields: ['archiveprefix', 'eprint', 'primaryclass'] in purcell20 (@misc)
+WARNING: Found unexpected fields: ['archiveprefix', 'eprint', 'primaryclass'] in stoimenow07 (@misc)
+WARNING: Found unexpected fields: ['archiveprefix', 'eprint', 'primaryclass'] in zirbel06 (@misc)
+
+WARNING: Found unexpected fields: ['copyright', 'keywords', 'publisher'] in schleimer21 (@misc)
+WARNING: Found unexpected fields: ['eprint'] in zanellati16 (@article)
+WARNING: Found unexpected fields: ['fjournal', 'journal'] in lambropoulou97 (@incollection)
+WARNING: Found unexpected fields: ['fjournal', 'journal'] in murakami90 (@inproceedings)
+WARNING: Found unexpected fields: ['fjournal', 'journal'] in perko82 (@inproceedings)
+WARNING: Found unexpected fields: ['fjournal', 'journal'] in scharlemann98 (@incollection)
+WARNING: Found unexpected fields: ['volume'] in cerf98 (@misc)
 ```
