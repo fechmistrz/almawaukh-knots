@@ -15,6 +15,9 @@ endef
 all: prepare chapter-all release
 draft: prepare chapter-draft release
 
+test:
+	python3 tools/verify_bib_authors.py --bib src/knot_theory.bib
+
 prepare:
 	mkdir -p build
 
