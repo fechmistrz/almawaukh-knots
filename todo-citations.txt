@@ -1003,11 +1003,6 @@
     MRNUMBER = {1452436},
     TITLE = {Stick numbers and composition of knots and links},
 
-@article {hougardy97,
-    AUTHOR = {Dasbach, Oliver T. and Hougardy, Stefan},
-    MRNUMBER = {1464581},
-    TITLE = {Does the {J}ones polynomial detect unknottedness?},
-
 @article {jin97,
     AUTHOR = {Jin, Gyo T.},
     MRNUMBER = {1452441},
