@@ -1111,11 +1111,6 @@
     MRNUMBER = {1634469},
     TITLE = {A new proof of {M}arkov's braid theorem},
 
-@article {bigelow99,
-    AUTHOR = {Bigelow, Stephen J.},
-    MRNUMBER = {1725480},
-    TITLE = {The {B}urau representation is not faithful for {$n=5$}},
-
 @article {cooper99,
     AUTHOR = {Cooper, Daryl and Lickorish, William B. R.},
     MRNUMBER = {1605940},
