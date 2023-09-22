@@ -26,7 +26,7 @@ bibtex knot-theory
 makeindex knot-theory
 pdflatex knot-theory.tex
 pdflatex knot-theory.tex
-i```
+```
 
 ## Do zrobienia
 Naprawić `./src/merridew/bibliography_sort.py --bib src/knot_theory.bib`:
