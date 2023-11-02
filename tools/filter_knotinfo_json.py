@@ -159,15 +159,19 @@ def symmetric_not_acheiral(knots):
 def count_fibered(knots):
     print("Counting fibered prime knots with small crossing number")
     neuwirth = dict()
+    prime = dict()
     for knot in knots.itertuples():
         cr = knot.crossing_number
+        if cr not in prime:
+            prime[cr] = list()
+        prime[cr].append(knot.name)
         if knot.fibered:
             if cr not in neuwirth:
                 neuwirth[cr] = list()
             neuwirth[cr].append(knot.name)
 
     for k, v in neuwirth.items():
-        print(f"{k} crossings: {len(v)} prime knots")
+        print(f"{k} crossings: {len(v)} fibered prime knots / {len(prime[k])} prime knots")
 
     return
 

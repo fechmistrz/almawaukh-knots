@@ -19,13 +19,18 @@ Dawniej nazywano je splotami Neuwirtha, gdyż ten pokazał w~swojej pracy dyplom
 
 (Jeśli węzeł pierwszy o co najwyżej ośmiu skrzyżowaniach nie został wymieniony w tym przykładzie, to nie jest rozwłókniony).
 Rozkład liczby węzłów rozwłóknionych wśród węzłów pierwszych wygląda następująco:
-\begin{itemize}
-\item 9 skrzyżowań -- 23 węzły,
-\item 10 skrzyżowań -- 74 węzły,
-\item 11 skrzyżowań -- 256 węzłów,
-\item 12 skrzyżowań -- 873 węzły.
-\end{itemize}
+
+\renewcommand*{\arraystretch}{1.4}
+\footnotesize
+\begin{longtable}{lcccccccccc}
+    \hline
+    \textbf{skrzyżowania} & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 &  11 &  12 \\ \hline \endhead
+    węzły pierwsze & 1 & 1 & 2 & 3 & 7 & 21 & 49 & 165 & 552 & 2176 \\
+    rozwłóknione węzły pierwsze & 1 & 1 & 1 & 1 & 3 & 12 & 23 & 74 & 256 & 873 \\
+    \hline
+\end{longtable}
 % ZWERYFIKOWANO: funkcja count_fibered
+\normalsize
 
 Lwia część analizy węzłów o 12 skrzyżowaniach została wykonana przez Stojmenowa i~Hirasawę, jak podaje baza danych KnotInfo \cite{knotinfo22}.
 % źródło: https://knotinfo.math.indiana.edu/descriptions/fibered.html
@@ -40,18 +45,24 @@ Lwia część analizy węzłów o 12 skrzyżowaniach została wykonana przez Sto
 % Kryterium to jest wystarczające dla węzłów pierwszych o co najwyżej 10 skrzyżowaniach oraz alternujących, ale znany jest przykład niewłóknistego węzła o 21 skrzyżowaniach, którego wielomian Alexandera ma postać $t^4 - t^3 + t^2 - t +1$.
 % TODO: ustalić, czemu tak dużo skrzyżowań (z której książki ten fakt?). Sam wynik wydaje się być folklorem, tzn. nie wiadomo kto pierwszy to pokazał.
 
-Kryterium to jest wystarczające dla węzłów pierwszych o co najwyżej 10 skrzyżowaniach, ale $11n_{34}$, $11n_{42}$, $11n_{73}$ oraz osiemnaście węzłów pierwszych o 12 skrzyżowaniach nie są rozwłóknione mimo tego, jak wygląda ich wielomian Alexandera.
+Powyższy warunek konieczny jest też dostateczny dla węzłów pierwszych o co najwyżej 10 skrzyżowaniach.
+Trzy węzły pierwsze o 11 skrzyżowaniach: $11n_{34}$, $11n_{42}$, $11n_{73}$ oraz osiemnaście o 12 skrzyżowaniach są świadkami, że wynikanie w dwie strony nie zachodzi.
 % ZWERYFIKOWANO: funkcja alexander_fibered
+Trzynaście z tych osiemnastu: 12n57, 12n210, 12n214, 12n258, 12n279, 12n382, 12n394, 12n464, 12n483, 12n535, 12n650, 12n801 ma wielomian Alexandera, którego stopień jest dwukrotnością 3-genusu (cztery znalazł Mikami Hirasawa, pozostałe Stefan Friedl oraz Taehee Kim).
+% źródło: https://knotinfo.math.indiana.edu/descriptions/fibered.html
+\index[persons]{Friedl, Stefan}%
+\index[persons]{Taehee, Kim}%
+\index[persons]{Hirasawa, Mikami}%
+Wiemy to, ponownie, dzięki bazie KnotInfo \cite{knotinfo22}.
 
 \begin{example}
 \index{węzeł!skręcony}%
     Niech $K$ będzie węzłem skręconym z $n$ półskrętami.
+    Wtedy $K$ nie jest rozwłókniony (chyba że $n = 1$), ponieważ jego wielomianem Alexandera jest
 \index{wielomian!Alexandera}%
-    Wtedy jego wielomianem Alexandera jest
     \begin{equation}
-        \alexander_n(t) = n \cdot \left(t + \frac 1 t \right) - (2n+1),
+        \alexander_n(t) = n \cdot \left(t + \frac 1 t \right) - (2n+1).
     \end{equation}
-    więc węzeł $K$ nie jest rozwłókniony, chyba że $n = 1$.
 \end{example}
 
 \begin{corollary}
@@ -66,7 +77,7 @@ Rolfsen \cite[s. 326]{rolfsen76} podaje jako ćwiczenie w swojej książce:
     Rodzina węzłów rozwłóknionych jest zamknięta na branie sum spójnych.
 \end{proposition}
 
-Dzięki książce Kawauchiego \cite[s. 84]{kawauchi96} wiem jeszcze, że Stallings ma swoje twierdzenie o~rozwłóknienieach dla zwartych 3-rozmaitości ze specjalnym przypadkiem:
+Dzięki książce Kawauchiego \cite[s. 84]{kawauchi96} jesteśmy świadom jeszcze, że Stallings ma swoje twierdzenie o~rozwłóknienieach dla zwartych 3-rozmaitości ze specjalnym przypadkiem:
 
 \begin{proposition}
     Niech $y$ będzie jedynym epimorfizmem grupy splotu $L$ na nieskończoną grupę cykliczną $\langle t \rangle$, który posyła każdy południk na $t$. % each meridian
@@ -76,4 +87,3 @@ Dzięki książce Kawauchiego \cite[s. 84]{kawauchi96} wiem jeszcze, że Stallin
 \index{węzeł!rozwłókniony|)}%
 
 % koniec podsekcji Węzły rozwłóknione
-
