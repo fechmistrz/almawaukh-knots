@@ -5,14 +5,41 @@
 % DICTIONARY;braid number;liczba warkoczowa;-
 \begin{definition}
 \label{def:braid_number}%
-    Liczba warkoczowa to minimalna liczba pasm, na których można zapleść warkocz, którego domknięciem jest wyjściowy splot.
+    Niech $L$ będzie splotem.
+    Minimalną liczbę pasm, na których można zapleść warkocz $b$, którego domknięciem jest splot $L$, nazywamy liczbą warkoczową splotu $L$.
 \end{definition}
 
 Tylko jeden węzeł ma liczbę warkoczową $1$, jest to niewęzeł.
 Dwuwarkoczowe są dokładnie węzły torusowe typu $(2, n)$ dla $|n| \ge 3$.
 Węzły spełniające $\braid (K) = 3$ nie zostały jeszcze sklasyfikowane.
-Liczba warkoczowa splotu zależy od orientacji ogniw i~trudno wyznacza się w~ogólnym przypadku.
+Liczba warkoczowa splotu zależy od orientacji ogniw (patrz rysunek poniżej) i~trudno wyznacza się w~ogólnym przypadku.
 Znamy ją między innymi dla węzłów torusowych (fakt~\ref{cor:torus_braid_number}).
+
+\begin{comment}
+    \begin{figure}[H]
+        \centering
+        \begin{minipage}[b]{.24\linewidth}
+            \centering
+            \includegraphics[width=\linewidth]{../data/links/l4a1-0.png}
+            \subcaption{$\braid (L_4a_{1, 0}) = 3$}
+        \end{minipage}
+        \begin{minipage}[b]{.24\linewidth}
+            \centering
+            \includegraphics[width=\linewidth]{../data/links/l4a1-1.png}
+            \subcaption{$\braid (L_4a_{1, 1}) = 2$}
+        \end{minipage}
+        \begin{minipage}[b]{.24\linewidth}
+            \centering
+            \includegraphics[width=\linewidth]{../data/links/l10a153-u.png}
+            \subcaption{$L_{10}a_{153}$}
+        \end{minipage}
+        \caption{Liczba warkoczowa splotu zależy od orientacji}
+    \end{figure}
+\end{comment}
+
+Według bazy danych LinkInfo\footnote{\url{https://linkinfo.sitehost.iu.edu/index.php} (sprawdzono 8 listopada 2023 roku).} istnieją 1424 niezorientowane sploty pierwsze o indeksie skrzyżowaniowym 11 lub mniejszym.
+Spośród nich, 622 sploty mają tę samą liczbę warkoczową niezależnie od tego, jak zorientowane są ich ogniwa.   
+Z drugiej strony dokładnie jeden splot z~bazy LinkInfo, $L_{10}a_{153}$, może mieć aż cztery różne liczby warkoczowe: 3, 4, 5 lub 6.
 
 \begin{proposition}
     Węzeł o~$n$ skrzyżowaniach można zapleść na $n - 1$ pasmach: $\crossing K \ge 1 + \braid K$.
