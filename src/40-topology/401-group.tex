@@ -1,16 +1,21 @@
 
-\section{Grupa splotu}
-Ponieważ dopełnienie dowolnego splotu, zarówno w przestrzeni $\R^3$ jak i $S^3$, jest łukowo spójne, jego grupa podstawowa nie zależy od wyboru punktu bazowego.
+\section{Grupa węzła}
+Ponieważ dopełnienie dowolnego węzła, zarówno w przestrzeni $\R^3$ jak i $S^3$, jest łukowo spójne, jego grupa podstawowa nie zależy od wyboru punktu bazowego.
 Dzięki temu poniższa definicja ma sens:
 
-\begin{definition}
-\index{grupa!splotu}%
-    Niech $L$ będzie splotem.
-    Grupę podstawową jego dopełnienia, $\pi_1(\R^3 \setminus L)$, nazywamy grupą splotu i oznaczamy $\pi(L)$.
+\begin{definition}[grupa węzła]
+\index{grupa!węzła}%
+    Niech $K$ będzie węzłem.	
+    Grupę podstawową jego dopełnienia,
+    \begin{equation}
+    	\pi(L) := \pi_1 \left(\R^3 \setminus L\right),
+    \end{equation}
+    nazywamy grupą węzła i oznaczamy $\pi(K)$.
 \end{definition}
 
-Kiedy mówimy o~grupie węzła, zazwyczaj mamy na myśli obiekt opisany powyżej, a nie grupę kolorującą z~definicji \ref{def:colouring_group}.
-Nie należy ich mylić: zazwyczaj nie są izomorficzne, grupa węzła ma dużo większe znaczenie.
+Nie należy (i dosyć trudno jest) mylić grupy węzła z grupą kolorującą (patrz definicja \ref{def:colouring_group}).
+Jak wkrótce się przekonamy, ta pierwsza jest zawsze nieskończona i poza grupą niewęzła, nieprzemienna.
+Natomiast grupa kolorująca jest skończona dla splotów o~niezerowym wyznaczniku i zawsze przemienna.
 
 Podamy najpierw kilka przykładów węzłów oraz ich grup.
 
@@ -19,7 +24,7 @@ Podamy najpierw kilka przykładów węzłów oraz ich grup.
 \end{example}
 
 Z twierdzenia o pętli, czyli uogólnienia lematu Dehna wynika, że niewęzeł jest jedynym węzłem, którego grupą podstawową jest $\Z$.
-% https://math.stackexchange.com/questions/3468034/knot-group-is-mathbbz-iff-k-is-the-unknot
+% TODO: https://math.stackexchange.com/questions/3468034/knot-group-is-mathbbz-iff-k-is-the-unknot
 
 \begin{example}
 \label{exm:trefoil_group}%
@@ -55,21 +60,15 @@ Jej wyznaczenie to popularne ćwiczenie w~podręcznikach topologii algebraicznej
     Grupa ósemki: $\langle x, y \mid yxy^{{-1}}xy=xyx^{{-1}}yx \rangle$.
 \end{example}
 
-\begin{example}
-    Grupa splotu Hopfa: $\Z \oplus \Z$.
-\end{example}
-
-Jak wspomina Kawauchi, z klasyfikacji abelowych grup podstawowych 3-rozmaitości wynika, że $\Z$ oraz $\Z \oplus \Z$ są jedynymi przemiennymi grupami splotów i podaje w formie ćwiczenia informację, że splot Hopfa oraz niewęzeł to jedyne sploty o przemiennej grupie \cite[s. 83]{kawauchi96}.
-
 \begin{proposition}
     \label{prop:knot_group_invariant}
-    Jeżeli sploty $L_1, L_2$ są równoważne, to grupy $\pi(L_1), \pi(L_2)$ są izomorficzne.
-    Innymi słowy, grupa jest niezmiennikiem splotów.
+    Jeżeli węzły $L_1, L_2$ są równoważne, to grupy $\pi(L_1), \pi(L_2)$ są izomorficzne.
+    Innymi słowy, grupa jest niezmiennikiem węzłów.
 \end{proposition}
 
 \begin{proof}
-    Gdy dwa sploty są równoważne, istnieje izotopijny z~identycznością homeomorfizm $\R^3 \to \R^3$, który posyła pierwszy splot na drugi.
-    Obcięty do dopełnień splotów indukuje izomorfizm grup podstawowych.
+    Gdy dwa węzły są równoważne, istnieje izotopijny z~identycznością homeomorfizm $\R^3 \to \R^3$, który posyła pierwszy węzeł na drugi.
+    Obcięty do dopełnień węzłów indukuje izomorfizm grup podstawowych.
 \end{proof}
 
 Na przykładzie grupy $\langle x,y,z \mid xyx=yxy,xzx=zxz\rangle$, która odpowiada zarówno sumie prostej różno-, jak i~jednoskrętnych trójlistników, widać że implikacja odwrotna nie zachodzi: mają one różne sygnatury (patrz uwaga za wnioskiem \ref{cor:acheiral_signature}).
@@ -104,7 +103,43 @@ Twierdzenie odwrotne do faktu \ref{prop:knot_group_invariant} jest prawdziwe w k
 \index{chirurgia Dehna}%
 \end{proof}
 
-Kawauchi \cite[s. 73]{kawauchi96} proponuje jako proste ćwiczenie  pokazanie, że grupa sumy niespójnej splotów $L_1, L_2$ jest izomorficzna z wolnym produktem $\pi(L_1) * \pi(L_2)$, a następnie przytacza twierdzenie:
+Waldhausen \cite{waldhausen68} pokazał dla pewnej dużej klasy 3-rozmaitości, że są scharakteryzowane topologicznie przez ich grupy podstawowe.
+\index[persons]{Waldhausen, Friedhelm}%
+Potem odkryto, że:
+
+\begin{proposition}
+    Grupa węzła wyznacza wartość jego genusu.
+\end{proposition}
+\begin{proof}[Niedowód]
+    Jest to wniosek 3 z~pracy \cite{feustel78} Feustela.
+\end{proof}
+\begin{proposition}
+    Grupa węzła złożonego wyznacza wartość jego liczby mostowej.
+\end{proposition}
+\begin{proof}[Niedowód]
+    Jest to wniosek 3 z~pracy \cite{feustel78} Feustela.
+\end{proof}
+
+Wreszcie Thurston \cite{thurston82} jako efekt uboczny uzyskał kolejny wynik o grupie: hiperboliczne rozmaitości o skończonej objętości (domknięte rozmaitości lub takie, których brzeg jest zbudowany z torusów) są wyznaczone przez ich grupę podstawową.
+\index[persons]{Thurston, William}%
+
+\subsection{Grupa splotu}
+
+Kawauchi \cite[s. 73]{kawauchi96} definiuje grupę splotu jako grupę podstawową jego dopełnienia.
+Dla Milnora \cite{milnor54} grupą splotu był pewien iloraz\footnote{%
+Niech $L$ będzie splotem w otwartej 3-rozmaitości $M$, $\pi(L)$ grupą podstawową dopełnienia $L$, zaś $L^i$ splotem powstałym przez usunięcie $i$-tego ogniwa.
+Niech $A_i(L)$ oznacza jądro naturalnej inkluzji $\pi(L) \to \pi(L^i)$, zaś $[A_i]$ komutanta.
+Wtedy $E(L) := [A_1][A_2] \cdots [A_n]$ jest podgrupą normalną $\pi(L)$.
+Milnor nazywa iloraz $\pi(L) / E(L)$ grupą splotu.%
+} tamtej grupy, dlatego należy zachować ostrożność i~sprawdzić, która konwencja obowiązuje.
+% TODO: John Milnor (1954). Link groups. Ann. of Math. (2), 59, 177–195. https://mathscinet.ams.org/mathscinet/relay-station?mr=71020
+My będziemy mieć do czynienia jedynie z~grupą podstawową dopełnienia.
+
+\begin{example}
+    Grupa splotu Hopfa: $\Z \oplus \Z$.
+\end{example}
+
+Kawauchi wspomina, że istnieją sploty, których grupa splotu nie odróżnia, podaje w~formie ćwiczenia \cite[s. 73]{kawauchi96}, że grupa sumy niespójnej splotów $L_1, L_2$ to $\pi(L_1) * \pi(L_2)$ i~przytacza twierdzenie:
 
 \begin{proposition}
     Niech $L \subseteq S^3$ będzie splotem.
@@ -137,8 +172,8 @@ Kawauchi \cite[s. 73]{kawauchi96} proponuje jako proste ćwiczenie  pokazanie, �
     Niech $L \subseteq S^3$ będzie splotem.
     Następujące warunki są równoważne:
     \begin{enumerate}
-        \item splot $L$ jest prosty i niepierścieniowaty\footnote{simple, anannular}
-        \item grupa $\pi(L)$ jest nieprzemienną, nierozkładalną względem produktu wolnego podgrupą dyskretną $PSL_2(\C)$.
+        \item splot $L$ jest prosty i niepierścieniowaty\footnote{simple, anannular},
+        \item grupa $\pi(L)$ jest nieprzemienną, nierozkładalną względem produktu wolnego grupą, izomorficzną z dyskretną podgrupą $PSL_2(\C)$.
     \end{enumerate}
 \end{proposition}
 
@@ -146,31 +181,27 @@ Kawauchi \cite[s. 73]{kawauchi96} proponuje jako proste ćwiczenie  pokazanie, �
     Wniosek z twierdzenia Thurstona o hiperbolizacji, patrz \cite[s. 76]{kawauchi96}.
 \end{proof}
 
-Kawauchi wspomina jeszcze w \cite[s. 85]{kawauchi96}:
+Jak wspomina Kawauchi \cite[s. 83]{kawauchi96}, jeśli $G$ jest nietrywialną przemienną podgrupą $\pi(L)$, to $G \cong \Z$ lub $\Z \oplus \Z$.
+Wynika to z~klasyfikacji abelowych grup podstawowych 3-rozmaitości.
+W~szczególności, jeśli $\pi(L) \cong \Z \oplus \Z$, to $L$ jest splotem Hopfa.
 
 \begin{proposition}
-    Grupa splotu jest rezydualnie skończona i lokalnie indeksowalna: dla każdej  nietrywialnej skończenie generowanej podgrupy, istnieje epimorfizm z niej w $\Z$.
+	Niech $L$ będzie splotem.
+	Centrum grupy $\pi(L)$ jest nietrywialne wtedy i tylko wtedy, gdy dopełnienie splotu $L$ jest rozmaitością Seiferta.
 \end{proposition}
 
-Waldhausen \cite{waldhausen68} pokazał dla pewnej dużej klasy 3-rozmaitości, że są scharakteryzowane topologicznie przez ich grupy podstawowe.
-\index[persons]{Waldhausen, Friedhelm}%
-Potem odkryto, że:
+\begin{corollary}
+	Niech $K$ będzie węzłem.
+	Centrum grupy $\pi(K)$ jest nietrywialne wtedy i tylko wtedy, gdy $K$ jest węzłem torusowym.
+\end{corollary}
+
+O tym samym, ale nie tak samo, pisaliśmy już w \ref{prp:torus_nontrivial_center}.
+Kawauchi \cite[s. 85]{kawauchi96} żegna się z grupami splotów:
 
 \begin{proposition}
-    Grupa węzła wyznacza wartość jego genusu.
+    Grupa splotu jest rezydualnie skończona (dla każdego nietrywialnego elementu $x \in \pi$, istnieje homomorfizm $f: \pi \to H$ taki, że grupa $H$ jest skończona i $f(x) \neq 1$) i lokalnie indeksowalna (dla każdej  nietrywialnej skończenie generowanej podgrupy $H \le \pi$, istnieje epimorfizm $H \to \Z$).
 \end{proposition}
-\begin{proof}[Niedowód]
-    Jest to wniosek 3 z~pracy \cite{feustel78} Feustela.
-\end{proof}
-\begin{proposition}
-    Grupa węzła złożonego wyznacza wartość jego liczby mostowej.
-\end{proposition}
-\begin{proof}[Niedowód]
-    Jest to wniosek 3 z~pracy \cite{feustel78} Feustela.
-\end{proof}
 
-Wreszcie Thurston \cite{thurston82} jako efekt uboczny uzyskał kolejny wynik o grupie: hiperboliczne rozmaitości o skończonej objętości (domknięte rozmaitości lub takie, których brzeg jest zbudowany z torusów) są wyznaczone przez ich grupę podstawową.
-\index[persons]{Thurston, William}%
 
 \input{40-topology/401a-wirtinger}
 
