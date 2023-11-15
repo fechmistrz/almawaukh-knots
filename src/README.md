@@ -34,3 +34,10 @@ Wyszukiwanie dawno nieedytowanych plików:
 ```
 find src/[12345]* -name '*.tex' | while read -r line; do echo $(git log --format=format:%cs -n 1 -- $line) $line; done | sort -V
 ```
+
+Pokazywanie indeksu jako przypis:
+```
+find src/ -type f | grep tex | grep -E 'src/[12345]' | sort -V | while read -r line; do
+    cat "$line" | sed -r 's_\\index\{(.*)\}_\\footnote{INDEKS: \1}_g' | sed -r 's_\\index(\[[^]]+\])\{(.*)\}_\\footnote{INDEKS KWADRATOWY: \2}_g' > x && mv x "$line";
+done
+```
