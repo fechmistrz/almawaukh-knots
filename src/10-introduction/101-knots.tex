@@ -1,17 +1,43 @@
 
 \section{Węzły i~sploty}
-Największą różnicą między węzłami matematycznymi oraz tymi z~prawdziwego jest życia jest to, że te pierwsze nie mają luźnych końców.
-Można przyjąć nieidealną, naiwną definicję:
 
-\begin{definition}[naiwny węzeł]
+Wprowadzamy pojęcia węzła i splotu, fundamentalnych obiektów teorii, o której napisana została ta książka.
+Oprócz tego podajemy definicję, kiedy dwa węzły lub sploty uznajemy za tożsame oraz uzasadniamy, dlaczego akurat ta definicja jest właściwa.
+
+Istnieją odnogi teorii węzłów, które badają inne, pokrewne obiekty.
+Mamy na przykład węzły obramowane:
+
+% DICTIONARY;frame;obramowany;węzeł
+% DICTIONARY;framing;obramowanie;-
+\begin{definition}[obramowanie]
+\index{obramowanie|see {węzeł obramowany}}%
+\index{węzeł!obramowany}%
+    Każde nieznikające normalne pole wektorowe na splocie nazywamy obramowaniem.
+    Jeżeli wszystkie wektory są równoległe do płaszczyzny, na której leży diagram tego splotu, obramowanie nazywamy płaskim\footnote{Po angielsku ,,blackboard framing'', ale nie da się tego sensownie przetłumaczyć...}.
+\end{definition}
+
+% Liczba samozaczepienia zorientowanego obramowanego splotu $L$ to indeks zaczepienia tego splotu ze sobą pchniętym w kierunku obramowania, jej wartość to dokładnie spin.
+
+% DICTIONARY;virtual;wirtualny;węzeł
+% DICTIONARY;welded;zespawany;węzeł
+% DICTIONARY;long;długi;węzeł
+Są jeszcze węzły wirtualne, zespawane (iloraz węzłów wirtualnych przez ruch znany jako ,,nadskrzyżowania komutują''), długie (gdzie końce nie są ze sobą zszyte, ale umieszczone tak daleko, że są nieosiągalne) i inne.
+\index{węzeł!wirtualny}%
+\index{węzeł!zespawany}%
+\index{węzeł!długi}%
+Ta książka nie zawiera zbyt wiele informacji o wspomnianych bytach.
+% TODO wirtualne: 2994594 10.1142/S021821651240007X
+% TODO wirtualne: 2191949 https://arxiv.org/pdf/1409.2823.pdf 
+
+\subsection{Węzły}
+Matematyczne węzły można traktować jako model elastycznej oraz pozbawionej grubości liny, której luźne końce zostały ze sobą połączone.
+Sugeruje to przyjęcie naiwnej definicji:
+
+\begin{definition}[węzeł]
     Ciągłe oraz różnowartościowe odwzorowanie $S^1 \to \R^3$ nazywamy węzłem.
 \end{definition}
 
-\emph{Ostrzeżenie}.
-Przytoczymy teraz techniczny opis, jak naprawić naiwną definicję węzła. 
-Jeśli czyni to życie lżejszym, to przy pierwszym czytaniu można przyjąć prostszą definicję\footnote{Węzeł jest obrazem funkcji $f \colon \R \to \R^3$ klasy $C^\infty$, której pochodna nie znika w żadnym punkcie i która spełnia warunek $f(x_1) = f(x_2) \iff x_1 - x_2 \in \Z$} i przejść do definicji \ref{def:link} splotu, ale nie mam pojęcia, jak uprościć izotopię otaczającą.
-
-Niestety, naiwna definicja dopuszcza ona patologiczne z~kombinatorycznego punktu widzenia węzły dzikie, jak ten z~rysunku \ref{fig_wild_knot}.
+Takie rozwiązanie nie jest doskonałe, ponieważ oprócz pożądanych (cokolwiek to znaczy) węzłów, obejmuje wiele innych, patologicznych obiektów takich jak ten z~rysunku \ref{fig_wild_knot}.
 
 \begin{figure}[H]
     \centering
@@ -23,17 +49,47 @@ Niestety, naiwna definicja dopuszcza ona patologiczne z~kombinatorycznego punktu
 \end{figure}
 \footnotetext{\url{https://upload.wikimedia.org/wikipedia/commons/2/2f/Wildknot.svg}}
 
-Zastanówmy się, jakim formalizmem opisać manipulowanie fizycznym sznurkiem, by wykluczyć węzły dzikie z~naszych rozważań.
-Nie można użyć izotopii (dwa węzły są izotopijne, jeśli istnieje ciągła funkcja $F \colon S^1 \times [0, 1] \to \R^3$ taka, że $F(-, 0)$ jest pierwszym, zaś $F(-,1)$ drugim węzłem), gdyż każdy węzeł jest izotopijny z punktem:
+Zamiast wyjaśnić, jakie są jego niepożądane właściwości, podamy od razu dobrą definicję.
+Można dodać założenie o tym, że pochodna odwzorowania $S^1 \to \R^3$ nie znika w żadnym punkcie, albo ograniczyć się do łamanych:
 
-% TODO: Tu brakuje obrazka.
+\begin{definition}[węzeł]
+    Różnowartościowe odwzorowanie $S^1 \to \R^3$, którego pochodna istnieje i nie znika w żadnym punkcie, nazywamy węzłem.
+\end{definition}
+
+% DICTIONARY;knot;węzeł;-
+% DICTIONARY;tame;poskromiony;węzeł
+% DICTIONARY;wild;dziki;węzeł
+\begin{definition}[węzeł?]
+\index{węzeł}%
+\label{def:knot}%
+    Gładkie włożenie $S^1 \to \R^3$ otaczająco izotopijne z~zamkniętą łamaną bez samoprzecięć nazywamy węzłem poskromionym.
+    Dwa węzły są równoważne, jeśli istnieje pomiędzy nimi izotopia otaczająca.
+\end{definition}
+% TODO: potrzeba jednocześnie gładkości i łamanych?
+
+Czasami wygodniej jest rozpatrywać węzeł jako włożenie $S^1 \to \S^3$ albo dopuścić do myśli węzły nieposkromione.
+Ale jeśli nie zaznaczono inaczej, nie robimy tego: pisząc węzeł mamy na myśli poskromione włożenie w przestrzeń $\R^3$, nie $S^3$.
+
+Potrzeba jeszcze matematycznego opisu manipulacji, jakim możemy poddawać sznur trzymany w ręce.
+Izotopia jest niewłaściwym narzędziem do tego celu: powiedzielibyśmy, że dwa węzły $K_1, K_2$ sa izotopijne, jeśli istnieje ciągła funkcja $F \colon S^1 \times [0, 1] \to \R^3$ taka, że $K_1 = F(-, 0)$ jest pierwszym, zaś $K_2 = F(-,1)$ drugim węzłem (funkcję $F$ nazywa się izotopia).
+Tym razem źródło problemów można wskazać jawnie.
+Sztuczka Alexandera pozwala usunąć dowolny zaplątany fragment z węzła:
+
+% https://i.stack.imgur.com/QlTxR.png
+\begin{figure}[H]
+    \centering
+%\begin{comment}
+    \includegraphics[width=0.44\linewidth]{../data/missing.jpg}
+%\end{comment}
+    \caption[caption-for-lof-2]{Sztuczka? Alexandera??}
+    \label{alexander_trick}
+\end{figure}
 
 W podobny sposób moglibyśmy przekształcić dowolny węzeł w~niewęzeł.
 Teoria, w~której wszystkie obiekty są takie same, nie jest zbyt ciekawa.
-Zwykła izotopia nie oddaje dobrze tego, czym jest równoważność węzłów wykonanych z~prawdziwego sznurka.
-Trzeba od niej wymagać dodatkowo, by była gładka albo lokalnie płaska.
-Z twierdzenia o rozszerzaniu izotopii wynika, że można ją wtedy podnieść do izotopii otaczającej.
-Ta ostatnia uwzględnia, jak węzeł leży w~przestrzeni i okazuje się być właściwym pojęciem równości dla teorii węzłów:
+Od izotopii należy wymagać gładkości albo lokalnej płaskości,
+% https://math.stackexchange.com/questions/1311865/equivalence-of-knots-ambient-isotopy-vs-homeomorphism
+co zdaje się prowadzić do pojęcia izotopii otaczającej, która uwzględnia nie tylko sam węzły, ale też to, jak leżą w otaczającej je przestrzeni.
 
 % DICTIONARY;isotopy;izotopia;-
 % DICTIONARY;ambient;otaczająca;izotopia
@@ -53,28 +109,16 @@ W topologii rozważa się włożenia dowolnych rozmaitości, nam wystarczy jeden
 Intuicyjnie, funkcja $F$ zniekształca przestrzeń $\R^3$ tak, że w~chwili początkowej $t = 0$ widzimy pierwszy, zaś w~chwili końcowej $t = 1$ drugi węzeł.
 Izotopia otaczająca nie pozwala na ściąganie zaplątanych fragmentów do punktu.
 
-% TODO: Homeomorfizmy $F_t$ można zastąpić przez dyfeomorfizmy zachowujące orientację.
+Formalnie węzły to pewne odwzorowania, więc prawidłowym sposobem na zapisanie, że są izotopijne (czyli dla nas: równe), jest $K_1 \cong K_2$.
+Ponieważ nie prowadzi to do problemów, będziemy jednak stosować zapis $K_1 = K_2$.
+Jednocześnie często węzeł jako odwzorowanie nie będzie odróżniany od obrazu tego odwzorowania.
 
-% DICTIONARY;knot;węzeł;-
-% DICTIONARY;tame;poskromiony;węzeł
-% DICTIONARY;wild;dziki;węzeł
-\begin{definition}[węzeł]
-\index{węzeł}%
-\label{def:knot}%
-    Gładkie włożenie $S^1 \to \R^3$ otaczająco izotopijne z~zamkniętą łamaną bez samoprzecięć nazywamy węzłem poskromionym.
-    Dwa węzły są równoważne, jeśli istnieje pomiędzy nimi izotopia otaczająca.
-\end{definition}
-
-Przez prawie całą książkę interesować nas będą jedynie węzły poskromione, czyli takie które nie są dzikie,
-dlatego jeśli nie zaznaczono inaczej, od teraz pisząc węzeł mamy na myśli węzeł poskromiony.
 Istnieje jeszcze jedna, konkurencyjna definicja węzłów równoważnych:
 
 \begin{proposition}
 \label{def:equivalent_knots_2}%
-    Dwa węzły są równoważne, gdy jeden z~nich jest obrazem drugiego przez zachowujący orientację homeomorfizm $\R^3 \to \R^3$.
+    Dwa węzły są równoważne wtedy i tylko wtedy, gdy jeden z~nich jest obrazem drugiego przez zachowujący orientację homeomorfizm $\R^3 \to \R^3$.
 \end{proposition}
-
-Stwierdzenie to przestaje być prawdziwe po zastąpieniu przestrzeni $\R^m$ przez $S^m$.
 
 \begin{proof}
 \index[persons]{Milnor, John}%
@@ -90,13 +134,12 @@ Stwierdzenie to przestaje być prawdziwe po zastąpieniu przestrzeni $\R^m$ prze
         \end{cases} .
     \end{equation}
 
-    Funkcja $F$ jest gładka, gdyż na mocy lematu Hadamarda funkcja $f$ zapisuje się jako suma $x_1 g_1(x) + \ldots + x_mg_m(x)$, gdzie funkcje $g_i$ są gładkie, co jakoś kończy dowód.
+    Na mocy lematu Hadamarda funkcja $f$ zapisuje się jako suma $x_1 g_1(x) + \ldots + x_mg_m(x)$, gdzie funkcje $g_i$ są gładkie, więc funkcja $F$ też jest gładka, co jakoś kończy dowód.
 \end{proof}
 
-Formalnie węzły to pewne odwzorowania, więc prawidłowym sposobem na zapisanie, że są izotopijne (czyli dla nas: równe), jest $K_1 \cong K_2$.
-Ponieważ nie prowadzi to do problemów, będziemy jednak stosować zapis $K_1 = K_2$.
-Jednocześnie często węzeł jako odwzorowanie nie będzie odróżniany od obrazu tego odwzorowania.
+Milnor zauważa, że istnieje dyfeomorfizm $S^6 \to S^6$ stopnia $+1$, który nie jest gładko izotopijny z~identycznością!
 
+\subsection{Sploty}
 % DICTIONARY;link;splot;-
 % DICTIONARY;component;ogniwo splotu;-
 \begin{definition}[splot, ogniwo]
@@ -140,6 +183,36 @@ W~takiej sytuacji obydwa sploty mają tyle samo ogniw.
     \end{figure}
 \end{comment}
 
+% TODO: przesunąć to gdzieś dalej, za definicję skrzyżowania
+Poniższa definicja nie jest nam jeszcze potrzebna, ale wygodnie przytoczyć ją już teraz.
+
+% DICTIONARY;splittable;rozszczepialny;splot
+\begin{definition}[rozszczepialność]
+\index{splot!rozszczepialny}%
+    Jeżeli splot $L$ można zanurzyć w przestrzeni $\R^3$ tak, że niektóre jego ogniwa będą leżeć nad pewną rozłączną ze splotem płaszczyzną, zaś pozostałe pod nią, to powiemy, że splot $L$ jest rozszczepialny.
+\end{definition}
+
+Liczbę nierozszczepialnych splotów pierwszych zebrano w~tabeli:
+
+\renewcommand*{\arraystretch}{1.4}
+\footnotesize
+\begin{longtable}{lcccccccccccc}
+    \hline
+    \textbf{skrzyżowania} & 0 & 1 & 2 & 3 & 4 & 5 &  6 &  7 &  8 & 9 & 10 & 11 \\ \hline \endhead
+    sploty pierwsze, nierozszczepialne & 0 & 0 & 1 & 0 & 1 & 1 & 6 & 9 & 29 & 83 & 287 & 1007 \\
+    (w tym) alternujące & 0 & 0 & 1 & 0 & 1 & 1 & 5 & 7 & 21 & 55 & 174 & 548 \\
+    (w tym) niealternujące & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 2 & 8 & 28 & 113 & 459 \\
+    \hline
+\end{longtable}
+\normalsize
+
+W bazie danych OEIS można trafić na ciąg \href{https://oeis.org/A086826}{A086826} opisujący liczbę nierozszczepialnych pierwszych i złożonych węzłów i splotów.
+Powyższa tabela zawiera liczby na podstawie portalu LinkInfo \cite{linkinfo23}.
+
+Pewne kryteria rozszczepialności konkretnych splotów znaleźć można u Kawauchiego \cite[s. 36-38]{kawauchi96}.
+
+\subsection{Dopełnienia węzłów i splotów}
+
 Jeśli dwa węzły są równoważne, to ich dopełnienia są oczywiście homeomorficzne.
 Pytanie o~prawdziwość implikacji odwrotnej jako pierwszy zadał najprawdopodobniej Tietze \cite{tietze08} w~1908 roku.
 \index[persons]{Tietze, Heinrich}%
@@ -162,56 +235,9 @@ Dwa lata później poznaliśmy pozytywną odpowiedź na pytanie Tietzego: każdy
     Pełny dowód zawiera praca \cite{gordon89}.
 \end{proof}
 
-Twierdzenie to zamienia problem lokalny (czy dwa węzły w kuli $S^3$ są równoważne?) w~problem globalny (czy dwie przestrzenie topologiczne są homeomorficzne?).
-Whitehead w~pracy \cite{whitehead37} z~1937 roku podał nieskończenie wiele splotów, których dopełnienia wyglądają jak dopełnienia splotu Whiteheada.
+Twierdzenie to zamienia problem lokalny (czy dwa węzły w kuli $S^3$ są równoważne?) na problem globalny (czy dwie przestrzenie topologiczne są homeomorficzne?).
+Jego odpowiednik dla splotów jest fałszywy i wiedziano o tym od bardzo dawna: w~1937 roku Whitehead \cite{whitehead37} podał nieskończenie wiele splotów, których dopełnienia wyglądają jak dopełnienia splotu Whiteheada.
 \index[persons]{Whitehead, John}%
-Odpowiednik twierdzenia \ref{thm:gordon_luecke} dla splotów jest więc fałszywy.
 
-% TODO: przesunąć to gdzieś dalej, za definicję skrzyżowania
-Poniższa definicja nie jest nam jeszcze potrzebna, ale wygodnie przytoczyć ją już teraz.
-
-% DICTIONARY;splittable;rozszczepialny;splot
-\begin{definition}[rozszczepialność]
-\index{splot!rozszczepialny}%
-    Jeżeli splot $L$ można zanurzyć w przestrzeni $\R^3$ tak, że niektóre jego ogniwa będą leżeć nad pewną rozłączną ze splotem płaszczyzną, zaś pozostałe pod nią, to powiemy, że splot $L$ jest rozszczepialny.
-\end{definition}
-
-Pewne kryteria rozszczepialności konkretnych splotów znaleźć można u Kawauchiego \cite[s. 36-38]{kawauchi96}.
-Liczbę nierozszczepialnych splotów, pierwszych lub złożonych, zebrano w tabeli.
-Źródło: baza danych OEIS, ciąg \href{https://oeis.org/A086825}{A086825}.
-
-{\textbf{TO NIE SĄ SPLOTY NIEROZSZCZEPIALNE TYLKO WĘZŁY!}}
-
-\renewcommand*{\arraystretch}{1.4}
-\footnotesize
-\begin{longtable}{lccccccccc}
-    \hline
-    \textbf{skrzyżowania} & 0 & 1 & 2 & 3 & 4 & 5 &  6 &  7 &  8 \\ \hline \endhead
-    sploty                & 1 & 0 & 1 & 1 & 3 & 4 & 15 & 24 & 82 \\
-    \hline
-\end{longtable}
-\normalsize
-
-Teoria węzłów bada przede wszystkim węzły, ale istnieją jej odmiany skupiające się na innych, pokrewnych obiektach.
-Mamy na przykład węzły obramowane:
-
-% DICTIONARY;frame;obramowany;węzeł
-% DICTIONARY;framing;obramowanie;-
-\begin{definition}[obramowanie]
-\index{obramowanie|see {węzeł obramowany}}%
-\index{węzeł!obramowany}%
-    Każde nieznikające normalne pole wektorowe na splocie nazywamy obramowaniem.
-    Jeżeli wszystkie wektory są równoległe do płaszczyzny, na której leży diagram tego splotu, obramowanie nazywamy płaskim\footnote{Po angielsku ,,blackboard framing'', ale nie da się tego sensownie przetłumaczyć...}.
-\end{definition}
-
-% Liczba samozaczepienia zorientowanego obramowanego splotu $L$ to indeks zaczepienia tego splotu ze sobą pchniętym w kierunku obramowania, jej wartość to dokładnie spin.
-
-% DICTIONARY;virtual;wirtualny;węzeł
-% DICTIONARY;welded;zespawany;węzeł
-% DICTIONARY;long;długi;węzeł
-Są jeszcze węzły wirtualne, zespawane (iloraz węzłów wirtualnych przez ruch znany jako ,,nadskrzyżowania komutują''), długie (gdzie końce nie są ze sobą zszyte, ale umieszczone tak daleko, że są nieosiągalne) i inne.
-Ta książka nie zawiera zbyt wiele informacji o wspomnianych bytach.
-% TODO wirtualne: 2994594 10.1142/S021821651240007X
-% TODO wirtualne: 2191949 https://arxiv.org/pdf/1409.2823.pdf 
 % koniec sekcji Węzły i sploty
 
