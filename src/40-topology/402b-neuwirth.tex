@@ -18,6 +18,7 @@ Dawniej nazywano je splotami Neuwirtha, gdyż ten pokazał w~swojej pracy dyplom
 \end{example}
 
 (Jeśli węzeł pierwszy o co najwyżej ośmiu skrzyżowaniach nie został wymieniony w tym przykładzie, to nie jest rozwłókniony).
+{\color{red} \textbf{\cite{burde14} strona 130: Burde, Zieschang, Bing, Martin pokazali, że 3-1 i 4-1 to jedyne włókniste o genusie 1. Morton pokazał, że wielomian Alexandera nie odróżnia włóknistych genusu > 1. Do dziesięciu skrzyżowań, rozwłókniony <=> Alexander(0) = +- 1.}}
 Rozkład liczby węzłów rozwłóknionych wśród węzłów pierwszych wygląda następująco:
 
 \renewcommand*{\arraystretch}{1.4}
@@ -39,16 +40,25 @@ Lwia część analizy węzłów o 12 skrzyżowaniach została wykonana przez Sto
 
 \begin{proposition}
 \index{wielomian!Alexandera}%
-    Pierwszy i~ostatni współczynnik wielomianu Alexandera węzła rozwłóknionego to $\pm 1$.
+\label{prp:fibered_alexander_monic}%
+    Niech $K$ będzie węzłem rozwłóknionym genusu $g$.
+    Wtedy wielomian Alexandera $\alexander(t)$ jest unormowany (jego wiodący współczynnik to $\pm 1$) oraz stopnia $2g$.
 \end{proposition}
+
+Dowód tego faktu można znaleźć w monografii Burdego, Zieschanga, Heusenera \cite[s. 130]{burde14}.
+Odwrotnie, jeżeli $\alexander(t)$ jest wielomianem Alexandera spełniającym te warunki, to istnieje rozwłókniony węzeł o takim wielomianie.
+Pokazali to dawno temu Burde \cite{burde66} i później, ale chyba wciąż niezależnie Quach \cite{quach79}.
+Trójlistnik i~ósemka to jedyne rozwłóknione węzły o genusie 1 (Burde, Zieschang \cite{zieschang67}, Bing, Martin \cite{martin71}).
+Wreszcie Morton \cite{morton83} pokazał, że wielomian Alexandera nie odróżnia rozwłóknionych węzłów o genusie $\ge 2$.
 
 % Kryterium to jest wystarczające dla węzłów pierwszych o co najwyżej 10 skrzyżowaniach oraz alternujących, ale znany jest przykład niewłóknistego węzła o 21 skrzyżowaniach, którego wielomian Alexandera ma postać $t^4 - t^3 + t^2 - t +1$.
 % TODO: ustalić, czemu tak dużo skrzyżowań (z której książki ten fakt?). Sam wynik wydaje się być folklorem, tzn. nie wiadomo kto pierwszy to pokazał.
 
-Powyższy warunek konieczny jest też dostateczny dla węzłów pierwszych o co najwyżej 10 skrzyżowaniach.
+Kanenobu około 1979 roku (albo ktoś inny wcześniej) zauważył, że warunek konieczny \ref{prp:fibered_alexander_monic} jest też dostateczny dla węzłów pierwszych o co najwyżej 10 skrzyżowaniach.
+% To z 10 skrzyżowaniami w Burde-Zieschangu jest jako <<Kanenobu, T., 1979: The augmentation subgroup of a pretzel link. Math. Sem. Notes Kobe Univ., 7 (1979), 363–384>> ale lepiej pasuje: <<Kanenobu, T., 1981: Module d’Alexander des nœuds fibres et polynome des Hosokawa des lacements fibres. Math. Sem. Notes Kobe Univ., 9 (1981), 75–84>>
 Trzy węzły pierwsze o 11 skrzyżowaniach: $11n_{34}$, $11n_{42}$, $11n_{73}$ oraz osiemnaście o 12 skrzyżowaniach są świadkami, że wynikanie w dwie strony nie zachodzi.
 % ZWERYFIKOWANO: funkcja alexander_fibered
-Trzynaście z tych osiemnastu: 12n57, 12n210, 12n214, 12n258, 12n279, 12n382, 12n394, 12n464, 12n483, 12n535, 12n650, 12n801 ma wielomian Alexandera, którego stopień jest dwukrotnością 3-genusu (cztery znalazł Mikami Hirasawa, pozostałe Stefan Friedl oraz Taehee Kim).
+Trzynaście z tych osiemnastu: 12n57, 12n210, 12n214, 12n258, 12n279, 12n382, 12n394, 12n464, 12n483, 12n535, 12n650, 12n801 ma wielomian Alexandera, którego stopień jest dwukrotnością 3-genusu (cztery z~nich znalazł Mikami Hirasawa, pozostałe Stefan Friedl oraz Taehee Kim).
 % źródło: https://knotinfo.math.indiana.edu/descriptions/fibered.html
 \index[persons]{Friedl, Stefan}%
 \index[persons]{Taehee, Kim}%

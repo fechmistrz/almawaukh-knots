@@ -235,7 +235,7 @@
     MRNUMBER = {182965},
     TITLE = {An invariant of knot cobordism},
 
-@article {burde66,
+@article {zieschang66,
     AUTHOR = {Burde, Gerhard and Zieschang, Heiner},
     MRNUMBER = {210113},
     TITLE = {Eine {K}ennzeichnung der {T}orusknoten},
