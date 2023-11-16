@@ -1,9 +1,7 @@
 
 \subsection{Niezmienniki liczbowe węzłów torusowych}
 Podamy teraz wartości całkowitoliczbowych niezmienników dla węzłów torusowych przy założeniu, że $p$ lub $q$ nie jest zerem.
-Nietrywialne węzły torusowe są pierwsze i~odwracalne, ale mają niezerową sygnaturę, więc nie są chiralne.
-Wiedział to Schreier w 1924.
-% TODO: \cite schreier24?
+Nietrywialne węzły torusowe są odwracalne, ale mają niezerową sygnaturę, więc nie są achiralne (chyba wiedział o tym Schreier \cite{schreier24}).
 
 \begin{proposition}
 \index{okres}%
@@ -37,10 +35,8 @@ Wiedział to Schreier w 1924.
 
 Borodzik niedawno przyjrzał się dokładniej sygnaturom węzłów torusowych.
 \index[persons]{Borodzik, Maciej}%
-W pracy \cite{borodzik10} napisanej z Oleszkiewiczem pokazał, że nie istnieje wymierna funkcja $R(p, q)$, która pokrywałaby się z sygnaturą węzła torusowego $T_{p, q}$ dla wszystkich względnie pierwszych, nieparzystych $p$ oraz $q$.
+Razem z~Oleszkiewiczem \cite{borodzik10} pokazał, że nie istnieje wymierna funkcja $R(p, q)$, która pokrywałaby się z sygnaturą węzła torusowego $T_{p, q}$ dla wszystkich względnie pierwszych, nieparzystych wartości $p$ oraz $q$.
 \index[persons]{Oleszkiewicz, Krzysztof}%
-
-Uwaga: definicja funkcji $s$ z \cite{borodzik10} zawiera złośliwą literówkę.
 
 \begin{proposition}
     Niech $p, q$ będą względnie pierwszymi liczbami, zaś $C \in [0, 1)$ stałą taką, że $Cpq$ nie jest liczbą całkowitą.
@@ -56,9 +52,10 @@ Uwaga: definicja funkcji $s$ z \cite{borodzik10} zawiera złośliwą literówkę
     \begin{equation}
         s(p, q, x) = \sum_{j = 0}^{q-1} \left\langle \frac {j}{q} \right\rangle \left\langle \frac {jp}{q} + x \right\rangle.
     \end{equation}
+    (Uwaga! Definicja funkcji $s$ z \cite{borodzik10} zawiera złośliwą literówkę.)
     Przy tych oznaczeniach, sygnatura węzła $(p, q)$-torusowego wyznacza się wzorem
     \begin{align}
-        \sigma(z) & = \frac{1}{3pq} \left (p^2 + q^2 + 6 \langle Cpq \rangle^2 - \frac {1}{2} \right)  + 2(C^2 - C) pq + (2-4C) \langle Cpq \rangle + {} \\
+        \sigma(z) & = \frac{1}{3pq} \left(p^2 + q^2 + 6 \langle Cpq \rangle^2 - \frac {1}{2} \right)  + 2(C^2 - C) pq + (2-4C) \langle Cpq \rangle + {} \\
         & - 2s(p, q, Cp) - 2s(q, p, Cq) - 2s(p, q, p-pC) - 2s(q, p, q-qC). \nonumber
     \end{align}
 \end{proposition}
@@ -77,17 +74,7 @@ Uwaga: definicja funkcji $s$ z \cite{borodzik10} zawiera złośliwą literówkę
     \end{equation}
 \end{corollary}
 
-\begin{proposition}
-\index{indeks skrzyżowaniowy}%
-    Mamy $\crossing T_{p, q} = \min \{|pq| - |p|, |pq| - |q|\}$.
-\end{proposition}
-
-\begin{proof}
-\index[persons]{Murasugi, Kunio}%
-    Murasugi twierdzi, że udowodnił to w \cite{murasugi91}.
-\end{proof}
-
-Wyznaczenie indeksu rozwiązującego było dużo trudniejsze.
+Wyznaczenie liczby gordyjskiej było dużo trudniejsze.
 Murasugi pisze w~książce \cite{murasugi96}, że mamy nierówność
 \begin{equation}
     u(T_{p, q}) \le \frac 12 (p-1)(q-1),
@@ -118,9 +105,19 @@ Dowód został odnaleziony w~latach 1993-1995 przy użyciu tzw. \emph{gauge theo
     % https://web.math.princeton.edu/~petero/GridHomologyBook.pdf strona 4
 \end{proof}
 
-Genus pokrywa się z~liczbą gordyjską dla węzłów torusowych, bo wyznacznik macierzy Seiferta jest niezerowy, więc genus to dokładnie stopień wielomianu Alexandera.
+\begin{proposition}
+    \index{genus}%
+    Dla względnie pierwszych $p, q > 0$ mamy
+    \begin{equation}
+        \genus T_{p, q} = \frac 12 (p - 1)(q - 1),
+    \end{equation}
+\end{proposition}
 
-Patrz też \cite[s. 149]{murasugi96}.
+\begin{proof}
+    Wyznacznik macierzy Seiferta węzła torusowego jest niezerowy, więc genus równa się stopniu wielomianu Alexandera.
+    Patrz też \cite[s. 149]{murasugi96}.
+\end{proof}
+
 
 \begin{proposition}
 \index{liczba mostowa}%
@@ -128,7 +125,7 @@ Patrz też \cite[s. 149]{murasugi96}.
     $\bridge T_{p, q} = \min \{|p|, |q|\}$
 \end{proposition}
 
-Według Murasugiego dowód znalazł Schubert \cite{schubert54}.
+Według Murasugiego \cite[s. 150]{murasugi96} dowód znalazł Schubert \cite{schubert54}.
 \index[persons]{Schubert, Horst}%
 
 \begin{corollary}
@@ -146,5 +143,16 @@ Według Murasugiego dowód znalazł Schubert \cite{schubert54}.
     Bez straty ogólności niech $p > q > 0$.
     Skoro węzeł $K$ powstaje z~$q$-warkocza $(\sigma_{q-1} \ldots \sigma_2\sigma_1)^p$,
     indeks $b(K)$ nie przekracza $q = br(K)$.
+\end{proof}
+
+\begin{proposition}
+\index{indeks skrzyżowaniowy}%
+    Mamy $\crossing T_{p, q} = |pq| - \max\{|p|, |q|\}$.
+\end{proposition}
+    
+\begin{proof}
+\index[persons]{Murasugi, Kunio}%
+    Murasugi \cite[s. 255]{murasugi91} zauważył, że jeśli $\gamma$ jest jednorodnym $n$-warkoczem, gdzie $n = \braid(\widehat{\gamma})$, zaś $d_i$ to suma wykładników przy $\sigma_i$ w $\gamma$, to $\crossing \widehat{\gamma} = \sum_{i=1}^{n-1} |d_i|$.
+    Ale splot torusowy $T_{p, q}$, gdzie $2 \le p \le q$, można przedstawić jako domknięcie jednorodnego $p$-warkocza $(\sigma_1 \sigma_2 \cdot \ldots \cdot \sigma_{p-1})^q$, co kończy natychmiast dowód.
 \end{proof}
 
