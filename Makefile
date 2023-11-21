@@ -64,7 +64,7 @@ lint:
 		{ echo "" && echo "" && echo "" && cat "$$i" && echo "" && echo "" && echo ""; } | perl -p -e 's/\t/    /g' | cat -s > temporary-file; \
 		if ! diff temporary-file "$$i"; then mv -v temporary-file "$$i"; else rm temporary-file; fi; \
 	done;
-	python3 tools/translate_polish_english.py <(grep -r src -E -e '% DICTIONARY;.*;.*;.*' -h) > src/90-appendix/dictionary_tmp.tex
+	python3 tools/translate_polish_english.py <(grep -r src --exclude README.md -E -e '% DICTIONARY;.*;.*;.*' -h) > src/90-appendix/dictionary_tmp.tex
 	if ! diff src/90-appendix/dictionary{,_tmp}.tex; then mv -v src/90-appendix/dictionary{_tmp,}.tex; else rm src/90-appendix/dictionary_tmp.tex; fi; 
 	diff \
 		<(grep -Ehor src/ -e '\\label\{.*\}'  | sed -r 's/^\\label//g' | sort -u) \
