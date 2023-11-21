@@ -59,7 +59,7 @@ clean:
 
 lint:
 	./src/merridew/bibliography_sort.py --bib src/knot_theory.bib
-	ack -l ' ' | grep -v makefile | xargs sed -i 's/ / /g' || true
+	ack -l ' ' | grep -v Makefile | xargs sed -i 's/\xC2\xA0/ /g' || true
 	for i in $$(find src -type f -iname '*.tex' | grep -v 'src/90-appendix/dictionary.tex'); do \
 		{ echo "" && echo "" && cat "$$i" && echo "" && echo ""; } | perl -p -e 's/\t/    /g' | cat -s > temporary-file; \
 		if ! diff temporary-file "$$i"; then mv -v temporary-file "$$i"; else rm temporary-file; fi; \
