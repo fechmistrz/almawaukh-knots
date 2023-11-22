@@ -42,10 +42,15 @@ Mamy też:
     Nie istnieje związek między liczbą mostową oraz stopniem wielomianu Alexandera.
 \end{proposition}
 
-\begin{proof}
-    Suma spójna węzłów opisanych po fakcie~\ref{prp:alexander_determinant} ma trywialny wielomian Alexandera, ale dowolnie dużą liczbę mostową.
+Wiemy o tym z książki Livingstona \cite[s. 145]{livingston93}.
 
-    Węzły $(2,n)$-torusowe są dwumostowe, ale stopień ich wielomianów Alexandera jest nieograniczony.
+\begin{proof}
+    Niech $K$ będzie nietrywialnym węzłem o~trywialnym wielomiane Alexandera, na przykład $11_{471}$.
+    (Wiemy o~istnieniu takiego węzła z~faktu \ref{alexander_no_detects_unknot}).
+    Wtedy suma spójna $n$ kopii węzła $K$, $K \shrap K \shrap \ldots \shrap K$, też ma trywialny wielomian Alexandera, ale jej liczba mostowa wynosi $2n + 1$.
+
+    Niech $K_n$ będzie węzłem $(2, n)$-torusowym.
+    Wtedy $\deg (\alexander(K_n)) = n-1$ (to jest treść wniosku \ref{cor:alexander_distinguishes_torus}), ale węzeł $K_n$ jest dwumostowy.
 \end{proof}
 
 % koniec podsekcji Wielomian Alexandera a niezmienniki numeryczne

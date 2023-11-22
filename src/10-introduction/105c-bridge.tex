@@ -3,7 +3,7 @@
 \subsection{Liczba mostowa}
 \index{liczba mostowa|(}%
 
-Wprowadzona w~1954 przez Schuberta.
+Wprowadzona w~1954 przez Schuberta \cite{schubert54}.
 \index[persons]{Schubert, Horst}%
 
 \begin{definition}
@@ -12,26 +12,18 @@ Wprowadzona w~1954 przez Schuberta.
     Minimalną liczbę mostową wśród wszystkich diagramów $D$ węzła $K$, $\bridge K$, nazywamy liczbą mostową węzła $K$.
 \end{definition}
 
-Węzły $n$-mostowe rozkładają się na sumę dwóch wymiernych $n$-supłów.
-\index{supeł!wymierny}%
+% źródło: https://knotinfo.math.indiana.edu/descriptions/bridge_index.html
+W 2012 roku Musick \cite{musick12} znalazł liczbę mostową węzłów pierwszych o 11 skrzyżowaniach: węzły, które nie są ani wymierne, ani Montesinosa, są trzymostowe.
+\index[persons]{Musick, Chad}%
+Potem pchnięto granicę wiedzy do 12 skrzyżowań, dokonał tego międzynarodowy zespół: Blair, Kjuczukowa, Velazquez, Villanueva \cite{blair20}.
+\index[persons]{Blair, Ryan}%
+\index[persons]{Kjuchukova, Alexandra}%
+\index[persons]{Velazquez, Roman}%
+\index[persons]{Villanueva, Paul}%
 
-\begin{proposition}
-\label{prp:bridge_additive}%
-    Niech $K_1, K_2$ będą węzłami.
-    Wtedy $\bridge (K_1) + \bridge(K_2) = \bridge(K_1 \# K_2) + 1$.
-\end{proposition}
-
-\begin{proof}[Niedowód]
-\index[persons]{Schubert, Horst}%
-\index[persons]{Schultens, Jennifer}%
-    Schubert pokazał to blisko pół wieku temu w~\cite{schubert54}.
-    Nowszy dowód pochodzi od Schultens, w~artykule \cite{schultens03} skorzystała z~foliacji na brzegu węzła towarzyszącego satelitarnemu.
-    Dokładniejszy opis powyższych prac wykraczałby poza zakres tego opracowania, zostanie więc pominięty.
-\end{proof}
-
-Tylko jeden węzeł jest jednomostowy, to niewęzeł.
-Kolejne w~hierarchii skomplikowania, czyli dwumostowe, to domknięcia wymiernych supłów.
-Węzły trójmostowe pozostają nie do końca zbadane, Japończycy pokazali w~\cite{fukuhama99}, że trzymostowe węzły genusu jeden są preclami.
+Jedynym węzłem jednomostowym jest niewęzeł.
+Kolejne w~hierarchii skomplikowania, czyli dwumostowe, to domknięcia wymiernych supłów (piszemy o~nich w podsekcji \ref{sub:twobridge}).
+Fukuhama, Ozawa, Teragaito \cite{fukuhama99} pokazali, że trzymostowe węzły genusu jeden są preclami.
 \index[persons]{Fukuhama, Satoshi}%
 \index[persons]{Ozawa, Makoto}%
 \index[persons]{Teragaito, Masakazu}%
@@ -47,21 +39,31 @@ Hilden, Montesinos, Tejada, Toro \cite{hilden12} klasyfikują wszystkie węzły 
 \index{węzeł!trzymostowy!see {liczba mostowa}}%
 \index{reprezentacja!motylkowa}%
 
-% źródło: https://knotinfo.math.indiana.edu/descriptions/bridge_index.html
-W 2012 roku Musick \cite{musick12} znalazł liczbę mostową węzłów pierwszych o 11 skrzyżowaniach: węzły, które nie są ani wymierne, ani Montesinosa, są trzymostowe.
-\index[persons]{Musick, Chad}%
-Potem pchnięto granicę wiedzy do 12 skrzyżowań, dokonał tego międzynarodowy zespół: Blair, Kjuczukowa, Velazquez, Villanueva \cite{blair20}.
-\index[persons]{Blair, Ryan}%
-\index[persons]{Kjuchukova, Alexandra}%
-\index[persons]{Velazquez, Roman}%
-\index[persons]{Villanueva, Paul}%
+Węzły $n$-mostowe rozkładają się na sumę dwóch wymiernych $n$-supłów.
+% źródło: Wiki Bridge_number, TODO: znaleźć lepsze źródło?
+\index{supeł!wymierny}%
+
+\begin{proposition}
+\label{prp:bridge_additive}%
+    Niech $K_1, K_2$ będą węzłami.
+    Wtedy $\bridge (K_1) + \bridge(K_2) = \bridge(K_1 \# K_2) + 1$.
+\end{proposition}
+
+\begin{proof}[Niedowód]
+\index[persons]{Schubert, Horst}%
+\index[persons]{Schultens, Jennifer}%
+    Schubert pokazał to blisko pół wieku temu w~\cite{schubert54}[s. 279].
+    Nowszy dowód pochodzi od Schultens, w~artykule \cite{schultens03} skorzystała z~foliacji na brzegu węzła towarzyszącego satelitarnemu.
+    Dokładniejszy opis powyższych prac wykraczałby poza zakres tego opracowania, zostanie więc pominięty.
+\end{proof}
 
 Murasugi wspomina w rozdziale 4.3 podręcznika \cite{murasugi96} następującą hipotezę, nie podaje jednak wcale, skąd się wzięła:
 \index[persons]{Murasugi, Kunio}%
 
-\begin{conjecture}
+\begin{conjecture}[mostowo-skrzyźowaniowa]
 \index{hipoteza!mostowo-skrzyżowaniowa}%
-    Jeśli $K$ jest węzłem, to $\crossing K \ge 3 \bridge K - 3$, przy czym równość zachodzi dokładnie dla niewęzła, trójlistnika i~sumy spójnej trójlistników.
+    Niech $K$ będzie węzłem.
+    Wtedy $\crossing K \ge 3 \bridge K - 3$, przy czym równość zachodzi dokładnie dla niewęzła, trójlistnika i~sumy spójnej trójlistników.
 \end{conjecture}
 
 Należy więc uzupełnić brakujące informacje.
@@ -76,13 +78,16 @@ Hipoteza Murasugiego stanowi uogólnienie dużo starszego problemu pochodzącego
     Nie istnieje bezpośredni związek między liczbą mostową oraz gordyjską.
 \end{proposition}
 
-Patrz \cite[s. 148]{livingston93}.
+Wiemy o tym z książki Livingstona \cite[s. 146]{livingston93}.
 
 \begin{proof}
-    Węzły torusowe $T_{2,n}$ są dwumostowe, a~ich liczba gordyjska nieograniczona.
+    Niech $K_n$ będzie węzłem $(2, 2n+1)$-torusowym.
+    Wtedy $K_n$ jest dwumostowy i~jego liczba gordyjska wynosi $n$, to jest dokładnie treść hipotezy Milnora (patrz fakt \ref{prp:torus_unknotting_number}).
 
-    Podwojenie węzła (poza specjalnymi przypadkami, jak pokazał Schubert) zwiększa liczbę mostową dwukrotnie; liczba gordyjska takiego podwojenia wynosi $1$.
-    % TODO: jakimi przypadkami?
+    Livingston pisze, że Schubert udowodnił następujący wynik.
+    Jeśli węzeł $K'$ jest dublem węzła $K$, to $\bridge K' = 2 \bridge K$ chyba, że $K$ jest niewęzłem (Livingston nie mówi o niewęźle, tylko zostawia znalezienie tego wyjątku jako ćwiczenie).
+    Zatem wielokrotne dublowanie prowadzi do węzłów o~dowolnie dużej liczbie mostowej.
+    Duble są 1-gordyjskie: rysunek 7.12 w książce Livingstona \cite[s. 146]{livingston93} świetnie to pokazuje.
 \end{proof}
 
 % Podobnie nie ma zależności między liczbą mostową oraz genusem.
