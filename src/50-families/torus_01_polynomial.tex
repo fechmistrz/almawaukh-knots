@@ -12,25 +12,30 @@ Nietrywialne węzły torusowe są odwracalne, ale mają niezerową sygnaturę, w
 \index{sygnatura}%
     Niech $p, q > 0$ będą liczbami całkowitymi, zaś $R_2$ oznacza resztę z dzielenia przez dwa.
     Zdefiniujmy funkcję $\sigma(p, q) = - \sigma(T_{p, q})$.
+    % TODO: czemu ten minus? oni inaczej skierowane łuki mają?
     Spełnia zależność rekurencyjną
     \begin{equation}
         \sigma(p, q) = \begin{cases}
-             q^2 + \sigma(p-2q, p) - R_2(p)       & \text{jeśli } 2q < p \\
-             q^2 - 1                              & \text{jeśli } 2q = p \\
-             q^2 - \sigma(2q - p, q) + R_2(r) - 2 & \text{jeśli } 2q > p > q \\
-             q^2/2 + R_2(q)/2 - 1                 & \text{jeśli } p = q
+             q^2 + \sigma(p, p - 2q) - R_2(p)       & \text{jeśli } 2q < p, \\
+             q^2 - 1                              & \text{jeśli } 2q = p, \\
+             q^2 - \sigma(2q - p, q) + R_2(q) - 2 & \text{jeśli } 2q > p > q, \\
+             \frac 12 (q^2 + R_2(q)) - 1                 & \text{jeśli } p = q,
              % czwarte stanowi algebraiczne przekształcenie trzeciego dla p >= q
         \end{cases}
     \end{equation}
-    z warunkami brzegowymi: $\sigma(p, q) = \sigma(q, p)$, $\sigma(1, q) = 0$, $\sigma(2, q) = q-1$.
+    z warunkami brzegowymi: $\sigma(1, q) = 0$, $\sigma(2, q) = q-1$ oraz równość $\sigma(p, q) = \sigma(q, p)$.
 \end{proposition}
 
 \begin{proof}[Niedowód]
-\index[persons]{Litherland, Richard}%
 \index[persons]{Gordon, Cameron}%
+\index[persons]{Litherland, Richard}%
 \index[persons]{Murasugi, Kunio}%
-    Gordon, Litherland, Murasugi \cite[tw. 5.2]{litherland81} używają niezmiennika acyklicznego\footnote{Z angielskiego null-homologous, czyli o trywialnych zredukowanych grupach homologii.} splotu $L$ w zorientowanej 3-rozmaitości $M$ w połączeniu z jego $m$-krotnym rozgałęzionym nakryciem cyklicznym.
-    Wspominają też, że można dowieść tego używając wzoru Hirzebrucha, ale nie robią tego.
+\index[persons]{Brieskorn, Egbert}%
+\index[persons]{Hirzebruch, Friedrich}%
+    Gordon, Litherland, Murasugi \cite[tw. 5.2]{litherland81} wspominają, że Brieskorn \cite{brieskorn66} policzył sygnatury pewnych rozmaitości algebraicznych, co wystarcza do znalezienia sygnatury węzłów torusowych.
+    Prowadzi to do takiego samego wzoru jak ten znaleziony przez Hirzebrucha \cite{hirzebruch68}.
+    Ale to wszystko jest trochę nieporęczne, dlatego używają niezmiennika acyklicznego (o~trywialnych zredukowanych grupach homologii; z~angielskiego \emph{null-homologous}) splotu $L$ w~zorientowanej 3-rozmaitości $M$ w~połączeniu z~jego $m$-krotnym rozgałęzionym nakryciem cyklicznym.
+\index{wzór Hirzebrucha}%
 \end{proof}
 
 Borodzik niedawno przyjrzał się dokładniej sygnaturom węzłów torusowych.
