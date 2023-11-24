@@ -11,7 +11,7 @@ inform() {
 execute ./src/merridew/bibliography_sort.py --bib src/knot_theory.bib
 
 inform "Removing non-breaking spaces"
-ack -l ' ' | grep -v Makefile | if  uname | grep -q Darwin; then cat; else xargs -r sed -i 's/\xC2\xA0/ /g' || true; fi
+ack -l ' ' | grep -v Makefile | if  uname | grep -q Darwin; then :; else xargs -r sed -i 's/\xC2\xA0/ /g' || true; fi
 
 inform "Appending newlines at the end of files"
 for i in $(find src -type f -iname '*.tex' | grep -v 'src/90-appendix/dictionary.tex'); do
