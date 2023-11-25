@@ -1,39 +1,34 @@
 
 \subsection{Macierz Goeritza}
 \index{macierz!Goeritza|(}%
-Istnieje jeszcze jedna kombinatoryczna metoda badania węzłów, która prowadzi między innymi do pojęcia wyznacznika.
-Tuż przed wojną Lebrecht Goeritz pokazał, jak diagram węzła wyznacza specjalną formę kwadratową.
-% The Goeritz matrix represents a class of quadratic forms of a link, a class that is invariant under link isotopy.
-% Goeritz showed that the pth Minkowski units of his matrix, for p an odd prime, are invariant.
-% So too is the absolute value of the determinant of the Goeritz matrix.
-% źródło: GOERITZ AND SEIFERT MATRICES FROM DEHN PRESENTATIONS (Daniel S. SILVER, Lorenzo TRALDI and Susan G. WILLIAMS)
+Tuż przed wojną Lebrecht Goeritz \cite{goeritz33} pokazał, że każdy diagram węzła wyznacza formę kwadratową.
+Macierz tej formy nie jest niezmiennikiem węzłów, ale jej symbole Hassego oraz wyznacznik (bez znaku) już tak.
+% https://encyclopediaofmath.org/wiki/Hasse_invariant
 \index[persons]{Goeritz, Lebrecht}%
-Nieco później Trotter zmodyfikował jego pomysł, by sygnatura formy zaczęła stanowić niezmiennik splotów.
-\index[persons]{Trotter, Hale}%
-\index[persons]{Gordon, Cameron}%
-\index[persons]{Litherland, Richard}%
-\index[persons]{Murasugi, Kunio}%
-My opiszemy krótko samą macierz Goeritza (a historię sygnatury odłożymy do podsekcji \ref{sub:signature}).
+Ani Kawauchi \cite{kawauchi96}, ani Murasugi \cite{murasugi96} nie wspominają explicite odkrycia Goerita; robią to Burde, Zieschang, Heusener \cite[s. 258-262]{burde14}, za co bardzo im dziękujemy.
 
-Ustalmy uszachowiony diagram $D$ dla splotu $L$.
-\index{uszachowienie}%
-Oznaczmy białe obszary $0, 1, \ldots, m$, przy czym $0$ jest obszarem nieograniczonym.
-Przydzielmy skrzyżowaniom znaki:
-\begin{comment}
-\begin{figure}[H]
-    \begin{minipage}[b]{.48\linewidth}
-    \centering
-    \LargePlusCrossingChessboard
-    \end{minipage}
-    %
-    \begin{minipage}[b]{.48\linewidth}
-    \centering
-    \LargeMinusCrossingChessboard
-    \end{minipage}
-\end{figure}
-\end{comment}
+Trotter zmodyfikował pomysły Goeritza i otrzymał inną formę kwadratową, sygnatura formy jest niezmiennikiem splotów.
+\index[persons]{Trotter, Hale}%
+Sygnaturę (razem z dalszymi uogólnieniami) opisujemy w~późniejszej podsekcji \ref{sub:signature}, teraz skupiając się na macierzy Goeritza.
 
 \begin{definition}
+    Ustalmy uszachowiony diagram $D$ dla splotu $L$.
+    \index{uszachowienie}%
+    Oznaczmy białe obszary $0, 1, \ldots, m$, przy czym $0$ jest obszarem nieograniczonym.
+    Przydzielmy skrzyżowaniom znaki:
+    \begin{comment}
+    \begin{figure}[H]
+        \begin{minipage}[b]{.48\linewidth}
+        \centering
+        \LargePlusCrossingChessboard
+        \end{minipage}
+        %
+        \begin{minipage}[b]{.48\linewidth}
+        \centering
+        \LargeMinusCrossingChessboard
+        \end{minipage}
+    \end{figure}
+    \end{comment}
     Macierz Goeritza powstaje przez skreślenie z~macierzy $G_+$ jednego wiersza oraz jednej kolumny:
     \begin{equation}
         G_+=\begin{pmatrix}
