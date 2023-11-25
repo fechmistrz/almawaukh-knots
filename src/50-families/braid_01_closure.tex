@@ -7,15 +7,10 @@ Nie wiadomo, kto wymyślił operację domykania warkoczy, ale była ona z pewno�
 \index[persons]{Alexander, James}%
 % TODO: rysunek w TikZ, jak się domyka.
 
-Niech $b \in B_n$ będzie słowem zapisanym na standardowych generatorach.
-Oznaczmy przez $b_+$, $b_-$ nieznakowaną sumę dodatnich, ujemnych wykładników.
-Jeśli $b_+ - 3b_- \ge n$, to domknięcie warkocza $b$ nie jest achiralne (twierdzenie 5 z~\cite{jones85}).
-\index{węzeł!achiralny}%
-
 \begin{theorem}[Alexander, 1923]
 \index{twierdzenie!Alexandera}%
 \label{thm:alexander}%
-     Każdy splot powstaje przez domknięcie pewnego warkocza.
+    Każdy splot powstaje przez domknięcie pewnego warkocza.
 \end{theorem}
 
 \begin{proof}[Niedowód]
@@ -33,43 +28,45 @@ Jeśli $b_+ - 3b_- \ge n$, to domknięcie warkocza $b$ nie jest achiralne (twier
 Manturow \cite{manturov02} pokazał, że od warkocza można wymagać kwazitoryczności (warkocz nazywamy torycznym, jeżeli jest postaci $(\sigma_1 \ldots \sigma_{p-1})^q$ oraz kwazitorycznym, jeżeli powstaje przez odwrócenie niektórych skrzyżowań z~warkocza torycznego).
 \index[persons]{Manturow, Wasilij}%
 \index{warkocz!toryczny}%
+\index{warkocz!kwazitoryczny}%
 
 \begin{theorem}[Markow, 1936]
 \index{twierdzenie!Markowa}%
-\label{markov_theorem}
-    Dwa domknięte warkocze są równoważne jako sploty wtedy i~tylko wtedy,
-    gdy jeden powstaje z~drugiego przez ciąg
-    sprzężeń: $z_1 \mapsto z_2 z_1 z_2^{-1}$ oraz procesów Markowa,
-    które zastępują $n$-warkocz $\beta$ przez $(n+1)$-warkocz $\beta\sigma_n^{\pm 1}$.
+    Sploty powstałe przez domknięcie dwóch warkoczy są takie same wtedy i~tylko wtedy, gdy jeden warkocz powstaje z~drugiego przez ciąg sprzężeń: $z_1 \mapsto z_2 z_1 z_2^{-1}$ oraz procesów Markowa, które zastępują $n$-warkocz $\beta$ przez $(n+1)$-warkocz $\beta\sigma_n^{\pm 1}$.
 \end{theorem}
 
-\begin{proof}
-    Kompletny i~godny naśladowania dowód znajduje się w~trudno dostępnej książce \cite{birman74} Birman, więc warto sprawdzić inne, opublikowane później materiały:
+\begin{proof}[Niedowód]
+    Kompletny i~godny naśladowania dowód znajduje się w~trudno dostępnej książce Birman \cite{birman74}, więc warto sprawdzić inne, opublikowane później materiały:
 \index[persons]{Birman, Joan}%
-    Morton opisał w~\cite{mortonhr86} przepiękną, a~przy tym elementarną ideę ,,nitkowania'',
+    Morton \cite{mortonhr86} opisał przepiękną, a~przy tym elementarną ideę ,,nitkowania'',
 \index[persons]{Morton, Hugh}%
-    potem Traczyk podał w~\cite{traczyk98} czysto kombinatoryczne, dwuwymiarowe uzasadnienie oparte o~okręgi Seiferta,
+    potem Traczyk \cite{traczyk98} podał czysto kombinatoryczne, dwuwymiarowe uzasadnienie oparte o~okręgi Seiferta,
 \index[persons]{Traczyk, Paweł}%
-    wreszcie mamy też artykuł \cite{birman02} napisany przez Birman i~Menasco.
+    wreszcie mamy też nowe geometryczne rozumowanie Birman, Menasco \cite{birman02} wykorzystujące foliacje.
 \index[persons]{Menasco, William}%
+\index{foliacja}%
 \end{proof}
 
 Pierwsze sformułowanie twierdzenia pochodzące od Markowa \cite{markov36} korzystało z~trzech ruchów, jeden z~nich stanowił uogólnienie II ruchu Reidemeistera.
 \index[persons]{Markow, Andrej}%
-Trzy lata później Weinberg zauważył w~\cite{weinberg39}, że wystarczą dwa ruchy.
+Weinberg \cite{weinberg39} zauważył trzy lata później, że wystarczą dwa ruchy.
 \index[persons]{Weinberg, Noah}%
 % Weinberg = Ной Вайнберг: http://www.mathsoc.spb.ru/history/Odynec_2020.pdf
-Lambropoulou, Rourke przedstawili w~\cite{lambropoulou97} wersję twierdzenia wymagającą tylko jednego ruchu.
+Lambropoulou, Rourke \cite{lambropoulou97} przedstawili wersję twierdzenia wymagającą tylko jednego ,,L-ruchu''.
 \index[persons]{Lambropoulou, Sofia}%
 \index[persons]{Rourke, Colin}%
 
 Historia twierdzenia Markowa jest raczej dramatyczna: Markow przedstawił swój dowód ustnie, ale nigdy go nie opublikował, zostawiając to zadanie swojemu uczniowi, Weinbergowi.
-Ten jednak został zabity podczas wojny, wkrótce po opublikowaniu pierwszej pracy na temat teorii węzłów i~na dokładny dowód trzeba było czekać do publikacji Birman \cite{birman74} blisko 40 lat.
+Ten jednak został zabity podczas wojny, wkrótce po opublikowaniu pierwszej pracy na temat teorii węzłów i~na dokładny dowód trzeba było czekać na Birman \cite{birman74} blisko 40 lat.
 \index[persons]{Birman, Joan}%
 
-Twierdzenie~\ref{markov_theorem} mówi nam, że teoria węzłów bada klasy równoważności w~grupie warkoczy.
-Zarówno problem słowa (czy dwa słowa w~grupie przedstawiają ten sam jej element?) jak i~problem sprzężoności (czy dwa słowa w~grupie są sprzężone?) są rozwiązane, ale nadal nie mamy algorytmu, który mówiłby, czy dwa słowa w~grupie są równoważne w~sensie Markowa.
-Cały czas chodzi o~słowa w~grupie warkoczy, oczywiście.
-% TODO: kto to pokazał? wg Kawauchiego około strony 18, Murasugi w 1982 ale widziałem gdzieś informację, że Garside był pierwszy.
-% a może Jones 1985?
+Nie znamy wielu twierdzeń o warkoczach i splotach, jakie powstają przez ich domykanie.
+Jones \cite{jones85} podał bez dowodu:
+
+\begin{proposition}
+    Niech $b \in B_n$ będzie słowem zapisanym na standardowych generatorach.
+    Oznaczmy przez $b_+$, $b_-$ nieznakowaną sumę dodatnich, ujemnych wykładników.
+    Jeśli $b_+ - 3b_- \ge n$, to domknięcie warkocza $b$ nie jest achiralne.
+\index{węzeł!achiralny}%
+\end{proposition}
 
