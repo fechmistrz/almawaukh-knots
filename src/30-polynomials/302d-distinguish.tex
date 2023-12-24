@@ -27,7 +27,7 @@ Dalej występują już kolizje, oto pełna ich lista do 10 skrzyżowań:
 \normalsize
 
 Jones wiedział, że wielomianowe niezmienniki nie radzą sobie z~odróżnianiem od siebie mutantów, dlatego zapytał, czy jego wielomian wykrywa niewęzły.
-Pozostaje to otwartym problemem do dziś.
+Pozostaje to otwartym problemem do dziś (patrz na przykład do zbioru problemów Ohtsukiego \cite[s. 381]{ohtsuki02}).
 
 \begin{conjecture}
 \index{hipoteza!o wielomianie Jonesa i niewęźle}%
@@ -35,6 +35,21 @@ Pozostaje to otwartym problemem do dziś.
     Niech $K$ będzie węzłem.
     Jeśli $\jones_K(t) \equiv 1$, to $K$ jest niewęzłem.
 \end{conjecture}
+
+Co przemawia za prawdziwością hipotezy?
+Wiemy, że jest prawdziwa w~wielu szczególnych przypadkach: dla węzłów alternujących (wynika to z I hipotezy Taita \ref{con:tait_1}), adekwatnych (Lickorish, Thistlethwaite \cite{lickorish88}), póładekwatnych (dużo później Stojmenow \cite{stoimenow11}), dodatnich (także Stojmenow, chyba w \cite{stoimenow03}) oraz prawie alternujących: węzeł jest prawie alternujący, jeżeli nie jest alternujący, ale odwrócenie jednego skrzyżowania na pewnym diagramie sprawia, że takim się staje (Lowrance, Spyropoulos \cite{lowrance17}).
+\index{splot!alternujący}%
+\index{splot!adekwatny}%
+\index{splot!póładekwatny}%
+\index{splot!dodatni}%
+\index{splot!prawie alternujący}%
+\index[persons]{Thistlethwaite, Morwen}%
+\index[persons]{Lickorish, William}%
+\index[persons]{Stojmenow, Alexander}%
+\index[persons]{Lowrance, Adam}%
+\index[persons]{Spyropoulos, Dean}%
+Homologia Chowanowa stanowi uogólnienie wielomianu Jonesa i wykrywa niewęzeł (patrz fakt \ref{khovanov_detects_unknot}).
+\index{homologia!Chowanowa}%
 
 Hipotezę zweryfikowano komputerowo dla węzłów o~małej liczbie skrzyżowań.
 W latach dziewięćdziesiątych Hoste, Thistlethwaite, Weeks \cite{thistlethwaite98} zrobili to podczas tablicowania węzłów spełniających $\crossing K \le 16$.
@@ -52,26 +67,19 @@ wreszcie Tuzun, Sikora \cite{tuzun18} w~2016 do $\crossing K \le 22$,
 \index[persons]{Tuzun, Robert}%
 potem (w \cite{tuzun21}) w~2020 do $\crossing K \le 24$.
 Ośmiordzeniowe procesory Intel Xeon L5520 z Uniwersytetu w~Buffalo potrzebowały na to łącznie 41,8 lat pracy.
-Patrz też \cite[s. 381]{ohtsuki02}.
 
-Jeżeli chodzi o ogólne wyniki, to Lickorish i~Thistlethwaite \cite{lickorish88} pokazali wcześniej, że adekwatne węzły mają nietrywialny wielomian Jonesa.
-% Knots with adequate diagrams have nontrivial Jones polynomial. - MSN
+Co przemawia za nieprawdziwością hipotezy?
+Najpierw Thistlethwaite w~\cite{thistlethwaite01} wskazał dwa sploty z~dwoma oraz jeden z~trzema ogniwami, których wielomian Jonesa nie odróżnia od niesplotów o~takiej samej liczbie ogniw.
 \index[persons]{Thistlethwaite, Morwen}%
-\index[persons]{Lickorish, William}%
-
-Istnieją sploty o~trywialnym wielomianie Jonesa.
-Thistlethwaite wskazał dwa z~dwoma oraz jeden z~trzema ogniwami w~\cite{thistlethwaite01}.
-\index[persons]{Thistlethwaite, Morwen}%
-Jest ich nawet nieskończenie wiele, jak Eliahou, Kauffman i~Thistlethwaite pokazali w~pracy \cite{eliahou03}.
+Wynik bardzo szybko bardzo poprawiono: Eliahou, Kauffman i~Thistlethwaite w~pracy \cite{eliahou03} znaleźli nieskończoną rodzinę splotów o~tej samej własości.
 \index[persons]{Eliahou, Shalom}%
 \index[persons]{Kauffman, Louis}%
+Kauffman znalazł dużo wcześniej nietrywialny węzeł wirtualny, którego wielomian Jonesa jest trywialny.
 
 \begin{proposition}
 \index{splot!Hopfa}%
 \index{węzeł!satelitarny}%
     Niech $k \ge 2$ będzie liczbą naturalną.
-    Istnieje nieskończenie wiele splotów pierwszych z $k$ ogniwami, których wielomian Jonesa nie odróżnia od niesplotu z $k$ ogniwami.
-
-    Co więcej, można wymagać, by wszystkie te sploty były satelitami splotu Hopfa.
+    Istnieje nieskończenie wiele pierwszych satelitów splotu Hopfa z $k$ ogniwami, których wielomian Jonesa nie odróżnia od niesplotu z $k$ ogniwami.
 \end{proposition}
 
