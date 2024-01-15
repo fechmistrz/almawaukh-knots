@@ -1,10 +1,11 @@
 
 \subsection{Ruchy Reidemeistera}
 
-Każdy węzeł ma zatem wiele diagramów; mając dane dwa różne chcielibyśmy wiedzieć, czy przedstawiają ten sam węzeł.
-Kurt Reidemeister podał proste kryterium rozstrzygające ten problem w~latach dwudziestych ubiegłego wieku.
+Wiemy już, że węzły mają wiele diagramów.
+Mając dane dwa różne diagramy chcielibyśmy wiedzieć, czy przedstawiają ten sam węzeł.
+Stosowne narzędzie dostarczył Kurt Reidemeister w~latach dwudziestych ubiegłego wieku.
 \index[persons]{Reidemeister, Kurt}%
-Najpierw zdefiniujmy trzy lokalne operacje na diagramach.
+Zdefiniujmy trzy lokalne operacje na diagramach, a~potem wysłowimy kryterium  Reidemeistera rozstrzygające problem równości węzłów.
 
 % DICTIONARY;Reidemeister/Turaev/... move;ruch Reidemeistera/Turajewa/...;-
 \begin{definition}[ruchy Reidemeistera]
@@ -34,7 +35,7 @@ Najpierw zdefiniujmy trzy lokalne operacje na diagramach.
         \subcaption{ruch $R_3$}
     \end{minipage}
     \end{figure}
-    skręcenie lub rozkręcenie ($R_1$), wsunięcie lub rozsunięcie ($R_2$) oraz przesunięcie łuku przez skrzyżowanie ($R_3$) nazywamy ruchami Reidemeistera.
+    skręcenie/rozkręcenie ($R_1$), wsunięcie/rozsunięcie ($R_2$) oraz przesunięcie łuku przez skrzyżowanie ($R_3$) nazywamy ruchami Reidemeistera.
 \end{definition}
 
 Ruch $R_i$ operuje więc na $i$ łukach diagramu.
@@ -55,7 +56,7 @@ Dowód podali niezależnie Reidemeister \cite{reidemeister27} oraz Alexander, Br
 \index[persons]{Reidemeister, Kurt}%
 \index[persons]{Briggs, Garland}%
 \index[persons]{Alexander, James}%
-Twierdzenie Reidemeistera jest prawdziwe także dla splotów zorientowanych, ale wtedy trzeba uwzględnić różne orientacje łuków i~nie jest oczywiste, ile spośród $2^1 + 2^2 + 2^3 = 13$ wersji jest potrzebne.
+Twierdzenie Reidemeistera jest prawdziwe także dla splotów zorientowanych, ale wtedy trzeba uwzględnić różne orientacje łuków i~nie jest oczywiste, ile spośród $2^1 + 2^2 + 2^3 = 14$ wersji jest potrzebne.
 Polyak \cite{polyak10} pokazał, że minimalny zbiór zorientowanych ruchów składa się na przykład z~dwóch wersji ruchu $R_1$, jednej wersji ruchu $R_2$ i~jednej wersji ruchu $R_3$.
 \index[persons]{Polyak, Michael}%
 
@@ -66,13 +67,13 @@ Polyak \cite{polyak10} pokazał, że minimalny zbiór zorientowanych ruchów sk�
 \index[persons]{Sosiński, Aleksiej}%
 \index[persons]{Zieschang, Heiner}%
     Szkielet dowodu można znaleźć w~książce Burdego i~Zieschanga \cite[s. 9-11]{burde14}.
-    Kluczowe pomysły zawiera też \cite[s. 11-12]{prasolov97} Prasołowa i~Sosińskiego.
-    Innym przystępnym źródłem jest podręcznik \cite[s. 50-56]{murasugi96} Murasugiego.
+    Kluczowe pomysły podają też Prasołow z~Sosińskim \cite[s. 11-12]{prasolov97}.
+    Innym przystępnym źródłem jest podręcznik Murasugiego \cite[s. 50-56]{murasugi96}.
 \end{proof}
 
 Trace \cite{trace83} zauważył, że dwa diagramy jednego węzła są związane tylko II i III ruchem (ale nie I) wtedy i tylko wtedy, gdy mają ten sam spin oraz indeks punktu względem krzywej (,,winding number'').
 \index[persons]{Trace, Bruce}%
-Z prac Östlunda \cite{ostlund01}, Manturowa\footnote{Niestety nie wiem, o które strony tej książki chodzi.} \cite{manturov04} oraz Haggego \cite{hagge06} wynika, że dla każdego węzła istnieje para diagramów, do przejścia między którymi trzeba wykorzystać wszystkie trzy ruchy.
+Z prac Östlunda \cite{ostlund01}, Manturowa\footnote{Niestety nie wiemy, o które strony tej książki chodzi.} \cite{manturov04} oraz Haggego \cite{hagge06} wynika, że dla każdego węzła istnieje para diagramów, do przejścia między którymi trzeba wykorzystać wszystkie trzy ruchy.
 \index[persons]{Östlund, Olof}%
 \index[persons]{Manturow, Wasilij}%
 \index[persons]{Hagge, Tobias}%
@@ -80,13 +81,21 @@ Z prac Östlunda \cite{ostlund01}, Manturowa\footnote{Niestety nie wiem, o któr
 Coward \cite{coward06} zademonstrował, że nawet jeśli wszystkie trzy ruchy są potrzebne, można je wykonywać w specjalnej kolejności: najpierw tylko I ruchy, potem tylko II ruchy, następnie tylko III ruchy i znowu II ruchy.
 \index[persons]{Coward, Alexander}%
 
-W praktyce twierdzenia \ref{thm:reidemeister} nie stosuje się bezpośrednio do diagramów splotów.
-Mając dane dwa spójne diagramy tego samego splotu trudno znaleźć jest ciąg ruchów przekształcający jeden z nich w drugi.
-Załóżmy, że widać na nich odpowiednio $n_1, n_2$ skrzyżowań.
-Jak piszą Coward, Lackenby w \cite{coward11}, istnieje funkcja $f \colon \N \times \N \to \N$ taka, że między dwoma diagramami można przejść wykonując co najwyżej $f(n_1, n_2)$ ruchów.
+W praktyce twierdzenia \ref{thm:reidemeister} nie stosuje się bezpośrednio.
+Mając dane dwa spójne diagramy tego samego splotu trudno znaleźć jest ciąg ruchów przekształcający jeden z nich w drugi albo orzec, że taki nie istnieje.
+% DICTIONARY;invariant;niezmiennik;-
+Zamiast tego definiuje się niezmienniki, czyli funkcje ze zbioru wszystkich diagramów, które nie zmieniają swojej wartości podczas wykonywania ruchów Reidemeistera.
+Kiedy pewien niezmiennik przyjmuje różne wartości na dwóch diagramach, te przedstawiają dwa istotnie różne sploty.
+Gdy wartości są te same, nie dostajemy żadnej informacji.
+Sploty mogą być równoważne albo nie.
+Niezmienniki będą nam stale towarzyszyć w~wędrówce po krainie węzłów.
+
+\subsubsection{Dygresja -- wyniki ilościowe wokół twierdzenia Reidemeistera}
+Załóżmy, że na dwóch diagramach tego samego węzła widać odpowiednio $n_1, n_2$ skrzyżowań.
+Jak piszą Coward, Lackenby \cite{coward11}, istnieje funkcja $f \colon \N \times \N \to \N$ taka, że między dwoma diagramami można przejść wykonując co najwyżej $f(n_1, n_2)$ ruchów.
 \index[persons]{Coward, Alexander}%
 \index[persons]{Lackenby, Marc}%
-Wynika to z oczywistego faktu, że istnieje skończenie wiele spójnych diagramów o danej liczbie skrzyżowań oraz twierdzenia Reidemeistera.
+Wynika to z faktu, że istnieje skończenie wiele spójnych diagramów o danej liczbie skrzyżowań oraz twierdzenia Reidemeistera.
 Okazuje się jednak, że od funkcji $f$ można żądać, by była obliczalna
 (a to jest chyba równoważne istnienia algorytmu rozpoznającego, czy dwa diagramy przedstawiają jeden węzeł)
 % http://people.dm.unipi.it/martelli/Cortona/Lackenby.pdf 7 of 90
@@ -102,13 +111,6 @@ Przykład diagramu niewęzła, do rozwiązania którego nie można tylko usuwać
 
 Hayashi \cite{hayashi05} dowiódł, że liczbę ruchów Reidemeistera potrzebnych, by rozszczepić splot można ograniczyć z góry na podstawie indeksu skrzyżowaniowego.
 \index[persons]{Hayashi, Chuichiro}%
-
-% DICTIONARY;invariant;niezmiennik;-
-Zamiast tego definiuje się niezmienniki, czyli funkcje ze zbioru wszystkich diagramów, które nie zmieniają swojej wartości podczas wykonywania ruchów Reidemeistera.
-Kiedy pewien niezmiennik przyjmuje różne wartości na dwóch diagramach, te przedstawiają dwa istotnie różne sploty.
-Gdy wartości są te same, nie dostajemy żadnej informacji.
-Sploty mogą być równoważne albo nie.
-Niezmienniki będą nam stale towarzyszyć w~wędrówce po krainie węzłów.
 
 % koniec sekcji Ruchy Reidemeistera
 

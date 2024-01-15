@@ -121,7 +121,8 @@ Istnieje jeszcze jedna, konkurencyjna definicja węzłów równoważnych:
 
 \begin{proof}
 \index[persons]{Milnor, John}%
-    Podany niżej dowód pochodzi z~książki ,,Topology from the differentiable viewpoint'' Johna Milnora.
+    Podany niżej dowód pochodzi z~książki ,,Topology from the differentiable viewpoint'' Johna Milnora\footnote{John Willard Milnor zajmuje się głównie topologią różniczkową oraz algebraiczną K-teorią; jego główne dokonania w świecie węzłów to wprowadzenie niezmienników Milnora, które uogólniają grupę podstawową dopełnienia oraz pewne wyniki dotyczące hipotezy plastrowo-taśmowej.}.
+\index[persons]{Milnor, John}%
     Musimy pokazać, że dyfeomorfizm $f \colon \R^m \to \R^m$ jest gładko izotopijny z~identycznością.
     Translacje są izotopiami, więc bez straty ogólności zakładamy, że $f(0) = 0$.
     Pochodna $f$ w~zerze jest dana wzorem $\mathrm{d}f_0(x) = \lim_{t \to 0} f(tx) /t$,
@@ -156,14 +157,13 @@ W~takiej sytuacji obydwa sploty mają tyle samo ogniw.
 \begin{example}
 \index{splot!Hopfa}%
 \index[persons]{Hopf, Heinz}%
-    Splot Hopfa to najprostszy splot nietrywialny, którym w~1931 r. zajmował się Heinz Hopf, topolog niemiecki, w~ramach badań nad tzw. rozwłóknieniem (Hopf fibration).
+    Splot Hopfa\footnote{Heinz Hopf był niemiecko-szwajcarskim pionierem topologii algebraicznej. W~1931 roku zajmował się splotem Hopfa w ramach badań nad tzw. rozwłóknieniem \emph{(Hopf fibration)}.} to najprostszy splot nietrywialny.
 \end{example}
 
 \begin{example}
 \index{splot!Whiteheada}%
 \index[persons]{Whitehead, John}%
-    Whitehead w~1934 odkrył kontrprzykład do nieudanego dowodu hipotezy Poincarego.
-    Był nim splot o~dwóch składowych przedstawiony na poniższym rysunku.
+    Splot Whiteheada\footnote{John Henry Constantine Whitehead był jednym z założycieli teorii homotopii. Oprócz wspomnianego tu splotu Whiteheada zobaczymy jego nazwisko jeszcze raz, przy dublu Whiteheada.} ma dwa ogniwa i w~1934 służył Whiteheadowi za kontrprzykład do nieudanego dowodu (także Whiteheada!) hipotezy Poincarego.
 \end{example}
 
 \begin{comment}
@@ -206,6 +206,7 @@ Liczbę nierozszczepialnych splotów pierwszych zebrano w~tabeli:
 
 W bazie danych OEIS można trafić na ciąg \href{https://oeis.org/A086826}{A086826} opisujący liczbę nierozszczepialnych pierwszych i złożonych węzłów i splotów.
 Powyższa tabela zawiera liczby na podstawie portalu LinkInfo \cite{linkinfo23}.
+Odpowiedź na pytanie ,,czym są skrzyżowania?'' przynosi definicja \ref{def:crossing}.
 
 Pewne kryteria rozszczepialności konkretnych splotów znaleźć można u Kawauchiego \cite[s. 36-38]{kawauchi96}.
 
@@ -217,6 +218,8 @@ Pytanie o~prawdziwość implikacji odwrotnej jako pierwszy zadał najprawdopodob
 W roku 1987 pokazano, że istnieją co najwyżej dwa węzły o~zadanym dopełnieniu (Culler, Gordon, Luecke, Shalen \cite{culler87}).
 \index[persons]{Culler, Marc}%
 \index[persons]{Shalen, Peter}%
+\index[persons]{Gordon, Cameron}%
+\index[persons]{Luecke, John}%
 Dwa lata później poznaliśmy pozytywną odpowiedź na pytanie Tietzego: każdy węzeł jest wyznaczony jednoznacznie przez swoje dopełnienie.
 
 \begin{theorem}[Gordon, Luecke, 1989]
@@ -227,8 +230,11 @@ Dwa lata później poznaliśmy pozytywną odpowiedź na pytanie Tietzego: każdy
 \end{theorem}
 
 \begin{proof}[Niedowód]
-    Wynika to z~ogólniejszego stwierdzenia: nietrywialna chirurgia Dehna na węźle w~3-sferze nigdy nie daje 3-sfery i teorii Cerfa.
+    Wynika to z teorii Cerfa, kombinatorycznych technik w stylu Litherlanda, cienkich pozycji, cykli Scharlemanna i~ogólniejszego stwierdzenia: nietrywialna chirurgia Dehna na węźle w~3-sferze nigdy nie daje 3-sfery.
+% https://en.wikipedia.org/wiki/Gordon–Luecke_theorem: Essential ingredients of the proof are their joint work with Marc Culler and Peter Shalen on the cyclic surgery theorem, combinatorial techniques in the style of Litherland, thin position, and Scharlemann cycles.
 \index{chirurgia Dehna}%
+\index{teoria Cerfa}%
+\index{cykle Scharlemanna}%
     Pełny dowód zawiera praca \cite{gordon89}.
 \end{proof}
 
