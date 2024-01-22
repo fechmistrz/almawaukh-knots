@@ -66,9 +66,9 @@ Z przełomowych prac Thurstona z~lat 70. oraz 80. wynika coś ciekawszego: że d
 \index{rozmaitość!włóknista Seiferta}%
 \index{rozmaitość!toroidalna}%
 \index{rozmaitość!hiperboliczna}%
-Innymi słowy, Thurston przedstawił trychotomię:
+Innymi słowy, Thurston przedstawił:
 
-\begin{theorem}
+\begin{theorem}[trychotomia Thurstona]
 \index{twierdzenie!Thurstona}%
 \index{węzeł!satelitarny}%
 \index{węzeł!torusowy}%
@@ -76,8 +76,13 @@ Innymi słowy, Thurston przedstawił trychotomię:
 \end{theorem}
 % luźno związane: http://www.deltami.edu.pl/temat/matematyka/topologia/2012/12/27/%William_Thurston_i_hipoteza_geometryzacyjna/
 
+Thurston pisze, że Riley przypuszczał to samo z pomocą komputera na podstawie dużej liczby przykładów.
+\index[persons]{Riley, ??}%
+\index[persons]{Thurston, William}%
+
 \begin{proof}
-    Thurston \cite[wniosek 2.5]{thurston82}.
+    Thurston \cite[s. 360]{thurston82} dowodzi ogólniejszefo faktu, że wnętrze zwartej 3-rozmaitości z~niepustym brzegiem $M$ ma strukturę hiperboliczną wtedy i tylko wtedy, gdy rozmaitość $M$ jest homotopijnie atoroidalna, pierwsza oraz nie jest homeomorficzna z $T^2 \times I / (\Z/2)$, gdzie $\Z/2$ odwraca $I$.
+    Stąd wynika już trychotomia.
 \end{proof}
 
 % https://mathoverflow.net/a/289359 : hyperbolic, toroidal (that is, satellite), or Seifert fibered
@@ -103,7 +108,7 @@ Sam Nead, użytkownik portalu MathOverflow napisał, że kryterium Thurstona dzi
 \end{proposition}
 
 \begin{proposition}
-    Niech $L$ będzie splotem takim, że jego dopełnienie $S^3 \setminus L$ nie zawiera właściwej 2-sfery, właściwego dysku, właściwego torusa oraz właściwego pierścienia.
+    Niech $L$ będzie splotem takim, że jego dopełnienie $S^3 \setminus L$ nie zawiera właściwej 2-sfery, właściwego dysku, właściwego torusa ani właściwego pierścienia.
     Wtedy $L$ jest hiperboliczny.
 \end{proposition}
 
@@ -140,7 +145,7 @@ Czas na podanie jakichś przykładów węzłów hiperbolicznych, za Adamsem \cit
 \end{proposition}
 
 \begin{proof}
-    Grupa studentów pod opieką Adamsa w \cite{brock92}.
+    Grupa studentów: Brock, Bugbee, Comar, Faigin, Huston, Joseph, Pesikoff pod opieką Adamsa \cite{brock92}.
 \index[persons]{Adams, Colin}%
 \index[persons]{Brock, Jeffrey}%
 \index[persons]{Bugbee, John}%
@@ -169,15 +174,16 @@ Ze wszystkich węzłów pierwszych do 11 skrzyżowań i~pierwszych, nierozszczep
 \end{proposition}
 
 \begin{proof}
-    Najpierw zidentyfikowano sploty Montesinosa torusowe, które są też torusowe \cite{boileau80}.
-    % TODO: torusowe, które są torusowe???
-    Potem w~pracy \cite{oertel84} znaleziono listę wyjątków (z chyba trochę inną notacją niż nasza):
+    Najpierw Boileau, Siebenmann \cite{boileau80} zidentyfikowali torusowe sploty Montesinosa.
+    \index[persons]{Boileau, Michel}%
+    \index[persons]{Siebenmann, Laurent}%
+    Potem Oertel \cite{oertel84} dowiódł, że jeśli splot Montesinosa nie jest ani hiperboliczny, ani torusowy, to musi być jednym z wyjątków (z chyba trochę inną notacją niż nasza):
     \begin{itemize}
         \item $K(1/2, 1/2, 21/2, 21/2)$,
         \item $K(2/3, 21/3, 21/3)$,
         \item $K(1/2, 21/4, 21/4)$,
         \item $K(1/2, 21/3, 21/6)$,
-        \item lub lustra tych splotów. \qedhere
+        \item lub lustrem tych splotów. \qedhere
     \end{itemize}
 \end{proof}
 
@@ -188,7 +194,7 @@ Ze wszystkich węzłów pierwszych do 11 skrzyżowań i~pierwszych, nierozszczep
 
 \begin{proof}
 \index[persons]{Ruberman, Daniel}%
-    Ruberman w~\cite[wniosek 1.4]{ruberman87}.
+    Ruberman \cite[wniosek 1.4]{ruberman87}.
 \end{proof}
 
 \begin{proposition}
@@ -200,8 +206,8 @@ Ze wszystkich węzłów pierwszych do 11 skrzyżowań i~pierwszych, nierozszczep
 \index[persons]{Riley, Robert}%
 \index[persons]{Kodama, Kouzi}%
 \index[persons]{Sakuma, Makoto}%
-    Pierwszy był Riley w~artykule \cite[s. 124]{riley79}, można też zapoznać się z~późniejszą pracą \cite{kodama92} Kodamy i Sakumy.
-    % Kodama - lemat_1.1
+    Pierwszy był Riley \cite[s. 124]{riley79}, można też zapoznać się z~późniejszą pracą  Kodamy, Sakumy \cite{kodama92}.
+    % TODO: Kodama - lemat_1.1
 \end{proof}
 
 Kawauchi \cite[s. 131]{kawauchi96} wprowadza jeszcze jedną grupę (grupę symetrii węzła): iloraz grupy PL automorfizmów pary $(S^3, K)$ przez podgrupę elementów, które są otaczająco izotopijne z~odwzorowaniem tożsamościowym.
@@ -212,7 +218,7 @@ Okazuje się, że nie wszystkie są skończone:
 \end{proposition}
 
 Kawauchi nie podaje dowodu, ale zaleca zajrzeć do pracy Sakumy.
-Ja zajrzałem i dalej nie mam pojęcia, jak ten dowód miałby wyglądać.
+My zajrzeliśmy i dalej nie mamy pojęcia, jak ten dowód miałby wyglądać.
 
 Z kryterium Thurstona mamy prosty wniosek (bo węzły złożone są satelitarne):
 
@@ -285,7 +291,7 @@ Pokazał w~niej, że jeśli oznaczymy liczbę splotów pierwszych i~nierozszczep
     \liminf_{n \to \infty} \frac{H_n}{P_n} < 1 - 10^{-13}.
 \end{equation}
 
-Czwarty rozdział książki \cite{purcell20} zawiera ćwiczenie, by znaleźć dwuparametrową rodzinę zupełnych struktur hiperbolicznych na dziurawym torusie oraz czterokrotnie dziurawej sferze.
+Czwarty rozdział książki \cite{purcell20} zawiera ćwiczenie, by znaleźć dwuparametrową rodzinę zupełnych struktur hiperbolicznych na nakłutym torusie oraz czterokrotnie nakłutej sferze.
 Elastyczność tego rodzaju nie występuje w~przestrzeniach wyższych wymiarów.
 Z~twierdzenia o~sztywności, w~wersji algebraicznej:
 
@@ -306,15 +312,15 @@ albo geometrycznej:
 
 wynika, że jeśli znaleźliśmy jakąś zupełną strukturę hiperboliczną na dopełnieniu splotu, to innych już nie ma.
 
-\begin{proof}
+\begin{proof}[Niedowód]
 \index[persons]{Benedetti, Riccardo}%
 \index[persons]{Mostow, George}%
 \index[persons]{Petronio, Carlo}%
 \index[persons]{Prasad, Gopal}%
 \index[persons]{Thurston, William}%
-    Thurston przedstawił szkic rozumowania w~sekcji 5.9 swoich notatek, na bazie których powstała później książka \cite{thurston97}.
-    Inne szczegółowe rozumowanie można znaleźć w~rozdziale C podręcznika Benedettiego, Petronio \cite{benedetti92}.
-    Patrz także oryginalne prace: Mostowa \cite{mostow73}, Prasada \cite{prasad73}.
+Pierwsi byli Mostow \cite{mostow73} oraz Prasad \cite{prasad73}.
+    Thurston naszkicował rozumowanie w~sekcji 5.9 swoich notatek, na bazie których powstała później książka \cite{thurston97}.
+    Inny tok myślenia można znaleźć w~podręczniku Benedettiego, Petronio \cite[rozdział C]{benedetti92}.
 \end{proof}
 
 Twierdzenie Mostowa-Prasada pozwala nam na wprowadzenie nowych niezmienników splotów hiperbolicznych: wystarczy wziąć dowolny geometryczny niezmiennik dopełnienia węzła.
