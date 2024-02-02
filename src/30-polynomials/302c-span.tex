@@ -62,7 +62,7 @@ Dla wygody wprowadźmy skrót $\langle D \mid s \rangle := (-A^{-2}-A^2)^{|sD|-1
 
 \begin{proof}
     Oznaczmy prawą stronę dowodzonej równości przez $[D]$.
-    Pokażemy, że spełnia ona aksjomaty Kauffmana z~definicji \ref{def:kauffman_bracket}, stąd wynika już, że $[D] = \bracket{D}$.
+    Pokażemy, że spełnia ona trzy aksjomaty Kauffmana z~definicji \ref{def:kauffman_bracket}, skąd wynika już, że $[D] = \bracket{D}$.
     % ona $[\SmallUnknot]=1$, $[D\sqcup\SmallUnknot]=(-A^{-2}-A^2) [D]$ oraz $[\SmallMinusCrossing] = A [\SmallAlphaSmoothing] + A^{-1}[\SmallBetaSmoothing]$.
 
     Pierwszy aksjomat (równość \ref{eqn:kauffman_axiom_1}) mówi o niewęźle $\SmallUnknot$.
@@ -183,16 +183,16 @@ Zauważmy jeszcze, że na każdym skrzyżowaniu występują cztery różne ciemn
     Wtedy zachodzi $|s_+D'| = |s_+D|$, ale $|s_-D'| = |s_-D|\pm 1$, gdyż diagram $s_-D'$ powstaje z~$s_-D$ po zastąpieniu pewnej części
     $\SmallAlphaSmoothing$ przez $\SmallBetaSmoothing$.
     To rozrywa jedną krzywą na dwa kawałki lub scala dwie krzywe w~jedną.
-    Z założenia indukcyjnego mamy
+    Z~założenia indukcyjnego mamy
     \begin{align}
         |s_+D| + |s_-D|
         & = |s_+D'| + |s_-D'| \pm 1 \\
-        & \le (n - 1) + 2 \pm 1 \\
-        & \le n + 2.
+        \label{inequality_sd1} & \le (n - 1) + 2 \pm 1 \\
+        \label{inequality_sd2} & \le n + 2.
     \end{align}
 
     Załóżmy, że diagram $D$ jest spójny, alternujący i zredukowany.
-    Pierwsza nierówność jest tak naprawdę równością jako powtórzenie założenia indukcynego.
+    Nierówność \ref{inequality_sd1} jest tak naprawdę równością jako powtórzenie założenia indukcynego.
     Z drugiej strony zachodzi $|s_-D'|=|s_-D|-1$, ponieważ przejście od $s_-D$ do $s_-D'$ skleja dwa ciemne obszary, jak na poniższym rysunku:
 \begin{comment}
     \[
@@ -224,7 +224,7 @@ Zauważmy jeszcze, że na każdym skrzyżowaniu występują cztery różne ciemn
         \end{tikzpicture}
     \]
 \end{comment}
-    Oznacza to, że druga nierówność także jest równością, quod erat demonstrandum.
+    Oznacza to, że nierówność \ref{inequality_sd2} także jest równością, quod erat demonstrandum.
 \end{proof}
 
 W~dowodzie hipotezy Taita użyjemy rozpiętości wielomianu Jonesa:
@@ -232,7 +232,7 @@ W~dowodzie hipotezy Taita użyjemy rozpiętości wielomianu Jonesa:
 \begin{definition}[rozpiętość]
 \index{rozpiętość wielomianu}%
     Niech $f$ będzie wielomianem Laurenta jednej zmiennej $X$.
-    Różnicę między najwyższą i najniższą potęgą $X$,
+    Różnicę między najwyższą i najniższą potęgą $X$ występującą w $f$,
     \begin{equation}
         \operatorname{span} f = \operatorname{maxdeg} f - \operatorname{mindeg} f,
     \end{equation}

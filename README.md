@@ -51,3 +51,5 @@ WARNING: Found unexpected fields: ['fjournal', 'journal'] in perko82 (@inproceed
 WARNING: Found unexpected fields: ['fjournal', 'journal'] in scharlemann98 (@incollection)
 WARNING: Found unexpected fields: ['volume'] in cerf98 (@misc)
 ```
+
+Zaimplementować aspell w make test.
