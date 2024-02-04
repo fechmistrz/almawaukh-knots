@@ -1,42 +1,33 @@
 
-\section{Homologie}
+\section{Homologie Chowanowa}
 
-Ta sekcja wymaga znajomości przynajmniej homologii: kompleksów łańcuchowych, różniczek, grup homologii.
-Można się tego nauczyć z~każdego podręcznika topologii algebraicznej.
-
-\subsection{Homologia Chowanowa}
-\index{homologia!Chowanowa|(}
-Viro napisał w 2004 piękną pracę \cite{viro04}, by objaśnić homologię Chowanowa używając tak mało algebry, jak to tylko możliwe.
-\index[persons]{Viro, Oleg}%
-Jest przyjazna dla początkujących, więc na niej opiera się reszta tej podsekcji\footnote{Viro wymienia kilka innych artykułów, z których można czerpać wiedzę. \emph{,,A good place to start: \cite{barnatan02} followed by \cite{shumakovitch12}, \cite{khovanov00}. Another possible starting point: \cite{turner17}''}. Napisali je kolejno Bar-Natan, Szumakowicz, Chowanow, Turner.}.
-\index[persons]{Chowanow, Michaił}%
-\index[persons]{Bar-Natan, Dror}%
-\index[persons]{Szumakowicz, Aleksander}%
-\index[persons]{Turner, Paul}%
-Będziemy pracować ze stanami Kauffmana i obramowanymi węzłami, ponieważ autor sugeruje, że to bardziej naturalne.
-Oryginalna praca Chowanowa to \cite{khovanov00}.
-
-Niech $L$ będzie splotem, zaś $D$ jego diagramem.
-Chowanow skonstruował rodzinę grup $\mathcal H^{i, j}(D)$ takich, że
-\begin{equation}
-    K(L, q) = \sum_{i, j} q^j (-1)^i \dim_\Q (\mathcal H^{i, j}(D) \otimes \Q),
-\end{equation}
-gdzie $K$ jest wersją wielomianu Jonesa.
-Grupy $\mathcal H^{i, j}$ są u~niego grupami homologii pewnych kompleksów łańcuchowych.
-Ich konstrukcja była przeładowana algebraicznymi szczegółami, później Bar-Natan \cite{barnatan02}, Viro podali jej warianty z~myślą o~topologach.
-% Viro - Remarks on definition of Khovanov homology, arXiv
-
+Reszta książki nie zależy od tej sekcji, więc Czytelnik nie dozna większego uszczerbku na wiedzy, jeśli pominie tę i kilka następnych stron (na przykład dlatego, że nie zna kompleksów łańcuchowych, różniczek, grup homologii, i tak dalej).
 Homologię Chowanowa nazywa się kategoryfikacją wielomianu Jonesa.
 Zanim zagłębimy się w szczegóły, rozpatrzmy prostszy przykład tego procesu.
 Niech $X$ będzie przestrzenią topologiczną, wtedy charakterystykę Eulera oraz grupy homologii łączy zależność
 \begin{equation}
     \chi(X) = \sum_{n = 0}^{\dim X} (-1)^n \operatorname{rk} H_n(X),
 \end{equation}
-a przy tym grupy homologii dostarczają więcej informacji, co więcej można o nich myśleć jako funktorach.
+a przy tym grupy homologii dostarczają więcej informacji, co więcej można o nich myśleć jako (jak o? \texttt{:|}) funktorach.
 Homologie są kategoryfikacją charakterystyki Eulera.
 
-Kategoryfikacja wielomianu Jonesa polega na zastąpieniu jakoś jego współczynników przez ciąg grup abelowych.
-Wzór o sumowaniu stanów przypomina ostatnią równość, brakuje tylko przedstawienia składników po prawej stronie jako alternująca suma rang grup.
+\index{homologia!Chowanowa|(}
+Niech $L$ będzie splotem, zaś $D$ jego diagramem.
+Chowanow \cite{khovanov00} odkrył, że całkowite współczynniki we wzorze o sumowaniu stanów można zamienić na kompleksy grup abelowych.
+Skonstruował rodzinę grup $\mathcal H^{i, j}(D)$ takich, że
+\begin{equation}
+    K(L, q) = \sum_{i, j} q^j (-1)^i \dim_\Q (\mathcal H^{i, j}(D) \otimes \Q),
+\end{equation}
+gdzie $K$ jest wersją wielomianu Jonesa.
+Niestety opis konstrukcji grup $\mathcal H^{i, j}$ przeładował algebraicznymi szczegółami, dlatego później Bar-Natan \cite{barnatan02}, Viro \cite{viro02} przygotowali swoje teksty z~myślą o~topologach.
+\index[persons]{Bar-Natan, Dror}%
+\index[persons]{Viro, Oleg}%
+My opierać się będziemy o~późniejszy artykuł Viro \cite{viro04}, który został napisany, gdyż \emph{,,Nonetheless, in most of the papers on Khovanov homology, the differences between \cite{barnatan02} and \cite{viro02} are taken too seriously. In this paper I discuss the constructions again. I begin with the approach of \cite{viro02}. (...) Then I identify this construction with the construction of \cite{barnatan02} and \cite{khovanov00}''}.
+Viro \cite{viro04} wymienia kilka innych dobrych miejsc, gdzie można zacząć wycieczkę do zrozumienia homologii Chowanowa: Turnera \cite{turner17} albo Bar-Natana \cite{barnatan02}, a potem Szumakowicza \cite{shumakovitch12}, Chowanowa \cite{khovanov00}.
+\index[persons]{Chowanow, Michaił}%
+\index[persons]{Bar-Natan, Dror}%
+\index[persons]{Szumakowicz, Aleksander}%
+\index[persons]{Turner, Paul}%
 
 Viro zauważa, że powszechna definicja wielomianu Jonesa sprawia problem dla pustego splotu (którego nigdy wcześniej nie rozpatrywaliśmy).
 Mamy:
@@ -52,8 +43,7 @@ Dlatego definiuje powiększony wielomian Jonesa:
     \widetilde{\jones_L}(t) = (-t^{1/2} - t^{-1/2}) \cdot \jones_L(t),
 \end{equation}
 i mówi, że będzie kategoryfikować powiększony wielomian Jonesa, a właściwie powiększoną klamrę Kauffmana.
-
-Jak pisze dalej, pewne drobne trudności techniczne mogły skłonić Chowanowa do pozbycia się ułamkowych potęg przez zmianę zmiennej w~powiększonym wielomianie Jonesa: niech $q := -t^{1/2}$.
+Niech $q := -t^{1/2}$.
 Dostaje się tak nowy wielomian, nazwijmy go $K$.
 Spełnia trzy aksjomaty:
 \begin{itemize}
@@ -125,20 +115,20 @@ Dostajemy wreszcie
     K(L, q) = \sum_{j = -\infty}^\infty q^j \sum_{i = -\infty}^\infty (-1)^i \operatorname{rk} C^{i, j}(D).
 \end{equation}
 
-Teraz ,,wystarczy'' zdefiniować funkcję $d$ i sprawdzić, że jest różniczką, to znaczy że $d^2 = 0$.
-Tak też robi Viro, nam brakuje sił, by przybliżyć konstrukcję.
-To już koniec -- różniczka pozwala przejść z grup $C^{i,j}$ do grup homologii.
-Pewne wyjaśnienia znaleźć można w~\cite[s. 42]{przytycki15}, gdzie podano przepis wymagający właściwie tylko ponumerowania skrzyżowań.
+Teraz ,,wystarczy'' zdefiniować funkcję $d \colon C^{i, j} \to C^{i+1, j}$ oraz sprawdzić, że $d^2 = 0$, czyli że $d$ jest różniczką.
+I to byłby już koniec, ale nam brakuje sił, by przybliżyć konstrukcję.
+Różniczka pozwala przejść z grup $C^{i,j}$ do grup homologii.
+Pewne wyjaśnienia znaleźć można w~\cite[s. 42]{przytycki15}, gdzie podano przepis wymagający tylko ponumerowania skrzyżowań.
 \index[persons]{Przytycki, Józef}%
 
-Bar-Natan, topolog izraelski, napisał program liczący homologie Chowanowa szybko \cite{barnatan07}, przy czym szybko oznacza: dla diagramu o~$n$ skrzyżowaniach, chyba\footnote{Źródło: komentarze pod postem \url{https://mathoverflow.net/a/232267}} w~czasie $O(\exp(c \sqrt n))$.
+Topolog izraelski Bar-Natan \cite{barnatan07} podał algorytm\footnote{Źródło: komentarze pod postem \url{https://mathoverflow.net/a/232267}} o~złożoności obliczeniowej $O(\exp(c \sqrt n))$ liczący homologie Chowanowa, gdzie $c$ jest pewną stałą, zaś $n$ liczbą skrzyżowań na diagramie.
 \index[persons]{Bar-Natan, Dror}%
 Nie możemy liczyć na istotne przyspieszenie:
-znalezienie przybliżenia wielomianu Jonesa jest problemem \#P-trudnym (\cite{kuperberg15}, \cite{vertigan05}),
+znalezienie przybliżenia wielomianu Jonesa jest w ogólności problemem \#P-trudnym (Kuperberg \cite{kuperberg15}, Vertigan \cite{vertigan05}),
 \index[persons]{Kuperberg, Greg}%
 \index[persons]{Vertigan, Dirk}%
-a przy znanych homologiach -- trywialnym.
-(Ale patrz też fakt \ref{prp:jones_at_roots_of_unity}).
+ale trywialnym przy znanych homologiach.
+(Patrz też fakt \ref{prp:jones_at_roots_of_unity}).
 % TODO: Gukov, Halverson, Ruehle, Sulkowski: Learning to unknot
 % [31] = Hass J, Lagarias J C and Pippenger N 1999 The computational complexity of knot and link problems J. ACM 46 185 proved that the unknotting problem, i.e. the decision problem whether a given knot K is actually an unknot, is in complexity class NP
 % [32] = Kuperberg G 2014 Knottedness is in np, modulo GRH Adv. Math. 256 493: assuming GRH, unknot recognition problem is in coNP, this assumption was later relaxed in [33] = Lackenby M 2017 The efficient certification of knottedness and thurston norm (arXiv:1604.00290)
@@ -152,19 +142,16 @@ Kronheimer, Mrówka \cite{kronheimer11} pokazali:
     Zredukowana kohomologia Chowanowa wykrywa niewęzeł.
 \end{proposition}
 
-\begin{proof}
+\begin{proof}[Niedowód]
 % DICTIONARY;sutured;szwowa;rozmaitość
 \index{rozmaitość!szwowa}%
-    Dowód składa się z dwóch kroków.
-    W pierwszym panowie pokazują, że istnieje ciąg spektralny zaczynający się od zredukowanej kohomologii Chowanowa, po którym następuje koniec: homologia zdefiniowana osobliwymi instantonami.
-
-    Potem dowodzą, że ta homologia jest izomorficzna z instantonową homologią Floera szwowego dopełnienia węzła, o której wiadomo, że wykrywa niewęzeł.
+    Dowód składa się z~dwóch kroków.
+    W~pierwszym panowie pokazują, że istnieje ciąg spektralny zaczynający się od zredukowanej kohomologii Chowanowa, po którym następuje koniec: homologia zdefiniowana osobliwymi instantonami.
+    Potem dowodzą, że ta homologia jest izomorficzna z~instantonową homologią Floera szwowego dopełnienia węzła, o~której wiadomo, że wykrywa niewęzeł.
 \index{homologia!Floera}%
 \end{proof}
 
 \index{homologia!Chowanowa|)}
-
-\index[persons]{Floer, Andreas}%
 
 % Koniec sekcji Homologie
 
