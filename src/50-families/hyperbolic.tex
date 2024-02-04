@@ -12,57 +12,44 @@ Zbadał paraboliczne reprezentacje ich grup w~skończoną grupę prostą $PSL(2,
 \index{węzeł!4-1}%
 % https://arxiv.org/pdf/2002.00564.pdf
 Zainspirowany tym wynikiem Thurston najpierw rozłożył dopełnienie ósemki na dwa idealne wielościany, a~potem znacznie uogólnił swój przykład.
+\index[persons]{Thurston, William}%
 
-Reszta sekcji powstała na podstawie dwóch źródeł: przeglądowej pracy Kalfagianniego, Futera oraz Purcell \cite{purcell19} i~notatek z~wykładów, które były prowadzone przez samą Purcell.
+Autorzy tej książki nie rozumieją węzłów hiperbolicznych!
+Przeczytaliśmy przeglądową pracę Kalfagianniego, Futera oraz Purcell \cite{purcell19}, notatki z~wykładów prowadzone przez samą Purcell i~wreszcie książkę \cite{purcell20}, jaka z~nich wyrosła.
 \index[persons]{Futer, David}%
 \index[persons]{Kalfagianni, Efstratia}%
 \index[persons]{Purcell, Jessica}%
 Wiedzę o~węzłach hiperbolicznych można czerpać także z~artykułu Weeksa \cite{weeks05}.
 \index[persons]{Weeks, Jeff}%
+Streścimy to, co zdążyliśmy przeczytać i odsyłamy zaintrygowanego Czytelnika do cytowanych pozycji.
 
-% Badając sploty nie ograniczamy się tylko do diagramów, ale korzystamy też z ich dopełnień, to znaczy 3-rozmaitości $S^3 \setminus L$.
-% Jest ona homeomorficzna z wnętrzem zwartej rozmaitości $X(L) = S^3 \setminus N(K)$, zwanej zewnętrzem splotu, gdzie $N(L)$ stanowi rurowe otoczenie splotu.
-% Dalej możemy stosować maszynierę topologii 3-rozmaitości.
-
-% \begin{definition}[ściśliwy]
-%     Niech orientowalna powierzchnia $S$ będzie właściwie\footnote{properly} zanurzona w zwartej, orientowalnej 3-rozmaitości $M$.
-%     Załóżmy, że dla każdego dysku $E \subseteq M$ z brzegiem $\partial E \subseteq S$ istnieje dysk $E' \subseteq S$ taki, że $\partial E = \partial E'$.
-%     Mówimy wtedy, że powierzchnia $S$ jest nieściśliwa.
-% \end{definition}
-
-% $\partial$-ściśliwość
-
-% essential
-
-% Haken
-
-% monodromy of fibration
-
-% Węzły i sploty, które będziemy rozpatrywać dalej, mają szczególną strukturą geometryczną.
+Sekcję o węzłach hiperbolicznych wypada zacząć od przytoczenia ich definicji.
+Owszem, zrobimy to, ale bez wyjaśnienia znaczenia użytych tu trudnych słów:
 
 \begin{definition}[hiperboliczny]
-    Splot $L$, na dopełnieniu którego można zadać zupełną metrykę o~stałej krzywiźnie $-1$ nazywamy hiperbolicznym.
+    Węzeł $K$, na dopełnieniu którego można zadać zupełną metrykę o~stałej krzywiźnie $-1$ nazywamy hiperbolicznym.
 \end{definition}
 
-\begin{proposition}
-    Niech $L$ będzie splotem, zaś $\mathbb H^3$ hiperboliczną 3-przestrzenią.
-    Splot $L$ jest hiperboliczny wtedy i~tylko wtedy, gdy $S^3 \setminus L = \mathbb H^3 / \Gamma$, gdzie $\Gamma$ jest dyskretną, beztorsyjną grupą izometrii, izomorficzną z~$\pi_1(S^3 \setminus L)$.
-\end{proposition}
-% TODO: skąd to jest dokładnie?
+Jeśli wiemy, czym jest 3-przestrzeń hiperboliczna $\mathbb H^3$, możemy używać równoważnej:
 
-Thurston podejrzewał, że każda 3-rozmaitość rozkłada się wzdłuż sfer i~nieściśliwych torusów na części wyposażone w~jedną z~ośmiu kanonicznych geometrii:
+\begin{definition}
+    Węzeł $K$ taki, że istnieje dyskretna, beztorsyjna grupa izometrii $\Gamma$ izomorficzna z~$\pi_1(S^3 \setminus K)$ taka, że $S^3 \setminus K = \mathbb H^3 / \Gamma$, nazywamy hiperbolicznym.
+\end{definition}
+
+Nie pamiętamy kto, gdzie i kiedy, ale ktoś gdzieś i kiedyś opowiedział nam, że Thurston podejrzewał, że każda 3-rozmaitość rozkłada się wzdłuż sfer i~nieściśliwych torusów na części wyposażone w~jedną z~ośmiu kanonicznych geometrii:
 \begin{itemize}
 \item sferyczną $S^3$, albo euklidesową $E^3$, albo hiperboliczną $H^3$,
 \item albo $S^2 \times \R$, albo $H^2 \times \R$,
 \item albo uniwersalne nakrycie $SL(2, \R)$,
 \item albo geometrię Sol albo geometrię Nil.
 \end{itemize}
-Nie umiał podać pełnego uzasadnienia, w~pracy \cite{thurston82} udowodnił swoje przypuszczenie dla rozmaitości Hakena.
-\index{rozmaitość!Hakena}%
-Dowód hipotezy geometryzacyjnej dostarczył mniej więcej dwie dekady później Perelman, nie to jest jednak dla nas najważniejsze.
+\index{hipoteza!geometryzacyjna Thurstona}%
+Dowód hipotezy geometryzacyjnej dostarczył mniej więcej dwie dekady później Perelman, ale dla nas to jest raczej bez znaczenia.
 \index[persons]{Perelman, Grigorij}%
-\index{hipoteza!geometryzacyjna Thurstona}
-Z przełomowych prac Thurstona z~lat 70. oraz 80. wynika coś ciekawszego: że dopełnienie węzła jest rozmaitością włóknistą Seiferta, toroidalną albo hiperboliczną.
+Wystarczy nam starszy wynik samego Thurstona \cite{thurston82}, który zajął się szczególnym przypadkiem rozmaitości Hakena.
+\index{rozmaitość!Hakena}%
+Dopełnienia splotów stanowią ich szczególny przypadek, dokładnej definicji nie podajemy umyślnie.
+I tak z~przełomowych prac Thurstona z~lat 70. oraz 80. wynika, że dopełnienie splotu jest rozmaitością włóknistą Seiferta, toroidalną albo hiperboliczną.
 \index{rozmaitość!włóknista Seiferta}%
 \index{rozmaitość!toroidalna}%
 \index{rozmaitość!hiperboliczna}%
@@ -74,18 +61,16 @@ Innymi słowy, Thurston przedstawił:
 \index{węzeł!torusowy}%
     Każdy węzeł jest satelitarny, torusowy albo hiperboliczny.
 \end{theorem}
-% luźno związane: http://www.deltami.edu.pl/temat/matematyka/topologia/2012/12/27/%William_Thurston_i_hipoteza_geometryzacyjna/
+% luźno związane: https://deltami.edu.pl/2013/01/william-thurston-i-hipoteza-geometryzacyjna/
 
 Thurston pisze, że Riley przypuszczał to samo z pomocą komputera na podstawie dużej liczby przykładów.
 \index[persons]{Riley, ??}%
 \index[persons]{Thurston, William}%
 
-\begin{proof}
-    Thurston \cite[s. 360]{thurston82} dowodzi ogólniejszefo faktu, że wnętrze zwartej 3-rozmaitości z~niepustym brzegiem $M$ ma strukturę hiperboliczną wtedy i tylko wtedy, gdy rozmaitość $M$ jest homotopijnie atoroidalna, pierwsza oraz nie jest homeomorficzna z $T^2 \times I / (\Z/2)$, gdzie $\Z/2$ odwraca $I$.
+\begin{proof}[Niedowód]
+    Thurston \cite[s. 360]{thurston82} dowodzi ogólniejszego faktu: wnętrze zwartej 3-rozmaitości z~niepustym brzegiem $M$ ma strukturę hiperboliczną wtedy i tylko wtedy, gdy rozmaitość $M$ jest homotopijnie atoroidalna, pierwsza oraz nie jest homeomorficzna z $T^2 \times I / (\Z/2)$, gdzie $\Z/2$ odwraca $I$.
     Stąd wynika już trychotomia.
 \end{proof}
-
-% https://mathoverflow.net/a/289359 : hyperbolic, toroidal (that is, satellite), or Seifert fibered
 
 Węzły hiperboliczne stanowią najliczniejszą i~najmniej zrozumianą rodzinę węzłów.
 Sam Nead, użytkownik portalu MathOverflow napisał, że kryterium Thurstona dzięki maszynerii JSJ oraz pracom innych osób można wysłowić algebraicznie.
@@ -117,7 +102,7 @@ Sam Nead, użytkownik portalu MathOverflow napisał, że kryterium Thurstona dzi
     Wtedy $L$ jest hiperboliczny.
 \end{proposition}
 
-\begin{proof}
+\begin{proof}[Niedowód]
     Patrz \url{https://mathoverflow.net/a/153327}.
 \end{proof}
 
@@ -130,10 +115,10 @@ Czas na podanie jakichś przykładów węzłów hiperbolicznych, za Adamsem \cit
 \index{węzeł!pierwszy}%
 \end{proposition}
 
-\begin{proof}
-    Menasco \cite{menasco84} pokazał, że dopełnienie alternującego węzła nie zawiera nieściśliwych nieperyferyjnych torusów.
+\begin{proof}[Niedowód]
+    Menasco \cite{menasco84} pokazał: dopełnienie alternującego węzła nie zawiera nieściśliwych nieperyferyjnych torusów.
 \index[persons]{Menasco, William}%
-    To w~połączeniu z~unifikacyjnym twierdzeniem Thurstona dla rozmaitości Hakena kończy dowód.
+    To w~połączeniu z~unifikacyjnym twierdzeniem Thurstona dla rozmaitości Hakena kończy(nie)dowód.
 \index{rozmaitość!Hakena}%
     % zarys dowodu zz MathSciNet
 \end{proof}
@@ -144,7 +129,7 @@ Czas na podanie jakichś przykładów węzłów hiperbolicznych, za Adamsem \cit
 \index{węzeł!prawie alternujący}%
 \end{proposition}
 
-\begin{proof}
+\begin{proof}[Niedowód]
     Grupa studentów: Brock, Bugbee, Comar, Faigin, Huston, Joseph, Pesikoff pod opieką Adamsa \cite{brock92}.
 \index[persons]{Adams, Colin}%
 \index[persons]{Brock, Jeffrey}%
@@ -164,7 +149,7 @@ Czas na podanie jakichś przykładów węzłów hiperbolicznych, za Adamsem \cit
 
 Ze wszystkich węzłów pierwszych do 11 skrzyżowań i~pierwszych, nierozszczepialnych splotów do 10 skrzyżowań tylko 3 węzły i~2 sploty nie są toroidalnie alternujące, tak twierdzi Adams \cite{adams05}.
 
-\begin{proof}
+\begin{proof}[Niedowód]
     Patrz \cite{adams994}.
 \end{proof}
 
@@ -192,40 +177,21 @@ Ze wszystkich węzłów pierwszych do 11 skrzyżowań i~pierwszych, nierozszczep
     \index{mutant}
 \end{proposition}
 
-\begin{proof}
+\begin{proof}[Niedowód]
 \index[persons]{Ruberman, Daniel}%
     Ruberman \cite[wniosek 1.4]{ruberman87}.
 \end{proof}
 
-\begin{proposition}
-    Niech $G$ oznacza grupę izometrii wnętrza dopełnienia węzła hiperbolicznego.
-    Wtedy $G$ jest diedralna lub skończona cykliczna.
-\end{proposition}
-
-\begin{proof}
-\index[persons]{Riley, Robert}%
-\index[persons]{Kodama, Kouzi}%
-\index[persons]{Sakuma, Makoto}%
-    Pierwszy był Riley \cite[s. 124]{riley79}, można też zapoznać się z~późniejszą pracą  Kodamy, Sakumy \cite{kodama92}.
-    % TODO: Kodama - lemat_1.1
-\end{proof}
-
-Kawauchi \cite[s. 131]{kawauchi96} wprowadza jeszcze jedną grupę (grupę symetrii węzła): iloraz grupy PL automorfizmów pary $(S^3, K)$ przez podgrupę elementów, które są otaczająco izotopijne z~odwzorowaniem tożsamościowym.
-Okazuje się, że nie wszystkie są skończone:
-
-\begin{proposition}
-    Węzeł $K$ ma skończoną grupę symetrii wtedy i~tylko wtedy, gdy jest hiperboliczny, torusowy lub kablem węzła torusowego.
-\end{proposition}
-
-Kawauchi nie podaje dowodu, ale zaleca zajrzeć do pracy Sakumy.
-My zajrzeliśmy i dalej nie mamy pojęcia, jak ten dowód miałby wyglądać.
-
-Z kryterium Thurstona mamy prosty wniosek (bo węzły złożone są satelitarne):
+Z kryterium Thurstona mamy prosty wniosek:
 
 \begin{corollary}
     Każdy węzeł hiperboliczny jest pierwszy.
     \index{węzeł!pierwszy}
 \end{corollary}
+
+\begin{proof}
+    Każdy węzeł złożony jest satelitarny, patrz przykład \ref{swallow_follow_torus}.
+\end{proof}
 
 Prawie każdy węzeł pierwszy o~mniej niż 17 skrzyżowaniach jest hiperboliczny, na 32 wyjątki składa się 12 węzłów torusowych oraz 20 satelitów trójlistnika.
 Te ostatnie mają co najmniej 13 skrzyżowań.
@@ -291,8 +257,8 @@ Pokazał w~niej, że jeśli oznaczymy liczbę splotów pierwszych i~nierozszczep
     \liminf_{n \to \infty} \frac{H_n}{P_n} < 1 - 10^{-13}.
 \end{equation}
 
-Czwarty rozdział książki \cite{purcell20} zawiera ćwiczenie, by znaleźć dwuparametrową rodzinę zupełnych struktur hiperbolicznych na nakłutym torusie oraz czterokrotnie nakłutej sferze.
-Elastyczność tego rodzaju nie występuje w~przestrzeniach wyższych wymiarów.
+Purcell \cite[s. 66]{purcell20} w formie ćwiczenia proponuje znaleźć rodzinę zupełnych struktur hiperbolicznych na nakłutym torusie oraz czterokrotnie nakłutej sferze.
+Podobna elastyczność nie występuje jednak w~przestrzeniach wyższych wymiarów.
 Z~twierdzenia o~sztywności, w~wersji algebraicznej:
 
 \begin{theorem}[Mostow-Prasad]
@@ -327,6 +293,32 @@ Twierdzenie Mostowa-Prasada pozwala nam na wprowadzenie nowych niezmienników sp
 Najważniejszym z~nich wydaje się być objętość.
 
 \input{50-families/hyperbolic_volume}
+
+\subsection{Symetrie węzłów hiperbolicznych}
+Przytoczone niżej dwa fakty nie są do niczego potrzebne, ale uważamy je za coś uroczego.
+
+\begin{proposition}
+    Niech $G$ oznacza grupę izometrii wnętrza dopełnienia węzła hiperbolicznego.
+    Wtedy $G$ jest diedralna lub skończona cykliczna.
+\end{proposition}
+
+\begin{proof}[Niedowód]
+\index[persons]{Riley, Robert}%
+\index[persons]{Kodama, Kouzi}%
+\index[persons]{Sakuma, Makoto}%
+    Pierwszy był Riley \cite[s. 124]{riley79}, można też zapoznać się z~późniejszą pracą  Kodamy, Sakumy \cite{kodama92}.
+    % TODO: Kodama - lemat_1.1
+\end{proof}
+
+Kawauchi \cite[s. 131]{kawauchi96} wprowadza jeszcze jedną grupę (grupę symetrii węzła): iloraz grupy PL automorfizmów pary $(S^3, K)$ przez podgrupę elementów, które są otaczająco izotopijne z~odwzorowaniem tożsamościowym.
+Okazuje się, że nie wszystkie są skończone:
+
+\begin{proposition}
+    Węzeł $K$ ma skończoną grupę symetrii wtedy i~tylko wtedy, gdy jest hiperboliczny, torusowy lub kablem węzła torusowego.
+\end{proposition}
+
+Kawauchi nie podaje dowodu, ale zaleca zajrzeć do pracy Sakumy.
+My zajrzeliśmy i dalej nie mamy pojęcia, jak ten dowód miałby wyglądać.
 
 \index{węzeł!hiperboliczny|)}
 
