@@ -53,3 +53,5 @@ WARNING: Found unexpected fields: ['volume'] in cerf98 (@misc)
 ```
 
 Zaimplementować aspell w make test.
+
+Wyjaśnić, jaka jest różnica między dowodem i niedowodem.
