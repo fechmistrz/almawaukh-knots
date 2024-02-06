@@ -6,7 +6,7 @@
 \begin{definition}
 \label{def:braid_number}%
     Niech $L$ będzie splotem.
-    Minimalną liczbę pasm, na których można zapleść warkocz $b$, którego domknięciem jest splot $L$, nazywamy liczbą warkoczową splotu $L$.
+    Najmniejszą liczbę pasm, na których można zapleść warkocz $b$, którego domknięciem jest splot $L$, nazywamy liczbą warkoczową splotu $L$.
 \end{definition}
 
 Tylko jeden węzeł ma liczbę warkoczową $1$, jest to niewęzeł.
@@ -38,6 +38,7 @@ Znamy ją między innymi dla węzłów torusowych (fakt~\ref{cor:torus_braid_num
 \end{comment}
 
 Według bazy danych LinkInfo\footnote{\url{https://linkinfo.sitehost.iu.edu/index.php} (sprawdzono 8 listopada 2023 roku).} istnieją 1424 niezorientowane sploty pierwsze o indeksie skrzyżowaniowym 11 lub mniejszym.
+% TODO: zamienić na prawdziwe cytowanie
 Spośród nich, 622 sploty mają tę samą liczbę warkoczową niezależnie od tego, jak zorientowane są ich ogniwa.   
 Z drugiej strony dokładnie jeden splot z~bazy LinkInfo, $L_{10}a_{153}$, może mieć aż cztery różne liczby warkoczowe: 3, 4, 5 lub 6.
 
@@ -51,6 +52,7 @@ Ohyama \cite{ohyama93} pokazał:
 
 \begin{proposition}
     Niech $L$ będzie nierozszczepionym\footnote{a może nierozszczepialnym?} splotem.
+% TODO: usunąć footnote
     Wtedy $\crossing L \ge 2 \braid L - 2$.
 \end{proposition}
 
@@ -60,6 +62,7 @@ Wśród pierwszych węzłów do 10 skrzyżowań mamy równość dziesięć razy:
 %=% PANDAS
 %=% >>> knots = [x for x in d.query('crossing_number == 2 * braid_index - 2 and crossing_number < 11')["name"]]; print(len(knots), knots)
 %=% 10 ['4_1', '6_1', '8_1', '8_3', '8_12', '10_1', '10_3', '10_13', '10_35', '10_58']
+% TODO: czemu tutaj?
 
 \begin{proposition}[nierówność Mortona-Franksa-Williamsa]
 \index{nierówność Mortona-Franksa-Williamsa}%
@@ -79,7 +82,7 @@ Dowód podali niezależnie Franks, Williams \cite{franks87} i Morton \cite{morto
 
 Wielomian Alexandera wykrywa czasami węzły, których nie otrzyma się przez domykanie ,,małych'' warkoczy.
 \index{wielomian!Alexandera}%
-Przytoczone tu wyniki pochodzą z pracy \cite{jones85} Jonesa, gdzie nie ma jednak ich dowodów.
+Przytoczone tu wyniki pochodzą z pracy Jonesa \cite{jones85}, gdzie nie ma jednak ich dowodów.
 
 \begin{proposition}
     Jeśli $|\alexander_K(i)| > 3$, to węzeł $K$ nie jest domknięciem 3-warkocza.
