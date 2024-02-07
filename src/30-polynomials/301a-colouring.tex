@@ -3,13 +3,14 @@
 
 \begin{definition}
 \index{równanie kolorujące}%
-    Wielomianowe równanie kolorujące związane ze skrzyżowaniem
+    Niech $D$ będzie diagramem splotu zorientowanego, którego łukom przypisano kolory $0, 1, \ldots, n - 1$.
+    Wtedy do każdego skrzyżowania:
 \begin{comment}
     \[
         \LargePlusCrossingLabel
     \]
 \end{comment}
-    splotu zorientowanego to $g + tk - tg - h = 0$.
+    można przypisać wielomianowe równanie kolorujące $g + tk - tg - h = 0$.
     Tylko orientacja górnego łuku ma znaczenie.
 \end{definition}
 
@@ -85,7 +86,8 @@ Odwrotnie, dowolny wielomian Laurenta z~całkowitymi współczynnikami o~takich 
 
 \begin{proposition}
 \label{prp:alexander_hosokawa}%
-    Każdy wielomian Laurenta $p(t)$ o~całkowitych współczynnikach taki, że $p(1/t) = p(t)$ i~$p(1) = \pm 1$ jest wielomianem Alexandera pewnego węzła.
+    Niech $p(t)$ będzie wielomianem Laurenta nad pierścieniem $\Z$ takim, że $p(t) = p(t^{-1})$ i~$p(1) = \pm 1$.
+    Wtedy istnieje węzeł $K$, dla którego $\alexander_K(t) \equiv p(t)$.
 \end{proposition}
 
 \begin{proof}[Niedowód]
@@ -114,8 +116,9 @@ Dzięki pracy Sakumy \cite{sakuma20} dowiedzieliśmy się, że Seifert \cite{sei
 \index[persons]{Seifert, Herbert}%
 \index[persons]{Terasaka, Hidetaka}%
 \index[persons]{Whitehead, John}%
-W~tej książce mamy już jedno źródło całej serii przykładów: fakt \ref{prp:pretzel_alexander}, między innymi $(-3, 5, 7)$ precel jest takim przykładem.
-\index{precel!(-3,5,7)}%
-(Pisaliśmy też o tym za faktem \ref{trivial_alexander_polynomial}).
+W~tej książce mamy już jedno źródło całej serii przykładów: fakt \ref{prp:pretzel_alexander}.
+% między innymi $(-3, 5, 7)$ precel jest takim przykładem.
+% \index{precel!(-3,5,7)}%
+% (Pisaliśmy też o tym za faktem \ref{trivial_alexander_polynomial}).
 % koniec podsekcji Równania kolorujące
 
