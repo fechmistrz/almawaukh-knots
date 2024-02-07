@@ -106,15 +106,15 @@ Używając nadal tej niestandardowej notacji można sklasyfikować węzły odwra
 \index{węzeł!odwracalny}%
     Splot Montesinosa jest odwracalny wtedy i tylko wtedy, gdy, po ewentualnej zmianie etykiet supłów, przynajmniej jedna z liczb $\alpha_i$ jest parzysta lub wszystkie liczby $\alpha_i$ są parzyste, a sam splot ma postać
     \begin{equation}
-        M(e_0, \beta_1/\alpha_1, \ldots, \beta_p/\alpha_p, \beta_p/\alpha_p, \ldots, \beta_1/\alpha_1)
+        M\left(e_0, \frac{\beta_1}{\alpha_1}, \ldots, \frac{\beta_p}{\alpha_p}, \frac{\beta_p}{\alpha_p}, \ldots, \frac{\beta_1}{\alpha_1}\right)
     \end{equation}
     (oraz $r = 2p$) lub
     \begin{equation}
-        M(e_0, \beta_1/\alpha_1, \ldots, \beta_p/\alpha_p, \beta_{p+1}/\alpha_{p+1}, \beta_p/\alpha_p, \ldots, \beta_1/\alpha_1)
+        M\left(e_0, \frac{\beta_1}{\alpha_1}, \ldots, \frac{\beta_p}{\alpha_p}, \frac{\beta_{p+1}}{\alpha_{p+1}}, \frac{\beta_p}{\alpha_p}, \ldots, \frac{\beta_1}{\alpha_1}\right)
     \end{equation}
     (oraz $r = 2p+1$) lub
     \begin{equation}
-         M(e_0, \beta_1/\alpha_1, \ldots, \beta_p/\alpha_p, \beta_{p+1}/\alpha_{p+1}, \beta_p/\alpha_p, \ldots, \beta_2/\alpha_2).
+         M\left(e_0, \frac{\beta_1}{\alpha_1}, \ldots, \frac{\beta_p}{\alpha_p}, \frac{\beta_{p+1}}{\alpha_{p+1}}, \frac{\beta_p}{\alpha_p}, \ldots, \frac{\beta_2}{\alpha_2}\right).
     \end{equation}
     (oraz $r = 2p$).
 \end{proposition}
@@ -132,16 +132,17 @@ Używając nadal tej niestandardowej notacji można sklasyfikować węzły odwra
 \end{definition}
 
 Na standardowym diagramie precla $(p_1, p_2, \ldots, p_n)$ występuje $p_1$ lewych skrzyżowań w~pierwszym suple, $p_2$ w~drugim, i~tak dalej.
-Taki precel jest węzłem dokładnie wtedy, gdy $n$ oraz $p_i$ są nieparzyste lub dokładnie jedna z~liczb $p_i$ jest parzysta (\cite[s. 27]{kawauchi96}).
+Taki precel jest węzłem dokładnie wtedy, gdy $n$ oraz $p_i$ są nieparzyste lub dokładnie jedna z~liczb $p_i$ jest parzysta (Kawauchi \cite[s. 27]{kawauchi96}).
 
 \begin{proposition}
     Jeśli co najmniej dwa współczynniki $p_i, p_j$ zerują się, precel jest rozszczepialny.
 \end{proposition}
 
+Źródło: {\small\url{https://en.wikipedia.org/w/index.php?title=Pretzel_link&oldid=8626389}}.
+Implikacja odwrotna jest rzekomo fałszywa, ale nie umiemy powiedzieć, dlaczego.
+
 \begin{proof}
     Widać to bezpośrednio z diagramu: jego część zawarta między supłem $p_i$ oraz $p_j$ jest rozłączna z~resztą diagramu.
-    Nie jest jednak prawdziwa implikacja odwrotna.
-    % TODO: podać przykład
 \end{proof}
 
 Precel $(1,1,1)$ to prawy trójlistnik, $(5, -1, -1)$ to węzeł dokerski $6_1$, $(-3, 0, -3)$ to splot dwóch trójlistników, zaś $(2p, 2q, 2r)$ jest splotem trzech niewęzłów.
@@ -183,7 +184,7 @@ Wiele twierdzeń, które dotyczą takich rozmaitości, opiera się na przykład 
 \begin{proof}
 \index[persons]{Fox, Ralph}%
 \index[persons]{Trotter, Hale}%
-    Zgodnie z sugestią Foxa, Trotter przetłumaczył problem na język teorii grup w \cite{trotter63}.
+    Zgodnie z sugestią Foxa, Trotter \cite{trotter63} przetłumaczył problem na język teorii grup.
     Wyróżnia w~grupie węzła dwa elementy -- (zorientowany) południk i równoleżnik.
     Jeśli dwa węzły są równoważne, to homeomorfizm $\R^3 \to \R^3$ posyłający jeden na drugi wyznacza izomorfizm ich grup podstawowych, który posyła południk na południk i równoleżnik na równoleżnik.
     W szczególności, jeśli węzeł jest odwracalny, to jego grupa posiada specjalny automorfizm (,,inwersję'') odwracający zarówno południk, jak i równoleżnik.
@@ -221,14 +222,14 @@ To pokazuje, że wszystkie typy symetrii są realizowane przez precle lub sumy p
 \begin{proof}
 \index[persons]{Bae, Yongju}%
 \index[persons]{Lee, In}%
-    Bae, Lee pokazali w \cite[lemat 3.1]{bae20}, że macierz Seiferta $(p, q, r)$-precla to
+    Bae, Lee \cite[lemat 3.1]{bae20} pokazali, że macierz Seiferta $(p, q, r)$-precla to
     \begin{equation}
         M = \frac 1 2 \begin{bmatrix}
             p+q & p-1 \\
             p+1 & p+r
         \end{bmatrix},
     \end{equation}
-    wystarczy więc użyć wzoru $\alexander = \det(M-tM^t)$.
+    wystarczy więc użyć wzoru $\alexander = \det(M-tM^\top)$.
 \end{proof}
 
 Wielomian Alexandera precla $(p_1, \ldots, p_n)$ nigdy nie zależy od kolejności współczynników, jest to ćwiczenie w~książce Livingstona \cite[s. 215]{livingston93}.
@@ -245,11 +246,11 @@ Wielomian Alexandera precla $(p_1, \ldots, p_n)$ nigdy nie zależy od kolejnośc
 \index[persons]{Brownell, Kathryn}%
 \index[persons]{O'Neil, Kaitlyn}%
 \index[persons]{Taalman, Laura}%
-    Pierwsza część jest wnioskiem ze stwierdzeeń~\ref{prp:colour_determinant},~\ref{prp:alexander_determinant} oraz~\ref{prp:pretzel_alexander}.
-    Dowód drugiej zawiera praca Brownell, O'Neil, Taalman \cite[s. 11]{taalman05}, trzech Amerykanek.
+    Pierwsza część jest wnioskiem ze stwierdzeń~\ref{prp:colour_determinant},~\ref{prp:alexander_determinant} oraz~\ref{prp:pretzel_alexander}.
+    Dowód drugiej zawiera praca Brownell, O'Neil, Taalman \cite[s. 11]{taalman05}.
 \end{proof}
 
-Podano tam także ogólny wzór na liczbę $n$-kolorowań dowolnego węzła.
+Podano tam (czyli w \cite{taalman05}) także ogólny wzór na liczbę $n$-kolorowań dowolnego węzła.
 
 \index{precel|)}%
 
