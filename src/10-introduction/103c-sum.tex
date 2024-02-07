@@ -11,6 +11,7 @@
 \begin{definition}[suma spójna]
 % DICTIONARY;connected sum;suma spójna;-
 \index{suma spójna}%
+\label{def:connected_sum}%
     Niech $K_1, K_2$ będą zorientowanymi węzłami.
     Natnijmy każdy z nich w dwóch punktach tego samego krótkiego łuku, a następnie zszyjmy dwoma łukami, które nie przecinają już istniejących, jak na obrazku.
     Otrzymany węzeł nazywamy sumą spójną węzłów $K_1$ oraz $K_2$ i oznaczamy przez $K_1 \shrap K_2$.
@@ -94,49 +95,51 @@
 \end{comment}
 \end{definition}
 
-Pojęcie sumy spójnej węzłów (oraz satelity, opisane później) wprowadził do matematyki Schubert w \cite{schubert49}.
+W topologii rozważa się podobną operację: z~każdej $n$-rozmaitości wycina się kulę, po czym skleja wzdłuż brzegowej sfery w~jedną rozmaitość.
+Ale kiedy zajmujemy się węzłami, nie interesuje nas struktura rozmaitości (gdyż każdy węzeł jest homeomorficzny z~okręgiem), tylko zanurzenie w otaczającą przestrzeń.
+Pojęcie sumy spójnej węzłów (oraz opisane później satelity) wprowadził do matematyki Schubert \cite{schubert49}.
 \index[persons]{Schubert, Horst}%
 
-Ważna jest orientacja składników: suma dwóch trójlistników może być węzłem babskim lub prostym\footnote{To jedno z niewielu miejsc, gdzie nomenklatura pochodzi od żeglarzy.}.
-\label{two_sums_of_two_trefoils}%
-Uzasadnienie, że te węzły są różne, nie jest łatwym zadaniem.
-Fox twierdzi, że Seifert wiedział to już w~1933 roku.
-% Seifert, Herbert - Verschlingungsinvarianten. (German) Zbl 0008.18101 Sitzungsber. Preuß. Akad. Wiss., Phys.-Math. Kl. 1933, No. 26-29, 811-828 (1933).
-Pokazał też w~króciutkim artykule \cite{fox52}, że
-
-\begin{proposition}
-    Dopełnienia węzła babskiego oraz prostego nie są homeomorficzne.
-\end{proposition}
-
-Suma tak samo skręconych trójlistników ma niezerową sygnaturę, więc nie może być plastrowa.
-Natomiast suma przeciwnie skręconych jest plastrowa.\footnote{Nie wiem, skąd to wiem.}
-\index{węzeł!plastrowy}
-
-Warunku, by zszywające łuki nie przecinały diagramów, nie można pominąć: Cromwell w~\cite[s. 90]{cromwell04} pokazuje przykład dwóch niewęzłów, z~których otrzymano niepoprawnie dwie różne sumy, $6_1$ oraz $8_{20}$.
-
-W topologii rozważa się podobną operację dla $n$-rozmaitości: z~każdej z~nich wycina się kulę, po czym skleja wzdłuż brzegowej sfery w~jedną rozmaitość.
-Ale kiedy zajmujemy się węzłami, nie interesuje nas struktura rozmaitości (gdyż każdy węzeł jest homeomorficzny z~okręgiem), tylko zanurzenie w otaczającą przestrzeń.
+Żadnego elementu definicji \ref{def:connected_sum} nie można pominąć:
+\begin{itemize}
+    \item \emph{składniki $K_1, K_2$ muszą być zorientowane}. 
+    Węzeł prosty, czyli suma dwóch przeciwnie skręconych trójlistników, ma zerową sygnaturę i jest plastrowy.
+    \index{węzeł!plastrowy}    
+    \index{sygnatura}%
+    Węzeł babski, czyli suma tak samo skręconych trójlistników ma niezerową sygnaturę.
+    (To jedno z niewielu miejsc, gdzie nomenklatura pochodzi od żeglarzy.).
+    \label{two_sums_of_two_trefoils}%
+    Uzasadnienie, że te węzły są różne, nie jest łatwym zadaniem.
+    Fox twierdzi, że Seifert \cite{seifert33} wiedział o tym.
+    Pokazał też w~króciutkim artykule \cite{fox52}, że ich dopełnienia nie są homeomorficzne.
+    \item \emph{składniki $K_1, K_2$ muszą być węzłami, nie splotami}. Nie istnieje kanoniczny wybór, które ogniwa łączyć ze sobą.
+    \item \emph{zszywajace łuki nie mogą przecinać diagramów}.
+    Cromwell \cite[s. 90]{cromwell04} pokazuje przykład dwóch niewęzłów, z~których otrzymano niepoprawnie dwie różne sumy, $6_1$ oraz $8_{20}$.
+\end{itemize}
 
 \begin{proposition}
     Suma spójna węzłów jest dobrze określonym działaniem.
+    Jest łączna i przemienna; niewęzeł stanowi jej element neutralny.
 \end{proposition}
-
-Suma spójna nie jest dobrze określona dla splotów: nie istnieje kanoniczny wybór, które ogniwa łączyć ze sobą.
 
 \begin{proof}
     Niech dane będą węzły $K_1$ oraz $K_2$ oraz dwa różne łuki $\gamma_1$, $\gamma_2$, których można użyć do konstrukcji sumy spójnej.
     Skurczmy $K_1$ tak, by był bardzo mały, przeciągnijmy najpierw przez łuk $\gamma_1$, a~następnie wzdłuż węzła $K_2$ do miejsca, gdzie zaczyna się łuk $\gamma_2$.
     Na koniec odwróćmy proces, z łukiem~$\gamma_2$ w~miejscu łuku $\gamma_1$.
+
+    Prosty dowód drugiego zdania pozostawiamy Czytelnikowi.
 \end{proof}
 
-\begin{proposition}
-    Suma spójna jest działaniem łącznym oraz przemiennym.
-    Niewęzeł stanowi jej element neutralny.
-\end{proposition}
+Algebra powiedziałaby, że węzły z~sumą spójną tworzą półgrupę, podobnie jak liczby naturalne z~działaniem dodawania.
+Do bycia grupą brakuje istnienia elementów przeciwnych. 
+Znane są nam co najmniej trzy różne sposoby na uzasadnienie tego faktu.
 
-Prosty dowód tego faktu pozostawiamy Czytelnikowi.
-W języku algebry mówimy, że węzły z~sumą spójną tworzą półgrupę (tak jak liczby naturalne z działaniem dodawania).
-Dużo później pokażemy, że działaniu $\shrap$ brakuje elementów przeciwnych, więc ta struktura algebraiczna nie jest grupą.
+Najpierw wywnioskowaliśmy to z~własności powierzchni Seiferta i~ich genusu: faktów \ref{prp:genus_detects_unknot} oraz \ref{prp:genus_of_sum}.
+O~tym samym dowodzie wspomina Kawauchi \cite[s. 33]{kawauchi96}, a~fakt nazywa twierdzeniem o~nieanulowaniu.
+Potem poznaliśmy szwindel Mazura, technikę dowodzenia bardziej przystępną dla kogoś, kto nie zna topologii algebraicznej, ale niestety wykorzystującą węzły dziki.
+Długo myśleliśmy, że inaczej się nie da, ale elementarny dowód istnieje!
+% odkryte w https://aperiodical.com/2018/07/the-big-internet-math-off-round-1-jim-propp-v-zoe-griffiths/
+Trzeba zajrzeć do \cite[s. 18-20]{kauffman95} dla dwóch rysunków tamże.
 
 \begin{proposition}
 \label{first_time_sum_is_trivial}%
@@ -161,13 +164,6 @@ Dużo później pokażemy, że działaniu $\shrap$ brakuje elementów przeciwnyc
     Analogicznie pokazujemy, że $L \simeq \SmallUnknot$.
     (To jedyne miejsce w~całej książce, gdzie użyte zostają węzły dzikie.)
 \end{proof}
-
-W poprzednim wydaniu książki znajdowała się informacja, że dla dowodu tego faktu trzeba przytoczyć narzędzia topologii algebraicznej: powierzchnie Seiferta i~genus; wtedy jest to bezpośredni wniosek z~faktów \ref{prp:genus_detects_unknot} oraz \ref{prp:genus_of_sum}.
-O~tym samym dowodzie wspomina Kawauchi \cite[s. 33]{kawauchi96}, a~fakt nazywa twierdzeniem o~nieanulowaniu.
-Okazuje się jednak, że elementarny dowód istnieje!
-% odkryte w https://aperiodical.com/2018/07/the-big-internet-math-off-round-1-jim-propp-v-zoe-griffiths/
-
-Trzeba zajrzeć do \cite[s. 18-20]{kauffman95} dla dwóch rysunków tamże.
 
 \begin{proof}
     (Na podstawie \cite[s. 18-20]{kauffman95}).
