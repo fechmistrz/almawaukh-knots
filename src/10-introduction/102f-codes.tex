@@ -67,7 +67,7 @@ Graf ten powstaje przez usunięcie cyklu Hamiltona (łączącego kolejne liczby)
 Zbiór par etykiet przy skrzyżowaniach węzła to skojarzenie doskonałe w grafie $G$.
 Liczba skojarzeń prawie pokrywa się z rozwiązaniem zadania znanego w literaturze jako ,,problème des ménages'': na ile sposobów $n$ małżeństw można posadzić przy okrągłym stole tak, by żadne małżeństwo nie siedziało obok siebie i~każdy mężczyzna znalazł się obok dwóch kobiet?
 Ustawienia, które powstają przez cykliczne permutowanie należy uznać za tożsame.
-Gilbert znalazł w \cite{gilbert56} wzór na $a_n$, liczbę różnych kodów:
+Gilbert \cite{gilbert56} znalazł wzór na $a_n$, liczbę różnych kodów:
 \begin{align}
 u(m, t) & = 2m \sum_{k=0}^m {2m-k \choose k} \cdot (m-k)! \cdot \frac{(t-1)^k}{2m - k}  \\
 a(n) & = \frac{1}{n} \sum_{d\mid n} \left(\frac{n}{d}\right)^d \cdot u \left(d, 1 - \frac{d}{n}\right) \cdot \varphi \left(\frac{n}{d}\right)
@@ -84,6 +84,7 @@ W~1927 roku Alexander, Briggs wprowadzili zupełnie inny sposób oznaczania węz
 Do opisu węzła używa się dwóch liczb: jego indeksu skrzyżowaniowanego z dolnym indeksem, oznaczającym miejsce w tablicy~węzłów.
 I~tak węzły o~ośmiu skrzyżowaniach to $8_1, 8_2, \ldots,$ $8_{21}$.
 Porządek jest umowny i jego wybór należy do osoby, która jako pierwsza znajdzie wszystkie węzły o danej liczbie skrzyżowań (ale węzeł skręcony występuje zawsze po torusowym).
+% TODO: dlaczego?
 \index{węzeł!skręcony}%
 \index{węzeł!torusowy}%
 
