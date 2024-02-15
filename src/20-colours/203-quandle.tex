@@ -2,19 +2,54 @@
 \section{Kwandle i wraki}
 \index{kwandel|(}%
 
-Sekcja ta powstała częściowo w~oparciu o~notatki autorstwa Bergera, Geriga\footnote{dostępne pod adresem \url{https://scholar.harvard.edu/files/gerig/files/knotnotes.pdf}} oraz Bergera, Flannery'ego i~Sumnichta\footnote{dostępne pod adresem \url{https://github.com/thyrgle/191_Final_Project/blob/master/paper.pdf}}; ale najlepiej zacząć od długiej na trzy strony odpowiedzi Nelsona na pytanie ,,czym jest kwandel?'' w \cite{nelson16}.
+Sekcja ta powstała częściowo w~oparciu o~notatki autorstwa Bergera, Geriga\footnote{dostępne pod adresem \url{https://scholar.harvard.edu/files/gerig/files/knotnotes.pdf}} oraz Bergera, Flannery'ego i~Sumnichta\footnote{dostępne pod adresem \url{https://github.com/thyrgle/191_Final_Project/blob/master/paper.pdf}}; ale najlepiej zacząć od długiej na trzy strony odpowiedzi Nelsona \cite{nelson16} na pytanie ,,czym jest kwandel?''.
 \index[persons]{Berger, Andrew}%
 \index[persons]{Gerig, Chris}%
 \index[persons]{Flannery, Brandon}%
 \index[persons]{Sumnicht, Christopher}%
+\index[persons]{Nelson, Sam}%
 Należy przy tym pamiętać, że jest to dość niszowe zagadnienie, na przykład Burde, Zieschang, Heusener \cite[s. 11]{burde14} poświęcają mu pięć wierszy i~odsyłają Czytelnika do pracy Fenna, Rourkego \cite{rourke92}.
+\index[persons]{Fenn, Roger}%
+\index[persons]{Rourke, Colin}%
+Dużo otwartych problemów dotyczących kwandli można znaleźć u~Ohtsukiego \cite[s. 455-465]{ohtsuki02}.
 
+Kwandle pierwszy raz odkryli Conway z Wraithem około 1959 roku, jeszcze jako studenci I stopnia na uniwersytecie w Cambridge, w nieopublikowanej korespondencji między sobą (patrz definicja przed definicją \ref{def:quandle}).
+\index[persons]{Conway, John}%
+\index[persons]{Wraith, Gaven}%
+Ponownie uczyniono to latach 80. XX wieku: Joyce w~1982 jako kwandle, Matwiejow w tym samym roku pod nazwą grupoidy rozdzielne, wreszcie Brieskorn w 1986 jako zbiory automorficzne.
+\index[persons]{Joyce, David}%
+\index[persons]{Matwiejow, Siergiej}%
+% https://ru.wikipedia.org/wiki/Матвеев,_Сергей_Владимирович
+\index[persons]{Brieskorn, Egbert}%
+\index{grupoid rozdzielny|see {kwandel}}%
+\index{zbiór automorficzny|see {kwandel}}%
+Joyce zapytany o znaczenie słowa \emph{quandle} odparł \emph{,,I needed a usable word. Distributive algebra had too many syllables. Piffle was already taken. I tried trindle and quagle, but they didn’t seem right, so I went with quandle''}.\footnote{Źródło: blog Johna Baeza \url{https://golem.ph.utexas.edu/category/2015/05/the_origin_of_the_word_quandle.html}}
+\index[persons]{Joyce, David}%
+
+Conway nazwał wraki wrakami (\emph{wracks}), by częściowo zażartować z~nazwiska jego kolegi Wraitha, a częściowo by zaznaczyć, że są one tym, co zostaje z~grupy, w~której zapomniano o~mnożeniu, ale nie sprzęganiu (w~języku angielskim co najmniej od XVI wieku funkcjonuje zwrot ,,wrack and ruin'' oznaczający zniszczenie).
+\index[persons]{Conway, John}%
+\index[persons]{Wraith, Gaven}%
+Obecnie dominuje określenie \emph{racks}.
+
+\subsection{Kwandle}
 Aksjomaty grupy stanowią uogólnienie symetrii, ponieważ składanie symetrii jest łączne, identyczność jest symetrią, funkcja odwrotna do symetrii jest symetrią.
-Kwandle to struktura algebraiczna podobna do grupy: ich aksjomaty odzwierciedlają ruchy Reidemeistera.
+Znajdziemy teraz słabo znaną strukturę algebraiczną, która odzwierciedla ruchy Reidemeistera (oraz aksjomatyzuje własności sprzężeń w grupach, choć jest to dla nas mniej interesujące).
 \index{ruch!Reidemeistera}%
+
+Niech $X$ będzie skończonym zbiorem kolorów wyposażonym w~działanie $\triangleright \colon X \times X \to X$.
+Będziemy rysować diagramy węzłów tak, że każdemu łukowi przypisany będzie pewien kolor $x \in X$ zgodnie z następującą regułą (patrz rysunek): kiedy łuk o kolorze $x$ przechodzi pod biegnącym w prawo łukiem koloru $y$, staje się łukiem w kolorze $x \triangleright y$.
+
+\begin{comment}
+\[
+    \LargeMinusCrossingQuandle
+\]
+\end{comment}
+
+Formalnie:
 
 % DICTIONARY;quandle;kwandel;-
 \begin{definition}[kwandel]
+\label{def:quandle}%
 \index{kwandel}%
     Zbiór $X$ wyposażony w dwuargumentowe działanie $\triangleright$, które dla wszystkich elementów $x, y, z \in X$ spełnia trzy warunki:
     \begin{enumerate}
@@ -25,37 +60,9 @@ Kwandle to struktura algebraiczna podobna do grupy: ich aksjomaty odzwierciedlaj
     nazywamy kwandlem.
 \end{definition}
 
-David Joyce zapytany o znaczenie słowa \emph{quandle} odpowiedział: \emph{,,I needed a usable word. Distributive algebra had too many syllables. Piffle was already taken. I tried trindle and quagle, but they didn’t seem right, so I went with quandle''}.
-\index[persons]{Joyce, David}%
-
-Kwandle można rozpatrywać jako samodzielne konstrukcje algebraiczne.
-My pokażemy, że są naturalnym niezmiennikiem węzłów.
-
-Niech $X$ będzie skończonym kwandlem, zaś $K$ węzłem.
-Elementy $x \in X$ będą dla nas kolorami, którymi oznaczymy długie łuki na diagramie węzła $K$.
-Gdy trzy kolory spotykają się przy jednym skrzyżowaniu, definiujemy funkcję $\triangleright \colon X \times X \to X$, jak na rysunku.
-To znaczy: kiedy łuk o kolorze $x$ przechodzi pod łukiem koloru $y$, staje się łukiem w kolorze $x \triangleright y$.
-\begin{comment}
-\[
-    \LargeMinusCrossingQuandle
-\]
-\end{comment}
-
-Ta definicja pochodzi z~nieopublikowanej korespondencji między Johnem Conwayem i~Gavenem Wraithem, którzy w 1959 byli studentami I stopnia na uniwersytecie w Cambridge.
-\index[persons]{Conway, John}%
-\index[persons]{Wraith, Gaven}%
-% index: uniwersytet w Cambridge? a są inne?
-Ponownie odkryto ją w latach 80. XX wieku: Joyce w 1982 po raz pierwszy nazwał te obiekty kwandlami, Matwiejow w tym samym roku jako grupoidy rozdzielne, Brieskorn w 1986 jako zbiory automorficzne.
-\index[persons]{Joyce, David}%
-\index[persons]{Matwiejow, Siergiej}%
-% https://ru.wikipedia.org/wiki/Матвеев,_Сергей_Владимирович
-\index[persons]{Brieskorn, Egbert}%
-\index{grupoid rozdzielny|see {kwandel}}%
-\index{zbiór automorficzny|see {kwandel}}%
-
 Drugi aksjomat nazywa się czasem odwracalnością z prawej strony: znając $x \triangleright y$ oraz $y$ możemy odtworzyć element $x$, jednak znając $x$ być może nie jesteśmy w stanie odtworzyć elementu $y$.
 Jedyny element $x$ taki, że $x \triangleright y = z$ nazwijmy $y \triangleleft z$.
-To pozwala podać trochę inną definicję kwandli, my nie będziemy jej nigdy używać:
+To pozwala podać trochę inną definicję kwandli, którą przytaczamy jako ciekawostkę.
 
 \begin{definition}
     Zbiór $X$ z dwuargumentowymi działaniami $\triangleright, \triangleleft$ taki, że dla wszystkich $x, y, z \in X$ zachodzi:
@@ -70,15 +77,15 @@ To pozwala podać trochę inną definicję kwandli, my nie będziemy jej nigdy u
     nazywamy kwandlem.
 \end{definition}
 
-Teraz możemy przetłumaczyć ruchy Reidemeistera w aksjomaty kwandli.
+Pokażemy teraz, czemu aksjomaty kwandli można traktować jako przetłumaczenie ruchów Reidemeistera na język algebry.
 \index{ruch!Reidemeistera}%
 
-\begin{proposition}
+\begin{proposition}[niezmiennik zliczający]
 \index{niezmiennik!zliczający}%
     Niech $X$ będzie skończonym kwandlem.
     Liczba etykietowań diagramu elementami kwandla $X$ jest niezmiennikiem węzłów, zwanym niezmiennikiem zliczającym.
 \end{proposition}
-
+    
 \begin{proof}
     Musimy pokazać, że etykiety na diagramiem przed każdym ruchem Reidemeistera wyznaczają jednoznacznie układ etykiet po tym ruchu.
     Pierwszy i drugi ruch:
@@ -106,18 +113,7 @@ Teraz możemy przetłumaczyć ruchy Reidemeistera w aksjomaty kwandli.
 \end{comment}
 \end{proof}
 
-Homomorfizmy definiujemy standardowo, przez analogię do grup:
-
-\begin{definition}
-    Niech $Q_1, Q_2$ będą kwandlami.
-    Odwzorowanie $f \colon Q_1 \to Q_2$ spełniające warunek
-    \begin{equation}
-        \forall x, y \in Q_1 : f(x \triangleright y) = f(x) \triangleright f(y),
-    \end{equation}
-    nazywamy homomorfizmem.
-\end{definition}
-
-Wiele znanych struktur algebraicznych okazuje się być źródłem kwandli.
+Wiele znanych struktur algebraicznych okazuje się być źródłem kwandli:
 
 \begin{example}[kwandel cykliczny/diedralny]
 \index{kwandel!cykliczny}%
@@ -135,18 +131,50 @@ Wiele znanych struktur algebraicznych okazuje się być źródłem kwandli.
     Moduł nad pierścieniem $\Z[t, 1/t]$ wielomianów Laurenta z~działaniem $x \triangleright y = tx + (1-t) y$.
 \end{example}
 
+Dionísio, Lopes \cite[s. 1043]{lopes03} potrzebują skończonych kwandli Alexandera, mają postać $(\Z/n\Z)[t, 1/t] / h(t)$, gdzie $h$ jest pewnym unormowanym wielomianem.
+
 \begin{example}[kwandel symplektyczny]
 \index{kwandel!symplektyczny}%
-    Przestrzeń liniowa i antysymetryczna forma dwuliniowa $\langle \cdot | \cdot \rangle$ z działaniem $x \triangleright y = x + \langle x | y \rangle y$.
+    Przestrzeń liniowa i antysymetryczna forma dwuliniowa $\langle \bullet | \bullet \rangle$ z działaniem $x \triangleright y = x + \langle x | y \rangle \cdot y$.
 \end{example}
+
+Żeby opowiedzieć, jak wyglądały poszukiwania małych kwandli, musimy wprowadzić dwie definicje.
+
+\begin{definition}[homomorfizm kwandli]
+    Niech $Q_1, Q_2$ będą kwandlami.
+    Funkcję $f \colon Q_1 \to Q_2$ spełniającą warunek
+    \begin{equation}
+        \forall x, y \in Q_1 : f(x \triangleright y) = f(x) \triangleright f(y),
+    \end{equation}
+    nazywamy homomorfizmem kwandli.
+\end{definition}
+
+\begin{definition}[kwandel spójny]
+\index{kwandel!spójny}%
+    Niech $Q$ będzie kwandlem.
+    W grupie wszystkich automorfizmów $Q$ można wyróżnić grupę generowaną przez automorfizmy wewnętrzne $\beta_y(x) = x \triangleright y$.
+    Jeżeli działanie tej podgrupy na $Q$ jest przechodnie, kwandel $Q$ nazywamy spójnym.
+\end{definition}
+
+Dionísio, Lopes \cite{lopes03} znaleźli 10 kwandli Alexandera, które odróżniają prawie każde dwa spośród 249 węzłów pierwszych do 10 skrzyżowań; rozstrzygnięcia brak dla 962 z 30876 par.
+\index[persons]{Dionísio, Miguel}%
+\index[persons]{Lopes, Pedro}%
+Po upływie prawie dekady Vendramin \cite{vendramin12} wytropił wszystkie 431 kwandli spójnych rzędu 35 lub mniejszego.
+\index[persons]{Vendramin, Leandro}%
+Clark, Elhamdadi, Saito oraz Yeatman \cite{clark13} pokazali niedawno zbiór 26 kwandli, które razem odróżniają od siebie wszystkie 2977 zorientowanych węzłów pierwszych o~co najwyżej 12 skrzyżowaniach.
+\index[persons]{Clark, William}%
+\index[persons]{Elhamdadi, Mohamed}%
+\index[persons]{Saito, Masahico}%
+\index[persons]{Yeatman, Timothy}%
+Największy z~nich jest rzędu 182.
 
 Joyce w swojej rozprawie doktorskiej przypisał każdemu węzłowi $K$ pewien szczególny kwandel $Q(K)$, kwandel podstawowy.
 \index[persons]{Joyce, David}%
 \index{kwandel!podstawowy}%
-Definicja tego obiektu jest dość zawiła: łuki diagramu są generatorami, zaś skrzyżowania odpowiadają za relacje.
-Joyce pokazał, że kwandel $Q(K)$ wyznacza węzeł $K$ jednoznacznie z dokładnością do orientacji.
-Nie czyni to jednak nowego niezmiennika użytecznym, gdyż wyznaczenie go nawet w najprostszych przypadkach stanowi trudność.
-Niebrzydowski, Przytycki \cite{niebrzydowski09} pokazali na przykład w 2009, że
+Jest to niezmiennik generowany przez łuki diagramu związany relacjami pochodzącymi ze skrzyżowań, tak jak w~definicji grupy węzła.
+Wprawdzie znajomość kwandla $Q(K)$ pozwala odtworzyć węzęł $K$ z dokładnością do jego orientacji, ale jak nietrudno się domyślić, ceną za to jest trudność w~jego wyznaczaniu.
+
+Na przykład Niebrzydowski, Przytycki \cite{niebrzydowski09} pokazali, że
 \index[persons]{Niebrzydowski, Maciej}%
 \index[persons]{Przytycki, Józef}%
 
@@ -154,6 +182,10 @@ Niebrzydowski, Przytycki \cite{niebrzydowski09} pokazali na przykład w 2009, ż
     Kwandel podstawowy trójlistnika  jest izomorficzny z~pewnym rzutowym pierwotnym podkwandlem\footnote{Cokolwiek to znaczy!} odwzorowań liniowych przestrzeni symplektycznej $\Z \oplus \Z$
 \end{example}
 
+Słabszym, choć prostszym w znalezieniu niezmiennikiem jest liczba homomorfizmów z kwandla danego węzła w pewien wybrany wcześniej kwandel $Q$.
+% wiem to z nLab
+
+\subsection{Półki, wraki i wrzeciona}
 Aksjomaty grupy można wzmacniać (grupy abelowe) lub osłabiać (monoidy).
 Podobnie czyni się z aksjomatami kwandli.
 Kwandle inwolutywne odpowiadają węzłom bez orientacji, wraki dobrze opisują węzły obramowane, i tak dalej.
@@ -180,15 +212,26 @@ Szukał niełącznej struktury, która dobrze opisywałaby odbicia w skończonej
 \begin{example}
 \index{warkocz}%
 % TODO: warkocz czy grupa warkoczy?
-    Niech\footnote{Patrz \url{http://nlab-pages.s3.us-east-2.amazonaws.com/nlab/show/shelf\#infinite_braid_group}.} $B_\infty$ oznacza grupę wszystkich warkoczy, zaś $\phi$ będzie jej endomorfizmem posyłającym generator $\sigma_k$ na $\sigma_{k+1}$.
+    Niech $B_\infty$ oznacza kogranicę łańcucha $B_0 \to B_1 \to B_2 \to \ldots$, gdzie inkluzja $B_{n} \to B_{n+1}$ zadana jest przez dołączenie niesplątanego z resztą diagramu pasma, zaś $\phi$ będzie jej endomorfizmem posyłającym generator $\sigma_k$ na $\sigma_{k+1}$.
     Zbiór $B_\infty$ z działaniem $a \triangleleft b = a\phi(b)\sigma_1 \phi{a} ^{-1}$ jest półką.
 \end{example}
 
 To nieprzetłumaczalna gra słów: dwie półki (\emph{shelves}), lewa i prawa, które dobrze do siebie pasują, dają stojak (\emph{rack}, czyli dla nas wrak).
-Jak napisała Crans w pracy \cite[s. 86]{crans04}: \emph{,,Just as a rack is comprised of two shelves which fit together nicely, a quandle is made up of two spindles''}.
+Jak napisała Crans \cite[s. 86]{crans04}: \emph{,,Just as a rack is comprised of two shelves which fit together nicely, a quandle is made up of two spindles''}.
 \index[persons]{Crans, Alissa}%
 
-Półka stanowi uogólnienie dwóch obiektów -- wraków i wrzecion.
+Półka stanowi uogólnienie dwóch obiektów -- wrzecion i~wraków.
+
+% DICTIONARY;spindle;wrzeciono
+\begin{definition}[wrzeciono]
+\index{wrzeciono}%
+    Zbiór $X$ z dwuargumentowym działaniem $\triangleright$ taki, że dla wszystkich elementów $x, y, z \in X$ zachodzi:
+    \begin{enumerate}
+        \item $x \triangleright x = x$,
+        \item $(x \triangleright y) \triangleright z = (x \triangleright z) \triangleright (y \triangleright z)$
+    \end{enumerate}
+    nazywamy wrzecionem.
+\end{definition}
 
 % DICTIONARY;wrack;wrak
 \begin{definition}[wrak]
@@ -220,46 +263,6 @@ Wraki są naturalnym niezmiennikiem węzłów obramowanych, bo dobrze współgra
     \LargeReidemeisterOneStraightQuandleProofRotated
 \]
 \end{comment}
-
-% DICTIONARY;spindle;wrzeciono
-\begin{definition}[wrzeciono]
-\index{wrzeciono}%
-    Zbiór $X$ z dwuargumentowym działaniem $\triangleright$ taki, że dla wszystkich elementów $x, y, z \in X$ zachodzi:
-    \begin{enumerate}
-        \item $x \triangleright x = x$,
-        \item $(x \triangleright y) \triangleright z = (x \triangleright z) \triangleright (y \triangleright z)$
-    \end{enumerate}
-    nazywamy wrzecionem.
-\end{definition}
-
-Zatem kwandle to wraki, które są też wrzecionami.
-Muszę w~tym miejscu wtrącić uwagę językową.
-Conway nazwał wraki wrakami (\emph{wracks}), by częściowo zażartować z~nazwiska jego kolegi Gavina Wraitha, a częściowo by zaznaczyć, że są one tym, co zostaje z~grupy, w~której zapomniano o~mnożeniu, ale nie sprzęganiu (w~języku angielskim co najmniej od XVI wieku funkcjonuje zwrot ,,wrack and ruin'' oznaczający zniszczenie).
-\index[persons]{Conway, John}%
-\index[persons]{Wraith, Gaven}%
-Obecnie dominuje określenie \emph{racks}.
-
-Jak wyglądały poszukiwania małych kwandli?
-Dionísio, Lopes \cite{lopes03} znaleźli 10 kwandli Alexandera, które odróżniają 249 węzłów pierwszych do 10 skrzyżowań.
-\index[persons]{Dionísio, Miguel}%
-\index[persons]{Lopes, Pedro}%
-Po upływie prawie dekady Vendramin \cite{vendramin12} wytropił wszystkie 431 kwandli spójnych rzędu 35 lub mniejszego.
-\index[persons]{Vendramin, Leandro}%
-Clark, Elhamdadi, Saito oraz Yeatman \cite{clark13} pokazali niedawno zbiór 26 kwandli, które razem odróżniają od siebie wszystkie 2977 zorientowanych węzłów pierwszych o~co najwyżej 12 skrzyżowaniach.
-\index[persons]{Clark, William}%
-\index[persons]{Elhamdadi, Mohamed}%
-\index[persons]{Saito, Masahico}%
-\index[persons]{Yeatman, Timothy}%
-Największy z~nich jest rzędu 182.
-
-\begin{definition}[kwandel spójny]
-\index{kwandel!spójny}%
-    Niech $Q$ będzie kwandlem.
-    W grupie wszystkich automorfizmów $Q$ można wyróżnić grupę generowaną przez automorfizmy wewnętrzne $\beta_y(x) = x \triangleright y$.
-    Jeżeli działanie tej podgrupy na $Q$ jest przechodnie, kwandel nazywamy spójnym.
-\end{definition}
-
-Dużo otwartych problemów dotyczących kwandli można znaleźć w \cite[s. 455-465]{ohtsuki02}.
 
 \index{kwandel|)}
 

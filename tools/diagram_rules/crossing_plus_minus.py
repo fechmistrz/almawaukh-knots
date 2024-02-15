@@ -83,10 +83,10 @@ diagram_commands["PlusCrossingChessboard"] = {
 diagram_commands["MinusCrossingQuandle"] = {
     "lines": [
         "\\strand[thick] (-5, -5) to (5, 5);",
-        "\\strand[thick,-latex] (5, -5) to (-5, 5);"
-        "\\node[first_colour] at (5, 5)[below right] {$x$};",
-        "\\node[first_colour] at (-5, -5)[above left] {$x \\triangleright y$};",
-        "\\node[first_colour] at (-5, 5)[below left] {$y$};",
+        "\\strand[thick,latex-] (5, -5) to (-5, 5);"
+        "\\node[first_colour] at (5, 5)[below right] {$x \\triangleright y$};",
+        "\\node[first_colour] at (-5, -5)[above left] {$x$};",
+        "\\node[first_colour] at (5, -5)[above right] {$y$};",
     ],
     "sizes": ["Large"],
     "flip": ["1"],
