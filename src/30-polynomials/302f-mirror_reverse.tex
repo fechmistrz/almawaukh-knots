@@ -22,6 +22,7 @@ Ale czasami potrafi odróżnić splot od jego lustra:
 \end{proposition}
 
 (Prawie nikt nie chce podać rozumowania tak szczegółowego jak to poniższe, które udało się nam skraść z niedostępnej dziś nigdzie pracy Gellerta \cite[s. 12]{gellert09}).
+To jest też \cite[fakt 10.4.4]{kawauchi96}.
 
 \begin{proof}
     Zauważmy, że diagramy $L_-$ oraz $L_+$ są wzajemnymi lustrami.
@@ -41,14 +42,21 @@ Ale czasami potrafi odróżnić splot od jego lustra:
 
 \begin{corollary}
 \index{węzeł!zwierciadlany}%
-\label{cor:joines_of_amphicheiral}%
+\label{cor:jones_of_amphicheiral}%
     Jeśli $K$ jest węzłem zwierciadlanym, to wielomian $\jones_K$ jest symetryczny.
 \end{corollary}
+
+Równość $\conway(z) = \conway(-z)$ zachodzi dla wszystkich węzłów, zwierciadlanych lub nie.
 
 Implikacja odwrotna nie zachodzi na mocy wniosku \ref{cor:acheiral_signature}: węzeł $9_{42}$ ma symetryczny wielomian Jonesa, ale niezerową sygnaturę.
 \index{sygnatura}%
 Poniżej trzynastu skrzyżowań kontrprzykładów z niezerową sygnaturą jest 14 ($9_{42}$, $10_{125}$, $11n_{19}$, $11n_{24}$, $11n_{82}$, $12a_{669}$, $12a_{1171}$, $12a_{1179}$, $12a_{1205}$, $12n_{362}$, $12n_{506}$, $12n_{562}$, $12n_{571}$, $12n_{821}$), z zerową -- kolejne 28.
 % ZWERYFIKOWANO: funkcja symmetric_not_acheiral
+
+\begin{corollary}
+\index{węzeł!zwierciadlany}%
+    Jeśli $K$ jest węzłem zwierciadlanym, to jego wielomian HOMFLY spełnia równość $P(a, z) = P(1/a, z)$, zaś wielomian Kauffmana spełnia równość $F(a, z) = F(1/a, z)$.
+\end{corollary}
 
 Równość $\jones(mL)(t) = \jones(L)(t^{-1})$ nie jest spełniona dla trójlistnika, zatem ten nie jest równoważny ze swoim lustrem.
 Wcześniej pokazał to z~dużo większym wysiłkiem Dehn, patrz przykład \ref{exm:trefoil_is_chiral}.

@@ -8,8 +8,6 @@
     Splot $mL$ powstały przez odbicie splotu $L$ względem dowolnej płaszczyzny nazywamy lustrem.
 \end{definition}
 
-Niektórzy mówią o splotach lustrzanych albo odbiciach lustrzanych.
-
 \begin{definition}[rewers]
 % DICTIONARY;reverse;rewers/odwrotny;węzeł
 \index{rewers}%
@@ -18,7 +16,9 @@ Niektórzy mówią o splotach lustrzanych albo odbiciach lustrzanych.
     Splot $rL$ powstały przez odwrócenie orientacji wszystkich ogniw splotu $L$ nazywamy rewersem.
 \end{definition}
 
-Podobnie, tu mówi się o splotach odwrotnych albo odwrotnościach.
+Niektórzy mówią o odbiciach lustrzanych i odwrotnościach).
+Zaletą naszych oznaczeń jest to, że trudniej jest pomylić lustro z odwrotnością; ale w literaturze dominuje $L^*$ jako symbol lustra oraz $-L$ jako symbol odwrotności splotu $L$; używają ich na przykład Murasugi \cite[s. 14, 24]{murasugi96} czy Burde, Zieschang, Heusener \cite{burde14}.
+Lickorish \cite[s. 4]{lickorish97} używa $r L$ dla odwrotności oraz $\overline{L}$ dla lustra; zapewne ktoś gdzieś używa jeszcze innych znaczków.
 
 \begin{comment}
 \begin{figure}[H]
@@ -84,7 +84,7 @@ Wyróżniamy pięć typów symetrii węzłów:
     Trójlistnik jest odwracalny, ale nie zwierciadlany.
 \end{example}
 
-Przypuszczał to już Listing w 1847 roku \cite{listing1847}, ale pierwszy dowód podał dużo później, bo w 1914 roku Dehn \cite{dehn14}. 
+Przypuszczał to już Listing \cite{listing1847} w 1847 roku, ale pierwszy dowód podał dużo później, bo w 1914 roku Dehn \cite{dehn14}. 
 Oto, jak tego dokonał.
 % równik = equator
 % równoleżnik = parallel (of latitude), najdłuższy równoleżnik to równik
@@ -132,18 +132,6 @@ To najprostszy typ symetrii, wystarczy jawnie wskazać przekształcenie między 
 Tait odnosił wrażenie, że zwierciadlane węzły mają parzysty indeks skrzyżowań, ale Hoste, Thistlethwaite znaleźli w~1998 kontrprzykład o~piętnastu skrzyżowaniach, $15_{700}$. % wg https://mathworld.wolfram.com/AmphichiralKnot.html
 (Czwarta) hipoteza Taita jest prawdziwa dla węzłów pierwszych, alternujących.
 
-\begin{proposition}[10.4.4 w \cite{kawauchi96}, \ref{cor:joines_of_amphicheiral} u nas]
-    Niech $K$ będzie węzłem zwierciadlanym.
-    Wtedy
-    \begin{align}
-        V(t) & = V(1/t) \\
-        P(a, z) & = P(1/a, z) \\
-        F(a, z) & = F(1/a, z),
-    \end{align}
-    gdzie $\jones, P, F$ oznacza kolejno wielomian Jonesa, HOMFLY oraz Kauffmana.
-    Równość $\conway(z) = \conway(-z)$ zachodzi dla wszystkich węzłów, zwierciadlanych lub nie.
-\end{proposition}
-
 Poniższa tabela oparta jest (kolejno) o~ciągi
 \href{https://oeis.org/A051766}{51766},
 \href{https://oeis.org/A051769}{51769},
@@ -187,7 +175,7 @@ Jednakże...
 \begin{proof}
 \index[persons]{Hartley, Richard}%
 \index[persons]{Whitten, Wilbur}%
-    Stosowne przykłady podali niezależnie od siebie Hartley \cite[s. 183]{hartley80} oraz Whitten \cite{whitten81}.
+    Stosowne przykłady podali niezależnie od siebie Hartley \cite[s. 183]{hartley80} oraz Whitten \cite{whitten81} (węzeł $K$ jest silnie odwracalny wtedy i tylko wtedy, gdy każdy jego dubel jest silnie nieodwracalny, wynika stąd, że pewien dubel $8_{17}$ nie jest silnie odwracalny; jednocześnie Schubert \cite[s. 235]{schubert53} pokazał, że duble są odwracalne).
 \end{proof}
 
 Ale hiperboliczny węzeł odwracalny jest silnie odwracalny, wspomina o tym bez dowodu Kawauchi.
