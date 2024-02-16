@@ -55,3 +55,7 @@ WARNING: Found unexpected fields: ['volume'] in cerf98 (@misc)
 Zaimplementować aspell w make test.
 
 Wyjaśnić, jaka jest różnica między dowodem i niedowodem.
+
+I would advise to use the @misc type, as it officially allows the fields eprint, eprintclass, and eprinttype, as opposed to @unpublished, and @online. @article requires journaltitle, as @Jonathan pointed out. See biblatex documentation (2.1 Entry Types and 3.12. Electronic Publishing Information) – https://tex.stackexchange.com/questions/3833/how-to-cite-an-article-from-arxiv-using-bibtex
+
+Cytowania z ArXiV nie wyświetlają hiperłącza w bibliografii, poprawić styl. (Usunąć In: oraz Pages: na rzecz W: oraz Stron:)
