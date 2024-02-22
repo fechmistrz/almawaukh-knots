@@ -7,7 +7,8 @@ Do ich określenia potrzebny jest torus trywialny, powierzchnia otrzymana przez 
 Można go także uzyskać przez sklejenie podstaw walca tak, by go przy tym nie zapętlić.
 Oczywiście istnieją też nietrywialne torusy, jak rurowe otoczenie trójlistnika.
 
-Patrz też \cite[s. 26-27]{kawauchi96}.
+Sploty torusowe wprowadza króciutko Kawauchi \cite[s. 26-27]{kawauchi96}.
+% TODO: rozdział Standard examples powinien zostać przetworzony w odwołania takie jak to wyżej w każdej naszej sekcji, nie tylko Węzły torusowe
 
 \begin{definition}[splot torusowy]
     Splot, który leży na powierzchni trywialnego torusa, nazywamy torusowym.
@@ -20,8 +21,6 @@ Na walcu $S^2 \times [0,1]$, którego podstawa leży w~płaszczyźnie $xy$, rozp
 \end{align*}
 Przekręćmy górną podstawę walca wokół osi $z$ o~skierowany kąt $2\pi q / r$ oraz utożsammy ze sobą pary punktów $(x, y, 0) \sim (x, y, 1)$,
 Uzyskaliśmy splot torusowy $T_{q, r}$: okrąża on $q$ razy rdzeń torusa i~$p$ razy jego oś symetrii obrotowej.
-Określimy jeszcze kilka splotów torusowych.
-Węzeł $T_{0, 0}$ leży na powierzchni torusa i~jest ściągalny do punktu, zaś $T_{1, 0}$ to nawinięta toroidalnie pętla.
 Węzeł $T_{p, q}$ posiada następującą parametryzację:
 \[
     x = (2+\cos q \phi) \cos p \phi, \quad
@@ -49,6 +48,12 @@ Poniżej przedstawiamy trzy węzły torusowe.
     \end{minipage}
 \end{figure}
 
+Murasugi \cite[s. 135]{murasugi96} pisze, że będzie nazywać okrąg leżący na powierzchni torusa $T_{0, 0}$ (chociaż według naszej parametryzacji to byłby punkt), natomiast (do napisania!).
+% todo: http://www.matematyka.wroc.pl/leksykonmatematyczny/torus
+% p = 1; q = 0; pp = 3; qq = 7; ParametricPlot3D[{{Cos[ 2 Pi p t] (2 + Cos[2 Pi q t]), (2 + Cos[2 Pi q t]) Sin[ 2 Pi p t], -Sin[2 Pi q t]}, {Cos[ 2 Pi pp t] (2 + Cos[2 Pi qq t]), (2 + Cos[2 Pi qq t]) Sin[ 2 Pi pp t], -Sin[2 Pi qq t]}}, {t, 0, 1}, ColorFunction -> "Rainbow", PlotStyle -> Thickness[0.02], Boxed -> False, Axes -> False]
+% 1, 0 czy 0, 1? Wydaje mi się, że my mamy to na odwrót
+% Węzeł $T_{0, 0}$ leży na powierzchni torusa i~jest ściągalny do punktu, zaś $T_{1, 0}$ to nawinięta toroidalnie pętla.
+
 %Węzeł ten leży na torusie $(r - 2)^2 + z^2 = 1$.
 % p = 5;
 % q = 3;
@@ -68,7 +73,8 @@ Okazuje się, że innych obiektów już nie ma.
 
 \begin{proposition}
     Niech $K$ będzie splotem torusowym takim, że żadne z jego ogniw nie jest niewęzłem, czyli postaci $T_{1, 0}$.
-    Wtedy dla pewnych całkowitch $p, q$, węzły $K$ oraz $T_{p, q}$ są tego samego typu.
+    % T 1,0 czy T 0,1?
+    Wtedy $K = T_{p, q}$ dla pewnych całkowitch $p, q$.
 \end{proposition}
 
 \begin{proposition}
