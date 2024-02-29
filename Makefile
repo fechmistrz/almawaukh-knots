@@ -2,14 +2,16 @@ SHELL=/bin/bash
 
 .PHONY: all clean prepare chapter-all release
 
-PDFLATEX_FLAGS = -shell-escape -halt-on-error -output-directory ../build/
+LUALALATEX_FLAGS = -shell-escape -halt-on-error -output-directory ../build/
 
 define make_pdf
 	export max_print_line=$$(tput cols); \
 	cd src && cat knot_theory.bib | sed -r -e 's/ FJOURNAL/ XJOURNAL/g' -e 's/ JOURNAL/ FJOURNAL/g' | sed -r 's/XJOURNAL/JOURNAL/g' > tmp.txt && mv tmp.txt knot_theory.bib; \
-	pdflatex $(PDFLATEX_FLAGS) knot-theory.tex && cp knot_theory.bib ../build/knot_theory.bib; \
+	lualatex $(LUALALATEX_FLAGS) knot-theory.tex && cp knot_theory.bib ../build/knot_theory.bib; \
 	cd ../build && bibtex knot-theory; \
-	cd ../src && ./merridew/fix_bbl_authors.py ../build/knot-theory.bbl && pdflatex $(PDFLATEX_FLAGS) knot-theory.tex && pdflatex $(PDFLATEX_FLAGS) knot-theory.tex; \
+	cd ../src && ./merridew/fix_bbl_authors.py ../build/knot-theory.bbl; \
+	cd ../src && lualatex $(LUALALATEX_FLAGS) knot-theory.tex; \
+	cd ../src && lualatex $(LUALALATEX_FLAGS) knot-theory.tex; \
 	cat knot_theory.bib | sed -r -e 's/ FJOURNAL/ XJOURNAL/g' -e 's/ JOURNAL/ FJOURNAL/g' | sed -r 's/XJOURNAL/JOURNAL/g' > tmp.txt && mv tmp.txt knot_theory.bib; \
 	cd ..;
 endef
