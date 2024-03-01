@@ -28,21 +28,29 @@
 \usetikzlibrary{decorations.pathreplacing}
 \usetikzlibrary{knots}
 \colorlet{darkblue}{blue!80!black}
-\definecolor{diagramfiller}{HTML}{5784BA}
-\definecolor{first_colour}{HTML}{A15D98}
+\definecolor{diagramfiller}{RGB}{255, 182, 193} % HTML: LightPink
+\definecolor{first_colour}{RGB}{255, 105, 180}
 \input{00-meta-latex/diagrams}
 
-\definecolor{lightgray}{gray}{0.9} % define lightgray
+\definecolor{hotpink}{RGB}{255, 105, 180}
+\definecolor{mediumvioletred}{RGB}{199, 21, 133}
 \let\oldtabular\tabular % alternate rowcolors for all tables
 \let\endoldtabular\endtabular
 \renewenvironment{tabular}
-{\rowcolors{2}{white}{lightgray}\oldtabular}
+{\rowcolors{2}{white}{hotpink}\oldtabular}
 {\endoldtabular}
 \let\oldlongtable\longtable % alternate rowcolors for all long-tables
 \let\endoldlongtable\endlongtable
 \renewenvironment{longtable}
-{\rowcolors{2}{white}{lightgray}\oldlongtable}
+{\rowcolors{2}{white}{hotpink}\oldlongtable}
 {\endoldlongtable}
+
+\hypersetup{
+    colorlinks,
+    linkcolor={mediumvioletred},
+    citecolor={mediumvioletred},
+    urlcolor={mediumvioletred}
+}
 
 \author{Casimir Allard}
 \title{Kombinatoryczna teoria węzłów}
