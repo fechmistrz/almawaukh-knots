@@ -33,3 +33,5 @@ Fox p-colourings form a finite vector space over Z/p thus their number equals so
 TODO: Hartley, R., & Kawauchi, A. (1979). Polynomials of amphicheiral knots. Mathematische Annalen, 243(1), 63–70. doi:10.1007/bf01420207 "Van Buskirk announced in [3] a partial result of Theorem (1) and conjectured in [4,10], Problem 1.5, that any amphicheiral knot is strongly amphicheiral. He also proved in [4] that his own conjecture is true for all amphicheiral prime knots of 10 or fewer crossings obtained from Conway's list [5], namely for 41, 63, 83, 89, 812, 817, 818 , 1017 , 1033, 1037, 1043 , 1045 , 1079, 1081 , 1088 , 1099, 10109, 10115, 10118, 10123 in the notation of Rolfsen's book [14]."
 
 Liczba pojedyncza versus mnoga.
+
+Kurt Reidemeister pełne imię -> Kurt Werner Friedrich Reidemeister
