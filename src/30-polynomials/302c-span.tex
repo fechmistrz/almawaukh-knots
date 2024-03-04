@@ -116,10 +116,14 @@ Wybierzmy dla niego to uszachowienie, w~którym wszystkie skrzyżowania są doda
     \begin{tikzpicture}[baseline=-0.65ex,scale=0.15]
     \begin{knot}[clip width=5]
         \strand[thick] (-25, 0) to (25, 0);
-        \strand[thick] (10*0-15, -5) to (10*0-15, 5);
-        \strand[thick] (10*1-15, -5) to (10*1-15, 5);
-        \strand[thick] (10*2-15, -5) to (10*2-15, 5);
-        \strand[thick] (10*3-15, -5) to (10*3-15, 5);
+        \strand[thick] (10*0-15, -5) to (10*0-15, -1);
+        \strand[thick] (10*1-15, -5) to (10*1-15, -1);
+        \strand[thick] (10*2-15, -5) to (10*2-15, -1);
+        \strand[thick] (10*3-15, -5) to (10*3-15, -1);
+        \strand[thick] (10*0-15, 1) to (10*0-15, 5);
+        \strand[thick] (10*1-15, 1) to (10*1-15, 5);
+        \strand[thick] (10*2-15, 1) to (10*2-15, 5);
+        \strand[thick] (10*3-15, 1) to (10*3-15, 5);
         \draw[fill=diagramfiller,draw=none] (-25, 0) rectangle (-15, -5);
         \draw[fill=diagramfiller,draw=none] (-15, 0) rectangle (-5, 5);
         \draw[fill=diagramfiller,draw=none] (-5, 0) rectangle (5, -5);
@@ -199,7 +203,8 @@ Zauważmy jeszcze, że na każdym skrzyżowaniu występują cztery różne ciemn
         \begin{tikzpicture}[baseline=-0.65ex,scale=0.20]
         \begin{knot}[clip width=5]
             \strand[thick] (-5, 0) to (5, 0);
-            \strand[thick] (0, -5) to (0, 5);
+            \strand[thick] (0, -5) to (0, -1);
+            \strand[thick] (0, 1) to (0, 5);
             \draw[fill=diagramfiller,draw=none] (-5, -5) rectangle (0, 0);
             \draw[fill=diagramfiller,draw=none] ( 5,  5) rectangle (0, 0);
             \node at (0, -8) {$D$};
