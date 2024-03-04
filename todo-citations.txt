@@ -1199,7 +1199,7 @@
     MRNUMBER = {1839698},
     TITLE = {On the {C}asson knot invariant},
 
-@article {stoimenow001,
+@article {stoimenowa2001,
     AUTHOR = {Stoimenow, Alexander},
     MRNUMBER = {1839701},
     TITLE = {On finiteness of {V}assiliev invariants and a proof of the {L}in-{W}ang conjecture via braiding polynomials},

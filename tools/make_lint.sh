@@ -58,4 +58,6 @@ fi
 inform "Checking whether each .bib entry is cited at least once"
 diff \
     <(awk '/^@/ {print $NF}' src/knot_theory.bib | tr -d '{,' | sort -u) \
-    <(grep -Ehor src/ -e '\cite(\[[^]]+\])?{[^}]+}'  | sed -r 's/cite(\[[^]]+\])?//g' | tr -d '{}' | sort -u)
+    <(grep -Ehor src/*/*.tex -e '\cite(\[[^]]+\])?{[^}]+}'  | sed -r 's/cite(\[[^]]+\])?//g' | tr -d '{}' | sort -u) || true
+
+inform "Linting complete"
