@@ -1,4 +1,4 @@
-@article {tietze08,
+@article {tietze1908,
     AUTHOR = {Tietze, Heinrich F. F.},
     MRNUMBER = {1547755},
     TITLE = {\"{U}ber die topologischen {I}nvarianten mehrdimensionaler {M}annigfaltigkeiten},
@@ -879,7 +879,7 @@
     MRNUMBER = {1266837},
     TITLE = {The knot book},
 
-@article {adams994,
+@article {adamsc1994,
     AUTHOR = {Adams, Colin C.},
     MRNUMBER = {1273788},
     TITLE = {Toroidally alternating knots and links},
@@ -934,7 +934,7 @@
     MRNUMBER = {1338783},
     TITLE = {Polynomial invariants are polynomial},
 
-@article {barnatan_95,
+@article {barnatand1995,
     AUTHOR = {Bar-Natan, Dror},
     MRNUMBER = {1318886},
     TITLE = {On the {V}assiliev knot invariants},
