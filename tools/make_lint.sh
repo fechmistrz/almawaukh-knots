@@ -5,13 +5,17 @@ execute() {
 }
 
 inform() {
-    echo "===> $*" 1>&2
+    echo "===> [$SECONDS] $*" 1>&2
 }
 
 execute ./src/merridew/bibliography_sort.py --bib src/knot_theory.bib
 
 inform "Removing non-breaking spaces"
-ack -l ' ' | grep -v Makefile | if  uname | grep -q Darwin; then :; else xargs -r sed -i 's/\xC2\xA0/ /g' || true; fi
+if uname | grep -q Darwin; then
+    :
+else
+    ack -l ' ' | grep -v Makefile | xargs -r sed -i 's/\xC2\xA0/ /g' || true;
+fi
 
 inform "Appending newlines at the end of files"
 for i in $(find src -type f -iname '*.tex' | grep -v 'src/90-appendix/dictionary.tex'); do
@@ -32,7 +36,6 @@ for i in $(find src -type f -iname '*.tex' | grep -v 'src/90-appendix/dictionary
     fi
 done;
 
-inform "Refreshing pl-en dictionary!"
 python3 tools/translate_polish_english.py \
     <(grep -r src --exclude README.md -E -e '% DICTIONARY;.*;.*;.*' -h) \
     > src/90-appendix/dictionary_tmp.tex
@@ -40,7 +43,7 @@ if ! diff src/90-appendix/dictionary{,_tmp}.tex; then
     inform "Refreshing pl-en dictionary - successful!"
     mv -v src/90-appendix/dictionary{_tmp,}.tex
 else
-    inform "Refreshing pl-en dictionary - skipped!"
+    inform "Refreshing pl-en dictionary - not needed!"
     rm src/90-appendix/dictionary_tmp.tex
 fi;
 
@@ -51,3 +54,8 @@ if diff \
 then
     inform "No broken/unused references found"
 fi
+
+inform "Checking whether each .bib entry is cited at least once"
+diff \
+    <(awk '/^@/ {print $NF}' src/knot_theory.bib | tr -d '{,' | sort -u) \
+    <(grep -Ehor src/ -e '\cite(\[[^]]+\])?{[^}]+}'  | sed -r 's/cite(\[[^]]+\])?//g' | tr -d '{}' | sort -u)
