@@ -16,8 +16,13 @@ define make_pdf
 	cd ..;
 endef
 
+define make_pdf_fast
+	export max_print_line=$$(tput cols) && cd src && lualatex $(LUALALATEX_FLAGS) knot-theory.tex && cp knot_theory.bib ../build/knot_theory.bib;
+endef
+
 all: prepare chapter-all release
 draft: prepare chapter-draft release
+fast: prepare chapter-fast release
 
 test:
 	python3 tools/verify_bib_authors.py --bib src/knot_theory.bib
@@ -29,16 +34,36 @@ chapter-all: build/knot-theory.pdf
 
 chapter-draft: build/draft-knot-theory.pdf
 
+chapter-fast: build/fast-knot-theory.pdf
+
 build/knot-theory.pdf: src/knot-theory.tex src/knot_theory.bib src/*/*.tex src/90-appendix/table_invariants_summary.tex src/90-appendix/table_invariants.tex
 	$(call make_pdf)
 
 build/draft-knot-theory.pdf: src/*-*/*.tex
+# disable TikZ diagrams
 	sed 's@\(\\includecomment\)@% \1@g' src/include/head.tex > src/include/head.tex.bak
 	mv src/include/head.tex.bak src/include/head.tex
+# compile PDF
 	$(call make_pdf)
+# enable TikZ diagrams
 	sed 's@%.*\(\\includecomment.*\)@\1@g' src/include/head.tex > src/include/head.tex.bak
 	mv src/include/head.tex.bak src/include/head.tex
+# rename to avoid overwriting by `make all`
 	mv build/knot-theory.pdf build/draft-knot-theory.pdf
+
+build/fast-knot-theory.pdf:
+# disable TikZ diagrams
+	sed 's@\(\\includecomment\)@% \1@g' src/include/head.tex > src/include/head.tex.bak
+	mv src/include/head.tex.bak src/include/head.tex
+# compile PDF once
+	$(call make_pdf_fast)
+# enable TikZ diagrams
+	sed 's@%.*\(\\includecomment.*\)@\1@g' src/include/head.tex > src/include/head.tex.bak
+	mv src/include/head.tex.bak src/include/head.tex
+# rename to avoid overwriting by `make all`
+	mv build/knot-theory.pdf build/fast-knot-theory.pdf
+
+
 
 src/00-meta-latex/new_diagrams.tex: tools/diagram_rules/*.py tools/write_diagram_rules.py
 	{ echo "#!/usr/bin/env python3"; echo "diagram_commands = dict()"; cat tools/diagram_rules/*.py; cat tools/write_diagram_rules.py; } > tools/write_diagram_rules_2.py
