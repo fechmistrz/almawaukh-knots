@@ -52,8 +52,8 @@ Homomorfizm $\ColoringGroup (L) \to \Z/n\Z$ nie musi być surjekcją, zatem...
     W przypadku łuku rozumowanie przebiega analogicznie do dowodu lematu \ref{lem:colouring_arc}.
 \end{proof}
 
-Oto metoda pozwalająca na znalezienie grupy kolorującej splotu $L$.
-Wybierzmy diagram dla $L$ bez zamkniętych krzywych, etykietowanie $x_0, \ldots, x_m$ dla łuków oraz $0, \ldots, m$ dla skrzyżowań.
+Oto metoda pozwalająca na znalezienie grupy kolorującej.
+Wybierzmy diagram splotu $L$ bez zamkniętych krzywych, etykietowanie $x_0, \ldots, x_m$ dla łuków oraz $0, \ldots, m$ dla skrzyżowań.
 Utwórzmy macierz kolorującą $A$.
 Grupy abelowe $\ColoringGroup(L)$ oraz $\Z^m / A^t \Z^m$ są izomorficzne, wynika to bezpośrednio z~definicji macierzy $A$.
 Następnie znajdźmy macierz diagonalną $D = \operatorname{diag}(d_1, \ldots, d_m)$, taką że $D = RAC$, gdzie całkowite macierze $R, C$ mają wyznacznik $1$.
@@ -64,13 +64,15 @@ Wtedy funkcja
 \end{equation}
 stanowi izomorfizm, a~skoro $D$ jest macierzą diagonalną, to
 \begin{equation}
-    \frac{\Z^m}{D\Z^m} \cong \bigoplus_{k=1}^m \frac{\Z}{|d_k| \Z}
+    \frac{\Z^m}{D\Z^m} \cong \bigoplus_{k=1}^m \frac{\Z}{|d_k| \Z}.
 \end{equation}
-Macierz $A$ można zastąpić przez macierz Goeritza $G$.
+
+Dokładnie to samo można uczynić z macierzą Goeritza $G$ zamiast macierzy kolorującej $A$.
 Podsumujmy.
 
 \begin{proposition}
-    Niech $L$ będzie splotem z~macierzą kolorującą $A$, zaś $R, C$ macierzami o wyznaczniku $1$ tak, że macierz $D=RAC$ jest diagonalna, postaci $\operatorname{diag}(d_1, \ldots, d_n)$.
+\label{prp:colouring_group_summands}%
+    Niech $L$ będzie splotem z~macierzą kolorującą $A$, zaś $D = RAC = \operatorname{diag}(d_1, \ldots, d_n)$ postacią normalną Smitha macierzy $A$.
     Wtedy grupy $\ColoringGroup(L)$ oraz $\Z/|d_1| \Z \times \ldots \times \Z/|d_n| \Z$ są izomorficzne.
 \end{proposition}
 
@@ -79,7 +81,7 @@ Podsumujmy.
 \end{corollary}
 
 \begin{proof}
-    Przy oznaczeniach z powyższego faktu, $\det(L) = |d_1| \cdot \ldots \cdot |d_n|$.
+    Przy oznaczeniach z faktu \ref{prp:colouring_group_summands}, $\det(L) = |d_1| \cdot \ldots \cdot |d_n|$.
 \end{proof}
 
 \begin{corollary}
@@ -88,50 +90,82 @@ Podsumujmy.
     Wyznacznik jest niezmiennikiem splotów.
 \end{corollary}
 
-Grupa jest istotnie mocniejszym niezmiennikiem niż wyznacznik.
+Wyznacznik jest słabszym niezmiennikiem od grupy kolorującej.
 Na przykład węzły $6_1$ oraz $3_1 \shrap 3_1$ mają ten sam wyznacznik, $9$, ale różne grupy kolorujące: odpowiednio $\Z/9$ i~$(\Z/3)^2$.
 
-Podamy teraz za S. Cyganem przykład nieskończonej rodziny węzłów,
-której elementy rozróżnia właśnie wyznacznik.
-Rozpatrzmy węzeł $K_k$ dla $k \ge 4$:
-\begin{comment}
-\begin{tikzpicture}[baseline=-0.65ex, scale=0.1]
-%\useasboundingbox (-5, -5) rectangle (5,5);
-\begin{knot}[clip width=5, end tolerance=1pt, flip crossing/.list={1,2,3,6}]
-    \strand[semithick] (-10, +3) .. controls (-4, +3) and (-4, -3) .. (0, -3);
-    \strand[semithick] (-10, -3) .. controls (-4, -3) and (-4, +3) .. (0, +3);
-    \node at (5, 0) {$\ldots$};
-    \strand[semithick] (10+10, +3) .. controls (10+ 4, +3) and (10+ 4, -3) .. (10+0, -3);
-    \strand[semithick] (10+ 10, -3) .. controls (10+ 4, -3) and (10+4, +3) .. (10+0, +3);
-    \strand[semithick] (20+10, +3) .. controls (20+ 4, +3) and (20+ 4, -3) .. (20+0, -3);
-\strand[semithick] (20+ 10, -3) .. controls (20+ 4, -3) and (20+4, +3) .. (20+0, +3);
-    \strand[semithick] (30, 3) [in=up, out=right] to (35, -3);
-    \strand[semithick,  ] (30, -3) [in=down, out=right] to (35, 3);
-    \strand[semithick] (35, 3) [in=right, out=up] to (0, 10);
-    \strand[semithick] (35, -3) [in=right, out=down] to (0, -10);
-    \strand[semithick] (-10, -3) [in=down, out=left] to (-20, 0) to [in=left, out=up] (-10, 3);
-    \strand[semithick] (-15, 5) [in=left, out=up] to (0, 10);
-    \strand[semithick] (-15, 5) to (-15, -5) [in=left, out=down] to (0, -10);
-    \node at (-5, -5) {$c_3$};
-    \node at (15, -5) {$c_{k-2}$};
-    \node at (25, -5) {$c_{k-1}$};
-\end{knot}
-\end{tikzpicture}
+Jednakowoż wyznacznik jest na tyle mocnym niezmiennikiem, że pozwala elementarnie udowodnić, że węzłów pierwszych jest nieskończenie wiele.
+Będziemy potrzebować lematu:
+
+\begin{lemma}
+    Niech $K_1, K_2$ będą węzłami.
+    Wtedy $\det(K_1 \shrap K_2) = \det(K_1) \det(K_2)$.
+\end{lemma}
+
+\begin{proof}
+    Dla oszczędności papieru zamiast podać pełen dowód napiszemy tylko, że wynika to z faktów \ref{prp:alexander_multiplicative} oraz \ref{prp:alexander_determinant}.
+    (Podczas czytania dowodu faktu \ref{prp:alexander_multiplicative} należy zastąpić każde wystąpienie $t$ przez $-1$).
+\end{proof}
+
+\begin{proposition}
+\label{prop:infinite_prime_knots_1}%
+    Istnieje nieskończenie wiele węzłów pierwszych.
+\end{proposition}
+
+Po poznaniu genusu oraz węzłów skręconych poznamy jeszcze jeden dowód (patrz fakt \ref{prp:infinitely_many_prime_knots}).
+
+\begin{proof}
+    Tak jak Cygan dawno temu, rozpatrzmy rodzinę węzłów $K_k$ dla $k \ge 4$:
+\index[persons]{Cygan, Szymon}%
+
+\begin{figure}[H]
+    \centering
+    \begin{comment}
+    \begin{tikzpicture}[baseline=-0.65ex, scale=0.1]
+    %\useasboundingbox (-5, -5) rectangle (5,5);
+    \begin{knot}[clip width=5, end tolerance=1pt, flip crossing/.list={1,2,3,6}]
+        \strand[semithick] (-10, +3) .. controls (-4, +3) and (-4, -3) .. (0, -3);
+        \strand[semithick] (-10, -3) .. controls (-4, -3) and (-4, +3) .. (0, +3);
+        \node at (5, 0) {$\ldots$};
+        \strand[semithick] (10+10, +3) .. controls (10+ 4, +3) and (10+ 4, -3) .. (10+0, -3);
+        \strand[semithick] (10+ 10, -3) .. controls (10+ 4, -3) and (10+4, +3) .. (10+0, +3);
+        \strand[semithick] (20+10, +3) .. controls (20+ 4, +3) and (20+ 4, -3) .. (20+0, -3);
+    \strand[semithick] (20+ 10, -3) .. controls (20+ 4, -3) and (20+4, +3) .. (20+0, +3);
+        \strand[semithick] (30, 3) [in=up, out=right] to (35, -3);
+        \strand[semithick,  ] (30, -3) [in=down, out=right] to (35, 3);
+        \strand[semithick] (35, 3) [in=right, out=up] to (0, 10);
+        \strand[semithick] (35, -3) [in=right, out=down] to (0, -10);
+        \strand[semithick] (-10, -3) [in=down, out=left] to (-20, 0) to [in=left, out=up] (-10, 3);
+        \strand[semithick] (-15, 5) [in=left, out=up] to (0, 10);
+        \strand[semithick] (-15, 5) to (-15, -5) [in=left, out=down] to (0, -10);
+        \node at (-5, -5) {$c_3$};
+        \node at (15, -5) {$c_{k-2}$};
+        \node at (25, -5) {$c_{k-1}$};
+    \end{knot}
+    \end{tikzpicture}
 \end{comment}
+    \caption[caption-cygan]{Węzeł $K_k$}
+\end{figure}
 
-Niech $W_n$ będzie macierzą $n \times n$, na przekątnej której znajdują się $2$, zaś bezpośrednio nad i~pod nią -- wyrazy $-1$.
-W macierzy kolorującej (ze skreślonym wierszem ,,$c_k$'' oraz kolumną ,,$a_k$'') zamieńmy miejscami dwie pierwsze kolumny, dodajmy do drugiej dwa razy pierwszą, zaś do drugiego wiersza -- dwa razy pierwszy wiersz.
-Otrzymamy macierz
-\begin{equation}
-    \begin{pmatrix}
-        -1 & 0 & 0 \\
-        0 & 3 & -1 \\
-        0 & -1 & W_{k-3}
-    \end{pmatrix}
-\end{equation}
+    Niech $W_n$ będzie macierzą $n \times n$, na przekątnej której znajdują się $2$, zaś bezpośrednio nad i~pod nią -- wyrazy $-1$.
+    W macierzy kolorującej (ze skreślonym wierszem ,,$c_k$'' oraz kolumną ,,$a_k$'') zamieńmy miejscami dwie pierwsze kolumny, dodajmy do drugiej dwa razy pierwszą, zaś do drugiego wiersza -- dwa razy pierwszy wiersz.
+    Otrzymamy macierz
+    \begin{equation}
+        \begin{pmatrix}
+            -1 & 0 & 0 \\
+            0 & 3 & -1 \\
+            0 & -1 & W_{k-3}
+        \end{pmatrix}
+    \end{equation}
 
-Powtarzając operacje: zamiana miejscami skrajnie lewych kolumn, dodanie do drugiej $2m+1$ razy pierwszej, odjęcie pierwszego wiersza od trzeciego, czyli sprowadzając naszą macierz do postaci normalnej Smitha przekonamy się, że na jej przekątnej znajdują się wyrazy $-1, -1, \ldots, -1, 2k-3$.
-To oznacza, że $\det K_k = 2k-3$.
+    Powtarzając operacje: zamiana miejscami skrajnie lewych kolumn, dodanie do drugiej $2m+1$ razy pierwszej, odjęcie pierwszego wiersza od trzeciego, czyli sprowadzając naszą macierz do postaci normalnej Smitha przekonamy się, że na jej przekątnej znajdują się wyrazy $-1, -1, \ldots, -1, 2k-3$.
+    To oznacza, że $\det K_k = 2k-3$.
+
+    I to już prawie koniec!
+    Wskażemy injekcję ze zbioru liczb pierwszych w zbiór węzłów pierwszych.
+    Niech $2k-3$ będzie liczbą pierwszą.
+    Wtedy któryś składnik w rozkładzie węzła $K_k$ na węzły pierwsze (tak jak w fakcie \ref{prp:knots_decompose_into_primes}) musi mieć wyznacznik $2k-3$.
+    Jest jasne (po wniosku \ref{cor:determinant_invariant}), dlaczego te składniki są parami różne.
+\end{proof}
 
 \begin{proposition}
     Niech $k \ge 9$ będzie takie, że wyznacznik węzła $K_k$ jest pewną potęgą $3$.
@@ -141,7 +175,7 @@ To oznacza, że $\det K_k = 2k-3$.
 \begin{proof}
     Macierz diagonalna otrzymana po wniosku \ref{cor:determinant_invariant} także jest niezmiennikiem węzłów.
 
-    Macierzą dla splotu trójlistników $(3_1)^{\# n}$ trójlistników jest $\operatorname{diag}(1, \ldots, 1, 3, \ldots, 3)$, zaś dla węzła $K_k$: $\operatorname{diag} (1, \ldots, 1, 3^?)$.
+    Macierzą dla splotu trójlistników $(3_1)^{\# n}$ trójlistników jest $\operatorname{diag}(1, \ldots, 1, 3, \ldots, 3)$, zaś dla węzła $K_k$: $\operatorname{diag} (1, \ldots, 1, 3^n)$.
 \end{proof}
 
 \index{grupa kolorująca|)}%

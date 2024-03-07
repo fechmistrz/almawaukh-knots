@@ -60,20 +60,21 @@ diagram_commands["MinusCrossingArrows"] = {
 }
 diagram_commands["MinusCrossingChessboard"] = {
     "lines": [
-        "\\strand[thick] (-5, -5) to (5, 5);",
-        "\\strand[thick] (-5, 5) to (5, -5);"
+        "\\strand[very thick] (-5, -5) to (-0.50, -0.50);",
+        "\\strand[very thick] (0.50, 0.50) to (5, 5);",
+        "\\strand[very thick] (-5, 5) to (5, -5);"
         "\\fill[diagramfiller] (-4, 5) to (0, 1) to (4, 5);",
         "\\fill[diagramfiller] (-4, -5) to (0, -1) to (4, -5);",
         "\\node[first_colour] at (-5, 0) {$-1$};",
     ],
     "sizes": ["Large"],
-    "flip": ["1"],
 }
 
 diagram_commands["PlusCrossingChessboard"] = {
     "lines": [
-        "\\strand[thick] (-5, -5) to (5, 5);",
-        "\\strand[thick] (-5, 5) to (5, -5);"
+        "\\strand[very thick] (-5, -5) to (5, 5);",
+        "\\strand[very thick] (-5, 5) to (-0.50, 0.50);"
+        "\\strand[very thick] (0.50, -0.50) to (5, -5);"
         "\\fill[diagramfiller] (-4, 5) to (0, 1) to (4, 5);",
         "\\fill[diagramfiller] (-4, -5) to (0, -1) to (4, -5);",
         "\\node[first_colour] at (-5, 0) {$+1$};",

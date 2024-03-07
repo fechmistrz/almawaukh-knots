@@ -5,14 +5,14 @@ Tuż przed wojną Lebrecht Goeritz \cite{goeritz1933} pokazał, że każdy diagr
 Macierz tej formy nie jest niezmiennikiem węzłów, ale jej symbole Hassego oraz wyznacznik (bez znaku) już tak.
 % https://encyclopediaofmath.org/wiki/Hasse_invariant
 \index[persons]{Goeritz, Lebrecht}%
-Ani Kawauchi \cite{kawauchi1996}, ani Murasugi \cite{murasugi1996} nie wspominają explicite odkrycia Goerita; robią to Burde, Zieschang, Heusener \cite[s. 258-262]{burde2014}, za co bardzo im dziękujemy.
+Ani Kawauchi \cite{kawauchi1996}, ani Murasugi \cite{murasugi1996} nie wspominają explicite odkrycia Goeritza; robią to Burde, Zieschang, Heusener \cite[s. 258-262]{burde2014}, za co bardzo im dziękujemy.
 
 Trotter zmodyfikował pomysły Goeritza i otrzymał inną formę kwadratową, sygnatura formy jest niezmiennikiem splotów.
 \index[persons]{Trotter, Hale}%
 Sygnaturę (razem z dalszymi uogólnieniami) opisujemy w~późniejszej podsekcji \ref{sub:signature}, teraz skupiając się na macierzy Goeritza.
 
 \begin{definition}
-    Ustalmy uszachowiony diagram $D$ dla splotu $L$.
+    Ustalmy uszachowiony diagram $D$ splotu $L$.
     \index{uszachowienie}%
     Oznaczmy białe obszary $0, 1, \ldots, m$, przy czym $0$ jest obszarem nieograniczonym.
     Przydzielmy skrzyżowaniom znaki:
@@ -29,7 +29,7 @@ Sygnaturę (razem z dalszymi uogólnieniami) opisujemy w~późniejszej podsekcji
         \end{minipage}
     \end{figure}
 \end{comment}
-    Macierz Goeritza powstaje przez skreślenie z~macierzy $G_+$ jednego wiersza oraz jednej kolumny:
+    Wprowadźmy pomocniczą macierz $G_+$:
     \begin{equation}
         G_+=\begin{pmatrix}
         G_{00} & \cdots & G_{0m} \\
@@ -39,14 +39,15 @@ Sygnaturę (razem z dalszymi uogólnieniami) opisujemy w~późniejszej podsekcji
     \end{equation}
     gdzie jeśli $i\neq j$, to $G_{ij}$ jest sumą znaków skrzyżowań przyległych do $i$ oraz $j$.
     Dla $i = j$, $G_{ii}$ jest minus sumą znaków skrzyżowań wokół $j$-tego obszaru.
+    Macierz Goeritza powstaje z~macierzy $G_+$ przez skreślenie dowolnego wiersza oraz dowolnej kolumny.
 \end{definition}
 
 Macierz $G_+$ posiada dwie własności pozwalające wykryć proste błędy rachunkowe: jest symetryczna, a~jej kolumny i~wiersze sumują się do zera.
 Jest przy tym zazwyczaj mniejsza od macierzy kolorującej.
 
 \begin{proposition}
-    Niech $K$ będzie węzłem.
-    Ustalmy diagram $D$ i oznaczmy przez $G, A$ kolejno macierz Goeritza oraz macierz kolorującą tego diagramu.
+    Niech $D$ będzie diagramem węzła $K$.
+    Oznaczmy przez $G, A$ kolejno macierz Goeritza oraz macierz kolorującą tego diagramu.
     Wtedy  $\det G = \pm \det A$.
 \end{proposition}
 
