@@ -5,7 +5,7 @@
 \index{lustro}%
 \index{węzeł!lustrzany}% TODO: to się może mylić ze zwieciadlanym
     Niech $L$ będzie zorientowanym splotem.
-    Splot $mL$ powstały przez odbicie splotu $L$ względem dowolnej płaszczyzny nazywamy lustrem.
+    Splot $\operatorname{m} L$ powstały przez odbicie splotu $L$ względem dowolnej płaszczyzny nazywamy lustrem.
 \end{definition}
 
 \begin{definition}[rewers]
@@ -13,7 +13,7 @@
 \index{rewers}%
 \index{węzeł!odwrotny}%
     Niech $L$ będzie zorientowanym splotem.
-    Splot $rL$ powstały przez odwrócenie orientacji wszystkich ogniw splotu $L$ nazywamy rewersem.
+    Splot $\operatorname{r} L$ powstały przez odwrócenie orientacji wszystkich ogniw splotu $L$ nazywamy rewersem.
 \end{definition}
 
 Niektórzy mówią o odbiciach lustrzanych i odwrotnościach).
@@ -24,26 +24,28 @@ Lickorish \cite[s. 4]{lickorish1997} używa $r L$ dla odwrotności oraz $\overli
 \begin{figure}[H]
     \begin{minipage}[b]{.32\linewidth}
         \centering
-        \includegraphics[width=\linewidth]{../data/link_mirror.png}
+        \includegraphics[width=\linewidth]{../data/links/9_3_2_mirror.png}
         \subcaption{lustro $mL$}
     \end{minipage}
     \begin{minipage}[b]{.32\linewidth}
         \centering
-        \includegraphics[width=\linewidth]{../data/link.png}
+        \includegraphics[width=\linewidth]{../data/links/9_3_2_base.png}
         \subcaption{przykładowy splot $L$}
     \end{minipage}
     \begin{minipage}[b]{.32\linewidth}
         \centering
-        \includegraphics[width=\linewidth]{../data/link_reverse.png}
+        \includegraphics[width=\linewidth]{../data/links/9_3_2_reverse.png}
         \subcaption{rewers $rL$}
     \end{minipage}
 \end{figure}
 \end{comment}
 
-Na lewym obrazku odbiliśmy diagram względem poziomej prostej, innym sposobem na otrzymanie lustra jest odwrócenie wszystkich skrzyżowań, co odpowiada odbijaniu względem płaszczyzny papieru.
-Zauważmy, że wykonując powyższe operacje na węźle możemy otrzymać mniej niż czterech różne obiekty ($L$, $mL$, $rL$, $mrL$) -- na przykład trójlistnik jest własnym rewersem, ale nie lustrem.
+Na lewym obrazku odbiliśmy diagram względem pionowej płaszczyzny, ale ten sam splot dostalibyśmy odwracając wszystkie nad- i podskrzyżowania (czyli odbijając go względem płaszczyzny papieru, ale programy graficzne nie pozwalają na wykonanie tej operacji zbyt łatwo, a~my jesteśmy trochę leniwi).
 
-Wyróżniamy pięć typów symetrii węzłów:
+Zauważmy, że wzięcie lustra i/lub rewersu węzła nie musi prowadzić do nowych obiektów.
+Na przykład trójlistnik jest własnym rewersem: $3_1 = \operatorname{r} 3_1$, ale nie lustrem.
+
+Dlatego wyróżniamy pięć typów symetrii węzłów:
 
 % DICTIONARY;chiral;skrętny/chiralny;węzeł
 \begin{definition}[całkowicie chiralny albo skrętny]
