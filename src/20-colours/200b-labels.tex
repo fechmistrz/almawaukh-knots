@@ -1,35 +1,29 @@
 
 \section{Etykietowanie}
-\index{etykietowanie|(}%
+%\index{etykietowanie|(}%
+
+Etykietowalność to niezmiennik, który uogólnia kolorowalność.
+Poznaliśmy go dzięki książce Livingstona \cite[s. 89-99]{livingston1993}, ale poza panem Charlesem mało kto o nim wspomina!
 
 \begin{definition}[etykietowanie]
-    Mówimy, że zorientowany węzeł $K$ jest etykietowalny grupą $G$ generowaną przez elementy $g_1, \ldots, g_n$, jeśli posiada diagram, którego włóknom przypisano elementy $g_1, \ldots, g_n$ tak, by równanie $gk=hg$ było spełnione przy każdym skrzyżowaniu ($g$: włókno biegnące górą, $k$: bo jego lewej stronie, $h$: po prawej).
+    Niech $G$ będzie grupą generowaną przez elementy $g_1, \ldots, g_n$, zaś  $D$ będzie diagramem zorientowanego węzła $K$.
+    Surjekcję ze zbioru włókien diagramu $D$ na zbiór generatorów grupy $G$ taką, że przy każdym skrzyżowaniu z oznaczeniami jak na rysunku (z~włóknem $g_U$ biegnącym górą oraz włóknami $g_L$, $g_R$ po lewej i prawej stronie podskrzyżowania) spełnione jest równanie $g_Ug_L = g_Rg_U$, nazywamy etykietowaniem diagramu $D$ grupą $G$.
 \begin{comment}
-    \[
-        \LargePlusCrossingLabel
-    \]
+        \[
+            \LargePlusCrossingLabel
+        \]
 \end{comment}
+    Węzeł, który posiada diagram etykietowalny grupą $G$ też nazywamy etykietowalnym grupą $G$.
 \end{definition}
 
-Równanie $gkg^{-1}=h$ mówi, że etykiety włókien wchodzących oraz wychodzących są sprzężone.
+Równanie $g_R = g_Ug_Lg_U^{-1}$ mówi, że etykiety włókien wchodzących oraz wychodzących są sprzężone.
 Wynika stąd, że wszystkie etykiety pochodzą z~jednej klasy sprzężoności.
 Muszą jednocześnie generować całą grupę, dlatego $G$ musi być grupą nieprzemienną lub trywialną.
-Etykietowalność jest niezmiennikiem węzłów i~nie zależy od orientacji węzła:
-jeżeli elementy $g_1, \ldots, g_n$ generują grupę, to ich odwrotności także.
+Etykietowalność jest niezmiennikiem węzłów i~nie zależy od orientacji węzła: jeżeli elementy $g_1, \ldots, g_n$ generują grupę, to ich odwrotności także.
 
-Rozpatrzmy węzły $6_1$ oraz $9_{46}$ i~spróbujmy etykietować je transpozycjami z~grupy $S_4$.
-Wybranie dwóch etykiet przy jednym skrzyżowaniu $6_1$ wymusza etykiety dla wszystkich włókien.
-Dwie transpozycje nie mogą generować grupy $S_4$, natomiast włókna węzła $9_{46}$ dają się etykietować samymi transpozycjami.
-Węzły te są więc różne, choć mają te same własności kolorujące.
-(Dużo później odkryliśmy tę parę jeszcze raz w~\cite[s. 138]{burde2014}: mają ten sam wielomian Alexandera, ale różne ideały elementarne: $E_2(6_1, t) = \Z(t)$; $E_2(9_{46}, t) = (t-2, 2t-1)$.)
-\index{wielomian Alexandera}%
-
-Etykietowanie jest mocnym narzędziem odróżniającym węzły.
-Thistlethwaite w 1985 roku korzystając z niego klasyfikował węzły o~co najwyżej 13 skrzyżowaniach (jest ich, jak ostatecznie się okazało, 12965).
-Mają one tylko 5639 różnych wielomianów Alexandera, ale etykietowania trzynastoma różnymi grupami pozwoliły zmniejszyć liczbę nierozpoznanych węzłów do około tysiąca.
-Wśród nich 30 posiada wielomian Conwaya $1 + 2z^2 + 2z^4$, ale pary rozróżniane wielomianem HOMFLY mają też różne wielomiany Jonesa.
-Wielomiany opisujemy w~rozdziale trzecim.
-
+Etykietowania są naturalnym uogólnieniem kolorowań.
+Dlaczego?
+% Pokazuję i objaśniam - Małgorzata K.
 Niech $p \ge 3$ będzie liczbą pierwszą, natomiast $D_p = \langle r, s \mid r^p = s^2 = e, rsr = s \rangle$ grupą diedralną rzędu $2p$.
 Elementy tej grupy to $1, r, r^2, \ldots, r^{p-1}, s, sr, \ldots, sr^{p-1}$.
 ,,Obrót'' $r^k$ jest sprzężony tylko ze swoją odwrotnością, ale ,,symetrie osiowe'' $sr^k$ tworzą jedną klasę sprzężoności.
@@ -45,6 +39,22 @@ Elementy tej grupy to $1, r, r^2, \ldots, r^{p-1}, s, sr, \ldots, sr^{p-1}$.
     Jest ono prawidłowe dokładnie wtedy, gdy analogiczne kolorowanie liczbami $a_1, \ldots, a_n$ jest prawidłowe.
 \end{proof}
 
+Pozostało wskazać parę węzłów, których nie odróżniają kolorowania, ale odróżnia pewne etykietowanie.
+Taką parę stanowią na przykład węzły $6_1$ oraz $9_{46}$.
+Spróbujmy etykietować je transpozycjami z~grupy $S_4$.
+Wybranie dwóch etykiet przy jednym skrzyżowaniu $6_1$ wymusza etykiety dla wszystkich włókien.
+Dwie transpozycje nie mogą generować grupy $S_4$, natomiast włókna węzła $9_{46}$ dają się etykietować samymi transpozycjami.
+Węzły te są więc różne, choć mają te same własności kolorujące (ponieważ mają ten sam wyznacznik, ponieważ mają ten sam wielomian Alexandera).
+Dużo później odkryliśmy tę parę jeszcze raz w~\cite[s. 138]{burde2014}, gdzie pokazano, że mają różne ideały elementarne: $E_2(6_1, t) = \Z(t)$; $E_2(9_{46}, t) = (t-2, 2t-1)$.
+Niestety nie wiemy, kto pierwszy wpadł na ten pomysł.
+\index{wielomian Alexandera}%
+
+Etykietowanie jest mocnym narzędziem odróżniającym węzły.
+Thistlethwaite w 1985 roku korzystając z niego klasyfikował węzły o~co najwyżej 13 skrzyżowaniach (jest ich, jak ostatecznie się okazało, 12965).
+Mają one tylko 5639 różnych wielomianów Alexandera, ale etykietowania trzynastoma różnymi grupami pozwoliły zmniejszyć liczbę nierozpoznanych węzłów do około tysiąca.
+Wśród nich 30 posiada wielomian Conwaya $1 + 2z^2 + 2z^4$, ale pary rozróżniane wielomianem HOMFLY mają też różne wielomiany Jonesa.
+Wielomiany opisujemy w~rozdziale trzecim.
+
 Kolorowania definiowano kiedyś jako surjekcje $\rho \colon \pi \to D_{2n}$ z~grupy podstawowej.
 Jak mówi prezentacja Wirtingera, grupa splotu generowana jest przez ścieżki z~punktu bazowego w~$S^3$ do brzegu rurowego otoczenia splotu, wokół południka i~znowu do bazowego punktu.
 \index{prezentacja Wirtingera}%
@@ -59,19 +69,21 @@ Rozumowanie, które przedstawiliśmy, prowadzi do prostej klasyfikacji grup, kt�
 \end{proposition}
 
 Historycznie, prezentacja Wirtingera była pierwsza, zaś etykietowania odkryto później.
+% TODO: ustalić, kiedy później
 
 \begin{proposition}[Perko]
     Niech $K$ będzie węzłem.
     Następujące warunki są równoważne: $K$ jest etykietowalny grupą $S_3$, $K$ jest etykietowalny grupą $S_4$.
 \end{proposition}
-% https://faculty.etsu.edu/gardnerr/Knot-Theory/Notes-Livingston/Livingston-Knot-5-2.pdf
+% To jest w https://faculty.etsu.edu/gardnerr/Knot-Theory/Notes-Livingston/Livingston-Knot-5-2.pdf, ale nie książce Livingston a livingston1993
 
 \begin{proof}
-    Dowód zajmuje tylko kilka stron i składa się z dwóch części: po pierwsze, istnieje epimorfizm $S_4 \to S_3$, ponieważ $S_4$ ma podgrupę czwórkową Kleina, więc epimorfizmy $G \to S_4$ można opuszczać do epimorfizmów $G \to S_3$.
-    Po drugie, Perko pokazuje jak podnosić epimorfizmy $G \to S_3$ do epimorfizmów $G \to S_4$, patrz \cite{perko1975}.
+    Dowód zajmuje tylko kilka stron i składa się z dwóch części.
+    Po pierwsze $S_4$ ma podgrupę czwórkową Kleina, więc istnieje epimorfizm $S_4 \to S_3$; pozwala to opuszczać epimorfizmy $G \to S_4$ do epimorfizmów $G \to S_3$.
+    Po drugie, Perko \cite{perko1975} pokazuje jak podnosić epimorfizmy $G \to S_3$ do epimorfizmów $G \to S_4$.
 \end{proof}
 
-Nie znam innych nietrywialnych faktów dotyczących etykietowań.
+Nie znamy innych nietrywialnych faktów dotyczących etykietowań.
 
 \index{etykietowanie|)}%
 
