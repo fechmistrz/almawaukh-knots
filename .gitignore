@@ -1,6 +1,7 @@
 src/*.pdf
 *knot-theory.pdf
-build
+tmp
+
 .DS_Store
 ## Core latex/pdflatex auxiliary files:
 *.aux

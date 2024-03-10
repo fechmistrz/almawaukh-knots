@@ -1,69 +1,40 @@
-SHELL=/bin/bash
-
-.PHONY: all clean prepare chapter-all release
-
+SHELL = /bin/bash
 LUALALATEX_FLAGS = -shell-escape -halt-on-error -output-directory ../build/
+MY_TMP_DIR = $(shell echo "$${PWD}/tmp/")
+.PHONY: all 
 
 define make_pdf
-	export max_print_line=$$(tput cols); \
-	cd src && cat knot_theory.bib | sed -r -e 's/ FJOURNAL/ XJOURNAL/g' -e 's/ JOURNAL/ FJOURNAL/g' | sed -r 's/XJOURNAL/JOURNAL/g' > tmp.txt && mv tmp.txt knot_theory.bib; \
-	lualatex $(LUALALATEX_FLAGS) knot-theory.tex && cp knot_theory.bib ../build/knot_theory.bib; \
-	cd ../build && bibtex knot-theory; \
-	cd ../src && ./merridew/fix_bbl_authors.py ../build/knot-theory.bbl; \
-	cd ../src && lualatex $(LUALALATEX_FLAGS) knot-theory.tex; \
-	cd ../src && lualatex $(LUALALATEX_FLAGS) knot-theory.tex; \
-	cat knot_theory.bib | sed -r -e 's/ FJOURNAL/ XJOURNAL/g' -e 's/ JOURNAL/ FJOURNAL/g' | sed -r 's/XJOURNAL/JOURNAL/g' > tmp.txt && mv tmp.txt knot_theory.bib; \
-	cd ..;
+	$(eval $@_precision = $(1))
+	mkdir -p "${MY_TMP_DIR}/${$@_precision}/build/"
+	rsync -aR --delete --exclude tmp --exclude .git "$${PWD}/./" "${MY_TMP_DIR}/${$@_precision}/"; 
+	mkdir -p "${MY_TMP_DIR}/${$@_precision}/build/"
+	sed -r -e 's/ FJOURNAL/ XJOURNAL/g' -e 's/ JOURNAL/ FJOURNAL/g' "src/knot_theory.bib" | sed -r 's/XJOURNAL/JOURNAL/g' > "${MY_TMP_DIR}/${$@_precision}/build/knot_theory.bib";
+	if [ "${$@_precision}" != "slow" ]; then sed 's@\(\\includecomment\)@% \1@g' src/include/head.tex > "${MY_TMP_DIR}/${$@_precision}/src/include/head.tex"; fi
+	cd "${MY_TMP_DIR}/${$@_precision}/src/" && max_print_line=10000 lualatex $(LUALALATEX_FLAGS) knot-theory.tex;
+	cd "${MY_TMP_DIR}/${$@_precision}/build/" && bibtex knot-theory;
+	./src/merridew/fix_bbl_authors.py "${MY_TMP_DIR}/${$@_precision}/build/knot-theory.bbl";
+	cd "${MY_TMP_DIR}/${$@_precision}/src/" && max_print_line=10000 lualatex $(LUALALATEX_FLAGS) knot-theory.tex;
+	cd "${MY_TMP_DIR}/${$@_precision}/src/" && max_print_line=10000 lualatex $(LUALALATEX_FLAGS) knot-theory.tex;
+	if [ "${$@_precision}" == "fast" ]; then mv ${MY_TMP_DIR}/${$@_precision}/build/knot-theory.pdf ${MY_TMP_DIR}/${$@_precision}/build/draft-knot-theory.pdf; fi
+	cp ${MY_TMP_DIR}/${$@_precision}/build/*.pdf .; 
 endef
 
-define make_pdf_fast
-	export max_print_line=$$(tput cols) && cd src && lualatex $(LUALALATEX_FLAGS) knot-theory.tex && cp knot_theory.bib ../build/knot_theory.bib;
-endef
-
-all: prepare chapter-all release
-draft: prepare chapter-draft release
-fast: prepare chapter-fast release
+all: knot-theory.pdf
 
 test:
 	python3 tools/verify_bib_authors.py --bib src/knot_theory.bib
 
-prepare:
-	mkdir -p build
+clean:
+	rm -rf tmp *.pdf || true
 
-chapter-all: build/knot-theory.pdf
+lint:
+	./tools/make_lint.sh
 
-chapter-draft: build/draft-knot-theory.pdf
+knot-theory.pdf: src/knot-theory.tex src/knot_theory.bib src/*/*.tex
+	$(call make_pdf,slow)
 
-chapter-fast: build/fast-knot-theory.pdf
-
-build/knot-theory.pdf: src/knot-theory.tex src/knot_theory.bib src/*/*.tex src/90-appendix/table_invariants_summary.tex src/90-appendix/table_invariants.tex
-	$(call make_pdf)
-
-build/draft-knot-theory.pdf: src/*-*/*.tex
-# disable TikZ diagrams
-	sed 's@\(\\includecomment\)@% \1@g' src/include/head.tex > src/include/head.tex.bak
-	mv src/include/head.tex.bak src/include/head.tex
-# compile PDF
-	$(call make_pdf)
-# enable TikZ diagrams
-	sed 's@%.*\(\\includecomment.*\)@\1@g' src/include/head.tex > src/include/head.tex.bak
-	mv src/include/head.tex.bak src/include/head.tex
-# rename to avoid overwriting by `make all`
-	mv build/knot-theory.pdf build/draft-knot-theory.pdf
-
-build/fast-knot-theory.pdf:
-# disable TikZ diagrams
-	sed 's@\(\\includecomment\)@% \1@g' src/include/head.tex > src/include/head.tex.bak
-	mv src/include/head.tex.bak src/include/head.tex
-# compile PDF once
-	$(call make_pdf_fast)
-# enable TikZ diagrams
-	sed 's@%.*\(\\includecomment.*\)@\1@g' src/include/head.tex > src/include/head.tex.bak
-	mv src/include/head.tex.bak src/include/head.tex
-# rename to avoid overwriting by `make all`
-	mv build/knot-theory.pdf build/fast-knot-theory.pdf
-
-
+draft-knot-theory.pdf: src/knot-theory.tex src/knot_theory.bib src/*/*.tex
+	$(call make_pdf,fast)
 
 src/00-meta-latex/new_diagrams.tex: tools/diagram_rules/*.py tools/write_diagram_rules.py
 	{ echo "#!/usr/bin/env python3"; echo "diagram_commands = dict()"; cat tools/diagram_rules/*.py; cat tools/write_diagram_rules.py; } > tools/write_diagram_rules_2.py
@@ -76,23 +47,5 @@ src/90-appendix/table_invariants_summary.tex: tools/convert_knotinfo_json_to_tab
 src/90-appendix/table_invariants.tex: tools/convert_knotinfo_json_to_table.py tools/knotinfo_parsed.json
 	{ echo; python3 tools/convert_knotinfo_json_to_table.py all tools/knotinfo_parsed.json; } > src/90-appendix/table_invariants.tex
 
-release:
-	for i in build/*knot-theory.pdf; do \
-		if [[ "$$i" -nt "$$(basename "$$i")" ]]; then \
-			cp "$$i" .; \
-		fi; \
-	done
-
-clean:
-	rm -rf build *.pdf
-
-lint:
-	./tools/make_lint.sh
-
-shuffle:
-	grep '@' todo-citations.txt | nl | shuf -n 20 | tr -s ' ' | sort -V | awk '{print $$2 " " $$3}'
-
-
 tools/knotinfo_parsed.json: tools/convert_knotinfo_to_json.py tools/knotinfo_raw.txt
 	cd tools && ./convert_knotinfo_to_json.py
-
