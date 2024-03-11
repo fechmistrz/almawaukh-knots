@@ -1,0 +1,15 @@
+all:
+	lualatex -interaction=nonstopmode main
+	lualatex -interaction=nonstopmode main
+	bibtex main
+	# lualatex main
+	# lualatex main
+	cp main.pdf wezly.pdf
+
+
+slow:
+	lualatex main
+	# makeindex main.idx -s indexstyle.ist
+	# biber main
+	# yes '' | lualatex main
+	# yes '' | lualatex main

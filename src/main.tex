@@ -1,0 +1,125 @@
+\documentclass{LegrandOrangeBook}
+\begin{document}
+\titlepage % Output the title page
+	{\includegraphics[width=\paperwidth]{background.pdf}} % Code to output the background image, which should be the same dimensions as the paper to fill the page entirely; leave empty for no background image
+	{ % Title(s) and author(s)
+		\centering\sffamily % Font styling
+		{\Huge\bfseries Exploring the Physical Manifestation of Humanity's Subconscious Desires\par} % Book title
+		\vspace{16pt} % Vertical whitespace
+		{\LARGE A Practical Guide\par} % Subtitle
+		\vspace{24pt} % Vertical whitespace
+		{\huge\bfseries Goro Akechi\par} % Author name
+	}
+
+
+\thispagestyle{empty} % Suppress headers and footers on this page
+
+~\vfill % Push the text down to the bottom of the page
+
+\noindent Copyright \copyright\ 2022 Goro Akechi\\ % Copyright notice
+
+\noindent \textsc{Published by Publisher}\\ % Publisher
+
+\noindent \textsc{\href{https://www.latextemplates.com/template/legrand-orange-book}{book-website.com}}\\ % URL
+
+\noindent Licensed under the Creative Commons Attribution-NonCommercial 4.0 License (the ``License''). You may not use this file except in compliance with the License. You may obtain a copy of the License at \url{https://creativecommons.org/licenses/by-nc-sa/4.0}. Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \textsc{``as is'' basis, without warranties or conditions of any kind}, either express or implied. See the License for the specific language governing permissions and limitations under the License.\\ % License information, replace this with your own license (if any)
+
+\noindent \textit{First printing, March 2022} % Printing/edition date
+
+%----------------------------------------------------------------------------------------
+%	TABLE OF CONTENTS
+%----------------------------------------------------------------------------------------
+
+\pagestyle{empty} % Disable headers and footers for the following pages
+
+
+\input{include/head_1}
+\input{include/head_2}
+\input{include/head_3}
+\input{include/head_4}
+\input{include/head_5}
+\tableofcontents
+
+
+
+\pagestyle{fancy} % Enable default headers and footers again
+\cleardoublepage % Start the following content on a new page
+
+\chapterimage{orange2.jpg} % Chapter heading image
+\chapterspaceabove{5.75cm} % Whitespace from the top of the page to the chapter title on chapter pages
+\chapterspacebelow{7.25cm} % Amount of vertical whitespace from the top margin to the start of the text on chapter pages
+
+\part{Preludium}
+\chapter{Preludium}
+\input{10-introduction/100-intro}
+\input{10-introduction/101-knots}
+\input{10-introduction/102-reidemeister}
+\input{10-introduction/103-operations}
+\input{10-introduction/104-primality}
+\input{10-introduction/105-numerical_invariants}
+
+\part{Niezmienniki}
+\chapter{Niezmienniki kolorowe}
+\input{20-colours/200-intro}
+\input{20-colours/201-matrix}
+\input{20-colours/202-group}
+\input{20-colours/203-quandle}
+
+\chapter{Niezmienniki wielomianowe}
+\input{30-polynomials/300-intro}
+\input{30-polynomials/301-alexander}
+\input{30-polynomials/302-jones}
+\input{30-polynomials/303-homfly}
+\input{30-polynomials/304-blmho}
+\input{30-polynomials/305-kauffman}
+\input{30-polynomials/306-vassiliev}
+
+\chapter{Topologia algebraiczna}
+\input{40-topology/400-intro}
+\input{40-topology/401-group}
+\input{40-topology/402-seifert}
+\input{40-topology/403-arf}
+\input{40-topology/404-homology}
+
+\part{Rodziny węzłów}
+\chapter{Wybrane rodziny węzłów}
+\input{50-families/intro}
+\input{50-families/braid}
+\input{50-families/tangle}
+\input{50-families/pretzel}
+\input{50-families/lissajous}
+\input{50-families/torus}
+\input{50-families/satellite}
+\input{50-families/hyperbolic}
+\input{50-families/slice}
+
+\part{Apendiksy}
+\chapterimage{orange2.jpg} % Chapter heading image
+\chapterspaceabove{5.75cm} % Whitespace from the top of the page to the chapter title on chapter pages
+\chapterspacebelow{7.25cm} % Amount of vertical whitespace from the top margin to the start of the text on chapter pages
+
+\begin{appendices}
+	\renewcommand{\chaptername}{Appendix} % Change the chapter name to Appendix, i.e. "Appendix A: Title", instead of "Chapter A: Title" in the headers
+	\chapter{Tablice węzłów pierwszych}
+	\input{90-appendix/table_invariants_intro}
+	Tabela pierwsza podsumowuje tabelę drugą:
+	\input{90-appendix/table_invariants_summary}
+	\newpage
+	Tabela druga zawiera wartości niezmienników:
+	\input{90-appendix/table_invariants}
+	\input{90-appendix/table_prime}
+
+	\chapter{Tablice splotów}
+	\input{90-appendix/table_prime_links}
+
+	\chapter{Notacja, użyte symbole}
+	\input{90-appendix/notation}
+
+	\chapter{Słownik angielsko-polski}
+	\begin{compactitem}
+	\input{90-appendix/dictionary}
+	\end{compactitem}
+\end{appendices}
+
+\input{include/foot}
+\end{document}
