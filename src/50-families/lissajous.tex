@@ -9,13 +9,14 @@ Węzły Lissajous zdefiniowali Bogle, Hearst, Jones i Stoiłow \cite{bogle1994} 
 \index[persons]{Stoiłow, Luben}%
 
 \begin{definition}[węzeł Lissajous]
-    Węzeł zadany parametrycznie:
+    Niech $n_x, n_y, n_z$ (,,częstotliwości'') będą liczbami całkowitymi, zaś  $\varphi_x, \varphi_y, \varphi_z$ (,,fazy'') liczbami rzeczywistymi.
+    Wtedy węzeł zadany w przestrzeni $\R^3$ parametrycznie:
     \begin{equation}
         x = \cos(n_xt + \varphi_x) \quad
         y = \cos(n_yt + \varphi_y) \quad
         z = \cos(n_zt + \varphi_z),
     \end{equation}
-    gdzie $n_x, n_y, n_z$ (,,częstotliwości'') to stałe całkowite, zaś $\varphi_x, \varphi_y, \varphi_z$ (,,fazy'') są rzeczywiste, nazywamy węzłem Lissajous.
+    nazywamy węzłem Lissajous.
 \end{definition}
 
 Węzeł nie może posiadać samoprzecięć, dlatego żadna z~wielkości $n_i\varphi_j-n_j\varphi_i$, dla różnych indeksów $i, j$ nie może być krotnością $\pi$.
@@ -48,7 +49,7 @@ Jest wiele węzłów Lissajous:
 
 \begin{proof}
     Niech $a, b > 1$ będą względnie pierwsze.
-    Lamm w \cite{lamm1997} pokazał dużo ogólniejszy wynik.
+    Lamm \cite{lamm1997} pokazał dużo ogólniejszy wynik.
     Mianowicie: węzeł Lissajous o~częstotliwościach $n_x = a$, $n_y = b$, $n_z = 2ab-a-b$ oraz fazach:
     \begin{equation}
         \varphi_x = \frac{2n_x-1}{n_z} \pi, \quad
@@ -65,7 +66,7 @@ Węzły Lissajous są bardzo symetryczne.
 \begin{proposition}
 \index{węzeł!silnie dodatnio achiralny}%
 \label{prp:lissajus_odd}%
-    Jeśli wszystkie stałe $n_x, n_y, n_z$ są nieparzyste, węzeł jest silnie dodatnio achiralny.
+    Jeśli wszystkie częstotliwości są nieparzyste, węzeł jest silnie dodatnio achiralny.
 \end{proposition}
 
 \begin{proposition}

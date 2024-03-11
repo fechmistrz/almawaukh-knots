@@ -235,6 +235,19 @@ To pokazuje, że wszystkie typy symetrii są realizowane przez precle lub sumy p
 Wielomian Alexandera precla $(p_1, \ldots, p_n)$ nigdy nie zależy od kolejności współczynników, jest to ćwiczenie w~książce Livingstona \cite[s. 215]{livingston1993}.
 
 \begin{proposition}
+    Niech $K$ będzie $(p_1, p_2, \ldots, p_n)$-preclem.
+    Wtedy
+    \begin{equation}
+        \det K = \left(\prod_{k=1}^n p_k\right) \left( \sum_{k=1}^n \frac{1}{p_k}\right).
+    \end{equation}
+\end{proposition}
+
+\begin{proof}
+    Nie wiemy, kto pierwszy zauważył ten elementarny fakt.
+    Przeczytaliśmy o nim u Kolaya \cite[s. 14]{kolay2019}.
+\end{proof}
+
+\begin{proposition}
 \index{kolorowalność}%
     Niech $n$ będzie liczbą pierwszą.
     Węzeł $p, q, r$-preclowy jest $n$-kolorowalny wtedy i~tylko wtedy, gdy $n$ dzieli $|pq+qr+pr|$.
