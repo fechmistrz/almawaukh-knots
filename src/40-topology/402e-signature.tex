@@ -188,7 +188,7 @@ Livingston podał pełną charakteryzację zbilansowanych sygnatur Levine'a-Tris
     \begin{enumerate}
         \item dla każdego $\omega \in S^1$ mamy $\sigma(\omega) = \sigma(\overline{\omega})$
         \item $\sigma(1) = 0$
-        \item każda nieciągłość funkcji $\sigma$ jest miejscem zerowym wielomianu Alexandera węzła
+        \item każdy punkt nieciągłości funkcji $\sigma$ jest miejscem zerowym wielomianu Alexandera węzła
         \item jeżeli argumenty $\omega_1, \omega_2$ są sprzężone w sensie Galois, to $\sigma(\omega_1) \equiv \sigma(\omega_2)$ modulo $2$.
     \end{enumerate}
 \end{proposition}
@@ -197,7 +197,16 @@ Livingston podał pełną charakteryzację zbilansowanych sygnatur Levine'a-Tris
     Livingston pisze w \cite{livingston2018}, że dowód w prawą stronę jest dość dobrze znany, natomiast w lewo korzysta z~wyników Kondo \cite{kondo1979} i Sakaiego \cite{sakai1977}, że każdy wielomian Alexandera węzła jest realizowany przez węzeł 1-gordyjski oraz zachowania zbalansowanej sygnatury podczas odwracania skrzyżowania.
 \end{proof}
 
-(Nie każdy wielomian Kauffmana/HOMFLY jest realizowany przez węzły 1-gordyjskie, Kawauchi \cite[s. 151]{kawauchi1996} wspomina na przykład, że $\unknotting K \ge \log_3 |Q(-1)|$.)
+Kawauchi \cite[s. 151]{kawauchi1996} wspomina nierówność $\unknotting K \ge \log_3 |Q(-1)|$.
+Węzeł $8_{18}$ jest 2-gordyjski i jego wielomian BLM/Ho wynosi
+\begin{equation}
+    Q (8_{18}; x) = 6x^7 + 24x^6 + 14x^5 - 36x^4 - 26x^3 + 12x^2 + 2x + 5,
+\end{equation}
+więc $Q (8_{18}, -1) = 9$ i żaden 1-gordyjski węzeł nie może mieć tego samego wielomianu BLM/Ho, a na mocy także takiego samego wielomianu Kauffmana jak $8_{18}$.
+(Dokładnie to samo rozumowanie działa dla $9_{35}, 9_{37}, 9_{46}, 9_{47}, 9_{48}, 10_{74}, 10_{75}, 10_{98}, 10_{99}$, 31 węzłów pierwszych o 11 skrzyżowaniach i 123 węzłów pierwszych o 12 skrzyżowaniach).
+% TODO: tu? czy bliżej 1-gordyjskich?
+% TODO: dopisać pythonowy program
+% 8_18 9_35 9_37 9_46 9_47 9_48 10_74 10_75 10_98 10_99 11a_43 11a_44 11a_47 11a_57 11a_123 11a_135 11a_155 11a_173 11a_181 11a_231 11a_249 11a_263 11a_277 11a_291 11a_293 11a_314 11a_332 11a_352 11a_366 11n_71 11n_72 11n_73 11n_74 11n_75 11n_76 11n_77 11n_78 11n_81 11n_126 11n_164 11n_167 12a_119 12a_164 12a_166 12a_167 12a_177 12a_244 12a_245 12a_265 12a_270 12a_295 12a_297 12a_298 12a_311 12a_332 12a_386 12a_396 12a_413 12a_427 12a_433 12a_435 12a_493 12a_503 12a_554 12a_563 12a_569 12a_574 12a_576 12a_594 12a_615 12a_634 12a_647 12a_679 12a_683 12a_692 12a_701 12a_712 12a_725 12a_742 12a_750 12a_769 12a_787 12a_801 12a_810 12a_873 12a_886 12a_895 12a_905 12a_973 12a_987 12a_990 12a_1022 12a_1092 12a_1093 12a_1123 12a_1142 12a_1181 12a_1225 12a_1260 12a_1283 12a_1286 12a_1288 12n_268 12n_269 12n_270 12n_332 12n_333 12n_334 12n_379 12n_380 12n_386 12n_387 12n_388 12n_389 12n_402 12n_403 12n_420 12n_440 12n_460 12n_480 12n_494 12n_495 12n_496 12n_505 12n_508 12n_518 12n_546 12n_549 12n_553 12n_554 12n_555 12n_556 12n_565 12n_567 12n_570 12n_571 12n_574 12n_581 12n_582 12n_583 12n_598 12n_600 12n_601 12n_602 12n_604 12n_605 12n_622 12n_626 12n_636 12n_637 12n_642 12n_654 12n_666 12n_669 12n_701 12n_737 12n_756 12n_806 12n_813 12n_846 12n_869 12n_876 12n_883 12n_888
 
 \begin{proposition}
 \index{węzeł!satelitarny}%

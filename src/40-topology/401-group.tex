@@ -20,7 +20,7 @@ Natomiast grupa kolorująca jest skończona dla splotów o~niezerowym wyznacznik
 Podamy najpierw kilka przykładów węzłów oraz ich grup.
 
 \begin{example}
-    Grupa niewęzła: $\Z$.
+    Grupa niewęzła $\pi(\SmallUnknot) = \Z$.
 \end{example}
 
 Z twierdzenia o pętli, czyli uogólnienia lematu Dehna wynika, że niewęzeł jest jedynym węzłem, którego grupą podstawową jest $\Z$.
@@ -31,11 +31,11 @@ Z odsieczą przyszedł matematyk grecki Christos Papakyriakopoulos, który okoł
 
 \begin{example}
 \label{exm:trefoil_group}%
-    Grupa trójlistnika: $\langle x, y \mid x^2 = y^3\rangle$.
+    Grupa trójlistnika $\pi(3_1) = \langle x, y \mid x^2 = y^3\rangle$.
 \end{example}
 
 \begin{proof}
-    Wynika to z (prezentacji Wirtingera i) równości
+    Wynika to z prezentacji Wirtingera i transformacji Tietzego:
     % https://en.wikipedia.org/wiki/Tietze_transformations
     \begin{align}
         \pi_1(S^3 \setminus 3_1) & = \langle x, y, z \mid xz = yx, zy = xz, yx = zy \rangle \\
@@ -43,9 +43,9 @@ Z odsieczą przyszedł matematyk grecki Christos Papakyriakopoulos, który okoł
                                  & = \langle x, y, a, b \mid xyx = yxy, a = yx, b = xyx \rangle \\
                                  & = \langle x, a, b \mid xa = a^2x^{-1}, b = xa \rangle \\
                                  & = \langle a, b \mid b = a^2(ba^{-1})^{-1} \rangle \\
-                                 & = \langle a, b \mid a^3 = b^2 \rangle,
+                                 & = \langle a, b \mid a^3 = b^2 \rangle.
+                                 \qedhere
     \end{align}
-    prawdziwych na mocy transformacji Tietzego.
 \end{proof}
 
 Trójlistnik jest węzłem $(3, 2)$-torusowym, więc powyższy przykład stanowi szczególny przypadek grupy węzła torusowego.
@@ -60,18 +60,18 @@ Jej wyznaczenie to popularne ćwiczenie w~podręcznikach topologii algebraicznej
 \end{proof}
 
 \begin{example}
-    Grupa ósemki: $\langle x, y \mid yxy^{{-1}}xy=xyx^{{-1}}yx \rangle$.
+    Grupa ósemki $\pi(4_1) = \langle x, y \mid yxy^{{-1}}xy=xyx^{{-1}}yx \rangle$.
 \end{example}
 
 \begin{proposition}
-    \label{prop:knot_group_invariant}
-    Jeżeli węzły $L_1, L_2$ są równoważne, to grupy $\pi(L_1), \pi(L_2)$ są izomorficzne.
-    Innymi słowy, grupa jest niezmiennikiem węzłów.
+    \label{prop:knot_group_invariant}%
+    Grupa jest niezmiennikiem węzłów.
 \end{proposition}
 
 \begin{proof}
-    Gdy dwa węzły są równoważne, istnieje izotopijny z~identycznością homeomorfizm $\R^3 \to \R^3$, który posyła pierwszy węzeł na drugi.
-    Obcięty do dopełnień węzłów indukuje izomorfizm grup podstawowych.
+    Niech $K_1, K_2$ będą równoważnymi węzłami.
+    Wtedy istnieje izotopijny z~identycznością homeomorfizm $f \colon \R^3 \to \R^3$, który posyła pierwszy węzeł na drugi: $f(K_1) = K_2$.
+    Obcięty do dopełnień węzłów indukuje izomorfizm grup podstawowych $\pi(K_1) \cong \pi(K_2)$.
 \end{proof}
 
 Na przykładzie grupy $\langle x,y,z \mid xyx=yxy,xzx=zxz\rangle$, która odpowiada zarówno sumie prostej różno-, jak i~jednoskrętnych trójlistników, widać że implikacja odwrotna nie zachodzi: mają one różne sygnatury (patrz uwaga za wnioskiem \ref{cor:acheiral_signature}).
@@ -117,13 +117,13 @@ Potem odkryto, że:
     Grupa węzła wyznacza wartość jego genusu.
 \end{proposition}
 \begin{proof}[Niedowód]
-    Jest to wniosek 3 z~pracy \cite{feustel1978} Feustela.
+    Jest to wniosek 3 z~pracy Feustela \cite{feustel1978}.
 \end{proof}
 \begin{proposition}
     Grupa węzła złożonego wyznacza wartość jego liczby mostowej.
 \end{proposition}
 \begin{proof}[Niedowód]
-    Jest to wniosek 3 z~pracy \cite{feustel1978} Feustela.
+    Jest to wniosek 3 z~pracy Feustela \cite{feustel1978}.
 \end{proof}
 
 Wreszcie Thurston \cite{thurston1982} jako efekt uboczny uzyskał kolejny wynik o grupie: hiperboliczne rozmaitości o skończonej objętości (domknięte rozmaitości lub takie, których brzeg jest zbudowany z torusów) są wyznaczone przez ich grupę podstawową.
@@ -181,7 +181,7 @@ Kawauchi wspomina, że istnieją sploty, których grupa splotu nie odróżnia, p
     Niech $L \subseteq S^3$ będzie splotem.
     Następujące warunki są równoważne:
     \begin{enumerate}
-        \item splot $L$ jest prosty i niepierścieniowaty\footnote{simple, anannular},
+        \item splot $L$ jest prosty i niepierścieniowaty,
         \item grupa $\pi(L)$ jest nieprzemienną, nierozkładalną względem produktu wolnego grupą, izomorficzną z dyskretną podgrupą $PSL_2(\C)$.
     \end{enumerate}
 \end{proposition}

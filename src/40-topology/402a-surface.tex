@@ -54,7 +54,7 @@ Pomimo to...
 
 \begin{proposition}
 \label{prp:seifert_exists}%
-    Każdy węzeł posiada powierzchnię Seiferta.
+    Każdy splot posiada powierzchnię Seiferta.
 \end{proposition}
 
 Powyższe stwierdzenie uzasadnili Pontriagin oraz Frankl w~1930 roku, my jednak podamy przyjemny i~konstruktywny dowód podany przez Seiferta \cite{seifert1935} cztery lata później.
@@ -63,7 +63,7 @@ Powyższe stwierdzenie uzasadnili Pontriagin oraz Frankl w~1930 roku, my jednak 
 
 \begin{proof}
 \index{algorytm!Seiferta|(}%
-    Wybierzmy diagram $D$ dla węzła oraz orientację,
+    Wybierzmy diagram $D$ dla splotu oraz orientację,
     a~następnie wyprostujmy wszystkie skrzyżowania zgodnie z~ich orientacją:
 \begin{comment}
     \[
@@ -82,13 +82,13 @@ Powyższe stwierdzenie uzasadnili Pontriagin oraz Frankl w~1930 roku, my jednak 
         \caption[Smthing]{Kolejne kroki algorytmu Seiferta}
     \end{figure}
 
-    Dyski są dwustronne, więc ich górnej stronie przypisujemy znak $+$,
-    jeśli tylko brzeg jest zorientowany dodatnio i~$-$ w~przeciwnym razie.
+    Pozostało wskazać orientację dla tak otrzymanej powierzchnii.
+    Przypisujemy znak $+$ górnej stronie dysków, których brzeg jest zorientowany dodatnio (oraz dolnej stronie dysków, których brzeg jest zorientowany ujemnie).
 \index{algorytm!Seiferta|)}%
 \end{proof}
 
-Powierzchnia Seiferta dziedziczy orientację po węźle.
-Nawet niewinne odwrócenie jednego z ogniw splotu potrafi istotnie zmienić jego powierzchnię, dlatego potrzebna jest ostrożność!
+Powierzchnia Seiferta jest wrażliwa na orientację ogniw splotu: odwrócenie niektórych, ale nie wszystkich, często prowadzi do innej powierzchni.
+Na przykład sygnatura splotu L4a1 wynosi w zależności od orientacji $1$ lub $-3$.
 
 \index{powierzchnia!Seiferta|)}%
 
