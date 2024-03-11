@@ -50,19 +50,19 @@
 
 	% popular page size in Amazon's KDP
 	\RequirePackage[
-		paperwidth=7.00in,
-		paperheight=10.00in,
-		left=1.25in,
-		right=1.125in,
+		paperwidth=6.00in,
+		paperheight=9.00in,
+		left=0.75in,
+		right=0.625in,
 	%     left=0.82in,
 	%     right=0.695in,
-	%     top=0.6in,
-	%     bottom=0.71in,
-	%     twoside,
+		top=1.0in,
+		bottom=0.71in,
+	twoside,
 	%     headsep=0.15in,
 	%     includehead,
-	%     includefoot
-		showframe
+	 %    includefoot
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% pokazuje ramki na stronach: showframe
 	]{geometry}
 	
 	
@@ -567,7 +567,7 @@
 	{} % Theorem head font
 	{} % Punctuation after theorem head
 	{0.25em} % Space after theorem head
-	{\small\sffamily\bfseries\color{ocre}\thmname{#1}~\thmnumber{\@ifnotempty{#1}{}\@upn{#2}} % Theorem text (e.g. Theorem 2.1)
+	{\small\sffamily\bfseries\color{ocre!80!black}\thmname{#1}~\thmnumber{\@ifnotempty{#1}{}\@upn{#2}} % Theorem text (e.g. Theorem 2.1)
 	\thmnote{\the\thm@notefont\sffamily\bfseries\color{black}---~#3.\hspace{0.25em}}} % Optional theorem note
 
 %------------------------------------------------
@@ -781,7 +781,7 @@
 
 % \addbibresource{sample.bib} % Bibliography file
 
-\definecolor{ocre}{RGB}{243, 102, 25} % Define the color used for highlighting throughout the book
+\definecolor{ocre}{RGB}{255, 105, 180} % Define the color used for highlighting throughout the book
 
 \chapterimage{orange1.jpg} % Chapter heading image
 \chapterspaceabove{6.5cm} % Default whitespace from the top of the page to the chapter title on chapter pages

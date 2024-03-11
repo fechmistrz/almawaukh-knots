@@ -1,9 +1,8 @@
 all:
 	lualatex -interaction=nonstopmode main
-	lualatex -interaction=nonstopmode main
 	bibtex main
-	# lualatex main
-	# lualatex main
+	lualatex main
+	lualatex main
 	cp main.pdf wezly.pdf
 
 
