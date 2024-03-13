@@ -723,6 +723,25 @@
 	rightmargin=0cm % Outside right margin width
 ]{cpropBox}
 
+% Corollary box
+\newmdenv[
+	skipabove=7pt, % Whitespace above box
+	skipbelow=7pt, % Whitespace below box
+	rightline=false, % Right line visible
+	leftline=true, % Left line visible
+	topline=false, % Top line visible
+	bottomline=false, % Bottom line visible
+	linecolor=ocre!50, % Line color
+	linewidth=4pt, % Line width
+	backgroundcolor=ocre, % Background color
+	innerleftmargin=5pt, % Inside left margin width
+	innerrightmargin=5pt, % Inside right margin width
+	innertopmargin=5pt, % Inside top margin height
+	innerbottommargin=5pt, % Inside bottom margin height
+	leftmargin=0cm, % Outside left margin width
+	rightmargin=0cm % Outside right margin width
+]{personBox}
+
 % Creates an environment for each type of theorem and assigns it a theorem text style from the THEOREM STYLES block above and a colored box from above
 
 \newenvironment{dupaexercise}{\begin{eBox}\begin{exerciseT}}{\hfill{\color{ocre}\tiny\ensuremath{\blacksquare}}\end{exerciseT}\end{eBox}}
@@ -733,6 +752,7 @@
 \newenvironment{theorem}{\begin{tBox}\begin{theoremeT}}{\end{theoremeT}\end{tBox}}
 \newenvironment{corollary}{\begin{cBox}\begin{corollaryT}}{\end{corollaryT}\end{cBox}}
 \newenvironment{proposition}{\begin{cpropBox}\begin{propositionT}}{\end{propositionT}\end{cpropBox}}
+\newenvironment{remark}{\begin{personBox}\begin{personT}\color{ocre!20}}{\end{personT}\end{personBox}}
 
 \theoremstyle{plain}
 \numberwithin{counter}{section}
@@ -740,23 +760,6 @@
 \newtheorem{lemma}[counter]{Lemat}
 \newtheorem{warning}[counter]{Uwaga}
 \newtheorem{tobedone}[counter]{Wymaga przeredagowania}
-
-%----------------------------------------------------------------------------------------
-%	REMARK ENVIRONMENT
-%----------------------------------------------------------------------------------------
-
-\newenvironment{remark}{%
-	\par\small % Reduce font size for remarks
-	\vspace{4pt} % Vertical whitespace
-	\begin{adjustwidth}{35pt}{25pt} % Left and right padding
-		\hspace{-2.5pt}%
-		\begin{tikzpicture}[overlay]
-			\node[draw=ocre!60,line width=1pt,circle,fill=ocre!25,font=\sffamily\bfseries,inner sep=3pt,outer sep=0pt] at (-15pt,0pt){\textcolor{ocre}{R}}; % Orange R in a circle
-		\end{tikzpicture}
-	\advance\baselineskip -1pt% Reduce line spacing
-}{%
-	\end{adjustwidth}
-}
 
 %----------------------------------------------------------------------------------------
 %	 LOAD PACKAGES THAT CLASH WITH OTHER PACKAGES
