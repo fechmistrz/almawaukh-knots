@@ -1,0 +1,31 @@
+\subsubsection{Sploty rozszczepialne}
+Aby wytłumaczyć, czemu trzeci splot z rysunku \ref{small_links_diagram} jest interesujący, potrzebujemy zdefiniować sploty rozszczepialne.
+
+% DICTIONARY;splittable;rozszczepialny;splot
+\begin{definition}[rozszczepialność]
+\index{splot!rozszczepialny}%
+    Jeżeli splot $L$ można zanurzyć w przestrzeni $\R^3$ tak, że niektóre jego ogniwa będą leżeć nad pewną rozłączną ze splotem płaszczyzną, zaś pozostałe pod nią, to powiemy, że splot $L$ jest rozszczepialny.
+\end{definition}
+
+Liczbę nierozszczepialnych splotów pierwszych kopiujemy z bazy danych LinkInfo \cite{linkinfo24}:
+\renewcommand*{\arraystretch}{1.4}
+\footnotesize
+\begin{longtable}{lcccccccccccc}
+    \hline
+    \textbf{skrzyżowania} & 0 & 1 & 2 & 3 & 4 & 5 &  6 &  7 &  8 & 9 & 10 & 11 \\ \hline \endhead
+    sploty pierwsze, nierozszczepialne & 0 & 0 & 1 & 0 & 1 & 1 & 6 & 9 & 29 & 83 & 287 & 1007 \\
+    (w tym) alternujące & 0 & 0 & 1 & 0 & 1 & 1 & 5 & 7 & 21 & 55 & 174 & 548 \\
+    (w tym) niealternujące & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 2 & 8 & 28 & 113 & 459 \\
+    \hline
+\end{longtable}
+\normalsize
+
+W bazie liczb OEIS trafiliśmy tylko na ciąg \href{https://oeis.org/A086826}{A086826} opisujący liczbę nierozszczepialnych pierwszych i złożonych węzłów i splotów, na przykład $a_5 = 4$, bo mamy dwa węzły pierwsze, splot Whiteheada oraz trójlistnik spleciony z~niewęzłem.
+Słowa ,,skrzyżowanie'' , ,,alternujący'' oraz ,,pierwszy'' definiujemy w~przyszłości, będą to odpowiednio definicje \ref{def:crossing}, \ref{def:alternating_link} i \ref{def:prime_knot}.
+\index{węzeł!alternujący}%
+\index{węzeł!pierwszy}%
+\index{skrzyżowanie}%
+Książka ma nieliniową budowę i należy przeczytać ją co najmniej dwa razy.
+
+Pewne kryteria rozszczepialności konkretnych splotów znaleźć można u Kawauchiego \cite[s. 36-38]{kawauchi1996}.
+% TODO: przepisać, a jeśli za trudne, to może chociaż szkic?

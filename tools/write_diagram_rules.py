@@ -20,11 +20,11 @@ def generate_command(command_name, command_details):
         bound1, bound3 = -7, 7
     elif "Large" in command_name:
         scale = 0.15001
-        clip = 15
+        clip = 6
         bound1, bound3 = -7, 7
     elif "MedLar" in command_name:
-        scale = 0.1101
-        clip = 7
+        scale = 0.13
+        clip = 5
         bound1, bound3 = -7, 7
     elif "Medium" in command_name:
         scale = 0.06001

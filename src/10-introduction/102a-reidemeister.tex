@@ -13,34 +13,38 @@ Zdefiniujmy trzy lokalne operacje na diagramach, a~potem wysłowimy kryterium  R
     Trzy gatunki lokalnych deformacji diagramu splotu:
     \begin{figure}[H]
     \centering
-    %
-    \begin{minipage}[b]{.3\linewidth}
-        \[
-            \LargeReidemeisterOneLeft \stackrel{R_1}{\cong} \LargeReidemeisterOneStraight
-        \]
-        \subcaption{ruch $R_1$}
+    \begin{minipage}[b]{.22\linewidth}%
+        \centering%
+        \MedLarReidemeisterOneLeft $\stackrel{R_1}{\cong}$ \MedLarReidemeisterOneStraight%
+        \subcaption{ruch $R_1$}%
     \end{minipage}
-    %
-    \begin{minipage}[b]{.3\linewidth}
-        \[
-            \LargeReidemeisterTwoA \stackrel{R_2}{\cong} \LargeReidemeisterTwoB
-        \]
+    \quad\quad\quad
+    \begin{minipage}[b]{.2\linewidth}
+        \centering
+        \MedLarReidemeisterTwoA $\stackrel{R_2}{\cong}$ \MedLarReidemeisterTwoB
         \subcaption{ruch $R_2$}
     \end{minipage}
-    %
-    \begin{minipage}[b]{.35\linewidth}
-        \[
-            \LargeReidemeisterThreeA \stackrel{R_3}{\cong} \LargeReidemeisterThreeB
-        \]
+    \quad\quad\quad
+    \begin{minipage}[b]{.32\linewidth}
+        \centering
+        \MedLarReidemeisterThreeA $\stackrel{R_3}{\cong}$ \MedLarReidemeisterThreeB
         \subcaption{ruch $R_3$}
     \end{minipage}
     \end{figure}
-    skręcenie/rozkręcenie ($R_1$), wsunięcie/rozsunięcie ($R_2$) oraz przesunięcie łuku przez skrzyżowanie ($R_3$) nazywamy ruchami Reidemeistera.
+    nazywamy ruchami Reidemeistera.
+    Czasami używa się konkretnych nazw:
+    \begin{itemize}
+        \item skręcenie/rozkręcenie (dla $R_1$),
+        \item wsunięcie/rozsunięcie (dla $R_2$) oraz
+        \item przesunięcie łuku przez skrzyżowanie (dla $R_3$).
+    \end{itemize}
 \end{definition}
 
-Ruch $R_i$ operuje więc na $i$ łukach diagramu.
 Reidemeister w~swojej pierwszej pracy przyjął inną kolejność, jego drugi ruch jest naszym pierwszym.
+Dzięki temu ruch $R_k$ operuje na $k$ łukach diagramu.
 Colberg \cite[s. 6]{colberg2013} pisze, że Maxwell znał ruchy Reidemeistera przed Reidemeisterem, ale mimo próśb Taita nigdy nie zgłosił swojego odkrycia w Royal Society of Edinburgh.
+\index[persons]{Tait, Peter}%
+\index[persons]{Maxwell, James}%
 
 \begin{theorem}[Reidemeister, 1927]
 \label{thm:reidemeister}%
@@ -52,26 +56,25 @@ Colberg \cite[s. 6]{colberg2013} pisze, że Maxwell znał ruchy Reidemeistera pr
 % https://math.stackexchange.com/questions/4399634/two-knots-k-and-k-prime-are-equivalent-if-and-only-if-their-projections-p
 % Reidemeister, and pretty much every other author, has worked with the piecewise-linear case. In a way it doesn't matter which you choose, since there's a theorem that the categories of smooth and PL manifolds are equivalent in some sense. However, it's not so clear how you pass from one setting to the other (or at least I've never gone through the details myself!)
 
-Dowód podali niezależnie Reidemeister \cite{reidemeister1927} oraz Alexander, Briggs \cite{alexander1927}.
-\index[persons]{Reidemeister, Kurt}%
-\index[persons]{Briggs, Garland}%
-\index[persons]{Alexander, James}%
 Twierdzenie Reidemeistera jest prawdziwe także dla splotów zorientowanych, ale wtedy trzeba uwzględnić różne orientacje łuków i~nie jest oczywiste, ile spośród $2^1 + 2^2 + 2^3 = 14$ wersji jest potrzebne.
 Polyak \cite{polyak2010} pokazał, że minimalny zbiór zorientowanych ruchów składa się na przykład z~dwóch wersji ruchu $R_1$, jednej wersji ruchu $R_2$ i~jednej wersji ruchu $R_3$.
 \index[persons]{Polyak, Michael}%
 
-\begin{proof}
+\begin{proof}[Niedowód]
+Dowód podali niezależnie Reidemeister \cite{reidemeister1927} oraz Alexander, Briggs \cite{alexander1927}.
+\index[persons]{Reidemeister, Kurt}%
+\index[persons]{Briggs, Garland}%
+\index[persons]{Alexander, James}%
+    Szkielet dowodu można znaleźć w~książce Burdego i~Zieschanga \cite[s. 9-11]{burde2014}, ale kluczowe pomysły podają też Prasołow z~Sosińskim \cite[s. 11-12]{prasolov1997}.
 \index[persons]{Burde, Gerhard}%
-\index[persons]{Murasugi, Kunio}%
+\index[persons]{Zieschang, Heiner}%
 \index[persons]{Prasołow, Wiktor (Прасолов, Виктор Васильевич)}%
 \index[persons]{Sosiński, Aleksiej (Сосинский, Алексей Брониславович)}%
-\index[persons]{Zieschang, Heiner}%
-    Szkielet dowodu można znaleźć w~książce Burdego i~Zieschanga \cite[s. 9-11]{burde2014}.
-    Kluczowe pomysły podają też Prasołow z~Sosińskim \cite[s. 11-12]{prasolov1997}.
     Innym przystępnym źródłem jest podręcznik Murasugiego \cite[s. 50-56]{murasugi1996}.
+\index[persons]{Murasugi, Kunio}%
 \end{proof}
 
-Trace \cite{trace1983} zauważył, że dwa diagramy jednego węzła są związane tylko II i III ruchem (ale nie I) wtedy i tylko wtedy, gdy mają ten sam spin oraz indeks punktu względem krzywej (,,winding number'').
+Trace \cite{trace1983} zauważył, że dwa diagramy jednego węzła są związane tylko II i III ruchem (ale nie I) wtedy i tylko wtedy, gdy mają ten sam spin oraz indeksy nawinięcia.
 \index[persons]{Trace, Bruce}%
 Z prac Östlunda \cite{ostlund2001}, Manturowa \cite[s. ???]{manturov2004} oraz Haggego \cite{hagge2006} wynika, że dla każdego węzła istnieje para diagramów, do przejścia między którymi trzeba wykorzystać wszystkie trzy ruchy.
 % TODO: ustalić, które strony w Manturowie
@@ -79,17 +82,36 @@ Z prac Östlunda \cite{ostlund2001}, Manturowa \cite[s. ???]{manturov2004} oraz 
 \index[persons]{Manturow, Wasilij}%
 \index[persons]{Hagge, Tobias}%
 % praca Haggego nazywa się "Every Reidemeister move is needed for each knot type" ale nawet w MathSciNecie wspomnieni są Ostlund i Manturow, więc zostawiam. Tekst skopiowany z Wiki
-Coward \cite{coward2006} zademonstrował, że nawet jeśli wszystkie trzy ruchy są potrzebne, można je wykonywać w specjalnej kolejności: najpierw tylko I ruchy, potem tylko II ruchy, następnie tylko III ruchy i znowu II ruchy.
+Coward \cite{coward2006} zademonstrował, że nawet jeśli wszystkie trzy ruchy są potrzebne, można je wykonywać w specjalnej kolejności: najpierw tylko I ruchy, potem tylko II ruchy, następnie tylko III ruchy i~znowu II ruchy.
 \index[persons]{Coward, Alexander}%
 
-W praktyce twierdzenia \ref{thm:reidemeister} nie stosuje się bezpośrednio.
-Mając dane dwa spójne diagramy tego samego splotu trudno znaleźć jest ciąg ruchów przekształcający jeden z nich w drugi albo orzec, że taki nie istnieje.
+Do pokazania, że dwa węzły $K_1, K_2$ nie są równoważne, powinniśmy na mocy twierdzenia \ref{thm:reidemeister} udowodnić, że żaden ciąg ruchów Reidemeistera nie przekształca jednego w drugi.
+Oczywiście nikt o zdrowych zmysłach tak nie postępuje.
+Zamiast tego wprowadza się stosowny niezmiennik, czyli funkcję $f$ określoną na zbiorze wszystkich węzłów (albo splotów, supłów, warkoczy itd.) tak, że jeśli węzły $K_1 \cong K_2$ są równoważne, to $f(K_1) = f(K_2)$.
 % DICTIONARY;invariant;niezmiennik;-
-Zamiast tego definiuje się niezmienniki, czyli funkcje ze zbioru wszystkich diagramów, które nie zmieniają swojej wartości podczas wykonywania ruchów Reidemeistera.
-Kiedy pewien niezmiennik przyjmuje różne wartości na dwóch diagramach, te przedstawiają dwa istotnie różne sploty.
-Gdy wartości są te same, nie dostajemy żadnej informacji.
-Sploty mogą być równoważne albo nie.
+Łatwo widać, że jeśli $f(K_1) \neq f(K_2)$, to węzły $K_1, K_2$ nie mogą być równoważne.
+Natomiast gdy wartości są te same, nie dostajemy żadnej informacji.
+
+Poznaliśmy jak na razie dwa niezmienniki: liczbę ogniw splotu oraz dopełnienie splotu do przestrzeni, w której jest zanurzony ($\mathbb R^3$ lub $S^3$).
+Wiele, chociaż nie wszystkich, innych niezmienników definiuje się nie bezpośrednio na zbiorze węzłów, ale na zbiorze diagramów.
+Należy wtedy sprawdzić, że każdy z trzech ruchów Reidemeistera nie ma wpływu na wartość niezmiennika.
+
 Niezmienniki będą nam stale towarzyszyć w~wędrówce po krainie węzłów.
+
+\begin{remark}[Kurt Werner Friedrich Reidemeister]
+    ?
+\end{remark}
+
+\begin{remark}[James Waddell Alexander]
+    ?
+\end{remark}
+
+\begin{remark}[Garland Baird Briggs]
+    Matematyk amerykański, urodzon w Sebrell, Wirginii w 1894 roku; zmarł w Kolumbii w 1959 roku.
+    Niestety nie wiemy za dużo o tym człowieku.
+\end{remark}
+
+\color{white}
 
 \subsubsection{Dygresja -- wyniki ilościowe wokół twierdzenia Reidemeistera}
 Załóżmy, że na dwóch diagramach tego samego węzła widać odpowiednio $n_1, n_2$ skrzyżowań.

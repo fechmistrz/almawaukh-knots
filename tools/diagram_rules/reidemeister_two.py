@@ -1,11 +1,11 @@
 diagram_commands["ReidemeisterTwoA"] = {
     "lines": [
-        "\\strand[thick] (-2.5, 5) to [in=up, out=down] (2.5, 0);",
-        "\\strand[thick] (-2.5, -5) to [in=down, out=up] (2.5, 0);",
-        "\\strand[thick] (2.5, 5) to [in=up, out=down] (-2.5, 0);",
-        "\\strand[thick] (2.5, -5) to [in=down, out=up] (-2.5, 0);",
+        "\\strand[ultra thick] (-2.5, 5) to [in=up, out=down] (2.5, 0);",
+        "\\strand[ultra thick] (-2.5, -5) to [in=down, out=up] (2.5, 0);",
+        "\\strand[ultra thick] (2.5, 5) to [in=up, out=down] (-2.5, 0);",
+        "\\strand[ultra thick] (2.5, -5) to [in=down, out=up] (-2.5, 0);",
     ],
-    "sizes": ["Large"],
+    "sizes": ["Large", "MedLar"],
     "bounding": [-3.5, -5, 3.5, 5],
 }
 diagram_commands["ReidemeisterTwoQuandleA"] = {
@@ -49,10 +49,10 @@ diagram_commands["ReidemeisterTwoLinkingA"] = {
 }
 diagram_commands["ReidemeisterTwoB"] = {
     "lines": [
-        "\\strand[thick] (-2.5, 5) to [in=up, out=down] (-1, 0);",
-        "\\strand[thick] (-2.5, -5) to [in=down, out=up] (-1, 0);",
-        "\\strand[thick] (2.5, 5) to [in=up, out=down] (1, 0);",
-        "\\strand[thick] (2.5, -5) to [in=down, out=up] (1, 0);",
+        "\\strand[ultra thick] (-2.5, 5) to [in=up, out=down] (-1, 0);",
+        "\\strand[ultra thick] (-2.5, -5) to [in=down, out=up] (-1, 0);",
+        "\\strand[ultra thick] (2.5, 5) to [in=up, out=down] (1, 0);",
+        "\\strand[ultra thick] (2.5, -5) to [in=down, out=up] (1, 0);",
     ],
     "sizes": ["Large", "MedLar"],
     "bounding": [-3.5, -5, 3.5, 5],

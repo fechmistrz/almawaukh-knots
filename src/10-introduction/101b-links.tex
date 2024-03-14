@@ -1,0 +1,84 @@
+
+\subsection{Sploty}
+% DICTIONARY;link;splot;-
+% GLOSSAIRE;un entrelacs;splot;-
+% DICTIONARY;component;ogniwo splotu;-
+% GLOSSAIRE;composante/boucle;ogniwo splotu;-
+\begin{definition}[splot, ogniwo]
+\index{splot}%
+    Sumę parami rozłącznych węzłów
+    \begin{equation}
+        L = K_1 \sqcup K_2 \sqcup \ldots K_n
+    \end{equation}
+    nazywamy splotem, a~składniki $K_i$ -- ogniwami splotu.
+\end{definition}
+
+Przez analogię do węzłów mówimy, że dwa sploty są takie same, jeśli jeden jest obrazem drugiego przez zachowujący orientację homeomorfizm $\R^3 \to \R^3$.
+To oczywiste, że liczba ogniw jest niezmiennikiem splotów.
+Później podamy mniej oczywiste niezmienniki.
+
+\begin{example}[niesplot]
+\index{niesplot}%
+    Splot zadany w przestrzeni $\R^3$ parametrycznie
+    \begin{equation}
+        \bigcup_{k=1}^n \{(\sin \theta, \cos \theta, k) : \theta \in [0, 2\pi]\}
+    \end{equation}
+    nazywamy niesplotem i oznaczamy $U_n$.
+\end{example}
+    
+\begin{example}
+\index{splot!Hopfa}%
+\index[persons]{Hopf, Heinz}%
+    Splot Hopfa (rys. \ref{small_links_diagram}a), najprostszy nietrywialny splot. Ma dwa ogniwa.
+\end{example}
+
+\begin{remark}[Heinz Hopf]
+    Matematyk niemiecki urodzon w 1894 roku w Gräbschen (obecnie część Wrocławia); zmarł w 1971 roku w Zurychu, Szwajcarii.
+    Głównym wynikiem jego pracy doktorskiej z~1925 roku było, że każda jednospójna zupełna 3-rozmaitość Riemanna o~stałej krzywiźnie sekcyjnej jest globalnie izometryczna do przestrzeni euklidesowej, sferycznej lub hiperbolicznej.
+    Był pionierem topologii algebraicznej.
+    W~1931 roku prowadził badania nad tzw. rozwłóknieniem: odwzorowaniem $S^3 \to S^2$ takim, że przeciwobrazy punktów są okręgami wielkimi na 3-sferze.
+    Podczas tych badań zajmował się splotem nazywanym teraz splotem Hopfa.
+\end{remark}
+
+\begin{example}
+\index{splot!Whiteheada}%
+\index[persons]{Whitehead, John}%
+    Splot Whiteheada (rys. \ref{small_links_diagram}b).
+\end{example}
+
+\begin{remark}[John Henry Constantine Whitehead]
+    Matematyk brytyjski urodzon w 1903 roku w~Madrasie, Indiach; zmarł w 1960 roku w Princeton, New Jersey.
+    Był jednym z założycieli teorii homotopii, podał definicję CW-kompleksów.
+    Próbował udowodnić hipotezę Poincarégo, ale popełnił błąd twierdząc, że nie istnieje ściągalna otwarta 3-rozmaitość, która nie jest homeomorficzna z $\R^3$.
+    W 1935 roku sam wskazał taką rozmaitość, do jej konstrukcji wykorzystując splot Whiteheada.
+\end{remark}
+
+\begin{comment}
+    \begin{figure}[H]
+        \centering
+        \begin{minipage}[b]{.3\linewidth}
+            \centering
+            \includegraphics[height=0.6\linewidth]{../data/links/2_2_1.png}
+            \subcaption{splot Hopfa}
+        \end{minipage}\,\,
+        \begin{minipage}[b]{.3\linewidth}
+            \centering
+            \includegraphics[height=0.6\linewidth]{../data/links/5_2_1.png}
+            \subcaption{splot Whiteheada}
+        \end{minipage}\,\,
+        \begin{minipage}[b]{.3\linewidth}
+            \centering
+            \includegraphics[height=0.6\linewidth]{../data/links/6_3_2.png}
+            \subcaption{pierścienie Boromeuszy}
+            \index{pierścienie Boromeuszy}%
+        \end{minipage}
+        \caption[small-links]{Sploty o małej liczbie skrzyżowań}
+        \label{small_links_diagram}
+    \end{figure}
+\end{comment}
+
+\input{10-introduction/101b2-links_splittable}
+
+\input{10-introduction/101b3-links_brunnian}
+
+\input{10-introduction/101b4-links_alternating}

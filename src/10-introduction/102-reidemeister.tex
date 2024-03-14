@@ -4,29 +4,29 @@
 Chociaż w~świetle definicji \ref{def:knot} węzły są pewnymi regularnymi podzbiorami przestrzeni $\R^3$, z~kombinatorycznego punktu widzenia wygodniej jest rysować je na płaszczyźnie.
 
 % DICTIONARY;shadow;cień;-
-\begin{definition}
-\index{cień}%
-    Rzut węzła $K \subseteq \R^3$ na płaszczyznę nazywamy cieniem.
-\end{definition}
-
 % DICTIONARY;crossing;skrzyżowanie;-
-\begin{definition}[skrzyżowanie]
+\begin{definition}[cień, skrzyżowanie]
+\index{cień}%
+\index{skrzyżowanie}%  
 \label{def:crossing}%
-\index{skrzyżowanie}%
-    Podwójny punkt w cieniu nazywamy skrzyżowaniem.
+    Niech $\pi \colon \R^3 \to \R^2$ będzie rzutem na pewną płaszczyznę, zaś $L \subseteq \R^3$ ustalonym splotem.
+    Obraz $\pi[L]$ nazywamy cieniem, punkty podwójne $p$ cienia (punkt $p \in \R^2$, którego przeciwobraz $\pi^{-1}[\{p\}]$ jest dwupunktowy) nazywamy skrzyżowaniami.
 \end{definition}
 
-% DICTIONARY;diagram;diagram;-
 \begin{definition}[diagram]
+% DICTIONARY;diagram;diagram;-
 \index{diagram}%
-    Cień razem z~informacją o~tym, jak przebiegają skrzyżowania i pozbawiony katastrof: potrójnych przecięć, stycznych czy dziobów nazywamy diagramem.
-    % TODO: Narysować katastrofy
+    Niech $D$ będzie cieniem splotu $L$ takim, że cień $D$ zawiera skończenie wiele punktów wielokrotnych (i wszystkie są punktami podwójnymi) oraz skrzyżowania cienia $D$ nie zawierają wierzchołków splotu $L$.
+    Wtedy cień $D$ wzbogacony o~informację o tym, jak przebiegają skrzyżowania (który odcinek łamanej biegnie dołem, a~który górą) nazywamy diagramem.
 \end{definition}
+
+Mieliśmy problemy ze znalezieniem ładnego rysunku katastrof, jakich nie dopuszczamy pracując z diagramami zamiast zwykłymi cieniami; nam nie do końca chciało się je rysować je tutaj.
+Wybawieniem okazała się monografia Burdego, Zieschanga (i Heusenera) \cite[s. 9]{burde2014}.
 
 Dla każdego ustalonego $n \ge 2$ i każdego węzła $K$ istnieje cień $D$, na którym wszystkie wielokrotne punkty są $n$-krotne (wiemy to od Hostego, College'a \cite[s. 11]{adams2021}, którzy nie napisali, skąd to wiedzą);
 \index[persons]{Hoste, Jim}%
 \index[persons]{College, Pitzer}%
-dla co najmniej jednej wartości $n$ można dodatkowo wymagać, by diagram zawierał dokładnie jedno skrzyżowanie (Adams, Crawford, DeMeo, Landry, Lin, Montee, Park, Venkatesh, Yhee \cite{venkatesh2015} albo Brunn\footnote{Karl Hermann Brunn opisał w 1892 roku sploty Brunna, a więc zanim jeszcze teoria węzłów przyszła na świat.} ponad sto lat temu \cite[s. 28]{adams2021}!).
+dla co najmniej jednej wartości $n$ można dodatkowo wymagać, by diagram zawierał dokładnie jedno skrzyżowanie (Adams, Crawford, DeMeo, Landry, Lin, Montee, Park, Venkatesh, Yhee \cite{venkatesh2015} albo Brunn ponad sto lat temu \cite[s. 28]{adams2021}!).
 \index[persons]{Adams, Colin}%
 \index[persons]{Crawford, Thomas}%
 \index[persons]{DeMeo, Benjamin}%
@@ -37,16 +37,14 @@ dla co najmniej jednej wartości $n$ można dodatkowo wymagać, by diagram zawie
 \index[persons]{Venkatesh, Saraswathi}%
 \index[persons]{Yhee, Farrah}%
 
-\begin{definition}[włókno]
+\begin{definition}[włókno, nić]
 \index{włókno}%
-    Fragment diagramu, który biegnie między dwoma kolejnymi tunelami, czyli podskrzyżowaniami, nazywamy włóknem.
-\end{definition}
-
-\begin{definition}[nić]
 \index{nić}%
-    Fragment diagramu, który biegnie między dwoma kolejnymi skrzyżowaniami, nazywamy nicią.
+    Fragment diagramu biegnący między dwoma kolejnymi skrzyżowaniami (odpowiednio: tunelami, czyli podskrzyżowaniami), nazywamy nicią (odpowiednio: włóknem)
 \end{definition}
 
+Skrzyżowania i diagramy są standardowymi terminami, zrozumiałymi przez każdego. 
+Cienie, nici i włókna stanowią twórczość własną autorów!
 Nici powstają z włókien przez rozcięcie ich przy każdym nadskrzyżowaniu.
 
 \begin{proposition}
@@ -81,13 +79,15 @@ Orientację na diagramie zaznaczamy małą strzałką wskazującą kierunek poru
 
 \input{10-introduction/102a-reidemeister}
 
+\input{10-introduction/102d-history}
+
+\input{10-introduction/102f-codes}
+
 \input{10-introduction/102b-hardunknots}
 
-\input{10-introduction/102c-alternating}
-
-\input{10-introduction/102d-history}
+% \input{10-introduction/102c-alternating}
 
 \input{10-introduction/102e-tait}
 
-\input{10-introduction/102f-codes}
+
 
