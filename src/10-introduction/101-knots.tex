@@ -58,6 +58,10 @@ Zamiast wyjaśnić, jakie są jego niepożądane właściwości, podamy od razu 
     Różnowartościowe włożenie $S^1 \to \R^3$, którego pochodna istnieje wszędzie i~nie znika nigdzie, nazywamy węzłem.
 \end{definition}
 
+\begin{example}[niewęzeł]
+    Węzeł zadany w przestrzeni $\R^3$ parametrycznie $(\sin \theta, \cos \theta, 0)$ dla $\theta \in [0, \theta]$ nazywamy niewęzłem i oznaczamy $\SmallUnknot$.
+\end{example}
+
 % DICTIONARY;knot;węzeł;-
 % GLOSSAIRE;nœud;węzeł;-
 % DICTIONARY;tame;poskromiony;węzeł
@@ -128,26 +132,26 @@ co zdaje się prowadzić do pojęcia izotopii otaczającej, która uwzględnia n
 % DICTIONARY;ambient;otaczająca;izotopia
 % GLOSSAIRE;ambiante;otaczająca;izotopia
 \begin{definition}[izotopia otaczająca]
-\index{izotopia otaczająca}%
-    Niech $K_1, K_2 \colon N \hookrightarrow M$ będą włożeniami dwóch rozmaitości $N, M$.
-    Ciągłe odwzorowanie $F \colon M \times [0,1] \to M$ spełniające następujące warunki:
-    \begin{enumerate}
-        \item funkcja $F(-, 0)$ jest odwzorowaniem tożsamościowym,
-        \item każda z~funkcji $F(-, t)$ jest homeomorfizmem,
-        \item złożenie $F(-, 1)$ z~pierwszym włożeniem $K_1$ daje drugie włożenie $K_2$
-    \end{enumerate}
-    nazywamy izotopią otaczającą przenoszącą włożenie $K_1$ na $K_2$.
-\end{definition}
-
-W~topologii rozważa się włożenia dowolnych rozmaitości, nam wystarczy jeden szczególny przypadek $N = S^1$ oraz $M = \R^3$.
-Intuicyjnie, funkcja $F$ zniekształca przestrzeń $\R^3$ tak, że w~chwili początkowej $t = 0$ widzimy pierwszy, zaś w~chwili końcowej $t = 1$ drugi węzeł.
-Izotopia otaczająca nie pozwala na ściąganie zaplątanych fragmentów do punktu.
-
-Formalnie węzły to pewne odwzorowania, więc prawidłowym sposobem na zapisanie, że są izotopijne (czyli dla nas: równe), jest $K_1 \cong K_2$.
-Ponieważ nie prowadzi to do problemów, będziemy jednak stosować zapis $K_1 = K_2$.
-Jednocześnie często węzeł jako odwzorowanie nie będzie odróżniany od obrazu tego odwzorowania.
-
-Istnieje jeszcze jedna, konkurencyjna definicja węzłów równoważnych:
+    \index{izotopia otaczająca}%
+        Niech $K_1, K_2 \colon N \hookrightarrow M$ będą włożeniami dwóch rozmaitości $N, M$.
+        Ciągłe odwzorowanie $F \colon M \times [0,1] \to M$ spełniające następujące warunki:
+        \begin{enumerate}
+            \item funkcja $F(-, 0)$ jest odwzorowaniem tożsamościowym,
+            \item każda z~funkcji $F(-, t)$ jest homeomorfizmem,
+            \item złożenie $F(-, 1)$ z~pierwszym włożeniem $K_1$ daje drugie włożenie $K_2$
+        \end{enumerate}
+        nazywamy izotopią otaczającą przenoszącą włożenie $K_1$ na $K_2$.
+    \end{definition}
+    
+    W~topologii rozważa się włożenia dowolnych rozmaitości, nam wystarczy jeden szczególny przypadek $N = S^1$ oraz $M = \R^3$.
+    Intuicyjnie, funkcja $F$ zniekształca przestrzeń $\R^3$ tak, że w~chwili początkowej $t = 0$ widzimy pierwszy, zaś w~chwili końcowej $t = 1$ drugi węzeł.
+    Izotopia otaczająca nie pozwala na ściąganie zaplątanych fragmentów do punktu.
+    
+    Formalnie węzły to pewne odwzorowania, więc prawidłowym sposobem na zapisanie, że są izotopijne (czyli dla nas: równe), jest $K_1 \cong K_2$.
+    Ponieważ nie prowadzi to do problemów, będziemy jednak stosować zapis $K_1 = K_2$.
+    Jednocześnie często węzeł jako odwzorowanie nie będzie odróżniany od obrazu tego odwzorowania.
+    
+    Istnieje jeszcze jedna, konkurencyjna definicja węzłów równoważnych:
 
 \begin{proposition}
 \label{def:equivalent_knots_2}%
@@ -174,20 +178,22 @@ Istnieje jeszcze jedna, konkurencyjna definicja węzłów równoważnych:
 Milnor zauważa, że istnieje dyfeomorfizm $S^6 \to S^6$ stopnia $+1$, który nie jest gładko izotopijny z~identycznością!
 \index[persons]{Milnor, John}%
 
-\begin{remark}
-    \textbf{John Willard Milnor} zajmuje się głównie topologią różniczkową oraz algebraiczną K-teorią; jego główne dokonania w świecie węzłów to wprowadzenie niezmienników $\mu$ Milnora, które uogólniają grupę podstawową dopełnienia oraz pewne wyniki dotyczące hipotezy plastrowo-taśmowej.
+\begin{remark}[John Willard Milnor]
+    Matematyk amerykański urodzon w 1931 roku w Orange, New Jersey.
+    Odkrył egzotyczną 7-wymiarową sferę (czyli zwykłą sferę z niezwykłą strukturą różniczkową) w 1956 roku, za co został później odznaczon medalem Fieldsa.
+    Obalił Hauptvermutung pięć lat później: hipotezę Steinitza i Tietzego z 1908 roku, że każde dwie triangulacje przestrzenii mają kombinatorycznie równoważne podpodziały.
+    Do jego zainteresowań należą topologia różniczkowa, algebraiczna K-teorią, ale też algebry Hopfa, grupy Liego i holomorficzne układy dynamiczne.
+    W~świecie węzłów jest znany przez wprowadzenie niezmienników $\mu$ Milnora, które uogólniają grupę podstawową dopełnienia oraz pewne wyniki dotyczące hipotezy plastrowo-taśmowej.
 \end{remark}
 \index{niezmiennik $\mu$ Milnora}%
 \index{hipoteza plastrowo-taśmowa}%
 \index[persons]{Milnor, John}%
 
-\end{document}
-
 \subsection{Sploty}
 % DICTIONARY;link;splot;-
 % GLOSSAIRE;un entrelacs;splot;-
 % DICTIONARY;component;ogniwo splotu;-
-% DICTIONARY;composante/boucle;ogniwo splotu;-
+% GLOSSAIRE;composante/boucle;ogniwo splotu;-
 \begin{definition}[splot, ogniwo]
 \index{splot}%
     Sumę parami rozłącznych węzłów
@@ -198,26 +204,43 @@ Milnor zauważa, że istnieje dyfeomorfizm $S^6 \to S^6$ stopnia $+1$, który ni
 \end{definition}
 
 Przez analogię do węzłów mówimy, że dwa sploty są takie same, jeśli jeden jest obrazem drugiego przez zachowujący orientację homeomorfizm $\R^3 \to \R^3$.
-W~takiej sytuacji obydwa sploty mają tyle samo ogniw.
+To oczywiste, że liczba ogniw jest niezmiennikiem splotów.
+Później podamy mniej oczywiste niezmienniki.
 
+\begin{example}[niesplot]
+\index{niesplot}%
+    Splot zadany w przestrzeni $\R^3$ parametrycznie
+    \begin{equation}
+        \bigcup_{k=1}^n \{(\sin \theta, \cos \theta, k) : \theta \in [0, 2\pi]\}
+    \end{equation}
+    nazywamy niesplotem i oznaczamy $U_n$.
+\end{example}
+    
 \begin{example}
 \index{splot!Hopfa}%
 \index[persons]{Hopf, Heinz}%
-    Splot Hopfa to najprostszy splot nietrywialny.
+    Splot Hopfa (rys. \ref{small_links_diagram}a), najprostszy nietrywialny splot. Ma dwa ogniwa.
 \end{example}
 
-\begin{remark}
-    Heinz Hopf był niemiecko-szwajcarskim pionierem topologii algebraicznej. W~1931 roku zajmował się splotem Hopfa w ramach badań nad tzw. rozwłóknieniem \emph{(Hopf fibration)}.
+\begin{remark}[Heinz Hopf]
+    Matematyk niemiecki urodzon w 1894 roku w Gräbschen (obecnie część Wrocławia); zmarł w 1971 roku w Zurychu, Szwajcarii.
+    Głównym wynikiem jego pracy doktorskiej z~1925 roku było, że każda jednospójna zupełna 3-rozmaitość Riemanna o~stałej krzywiźnie sekcyjnej jest globalnie izometryczna do przestrzeni euklidesowej, sferycznej lub hiperbolicznej.
+    Był pionierem topologii algebraicznej.
+    W~1931 roku prowadził badania nad tzw. rozwłóknieniem: odwzorowaniem $S^3 \to S^2$ takim, że przeciwobrazy punktów są okręgami wielkimi na 3-sferze.
+    Podczas tych badań zajmował się splotem nazywanym teraz splotem Hopfa.
 \end{remark}
 
 \begin{example}
 \index{splot!Whiteheada}%
 \index[persons]{Whitehead, John}%
-    Splot Whiteheada ma dwa ogniwa i w~1934 służył Whiteheadowi za kontrprzykład do nieudanego dowodu (także Whiteheada!) hipotezy Poincarego.
+    Splot Whiteheada (rys. \ref{small_links_diagram}b).
 \end{example}
 
-\begin{remark}
-    John Henry Constantine Whitehead był jednym z założycieli teorii homotopii. Oprócz wspomnianego tu splotu Whiteheada zobaczymy jego nazwisko jeszcze raz, przy dublu Whiteheada.
+\begin{remark}[John Henry Constantine Whitehead]
+    Matematyk brytyjski urodzon w 1903 roku w~Madrasie, Indiach; zmarł w 1960 roku w Princeton, New Jersey.
+    Był jednym z założycieli teorii homotopii, podał definicję CW-kompleksów.
+    Próbował udowodnić hipotezę Poincarégo, ale popełnił błąd twierdząc, że nie istnieje ściągalna otwarta 3-rozmaitość, która nie jest homeomorficzna z $\R^3$.
+    W 1935 roku sam wskazał taką rozmaitość, do jej konstrukcji wykorzystując splot Whiteheada.
 \end{remark}
 
 \begin{comment}
@@ -236,37 +259,16 @@ W~takiej sytuacji obydwa sploty mają tyle samo ogniw.
         \begin{minipage}[b]{.3\linewidth}
             \centering
             \includegraphics[height=0.6\linewidth]{../data/links/6_3_2.png}
-            \subcaption{Pierścienie Boromeuszy}
+            \subcaption{pierścienie Boromeuszy}
+            \index{pierścienie Boromeuszy}%
         \end{minipage}
         \caption[small-links]{Sploty o małej liczbie skrzyżowań}
+        \label{small_links_diagram}
     \end{figure}
 \end{comment}
 
-
-
-
-
-
-\subsubsection{Sploty Brunna}
-Brunn \cite{brunn1892} rozpatrywał nierozszczepialne sploty, które stają się niesplotami po usunięciu dowolnego ogniwa.
-Zapewne dlatego Rolfsen zaproponował, żeby nazywać je splotami Brunna (dowiedzieliśmy się o tym ze styczniowego numeru z 2011 roku czasopisma Dleta) i tak też będziemy robić.
-\index[persons]{Brunn, Hermann}%
-Z dokładnością do homotopii sklasyfikował je Milnor \cite{milnor1954}, ale ponieważ ta książka nie tłumaczy, czym są $\mu$-niezmienniki Milnora, nie możemy wytłumaczyć, jak tego dokonał.
-\index[persons]{Milnor, John}%
-Najprostszym splotem Brunna są posiadające trzy ogniwa pierścienie Boromeuszy ($6_2^3$ w notacji Alexandera-Briggsa, $L6a4$ wg Thistlethwaite'a).
-
-Pierścienie Boromeuszy są alternujące, hiperboliczne i arborescent.
-Ich nazwa pochodzi od lombardzko-piemonckiego rodu kupieckiego, bankierskiego i arystokratycznego, z którego wywodziło się wielu kardynałów.
-Herb tego rodu zawierał splecione ze sobą trzy okręgi.
-Jest niemożliwe, by wykonać model przestrzenny tego splotu przy użyciu okrągłych pierścieni.
-Zamiast tego można użyć na przykład elips.
-
-Pierścienie Boromeuszy nie są niesplotem, ponieważ nie mają nietrywialnych 3-kolorowań (jak zauważyliśmy na stronie \pageref{boromean_not_splittable}).
-
 \subsubsection{Sploty rozszczepialne}
-
-% TODO: przesunąć to gdzieś dalej, za definicję skrzyżowania
-Poniższa definicja nie jest nam jeszcze potrzebna, ale wygodnie przytoczyć ją już teraz.
+Aby wytłumaczyć, czemu trzeci splot z rysunku \ref{small_links_diagram} jest interesujący, potrzebujemy zdefiniować sploty rozszczepialne.
 
 % DICTIONARY;splittable;rozszczepialny;splot
 \begin{definition}[rozszczepialność]
@@ -274,8 +276,7 @@ Poniższa definicja nie jest nam jeszcze potrzebna, ale wygodnie przytoczyć ją
     Jeżeli splot $L$ można zanurzyć w przestrzeni $\R^3$ tak, że niektóre jego ogniwa będą leżeć nad pewną rozłączną ze splotem płaszczyzną, zaś pozostałe pod nią, to powiemy, że splot $L$ jest rozszczepialny.
 \end{definition}
 
-Liczbę nierozszczepialnych splotów pierwszych zebrano w~tabeli:
-
+Liczbę nierozszczepialnych splotów pierwszych kopiujemy z bazy danych LinkInfo \cite{linkinfo24}:
 \renewcommand*{\arraystretch}{1.4}
 \footnotesize
 \begin{longtable}{lcccccccccccc}
@@ -288,16 +289,41 @@ Liczbę nierozszczepialnych splotów pierwszych zebrano w~tabeli:
 \end{longtable}
 \normalsize
 
-W bazie danych OEIS można trafić na ciąg \href{https://oeis.org/A086826}{A086826} opisujący liczbę nierozszczepialnych pierwszych i złożonych węzłów i splotów.
-Powyższa tabela zawiera liczby na podstawie portalu LinkInfo \cite{linkinfo24}.
-% TODO: dodać podział na zorientowane/niezorientowane (tych drugich oczywiście mniej).
-Odpowiedź na pytanie ,,czym są skrzyżowania?'' przynosi definicja \ref{def:crossing}.
+W bazie liczb OEIS trafiliśmy tylko na ciąg \href{https://oeis.org/A086826}{A086826} opisujący liczbę nierozszczepialnych pierwszych i złożonych węzłów i splotów, na przykład $a_5 = 4$, bo mamy dwa węzły pierwsze, splot Whiteheada oraz trójlistnik spleciony z~niewęzłem.
+Słowa ,,skrzyżowanie'' , ,,alternujący'' oraz ,,pierwszy'' definiujemy w~przyszłości, będą to odpowiednio definicje \ref{def:crossing}, \ref{def:alternating_link} i \ref{def:prime_knot}.
+\index{węzeł!alternujący}%
+\index{węzeł!pierwszy}%
+\index{skrzyżowanie}%
+Książka ma nieliniową budowę i należy przeczytać ją co najmniej dwa razy.
 
 Pewne kryteria rozszczepialności konkretnych splotów znaleźć można u Kawauchiego \cite[s. 36-38]{kawauchi1996}.
 % TODO: przepisać, a jeśli za trudne, to może chociaż szkic?
 
-\subsection{Dopełnienia węzłów i splotów}
+\subsubsection{Sploty Brunna}
+\index{splot!Brunna|(}%
+Hermann Brunn \cite{brunn1892} rozpatrywał nierozszczepialne sploty, które po usunięciu dowolnego ogniwa stają się niesplotami.
+\index[persons]{Brunn, Hermann}%
+W~czasopiśmie Delta, nr 01/2011, przeczytaliśmy, że Rolfsen zaproponował nazywać je splotami Brunna i~tak też będziemy robić.
+Najprostszym splotem Brunna są posiadające trzy ogniwa pierścienie Boromeuszy ($6_2^3$ w notacji Alexandera-Briggsa, \texttt{L6a4} w notacji Thistlethwaite'a).
+\index{pierścienie Boromeuszy}%
+Pokażemy na stronie \pageref{boromean_not_splittable}, że pierścienie Boromeuszy nie mają nietrywialnych trójkolorowań, więc nie mogą być niesplotem.
 
+Pierścienie Boromeuszy są alternujące, hiperboliczne i drzewiaste.
+\index{węzeł!alternujący}%
+\index{węzeł!hiperboliczny}%
+\index{węzeł!drzewiasty}%
+% DICTIONARY;arborescent;drzewiasty;węzeł
+% TODO: jak jest arborescent po francusku?
+Ich nazwa pochodzi od lombardzko-piemonckiego rodu kupieckiego, bankierskiego i arystokratycznego, z którego wywodziło się wielu kardynałów.
+Herb tego rodu zawierał splecione ze sobą trzy okręgi.
+Jest niemożliwe, by wykonać model przestrzenny tego splotu przy użyciu okrągłych pierścieni.
+Zamiast tego można użyć na przykład elips.
+
+Z dokładnością do homotopii sploty Brunna zostały sklasyfikowane przez Milnora \cite{milnor1954}, ale ponieważ ta książka nie tłumaczy, czym są $\mu$-niezmienniki Milnora, nie możemy dzisiaj wytłumaczyć, jak tego dokonał.
+\index[persons]{Milnor, John}%
+\index{splot!Brunna|)}%
+
+\subsection{Dopełnienia węzłów i splotów}
 Jeśli dwa węzły są równoważne, to ich dopełnienia są oczywiście homeomorficzne.
 Pytanie o~prawdziwość implikacji odwrotnej jako pierwszy zadał najprawdopodobniej Tietze \cite{tietze1908} w~1908 roku.
 \index[persons]{Tietze, Heinrich}%
@@ -313,12 +339,12 @@ Natomiast analogiczne stwierdzenie o~splotach jest fałszywe i wiedziano o tym o
 \index[persons]{Gordon, Cameron}%
 \index[persons]{Luecke, John}%
 \index{twierdzenie!Gordona-Lueckego}%
-    Poskromione węzły o~homeomorficznych (z zachowaniem orientacji) dopełnieniach są wzajemnie izotopijne.
+    Niech $f \colon (\mathbb R^3 \setminus K_1) \to (\mathbb R^3 \setminus K_2)$ będzie zachowującym orientację homeomorfizmem dopełnień poskromionych węzłów $K_1, K_2$.
+    Wtedy węzły $K_1 \cong K_2$ są izotopijne.
 \end{theorem}
 
 \begin{proof}[Niedowód]
     Wynika to z teorii Cerfa, kombinatorycznych technik w stylu Litherlanda, cienkich pozycji, cykli Scharlemanna i~ogólniejszego stwierdzenia: nietrywialna chirurgia Dehna na węźle w~3-sferze nigdy nie daje 3-sfery.
-% https://en.wikipedia.org/wiki/Gordon–Luecke_theorem: Essential ingredients of the proof are their joint work with Marc Culler and Peter Shalen on the cyclic surgery theorem, combinatorial techniques in the style of Litherland, thin position, and Scharlemann cycles.
 \index{chirurgia Dehna}%
 \index{teoria Cerfa}%
 \index{cykle Scharlemanna}%
@@ -329,3 +355,5 @@ Twierdzenie to zamienia problem lokalny (czy dwa węzły w kuli $S^3$ są równo
 \index[persons]{Whitehead, John}%
 
 % koniec sekcji Węzły i sploty
+
+\color{white}

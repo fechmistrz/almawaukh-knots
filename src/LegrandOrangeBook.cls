@@ -611,6 +611,7 @@
 % Orange theorem number and optional black title with no padding above and below
 \theoremstyle{ocrenumbox}
 \newtheorem{propositionT}[counter]{Fakt} % Propositions, the first argument is the theorem name, the second the theorem title used before the number and the third optional argument is whether to number under chapters (e.g. 2.1) or sections (e.g. 2.1.1)
+\newtheorem*{personT}{Postać} % Propositions, the first argument is the theorem name, the second the theorem title used before the number and the third optional argument is whether to number under chapters (e.g. 2.1) or sections (e.g. 2.1.1)
 \newtheorem{theoremeT}[counter]{Twierdzenie} % Theorems, the first argument is the theorem name, the second the theorem title used before the number and the third optional argument is whether to number under chapters (e.g. 2.1) or sections (e.g. 2.1.1)
 \newtheorem{problem}{Problem}[chapter] % Problems, the first argument is the theorem name, the second the theorem title used before the number and the third optional argument is whether to number under chapters (e.g. 2.1) or sections (e.g. 2.1.1)
 \newtheorem{exerciseT}{Exercise}[chapter] % Exercises, the first argument is the theorem name, the second the theorem title used before the number and the third optional argument is whether to number under chapters (e.g. 2.1) or sections (e.g. 2.1.1)
@@ -714,7 +715,7 @@
 	bottomline=false, % Bottom line visible
 	linecolor=ocre, % Line color
 	linewidth=4pt, % Line width
-	backgroundcolor=ocre!5, % Background color
+	backgroundcolor=ocre!15, % Background color
 	innerleftmargin=5pt, % Inside left margin width
 	innerrightmargin=5pt, % Inside right margin width
 	innertopmargin=5pt, % Inside top margin height
@@ -723,17 +724,16 @@
 	rightmargin=0cm % Outside right margin width
 ]{cpropBox}
 
-% Corollary box
 \newmdenv[
-	skipabove=7pt, % Whitespace above box
-	skipbelow=7pt, % Whitespace below box
-	rightline=false, % Right line visible
+	skipabove=3pt, % Whitespace above box
+	skipbelow=3pt, % Whitespace below box
+	rightline=true, % Right line visible
 	leftline=true, % Left line visible
 	topline=false, % Top line visible
 	bottomline=false, % Bottom line visible
-	linecolor=ocre!50, % Line color
+	linecolor=ocre, % Line color
 	linewidth=4pt, % Line width
-	backgroundcolor=ocre, % Background color
+	backgroundcolor=ocre!35, % Background color
 	innerleftmargin=5pt, % Inside left margin width
 	innerrightmargin=5pt, % Inside right margin width
 	innertopmargin=5pt, % Inside top margin height
@@ -752,7 +752,7 @@
 \newenvironment{theorem}{\begin{tBox}\begin{theoremeT}}{\end{theoremeT}\end{tBox}}
 \newenvironment{corollary}{\begin{cBox}\begin{corollaryT}}{\end{corollaryT}\end{cBox}}
 \newenvironment{proposition}{\begin{cpropBox}\begin{propositionT}}{\end{propositionT}\end{cpropBox}}
-\newenvironment{remark}{\begin{personBox}\begin{personT}\color{ocre!20}}{\end{personT}\end{personBox}}
+\newenvironment{remark}{\small\begin{personBox}\begin{personT}}{\end{personT}\end{personBox}}
 
 \theoremstyle{plain}
 \numberwithin{counter}{section}
