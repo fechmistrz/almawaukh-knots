@@ -2,8 +2,12 @@
 set -eo pipefail
 
 run_and_log () {
-	echo "Running: $*" >&2
-	"$@"
+	if [[ "${DRY_RUN}" == "true" ]]; then
+        echo "Would run: $*" >&2
+    else
+        echo "Running: $*" >&2
+        "$@"
+    fi
 }
 
 generate_knot_makefile() {
