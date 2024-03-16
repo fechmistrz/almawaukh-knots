@@ -30,6 +30,7 @@ Zdefiniujmy trzy lokalne operacje na diagramach, a~potem wysłowimy kryterium  R
         \MedLarReidemeisterThreeA $\stackrel{R_3}{\cong}$ \MedLarReidemeisterThreeB
         \subcaption{ruch $R_3$}
     \end{minipage}
+    \caption[reidemeister-moves]{Trzy ruchy Reidemeistera}
     \end{figure}
     nazywamy ruchami Reidemeistera.
     Czasami używa się konkretnych nazw:
@@ -74,6 +75,35 @@ Dowód podali niezależnie Reidemeister \cite{reidemeister1927} oraz Alexander, 
 \index[persons]{Murasugi, Kunio}%
 \end{proof}
 
+
+\begin{remark}[Kurt Werner Friedrich Reidemeister]
+    Matematyk niemiecki urodzon w Brunszwiku w 1893 roku; zmarł w Getyndze w 1971 roku.
+    W 1922 został nominowany na stanowisko profesora nadzwyczajnego na Uniwersytecie Wiedeńskim; nominację tę przyjął.
+    To podczas pobytu tamże podjął decyzję o studiowaniu teorii węzłów, ale także poznał swoją przyszłą żonę: pochodzącą z~Rygi Elżbietę Wagner.
+    W 1925 roku przeniósł się na Albertynę we (wtedy jeszcze pruskim) Królewcu, gdzie opracował kamień węgielny teorii węzłów: ruchy Reidemeistera.
+    Później dokonał jeszcze kilku ciekawych odkryć: w 1935 zdefiniował niezmienniki torsyjne, które po raz pierwszy były w stanie odróżnić równoważne homotopijnie, ale nie homeomorficzne rozmaitości; konkretniej: pokazał, że przestrzenie soczewkowe $L(7, 1)$ i $L(7, 2)$ nie są homeomorficzne.
+    Sklasyfikował grupy abelowe, które występują jako grupy podstawowe 3-rozmaitości i dowiódł, że każde dwa rozkłady Heegarda 3-rozmaitości mają wspólną stabilizację.
+    Jednym z jego studentów był Heiner Zieschang, autor wielokrotnie cytowanej tu \cite{burde2014}.
+\end{remark}
+
+\begin{remark}[James Waddell Alexander]
+    Matematyk amerykański urodzon w 1888 roku w Sea Bright, New Jersey; zmarł w 1971 roku w Princeton, też New Jersey.
+    Był studentem Veblena, wspólnie z którym pokazał, że topologię rozmaitości można przenieść na wielościany.
+    Przed 1920 rokiem udowodnił, że homologie kompleksów symplicjalnych są niezmiennikiem topologicznym.
+    Jego pionierskie prace dotyczące topologii algebraicznej położyły fundament dla pomysłów Poincarégo.
+    homologii.
+    Kiedyś pomiędzy rokiem 1930 i 1935 zdefiniował kołańcuchy, co doprowadziło go do odkrycia (niezależnie od Kołmogorowa) kohomologii.
+    Oprócz sztuczki Alexandera wprowadził bardzo ważny niezmiennik nazwany na jego cześć wielomianem Alexandera, moduł z gradacją otrzymany z homologii cyklicznego nakrycia dopełnienia węzła.
+    Nie samą matematyką żył człowiek!
+    Był miłośnikiem wspinaczki górskiej.
+    Podczas pobytu w Princeton regularnie zostawiał uchylone okno w swoim gabinecie, żeby móc się do niego wdrapać.
+\end{remark}
+
+\begin{remark}[Garland Baird Briggs]
+    Matematyk amerykański, urodzon w Sebrell, Wirginii w 1894 roku; zmarł w Kolumbii w 1959 roku.
+    Niestety nie wiemy za dużo o tym człowieku.
+\end{remark}
+
 Trace \cite{trace1983} zauważył, że dwa diagramy jednego węzła są związane tylko II i III ruchem (ale nie I) wtedy i tylko wtedy, gdy mają ten sam spin oraz indeksy nawinięcia.
 \index[persons]{Trace, Bruce}%
 Z prac Östlunda \cite{ostlund2001}, Manturowa \cite[s. ???]{manturov2004} oraz Haggego \cite{hagge2006} wynika, że dla każdego węzła istnieje para diagramów, do przejścia między którymi trzeba wykorzystać wszystkie trzy ruchy.
@@ -98,21 +128,6 @@ Należy wtedy sprawdzić, że każdy z trzech ruchów Reidemeistera nie ma wpły
 
 Niezmienniki będą nam stale towarzyszyć w~wędrówce po krainie węzłów.
 
-\begin{remark}[Kurt Werner Friedrich Reidemeister]
-    ?
-\end{remark}
-
-\begin{remark}[James Waddell Alexander]
-    ?
-\end{remark}
-
-\begin{remark}[Garland Baird Briggs]
-    Matematyk amerykański, urodzon w Sebrell, Wirginii w 1894 roku; zmarł w Kolumbii w 1959 roku.
-    Niestety nie wiemy za dużo o tym człowieku.
-\end{remark}
-
-\color{white}
-
 \subsubsection{Dygresja -- wyniki ilościowe wokół twierdzenia Reidemeistera}
 Załóżmy, że na dwóch diagramach tego samego węzła widać odpowiednio $n_1, n_2$ skrzyżowań.
 Jak piszą Coward, Lackenby \cite{coward2011}, istnieje funkcja $f \colon \N \times \N \to \N$ taka, że między dwoma diagramami można przejść wykonując co najwyżej $f(n_1, n_2)$ ruchów.
@@ -130,6 +145,8 @@ jest taką funkcją.
 Piętrowa potęga liczy sobie aż $10^{1000000 (n_1 + n_2)}$ warstw.
 
 Natomiast jeżeli $n_2 = 0$, czyli drugi diagram przedstawia niewęzeł, ,,wystarcza'' $(236n_1)^{11}$ ruchów, przy czym liczba skrzyżowań podczas transformacji nigdy nie przekracza $49c^2$: to świeższy wynik samego Lackenby'ego \cite{lackenby2015}, gdzie poprawił wcześniejsze oszacowania Hassa, Lagariasa.
+\index[persons]{Hass, Joel}
+\index[persons]{Lagarias, Jeffrey}%
 Przykład diagramu niewęzła, do rozwiązania którego nie można tylko usuwać istniejących skrzyżowań, przedstawiają Burde, Zieschang, Heusener \cite[s. 12]{burde2014}.
 
 Hayashi \cite{hayashi2005} dowiódł, że liczbę ruchów Reidemeistera potrzebnych, by rozszczepić splot można ograniczyć z góry na podstawie indeksu skrzyżowaniowego.
