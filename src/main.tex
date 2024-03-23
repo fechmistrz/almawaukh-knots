@@ -1,16 +1,16 @@
+
 \documentclass{LegrandOrangeBook}
 \begin{document}
 \titlepage % Output the title page
-	{\includegraphics[width=\paperwidth]{background.pdf}} % Code to output the background image, which should be the same dimensions as the paper to fill the page entirely; leave empty for no background image
-	{ % Title(s) and author(s)
-		\centering\sffamily % Font styling
-		{\Huge\bfseries Exploring the Physical Manifestation of Humanity's Subconscious Desires\par} % Book title
-		\vspace{16pt} % Vertical whitespace
-		{\LARGE A Practical Guide\par} % Subtitle
-		\vspace{24pt} % Vertical whitespace
-		{\huge\bfseries Goro Akechi\par} % Author name
-	}
-
+    {\includegraphics[width=\paperwidth]{background.pdf}} % Code to output the background image, which should be the same dimensions as the paper to fill the page entirely; leave empty for no background image
+    { % Title(s) and author(s)
+        \centering\sffamily % Font styling
+        {\Huge\bfseries Exploring the Physical Manifestation of Humanity's Subconscious Desires\par} % Book title
+        \vspace{16pt} % Vertical whitespace
+        {\LARGE A Practical Guide\par} % Subtitle
+        \vspace{24pt} % Vertical whitespace
+        {\huge\bfseries Goro Akechi\par} % Author name
+    }
 
 \thispagestyle{empty} % Suppress headers and footers on this page
 
@@ -27,11 +27,10 @@
 \noindent \textit{First printing, March 2022} % Printing/edition date
 
 %----------------------------------------------------------------------------------------
-%	TABLE OF CONTENTS
+%    TABLE OF CONTENTS
 %----------------------------------------------------------------------------------------
 
 \pagestyle{empty} % Disable headers and footers for the following pages
-
 
 \input{include/head_1}
 \input{include/head_2}
@@ -39,8 +38,6 @@
 \input{include/head_4}
 \input{include/head_5}
 \tableofcontents
-
-
 
 \pagestyle{fancy} % Enable default headers and footers again
 \cleardoublepage % Start the following content on a new page
@@ -99,27 +96,28 @@
 \chapterspacebelow{7.25cm} % Amount of vertical whitespace from the top margin to the start of the text on chapter pages
 
 \begin{appendices}
-	\renewcommand{\chaptername}{Appendix} % Change the chapter name to Appendix, i.e. "Appendix A: Title", instead of "Chapter A: Title" in the headers
-	\chapter{Tablice węzłów pierwszych}
-	\input{90-appendix/table_invariants_intro}
-	Tabela pierwsza podsumowuje tabelę drugą:
-	\input{90-appendix/table_invariants_summary}
-	\newpage
-	Tabela druga zawiera wartości niezmienników:
-	\input{90-appendix/table_invariants}
-	\input{90-appendix/table_prime}
+    \renewcommand{\chaptername}{Appendix} % Change the chapter name to Appendix, i.e. "Appendix A: Title", instead of "Chapter A: Title" in the headers
+    \chapter{Tablice węzłów pierwszych}
+    \input{90-appendix/table_invariants_intro}
+    Tabela pierwsza podsumowuje tabelę drugą:
+    \input{90-appendix/table_invariants_summary}
+    \newpage
+    Tabela druga zawiera wartości niezmienników:
+    \input{90-appendix/table_invariants}
+    \input{90-appendix/table_prime}
 
-	\chapter{Tablice splotów}
-	\input{90-appendix/table_prime_links}
+    \chapter{Tablice splotów}
+    \input{90-appendix/table_prime_links}
 
-	\chapter{Notacja, użyte symbole}
-	\input{90-appendix/notation}
+    \chapter{Notacja, użyte symbole}
+    \input{90-appendix/notation}
 
-	\chapter{Słownik angielsko-polski}
-	\begin{compactitem}
-	\input{90-appendix/dictionary}
-	\end{compactitem}
+    \chapter{Słownik angielsko-polski}
+    \begin{compactitem}
+    \input{90-appendix/dictionary}
+    \end{compactitem}
 \end{appendices}
 
 \input{include/foot}
 \end{document}
+

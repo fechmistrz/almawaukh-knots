@@ -2,25 +2,28 @@
 \section{Wykrywanie niewęzła}
 Jednym z pierwszych dużych problemów teorii węzłów było poszukiwanie odpowiedzi na pytanie, kiedy diagram przedstawia niewęzeł.
 \index{niewęzeł}%
-Stosowny algorytm wykrywający niewęzły podał Haken \cite{haken1961}, ale długo nikt nie podjął się jego implementacji\footnote{Moritz Epple pisze ,,this algorithm was extremely impractical'', w recenzji z MathSciNet proponuje, żeby przed przeczytaniem pełnej niepotrzebnych dygresji pracy Hakena poznać artykuł \cite{schubert1961} Schuberta.},  
+Stosowny algorytm wykrywający niewęzły podał Haken \cite{haken1961}, ale długo nikt nie podjął się jego implementacji.
 \index[persons]{Haken, Wolfgang}%
-udało się to Burtonowi, Budneyowi oraz Petterssonowi w~komputerowym programie Regina\footnote{Dostępny pod adresem \url{https://regina-normal.github.io/}.} na przełomie tysiącleci.
+Epple pisze \emph{,,this algorithm was extremely impractical''}, w recenzji z MathSciNet proponuje, żeby przed przeczytaniem pełnej niepotrzebnych dygresji pracy Hakena poznać artykuł \cite{schubert1961} Schuberta.
 \index[persons]{Epple, Moritz}%
+\index[persons]{Schubert, Horst}%
+W życie pomysły Hakena udało się wdrożyć Burtonowi, Budneyowi oraz Petterssonowi w~komputerowym programie Regina\footnote{\url{https://regina-normal.github.io/}.} na przełomie tysiącleci.
+
 \index[persons]{Burton, Benjamin}%
 \index[persons]{Budney, Ryan}%
 \index[persons]{Pettersson, William}%
 %=% https://mathscinet.ams.org/mathscinet-getitem?mr=141107
 % DICTIONARY;incompressible;nieściśliwy;-
 
-Burton, Rubinstein i~Tillman pokazali w~pracy \cite{burton2012}, jak sprawdzać, czy powierzchnia normalna na striangulowanej 3-rozmaitości jest (nie)ściśliwa w~czasie wykładniczym.
+Burton, Rubinstein i~Tillman \cite{burton2012} pokazali, jak sprawdzać, w~czasie wykładniczym czy powierzchnia normalna na striangulowanej 3-rozmaitości jest (nie)ściśliwa.
 \index[persons]{Rubinstein, Joachim}%
 \index[persons]{Tillman, Stephan}%
-To okazało się wystarczyć do udzielenia negatywnej odpowiedzi na pytanie Thurstona: ,,czy przestrzeń Seiferta-Webera jest rozmaitością Hakena?'', a zatem wykraczającego poza poziom naszego skromnego dzieła.
+To wystarczyło do udzielenia negatywnej odpowiedzi na pytanie Thurstona: \emph{,,czy przestrzeń Seiferta-Webera jest rozmaitością Hakena?''}, a zatem wykraczającego poza poziom naszego skromnego dzieła.
 \index[persons]{Thurston, William}%
 \index{przestrzeń!Seiferta-Webera}%
 \index{rozmaitość!Hakena}%
 
-SnapPea\footnote{Dostępny pod adresem \url{http://geometrygames.org/SnapPea/index.html}.} to inny popularny wśród niskowymiarowych topologów program pozwalający badać hiperboliczne 3-rozmaitości, patrz sekcja \ref{sec:hyperbolic}.
+SnapPea\footnote{\url{http://geometrygames.org/SnapPea/index.html}.} to inny popularny wśród niskowymiarowych topologów program pozwalający badać hiperboliczne 3-rozmaitości, patrz sekcja \ref{sec:hyperbolic}.
 
 Wiadomo, że genus oraz zredukowana kohomologia Chowanowa wykrywa niewęzły (fakty \ref{prp:genus_detects_unknot}, \ref{khovanov_detects_unknot}) i nie wiadomo, czy wielomian Jonesa to robi (hipoteza \ref{con:jones}).
 \index{genus}%
@@ -56,25 +59,48 @@ Autorzy przywołują jeszcze klasyczny przykład Freedmana, He, Wanga \cite{free
 
 % TODO: sprawdzić, czy w \cite{heinrich2014} nie ma więcej trudnych niewęzłów
 
-Na swoim blogu\footnote{\url{https://mickburton.co.uk/2015/06/05/how-do-you-construct-hakens-gordian-knot/}} Mick Burton zamieścił wpis pełen rysunków, które tłumaczą, jak powstał niewęzeł Hakena.
+My nie potrafimy albo nie chcemy potrafić ładnie rysować, więc pozwolimy sobie pokazać tylko, jak wyglądał wspomniany wcześniej przykład Goeritza.
+Na swoim blogu\footnote{\url{https://mickburton.co.uk/2015/06/05/how-do-you-construct-hakens-gordian-knot/}} Burton (inny Burton niż w poprzednim akapicie!) zamieścił wpis pełen rysunków, które tłumaczą, jak powstał niewęzeł Hakena.
 
 \begin{comment}
 \begin{figure}[H]
-    \begin{minipage}[b]{.32\linewidth}
-        \centering
-        \includegraphics[width=\linewidth]{../data/missing.jpg}
-        \subcaption{normalny}
-    \end{minipage}
-    \begin{minipage}[b]{.32\linewidth}
-        \centering
-        \includegraphics[width=\linewidth]{../data/missing.jpg}
-        \subcaption{Goritza}
-    \end{minipage}
-    \begin{minipage}[b]{.32\linewidth}
-        \centering
-        \includegraphics[width=\linewidth]{../data/missing.jpg}
-        \subcaption{Freedmana}
-    \end{minipage}
+    \centering
+    \begin{tikzpicture}[baseline=-0.65ex, scale=0.1]
+        \begin{knot}[clip width=5, end tolerance=1pt, flip crossing/.list={1,2,3,4,8,9}]
+            % horizontal lines
+            \strand[ultra thick] (-40, -10) to (-10, -10);
+            \strand[ultra thick] (-40, 10) to (-10, 10);
+            \strand[ultra thick] (10, 10) to (30, 10);
+            \strand[ultra thick] (10, -10) to (30, -10);
+            % 
+            \strand[ultra thick] (5-45, -10) [in=left,out=left] to (5-45, 3.33);
+            \strand[ultra thick] (5-45, 10) [in=left,out=left] to (5-45, -3.33);
+            \strand[ultra thick] (-5-35, -3.33) [in=left,out=right] to (5-35, 3.33);
+            \strand[ultra thick] (-5-35, 3.33) [in=left,out=right] to (5-35, -3.33);
+            \strand[ultra thick] (-5-25, -3.33) [in=left,out=right] to (5-25, 3.33);
+            \strand[ultra thick] (-5-25, 3.33) [in=left,out=right] to (5-25, -3.33);
+            \strand[ultra thick] (-5-15, -3.33) [in=left,out=right] to (5-15, 3.33);
+            \strand[ultra thick] (-5-15, 3.33) [in=left,out=right] to (5-15, -3.33);
+            %
+            \strand[ultra thick] (-5+15, -3.33) [in=left,out=right] to (5+15, 3.33);
+            \strand[ultra thick] (-5+15, 3.33) [in=left,out=right] to (5+15, -3.33);
+            \strand[ultra thick] (-5+25, -3.33) [in=left,out=right] to (5+25, 3.33);
+            \strand[ultra thick] (-5+25, 3.33) [in=left,out=right] to (5+25, -3.33);
+            \strand[ultra thick] (-5+35, -3.33) [in=right,out=right] to (-5+35, 10);
+            \strand[ultra thick] (-5+35, 3.33) [in=right,out=right] to (-5+35, -10);
+            %
+            \strand[ultra thick] (-5+5, 3.33) [in=left,out=right] to (5+5, 10);
+            \strand[ultra thick] (-5+5, 10) [in=left,out=right] to (5+5, 3.33);
+            \strand[ultra thick] (-5-5, 3.33) [in=left,out=right] to (5-5, 10);
+            \strand[ultra thick] (-5-5, 10) [in=left,out=right] to (5-5, 3.33);
+            %
+            \strand[ultra thick] (-5+5, -10) [in=left,out=right] to (5+5, -3.33);
+            \strand[ultra thick] (-5+5, -3.33) [in=left,out=right] to (5+5, -10);
+            \strand[ultra thick] (-5-5, -10) [in=left,out=right] to (5-5, -3.33);
+            \strand[ultra thick] (-5-5, -3.33) [in=left,out=right] to (5-5, -10);
+        \end{knot}
+    \end{tikzpicture}
+    \caption{niewęzeł Goeritza}
 \end{figure}
 \end{comment}
 
