@@ -32,17 +32,22 @@ Ogólniej, jak głosi Kawauchi \cite[ćwiczenie 10.1.9]{kawauchi1996}:
     Jedynymi okresami węzła $(p, q)$-torusowego są dzielniki liczb $p$ oraz $q$.
 \end{proposition}
 
-Z~każdym węzłem okresowym związany jest inny, prostszy węzeł.
-Niech $f$ będzie obrotem z definicji \ref{def:period}, zaś $p \colon \R^3 \to \R^3/f \simeq \R^3$ rzutem na przestrzeń ilorazową.
+Murasugi podał dwa warunki, które musi spełniać węzeł o~okresie $n = p^r$, gdzie $r$ jest liczbą pierwszą.
+Do ich zrozumienia potrzebujemy dwóch definicji.
+
+\begin{definition}
+    Niech $f$ będzie obrotem z definicji \ref{def:period}, zaś $p \colon \R^3 \to \R^3/f \simeq \R^3$ rzutem na przestrzeń ilorazową.
 % DICTIONARY;quotient;ilorazowy;węzeł
 \index{węzeł!ilorazowy}%
-Wtedy $p(K)$ nazywamy \emph{węzłem ilorazowym}, zaś $K$ to jego $n$-krotne nakrycie.
-(Ładny rysunek węzła ilorazowego znaleźliśmy u Kawauchiego \cite[s. 122]{kawauchi1996}).
+    Wtedy $p(K)$ nazywamy \emph{węzłem ilorazowym}, zaś $K$ to jego $n$-krotne nakrycie.    
+\end{definition}
 
-Murasugi podał dwa warunki, które musi spełniać węzeł o~okresie $n = p^r$, gdzie $r$ jest liczbą pierwszą.
-Do ich zrozumienia potrzebujemy prostej definicji.
-Ustalmy półprostą, która nie jest styczna do węzła $K$, po czym zorientujmy ją oraz węzeł.
-Indeksem zaczepienia $\lambda$ węzła $p(K)$ jest różnica między liczbą skrzyżowań dodatnich oraz ujemnych wzdłuż półprostej (bez znaku).
+Ładny rysunek węzła ilorazowego znaleźliśmy u Kawauchiego \cite[s. 122]{kawauchi1996}.
+
+\begin{definition}
+    Niech $K$ będzie zorientowanym węzłem, zaś $l$ zorientowaną półprostą, która nie jest styczna do węzła $K$.
+    Wtedy różnicę między liczbą skrzyżowań dodatnich oraz ujemnych wzdłuż półprostej (bez znaku) nazywamy indeksem zaczepienia $\lambda$ węzła $p(K)$.
+\end{definition}
 
 \begin{proposition}[warunek Murasugiego]
 \index{warunek!Murasugiego}%
@@ -55,7 +60,7 @@ Indeksem zaczepienia $\lambda$ węzła $p(K)$ jest różnica między liczbą skr
     \end{equation}
 \end{proposition}
 
-\begin{proof}
+\begin{proof}[Niedowód]
     Mozolne operacje na macierzach, których wyznacznikiem jest wielomian Alexandera, patrz \cite{murasugi1971}.
     Kawauchi przedstawia inny dowód: najpierw dowodzi tego dla węzła torusowego $T_{n, d}$, którego węzłem ilorazowym jest niewęzeł.
     W ogólnym przypadku, korzysta z relacji kłębiastej dla wielomianu Conwaya.
@@ -63,20 +68,40 @@ Indeksem zaczepienia $\lambda$ węzła $p(K)$ jest różnica między liczbą skr
 \end{proof}
 
 Z prac Borodzika (m.in. \cite{grabowski20} napisanej z Grabowskim, Królem i Marchwicką) dowiedzieliśmy się, że podany wyżej warunek Murasugiego jest tylko jednym z wielu ograniczeń, jakie musi spełniać węzeł okresowy.
-% Na przykład z https://arxiv.org/pdf/1810.03881.pdf się dowiedzieliśmy
 Autorzy wymieniają:
-% TODO: dodać index[persons]
 \begin{itemize}
     \item warunek Murasugiego udoskonalony przez Davisa, Livingstona \cite{davis1991},
+\index[persons]{Davis, James}%
+\index[persons]{Livingston, Charles}%
     \item kryterium Naika z homologiami rozgałęzionego nakrycia \cite{naik1997},
+\index[persons]{Naik, Swatee}%
+\index{homologie}%
+\index{rozgałęzione nakrycie}%
     \item kryterium Traczyka z wielomianem Jonesa \cite{traczyk1991},
+\index{wielomian Jonesa}%
+\index[persons]{Traczyk, Paweł}%
     \item kryterium Przytyckiego z wielomianem HOMFLY-PT \cite{przytyckij1989},
+\index{wielomian HOMFLY-PT}%
+\index[persons]{Przytycki, Józef}%
     \item kryterium Naika z niezmiennikiem Cassona-Gordona,
+\index{niezmiennik Cassona-Gordona}%
+\index[persons]{Naik, Swatee}%
     \item kryterium Hillmana, Livingstona, Naika ze skręconym wielomianem Alexandera \cite{hillman2006},
+\index{wielomian Alexandera!skręcony}%
+\index[persons]{Hillman, Jonathan}%
+\index[persons]{Livingston, Charles}%
+\index[persons]{Naik, Swatee}%
     \item kryterium Jabuki, Naika z homologią Floera \cite{jabuka2016},
+\index{homologia Floera}%
+\index[persons]{Jabuka, Stanisław}%
+\index[persons]{Naik, Swatee}%
     \item kryteria Borodzika, Politarczyka z homologią Chowanowa, \cite{politarczyk2017}, \cite{politarczyk2021},
-    \item kryterium Chena z grupą podstawową.
-% H. Chen, On the groups of periodic links, arXiv:1805.02219, (2018).
+\index{homologia Chowanowa}%
+\index[persons]{Borodzik, Maciej}%
+\index[persons]{Politarczyk, Wojciech}%
+    \item kryterium Chena \cite{chen2018} z grupą podstawową.
+\index{grupa podstawowa}%
+\index[persons]{Chen, Haimiao}%
 \end{itemize}
 % Sakumy nie ma, bo nie został wymieniony ze słowem criterion; być może napisał coś ogólnego? 
 \index{kryterium Naika (okresowości)}%

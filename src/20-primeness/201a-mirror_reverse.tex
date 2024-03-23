@@ -16,25 +16,21 @@
     Splot $\operatorname{r} L$ powstały przez odwrócenie orientacji wszystkich ogniw splotu $L$ nazywamy rewersem.
 \end{definition}
 
-Niektórzy mówią o odbiciach lustrzanych i odwrotnościach).
-Zaletą naszych oznaczeń jest to, że trudniej jest pomylić lustro z odwrotnością; ale w literaturze dominuje $L^*$ jako symbol lustra oraz $-L$ jako symbol odwrotności splotu $L$; używają ich na przykład Murasugi \cite[s. 14, 24]{murasugi1996} czy Burde, Zieschang, Heusener \cite{burde2014}.
-Lickorish \cite[s. 4]{lickorish1997} używa $r L$ dla odwrotności oraz $\overline{L}$ dla lustra; zapewne ktoś gdzieś używa jeszcze innych znaczków.
-
 \begin{comment}
 \begin{figure}[H]
     \begin{minipage}[b]{.32\linewidth}
         \centering
-        \includegraphics[width=\linewidth]{../data/links/9_3_2_mirror.png}
+        \includegraphics[width=0.6\linewidth]{../data/links/9_3_2_mirror.png}
         \subcaption{lustro $mL$}
     \end{minipage}
     \begin{minipage}[b]{.32\linewidth}
         \centering
-        \includegraphics[width=\linewidth]{../data/links/9_3_2_base.png}
+        \includegraphics[width=0.6\linewidth]{../data/links/9_3_2_base.png}
         \subcaption{przykładowy splot $L$}
     \end{minipage}
     \begin{minipage}[b]{.32\linewidth}
         \centering
-        \includegraphics[width=\linewidth]{../data/links/9_3_2_reverse.png}
+        \includegraphics[width=0.6\linewidth]{../data/links/9_3_2_reverse.png}
         \subcaption{rewers $rL$}
     \end{minipage}
 \end{figure}
@@ -42,37 +38,42 @@ Lickorish \cite[s. 4]{lickorish1997} używa $r L$ dla odwrotności oraz $\overli
 
 Na lewym obrazku odbiliśmy diagram względem pionowej płaszczyzny, ale ten sam splot dostalibyśmy odwracając wszystkie nad- i podskrzyżowania (czyli odbijając go względem płaszczyzny papieru, ale programy graficzne nie pozwalają na wykonanie tej operacji zbyt łatwo, a~my jesteśmy trochę leniwi).
 
+Niektórzy mówią o odbiciach lustrzanych i odwrotnościach.
+Zaletą naszych oznaczeń jest to, że trudniej jest pomylić lustro z odwrotnością; ale w literaturze dominuje $L^*$ jako symbol lustra oraz $-L$ jako symbol odwrotności splotu $L$; używają ich na przykład Burde, Zieschang, Heusener \cite{burde2014} czy Murasugi \cite[s. 14, 24]{murasugi1996}.
+Lickorish \cite[s. 4]{lickorish1997} używa $r L$ dla odwrotności oraz $\overline{L}$ dla lustra; zapewne ktoś gdzieś używa jeszcze innych znaczków.
+
 Zauważmy, że wzięcie lustra i/lub rewersu węzła nie musi prowadzić do nowych obiektów.
 Na przykład trójlistnik jest własnym rewersem: $3_1 = \operatorname{r} 3_1$, ale nie lustrem.
 
-Dlatego wyróżniamy pięć typów symetrii węzłów:
+Dlatego wyróżniamy pięć typów symetrii splotów:
 
+\begin{definition}[sploty zwierciadlane, odwracalne, chiralne]
 % DICTIONARY;chiral;skrętny/chiralny;węzeł
-\begin{definition}[całkowicie chiralny albo skrętny]
-\index{węzeł!chiralny}%
-\index{węzeł!skrętny|see {węzeł lustrzany}}%
-    Węzły $K$, $rK$, $mK$ są parami nierównoważne. % chiral 9_32
-\end{definition}
-
 % DICTIONARY;reversible;odwracalny;węzeł
-\begin{definition}[odwracalny]
-    \index{węzeł!odwracalny}%
-    Węzły $K \cong rK$ są równoważne. % reversible 3_1
-\end{definition}
-
 % DICTIONARY;achiral/amphicheiral;zwierciadlany;węzeł
-\begin{definition}[ujemnie zwierciadlany]
-    \index{węzeł!zwierciadlany}%
-    Węzły $K \cong mrK$ są równoważne. % negative amphicheiral 8_17
+    Niech $L$ będzie splotem.
+    Wtedy $L$ jest równoważny ze swoim rewersem, lustrem, rewersem lustra, wszystkimi albo żadnym z trzech wymienionych splotów;
+    splot $L$ nazywamy odpowiednio:
+    \begin{itemize}
+        \item odwracalnym ($L = rL$),
+        \item dodatnio zwierciadlanym ($L = mL$),
+        \item ujemnie zwierciadlanym ($L = mrL$),
+        \item całkowicie zwierciadlanym ($mL = L = rL$),
+        \item całkowicie chiralnym ($mL \neq L \neq rL$).
+    \end{itemize}
+\index{węzeł!zwierciadlany}%
+\index{węzeł!odwracalny}%
+\index{węzeł!chiralny}%
+\index{węzeł!skrętny|see {węzeł chiralny}}%
 \end{definition}
 
-\begin{definition}[dodatnio zwierciadlany]
-    Węzły $K \cong mK$ są równoważne. % positive amphicheiral 12a_427
-\end{definition}
+Węzły całkowicie chiralne nazywa się czasem skrętnymi.
 
-\begin{definition}[całkowicie zwierciadlany]
-    Węzły $K, rK, mK$ są parami równoważne. % fully amphicheiral 4_1
-\end{definition}
+%    Węzły $K$, $rK$, $mK$ są parami nierównoważne. % chiral 9_32
+%    Węzły $K \cong rK$ są równoważne. % reversible 3_1
+%    Węzły $K \cong mrK$ są równoważne. % negative amphicheiral 8_17
+%    Węzły $K \cong mK$ są równoważne. % positive amphicheiral 12a_427
+%    Węzły $K, rK, mK$ są parami równoważne. % fully amphicheiral 4_1
 
 \begin{example}
     Węzeł $9_{32}$ jest całkowicie skrętny.
@@ -157,13 +158,15 @@ z bazy danych ``The On-Line Encyclopedia of Integer Sequences'' (OEIS).
         \bottomrule
         \hline
     \end{tabular}
-    \caption{Liczba węzłów o~poszczególnych typach symetrii}
+    \caption{Liczba węzłów pierwszych o~poszczególnych typach symetrii}
 \end{table}
 
-\begin{definition}[10.3.2 w \cite{kawauchi1996}]
+\begin{definition}
     Niech $K \subseteq S^3$ będzie węzłem.
     Jeśli istnieje inwolucja pary $(S^3, K)$, która zachowuje orientację sfery, ale odwraca orientację węzła, to węzeł $K$ nazywamy silnie odwracalnym.
 \end{definition}
+
+To jest definicja 10.3.2 z monografii Kawauchiego \cite{kawauchi1996}.
 
 \begin{proposition}
     Jeśli węzeł jest silnie odwracalny, to jest też odwracalny.

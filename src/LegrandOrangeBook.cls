@@ -16,55 +16,19 @@
 %	MARGINS
 %----------------------------------------------------------------------------------------
 
-
 % popular page size in Amazon's KDP
-% \RequirePackage[
-%     paperwidth=6.14in,
-%     paperheight=9.21in,
-%     left=0.82in,
-%     right=0.695in,
-%     top=0.6in,
-%     bottom=0.71in,
-%     twoside,
-%     headsep=0.15in,
-%     includehead,
-%     includefoot
-% ]{geometry}
-
-
-
-
-
-%----------------------------------------------------------------------------------------
-%	MARGINS
-%----------------------------------------------------------------------------------------
-
-% 	inner=3cm, % Inner margin (left on odd pages, right on even or left in oneside mode)
-	% outer=3cm, % Outer margin (right on odd pages, left on even or right in oneside mode)
-	
-	% headheight=0.5cm, % Header height
-	% footskip=1.4cm, % Space from the bottom margin to the baseline of the footer
-	
-	%showframe, % Uncomment to show how the type block is set on the page
-
-
-	% popular page size in Amazon's KDP
-	\RequirePackage[
-		paperwidth=6.00in,
-		paperheight=9.00in,
-		left=0.75in,
-		right=0.625in,
-		top=0.95in,
-		bottom=0.76in,
-		twoside,
-		% showframe,
-		headsep=0.15in,
-		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% pokazuje ramki na stronach: showframe
-	]{geometry}
-	
-	
-	
-
+\RequirePackage[
+	paperwidth=6.00in,
+	paperheight=9.00in,
+	left=0.75in,
+	right=0.625in,
+	top=0.95in,
+	bottom=0.76in,
+	twoside,
+	% showframe,
+	headsep=0.15in,
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% pokazuje ramki na stronach: showframe
+]{geometry}
 
 %----------------------------------------------------------------------------------------
 %	FONTS
@@ -163,7 +127,7 @@
 		\draw[anchor=west] (current page.north west) node [
 			anchor=north west, % Anchor point of the chapter box
 			xshift=\Gm@lmargin, % Horizontal distance from the left side of the page
-			yshift=-\thechapterspaceabove, % Vertical distance from the top of the page
+			yshift=-110pt, % Vertical distance from the top of the page
 			line width=2pt, % Border line thickness
 			rounded corners=10pt, % Rounded corners amount
 			draw=ocre, % Border line color
@@ -199,7 +163,7 @@
 	{} % Code before the label
 	[] % Code after the label
 
-\titlespacing*{\chapter}{0pt}{0pt}{\thechapterspacebelow} % Spacing around section titles, the order is: left, before and after
+\titlespacing*{\chapter}{0pt}{0pt}{150pt} % Spacing around section titles, the order is: left, before and after
 
 %-------------------------------------------
 
