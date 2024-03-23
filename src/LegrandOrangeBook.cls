@@ -54,14 +54,11 @@
 		paperheight=9.00in,
 		left=0.75in,
 		right=0.625in,
-	%     left=0.82in,
-	%     right=0.695in,
-		top=1.0in,
-		bottom=0.71in,
-	twoside,
-	%     headsep=0.15in,
-	%     includehead,
-	 %    includefoot
+		top=0.95in,
+		bottom=0.76in,
+		twoside,
+		% showframe,
+		headsep=0.15in,
 		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% pokazuje ramki na stronach: showframe
 	]{geometry}
 	
