@@ -31,22 +31,6 @@ Zamiast wyjaśnić, jakie są jego niepożądane właściwości, podamy od razu 
     Węzeł zadany w przestrzeni $\R^3$ parametrycznie $(\sin \theta, \cos \theta, 0)$ dla $\theta \in [0, 2\pi]$ nazywamy niewęzłem i oznaczamy $\SmallUnknot$.
 \end{example}
 
-% DICTIONARY;knot;węzeł;-
-% GLOSSAIRE;nœud;węzeł;-
-% DICTIONARY;tame;poskromiony;węzeł
-% GLOSSAIRE;lisse/régulier;poskromiony;węzeł
-% DICTIONARY;wild;dziki;węzeł
-% GLOSSAIRE;sauvage;dziki;węzeł
-\begin{definition}[węzeł]
-\index{węzeł!poskromiony}%
-\label{def:knot}%
-    Gładkie włożenie $S^1 \hookrightarrow \R^3$ otaczająco izotopijne z~zamkniętą łamaną bez samoprzecięć nazywamy węzłem poskromionym.
-    Dwa węzły są równoważne, jeśli istnieje pomiędzy nimi izotopia otaczająca.
-\end{definition}
-
-Czasami wygodniej jest rozpatrywać węzeł jako włożenie $S^1 \hookrightarrow S^3$ albo dopuścić do myśli węzły nieposkromione.
-Ale jeśli nie zaznaczono inaczej, nie robimy tego: pisząc węzeł mamy na myśli poskromione włożenie w przestrzeń $\R^3$, nie $S^3$.
-
 Potrzeba jeszcze matematycznego opisu manipulacji, jakim możemy poddawać sznur trzymany w~ręce.
 Izotopia jest niewłaściwym narzędziem do tego celu: powiedzielibyśmy, że dwa węzły $K_1, K_2$ sa izotopijne, jeśli istnieje ciągła funkcja
 \begin{equation}
@@ -102,25 +86,46 @@ co zdaje się prowadzić do pojęcia izotopii otaczającej, która uwzględnia n
 % GLOSSAIRE;ambiante;otaczająca;izotopia
 \begin{definition}[izotopia otaczająca]
     \index{izotopia otaczająca}%
-        Niech $K_1, K_2 \colon N \hookrightarrow M$ będą włożeniami dwóch rozmaitości $N, M$.
-        Ciągłe odwzorowanie $F \colon M \times [0,1] \to M$ spełniające następujące warunki:
-        \begin{enumerate}
-            \item funkcja $F(-, 0)$ jest odwzorowaniem tożsamościowym,
-            \item każda z~funkcji $F(-, t)$ jest homeomorfizmem,
-            \item złożenie $F(-, 1)$ z~pierwszym włożeniem $K_1$ daje drugie włożenie $K_2$
-        \end{enumerate}
-        nazywamy izotopią otaczającą przenoszącą włożenie $K_1$ na $K_2$.
-    \end{definition}
-    
-    W~topologii rozważa się włożenia dowolnych rozmaitości, nam wystarczy jeden szczególny przypadek $N = S^1$ oraz $M = \R^3$.
-    Intuicyjnie, funkcja $F$ zniekształca przestrzeń $\R^3$ tak, że w~chwili początkowej $t = 0$ widzimy pierwszy, zaś w~chwili końcowej $t = 1$ drugi węzeł.
-    Izotopia otaczająca nie pozwala na ściąganie zaplątanych fragmentów do punktu.
-    
-    Formalnie węzły to pewne odwzorowania, więc prawidłowym sposobem na zapisanie, że są izotopijne (czyli dla nas: równe), jest $K_1 \cong K_2$.
-    Ponieważ nie prowadzi to do problemów, będziemy jednak stosować zapis $K_1 = K_2$.
-    Jednocześnie często węzeł jako odwzorowanie nie będzie odróżniany od obrazu tego odwzorowania.
-    
-    Istnieje jeszcze jedna, konkurencyjna definicja węzłów równoważnych:
+    Niech $K_1, K_2 \colon N \hookrightarrow M$ będą włożeniami dwóch rozmaitości $N, M$.
+    Ciągłe odwzorowanie $F \colon M \times [0,1] \to M$ spełniające następujące warunki:
+    \begin{enumerate}
+        \item funkcja $F(-, 0)$ jest odwzorowaniem tożsamościowym,
+        \item każda z~funkcji $F(-, t)$ jest homeomorfizmem,
+        \item złożenie $F(-, 1)$ z~pierwszym włożeniem $K_1$ daje drugie włożenie $K_2$
+    \end{enumerate}
+    nazywamy izotopią otaczającą przenoszącą włożenie $K_1$ na $K_2$.
+\end{definition}
+
+W~topologii rozważa się włożenia dowolnych rozmaitości, nam wystarczy jeden szczególny przypadek $N = S^1$ oraz $M = \R^3$.
+Intuicyjnie, funkcja $F$ zniekształca przestrzeń $\R^3$ tak, że w~chwili początkowej $t = 0$ widzimy pierwszy, zaś w~chwili końcowej $t = 1$ drugi węzeł.
+Izotopia otaczająca nie pozwala na ściąganie zaplątanych fragmentów do punktu.
+
+\begin{definition}
+    Dwa węzły są równoważne wtedy i tylko wtedy, gdy istnieje pomiędzy nimi izotopia otaczająca.
+\end{definition}
+
+Znając już izotopię otaczającą, można podać alternatywny opis węzłów:
+
+% DICTIONARY;knot;węzeł;-
+% GLOSSAIRE;nœud;węzeł;-
+% DICTIONARY;tame;poskromiony;węzeł
+% GLOSSAIRE;lisse/régulier;poskromiony;węzeł
+% DICTIONARY;wild;dziki;węzeł
+% GLOSSAIRE;sauvage;dziki;węzeł
+\begin{definition}[węzeł]
+\index{węzeł!poskromiony}%
+\label{def:knot}%
+    Gładkie włożenie $S^1 \hookrightarrow \R^3$ otaczająco izotopijne z~zamkniętą łamaną bez samoprzecięć nazywamy węzłem poskromionym.
+\end{definition}
+
+Czasami wygodniej jest rozpatrywać węzeł jako włożenie $S^1 \hookrightarrow S^3$ albo dopuścić do myśli węzły nieposkromione.
+Ale jeśli nie zaznaczono inaczej, nie robimy tego: pisząc węzeł mamy na myśli poskromione włożenie w przestrzeń $\R^3$, nie $S^3$.
+
+Formalnie węzły to pewne odwzorowania, więc prawidłowym sposobem na zapisanie, że są izotopijne (czyli dla nas: równe), jest $K_1 \cong K_2$.
+Ponieważ nie prowadzi to do problemów, będziemy jednak stosować zapis $K_1 = K_2$.
+Jednocześnie często węzeł jako odwzorowanie nie będzie odróżniany od obrazu tego odwzorowania.
+
+Istnieje jeszcze jedna, konkurencyjna definicja węzłów równoważnych:
 
 \begin{proposition}
 \label{def:equivalent_knots_2}%
