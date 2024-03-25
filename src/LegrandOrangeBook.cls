@@ -1,7 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{LegrandOrangeBook}[2022/01/26 The Legrand Orange Book Class v3.0]
-% \DeclareOption*{\PassOptionsToClass{\CurrentOption}{extbook}} % Pass through any options to the base class
-% \ProcessOptions\relax % Process given options
 \LoadClass[9pt, twoside]{extbook} % Load the base class
 \usepackage{graphicx} % Required for including pictures
 \graphicspath{{Images/}} % Specifies the directory where pictures are stored
@@ -171,7 +169,7 @@
 	{\section} % Section type being modified
 	[block] % Shape type, can be: hang, block, display, runin, leftmargin, rightmargin, drop, wrap, frame
 	{\bfseries\sffamily\Large} % Format of the whole section
-	{\llap{\textcolor{ocre}{\thesection}\hspace{1em}}#1} % Format of the section label
+	{{\textcolor{ocre}{\thesection}\hspace{1em}}#1} % Format of the section label
 	{0cm} % Space between the title and label
 	{} % Code before the label
 	[] % Code after the label
@@ -193,7 +191,7 @@
 	{\subsection} % Section type being modified
 	[block] % Shape type, can be: hang, block, display, runin, leftmargin, rightmargin, drop, wrap, frame
 	{\bfseries\sffamily\large} % Format of the whole section
-	{\llap{\textcolor{ocre}{\thesubsection}\hspace{1em}}#1} % Format of the section label
+	{{\textcolor{ocre}{\thesubsection}\hspace{1em}}#1} % Format of the section label
 	{0cm} % Space between the title and label
 	{} % Code before the label
 	[] % Code after the label
@@ -387,23 +385,6 @@
 	{~{\normalfont\titlerule*[6pt]{.}}~\thecontentspage} % Formatting of the filler to the right of the heading and the page number
 
 %----------------------------------------------------------------------------------------
-%	BIBLIOGRAPHY
-%----------------------------------------------------------------------------------------
-
-% \usepackage[
-% 	backend=biber, % Use the biber engine for compiling the bibliography
-% 	bibstyle=numeric, % Main bibliography style
-% 	citestyle=numeric, % In-text citation style
-% 	sorting=nyt, % Sort references in the bibliography by name, then year, then title
-% 	sortcites=true, % If multiple citekeys are passed to a citation command, sort them in the citation
-% 	abbreviate=false, % Suppress abbreviations such as "Ed." for Editor
-% 	backref=true, % List the page where references were cited in the bibliography
-% 	defernumbers=true,
-% ]{biblatex}
-
-% \defbibheading{bibempty}{} % Suppress default bibliography headings
-
-%----------------------------------------------------------------------------------------
 %	INDEX
 %----------------------------------------------------------------------------------------
 
@@ -478,21 +459,6 @@
 			\bookmarksetup{bold}% Bold
 		\fi
 	}
-}
-
-%----------------------------------------------------------------------------------------
-%	TITLE PAGE
-%----------------------------------------------------------------------------------------
-
-\renewcommand{\titlepage}[2]{
-	\thispagestyle{empty} % Suppress headers and footers on the title page
-
-	\begin{tikzpicture}[remember picture, overlay]
-		\node [inner sep=0pt] at (current page.center) {#1}; % Background image
-		\node [anchor=center, inner sep=1.25cm, rectangle, fill=ocre!30!white, fill opacity=0.6, text opacity=1, minimum height=0.2\paperheight, minimum width=\paperwidth, text width=0.8\paperwidth] at (current page.center) {#2}; % Title highlight box with title(s) and author(s)
-	\end{tikzpicture}
-	
-	\newpage
 }
 
 %----------------------------------------------------------------------------------------
@@ -742,8 +708,6 @@
 	pdfkeywords={Keyword1, Keyword2, ...}, % Keywords
 	pdfcreator={LaTeX}, % Content creator field
 }
-
-% \addbibresource{sample.bib} % Bibliography file
 
 \definecolor{ocre}{RGB}{255, 105, 180} % Define the color used for highlighting throughout the book
 
