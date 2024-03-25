@@ -1,5 +1,5 @@
 
-\subsection{Lustro i~rewers. Węzły skrętne i zwierciadlane}
+\section{Lustro i~rewers. Węzły skrętne i zwierciadlane}
 \begin{definition}[lustro]
 % DICTIONARY;mirror;lustro/lustrzany;węzeł
 \index{lustro}%
@@ -94,7 +94,8 @@ Oto, jak tego dokonał.
 % południk = meridian (of longitude)
 % TODO: naprostować bałagan z meridian/longitude w całej książce
 % https://math.stackexchange.com/questions/2511364/how-did-dehn-prove-that-the-trefoil-is-chiral myli te pojęcia: pisze o meridian i longitude, kiedy oryginalna praca Dehna operowała na longitude i latitude
-Iloraz grafu Cayleya dla grupy podstawowej trójlistnika, $G = \pi_1(S^3 - K)$, zanurza się w~produkt $\mathbb H^2 \times \R$, co pozwala wyznaczyć grupę zewnętrznych automorfizmów grupy $G$, $\Z/2\Z$.
+\begin{proof}[Niedowód]
+    Iloraz grafu Cayleya dla grupy podstawowej trójlistnika, $G = \pi_1(S^3 - K)$, zanurza się w~produkt $\mathbb H^2 \times \R$, co pozwala wyznaczyć grupę zewnętrznych automorfizmów grupy $G$, $\Z/2\Z$.
 \index{grupa!podstawowa}
 % DICTIONARY;latitude;szerokość geograficzna;geografia
 % DICTIONARY;longitude;długość geograficzna;geografia
@@ -102,8 +103,9 @@ Iloraz grafu Cayleya dla grupy podstawowej trójlistnika, $G = \pi_1(S^3 - K)$, 
 % DICTIONARY;parallel (of latitude);równoleżnik;geografia
 % DICTIONARY;---;geografia;-
 Korzystając z~południków i~równoleżników pokazał następnie, że nietrywialny automorfizm zewnętrzny odwraca orientację przestrzeni otaczającej.
+\end{proof}
 
-My przekonamy się o~tym po wyznaczeniu wielomianu Jonesa trójlistnika, patrz wniosek \ref{cor:jones_of_amphicheiral}.
+My przekonamy się o~tym po wyznaczeniu wielomianu Jonesa trójlistnika (wniosek \ref{cor:jones_of_amphicheiral}).
 
 \begin{example}
     Węzeł $8_{17}$ jest zwierciadlany ujemnie, ale nie odwracalny.
@@ -192,9 +194,9 @@ Ale hiperboliczny węzeł odwracalny jest silnie odwracalny, wspomina o tym bez 
     Każdy wielomian Alexandera jest realizowany przez pewien silnie odwracalny węzeł.
 \end{proposition}
 
-\begin{proof}
+\begin{proof}[Niedowód]
 \index[persons]{Sakai, Tsuyoshi}%
-    Sakai konstruuje w \cite{sakai1983} silnie odwracalny węzeł o dowolnie wybranym cyklicznym module Alexandera.
+    Sakai \cite{sakai1983} dla każdego cyklicznego modułu Alexandera $M$ skonstruował silnie odwracalny węzeł $K$, którego modułem Alexandera jest właśnie $M$.
 \end{proof}
 
 % Koniec podsekcji Lustro i rewers
