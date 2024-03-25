@@ -15,85 +15,18 @@
     Niech $K_1, K_2$ będą zorientowanymi węzłami.
     Natnijmy każdy z nich w dwóch punktach tego samego krótkiego łuku, a następnie zszyjmy dwoma łukami, które nie przecinają już istniejących, jak na obrazku.
     Otrzymany węzeł nazywamy sumą spójną węzłów $K_1$ oraz $K_2$ i oznaczamy przez $K_1 \shrap K_2$.
-\begin{comment}
-    \[
-        \begin{tikzpicture}[baseline=-0.65ex,scale=0.09]
-        \useasboundingbox (-12, -15) rectangle (12, 10);
-        \begin{knot}[clip width=5, flip crossing/.list={5}, ignore endpoint intersections=false,]
-            \strand[thick] (-3.5, -3.5) [in=down, out=up] to (3.5, 3.5);
-            \strand[thick] (3.5, 3.5) [in=right, out=up] to (-4.5, 10);
-            \strand[thick] (-4.5, 10) [in=up, out=left] to (-10, 3.5);
-            \strand[thick] (-10, 3.5) to (-10, -3.5);
-            \strand[thick] (-10, -3.5) [in=left, out=down] to (-4.5, -10);
-            \strand[thick] (-4.5, -10) [in=down, out=right] to (3.5, -3.5);
-            \strand[thick] (3.5, -3.5) [in=down, out=up] to (-3.5, 3.5);
-            \strand[thick] (-3.5, 3.5) [in=left, out=up] to (4.5, 10);
-            \strand[thick] (4.5, 10) [in=up, out=right] to (10, 3.5);
-            \strand[thick, -Latex] (10, 3.5) to (10, -3.5);
-            \strand[thick] (10, -3.5) [in=right, out=down] to (4.5, -10);
-            \strand[thick] (4.5, -10) [in=down, out=left] to (-3.5, -3.5);
-            \node at (0, -15) {$K_1$};
-        \end{knot}
-        \end{tikzpicture}
-        \shrap
-        \begin{tikzpicture}[baseline=-0.65ex,scale=0.09]
-        \useasboundingbox (-12, -15) rectangle (12, 10);
-        \begin{knot}[clip width=5, flip crossing/.list={6}, ignore endpoint intersections=false,]
-            \strand[thick] (-3.5, -3.5) [in=down, out=up] to (3.5, 3.5);
-            %\strand[thick] (3.5, 3.5) [in=right, out=up] to (-4.5, 10);
-            %\strand[thick] (-4.5, 10) [in=up, out=left] to (-10, 3.5);
-            \strand[thick] (-10, -3.5) [in=left, out=up] to (0, 6.5);
-            \strand[thick, Latex-] (-10, -3.5) [in=left, out=down] to (-4.5, -10);
-            \strand[thick] (-4.5, -10) [in=down, out=right] to (3.5, -3.5);
-            \strand[thick] (3.5, -3.5) [in=down, out=up] to (-3.5, 3.5);
-            %\strand[thick] (-3.5, 3.5) [in=left, out=up] to (4.5, 10);
-            %\strand[thick] (4.5, 10) [in=up, out=right] to (10, 3.5);
-            \strand[thick] (10, -3.5) [in=right, out=up] to (0, 6.5);
-            \strand[thick] (10, -3.5) [in=right, out=down] to (4.5, -10);
-            \strand[thick] (4.5, -10) [in=down, out=left] to (-3.5, -3.5);
-            %
-            \strand[thick] (-3.5, 3.5) [in=left, out=up] to (0, 10);
-            \strand[thick] (3.5, 3.5) [in=right, out=up] to (0, 10);
-            \node at (0, -15) {$K_2$};
-        \end{knot}
-        \end{tikzpicture}
-        =
-        \begin{tikzpicture}[baseline=-0.65ex,scale=0.09]
-        \useasboundingbox (-27, -15) rectangle (27, 10);
-        \begin{knot}[clip width=5, flip crossing/.list={5, 22, 23}, ignore endpoint intersections=false,]
-            \strand[thick] (-18.5, -3.5) [in=down, out=up] to (-11.5, 3.5);
-            \strand[thick] (-11.5, 3.5) [in=right, out=up] to (-19.5, 10);
-            \strand[thick] (-19.5, 10) [in=up, out=left] to (-25, 3.5);
-            \strand[thick] (-25, 3.5) to (-25, -3.5);
-            \strand[thick] (-25, -3.5) [in=left, out=down] to (-19.5, -10);
-            \strand[thick] (-19.5, -10) [in=down, out=right] to (-11.5, -3.5);
-            \strand[thick] (-11.5, -3.5) [in=down, out=up] to (-18.5, 3.5);
-            \strand[thick] (-18.5, 3.5) [in=left, out=up] to (-10.5, 10);
-            \strand[thick] (-10.5, 10) [in=left, out=right] to (-5, 2);
-            \strand[thick, -Latex] (-5, 2) to (-5+6, 2);
-            \strand[thick] (5, 2) to (-5+6, 2);
-            \strand[thick] (3, -2) to [in=left, out=right] (10.5, -10);
-            \strand[thick, -Latex] (3, -2) to (-3, -2);
-            \strand[thick] (-5, -2) to (-3, -2);
-            \strand[thick] (-5, -2) [in=right, out=left] to (-10.5, -10);
-            \strand[thick] (-10.5, -10) [in=down, out=left] to (-18.5, -3.5);
-            %%%
-            \strand[thick] (11.5, -3.5) [in=down, out=up] to (18.5, 3.5);
-            \strand[thick] (-10 +15, 2) [in=left, out=right] to (15, 6.5);
-            \strand[thick] (10.5, -10) [in=down, out=right] to (18.5, -3.5);
-            \strand[thick] (18.5, -3.5) [in=down, out=up] to (11.5, 3.5);
-            \strand[thick] (25, -3.5) [in=right, out=up] to (15, 6.5);
-            \strand[thick] (25, -3.5) [in=right, out=down] to (19.5, -10);
-            \strand[thick] (19.5, -10) [in=down, out=left] to (11.5, -3.5);
-            \strand[thick] (11.5, 3.5) [in=left, out=up] to (15, 10);
-            \strand[thick] (18.5, 3.5) [in=right, out=up] to (15, 10);
-            %%%
-            \node at (0, -15) {$K_1 \shrap K_2$};
-        \end{knot}
-        \end{tikzpicture}
-    \]
-\end{comment}
 \end{definition}
+
+\begin{example}
+    Suma spójna $10_{17} \shrap 9_{44}$:
+    \[
+        \raisebox{-0.42\height}{\includegraphics[height=2.2cm]{../data/connected-sum/knot_sum_a.png}}
+        \scalebox{2.5}{\ensuremath{\shrap}}
+        \raisebox{-0.42\height}{\includegraphics[height=2.2cm]{../data/connected-sum/knot_sum_b.png}}
+        \scalebox{2.5}{\ensuremath{=}}
+        \raisebox{-0.42\height}{\includegraphics[height=2.2cm]{../data/connected-sum/knot_sum_ab.png}}
+    \]
+\end{example}
 
 W topologii rozważa się podobną operację: z~każdej $n$-rozmaitości wycina się kulę, po czym skleja wzdłuż brzegowej sfery w~jedną rozmaitość.
 Ale kiedy zajmujemy się węzłami, nie interesuje nas struktura rozmaitości (gdyż każdy węzeł jest homeomorficzny z~okręgiem), tylko zanurzenie w otaczającą przestrzeń.
@@ -119,7 +52,7 @@ Pojęcie sumy spójnej węzłów (oraz opisane później satelity) wprowadził d
 
 \begin{proposition}
     Suma spójna węzłów jest dobrze określonym działaniem.
-    Jest łączna i przemienna; niewęzeł stanowi jej element neutralny.
+    Jest przemienna oraz łączna; niewęzeł stanowi jej element neutralny.
 \end{proposition}
 
 \begin{proof}
@@ -162,13 +95,13 @@ Trzeba zajrzeć do \cite[s. 18-20]{kauffman1995} dla dwóch rysunków tamże.
          \simeq \SmallUnknot.
     \end{align*}
     Analogicznie pokazujemy, że $L \simeq \SmallUnknot$.
-    (To jedyne miejsce w~całej książce, gdzie użyte zostają węzły dzikie.)
+    To jedyne miejsce w~całej książce, gdzie użyte zostają (zostały?) węzły dzikie.
 \end{proof}
 
 \begin{proof}
-    (Na podstawie \cite[s. 18-20]{kauffman1995}).
+    (Jak pan Kauffman \cite[s. 18-20]{kauffman1995} napisał).
     Wyobraźmy sobie, że węzeł oraz torus połykająco-podążający $T$ został zawieszony między dwiema ścianami pokoju i~załóżmy nie wprost, że suma $K = K_1 \shrap K_2$ jest trywialna.
-    Wtedy pewien homeomorfizm pokoju, który nie rusza ścian, prostuje sumę (zamienia pozornie zaplątany węzeł $K$ w odcinek $L$). 
+    Wtedy pewien homeomorfizm pokoju, który nie rusza ścian, prostuje sumę: zamienia pozornie zaplątany węzeł $K$ w odcinek $L$. 
 
     Niech $\pi$ będzie dowolną płaszczyzną zawierającą wyprostowaną sumę $K$.
     Tnie część wspólną torusa $T$ oraz ścian w czterech punktach, oznaczmy je $A, B$ (na lewej ścianie) oraz $C, D$ (na prawej).
@@ -182,6 +115,7 @@ Trzeba zajrzeć do \cite[s. 18-20]{kauffman1995} dla dwóch rysunków tamże.
 Półgrupę węzłów z~operacją sumy spójnej można uczynić grupą na dwa sposoby: albo zmieniając działanie, albo osłabiając równoważność węzłów.
 Drugi pomysł jest lepszy niż pierwszy.
 Na początku lat pięćdziesiątych Milnor wprowadził pojęcie zgodności.
+\index[persons]{Milnor, John}%
 \index{węzeł!plastrowy}%
 \index{węzeł!zgodny}%
 Element neutralny nowej grupy to węzły plastrowe, ich opis leży w~sekcji \ref{sec:slice}.
