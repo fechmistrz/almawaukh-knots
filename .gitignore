@@ -1,3 +1,4 @@
+build/
 tmp/
 *.pdf
 tools/knotinfo_parsed.json
@@ -20,3 +21,7 @@ tools/knotinfo_parsed.json
 *.idx
 *.ilg
 *.ind
+
+
+# titletoc
+*.ptc
