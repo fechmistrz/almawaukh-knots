@@ -1,11 +1,11 @@
 
 % DICTIONARY;linking number;indeks zaczepienia;-
-\subsection{Indeks zaczepienia}
+\section{Indeks zaczepienia}
 \index{indeks zaczepienia|(}%
-Około 1833 roku Gauß wyraził indeks zaczepienia dwóch węzłów jako pewną (nieciekawą dla nas) całkę, co czyni go najstarszym niezmiennikiem węzłów.
+Około 1833 roku Gauß wyraził indeks zaczepienia dwóch węzłów jako pewną (nieciekawą dla nas) całkę, co czyni go najstarszym niezmiennikiem splotów.
 \index[persons]{Gauß, Carl}%
-Po przeczytaniu \cite{colberg2013} wydaje nam się, że osiągnął to korzystając z praw fizyki: prawa Ampère'a, prawa Biota-Savarta.
-Ponieważ my żyjemy w~XXI wieku, wystarczy nam definicja odwołująca się do diagramów.
+Po przeczytaniu \cite{colberg2013} wydaje nam się, że osiągnął to korzystając z praw fizyki: prawa Ampère'a i Biota-Savarta.
+My żyjemy w~XXI wieku, wystarczy nam diagramatyczna definicja.
 (Ale patrz też: \cite[s. 11]{kawauchi1996}.)
 % Erin Colberg - A brief history of knot theory
 % TODO: czemu patrz też?
@@ -13,14 +13,24 @@ Ponieważ my żyjemy w~XXI wieku, wystarczy nam definicja odwołująca się do d
 % DICTIONARY;sign;znak;skrzyżowanie
 \begin{definition}[znak]
 \index{znak skrzyżowania}%
-    Liczbę $\pm 1$ przypisaną do skrzyżowania zgodnie z diagramem:
+    Liczbę $\pm 1$ przypisaną do skrzyżowania zgodnie z regułą:
 \begin{comment}
-    \[
-        \sign \left( \MediumPlusCrossingArrows \right) = +1 \quad
-        \sign \left( \MediumMinusCrossingArrows \right) = -1
-    \]
+    \setlength{\intextsep}{4pt plus 2pt minus 2pt}
+    \begin{figure}[H]
+        \begin{minipage}[b]{.48\linewidth}
+            \[
+                \sign \left( \MedLarPlusCrossingArrows \right) = +1
+            \]
+        \end{minipage}
+        \begin{minipage}[b]{.48\linewidth}
+            \[
+                \sign \left( \MedLarMinusCrossingArrows \right) = -1
+            \]
+        \end{minipage}
+
+    \end{figure}
 \end{comment}
-% TODO winko-1: upewnić się, że te obrazki są podobnych rozmiarów?
+\noindent
     nazywamy znakiem skrzyżowania.
 \end{definition}
 
@@ -32,26 +42,28 @@ Oczywiście skrzyżowania ujemne nazywamy wtedy leworęcznymi.
 % DICTIONARY;smoothing;wygładzenie;-
 \begin{definition}[wygładzenie]
 \index{skrzyżowanie!... wygładzenie}%
-    Niech dany będzie diagram z wyróżnionym skrzyżowaniem.
-    Wtedy diagramy
+    Diagramy powstałe przez zmianę biegu łuków danego skrzyżowania zgodnie z poniższymy rysunkami:
 \begin{comment}
+    {\setlength{\intextsep}{4pt plus 2pt minus 2pt}
     \begin{figure}[H]
+        \setlength{\intextsep}{4pt plus 2pt minus 2pt}
         \begin{minipage}[b]{.48\linewidth}
             \[
-                \LargeAlphaSmoothing
+                \MedLarAlphaSmoothing
             \]
             \subcaption{wygładzenie dodatnie}
         \end{minipage}
         \begin{minipage}[b]{.48\linewidth}
             \[
-                \LargeBetaSmoothing
+                \MedLarBetaSmoothing
             \]
             \subcaption{wygładzenie ujemne}
         \end{minipage}
     \end{figure}
+    }
 \end{comment}
-% TODO winko-2: upewnić się, że te obrazki są podobnych rozmiarów?
-    powstałe przez zmianę małego otoczenia tego skrzyżowania nazywamy wygładzeniami.
+\noindent
+    nazywamy wygładzeniem.
     Jeżeli nie zaznaczono inaczej, wygładzamy zgodnie ze znakiem skrzyżowania.
 \end{definition}
 
@@ -61,7 +73,7 @@ Oczywiście skrzyżowania ujemne nazywamy wtedy leworęcznymi.
     \begin{equation}
         \linking(K_1, K_2) = \frac 12 \sum_i \sign c_i,
     \end{equation}
-    gdzie sumowanie rozciąga się na wszystkie skrzyżowania, na których spotykają się łuki z różnych ogniw, nazywamy indeksem zaczepienia węzłów $K_1, K_2$.
+    gdzie sumowanie rozciąga się na wszystkie skrzyżowania, na których spotykają się łuki różnych ogniw, nazywamy indeksem zaczepienia węzłów $K_1, K_2$.
     Ogólniej, jeśli dany jest splot $L = K_1 \sqcup \ldots \sqcup K_n$ posiadający $n$ ogniw, to jego indeks zaczepienia wyznacza wzór
     \begin{equation}
         \linking(L) = \sum_{i < j} \linking(K_i, K_j).
@@ -80,10 +92,11 @@ Istotnie, na mocy twierdzenia Jordana $\linking$ jest funkcją o całkowitych wa
 \end{proposition}
 
 \begin{proof}
-    Sprawdźmy wpływ ruchów Reidemeistera na wartość $\linking L$:
+    Wielkość $\linking L$ jest sumą znaków pewnych skrzyżowań, zatem na mocy twierdzenia Reidemeistera wystarczy sprawdzić, jaki jest wpływ ruchów Reidemeistera na te składniki:
 \begin{comment}
-    \begin{figure}[H]
-    \centering
+{\setlength{\intextsep}{4pt plus 2pt minus 2pt}
+\begin{figure}[H]
+\centering
     %
     \begin{minipage}[b]{.3\linewidth}
         \[
@@ -106,11 +119,12 @@ Istotnie, na mocy twierdzenia Jordana $\linking$ jest funkcją o całkowitych wa
         \subcaption{ruch $R_3$}
     \end{minipage}
 \end{figure}
+}
 \end{comment}
-    Na mocy twierdzenia Reidemeistera dowód został zakończony.
+\noindent
+    Ὅπερ ἔδει δεῖξαι...
 \end{proof}
 
 \index{indeks zaczepienia|)}%
 
 % koniec podsekcji Indeks zaczepienia
-

@@ -38,10 +38,10 @@ diagram_commands["ReidemeisterTwoColouringA"] = {
 }
 diagram_commands["ReidemeisterTwoLinkingA"] = {
     "lines": [
-        "\\strand[thick] (-2.5, 5) to [in=up, out=down] (2.5, 0);",
-        "\\strand[thick] (-2.5, -5) to [in=down, out=up] (2.5, 0);",
-        "\\strand[thick] (2.5, 5) to [in=up, out=down] (-2.5, 0);",
-        "\\strand[thick] (2.5, -5) to [in=down, out=up] (-2.5, 0);",
+        "\\strand[ultra thick] (-2.5, 5) to [in=up, out=down] (2.5, 0);",
+        "\\strand[ultra thick] (-2.5, -5) to [in=down, out=up] (2.5, 0);",
+        "\\strand[ultra thick] (2.5, 5) to [in=up, out=down] (-2.5, 0);",
+        "\\strand[ultra thick] (2.5, -5) to [in=down, out=up] (-2.5, 0);",
         "\\node[first_colour] at (-4,2.5)[left] {$a$};",
         "\\node[first_colour] at (-4,-2.5)[left] {$-a$};",
     ],

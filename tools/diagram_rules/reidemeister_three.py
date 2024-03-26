@@ -11,10 +11,10 @@ diagram_commands["ReidemeisterThreeB"] = {
 }
 diagram_commands["ReidemeisterThreeLinkingA"] = {
     "lines": [
-        "\\strand[thick] (-5, -5) -- (5, 5);",
-        "\\strand[thick] (-5, 5) -- (5, -5);",
-        "\\strand[thick] (-5, 0) to [in=left, out=right] (0, 5);",
-        "\\strand[thick] (5, 0) to [in=right, out=left] (0, 5);",
+        "\\strand[ultra thick] (-5, -5) -- (5, 5);",
+        "\\strand[ultra thick] (-5, 5) -- (5, -5);",
+        "\\strand[ultra thick] (-5, 0) to [in=left, out=right] (0, 5);",
+        "\\strand[ultra thick] (5, 0) to [in=right, out=left] (0, 5);",
         "\\node[first_colour] at (-4,2.5)[left] {$a$};",
         "\\node[first_colour] at (4,2.5)[right] {$b$};",
         "\\node[first_colour] at (0,-2)[below] {$c$};",
@@ -24,10 +24,10 @@ diagram_commands["ReidemeisterThreeLinkingA"] = {
 }
 diagram_commands["ReidemeisterThreeLinkingB"] = {
     "lines": [
-        "\\strand[thick] (-5, -5) -- (5, 5);",
-        "\\strand[thick] (-5, 5) -- (5, -5);",
-        "\\strand[thick] (-5, 0) to [in=left, out=right] (0, -5);",
-        "\\strand[thick] (5, 0) to [in=right, out=left] (0, -5);",
+        "\\strand[ultra thick] (-5, -5) -- (5, 5);",
+        "\\strand[ultra thick] (-5, 5) -- (5, -5);",
+        "\\strand[ultra thick] (-5, 0) to [in=left, out=right] (0, -5);",
+        "\\strand[ultra thick] (5, 0) to [in=right, out=left] (0, -5);",
         "\\node[first_colour] at (-4,-2.5)[left] {$a$};",
         "\\node[first_colour] at (4,-2.5)[right] {$b$};",
         "\\node[first_colour] at (0,2)[above] {$c$};",

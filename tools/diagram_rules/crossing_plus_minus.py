@@ -37,10 +37,11 @@ diagram_commands["PlusCrossingMatrix"] = {
 }
 diagram_commands["PlusCrossingArrows"] = {
     "lines": [
-        "\\strand[thick,-latex] (-5, -5) to (5, 5);",
-        "\\strand[thick,-latex] (5, -5) to (-5, 5);",
+        "\\strand[ultra thick,-latex] (-5, -5) to (6, 6);",
+        "\\strand[ultra thick,-latex] (5, -5) to (-6, 6);",
     ],
-    "sizes": ["Medium", "Large"],
+    "sizes": ["Medium", "MedLar", "Large"],
+    "clip": 4
 }
 diagram_commands["MinusCrossing"] = {
     "lines": [
@@ -52,11 +53,12 @@ diagram_commands["MinusCrossing"] = {
 }
 diagram_commands["MinusCrossingArrows"] = {
     "lines": [
-        "\\strand[thick,-latex] (-5, -5) to (5, 5);",
-        "\\strand[thick,-latex] (5, -5) to (-5, 5);",
+        "\\strand[ultra thick,-latex] (-5, -5) to (6, 6);",
+        "\\strand[ultra thick,-latex] (5, -5) to (-6, 6);",
     ],
-    "sizes": ["Medium", "Large"],
+    "sizes": ["Medium", "MedLar", "Large"],
     "flip": ["1"],
+    "clip": 4
 }
 diagram_commands["MinusCrossingChessboard"] = {
     "lines": [

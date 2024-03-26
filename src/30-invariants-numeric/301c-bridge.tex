@@ -1,15 +1,14 @@
 
 % DICTIONARY;bridge number;liczba mostowa;-
-\subsection{Liczba mostowa}
+\section{Liczba mostowa}
 \index{liczba mostowa|(}%
 
 Wprowadzona w~1954 przez Schuberta \cite{schubert1954}.
 \index[persons]{Schubert, Horst}%
 
 \begin{definition}
-    Niech $D$ będzie diagramem węzła $K$.
-    Liczbę mostów, czyli długich łuków, które biegną tylko przez nadskrzyżowania, nazywamy liczbą mostową diagramu $D$.
-    Minimalną liczbę mostową wśród wszystkich diagramów $D$ węzła $K$, $\bridge K$, nazywamy liczbą mostową węzła $K$.
+    Niech $L$ będzie splotem.
+    Minimalną liczbę mostów, czyli długich łuków, które biegną tylko przez nadskrzyżowania, jakie muszą się pojawić na diagramie, który przedstawia splot $L$ nazywamy liczbą mostową i oznaczamy krótko $\bridge L$.
 \end{definition}
 
 % źródło: https://knotinfo.math.indiana.edu/descriptions/bridge_index.html
@@ -39,9 +38,13 @@ Hilden, Montesinos, Tejada, Toro \cite{hilden2012} klasyfikują wszystkie węzł
 \index{węzeł!trzymostowy!see {liczba mostowa}}%
 \index{reprezentacja!motylkowa}%
 
-Węzły $n$-mostowe rozkładają się na sumę dwóch wymiernych $n$-supłów.
+\begin{proposition}
+    Węzły $n$-mostowe rozkładają się na sumę dwóch wymiernych $n$-supłów.
+\end{proposition}
 % źródło: Wiki Bridge_number, TODO: znaleźć lepsze źródło?
 \index{supeł!wymierny}%
+
+Co ciekawe, powyższe stwierdzenie nie pada nigdzie poza stroną \textsc{Bridge number} na angielskiej Wikipedii.
 
 \begin{proposition}
 \label{prp:bridge_additive}%

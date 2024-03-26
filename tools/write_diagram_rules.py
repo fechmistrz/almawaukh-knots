@@ -48,7 +48,7 @@ def generate_command(command_name, command_details):
         options.append("flip crossing/.list={" + ",".join(command_copy["flip"]) + "}")
 
     print(f"\\newcommand{{\\{command_name}}} {{\\begin{{tikzpicture}}[baseline=-0.65ex, scale={scale}]")
-    print(f"    \\begin{{knot}}[{', '.join(options)}])")
+    print(f"    \\begin{{knot}}[{', '.join(options)}]")
     for line in command_copy["lines"]:
         print("        " + line)
     # print("\\draw[thick,red,fill=red] (-0, 0) circle (3);")
