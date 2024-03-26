@@ -1,6 +1,6 @@
 
 % DICTIONARY;unknotting number;liczba gordyjska;-
-\subsection{Liczba gordyjska}
+\section{Liczba gordyjska}
 \index{liczba gordyjska|(}%
 
 \begin{definition}
@@ -10,6 +10,7 @@
 
 Zgodnie z ,,klasyczną'' definicją, między odwracaniem kolejnych skrzyżowań mamy prawo wykonać izotopie otaczające; natomiast zgodnie ze ,,standardową'' definicją, takie izotopie są zabronione.
 Obie definicje są równoważne: tłumaczy to książka Adamsa \cite[s. 58]{adams1994}.
+(Książka nie tłumaczy, czemu te dwie definicje zostały określone akurat takimi przymiotnikami.)
 
 \begin{lemma}
 \label{lem:unknotting_well_defined}%
@@ -38,20 +39,27 @@ Jego wyniki uogólnia praca Taniyamy \cite{taniyama2009}: dla każdego nietrywia
 \index[persons]{Taniyama, Kouki}%
 
 \begin{proposition}
-    Dla każdego $n \in \N$ istnieje diagram $D$ nietrywialnego splotu $L$ taki, że $\unknotting D \ge n$.
+    Niech $L$ będzie nietrywialnym splotem.
+    Dla każdej liczby naturalnej $n \in \N$ istnieje diagram $D$ splotu $L$ taki, że $\unknotting D \ge n$.
 \end{proposition}
 
 Pokazany jest tam jeszcze jeden godny uwagi fakt.
+Jeśli odwrócenie pewnych skrzyżowań daje niewęzeł, to odwrócenie pozostałych także.
+Zatem dla splotów $L$ o $n$ skrzyżowaniach mamy $2 \crossing L \le n$.
+Nie jest to zbyt pomocne, daje rozstrzygnięcie pięć razy dla pierwszych węzłów do 12 skrzyżowań: $3_{1}$, $5_{1}$, $7_{1}$, $9_{1}$, $11a_{367}$.
+Ale...
 
 \begin{proposition}
-    Jeśli liczba gordyjska diagramu $D$ wynosi $\frac 12 (\crossing D - 1)$, co jest maksymalną możliwą wartością zgodnie z~naszym prostym ograniczeniem, to węzeł jest $(2,p)$-torusowy albo wygląda jak diagram niewęzła po pierwszym ruchu Reidemeistera.
+    Jeśli liczba gordyjska diagramu $D$ węzła $K$ wynosi $\frac 12 (\crossing D - 1)$, to węzeł jest $(2,p)$-torusowy albo wygląda jak diagram niewęzła po pierwszym ruchu Reidemeistera.
 \end{proposition}
+
+W powyższym stwierdzeniu nie można zastąpić słowa ,,węzeł'' przez ,,splot''.
 
 \input{30-invariants-numeric/301ba-unknotting_one}
 
-\input{30-invariants-numeric/301bb-lower_bounds}
+\input{30-invariants-numeric/301bb-known_values}
 
-\input{30-invariants-numeric/301bc-known_values}
+\input{30-invariants-numeric/301bc-lower_bounds}
 
 \input{30-invariants-numeric/301bd-bleiler}
 
