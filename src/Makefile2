@@ -1,9 +1,13 @@
-all:
+all: wezly.pdf
+
+wezly.pdf: main.pdf
+	rsync main.pdf wezly.pdf
+
+main.pdf: */*.tex
 	lualatex -interaction=nonstopmode main
 	bibtex main
 	lualatex main
 	lualatex main
-	cp main.pdf wezly.pdf
 
 
 slow:

@@ -1,12 +1,12 @@
 
-\subsection{Długość sznurowa}
+\section{Długość sznurowa}
 \index{długość sznurowa|(}%
 % DICTIONARY;ropelength;długość sznurowa;-
 Matematyczne węzły nie mają grubości i można je dowolnie rozciągać.
 Długość sznurowa, najsłabiej poznany niezmiennik numeryczny, pochodzi z~fizycznej teorii węzłów, która bierze pod uwagę obiekty wykonane z~nieelastycznych materiałów.
 
 \begin{definition}
-    Niech $L$ będzie splotem o długości $l$ oraz grubości $\tau$: posiada rurowe otoczenie bez samoprzecięć z~przekrojem poprzecznym o~promieniu $\tau$.
+    Niech $L$ będzie splotem o długości $l$, który posiada rurowe otoczenie bez samoprzecięć z~przekrojem poprzecznym o~promieniu $\tau$ (mówimy, że $L$ ma grubość $\tau$).
     Iloraz
     \begin{equation}
         \ropelength L = \frac l \tau
@@ -27,11 +27,13 @@ Na początku XXI wieku wiedzieliśmy dzięki Cantarelli, Kusnerowi, Sullivanowi 
 \index[persons]{Sullivan, John}%
 \index[persons]{Diao, Yuanan}%
 
-Rozumowanie Denne, Diao, Sullivana \cite{denne2006} oparte o~czterosieczne pokazuje, że długość sznurowa nietrywialnego węzła wynosi co najmniej $15.66$.
+\begin{example}
+    Rozumowanie Denne, Diao, Sullivana \cite{denne2006} oparte o~czterosieczne pokazuje, że długość sznurowa nietrywialnego węzła wynosi co najmniej $15.66$.
 \index[persons]{Denne, Elizabeth}
 \index[persons]{Sullivan, John}
 \index[persons]{Diao, Yuanan}
 Ale eksperymenty komputerowe pokazują, że długość trójlistnika nie przekracza $16.372$, więc oszacowanie jest dość ostre.
+\end{example}
 
 Prowadzono obszerne poszukiwania na temat zależności między długością sznurową i~innymi niezmiennikami.
 Mamy na przykład:
@@ -41,25 +43,33 @@ Mamy na przykład:
 \end{proposition}
 
 Udowodniono, że dolnym ograniczeniem na czynnik $c_1$ jest $(4\pi/11)^{3/4} \approx 1.105$ (gdyż tak pisze Cantarella i~inni w~\cite[tw. 23]{cantarella2002}).
-Wiemy też dzięki Klotzowi i Maldonado \cite{klotz2021}, że stała $c_1$ nie może przekraczać $12.64$, w przeciwnym razie nierówność nie zachodziłaby dla węzła torusowego $T(3, 5)$.
+Wiemy też dzięki Klotzowi i Maldonado \cite{klotz2021}, że stała $c_1$ nie może przekraczać $12.64$, w przeciwnym razie nierówność nie zachodziłaby dla węzła torusowego $T_{3,5}$.
 \index[persons]{Klotz, Alexander}%
 \index[persons]{Maldonado, Matthew}%
+Dowód górnego ograniczenia opiera się na cyklach Hamiltona w~grafach zanurzonych w~kratach liczbowych (Yu \cite{yu2004}).
 
-Klotz, Maldonado \cite{klotz2021} piszą, że Diao dostał lepsze dolne ograniczenie (lepsze niż ,,3/4'') dla węzłów do 1850 skrzyżowań (!!!):
-\begin{equation}
-    \frac 12 \left(17.334 + \sqrt{17.334^2 + 64 \pi \crossing K}\right) \le \ropelength K.
-\end{equation}
+Obydwa ograniczenia poprawiono.
+Klotz, Maldonado \cite{klotz2021} piszą, że Diao dostał:
 
-Dowód górnego ograniczenia opiera się na cyklach Hamiltona w~grafach zanurzonych w~kratach liczbowych (Yu \cite{yu2004}) i również zostało później poprawione:
+\begin{proposition}
+    Niech $K$ będzie węzłem.
+    Wtedy
+    \begin{equation}
+        \frac 12 \left(17.334 + \sqrt{17.334^2 + 64 \pi \crossing K}\right) \le \ropelength K.
+    \end{equation}
+\end{proposition}
+
+To oszacowanie jest lepsze dla węzłów do 1850 skrzyżowań (chociaż nigdy nie widzieliśmy takiego potwora na własne oczy).
 
 % Ograniczenie to realizowane jest przez pewne węzły torusowe oraz sploty Hopfa. - wikipedia o c_1
 
 \begin{proposition}
-    $\ropelength K = O(\crossing K \cdot \log^5(\crossing K))$.
+    Niech $K$ będzie węzłem.
+    Wtedy $\ropelength K = O(\crossing K \cdot \log^5(\crossing K))$.
 \end{proposition}
 
-\begin{proof}
-    Świeży wynik Diao, Ernsta, Pora, Zieglera \cite{diao2019}, którego dowód wykorzystuje znowu kraty liczbowe.
+\begin{proof}[Niedowód]
+    Świeży wynik Diao, Ernsta, Pora, Zieglera \cite{diao2019}, którego dowód też wykorzystuje kraty liczbowe.
 \end{proof}
 
 Jakościowy wynik znaleźliśmy znowu w~\cite{klotz2021}: zachodzi $\ropelength L \le a_u \crossing K \log^5 \crossing K$ (nie tylko dla węzłów, ale też splotów), przy czym stała $a_u$ musi być większa od $8\pi/\log^5 2 \approx 78.5$, by dobrze ograniczała splot Hopfa.
