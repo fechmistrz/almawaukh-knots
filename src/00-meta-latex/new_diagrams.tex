@@ -59,24 +59,35 @@
 \newcommand{\SmallPlusCrossing} {\begin{tikzpicture}[baseline=-0.65ex, scale=0.03001]
     \begin{knot}[clip width=5, end tolerance=1pt]
         \useasboundingbox (-5, -5) rectangle (5, 5); % REMOVE ME
-        \strand[thick] (-5, -5) to (5, 5);
-        \strand[thick] (5, -5) to (-5, 5);
+        \strand[ultra thick] (-5, -5) to (5, 5);
+        \strand[ultra thick] (5, -5) to (-5, 5);
     \end{knot}
 \end{tikzpicture}}
 
 \newcommand{\MediumPlusCrossing} {\begin{tikzpicture}[baseline=-0.65ex, scale=0.06001]
     \begin{knot}[clip width=7, end tolerance=1pt]
         \useasboundingbox (-7, -5) rectangle (7, 5); % REMOVE ME
-        \strand[thick] (-5, -5) to (5, 5);
-        \strand[thick] (5, -5) to (-5, 5);
+        \strand[ultra thick] (-5, -5) to (5, 5);
+        \strand[ultra thick] (5, -5) to (-5, 5);
+    \end{knot}
+\end{tikzpicture}}
+
+\newcommand{\LargePlusCrossingColouring} {\begin{tikzpicture}[baseline=-0.65ex, scale=0.15001]
+    \begin{knot}[clip width=6, end tolerance=1pt]
+        \useasboundingbox (-7, -5) rectangle (7, 5); % REMOVE ME
+        \strand[ultra thick] (-5, -5) to (5, 5);
+        \strand[ultra thick] (5, -5) to (-5, 5);
+        \node[first_colour] at (5, 5)[below right] {$c$};
+        \node[first_colour] at (5, -5)[above right] {$b$};
+        \node[first_colour] at (-5, 5)[below left] {$a$};
     \end{knot}
 \end{tikzpicture}}
 
 \newcommand{\HugePlusCrossingColouring} {\begin{tikzpicture}[baseline=-0.65ex, scale=0.25001]
     \begin{knot}[clip width=12, end tolerance=1pt]
         \useasboundingbox (-7, -5) rectangle (7, 5); % REMOVE ME
-        \strand[thick] (-5, -5) to (5, 5);
-        \strand[thick] (5, -5) to (-5, 5);
+        \strand[ultra thick] (-5, -5) to (5, 5);
+        \strand[ultra thick] (5, -5) to (-5, 5);
         \node[first_colour] at (5, 5)[below right] {$c$};
         \node[first_colour] at (5, -5)[above right] {$b$};
         \node[first_colour] at (-5, 5)[below left] {$a$};
@@ -86,8 +97,8 @@
 \newcommand{\LargePlusCrossingLabel} {\begin{tikzpicture}[baseline=-0.65ex, scale=0.15001]
     \begin{knot}[clip width=6, end tolerance=1pt]
         \useasboundingbox (-7, -5) rectangle (7, 5); % REMOVE ME
-        \strand[thick,-latex] (-5, -5) to (5, 5);
-        \strand[thick,] (5, -5) to (-5, 5);
+        \strand[ultra thick,-latex] (-5, -5) to (5, 5);
+        \strand[ultra thick,] (5, -5) to (-5, 5);
         \node[first_colour] at (5, 5)[below right] {$g$};
         \node[first_colour] at (5, -5)[above right] {$h$};
         \node[first_colour] at (-5, 5)[below left] {$k$};
@@ -97,8 +108,8 @@
 \newcommand{\LargePlusCrossingMatrix} {\begin{tikzpicture}[baseline=-0.65ex, scale=0.15001]
     \begin{knot}[clip width=6, end tolerance=1pt]
         \useasboundingbox (-7, -5) rectangle (7, 5); % REMOVE ME
-        \strand[thick,] (-5, -5) to (5, 5);
-        \strand[thick,] (5, -5) to (-5, 5);
+        \strand[ultra thick,] (-5, -5) to (5, 5);
+        \strand[ultra thick,] (5, -5) to (-5, 5);
         \node[first_colour] at (5, 5)[below right] {$x_i$};
         \node[first_colour] at (5, -5)[above right] {$x_j$};
         \node[first_colour] at (-5, 5)[below left] {$x_k$};
@@ -132,16 +143,16 @@
 \newcommand{\SmallMinusCrossing} {\begin{tikzpicture}[baseline=-0.65ex, scale=0.03001]
     \begin{knot}[clip width=5, end tolerance=1pt, flip crossing/.list={1}]
         \useasboundingbox (-5, -5) rectangle (5, 5); % REMOVE ME
-        \strand[thick] (-5, -5) to (5, 5);
-        \strand[thick] (-5, 5) to (5, -5);
+        \strand[ultra thick] (-5, -5) to (5, 5);
+        \strand[ultra thick] (-5, 5) to (5, -5);
     \end{knot}
 \end{tikzpicture}}
 
 \newcommand{\MediumMinusCrossing} {\begin{tikzpicture}[baseline=-0.65ex, scale=0.06001]
     \begin{knot}[clip width=7, end tolerance=1pt, flip crossing/.list={1}]
         \useasboundingbox (-7, -5) rectangle (7, 5); % REMOVE ME
-        \strand[thick] (-5, -5) to (5, 5);
-        \strand[thick] (-5, 5) to (5, -5);
+        \strand[ultra thick] (-5, -5) to (5, 5);
+        \strand[ultra thick] (-5, 5) to (5, -5);
     \end{knot}
 \end{tikzpicture}}
 
@@ -193,8 +204,8 @@
 \newcommand{\LargeMinusCrossingQuandle} {\begin{tikzpicture}[baseline=-0.65ex, scale=0.15001]
     \begin{knot}[clip width=6, end tolerance=1pt, flip crossing/.list={1}]
         \useasboundingbox (-7, -5) rectangle (7, 5); % REMOVE ME
-        \strand[thick] (-5, -5) to (5, 5);
-        \strand[thick,latex-] (5, -5) to (-5, 5);\node[first_colour] at (5, 5)[below right] {$x \triangleright y$};
+        \strand[ultra thick] (-5, -5) to (5, 5);
+        \strand[ultra thick,latex-] (5, -5) to (-5, 5);\node[first_colour] at (5, 5)[below right] {$x \triangleright y$};
         \node[first_colour] at (-5, -5)[above left] {$x$};
         \node[first_colour] at (5, -5)[above right] {$y$};
     \end{knot}
@@ -203,8 +214,24 @@
 \newcommand{\HugeCrossingChessboardA} {\begin{tikzpicture}[baseline=-0.65ex, scale=0.25001]
     \begin{knot}[clip width=12, end tolerance=1pt, flip crossing/.list={1}]
         \useasboundingbox (-7, -5) rectangle (7, 5); % REMOVE ME
-        \strand[thick] (-5,5) to (5,-5);
-        \strand[thick] (-5,-5) to (5,5);
+        \strand[ultra thick] (-5,5) to (-0.7, 0.7);
+        \strand[ultra thick] (0.7,-0.7) to (5, -5);
+        \strand[ultra thick] (-5,-5) to (5,5);
+        \fill[diagramfiller] (-4, 5) to (0, 1) to (4, 5);
+        \fill[diagramfiller] (-4, -5) to (0, -1) to (4, -5);
+        \node[first_colour] at (-5, -5)[left] {$a$};
+        \node[first_colour] at (-5, +5)[left] {$b$};
+        \node[first_colour] at (+5, -5)[right] {$c$};
+        \node[first_colour] at (+5, +5)[right] {$a$};
+    \end{knot}
+\end{tikzpicture}}
+
+\newcommand{\LargeCrossingChessboardA} {\begin{tikzpicture}[baseline=-0.65ex, scale=0.15001]
+    \begin{knot}[clip width=6, end tolerance=1pt, flip crossing/.list={1}]
+        \useasboundingbox (-7, -5) rectangle (7, 5); % REMOVE ME
+        \strand[ultra thick] (-5,5) to (-0.7, 0.7);
+        \strand[ultra thick] (0.7,-0.7) to (5, -5);
+        \strand[ultra thick] (-5,-5) to (5,5);
         \fill[diagramfiller] (-4, 5) to (0, 1) to (4, 5);
         \fill[diagramfiller] (-4, -5) to (0, -1) to (4, -5);
         \node[first_colour] at (-5, -5)[left] {$a$};
@@ -217,8 +244,24 @@
 \newcommand{\HugeCrossingChessboardB} {\begin{tikzpicture}[baseline=-0.65ex, scale=0.25001]
     \begin{knot}[clip width=12, end tolerance=1pt, flip crossing/.list={1}]
         \useasboundingbox (-7, -5) rectangle (7, 5); % REMOVE ME
-        \strand[thick] (-5,5) to (5,-5);
-        \strand[thick] (-5,-5) to (5,5);
+        \strand[ultra thick] (-5,5) to (-0.7, 0.7);
+        \strand[ultra thick] (0.7,-0.7) to (5, -5);
+        \strand[ultra thick] (-5,-5) to (5,5);
+        \fill[diagramfiller] (5, -4) to (1, 0) to (5, 4);
+        \fill[diagramfiller] (-5, -4) to (-1, 0) to (-5, 4);
+        \node[first_colour] at (-5, -5)[left] {$a$};
+        \node[first_colour] at (-5, +5)[left] {$b$};
+        \node[first_colour] at (+5, -5)[right] {$c$};
+        \node[first_colour] at (+5, +5)[right] {$a$};
+    \end{knot}
+\end{tikzpicture}}
+
+\newcommand{\LargeCrossingChessboardB} {\begin{tikzpicture}[baseline=-0.65ex, scale=0.15001]
+    \begin{knot}[clip width=6, end tolerance=1pt, flip crossing/.list={1}]
+        \useasboundingbox (-7, -5) rectangle (7, 5); % REMOVE ME
+        \strand[ultra thick] (-5,5) to (-0.7, 0.7);
+        \strand[ultra thick] (0.7,-0.7) to (5, -5);
+        \strand[ultra thick] (-5,-5) to (5,5);
         \fill[diagramfiller] (5, -4) to (1, 0) to (5, 4);
         \fill[diagramfiller] (-5, -4) to (-1, 0) to (-5, 4);
         \node[first_colour] at (-5, -5)[left] {$a$};
@@ -231,9 +274,9 @@
 \newcommand{\MediumSingularCrossingArrows} {\begin{tikzpicture}[baseline=-0.65ex, scale=0.06001]
     \begin{knot}[clip width=7, end tolerance=1pt]
         \useasboundingbox (-7, -5) rectangle (7, 5); % REMOVE ME
-        \draw[thick,-latex] (-5, -5) to (5, 5);
-        \draw[thick,-latex] (5, -5) to (-5, 5);
-        \draw[thick,fill=black] (-0, 0) circle (0.5);
+        \draw[ultra thick,-latex] (-5, -5) to (5, 5);
+        \draw[ultra thick,-latex] (5, -5) to (-5, 5);
+        \draw[ultra thick,fill=black] (-0, 0) circle (0.5);
     \end{knot}
 \end{tikzpicture}}
 
@@ -481,8 +524,8 @@
     \begin{knot}[clip width=6, end tolerance=1pt]
         \useasboundingbox (-7, -5) rectangle (7, 5); % REMOVE ME
         \strand[ultra thick] (-5, 5)  [in=left, out=-60] to (3, -5) [in=down, out=right] to (5, 0);
-        \strand[ultra thick] (-5, -5) [in=left, out=60]  to (3, 5)  [in=up, out=right]   to (5, 0);\node[first_colour] at (-5, -5)[below] {$b \equiv a$};
-        \node[first_colour] at (-5,  5)[above] {$a$};
+        \strand[ultra thick] (-5, -5) [in=left, out=60]  to (3, 5)  [in=up, out=right]   to (5, 0);\node[first_colour] at (-5, -4)[left] {$b \equiv a$};
+        \node[first_colour] at (-5,  4)[left] {$a$};
     \end{knot}
 \end{tikzpicture}}
 
@@ -538,9 +581,9 @@
 
 \newcommand{\LargeReidemeisterOneStraightProof} {\begin{tikzpicture}[baseline=-0.65ex, scale=0.15001]
     \begin{knot}[clip width=6, end tolerance=1pt]
-        \useasboundingbox (-2, -5) rectangle (2, 5); % REMOVE ME
-        \strand[thick] (0, -5) to (0, 5);
-        \node[first_colour] at (0,  0)[left] {$a$};
+        \useasboundingbox (-1, -5) rectangle (3, 5); % REMOVE ME
+        \strand[ultra thick] (0, -5) to (0, 5);
+        \node[first_colour] at (1,  0)[right] {$a$};
     \end{knot}
 \end{tikzpicture}}
 
@@ -624,12 +667,12 @@
 \end{tikzpicture}}
 
 \newcommand{\LargeReidemeisterThreeColouringA} {\begin{tikzpicture}[baseline=-0.65ex, scale=0.15001]
-    \begin{knot}[clip width=6, end tolerance=1pt, flip crossing/.list={1,2,3}]
-        \useasboundingbox (-10, -7) rectangle (10, 7); % REMOVE ME
-        \strand[thick] (-5, -5) -- (5, 5);
-        \strand[thick] (-5, 5) -- (5, -5);
-        \strand[thick] (-5, 0) to [in=left, out=right] (0, 5);
-        \strand[thick] (5, 0) to [in=right, out=left] (0, 5);
+    \begin{knot}[clip width=5, end tolerance=1pt, flip crossing/.list={1,2,3}]
+        \useasboundingbox (-10, -8) rectangle (10, 8); % REMOVE ME
+        \strand[ultra thick] (-5, -5) -- (5, 5);
+        \strand[ultra thick] (-5, 5) -- (5, -5);
+        \strand[ultra thick] (-5, 0) to [in=left, out=right] (0, 5);
+        \strand[ultra thick] (5, 0) to [in=right, out=left] (0, 5);
         \node[first_colour] at (-5, 4) [left] {$b$};
         \node[first_colour] at (5, 4) [right] {$c$};
         \node[first_colour] at (-5, 0) [left] {$a$};
@@ -641,12 +684,12 @@
 \newcommand{\LargeReidemeisterThreeQuandleA} {\begin{tikzpicture}[baseline=-0.65ex, scale=0.15001]
     \begin{knot}[clip width=7, end tolerance=1pt, flip crossing/.list={1}]
         \useasboundingbox (-7, -5) rectangle (20, 7); % REMOVE ME
-        \strand[thick] (-5, -5)  -- (4, 4);
-        \strand[thick,-latex] (4, 4) to (5, 5);\strand[thick] (-5, 5) -- (4, -4);
-        \strand[thick,-latex] (-4, 4) to (5, -5);
-        \strand[thick] (-5, 0) to [in=left, out=right] (0, 4);
-        \strand[thick] (5, 0) to [in=right, out=left] (0, 4);
-        \strand[thick,-latex] (5, 0) to (6, 0);\node[first_colour] at (-5, 4) [ left] {$z$};
+        \strand[ultra thick] (-5, -5)  -- (4, 4);
+        \strand[ultra thick,-latex] (4, 4) to (5, 5);\strand[ultra thick] (-5, 5) -- (4, -4);
+        \strand[ultra thick,-latex] (-4, 4) to (5, -5);
+        \strand[ultra thick] (-5, 0) to [in=left, out=right] (0, 4);
+        \strand[ultra thick] (5, 0) to [in=right, out=left] (0, 4);
+        \strand[ultra thick,-latex] (5, 0) to (6, 0);\node[first_colour] at (-5, 4) [ left] {$z$};
         \node[first_colour] at (-5, 0) [left] {$y$};
         \node[first_colour] at (-5, -4) [ left] {$x$};
         \node[first_colour] at (0, 4) [above] {$y \triangleright z$};
@@ -657,12 +700,12 @@
 \newcommand{\LargeReidemeisterThreeQuandleB} {\begin{tikzpicture}[baseline=-0.65ex, scale=0.15001]
     \begin{knot}[clip width=7, end tolerance=1pt, flip crossing/.list={1}]
         \useasboundingbox (-7, -5) rectangle (15, 7); % REMOVE ME
-        \strand[thick] (-5, -5)  -- (4, 4);
-        \strand[thick,-latex] (4, 4) to (5, 5);\strand[thick] (-5, 5) -- (4, -4);
-        \strand[thick,-latex] (-4, 4) to (5, -5);
-        \strand[thick] (-5, 0) to [in=left, out=right] (0, -4);
-        \strand[thick] (5, 0) to [in=right, out=left] (0, -4);
-        \strand[thick,-latex] (5, 0) to (6, 0);\node[first_colour] at (-5, 4) [ left] {$z$};
+        \strand[ultra thick] (-5, -5)  -- (4, 4);
+        \strand[ultra thick,-latex] (4, 4) to (5, 5);\strand[ultra thick] (-5, 5) -- (4, -4);
+        \strand[ultra thick,-latex] (-4, 4) to (5, -5);
+        \strand[ultra thick] (-5, 0) to [in=left, out=right] (0, -4);
+        \strand[ultra thick] (5, 0) to [in=right, out=left] (0, -4);
+        \strand[ultra thick,-latex] (5, 0) to (6, 0);\node[first_colour] at (-5, 4) [ left] {$z$};
         \node[first_colour] at (-5, 0) [left] {$y$};
         \node[first_colour] at (-5, -4) [ left] {$x$};
         \node[first_colour] at (5, 4) [right] {$(x \triangleright y) \triangleright z$};
@@ -670,12 +713,12 @@
 \end{tikzpicture}}
 
 \newcommand{\LargeReidemeisterThreeColouringB} {\begin{tikzpicture}[baseline=-0.65ex, scale=0.15001]
-    \begin{knot}[clip width=7, end tolerance=1pt, flip crossing/.list={1,2,3}]
-        \useasboundingbox (-10, -7) rectangle (10, 7); % REMOVE ME
-        \strand[thick] (-5, -5) -- (5, 5);
-        \strand[thick] (-5, 5) -- (5, -5);
-        \strand[thick] (-5, 0) to [in=left, out=right] (0, -5);
-        \strand[thick] (5, 0) to [in=right, out=left] (0, -5);
+    \begin{knot}[clip width=5, end tolerance=1pt, flip crossing/.list={1,2,3}]
+        \useasboundingbox (-10, -8) rectangle (10, 6); % REMOVE ME
+        \strand[ultra thick] (-5, -5) -- (5, 5);
+        \strand[ultra thick] (-5, 5) -- (5, -5);
+        \strand[ultra thick] (-5, 0) to [in=left, out=right] (0, -5);
+        \strand[ultra thick] (5, 0) to [in=right, out=left] (0, -5);
         \node[first_colour] at (-5, 4) [left] {$b$};
         \node[first_colour] at (5, 4) [right] {$c$};
         \node[first_colour] at (5, 0) [right] {$a$};
@@ -707,58 +750,58 @@
 \newcommand{\LargeVirtualReidemeisterThreeA} {\begin{tikzpicture}[baseline=-0.65ex, scale=0.15001]
     \begin{knot}[clip width=7, end tolerance=1pt, flip crossing/.list={1,2}]
         \useasboundingbox (-7, -5) rectangle (7, 5); % REMOVE ME
-        \strand[thick,latex-] (-5, -5) to (-4, -4);
-        \strand[thick] (-4, -4) to (-0.25, -0.25);
-        \strand[thick] (0.25, 0.25) to (5, 5);
-        \strand[thick,-latex] (-4, 4) to (-5, 5);
-        \strand[thick] (5, -5) to (0.25, -0.25);
-        \strand[thick] (-0.25, 0.25) to (-4, 4);
-        \strand[thick,-latex] (5, 0) to (4, 0);
-        \strand[thick] (-5, 0) [in=left, out=right] to (-4, 0) to (0, 5) to (4, 0);
-        \draw[thick,fill=black] (0, 0) circle (0.5);
+        \strand[ultra thick,latex-] (-5, -5) to (-4, -4);
+        \strand[ultra thick] (-4, -4) to (-0.25, -0.25);
+        \strand[ultra thick] (0.25, 0.25) to (5, 5);
+        \strand[ultra thick,-latex] (-4, 4) to (-5, 5);
+        \strand[ultra thick] (5, -5) to (0.25, -0.25);
+        \strand[ultra thick] (-0.25, 0.25) to (-4, 4);
+        \strand[ultra thick,-latex] (5, 0) to (4, 0);
+        \strand[ultra thick] (-5, 0) [in=left, out=right] to (-4, 0) to (0, 5) to (4, 0);
+        \draw[ultra thick,fill=black] (0, 0) circle (0.5);
     \end{knot}
 \end{tikzpicture}}
 
 \newcommand{\LargeVirtualReidemeisterThreeB} {\begin{tikzpicture}[baseline=-0.65ex, scale=0.15001]
     \begin{knot}[clip width=7, end tolerance=1pt, flip crossing/.list={1,2}]
         \useasboundingbox (-7, -5) rectangle (7, 5); % REMOVE ME
-        \strand[thick,latex-] (-5, -5) to (-4, -4);
-        \strand[thick] (-4, -4) to (-0.25, -0.25);
-        \strand[thick] (0.25, 0.25) to (5, 5);
-        \strand[thick,-latex] (-4, 4) to (-5, 5);
-        \strand[thick] (5, -5) to (0.25, -0.25);
-        \strand[thick] (-0.25, 0.25) to (-4, 4);
-        \strand[thick,-latex] (5, 0) to (4, 0);
-        \strand[thick] (-5, 0) [in=left, out=right] to (-4, 0) to (0, -5) to (4, 0);
-        \draw[thick,fill=black] (0, 0) circle (0.5);
+        \strand[ultra thick,latex-] (-5, -5) to (-4, -4);
+        \strand[ultra thick] (-4, -4) to (-0.25, -0.25);
+        \strand[ultra thick] (0.25, 0.25) to (5, 5);
+        \strand[ultra thick,-latex] (-4, 4) to (-5, 5);
+        \strand[ultra thick] (5, -5) to (0.25, -0.25);
+        \strand[ultra thick] (-0.25, 0.25) to (-4, 4);
+        \strand[ultra thick,-latex] (5, 0) to (4, 0);
+        \strand[ultra thick] (-5, 0) [in=left, out=right] to (-4, 0) to (0, -5) to (4, 0);
+        \draw[ultra thick,fill=black] (0, 0) circle (0.5);
     \end{knot}
 \end{tikzpicture}}
 
 \newcommand{\LargeVirtualReidemeisterThreeC} {\begin{tikzpicture}[baseline=-0.65ex, scale=0.15001]
     \begin{knot}[clip width=7, end tolerance=1pt]
         \useasboundingbox (-7, -5) rectangle (7, 5); % REMOVE ME
-        \strand[thick,latex-] (-5, -5) to (-4, -4);
-        \strand[thick] (-4, -4) to (-0.25, -0.25);
-        \strand[thick] (0.25, 0.25) to (5, 5);
-        \strand[thick,-latex] (-4, 4) to (-5, 5);
-        \strand[thick] (5, -5) to (0.25, -0.25);
-        \strand[thick] (-0.25, 0.25) to (-4, 4);
-        \strand[thick,-latex] (5, 0) to (4, 0);\strand[thick] (-5, 0) [in=left, out=right] to (-4, 0) to (0, 5) to (4, 0);
-        \draw[thick,fill=black] (0, 0) circle (0.5);
+        \strand[ultra thick,latex-] (-5, -5) to (-4, -4);
+        \strand[ultra thick] (-4, -4) to (-0.25, -0.25);
+        \strand[ultra thick] (0.25, 0.25) to (5, 5);
+        \strand[ultra thick,-latex] (-4, 4) to (-5, 5);
+        \strand[ultra thick] (5, -5) to (0.25, -0.25);
+        \strand[ultra thick] (-0.25, 0.25) to (-4, 4);
+        \strand[ultra thick,-latex] (5, 0) to (4, 0);\strand[ultra thick] (-5, 0) [in=left, out=right] to (-4, 0) to (0, 5) to (4, 0);
+        \draw[ultra thick,fill=black] (0, 0) circle (0.5);
     \end{knot}
 \end{tikzpicture}}
 
 \newcommand{\LargeVirtualReidemeisterThreeD} {\begin{tikzpicture}[baseline=-0.65ex, scale=0.15001]
     \begin{knot}[clip width=7, end tolerance=1pt]
         \useasboundingbox (-7, -5) rectangle (7, 5); % REMOVE ME
-        \strand[thick,latex-] (-5, -5) to (-4, -4);
-        \strand[thick] (-4, -4) to (-0.25, -0.25);
-        \strand[thick] (0.25, 0.25) to (5, 5);
-        \strand[thick,-latex] (-4, 4) to (-5, 5);
-        \strand[thick] (5, -5) to (0.25, -0.25);
-        \strand[thick] (-0.25, 0.25) to (-4, 4);
-        \strand[thick,-latex] (5, 0) to (4, 0);\strand[thick] (-5, 0) [in=left, out=right] to (-4, 0) to (0, -5) to (4, 0);
-        \draw[thick,fill=black] (0, 0) circle (0.5);
+        \strand[ultra thick,latex-] (-5, -5) to (-4, -4);
+        \strand[ultra thick] (-4, -4) to (-0.25, -0.25);
+        \strand[ultra thick] (0.25, 0.25) to (5, 5);
+        \strand[ultra thick,-latex] (-4, 4) to (-5, 5);
+        \strand[ultra thick] (5, -5) to (0.25, -0.25);
+        \strand[ultra thick] (-0.25, 0.25) to (-4, 4);
+        \strand[ultra thick,-latex] (5, 0) to (4, 0);\strand[ultra thick] (-5, 0) [in=left, out=right] to (-4, 0) to (0, -5) to (4, 0);
+        \draw[ultra thick,fill=black] (0, 0) circle (0.5);
     \end{knot}
 \end{tikzpicture}}
 
@@ -798,15 +841,15 @@
 
 \newcommand{\LargeReidemeisterTwoColouringA} {\begin{tikzpicture}[baseline=-0.65ex, scale=0.15001]
     \begin{knot}[clip width=6, end tolerance=1pt]
-        \useasboundingbox (-3.5, -5) rectangle (3.5, 5); % REMOVE ME
-        \strand[thick] (-2.5, 5) to [in=up, out=down] (2.5, 0);
-        \strand[thick] (-2.5, -5) to [in=down, out=up] (2.5, 0);
-        \strand[thick] (2.5, 5) to [in=up, out=down] (-2.5, 0);
-        \strand[thick] (2.5, -5) to [in=down, out=up] (-2.5, 0);
-        \node[first_colour] at (-4, -2.5)[left] {$d \equiv b$};
-        \node[first_colour] at (4, 2.5)[right] {$a$};
-        \node[first_colour] at (4, 0) [right] {$c \equiv 2a-b$};
-        \node[first_colour] at (-4, 2.5) [left] {$b$};
+        \useasboundingbox (-10, -5) rectangle (15.5, 5); % REMOVE ME
+        \strand[ultra thick] (-2.5, 5) to [in=up, out=down] (2.5, 0);
+        \strand[ultra thick] (-2.5, -5) to [in=down, out=up] (2.5, 0);
+        \strand[ultra thick] (2.5, 5) to [in=up, out=down] (-2.5, 0);
+        \strand[ultra thick] (2.5, -5) to [in=down, out=up] (-2.5, 0);
+        \node[first_colour] at (-2.5, 0) [left] {$2b-a$};
+        \node[first_colour] at (2.5, 4) [right] {$a$};
+        \node[first_colour] at (2.5, -4) [right] {$2b-(2b-a)$};
+        \node[first_colour] at (-2.5, 4) [left] {$b$};
     \end{knot}
 \end{tikzpicture}}
 
@@ -839,6 +882,30 @@
         \strand[ultra thick] (-2.5, -5) to [in=down, out=up] (-1, 0);
         \strand[ultra thick] (2.5, 5) to [in=up, out=down] (1, 0);
         \strand[ultra thick] (2.5, -5) to [in=down, out=up] (1, 0);
+    \end{knot}
+\end{tikzpicture}}
+
+\newcommand{\LargeReidemeisterTwoColouringB} {\begin{tikzpicture}[baseline=-0.65ex, scale=0.15001]
+    \begin{knot}[clip width=6, end tolerance=1pt]
+        \useasboundingbox (-3.5, -5) rectangle (3.5, 5); % REMOVE ME
+        \strand[ultra thick] (-2.5, 5) to [in=up, out=down] (-1, 0);
+        \strand[ultra thick] (-2.5, -5) to [in=down, out=up] (-1, 0);
+        \strand[ultra thick] (2.5, 5) to [in=up, out=down] (1, 0);
+        \strand[ultra thick] (2.5, -5) to [in=down, out=up] (1, 0);
+        \node[first_colour] at (2.5, 4) [right] {$a$};
+        \node[first_colour] at (-2.5, 4) [left] {$b$};
+    \end{knot}
+\end{tikzpicture}}
+
+\newcommand{\MedLarReidemeisterTwoColouringB} {\begin{tikzpicture}[baseline=-0.65ex, scale=0.13]
+    \begin{knot}[clip width=5, end tolerance=1pt]
+        \useasboundingbox (-3.5, -5) rectangle (3.5, 5); % REMOVE ME
+        \strand[ultra thick] (-2.5, 5) to [in=up, out=down] (-1, 0);
+        \strand[ultra thick] (-2.5, -5) to [in=down, out=up] (-1, 0);
+        \strand[ultra thick] (2.5, 5) to [in=up, out=down] (1, 0);
+        \strand[ultra thick] (2.5, -5) to [in=down, out=up] (1, 0);
+        \node[first_colour] at (2.5, 4) [right] {$a$};
+        \node[first_colour] at (-2.5, 4) [left] {$b$};
     \end{knot}
 \end{tikzpicture}}
 

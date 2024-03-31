@@ -1,12 +1,18 @@
 
-Opisane w poprzednim rozdziale niezmienniki, takie jak liczba gordyjska czy liczba mostowa, pozwalają na odróżnienie od siebie niektórych węzłów, jednak wyznaczanie ich wartości nie jest łatwym zadaniem.
-Dlatego nie potrafimy jeszcze uzasadnić, że istnieje jakikolwiek nietrywialny węzeł.
-Zmieni się to teraz: poznamy kolorowania, niezmienniki splotów powstałe z diagramów, gdzie każde włókno występuje w jednym z trzech kolorów.
 
-Następnie rozszerzymy paletę z trzech do skończenie wielu kolorów, by później zastąpić ją dowolną nieprzemienną grupą skończoną.
-Nawet ten ostatni wariant kolorowania nie stanowi idealnego narzędzia do klasyfikacji węzłów.
-Mówimy, że nie jest zupeły: istnieją różne węzły, którym przypisuje te same wartości, czyli ich nie odróżnia.
-Problem ten będzie powtarzać się dla prawie wszystkich późniejszych niezmienników, z wyjątkiem dopiero całki Koncewicza (patrz sekcja \ref{sec:vassiliev}).
+Cztery cechy węzłów poznane w poprzednim rozdziale: liczba gordyjska, mostowa i patykowa oraz indeks skrzyżowaniowy są dla nas kompletnie bezużyteczne.
+Ich użyteczność dla nas jest ograniczona, bo nie widać wcale, jak wyznaczyć wartość którejkolwiek z~nich.
+Dlatego teraz wprowadzimy 3-kolorowania z którym nie dość, że będziemy odróżniać pewne węzły od niewęzła, to jeszcze odróżnimy te węzły od siebie!
+
+Splot nazywamy 3-kolorowalnym, jeżeli jego włókna dają się pokolorować trzema barwami tak, by nie złamać magicznych reguł (które podamy).
+Nie potrzeba przewidującej przyszłość kuli, żeby wpaść na pomysł rozszerzenia palety do większej liczby barw.
+Dalej uogólniać można na dwa sposoby: albo zastępujac kolory elementami nieprzemiennej grupy (i dostać etykietowania), albo zamiast zliczać kolorowania zbadać relacje między nimi.
+Wstęp nie jest miejscem na tłumaczenie detali, więc wspomnimy krótko, że grupy $\Z/p\Z \oplus \Z/p\Z$ oraz $\Z/p^2 \Z$ są równoliczne, ale nie izomorficzne, bo tylko jedna z nich jest cykliczna.
+
+Ani kolorowanie, ani etykietowanie nie są zupełne: to znaczy istnieją węzły, których nie potrafią od siebie odróżnić.
+Wszystkie niezmienniki poza całką Koncewicza na pewno mają tę wadę.
+Całka Koncewicza (opisana w sekcji \ref{sec:vassiliev}) być może też jest wadliwa.
+Nie wiadomo.
 
 \section{Kolorowanie splotów}
 \index{kolorowalność|(}%
@@ -25,15 +31,37 @@ Jest to pewna cecha diagramów, którą można posiadać albo nie.
     to mówimy, że diagram $D$ jest trójkolorowalny.
 \end{definition}
 
- Splot posiadający trójkolorowalny diagram nazywamy krótko trójkolorowalnym.
+Splot posiadający trójkolorowalny diagram nazywamy krótko trójkolorowalnym.
+Często można spotkać się też z trójkolorowalność Foxa, szczególnie w anglojęzycznych materiałach, ale my nie czujemy potrzeby używania długiej nazwy.
 
-\begin{example}
-    Trójlistnik jest trójkolorowalny, niewęzeł nie jest.
-    Węzły te są zatem od siebie różne.
-\end{example}
+\begin{examplenosquare}
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit felis nec sollicitudin scelerisque. Etiam odio urna, faucibus eget sodales a, sollicitudin ut odio. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed metus urna, vehicula eu efficitur quis, interdum pellentesque tellus. Vestibulum ex neque, sagittis nec hendrerit a,~eleifend vitae ligula. Donec ut erat erat.
+    \begin{figure}[H]
+        \begin{minipage}[b]{.14\linewidth}
+            {\hfill\color{white}.}
+        \end{minipage}
+        \begin{minipage}[b]{.35\linewidth}
+            \centering
+            \includegraphics[height=2.2cm]{../data/fox-coloring/3_1.png}
+            \subcaption{trójlistnik jest 3-kolorowalny,}
+        \end{minipage}
+        \begin{minipage}[b]{.35\linewidth}
+            \centering
+            \includegraphics[height=2.2cm]{../data/knots/0_1.png}
+            \subcaption{niewęzeł nie jest 3-kolorowalny.}
+        \end{minipage}
+        \begin{minipage}[b]{.14\linewidth}
+            \hfill {\tiny\ensuremath{\blacksquare}}
+        \end{minipage}
+    \end{figure}
+\end{examplenosquare}
 
-Dla wygody jako kolorów używać będziemy kolejnych liczb naturalnych $0, 1, \ldots, n-1$.
-Pozwala to zapisać warunek kolorowalności równaniem algebraicznym, niezależnie od ilości użytych kolorów.
+Tak naprawdę pokazaliśmy tylko, że niewęzeł ma niekolorowalny diagram, ale czy nie może on mieć innego diagramu, który jest kolorowalny?
+Nie może, co wynika bezpośrednio z~faktu \ref{prp:colouring_invariance}.
+
+Dla wygody jako kolorów używać będziemy kolejnych liczb naturalnych $0, 1, \ldots, n-1$
+(przez ostatnią stronę mieliśmy $n = 3$).
+Pozwala to zapisać warunek ,,być kolorowalnym'' równaniem algebraicznym, niezależnie od ilości użytych kolorów.
 
 \begin{definition}[kolorowanie]
 \index{równanie kolorujące}%
@@ -46,16 +74,16 @@ Pozwala to zapisać warunek kolorowalności równaniem algebraicznym, niezależn
     \end{enumerate}
 \begin{comment}
     \[
-        \HugePlusCrossingColouring
+        \LargePlusCrossingColouring
     \]
 \end{comment}
     Takie przyporządkowanie nazywamy kolorowaniem.
 \end{definition}
 
-Metoda ta została odkryta razem z~uogólnieniem do $n$ kolorów przez Ralpha Foxa w~1956, kiedy próbował uczynić teorię węzłów bardziej przystępną dla studentów.
-Opierając się na definicji oraz ruchach Reidemeistera możemy wykazać pierwsze własności kolorowań.
-
-Kolorowanie nazywamy trywialnym, jeśli używa tylko jednego koloru.
+Nie potrafimy ustalić, kto pierwszy napisał jawnie równanie ,,$a + b \equiv 2c$ modulo $n$'' myśląc o~kolorowaniach.
+Być może był to Ralph Fox, który około 1956 roku chciał uczynić teorię węzłów bardziej przystępną dla studentów koledżu Haverford w Pensylwanii; on jednak nie pisał ,,trójkolorowalne węzły'', tylko ,,węzły z własnością L''.
+(Znaczenia litery L także nie potrafimy ustalić).
+Ale nie wolno zapominać, że już Reidemeister rozpatrywał reprezentacje grupy węzła $\pi$ na grupę diedralną $D_{2n}$.
 
 \begin{proposition}
 \label{prp:colouring_invariance}%
@@ -63,21 +91,23 @@ Kolorowanie nazywamy trywialnym, jeśli używa tylko jednego koloru.
 \end{proposition}
 
 \begin{proof}
-    Wystarczy sprawdzić, jak ruchy Reidemeistera zmieniają kolory.
-    Pierwszy i~drugi:
+    Po przypisaniu kolorów górnym włóknom widzimy, że kolory wszystkich pozostałych włókien są wymuszone przez równanie kolorujące przy kolejnych skrzyżowaniach.
+    Dlatego sprawdzimy, że wykonanie dowolnego ruchu Reidemeistera nie psuje kolorowalności reszty diagramu.
+    
+    Zacznijmy od ruchu pierwszego i~drugiego:
 \begin{comment}
     \begin{figure}[H]
     \centering
     %
-    \begin{minipage}[b]{.45\linewidth}
+    \begin{minipage}[b]{.4\linewidth}
         \[
             \LargeReidemeisterOneLeftProof \stackrel{R_1}{\cong} \LargeReidemeisterOneStraightProof
         \]
     \end{minipage}
     %
-    \begin{minipage}[b]{.45\linewidth}
+    \begin{minipage}[b]{.5\linewidth}
         \[
-            \LargeReidemeisterTwoColouringA \stackrel{R_2}{\cong} \LargeReidemeisterTwoB
+            \LargeReidemeisterTwoColouringA \stackrel{R_2}{\cong} \LargeReidemeisterTwoColouringB
         \]
     \end{minipage}
     \end{figure}
@@ -87,14 +117,14 @@ Kolorowanie nazywamy trywialnym, jeśli używa tylko jednego koloru.
 \begin{comment}
     \[
         \LargeReidemeisterThreeColouringA \cong \LargeReidemeisterThreeColouringB
-        \qedhere
     \]
 \end{comment}
+    Ponownie wykonianie ruchu Reidemeistera nie zmienia kolorów dolnych włókien.
 \end{proof}
 
 Trójlistnik koloruje się dokładnie modulo krotności trójki, ósemka zaś -- piątki.
 Sama kolorowalność nie mówi wiele, splot jest kolorowalny lub nie.
-Dowód faktu \ref{prp:colouring_invariance} pokazuje coś więcej: liczba kolorowań, być może trywialnych, jest mocniejszym niezmiennikiem.
+Dowód faktu \ref{prp:colouring_invariance} pokazuje coś więcej: liczba kolorowań, być może trywialnych (czyli takich, gdzie użyto tylko jednego koloru), jest mocniejszym niezmiennikiem.
 
 \begin{lemma}
 \label{lem:colouring_arc}%
@@ -143,9 +173,12 @@ Będziemy potrzebować pomocniczej definicji.
 
 \begin{definition}[uszachowienie]
 \index{uszachowienie}%
-    Diagram rozcina płaszczyznę na obszary.
-    Przyporządkowanie im jednego z~dwóch kolorów tak, by sąsiadujące ze sobą obszary były zawsze różnych kolorów, nazywamy uszachowieniem diagramu.
+    Niech $D$ będzie ustalonym diagramem splotu $L$.
+    Jego dopełnienie do płaszczyzny składa się z rozłącznych obszarów.
+    Pomalowanie niektórych obszarów tak, żeby każda nić leżała na brzegu dokładnie jednego kolorowego obszaru, nazywamy uszachowieniem diagramu $D$.
 \end{definition}
+
+Dla oszczędności tuszu w drukarce zazwyczaj zaczyna się od białej płaszczyzny i używa szarego do kolorowania, ale w tej książce wszędzie, gdzie to tylko możliwe, obecny jest różowy i uszachowienia nie będą stanowić wyjątku.
 
 Ustalmy węzeł $K$ oraz dowolne uszachowienie dla jego diagramu.
 Skojarzmy z~każdym skrzyżowaniem równanie kolorujące, zgodnie z~poniższym schematem:
@@ -153,13 +186,13 @@ Skojarzmy z~każdym skrzyżowaniem równanie kolorujące, zgodnie z~poniższym s
 \begin{figure}[H]
     \begin{minipage}[b]{.48\linewidth}
     \[
-        \HugeCrossingChessboardA
+        \LargeCrossingChessboardA
     \]
     \subcaption{$+a-b+a-c=0 \mod n$}
     \end{minipage}
     \begin{minipage}[b]{.48\linewidth}
     \[
-        \HugeCrossingChessboardB
+        \LargeCrossingChessboardB
     \]
     \subcaption{$-a+b-a+c=0 \mod n$}
     \end{minipage}
@@ -181,20 +214,24 @@ Skojarzmy z~każdym skrzyżowaniem równanie kolorujące, zgodnie z~poniższym s
 Liczbę kolorowań splotu $L$ modulo $n$, trywialnych lub nie, oznaczamy przez $\tau_n(L)$.
 
 \begin{proposition}
-    Jeśli $K, L$ są węzłami, to $3\tau_3(K \shrap L) = \tau_3(K)\tau_3(L)$.
+    Niech $K_1, K_2$ będą węzłami.
+    Wtedy 
+    \begin{equation}
+        \frac{\tau_3(K_1 \shrap K_2)}{3} = \frac{\tau_3(K_1)}{3} \cdot \frac{\tau_3(K_2)}{3}.
+    \end{equation}
 \end{proposition}
 
 \begin{corollary}
     Istnieje nieskończenie wiele węzłów.
 \end{corollary}
 
-Zdefiniujemy później węzły pierwsze i pokażemy (fakt \ref{prop:infinite_prime_knots_1}), że ich też jest nieskończenie wiele.
-
 \begin{proof}
     Suma spójna $n$ trójlistników ma $3^{n+1}$, trywialnych lub nie, $3$-kolorowań.
 \end{proof}
 
-Dotychczas kolorowaliśmy diagramy węzłów liczbami $0, 1, 2, \ldots, n-1$, czyli elementami grupy $\Z/n\Z$, ale nic nie stoi na przeszkodzie, żeby próbować użyć dowolnej innej skończonej grupy.
+Niskowymiarowa topologia byłaby miałka, gdyby źródłem nieskończoności węzłów była tylko operacja $\shrap$.
+O wielu niezmiennikach węzłów złożonych podejrzewamy albo wiemy, że wyrażają się w terminach mniejszych węzłów pierwszych, oprócz wspomnianej tu liczby kolorowań mamy hipotezy \ref{con:crossing_additive}, \ref{conjecture_unknotting_additive}, nienazwane oszacowanie na stronie \pageref{stick_bounded_factors}, fakty \ref{lem:det_multiplicativ}, \ref{prp:alexander_multiplicative}, \ref{prp:homfly_and_shraps}, \ref{prp:genus_of_sum}, \ref{prp:signature_additive}, \ref{cor:arf_adds}.
+Na szczęście fakt \ref{prop:infinite_prime_knots_1} głosi, że węzłów pierwszych też jest nieskończenie wiele; po prostu jesteśmy jeszcze za głupi, aby podać jego dowód.
 
 % Koniec sekcji Kolorowanie splotów
 

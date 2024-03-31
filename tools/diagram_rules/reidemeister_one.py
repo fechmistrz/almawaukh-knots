@@ -11,8 +11,8 @@ diagram_commands["ReidemeisterOneLeftProof"] = {
     "lines": [
         "\\strand[ultra thick] (-5, 5)  [in=left, out=-60] to (3, -5) [in=down, out=right] to (5, 0);",
         "\\strand[ultra thick] (-5, -5) [in=left, out=60]  to (3, 5)  [in=up, out=right]   to (5, 0);"
-        "\\node[first_colour] at (-5, -5)[below] {$b \\equiv a$};",
-        "\\node[first_colour] at (-5,  5)[above] {$a$};",
+        "\\node[first_colour] at (-5, -4)[left] {$b \\equiv a$};",
+        "\\node[first_colour] at (-5,  4)[left] {$a$};",
     ],
     "sizes": ["Large"],
 }
@@ -56,11 +56,11 @@ diagram_commands["ReidemeisterOneStraight"] = {
 }
 diagram_commands["ReidemeisterOneStraightProof"] = {
     "lines": [
-        "\\strand[thick] (0, -5) to (0, 5);",
-        "\\node[first_colour] at (0,  0)[left] {$a$};",
+        "\\strand[ultra thick] (0, -5) to (0, 5);",
+        "\\node[first_colour] at (1,  0)[right] {$a$};",
     ],
     "sizes": ["Large"],
-    "bounding": [-2, -5, 2, 5],
+    "bounding": [-1, -5, 3, 5],
 }
 diagram_commands["ReidemeisterOneStraightQuandleProof"] = {
     "lines": [

@@ -676,6 +676,7 @@
 
 \newenvironment{definition}{\begin{dBox}\begin{definitionT}}{\end{definitionT}\end{dBox}}
 \newenvironment{example}{\begin{exampleT}}{\hfill{\tiny\ensuremath{\blacksquare}}\end{exampleT}}	
+\newenvironment{examplenosquare}{\begin{exampleT}}{\end{exampleT}}	
 \newenvironment{theorem}{\begin{tBox}\begin{theoremeT}}{\end{theoremeT}\end{tBox}}
 \newenvironment{corollary}{\begin{cBox}\begin{corollaryT}}{\end{corollaryT}\end{cBox}}
 \newenvironment{proposition}{\begin{cpropBox}\begin{propositionT}}{\end{propositionT}\end{cpropBox}}
