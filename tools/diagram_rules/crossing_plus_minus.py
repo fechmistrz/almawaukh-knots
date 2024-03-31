@@ -24,6 +24,7 @@ diagram_commands["PlusCrossingLabel"] = {
         "\\node[first_colour] at (-5, 5)[below left] {$k$};",
     ],
     "sizes": ["Large"],
+    "clip": 4
 }
 diagram_commands["PlusCrossingMatrix"] = {
     "lines": [
