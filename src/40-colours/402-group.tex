@@ -5,7 +5,7 @@
 \begin{definition}
 \label{def:colouring_group}%
     Niech $L$ będzie splotem.
-    Grupa kolorująca $L$, oznaczana $\ColoringGroup(L)$, to abelowa grupa generowana przez łuki diagramu przedstawiającego $L$ z~równaniami skrzyżowań tegoż diagramu jako relacjami, oprócz tego mamy jeszcze jedną relację, $a = 0$, gdzie $a$ jest ustalonym łukiem.
+    Abelową grupę generowaną przez łuki diagramu przedstawiająceo splot $L$ z równaniami skrzyżowań tegoż diagramu jako relacjami oraz dodatkową relacją ,,$a = 0$'', gdzie $a$ jest dowolnie ustalonym łukiem, nazywamy grupą kolorującą splot $L$ i oznaczamy przez $\ColoringGroup (L)$.
 \end{definition}
 
 \begin{proposition}
@@ -23,23 +23,7 @@
     To pokazuje, że niezerowe morfizmy $\ColoringGroup(L) \to \Z/n\Z$ to dokładnie kolorowania modulo $n$, z kolorem $\varphi(l)$ na łuku $l$.
 \end{proof}
 
-\begin{corollary}
-\index{wyznacznik}%
-\label{cor:knot_determinant_odd}%
-    Niech $K$ będzie węzłem.
-    Wtedy jego wyznacznik, $\det K$, jest liczbą nieparzystą.
-\end{corollary}
-
-\begin{proof}
-    Bezpośredni wniosek z faktów \ref{prp:no_colourings_mod_2} oraz \ref{prp:colourings_are_morphisms}.
-\end{proof}
-
-Homomorfizm $\ColoringGroup (L) \to \Z/n\Z$ nie musi być surjekcją, zatem...
-
-\begin{proposition}
-    Niech splot $L$ koloruje się modulo $n$.
-    Wtedy koloruje się też modulo $mn$, dla każdego $m \in \N$.
-\end{proposition}
+Homomorfizm $\ColoringGroup (L) \to \Z/n\Z$ nie musi być surjekcją, zatem kolorowalność modulo $n$ pociąga za sobą kolorowalność modulo $mn$ (dla każdego naturalnego $m$).
 
 \begin{proposition}
     Grupa kolorująca jest z dokładnością do izomorfizmu niezmiennikiem węzłów.
@@ -53,9 +37,9 @@ Homomorfizm $\ColoringGroup (L) \to \Z/n\Z$ nie musi być surjekcją, zatem...
 \end{proof}
 
 Oto metoda pozwalająca na znalezienie grupy kolorującej.
-Wybierzmy diagram splotu $L$ bez zamkniętych krzywych, etykietowanie $x_0, \ldots, x_m$ dla łuków oraz $0, \ldots, m$ dla skrzyżowań.
+Wybierzmy diagram splotu $L$ bez zamkniętych krzywych, etykietowanie $x_0, \ldots, x_m$ dla łuków oraz etykietowanie $0, \ldots, m$ dla skrzyżowań.
 Utwórzmy macierz kolorującą $A$.
-Grupy abelowe $\ColoringGroup(L)$ oraz $\Z^m / A^t \Z^m$ są izomorficzne, wynika to bezpośrednio z~definicji macierzy $A$.
+Bezpośrednio z~definicji macierzy $A$ wynika, że grupy abelowe $\ColoringGroup(L)$ oraz $\Z^m / A^t \Z^m$ są izomorficzne.
 Następnie znajdźmy macierz diagonalną $D = \operatorname{diag}(d_1, \ldots, d_m)$, taką że $D = RAC$, gdzie całkowite macierze $R, C$ mają wyznacznik $1$.
 Z~algebry liniowej wiemy, że to zawsze się uda: macierz $D$ nazywamy postacią normalną Smitha.
 Wtedy funkcja
@@ -95,10 +79,11 @@ Podsumujmy.
 \end{corollary}
 
 Wyznacznik jest słabszym niezmiennikiem od grupy kolorującej.
-Na przykład węzły $6_1$ oraz $3_1 \shrap 3_1$ mają ten sam wyznacznik, $9$, ale różne grupy kolorujące: odpowiednio $\Z/9$ i~$(\Z/3)^2$.
+Na przykład węzły $6_1$ oraz $3_1 \shrap 3_1$ mają ten sam wyznacznik, $9$, ale różne grupy kolorujące: odpowiednio $\Z/9$ oraz ~$(\Z/3)^2$.
+Jedna jest cykliczna, druga niezbyt.
 
 Jednakowoż wyznacznik jest na tyle mocnym niezmiennikiem, że pozwala elementarnie udowodnić, że węzłów pierwszych jest nieskończenie wiele.
-Będziemy potrzebować lematu:
+Trzeba nam lematu:
 
 \begin{lemma}
 \label{lem:det_multiplicativ}%
@@ -179,7 +164,7 @@ Po poznaniu genusu oraz węzłów skręconych poznamy jeszcze jeden dowód (patr
 
 \begin{proof}
     Macierz diagonalna otrzymana po wniosku \ref{cor:determinant_invariant} także jest niezmiennikiem węzłów.
-
+    (Czemu?).
     Macierzą dla splotu trójlistników $(3_1)^{\# n}$ trójlistników jest $\operatorname{diag}(1, \ldots, 1, 3, \ldots, 3)$, zaś dla węzła $K_k$: $\operatorname{diag} (1, \ldots, 1, 3^n)$.
 \end{proof}
 
