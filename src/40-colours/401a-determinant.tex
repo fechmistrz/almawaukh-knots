@@ -1,10 +1,13 @@
 
 \subsection{Wyznacznik}
 \index{wyznacznik|(}
+Wyznacznik to ciekawa liczba spokrewniona z~kolorowaniem.
+Stanowi szczególny przypadek ciekawego samego w sobie wielomianu Alexandera i~pierwszym niezmiennikiem, którego niezmienniczości ze względu na ruchy Reidemeistera nawet nie będziemy próbować dowodzić.
+
 \begin{definition}[wyznacznik]
 \label{def:determinant}%
     Wyznacznikiem splotu nazywamy wyznacznik macierzy kolorującej $A$ bez znaku: $\det K := |\det A_K|$.
-    Za wyznacznik niewęzła przyjmujemy liczbę $1$.
+    Przyjmujemy, że $\det \SmallUnknot := 1$.
 \end{definition}
 
 Pokażemy później (po poznaniu grupy kolorującej, czyli we wniosku \ref{cor:determinant_invariant}) lub jeszcze później (po wprowadzeniu wielomianu Alexandera, w~dowodzie faktu \ref{alexander_invariance}), że wyznacznik splotu jest dobrze określony: nie zależy on od wyboru etykietowania, minora macierzy oraz diagramu i~że jest niezmiennikiem.
@@ -69,8 +72,8 @@ Niealternujących węzłów o 11 (odpowiednio: 12) skrzyżowaniach jest 185 (888
 Ale Crowell znalazł też mocniejsze ograniczenie:
 
 \begin{proposition}
-    Niech $L$ będzie pierwszym, alternującym splotem, który nie jest $(2, n)$-torusowy.
-    Wtedy $\det L + 3 \ge 2 \crossing L$
+    Niech $L$ będzie pierwszym, alternującym splotem.
+    Wtedy $L$ jest $(2, n)$-torusowy lub zachodzi $\det L + 3 \ge 2 \crossing L$.
 \end{proposition}
 
 Stąd można wywnioskować, że oprócz węzłów wspomnianych wcześniej, także $8_{20}$, 
@@ -81,15 +84,15 @@ Wyznacznik jest blisko związany z kolorowaniami.
 
 \begin{lemma}
     Niech $A$ będzie macierzą $r \times r$ o całkowitych wyrazach.
-    Istnieje niezerowy wektor $x \in (\Z/n\Z)^r$ taki, że $Ax \equiv 0 \mod n$ wtedy i tylko wtedy, gdy liczby $\det A$ oraz $n$ nie są względnie pierwsze.
+    Wtedy następujące warunki są równoważne: istnieje niezerowy wektor $x \in (\Z/n\Z)^r$ taki, że $Ax \equiv 0 \mod n$; liczby $\det A$ oraz $n$ nie są względnie pierwsze.
 \end{lemma}
 
 \begin{proof}
     Z~algebry liniowej wiemy, że dla pewnych odwracalnych całkowitoliczbowych macierzy $C, R$ macierz $RAC = \operatorname{diag}(a_1, \ldots, a_m)$ jest diagonalna: to postać normalna Smitha.
     Istnieje odpowiedniość między niezerowymi rozwiązaniami równania $Ax \equiv 0$ oraz $Dy \equiv 0$, mamy bowiem $x \equiv Cy$, zatem bez straty ogólności możemy przyjąć, że macierz $A$ jest diagonalna.
 
-    Istnieje niezerowy wektor $x$ taki, że $Ax \equiv 0 \mod n$ wtedy i tylko wtedy, jeśli istnieją $x_1, \ldots, x_m \in \Z/n\Z$, nie wszystkie zerowe, że dla każdego $i$ mamy $a_ix_i \equiv 0 \mod n$.
-    Oznacza to, że dla pewnego $i$ liczby $a_i, n$ nie są względnie pierwsze.
+    Niezerowy wektor $x$ taki, że $Ax \equiv 0 \mod n$ istnieje wtedy i tylko wtedy, gdy istnieją (nie wszystkie zerowe) $x_1, \ldots, x_m \in \Z/n\Z$ takie, że dla każdego $i$ mamy $a_ix_i \equiv 0 \mod n$.
+    Mówiąc językiem przeciętnych zjadaczy chleba, dla pewnego $i$ liczby $a_i, n$ nie są względnie pierwsze.
     Macierz $A$ jest diagonalna, więc jej wyznacznik ma postać $\det A = \pm |a_1| \cdot \ldots \cdot |a_m|$.
     Wnioskujemy stąd, że liczby $\det A, n$ także nie są względnie pierwsze.
 \end{proof}
