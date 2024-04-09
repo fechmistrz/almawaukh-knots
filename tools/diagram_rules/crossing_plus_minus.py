@@ -70,7 +70,7 @@ diagram_commands["MinusCrossingChessboard"] = {
         "\\fill[diagramfiller] (-4, -5) to (0, -1) to (4, -5);",
         "\\node[first_colour] at (-5, 0) {$-1$};",
     ],
-    "sizes": ["Large"],
+    "sizes": ["Large", "MedLar"],
 }
 
 diagram_commands["PlusCrossingChessboard"] = {
@@ -82,12 +82,12 @@ diagram_commands["PlusCrossingChessboard"] = {
         "\\fill[diagramfiller] (-4, -5) to (0, -1) to (4, -5);",
         "\\node[first_colour] at (-5, 0) {$+1$};",
     ],
-    "sizes": ["Large"],
+    "sizes": ["Large", "MedLar"],
 }
 diagram_commands["MinusCrossingQuandle"] = {
     "lines": [
         "\\strand[ultra thick] (-5, -5) to (5, 5);",
-        "\\strand[ultra thick,latex-] (5, -5) to (-5, 5);"
+        "\\strand[ultra thick,latex-] (6.5, -6.6) to (-5, 5);"
         "\\node[first_colour] at (5, 5)[below right] {$x \\triangleright y$};",
         "\\node[first_colour] at (-5, -5)[above left] {$x$};",
         "\\node[first_colour] at (5, -5)[above right] {$y$};",

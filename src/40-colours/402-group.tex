@@ -111,22 +111,22 @@ Po poznaniu genusu oraz węzłów skręconych poznamy jeszcze jeden dowód (patr
     \centering
     \begin{comment}
     \begin{tikzpicture}[baseline=-0.65ex, scale=0.1]
-    %\useasboundingbox (-5, -5) rectangle (5,5);
+    \useasboundingbox (-20, -13) rectangle (40, 13);
     \begin{knot}[clip width=5, end tolerance=1pt, flip crossing/.list={1,2,3,6}]
-        \strand[semithick] (-10, +3) .. controls (-4, +3) and (-4, -3) .. (0, -3);
-        \strand[semithick] (-10, -3) .. controls (-4, -3) and (-4, +3) .. (0, +3);
+        \strand[ultra thick] (-10, +3) .. controls (-4, +3) and (-4, -3) .. (0, -3);
+        \strand[ultra thick] (-10, -3) .. controls (-4, -3) and (-4, +3) .. (0, +3);
         \node at (5, 0) {$\ldots$};
-        \strand[semithick] (10+10, +3) .. controls (10+ 4, +3) and (10+ 4, -3) .. (10+0, -3);
-        \strand[semithick] (10+ 10, -3) .. controls (10+ 4, -3) and (10+4, +3) .. (10+0, +3);
-        \strand[semithick] (20+10, +3) .. controls (20+ 4, +3) and (20+ 4, -3) .. (20+0, -3);
-    \strand[semithick] (20+ 10, -3) .. controls (20+ 4, -3) and (20+4, +3) .. (20+0, +3);
-        \strand[semithick] (30, 3) [in=up, out=right] to (35, -3);
-        \strand[semithick,  ] (30, -3) [in=down, out=right] to (35, 3);
-        \strand[semithick] (35, 3) [in=right, out=up] to (0, 10);
-        \strand[semithick] (35, -3) [in=right, out=down] to (0, -10);
-        \strand[semithick] (-10, -3) [in=down, out=left] to (-20, 0) to [in=left, out=up] (-10, 3);
-        \strand[semithick] (-15, 5) [in=left, out=up] to (0, 10);
-        \strand[semithick] (-15, 5) to (-15, -5) [in=left, out=down] to (0, -10);
+        \strand[ultra thick] (10+10, +3) .. controls (10+ 4, +3) and (10+ 4, -3) .. (10+0, -3);
+        \strand[ultra thick] (10+ 10, -3) .. controls (10+ 4, -3) and (10+4, +3) .. (10+0, +3);
+        \strand[ultra thick] (20+10, +3) .. controls (20+ 4, +3) and (20+ 4, -3) .. (20+0, -3);
+        \strand[ultra thick] (20+ 10, -3) .. controls (20+ 4, -3) and (20+4, +3) .. (20+0, +3);
+        \strand[ultra thick] (30, 3) [in=up, out=right] to (35, -3);
+        \strand[ultra thick] (30, -3) [in=down, out=right] to (35, 3);
+        \strand[ultra thick] (35, 3) [in=right, out=up] to (0, 10);
+        \strand[ultra thick] (35, -3) [in=right, out=down] to (0, -10);
+        \strand[ultra thick] (-10, -3) [in=down, out=left] to (-20, 0) to [in=left, out=up] (-10, 3);
+        \strand[ultra thick] (-15, 5) [in=left, out=up] to (0, 10);
+        \strand[ultra thick] (-15, 5) to (-15, -5) [in=left, out=down] to (0, -10);
         \node at (-5, -5) {$c_3$};
         \node at (15, -5) {$c_{k-2}$};
         \node at (25, -5) {$c_{k-1}$};

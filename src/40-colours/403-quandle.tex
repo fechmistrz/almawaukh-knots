@@ -84,7 +84,7 @@ Pokażemy teraz, czemu aksjomaty kwandli można traktować jako przetłumaczenie
     Niech $X$ będzie skończonym kwandlem.
     Liczba etykietowań diagramu elementami kwandla $X$ jest niezmiennikiem węzłów, zwanym niezmiennikiem zliczającym.
 \end{proposition}
-    
+
 \begin{proof}
     Musimy pokazać, że etykiety na diagramiem przed każdym ruchem Reidemeistera wyznaczają jednoznacznie układ etykiet po tym ruchu.
     Pierwszy i drugi ruch:
@@ -92,24 +92,27 @@ Pokażemy teraz, czemu aksjomaty kwandli można traktować jako przetłumaczenie
     \begin{figure}[H]
         \begin{minipage}[b]{.48\linewidth}
         \[
-            \LargeReidemeisterOneRightQuandleProof
+            \MedLarReidemeisterOneRightQuandleProof
             \stackrel{R_1}{\cong}
-            \LargeReidemeisterOneStraightQuandleProof
+            \MedLarReidemeisterOneStraightQuandleProof
         \]
         \end{minipage}
         \begin{minipage}[b]{.48\linewidth}
         \[
-            \LargeReidemeisterTwoQuandleA \cong \LargeReidemeisterTwoQuandleB
+            \MedLarReidemeisterTwoQuandleA \cong \MedLarReidemeisterTwoQuandleB
         \]
         \end{minipage}
     \end{figure}
 \end{comment}
-    Trzeci ruch:
+\noindent
+Trzeci ruch:
 \begin{comment}
     \[
         \LargeReidemeisterThreeQuandleA \cong \LargeReidemeisterThreeQuandleB \qedhere
     \]
 \end{comment}
+\noindent
+Jak widać, przy trzecim ruchu coś poszło nie tak, ale to się zateguje później.
 \end{proof}
 
 Wiele znanych struktur algebraicznych okazuje się być źródłem kwandli:
@@ -118,16 +121,19 @@ Wiele znanych struktur algebraicznych okazuje się być źródłem kwandli:
 \index{kwandel!cykliczny}%
 \index{kwandel!diedralny}%
     Grupa abelowa z działaniem $x \triangleright y = 2y - x$.
+    (Nazwa diedralny bierze się stąd, że zbiór odbić w grupie diedralnej stanowi przykład takiego kwandla).
+    % wzięte z https://www.ams.org/journals/notices/201604/rnoti-p378.pdf Nelsona
+    (Lepiej nie pytać, skąd wziął się przymiotnik cykliczny).
 \end{example}
 
 \begin{example}[kwandle sprzężone]
 \index{kwandel!sprzężony}%
-    Grupa z działaniem $x \triangleright y = y^{-n} x y^n$ dla każdego $n \in \N$.
+    Grupa $G$ z działaniem $x \triangleright y = y^{-n} x y^n$ dla każdej naturalnej wartości $n$.
 \end{example}
 
 \begin{example}[kwandel Alexandera]
 \index{kwandel!Alexandera}%
-    Moduł nad pierścieniem $\Z[t, 1/t]$ wielomianów Laurenta z~działaniem $x \triangleright y = tx + (1-t) y$.
+    Moduł $M$ nad pierścieniem $\Z[t, 1/t]$ wielomianów Laurenta z~działaniem $x \triangleright y = tx + (1-t) y$.
 \end{example}
 
 Dionísio, Lopes \cite[s. 1043]{lopes2003} potrzebują skończonych kwandli Alexandera, mają postać $(\Z/n\Z)[t, 1/t] / h(t)$, gdzie $h$ jest pewnym unormowanym wielomianem.
@@ -138,10 +144,11 @@ Dionísio, Lopes \cite[s. 1043]{lopes2003} potrzebują skończonych kwandli Alex
 \end{example}
 
 Żeby opowiedzieć, jak wyglądały poszukiwania małych kwandli, musimy wprowadzić dwie definicje.
+(Potem można o nich zapomnieć).
 
 \begin{definition}[homomorfizm kwandli]
     Niech $Q_1, Q_2$ będą kwandlami.
-    Funkcję $f \colon Q_1 \to Q_2$ spełniającą warunek
+    Odwzorowanie $f \colon Q_1 \to Q_2$ spełniające warunek
     \begin{equation}
         \forall x, y \in Q_1 : f(x \triangleright y) = f(x) \triangleright f(y),
     \end{equation}
@@ -150,9 +157,8 @@ Dionísio, Lopes \cite[s. 1043]{lopes2003} potrzebują skończonych kwandli Alex
 
 \begin{definition}[kwandel spójny]
 \index{kwandel!spójny}%
-    Niech $Q$ będzie kwandlem.
-    W grupie wszystkich automorfizmów $Q$ można wyróżnić grupę generowaną przez automorfizmy wewnętrzne $\beta_y(x) = x \triangleright y$.
-    Jeżeli działanie tej podgrupy na $Q$ jest przechodnie, kwandel $Q$ nazywamy spójnym.
+    Niech $Q$ będzie kwandlem, zaś $G$ podgrupą wszystkich automorfizmów $Q$ generowaną przez automorfizmy wewnętrzne $\beta_y(x) = x \triangleright y$.
+    Jeżeli działanie podgrupy $G$ na $Q$ jest przechodnie, kwandel $Q$ nazywamy spójnym.
 \end{definition}
 
 Dionísio, Lopes \cite{lopes2003} znaleźli 10 kwandli Alexandera, które odróżniają prawie każde dwa spośród 249 węzłów pierwszych do 10 skrzyżowań; rozstrzygnięcia brak dla 962 z 30876 par.
@@ -181,7 +187,7 @@ Na przykład Niebrzydowski, Przytycki \cite{niebrzydowski2009} pokazali, że
     Kwandel podstawowy trójlistnika  jest izomorficzny z~pewnym rzutowym pierwotnym podkwandlem\footnote{Cokolwiek to znaczy!} odwzorowań liniowych przestrzeni symplektycznej $\Z \oplus \Z$
 \end{example}
 
-Słabszym, choć prostszym w znalezieniu niezmiennikiem jest liczba homomorfizmów z kwandla danego węzła w pewien wybrany wcześniej kwandel $Q$.
+Słabszym, choć prostszym (?) w znalezieniu niezmiennikiem jest liczba homomorfizmów z~kwandla danego węzła w pewien wybrany wcześniej kwandel $Q$.
 % wiem to z nLab
 
 \subsection{Półki, wraki i wrzeciona}
@@ -244,12 +250,16 @@ Półka stanowi uogólnienie dwóch obiektów -- wrzecion i~wraków.
 
 \begin{example}
     % https://www1.cmc.edu/pages/faculty/VNelson/quandles.html
-    Zbiór $X = \{1, 2, \ldots, n\}$ i permutacja $\sigma \in S_n$ z działaniem $x \triangleright y = \sigma(x)$.
+    Zbiór $X = \{1, 2, \ldots, n\}$ z działaniem $x \triangleright y = \sigma(x)$, gdzie $\sigma \in S_n$ jest dowolną permutacją.
 \end{example}
 
 \begin{example}
     % https://www1.cmc.edu/pages/faculty/VNelson/quandles.html
-    Moduł nad pierścieniem $\Z[t^{\pm 1}, s]/(s^2 - (1-t)s)$ z działaniem $x \triangleright y = tx+sy$.
+    Moduł nad pierścieniem
+    \begin{equation}
+        \frac{\Z[t^{\pm 1}, s]}{(s^2 - (1-t)s)}
+    \end{equation}
+    z działaniem $x \triangleright y = tx+sy$.
 \end{example}
 
 \index{węzeł!obramowany}% framed?

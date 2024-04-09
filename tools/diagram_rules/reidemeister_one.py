@@ -18,10 +18,10 @@ diagram_commands["ReidemeisterOneLeftProof"] = {
 }
 diagram_commands["ReidemeisterOneLeftRightQuandleProof"] = {
     "lines": [
-        "\\strand[thick] (0, 2) [in=up, out=left] to (-10, -3) [in=left, out=down] to (-5, -5);",
-        "\\strand[thick] (-10, 5) [in=up, out=right]  to (-4, -3)  [in=right, out=down]   to (-5, -5);"
-        "\\strand[thick,latex-] (10, 5) [in=up, out=left]  to (4, -3)  [in=left, out=down]   to (5, -5);"
-        "\\strand[thick] (0, 2) [in=up, out=right] to (10, -3) [in=right, out=down] to (5, -5);",
+        "\\strand[ultra thick] (0, 2) [in=up, out=left] to (-10, -3) [in=left, out=down] to (-5, -5);",
+        "\\strand[ultra thick] (-10, 5) [in=up, out=right]  to (-4, -3)  [in=right, out=down]   to (-5, -5);"
+        "\\strand[ultra thick,latex-] (12, 5) [in=up, out=left]  to (4, -3)  [in=left, out=down]   to (5, -5);"
+        "\\strand[ultra thick] (0, 2) [in=up, out=right] to (10, -3) [in=right, out=down] to (5, -5);",
         "\\node[first_colour] at (-10, 5) [left]  {$x$};",
         "\\node[first_colour] at (10, 5)  [right] {$x$};",
         "\\node[first_colour] at (0, 2)   [above] {$x \\triangleright x$};",
@@ -32,19 +32,19 @@ diagram_commands["ReidemeisterOneLeftRightQuandleProof"] = {
 }
 diagram_commands["ReidemeisterOneRight"] = {
     "lines": [
-        "\\strand[thick] (-5, -5) [in=left, out=60] to  (3, 5)  [in=up, out=right]   to (5, 0);",
-        "\\strand[thick] (-5, 5)  [in=left, out=-60] to (3, -5) [in=down, out=right] to (5, 0);",
+        "\\strand[ultra thick] (-5, -5) [in=left, out=60] to  (3, 5)  [in=up, out=right]   to (5, 0);",
+        "\\strand[ultra thick] (-5, 5)  [in=left, out=-60] to (3, -5) [in=down, out=right] to (5, 0);",
     ],
     "sizes": ["Medium"],
 }
 diagram_commands["ReidemeisterOneRightQuandleProof"] = {
     "lines": [
-        "\\strand[thick] (-5, -5) [in=left, out=60] to  (3, 5)  [in=up, out=right]   to (5, 0);",
-        "\\strand[thick,latex-] (-5, 5)  [in=left, out=-60] to (3, -5) [in=down, out=right] to (5, 0);",
+        "\\strand[ultra thick] (-5, -5) [in=left, out=60] to  (3, 5)  [in=up, out=right]   to (5, 0);",
+        "\\strand[ultra thick,latex-] (-6.5, 6.5)  [in=left, out=-60] to (3, -5) [in=down, out=right] to (5, 0);",
         "\\node[first_colour] at (-5, -4)[left] {$x$};",
         "\\node[first_colour] at (-5,  4)[left] {$x \\triangleright x$};",
     ],
-    "sizes": ["Large"],
+    "sizes": ["MedLar"],
 }
 diagram_commands["ReidemeisterOneStraight"] = {
     # verified
@@ -64,15 +64,15 @@ diagram_commands["ReidemeisterOneStraightProof"] = {
 }
 diagram_commands["ReidemeisterOneStraightQuandleProof"] = {
     "lines": [
-        "\\strand[thick] (0, -6.65) to (0, 6);",
-        "\\node[first_colour] at (0,  0)[left] {$x$};",
+        "\\strand[ultra thick, -latex] (0, -6) to (0, 7);",
+        "\\node[first_colour] at (0,  0)[right] {$x$};",
     ],
-    "sizes": ["Large"],
+    "sizes": ["Large", "MedLar"],
     "bounding": [-2, -5, 2, 5],
 }
 diagram_commands["ReidemeisterOneStraightQuandleProofRotated"] = {
     "lines": [
-        "\\strand[thick, -latex] (-5, 0) to (5, 0);",
+        "\\strand[ultra thick, -latex] (-5, 0) to (5, 0);",
         "\\node[first_colour] at (0,  0)[above] {$x$};",
     ],
     "sizes": ["Large"],
