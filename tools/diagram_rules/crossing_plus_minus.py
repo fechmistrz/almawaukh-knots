@@ -3,7 +3,7 @@ diagram_commands["PlusCrossing"] = {
         "\\strand[ultra thick] (-5, -5) to (5, 5);",
         "\\strand[ultra thick] (5, -5) to (-5, 5);",
     ],
-    "sizes": ["Small", "Medium"],
+    "sizes": ["Small", "Medium", "Large"],
 }
 diagram_commands["PlusCrossingColouring"] = {
     "lines": [
@@ -49,7 +49,7 @@ diagram_commands["MinusCrossing"] = {
         "\\strand[ultra thick] (-5, -5) to (5, 5);",
         "\\strand[ultra thick] (-5, 5) to (5, -5);",
     ],
-    "sizes": ["Small", "Medium"],
+    "sizes": ["Small", "Medium", "Large"],
     "flip": ["1"],
 }
 diagram_commands["MinusCrossingArrows"] = {
@@ -133,5 +133,5 @@ diagram_commands["SingularCrossingArrows"] = {
         "\\draw[ultra thick,-latex] (5, -5) to (-5, 5);",
         "\\draw[ultra thick,fill=black] (-0, 0) circle (0.5);",
     ],
-    "sizes": ["Medium"],
+    "sizes": ["Medium", "Large"],
 }

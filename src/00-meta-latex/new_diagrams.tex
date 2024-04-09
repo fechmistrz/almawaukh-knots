@@ -72,6 +72,14 @@
     \end{knot}
 \end{tikzpicture}}
 
+\newcommand{\LargePlusCrossing} {\begin{tikzpicture}[baseline=-0.65ex, scale=0.15001]
+    \begin{knot}[clip width=6, end tolerance=1pt]
+        \useasboundingbox (-7, -5) rectangle (7, 5); % REMOVE ME
+        \strand[ultra thick] (-5, -5) to (5, 5);
+        \strand[ultra thick] (5, -5) to (-5, 5);
+    \end{knot}
+\end{tikzpicture}}
+
 \newcommand{\LargePlusCrossingColouring} {\begin{tikzpicture}[baseline=-0.65ex, scale=0.15001]
     \begin{knot}[clip width=6, end tolerance=1pt]
         \useasboundingbox (-7, -5) rectangle (7, 5); % REMOVE ME
@@ -150,6 +158,14 @@
 
 \newcommand{\MediumMinusCrossing} {\begin{tikzpicture}[baseline=-0.65ex, scale=0.06001]
     \begin{knot}[clip width=7, end tolerance=1pt, flip crossing/.list={1}]
+        \useasboundingbox (-7, -5) rectangle (7, 5); % REMOVE ME
+        \strand[ultra thick] (-5, -5) to (5, 5);
+        \strand[ultra thick] (-5, 5) to (5, -5);
+    \end{knot}
+\end{tikzpicture}}
+
+\newcommand{\LargeMinusCrossing} {\begin{tikzpicture}[baseline=-0.65ex, scale=0.15001]
+    \begin{knot}[clip width=6, end tolerance=1pt, flip crossing/.list={1}]
         \useasboundingbox (-7, -5) rectangle (7, 5); % REMOVE ME
         \strand[ultra thick] (-5, -5) to (5, 5);
         \strand[ultra thick] (-5, 5) to (5, -5);
@@ -294,6 +310,15 @@
 
 \newcommand{\MediumSingularCrossingArrows} {\begin{tikzpicture}[baseline=-0.65ex, scale=0.06001]
     \begin{knot}[clip width=7, end tolerance=1pt]
+        \useasboundingbox (-7, -5) rectangle (7, 5); % REMOVE ME
+        \draw[ultra thick,-latex] (-5, -5) to (5, 5);
+        \draw[ultra thick,-latex] (5, -5) to (-5, 5);
+        \draw[ultra thick,fill=black] (-0, 0) circle (0.5);
+    \end{knot}
+\end{tikzpicture}}
+
+\newcommand{\LargeSingularCrossingArrows} {\begin{tikzpicture}[baseline=-0.65ex, scale=0.15001]
+    \begin{knot}[clip width=6, end tolerance=1pt]
         \useasboundingbox (-7, -5) rectangle (7, 5); % REMOVE ME
         \draw[ultra thick,-latex] (-5, -5) to (5, 5);
         \draw[ultra thick,-latex] (5, -5) to (-5, 5);

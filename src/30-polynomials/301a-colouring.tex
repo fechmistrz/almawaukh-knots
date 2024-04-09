@@ -3,7 +3,7 @@
 
 \begin{definition}
 \index{równanie kolorujące}%
-    Niech $D$ będzie diagramem splotu zorientowanego, którego łukom przypisano kolory $0, 1, \ldots, n - 1$.
+    Niech $D$ będzie diagramem zorientowanego splotu $L$, którego wszystkim łukom przypisano kolory $0, 1, \ldots, n - 1$.
     Wtedy do każdego skrzyżowania:
 \begin{comment}
     \[
@@ -14,14 +14,14 @@
     Tylko orientacja górnego łuku ma znaczenie.
 \end{definition}
 
-Istotnie, wystarczy podstawić tutaj $t = -1$, by otrzymać szczególną definicję \ref{def:colouring_equation}.
+Nie jest trudno zgadnać, skąd bierze się nazwa ,,równanie kolorujące'': podstawiając tutaj $t = -1$ otrzymujemy  szczególną definicję \ref{def:colouring_equation}.
 
 \begin{definition}[wielomian Alexandera]
 \label{def:alexander_polynomial}%
-    Ustalmy diagram $D$ zorientowanego splotu $L$, gdzie nie ma żadnej krzywej zamkniętej (niewęzła $\SmallUnknot$).
-    Przypiszmy etykiety $x_0, \ldots, x_m$ do włókien oraz $0, \ldots, m$ do skrzyżowań diagramu $D$.
-    Niech $p_{ij}$ będzie współczynnikiem przy włóknie $x_j$ w~wielomianowym równaniu kolorującym nad wierzchołkiem $i$.
-    Z macierzy $P=(p_{ij})$ wykreślmy po jednej kolumnie i~wierszu.
+    Niech $L$ będzie splotem, zaś $D$ takim jego diagramem, na którym nie widać żadnych krzywych zamkniętych (literalnie niewęzła $\SmallUnknot$).
+    Niech $x_0, \ldots, x_m$ będą pewnymi symbolami przypisanymi do włókien (a symbole $0, \ldots, m$ do skrzyżowań) diagramu $D$.
+    Oznaczmy przez $p_{i,j}$ współczynnik przy włóknie $x_j$ w~wielomianowym równaniu kolorującym nad wierzchołkiem $i$.
+    Z macierzy $P=(p_{i,j})$ wykreślmy po jednej kolumnie i~wierszu.
     Wyznacznik zmniejszonej macierzy to wielomian Alexandera, oznaczamy go $\alexander_L(t)$.
 \end{definition}
 
@@ -36,7 +36,7 @@ Nasz nowy niezmiennik nie jest zwykłym wielomianem, tylko wielomianem Laurenta 
     jest niezmiennikiem zorientowanych splotów.
 \end{proposition}
 
-W dowodzie niezmienniczości wyznacznika węzła skorzystaliśmy z~relacji między nim a~grupą kolorującą.
+W dowodzie niezmienniczości wyznacznika węzła skorzystalibyśmy z~relacji między nim a~grupą kolorującą.
 Poprzednie wydania książki zawierały sugestię, że elementarny (czyli taki, który nie korzysta z~teorii modułów) dowód niezmienniczości wielomianu Alexandera nie istnieje.
 Sugestia ta była błędna.
 
@@ -86,13 +86,13 @@ Odwrotnie, dowolny wielomian Laurenta z~całkowitymi współczynnikami o~takich 
 
 \begin{proposition}
 \label{prp:alexander_hosokawa}%
-    Niech $p(t)$ będzie wielomianem Laurenta nad pierścieniem $\Z$ takim, że $p(t) = p(t^{-1})$ i~$p(1) = \pm 1$.
+    Niech $p(t)$ będzie wielomianem Laurenta nad $\Z$ takim, że $p(t) = p(t^{-1})$ oraz $p(1) = \pm 1$.
     Wtedy istnieje węzeł $K$, dla którego $\alexander_K(t) \equiv p(t)$.
 \end{proposition}
 
 \begin{proof}[Niedowód]
 \index[persons]{Hosokawa, Fujitsugu}%
-    Hosokawa w \cite{hosokawa1958} udowodnił to dla pomocniczego wielomianu splotów
+    Hosokawa \cite{hosokawa1958} udowodnił to dla pomocniczego wielomianu splotów
     \begin{equation}
         \frac{\Delta(t, \ldots, t)}{(1-t)^{\max(0, \mu - 2)}},
     \end{equation}
@@ -100,14 +100,11 @@ Odwrotnie, dowolny wielomian Laurenta z~całkowitymi współczynnikami o~takich 
     Książka Rolfsena \cite[s. 171-172]{rolfsen1976} zawiera natomiast jawną konstrukcję węzła o~danym wielomianie Alexandera.
 \end{proof}
 
-\begin{proposition}
+\begin{example}
 \label{alexander_no_detects_unknot}%
-    Wielomian Alexandera nie wykrywa niewęzła.
-\end{proposition}
-
-\begin{proof}
+    Wielomian Alexandera nie wykrywa niewęzła:
     $\alexander(11_{471}) = 1$.
-\end{proof}
+\end{example}
 
 Wszystkie przykłady węzłów pierwszych do 12 skrzyżowań o~trywialnym wielomianie Alexandera to $11_{471} = 11n_{34}$, $11_{473} = 11n_{42}$, $12n_{313}$, $12n_{430}$.
 Dzięki pracy Sakumy \cite{sakuma2020} dowiedzieliśmy się, że Seifert \cite{seifert1935}, Whitehead \cite{whitehead1937}, Kinoshita oraz~Terasaka \cite{kinoshita1957} pokazali, jak znaleźć więcej węzłów o trywialnym wielomianie Alexandera.

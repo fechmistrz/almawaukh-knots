@@ -27,7 +27,8 @@
         \end{minipage}
     \end{figure}
 \end{comment}
-    Mówimy, że niezmiennik zorientowanych splotów $f$ spełnia relację kłębiastą, jeżeli wartości $f(L_+)$, $f(L_-)$ i $f(L_0)$ są związane pewnym wielomianowym równaniem, niezależnie od wyboru splotu $L$.
+\noindent
+Gdy wartości niezmiennika (zazwyczaj zorientowanych) splotów $f$: $f(L_+)$, $f(L_-)$, $f(L_0)$ są związane jakimś wielomianowym równaniem, którego współczynniki nie zależą od wyboru splotu $L$, to mówimy, że niezmiennik $f$ spełnia relację kłębiastą.
 \end{definition}
 
 % DICTIONARY;skein;kłąb;-
@@ -39,25 +40,38 @@ Jednocześnie nie znamy się na robieniu na drutach niczym Paula, więc może ni
 
 Kiedy pracuje się z niezorientowanymi węzłami, używa się innego (!) zestawu oznaczeń:
 \begin{comment}
-\begin{equation}
-    L_+ = \MediumMinusCrossing
-    \quad\quad
-    L_- = \MediumPlusCrossing
-    \quad\quad
-    L_0 = \MediumAlphaSmoothing
-    \quad\quad
-    L_\infty = \MediumBetaSmoothing
-\end{equation}
+    \begin{figure}[H]
+        \centering
+        \begin{minipage}[b]{.23\linewidth}
+            \centering
+            \[\LargeMinusCrossing\]
+            \subcaption{$L_+$}
+        \end{minipage}
+        \begin{minipage}[b]{.23\linewidth}
+            \centering
+            \[\LargePlusCrossing\]
+            \subcaption{$L_-$}
+        \end{minipage}
+        \begin{minipage}[b]{.23\linewidth}
+            \centering
+            \[\LargeAlphaSmoothing\]
+            \subcaption{$L_0$}
+        \end{minipage}
+        \begin{minipage}[b]{.23\linewidth}
+            \centering
+            \[\LargeBetaSmoothing\]
+            \subcaption{$L_\infty$}
+        \end{minipage}
+    \end{figure}
 \end{comment}
 
-\begin{definition}
-    Niech $L$ będzie zorientowanym splotem.
-    Wielomian Laurenta $\alexander_L(t) \in \Z[t^{\pm 1/2}]$, który spełnia relację kłębiastą
+\begin{example}
+    Wielomian Alexandera każdego węzła jest wyznaczony jednoznacznie przez relację kłębiastą
     \begin{equation}
         \alexander_{L_+}(t) - \alexander_{L_-}(t) - (t^{1/2} - t^{-1/2}) \alexander_{L_0}(t) = 0
     \end{equation}
-    z warunkiem brzegowym $\alexander_{\SmallUnknot}(t) = 1$, nazywamy wielomianem Alexandera.
-\end{definition}
+    z warunkiem brzegowym $\alexander_{\SmallUnknot}(t) = 1$.
+\end{example}
 
 Wzór ten, choć znany był Alexanderowi, nie zyskał przez wiele dekad uwagi matematyków.
 \index[persons]{Alexander, James}%
