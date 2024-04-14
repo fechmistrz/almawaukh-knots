@@ -172,6 +172,30 @@
     \end{knot}
 \end{tikzpicture}}
 
+\newcommand{\SmallThinMinusCrossing} {\begin{tikzpicture}[baseline=-0.65ex, scale=0.03001]
+    \begin{knot}[clip width=5, end tolerance=1pt, flip crossing/.list={1}]
+        \useasboundingbox (-5, -5) rectangle (5, 5); % REMOVE ME
+        \strand[thick] (-5, -5) to (5, 5);
+        \strand[thick] (-5, 5) to (5, -5);
+    \end{knot}
+\end{tikzpicture}}
+
+\newcommand{\MediumThinMinusCrossing} {\begin{tikzpicture}[baseline=-0.65ex, scale=0.06001]
+    \begin{knot}[clip width=7, end tolerance=1pt, flip crossing/.list={1}]
+        \useasboundingbox (-7, -5) rectangle (7, 5); % REMOVE ME
+        \strand[thick] (-5, -5) to (5, 5);
+        \strand[thick] (-5, 5) to (5, -5);
+    \end{knot}
+\end{tikzpicture}}
+
+\newcommand{\LargeThinMinusCrossing} {\begin{tikzpicture}[baseline=-0.65ex, scale=0.15001]
+    \begin{knot}[clip width=6, end tolerance=1pt, flip crossing/.list={1}]
+        \useasboundingbox (-7, -5) rectangle (7, 5); % REMOVE ME
+        \strand[thick] (-5, -5) to (5, 5);
+        \strand[thick] (-5, 5) to (5, -5);
+    \end{knot}
+\end{tikzpicture}}
+
 \newcommand{\MediumMinusCrossingArrows} {\begin{tikzpicture}[baseline=-0.65ex, scale=0.06001]
     \begin{knot}[clip width=4, end tolerance=1pt, flip crossing/.list={1}]
         \useasboundingbox (-7, -5) rectangle (7, 5); % REMOVE ME
@@ -566,6 +590,30 @@
     \end{knot}
 \end{tikzpicture}}
 
+\newcommand{\MediumThinReidemeisterOneLeft} {\begin{tikzpicture}[baseline=-0.65ex, scale=0.06001]
+    \begin{knot}[clip width=7, end tolerance=1pt]
+        \useasboundingbox (-6, -5) rectangle (6, 5); % REMOVE ME
+        \strand[thick] (-5, 5)  [in=left, out=-60] to (3, -5) [in=down, out=right] to (5, 0);
+        \strand[thick] (-5, -5) [in=left, out=60]  to (3, 5)  [in=up, out=right]   to (5, 0);
+    \end{knot}
+\end{tikzpicture}}
+
+\newcommand{\LargeThinReidemeisterOneLeft} {\begin{tikzpicture}[baseline=-0.65ex, scale=0.15001]
+    \begin{knot}[clip width=6, end tolerance=1pt]
+        \useasboundingbox (-6, -5) rectangle (6, 5); % REMOVE ME
+        \strand[thick] (-5, 5)  [in=left, out=-60] to (3, -5) [in=down, out=right] to (5, 0);
+        \strand[thick] (-5, -5) [in=left, out=60]  to (3, 5)  [in=up, out=right]   to (5, 0);
+    \end{knot}
+\end{tikzpicture}}
+
+\newcommand{\MedLarThinReidemeisterOneLeft} {\begin{tikzpicture}[baseline=-0.65ex, scale=0.13]
+    \begin{knot}[clip width=5, end tolerance=1pt]
+        \useasboundingbox (-6, -5) rectangle (6, 5); % REMOVE ME
+        \strand[thick] (-5, 5)  [in=left, out=-60] to (3, -5) [in=down, out=right] to (5, 0);
+        \strand[thick] (-5, -5) [in=left, out=60]  to (3, 5)  [in=up, out=right]   to (5, 0);
+    \end{knot}
+\end{tikzpicture}}
+
 \newcommand{\LargeReidemeisterOneLeftProof} {\begin{tikzpicture}[baseline=-0.65ex, scale=0.15001]
     \begin{knot}[clip width=6, end tolerance=1pt]
         \useasboundingbox (-7, -5) rectangle (7, 5); % REMOVE ME
@@ -622,6 +670,27 @@
     \begin{knot}[clip width=7, end tolerance=1pt]
         \useasboundingbox (-1, -5) rectangle (1, 5); % REMOVE ME
         \strand[ultra thick] (0, -5) to (0, 5);
+    \end{knot}
+\end{tikzpicture}}
+
+\newcommand{\LargeThinReidemeisterOneStraight} {\begin{tikzpicture}[baseline=-0.65ex, scale=0.15001]
+    \begin{knot}[clip width=6, end tolerance=1pt]
+        \useasboundingbox (-1, -5) rectangle (1, 5); % REMOVE ME
+        \strand[thick] (0, -5) to (0, 5);
+    \end{knot}
+\end{tikzpicture}}
+
+\newcommand{\MedLarThinReidemeisterOneStraight} {\begin{tikzpicture}[baseline=-0.65ex, scale=0.13]
+    \begin{knot}[clip width=5, end tolerance=1pt]
+        \useasboundingbox (-1, -5) rectangle (1, 5); % REMOVE ME
+        \strand[thick] (0, -5) to (0, 5);
+    \end{knot}
+\end{tikzpicture}}
+
+\newcommand{\MediumThinReidemeisterOneStraight} {\begin{tikzpicture}[baseline=-0.65ex, scale=0.06001]
+    \begin{knot}[clip width=7, end tolerance=1pt]
+        \useasboundingbox (-1, -5) rectangle (1, 5); % REMOVE ME
+        \strand[thick] (0, -5) to (0, 5);
     \end{knot}
 \end{tikzpicture}}
 
@@ -1078,6 +1147,38 @@
     \end{knot}
 \end{tikzpicture}}
 
+\newcommand{\SmallThinAlphaSmoothing} {\begin{tikzpicture}[baseline=-0.65ex, scale=0.03001]
+    \begin{knot}[clip width=5, end tolerance=1pt]
+        \useasboundingbox (-5, -5) rectangle (5, 5); % REMOVE ME
+        \draw[ thick] (-5, -5) to [out=45, in=-45] (-5, 5);
+        \draw[ thick] (5, -5) to [out=135, in=-135] (5, 5);
+    \end{knot}
+\end{tikzpicture}}
+
+\newcommand{\MedLarThinAlphaSmoothing} {\begin{tikzpicture}[baseline=-0.65ex, scale=0.13]
+    \begin{knot}[clip width=5, end tolerance=1pt]
+        \useasboundingbox (-7, -5) rectangle (7, 5); % REMOVE ME
+        \draw[ thick] (-5, -5) to [out=45, in=-45] (-5, 5);
+        \draw[ thick] (5, -5) to [out=135, in=-135] (5, 5);
+    \end{knot}
+\end{tikzpicture}}
+
+\newcommand{\MediumThinAlphaSmoothing} {\begin{tikzpicture}[baseline=-0.65ex, scale=0.06001]
+    \begin{knot}[clip width=7, end tolerance=1pt]
+        \useasboundingbox (-7, -5) rectangle (7, 5); % REMOVE ME
+        \draw[ thick] (-5, -5) to [out=45, in=-45] (-5, 5);
+        \draw[ thick] (5, -5) to [out=135, in=-135] (5, 5);
+    \end{knot}
+\end{tikzpicture}}
+
+\newcommand{\LargeThinAlphaSmoothing} {\begin{tikzpicture}[baseline=-0.65ex, scale=0.15001]
+    \begin{knot}[clip width=6, end tolerance=1pt]
+        \useasboundingbox (-7, -5) rectangle (7, 5); % REMOVE ME
+        \draw[ thick] (-5, -5) to [out=45, in=-45] (-5, 5);
+        \draw[ thick] (5, -5) to [out=135, in=-135] (5, 5);
+    \end{knot}
+\end{tikzpicture}}
+
 \newcommand{\SmallBetaSmoothing} {\begin{tikzpicture}[baseline=-0.65ex, scale=0.03001]
     \begin{knot}[clip width=5, end tolerance=1pt]
         \useasboundingbox (-5, -5) rectangle (5, 5); % REMOVE ME
@@ -1107,6 +1208,38 @@
         \useasboundingbox (-7, -5) rectangle (7, 5); % REMOVE ME
         \draw[ultra thick] (-5, -5) [in=135, out=45] to (5, -5);
         \draw[ultra thick] (-5, 5) [in=-135, out=-45] to (5, 5);
+    \end{knot}
+\end{tikzpicture}}
+
+\newcommand{\SmallThinBetaSmoothing} {\begin{tikzpicture}[baseline=-0.65ex, scale=0.03001]
+    \begin{knot}[clip width=5, end tolerance=1pt]
+        \useasboundingbox (-5, -5) rectangle (5, 5); % REMOVE ME
+        \draw[thick] (-5, -5) [in=135, out=45] to (5, -5);
+        \draw[thick] (-5, 5) [in=-135, out=-45] to (5, 5);
+    \end{knot}
+\end{tikzpicture}}
+
+\newcommand{\MedLarThinBetaSmoothing} {\begin{tikzpicture}[baseline=-0.65ex, scale=0.13]
+    \begin{knot}[clip width=5, end tolerance=1pt]
+        \useasboundingbox (-7, -5) rectangle (7, 5); % REMOVE ME
+        \draw[thick] (-5, -5) [in=135, out=45] to (5, -5);
+        \draw[thick] (-5, 5) [in=-135, out=-45] to (5, 5);
+    \end{knot}
+\end{tikzpicture}}
+
+\newcommand{\MediumThinBetaSmoothing} {\begin{tikzpicture}[baseline=-0.65ex, scale=0.06001]
+    \begin{knot}[clip width=7, end tolerance=1pt]
+        \useasboundingbox (-7, -5) rectangle (7, 5); % REMOVE ME
+        \draw[thick] (-5, -5) [in=135, out=45] to (5, -5);
+        \draw[thick] (-5, 5) [in=-135, out=-45] to (5, 5);
+    \end{knot}
+\end{tikzpicture}}
+
+\newcommand{\LargeThinBetaSmoothing} {\begin{tikzpicture}[baseline=-0.65ex, scale=0.15001]
+    \begin{knot}[clip width=6, end tolerance=1pt]
+        \useasboundingbox (-7, -5) rectangle (7, 5); % REMOVE ME
+        \draw[thick] (-5, -5) [in=135, out=45] to (5, -5);
+        \draw[thick] (-5, 5) [in=-135, out=-45] to (5, 5);
     \end{knot}
 \end{tikzpicture}}
 
@@ -1274,46 +1407,91 @@
 
 \newcommand{\LargeTemperleyA} {\begin{tikzpicture}[baseline=-0.65ex, scale=0.15001]
     \begin{knot}[clip width=6, end tolerance=1pt]
-        \useasboundingbox (-5, -5) rectangle (5, 5); % REMOVE ME
-        \draw[thick] (-5, -5) to (5, -5);
-        \draw[thick] (-5, -0) to (5, +0);
-        \draw[thick] (-5, +5) to (5, +5);
+        \useasboundingbox (-7, -5) rectangle (7, 5); % REMOVE ME
+        \draw[ultra thick] (-7, -5) to (7, -5);
+        \draw[ultra thick] (-7, -0) to (7, +0);
+        \draw[ultra thick] (-7, +5) to (7, +5);
+    \end{knot}
+\end{tikzpicture}}
+
+\newcommand{\MedLarTemperleyA} {\begin{tikzpicture}[baseline=-0.65ex, scale=0.13]
+    \begin{knot}[clip width=5, end tolerance=1pt]
+        \useasboundingbox (-7, -5) rectangle (7, 5); % REMOVE ME
+        \draw[ultra thick] (-7, -5) to (7, -5);
+        \draw[ultra thick] (-7, -0) to (7, +0);
+        \draw[ultra thick] (-7, +5) to (7, +5);
     \end{knot}
 \end{tikzpicture}}
 
 \newcommand{\LargeTemperleyB} {\begin{tikzpicture}[baseline=-0.65ex, scale=0.15001]
     \begin{knot}[clip width=6, end tolerance=1pt]
-        \useasboundingbox (-5, -5) rectangle (5, 5); % REMOVE ME
-        \draw[thick] (-5, -5) [in=down, out=right] to (-1, -2.5) [in=right, out=up] to (-5, -0);
-        \draw[thick] (5, -5) [in=down, out=left] to (1, -2.5) [in=left, out=up] to (5, -0);
-        \draw[thick] (-5, +5) to (5, +5);
+        \useasboundingbox (-7, -5) rectangle (7, 5); % REMOVE ME
+        \draw[ultra thick] (-7, -5) [in=down, out=right] to (-3.5, -2.5) [in=right, out=up] to (-7, -0);
+        \draw[ultra thick] (7, -5) [in=down, out=left] to (3.5, -2.5) [in=left, out=up] to (7, -0);
+        \draw[ultra thick] (-7, +5) to (7, +5);
+    \end{knot}
+\end{tikzpicture}}
+
+\newcommand{\MedLarTemperleyB} {\begin{tikzpicture}[baseline=-0.65ex, scale=0.13]
+    \begin{knot}[clip width=5, end tolerance=1pt]
+        \useasboundingbox (-7, -5) rectangle (7, 5); % REMOVE ME
+        \draw[ultra thick] (-7, -5) [in=down, out=right] to (-3.5, -2.5) [in=right, out=up] to (-7, -0);
+        \draw[ultra thick] (7, -5) [in=down, out=left] to (3.5, -2.5) [in=left, out=up] to (7, -0);
+        \draw[ultra thick] (-7, +5) to (7, +5);
     \end{knot}
 \end{tikzpicture}}
 
 \newcommand{\LargeTemperleyC} {\begin{tikzpicture}[baseline=-0.65ex, scale=0.15001]
     \begin{knot}[clip width=6, end tolerance=1pt]
-        \useasboundingbox (-5, -5) rectangle (5, 5); % REMOVE ME
-        \draw[thick] (-5, -5) to (5, -5);
-        \draw[thick] (-5, 0) [in=down, out=right] to (-1, 2.5) [in=right, out=up] to (-5, 5);
-        \draw[thick] (5, 0) [in=down, out=left] to (1, 2.5) [in=left, out=up] to (5, 5);
+        \useasboundingbox (-7, -5) rectangle (7, 5); % REMOVE ME
+        \draw[ultra thick] (-7, -5) to (7, -5);
+        \draw[ultra thick] (-7, 0) [in=down, out=right] to (-3.5, 2.5) [in=right, out=up] to (-7, 5);
+        \draw[ultra thick] (7, 0) [in=down, out=left] to (3.5, 2.5) [in=left, out=up] to (7, 5);
+    \end{knot}
+\end{tikzpicture}}
+
+\newcommand{\MedLarTemperleyC} {\begin{tikzpicture}[baseline=-0.65ex, scale=0.13]
+    \begin{knot}[clip width=5, end tolerance=1pt]
+        \useasboundingbox (-7, -5) rectangle (7, 5); % REMOVE ME
+        \draw[ultra thick] (-7, -5) to (7, -5);
+        \draw[ultra thick] (-7, 0) [in=down, out=right] to (-3.5, 2.5) [in=right, out=up] to (-7, 5);
+        \draw[ultra thick] (7, 0) [in=down, out=left] to (3.5, 2.5) [in=left, out=up] to (7, 5);
     \end{knot}
 \end{tikzpicture}}
 
 \newcommand{\LargeTemperleyD} {\begin{tikzpicture}[baseline=-0.65ex, scale=0.15001]
     \begin{knot}[clip width=6, end tolerance=1pt]
-        \useasboundingbox (-5, -5) rectangle (5, 5); % REMOVE ME
-        \draw[thick] (-5, -5) [in=left, out=right] to (5, 5);
-        \draw[thick] (-5, 0) [in=down, out=right] to (-1, 2.5) [in=right, out=up] to (-5, 5);
-        \draw[thick] (5, -5) [in=down, out=left] to (1, -2.5) [in=left, out=up] to (5, 0);
+        \useasboundingbox (-7, -5) rectangle (7, 5); % REMOVE ME
+        \draw[ultra thick] (-7, -5) [in=left, out=right] to (7, 5);
+        \draw[ultra thick] (-7, 0) [in=down, out=right] to (-3.5, 2.5) [in=right, out=up] to (-5, 5);
+        \draw[ultra thick] (7, -5) [in=down, out=left] to (3.5, -2.5) [in=left, out=up] to (5, 0);
+    \end{knot}
+\end{tikzpicture}}
+
+\newcommand{\MedLarTemperleyD} {\begin{tikzpicture}[baseline=-0.65ex, scale=0.13]
+    \begin{knot}[clip width=5, end tolerance=1pt]
+        \useasboundingbox (-7, -5) rectangle (7, 5); % REMOVE ME
+        \draw[ultra thick] (-7, -5) [in=left, out=right] to (7, 5);
+        \draw[ultra thick] (-7, 0) [in=down, out=right] to (-3.5, 2.5) [in=right, out=up] to (-5, 5);
+        \draw[ultra thick] (7, -5) [in=down, out=left] to (3.5, -2.5) [in=left, out=up] to (5, 0);
     \end{knot}
 \end{tikzpicture}}
 
 \newcommand{\LargeTemperleyE} {\begin{tikzpicture}[baseline=-0.65ex, scale=0.15001]
     \begin{knot}[clip width=6, end tolerance=1pt]
-        \useasboundingbox (-5, -5) rectangle (5, 5); % REMOVE ME
-        \draw[thick] (-5, 5) [in=left, out=right] to (5, -5);
-        \draw[thick] (-5, 0) [in=up, out=right] to (-1, -2.5) [in=right, out=down] to (-5, -5);
-        \draw[thick] (5, 5) [in=up, out=left] to (1, 2.5) [in=left, out=down] to (5, 0);
+        \useasboundingbox (-7, -5) rectangle (7, 5); % REMOVE ME
+        \draw[ultra thick] (-7, 5) [in=left, out=right] to (7, -5);
+        \draw[ultra thick] (-7, 0) [in=up, out=right] to (-3.5, -2.5) [in=right, out=down] to (-7, -5);
+        \draw[ultra thick] (7, 5) [in=up, out=left] to (3.5, 2.5) [in=left, out=down] to (7, 0);
+    \end{knot}
+\end{tikzpicture}}
+
+\newcommand{\MedLarTemperleyE} {\begin{tikzpicture}[baseline=-0.65ex, scale=0.13]
+    \begin{knot}[clip width=5, end tolerance=1pt]
+        \useasboundingbox (-7, -5) rectangle (7, 5); % REMOVE ME
+        \draw[ultra thick] (-7, 5) [in=left, out=right] to (7, -5);
+        \draw[ultra thick] (-7, 0) [in=up, out=right] to (-3.5, -2.5) [in=right, out=down] to (-7, -5);
+        \draw[ultra thick] (7, 5) [in=up, out=left] to (3.5, 2.5) [in=left, out=down] to (7, 0);
     \end{knot}
 \end{tikzpicture}}
 

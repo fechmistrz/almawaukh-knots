@@ -7,6 +7,15 @@ diagram_commands["ReidemeisterOneLeft"] = {
     "sizes": ["Medium", "Large", "MedLar"],
     "bounding": [-6, -5, 6, 5],
 }
+diagram_commands["ThinReidemeisterOneLeft"] = {
+    # verified
+    "lines": [
+        "\\strand[thick] (-5, 5)  [in=left, out=-60] to (3, -5) [in=down, out=right] to (5, 0);",
+        "\\strand[thick] (-5, -5) [in=left, out=60]  to (3, 5)  [in=up, out=right]   to (5, 0);",
+    ],
+    "sizes": ["Medium", "Large", "MedLar"],
+    "bounding": [-6, -5, 6, 5],
+}
 diagram_commands["ReidemeisterOneLeftProof"] = {
     "lines": [
         "\\strand[ultra thick] (-5, 5)  [in=left, out=-60] to (3, -5) [in=down, out=right] to (5, 0);",
@@ -50,6 +59,14 @@ diagram_commands["ReidemeisterOneStraight"] = {
     # verified
     "lines": [
         "\\strand[ultra thick] (0, -5) to (0, 5);",
+    ],
+    "sizes": ["Large", "MedLar", "Medium"],
+    "bounding": [-1, -5, 1, 5],
+}
+diagram_commands["ThinReidemeisterOneStraight"] = {
+    # verified
+    "lines": [
+        "\\strand[thick] (0, -5) to (0, 5);",
     ],
     "sizes": ["Large", "MedLar", "Medium"],
     "bounding": [-1, -5, 1, 5],

@@ -5,10 +5,24 @@ diagram_commands["AlphaSmoothing"] = {
     ],
     "sizes": ["Small", "MedLar", "Medium", "Large"],
 }
+diagram_commands["ThinAlphaSmoothing"] = {
+    "lines": [
+        "\\draw[ thick] (-5, -5) to [out=45, in=-45] (-5, 5);",
+        "\\draw[ thick] (5, -5) to [out=135, in=-135] (5, 5);",
+    ],
+    "sizes": ["Small", "MedLar", "Medium", "Large"],
+}
 diagram_commands["BetaSmoothing"] = {
     "lines": [
         "\\draw[ultra thick] (-5, -5) [in=135, out=45] to (5, -5);",
         "\\draw[ultra thick] (-5, 5) [in=-135, out=-45] to (5, 5);",
+    ],
+    "sizes": ["Small", "MedLar", "Medium", "Large"],
+}
+diagram_commands["ThinBetaSmoothing"] = {
+    "lines": [
+        "\\draw[thick] (-5, -5) [in=135, out=45] to (5, -5);",
+        "\\draw[thick] (-5, 5) [in=-135, out=-45] to (5, 5);",
     ],
     "sizes": ["Small", "MedLar", "Medium", "Large"],
 }

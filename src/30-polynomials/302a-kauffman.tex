@@ -1,5 +1,5 @@
 
-\subsection{Definicja kombinatoryczna -- klamra Kauffmana}
+\subsection{Klamra Kauffmana}
 \index{klamra Kauffmana|(}%
 Klamra Kauffmana to wielomian Laurenta jednej zmiennej zdefiniowany w pracy \cite{kauffman1987} z 1987 roku, oparty na ruchach Reidemeistera.
 \index[persons]{Kauffman, Louis}%
@@ -10,9 +10,9 @@ Przede wszystkim żądamy, by niewęzłowi przypisany był wielomian $1$: $\brac
 Po drugie chcemy wyznaczać nawiasy znając je dla prostszych splotów, co zapiszemy symbolicznie:
 \begin{comment}
 \begin{equation}
-    \bracket{\MediumMinusCrossing} =
-    A \bracket{\MediumAlphaSmoothing} +
-    B \bracket{\MediumBetaSmoothing}
+    \bracket{\MediumThinMinusCrossing} =
+    A \bracket{\MediumThinAlphaSmoothing} +
+    B \bracket{\MediumThinBetaSmoothing}
 \end{equation}
 \end{comment}
 Zależy nam też na tym, by móc dodać do splotu trywialną składową: $\langle L \cup \SmallUnknot \rangle = C \langle L \rangle$.
@@ -20,8 +20,8 @@ Prosty rachunek pokazuje wpływ drugiego ruchu Reidemeistera na klamrę:
 \begin{comment}
 \begin{equation}
     \bracket{\MediumKauffmanReidemeisterTwoA}
-    = (A^2 + ABC + B^2) \bracket{\MediumBetaSmoothing} + BA \bracket{\MediumAlphaSmoothing}
-    \stackrel{?}{=} \bracket{\MediumAlphaSmoothing}.
+    = (A^2 + ABC + B^2) \bracket{\MediumThinBetaSmoothing} + BA \bracket{\MediumThinAlphaSmoothing}
+    \stackrel{?}{=} \bracket{\MediumThinAlphaSmoothing}.
 \end{equation}
 \end{comment}
 
@@ -39,9 +39,9 @@ W ten sposób odkryliśmy definicję.
         \bracket{\MediumUnknot} & = 1
         \label{eqn:kauffman_axiom_1}%
         \\
-        \bracket{\MediumMinusCrossing} & =
-        A \bracket{\MediumAlphaSmoothing} +
-        A^{-1} \bracket{\MediumBetaSmoothing}
+        \bracket{\MediumThinMinusCrossing} & =
+        A \bracket{\MediumThinAlphaSmoothing} +
+        A^{-1} \bracket{\MediumThinBetaSmoothing}
         \label{eqn:kauffman_axiom_2}%
         \\
         \bracket{D \sqcup \MediumUnknot} & =
@@ -75,7 +75,7 @@ Przedstawimy teraz wpływ ruchów Reidemeistera na nasz nowy wielomian.
     pierwszy ruch zmienia ją zgodnie z~regułą:
 \begin{comment}
     \begin{equation}
-        \bracket{\MediumReidemeisterOneLeft} = -A^{-3} \bracket{\,\MediumReidemeisterOneStraight\,}.
+        \bracket{\MediumThinReidemeisterOneLeft} = -A^{-3} \bracket{\,\MediumThinReidemeisterOneStraight\,}.
     \end{equation}
 \end{comment}
 \end{lemma}
@@ -84,31 +84,31 @@ Przedstawimy teraz wpływ ruchów Reidemeistera na nasz nowy wielomian.
     Pierwszy ruch Reidemeistera:
 \begin{comment}
     \begin{align}
-        \bracket{\MediumReidemeisterOneLeft} & \stackrel{K2}{=} A
+        \bracket{\MediumThinReidemeisterOneLeft} & \stackrel{K2}{=} A
         \bracket{\MediumReidemeisterOneSmoothA} +
         A^{-1} \bracket{\MediumReidemeisterOneSmoothB} \\ & \stackrel{K3}{=}
-        A \bracket{\MediumReidemeisterOneStraight} +
-        A^{-1}(-A^{-2}-A^2) \bracket{\MediumReidemeisterOneStraight} =
-        -A^{-3}\bracket{\MediumReidemeisterOneStraight}
+        A \bracket{\MediumThinReidemeisterOneStraight} +
+        A^{-1}(-A^{-2}-A^2) \bracket{\MediumThinReidemeisterOneStraight} =
+        -A^{-3}\bracket{\MediumThinReidemeisterOneStraight}
     \end{align}
 \end{comment}
-
-    Dla drugiego ruchu:
+\noindent
+Dla drugiego ruchu:
 \begin{comment}
     \begin{align}
         \bracket{\MediumKauffmanReidemeisterTwoA} & \stackrel{K2}{=}
         A \bracket{\MediumKauffmanReidemeisterTwoB} +
         A^{-1} \bracket{\MediumKauffmanReidemeisterTwoC} \\ & \stackrel{K1}{=}
-        -A^{-2} \bracket{\MediumBetaSmoothing} +
+        -A^{-2} \bracket{\MediumThinBetaSmoothing} +
         A^{-1} \bracket{\MediumKauffmanReidemeisterTwoC} \\ & \stackrel{K2}{=}
-        -A^{-2} \bracket{\MediumBetaSmoothing} +
-        A^{-1}A \bracket{\MediumAlphaSmoothing} +
-        A^{-1}A^{-1} \bracket{\MediumBetaSmoothing} \\ & =
-        \bracket{\MediumAlphaSmoothing}
+        -A^{-2} \bracket{\MediumThinBetaSmoothing} +
+        A^{-1}A \bracket{\MediumThinAlphaSmoothing} +
+        A^{-1}A^{-1} \bracket{\MediumThinBetaSmoothing} \\ & =
+        \bracket{\MediumThinAlphaSmoothing}
     \end{align}
 \end{comment}
-
-    Dla trzeciego ruchu:
+\noindent
+Dla trzeciego ruchu:
 \begin{comment}
     \begin{align}
     \bracket{\MediumKauffmanReidemeisterThreeA} & \stackrel{K2}{=}
@@ -118,10 +118,9 @@ Przedstawimy teraz wpływ ruchów Reidemeistera na nasz nowy wielomian.
     A^{-1} \bracket{\MediumKauffmanReidemeisterThreeE} \\ & \stackrel{R2}{=}
     A \bracket{\MediumKauffmanReidemeisterThreeFlippedB} +
     A^{-1} \bracket{\MediumKauffmanReidemeisterThreeFlippedC} \stackrel{K2}{=}
-    \bracket{\MediumKauffmanReidemeisterThreeFlippedA},
+    \bracket{\MediumKauffmanReidemeisterThreeFlippedA}. \qedhere
     \end{align}
 \end{comment}
-    korzystaliśmy tu z~własności drugiego ruchu.
 \end{proof}
 
 \begin{corollary}
@@ -136,7 +135,7 @@ Jeżeli przypomnimy sobie, że na mocy lematu \ref{lem:writhe_reidemeister} spin
 \begin{definition}
 \label{def:jones_polynomial}%
     Niech $L$ będzie zorientowanym splotem.
-    Wielomian Laurenta $\jones(L) \in \Z[t^{\pm 1/2}]$ określony przez
+    Wtedy wielomian Laurenta $\jones(L) \in \Z[t^{\pm 1/2}]$ określony przez
     \begin{equation}
         \jones(L)=\left[(-A)^{-3w(D)} \bracket{D}\right]_{t^{1/2}=A^{-2}},
     \end{equation}
@@ -159,8 +158,7 @@ Korzystając z niej, ruchów i rachunku Kirby'ego (i być może chirurgii Dehna)
 
 \begin{proof}
     Pokażemy niezmienniczość wyrażenia $(-A)^{-3w(D)}\langle D\rangle$ na ruchy Reidemeistera.
-
-    Niech
+    Oznacznym diagramy przed oraz po wykonaniu pierwszego ruchu Reidemeistera przez
 \begin{comment}
     \begin{equation}
         D_1 := \LargeReidemeisterOneLeft,

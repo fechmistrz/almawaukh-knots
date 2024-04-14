@@ -52,6 +52,14 @@ diagram_commands["MinusCrossing"] = {
     "sizes": ["Small", "Medium", "Large"],
     "flip": ["1"],
 }
+diagram_commands["ThinMinusCrossing"] = {
+    "lines": [
+        "\\strand[thick] (-5, -5) to (5, 5);",
+        "\\strand[thick] (-5, 5) to (5, -5);",
+    ],
+    "sizes": ["Small", "Medium", "Large"],
+    "flip": ["1"],
+}
 diagram_commands["MinusCrossingArrows"] = {
     "lines": [
         "\\strand[ultra thick,-latex] (-5, -5) to (6, 6);",
