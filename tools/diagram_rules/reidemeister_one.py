@@ -10,11 +10,12 @@ diagram_commands["ReidemeisterOneLeft"] = {
 diagram_commands["ThinReidemeisterOneLeft"] = {
     # verified
     "lines": [
-        "\\strand[thick] (-5, 5)  [in=left, out=-60] to (3, -5) [in=down, out=right] to (5, 0);",
-        "\\strand[thick] (-5, -5) [in=left, out=60]  to (3, 5)  [in=up, out=right]   to (5, 0);",
+        "\\strand[thick, pink] (-5, 5)  [in=left, out=-60] to (3, -5) [in=down, out=right] to (5, 0);",
+        "\\strand[thick, pink] (-5, -5) [in=left, out=60]  to (3, 5)  [in=up, out=right]   to (5, 0);",
     ],
     "sizes": ["Medium", "Large", "MedLar"],
     "bounding": [-6, -5, 6, 5],
+    "clip": 5
 }
 diagram_commands["ReidemeisterOneLeftProof"] = {
     "lines": [
