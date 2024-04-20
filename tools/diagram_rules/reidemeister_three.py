@@ -138,14 +138,15 @@ diagram_commands["VirtualReidemeisterThreeA"] = {
         "\\strand[ultra thick] (5, -5) to (0.25, -0.25);",
         "\\strand[ultra thick] (-0.25, 0.25) to (-4, 4);",
         # background arrow
-        "\\strand[ultra thick,-latex] (5, 0) to (4, 0);",
+        "\\strand[ultra thick,-latex] (4, 0) to (6, 0);",
         "\\strand[ultra thick] (-5, 0) [in=left, out=right] to (-4, 0) to (0, 5) to (4, 0);",
         # singular crossing
         "\\draw[ultra thick,fill=black] (0, 0) circle (0.5);",
     ],
     "sizes": ["Large"],
-    "clip": 7,
+    "clip": 5,
     "flip": ["1", "2"],
+    "pink": True,
 }
 diagram_commands["VirtualReidemeisterThreeB"] = {
     "lines": [
@@ -158,14 +159,15 @@ diagram_commands["VirtualReidemeisterThreeB"] = {
         "\\strand[ultra thick] (5, -5) to (0.25, -0.25);",
         "\\strand[ultra thick] (-0.25, 0.25) to (-4, 4);",
         # background arrow
-        "\\strand[ultra thick,-latex] (5, 0) to (4, 0);",
+        "\\strand[ultra thick,-latex] (4, 0) to (6, 0);",
         "\\strand[ultra thick] (-5, 0) [in=left, out=right] to (-4, 0) to (0, -5) to (4, 0);",
         # singular crossing
         "\\draw[ultra thick,fill=black] (0, 0) circle (0.5);",
     ],
     "sizes": ["Large"],
-    "clip": 7,
+    "clip": 5,
     "flip": ["1", "2"],
+    "pink": True,
 }
 diagram_commands["VirtualReidemeisterThreeC"] = {
     "lines": [
@@ -178,13 +180,14 @@ diagram_commands["VirtualReidemeisterThreeC"] = {
         "\\strand[ultra thick] (5, -5) to (0.25, -0.25);",
         "\\strand[ultra thick] (-0.25, 0.25) to (-4, 4);",
         # background arrow
-        "\\strand[ultra thick,-latex] (5, 0) to (4, 0);"
+        "\\strand[ultra thick,-latex] (4, 0) to (6, 0);",
         "\\strand[ultra thick] (-5, 0) [in=left, out=right] to (-4, 0) to (0, 5) to (4, 0);",
         # singular crossing
         "\\draw[ultra thick,fill=black] (0, 0) circle (0.5);",
     ],
     "sizes": ["Large"],
-    "clip": 7,
+    "clip": 5,
+    "pink": True,
 }
 diagram_commands["VirtualReidemeisterThreeD"] = {
     "lines": [
@@ -197,11 +200,12 @@ diagram_commands["VirtualReidemeisterThreeD"] = {
         "\\strand[ultra thick] (5, -5) to (0.25, -0.25);",
         "\\strand[ultra thick] (-0.25, 0.25) to (-4, 4);",
         # background arrow
-        "\\strand[ultra thick,-latex] (5, 0) to (4, 0);"
+        "\\strand[ultra thick,-latex] (4, 0) to (6, 0);",
         "\\strand[ultra thick] (-5, 0) [in=left, out=right] to (-4, 0) to (0, -5) to (4, 0);",
         # singular crossing
         "\\draw[ultra thick,fill=black] (0, 0) circle (0.5);",
     ],
     "sizes": ["Large"],
-    "clip": 7,
+    "clip": 5,
+    "pink": True,
 }

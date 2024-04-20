@@ -46,6 +46,8 @@ def generate_command(command_name, command_details):
     options = [f"clip width={clip}", "end tolerance=1pt"]
     if "flip" in command_copy.keys():
         options.append("flip crossing/.list={" + ",".join(command_copy["flip"]) + "}")
+    if command_details.get("pink", False):
+        options.append(f"background color=ocre!15")
 
     print(f"\\newcommand{{\\{command_name}}} {{\\begin{{tikzpicture}}[baseline=-0.65ex, scale={scale}]")
     print(f"    \\begin{{knot}}[{', '.join(options)}]")

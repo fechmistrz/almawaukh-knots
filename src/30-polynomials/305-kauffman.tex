@@ -7,14 +7,14 @@ Wielomianu $F$ Kauffmana nie należy mylić z~klamrą Kauffmana $\langle \ldots 
 
 \begin{definition}[wielomian Kauffmana]
     Niech $L$ będzie zorientowanym splotem, zaś $D$ ustalonym diagramem o~spinie $\writhe D$.
-    Istnieje wielomian $\Lambda(L)$ wyznaczony przez relację kłębiastą
+    Istnieje wielomian $\Lambda(L)$ wyznaczony przez relację kłębiastą (z oznaczeniami jak na stronie \pageref{unoriented_diagrams_infty})
     \begin{equation}
 \begin{comment}
-        \Lambda \left(\MediumPlusCrossing\right) +
-        \Lambda \left(\MediumMinusCrossing\right) =
+        \Lambda (L_+) +
+        \Lambda (L_-) =
         z \cdot \left(
-        \Lambda \left(\MediumBetaSmoothing\right) +
-        \Lambda \left(\MediumAlphaSmoothing\right)
+        \Lambda (L_0) +
+        \Lambda (L_\infty)
         \right)
 \end{comment}
         ,
@@ -22,14 +22,12 @@ Wielomianu $F$ Kauffmana nie należy mylić z~klamrą Kauffmana $\langle \ldots 
     który jest niezmienniczy względem II i III ruchu Reidemeistera, spełnia równości:
     \begin{equation}
 \begin{comment}
-        \Lambda \left(\MediumReidemeisterOneRight\right) =
-        a \Lambda \left(\MediumReidemeisterOneStraight\right)
+        \frac 1 a \Lambda \left(\MediumThinReidemeisterOneRight\right) =
+        \Lambda \left(\MediumThinReidemeisterOneStraight\right)
 \end{comment}
-,
+        =
 \begin{comment}
-        \quad\quad\quad
-        \Lambda \left(\MediumReidemeisterOneLeft\right) =
-        \frac 1 a \Lambda \left(\MediumReidemeisterOneStraight\right)
+        a \Lambda \left(\MediumThinReidemeisterOneLeft\right)
 \end{comment}
     \end{equation}
     oraz warunek brzegowy $\Lambda(\SmallUnknot) = 1$.
@@ -46,7 +44,7 @@ Wiemy natomiast, że
 
 \begin{proposition}
 \index{wielomian!BLM/Ho}%
-    Wielomian BLM/Ho jest szczególnym przypadkiem wielomianu Kauffmana, mamy
+    Wielomian BLM/Ho jest szczególnym przypadkiem wielomianu Kauffmana, mamy równość
     \begin{equation}
         Q(x) = F(1, x).
     \end{equation}
@@ -54,7 +52,7 @@ Wiemy natomiast, że
 
 \begin{proposition}
 \index{wielomian!Jonesa}%
-    Wielomian Jonesa jest szczególnym przypadkiem wielomianu Kauffmana, mamy
+    Wielomian Jonesa jest szczególnym przypadkiem wielomianu Kauffmana, mamy równość
     \begin{equation}
         \jones(t)=F(-t^{-3/4},t^{-1/4}+t^{1/4}).
     \end{equation}

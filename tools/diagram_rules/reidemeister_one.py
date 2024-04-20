@@ -47,6 +47,14 @@ diagram_commands["ReidemeisterOneRight"] = {
     ],
     "sizes": ["Medium"],
 }
+diagram_commands["ThinReidemeisterOneRight"] = {
+    "lines": [
+        "\\strand[thick] (-5, -5) [in=left, out=60] to  (3, 5)  [in=up, out=right]   to (5, 0);",
+        "\\strand[thick] (-5, 5)  [in=left, out=-60] to (3, -5) [in=down, out=right] to (5, 0);",
+    ],
+    "sizes": ["Medium"],
+    "clip": 5
+}
 diagram_commands["ReidemeisterOneRightQuandleProof"] = {
     "lines": [
         "\\strand[ultra thick] (-5, -5) [in=left, out=60] to  (3, 5)  [in=up, out=right]   to (5, 0);",
