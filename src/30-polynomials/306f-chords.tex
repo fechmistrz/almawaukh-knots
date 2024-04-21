@@ -7,8 +7,11 @@ Standardową metodą kodowania tej informacji jest diagram cięciw.
 \begin{definition}[diagram cięciw]
 % DICTIONARY;chord;cięciw;diagram
 \index{diagram cięciw}%
-    Zorientowany okrąg razem z~$2n$ punktami leżącymi na nim (oraz~połączonymi w pary) z~dokładnością do zachowujących orientację homeomorfizmów nazywamy diagramem cięciw rzędu $n$, albo stopnia $n$.
+    Zorientowany okrąg razem z~$2n$ punktami leżącymi na nim (oraz~połączonymi w pary) nazywamy diagramem cięciw rzędu $n$, albo stopnia $n$.
+    Dwa homeomorficzne z zachowaniem orientacji diagramy uznajemy za takie same.
 \end{definition}
+
+\vspace{-15pt}
 
 \begin{figure}[H]
     \centering
@@ -48,37 +51,102 @@ Jeśli $v_1, v_2$ są niezmiennikami Wasiljewa rzędu co najwyżej $n$ o~tych sa
 Oznacza to, że przestrzeń $\mathcal V_n/\mathcal V_{n-1}$ pokrywa się z przestrzenią wszystkich symboli niezmienników Wasiljewa rzędu co najwyżej $n$.
 Zbiór diagramów cięciw rzędu $n$ jest skończony, więc przestrzeń funkcji na tym zbiorze też jest skończona, a zatem przestrzenie $\mathcal V_n$ są skończonego wymiaru.
 
-Stojmenow w \cite{stoimenowa2001} znalazł jakościowy wynik bez praktycznego znaczenia (ponieważ już dla $k = 4$ musielibyśmy znać wszystkie węzły o 36 skrzyżowaniach, a~jeszcze ich nie znamy, stan na 2021 rok).
+Stojmenow w \cite{stoimenowa2001} znalazł jakościowy wynik bez praktycznego znaczenia (ponieważ już dla $k = 4$ musielibyśmy znać wszystkie węzły o 36 skrzyżowaniach, a~tych jest tak dużo, że prędzej skonamy niż poznamy pełną ich listę).
 \index[persons]{Stojmenow, Aleksander}%
 Dokładniej:
 
 \begin{proposition}
-    Niezmiennik Wasiljewa rzędu co najwyżej $k$ jest jednoznacznie określony przez wartości, jakie przyjmuje na alternujących węzłach o co najwyżej $2k^2 + k$ skrzyżowaniach.
+    Każdy niezmiennik Wasiljewa rzędu $k$ jest jednoznacznie określony przez wartości, jakie przyjmuje na alternujących węzłach o co najwyżej $2k^2 + k$ skrzyżowaniach.
 \end{proposition}
 
 Symbol nie jest byle jaką funkcją, spełnia dwie relacje:
 \index{relacje 1T i 4T}%
 \begin{figure}[H]
 \begin{comment}
-    \[
-        \LargeOneTerm \mapsto 0
-    \]
+%
+\begin{minipage}[b]{.065\linewidth}
+    $\color{white}?$\hfill$\color{white}?$
+\end{minipage}
+%
+\begin{minipage}[b]{.20\linewidth}
+    \centering
+    \MedLarOneTerm $= 0,$
+\end{minipage}
+%
+\begin{minipage}[b]{.65\linewidth}
+    \centering
+    \MedLarFourTermA $-$ \MedLarFourTermB $=$ \MedLarFourTermC $-$ \MedLarFourTermD
+\end{minipage}
+%
+\begin{minipage}[b]{.065\linewidth}
+    $\color{white}?$\hfill$\color{white}?$
+\end{minipage}
+%
 \end{comment}
-    \caption{Relacja ,,one-term'' (1T albo FI?)}
-\end{figure}
-oraz
-\begin{figure}[H]
-\begin{comment}
-    \[
-        \LargeFourTermA - \LargeFourTermB + \LargeFourTermC - \LargeFourTermD \mapsto 0.
-    \]
-\end{comment}
-    \caption{Relacja ,,four-term'' (4T)}
+    \caption{Relacje ,,one-term'' (1T) i ,,four-term'' (4T)}
 \end{figure}
 
 Diagramy mogą mieć więcej cięciw z końcami tam, gdzie linia jest kropkowana, natomiast wszystkie końce cięciw na czarnych, pogrubionych łukach zostały zaznaczone explicite.
 
 Zastosowaliśmy tutaj mały skrót dla oszczędności miejsca: oczywiście nie umiemy jeszcze odejmować od siebie diagramów, dlatego powyższe relacje należy rozumieć tak, że na każdym diagramie liczymy symbol niezmiennika i porównujemy tak otrzymane liczby zespolone.
+
+\begin{example}
+Mamy:
+\begin{equation}
+    \begin{tikzpicture}[baseline=-0.65ex, scale=0.11001]
+    \begin{knot}[clip width=15, end tolerance=1pt]
+        \useasboundingbox (-7, -5) rectangle (7, 5); % REMOVE ME
+        \draw[thick, first_colour] (0:5) [in=240, out=180] to (60:5);
+        \draw[thick, first_colour] (120:5) [in=360, out=300] to (180:5);
+        \draw[thick, first_colour] (240:5) [in=480, out=420] to (300:5);
+        \draw[very thick] (-0, 0) circle (5);
+    \end{knot}
+    \end{tikzpicture}
+    =
+    \begin{tikzpicture}[baseline=-0.65ex, scale=0.11001]
+    \begin{knot}[clip width=15, end tolerance=1pt]
+        \useasboundingbox (-7, -5) rectangle (7, 5); % REMOVE ME
+        \draw[thick, first_colour] (0:5) [in=240, out=180] to (60:5);
+        \draw[thick, first_colour] (120:5) [in=480, out=300] to (300:5);
+        \draw[thick, first_colour] (180:5) [in=420, out=360] to (240:5);
+        \draw[very thick] (-0, 0) circle (5);
+    \end{knot}
+    \end{tikzpicture},
+    \,\,\,
+    \begin{tikzpicture}[baseline=-0.65ex, scale=0.11001]
+        \begin{knot}[clip width=15, end tolerance=1pt]
+            \useasboundingbox (-7, -5) rectangle (7, 5); % REMOVE ME
+            \draw[thick, first_colour] (0:5) [in=360, out=180] to (180:5);
+            \draw[thick, first_colour] (60:5) [in=420, out=240] to (240:5);
+            \draw[thick, first_colour] (120:5) [in=480, out=300] to (300:5);
+            \draw[very thick] (-0, 0) circle (5);
+        \end{knot}
+        \end{tikzpicture}
+        +
+        \begin{tikzpicture}[baseline=-0.65ex, scale=0.11001]
+            \begin{knot}[clip width=15, end tolerance=1pt]
+                \useasboundingbox (-7, -5) rectangle (7, 5); % REMOVE ME
+                \draw[thick, first_colour] (0:5) [in=240, out=180] to (60:5);
+                \draw[thick, first_colour] (120:5) [in=420, out=300] to (240:5);
+                \draw[thick, first_colour] (180:5) [in=480, out=360] to (300:5);
+                \draw[very thick] (-0, 0) circle (5);
+            \end{knot}
+            \end{tikzpicture}
+        =
+        2\begin{tikzpicture}[baseline=-0.65ex, scale=0.11001]
+            \begin{knot}[clip width=15, end tolerance=1pt]
+                \useasboundingbox (-7, -5) rectangle (7, 5); % REMOVE ME
+                \draw[thick, first_colour] (0:5) [in=300, out=180] to (120:5);
+                \draw[thick, first_colour] (60:5) [in=420, out=240] to (240:5);
+                \draw[thick, first_colour] (180:5) [in=480, out=360] to (300:5);
+                \draw[very thick] (-0, 0) circle (5);
+            \end{knot}
+            \end{tikzpicture}
+\end{equation}
+    (na mocy relacji 1T i 4T).
+    % https://people.math.osu.edu/chmutov.1/preprints/cdbook20jul10.pdf
+    % Introduction to Vassiliev Knot Invariants First draft. Comments welcome. July 20, 2010 S. Chmutov S. Duzhin J. Mostovoy
+\end{example}
 
 \begin{definition}[układ ciężarów]
 % DICTIONARY;weight system;układ ciężarów;-
@@ -109,13 +177,13 @@ Jest to pięknie zilustrowane w \cite[sekcja 3.7]{duzhin2012}.
         \item wewnętrznych wierzchołkach, gdzie spotykają się trzy kreskowane linie;
         \item zewnętrznych wierzchołkach, gdzie kreskowane linie kończą się na okręgu.
     \end{itemize}
-    Wierzchołki wewnętrzne są zorientowane, zgodnie lub przeciwnie do ruchu wskazówek zegara.
+    Wierzchołki wewnętrzne są zorientowane w lewo lub prawo.
 \end{definition}
 
 Diagramy cięciw modulo relacja 4T jest tym samym, co algebra chińskich znaków modulo relacja STU.
 % DICTIONARY;algebra of Chinese characters;algebra chińskich znaków;-
 \index{algebra!chińskich znaków}%
 \index{chiński znak|see {algebra chińskich znaków}}%
-W~tej drugiej spełnione są jeszcze relacje AS oraz IHX, nie mam siły tego rysować, ale wszystko można znaleźć w pracy Bar-Natana \cite{barnatand1995}.
+W~tej drugiej spełnione są jeszcze relacje AS oraz IHX, nie mamy siły tego rysować, ale wszystko można znaleźć w pracy Bar-Natana \cite{barnatand1995}.
 \index[persons]{Bar-Natan, Dror}%
 

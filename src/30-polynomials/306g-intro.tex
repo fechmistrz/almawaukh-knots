@@ -31,17 +31,17 @@ Szkielet sekcji oparliśmy o piętnasty rozdział podręcznika Murasugiego, \cit
 \end{definition}
 
 Gdy używamy słowa węzeł, nigdy nie mamy na myśli węzła osobliwego.
-Punkt, gdzie węzeł osobliwy tnie samego siebie, nazywamy wierzchołkiem i~oznaczamy pogrubioną kropką na diagramie.
+Punkt, gdzie węzeł osobliwy tnie samego siebie, nazywamy wierzchołkiem i~oznaczamy pogrubioną kropką:
 \index{wierzchołek (węzła osobliwego)}%
 \begin{comment}
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.22\linewidth]{../data/singular/8_17.png}
+    \includegraphics[width=0.15\linewidth]{../data/singular/8_17.png}
     \caption{Diagram totalnie przypadkowego węzła z jednym osobliwym skrzyżowaniem}
 \end{figure}
 \end{comment}
 
-Podamy teraz definicję równoważności dla węzłów osobliwych, zupełnie analogicznie do definicji \ref{def:equivalent_knots_2} dla zwykłych węzłów.
+Odpowiednikiem definicji \ref{def:equivalent_knots_2} dla węzłów osobliwych jest
 
 \begin{definition}[płaski dysk]
     Niech $A$ będzie wierzchołkiem węzła osobliwego $K$, $B_A$ jego małym domkniętym otoczeniem, zaś $P_A$ płaszczyzną, która zawiera $B_A \cap K$, mały fragment węzła wokół wierzchołka.
@@ -55,7 +55,7 @@ Podamy teraz definicję równoważności dla węzłów osobliwych, zupełnie ana
 % Murasugi
 
 Ten drugi warunek gwarantuje nam, że skrzyżowania wokół podwójnych punktów nie ulegną zniszczeniu.
-Istnieje podobne kryterium dla diagramów, odpowiednik twierdzenia Reidemeistera.
+Mamy też osobliwe twierdzenie Reidemeistera:
 
 \begin{proposition}
 \index{ruch!$\Omega$}%
@@ -79,6 +79,8 @@ Istnieje podobne kryterium dla diagramów, odpowiednik twierdzenia Reidemeistera
     \end{minipage}
     \caption{Dwa osobliwe warianty III ruchu Reidemeistera}
     \end{figure}
+    \noindent
+    (Ciąg dalszy z poprzedniej strony)
     \begin{figure}[H]
         \[
             \LargeVirtualFlypeFiveA \cong \LargeVirtualFlypeFiveB
@@ -92,7 +94,7 @@ Uwaga: ufamy pracy Nelsona, Oyamaguchiego, Sazdanovic \cite{sazdanovic2019} gdzi
 \index[persons]{Nelson, Sam}%
 \index[persons]{Oyamaguchi, Natsumi}%
 \index[persons]{Sazdanovic, Radmila}%
-Natomist Murasugi podaje tylko jedną nową operację, wydaje nam się, że wszyscy nie mogą mieć racji.
+Natomiast Murasugi podaje tylko jedną nową operację, wydaje nam się, że wszyscy nie mogą mieć jednocześnie racji.
 
 Załóżmy teraz, że mamy jakiś niezmiennik węzłów $v$ o~wymiernych wartościach i~chcemy przedłużyć go do niezmiennika $\hat v$ węzłów osobliwych.
 Najprościej zrobić to rekurencyjnie.
@@ -112,7 +114,7 @@ Funkcję $\hat v$ nazywamy niezmiennikiem osobliwym indukowanym przez niezmienni
 \begin{definition}[rząd niezmiennika]
 \label{def:vassiliev_order}%
 \index{niezmiennik!Wasiljewa!rząd ...}%
-    Niech $v$ będzie niezmiennikiem osobliwym.
+    Niech $v$ będzie niezmiennikiem osobliwym, zaś $n$ liczbą naturalną.
     Mówimy, że $v$ jest niezmiennikiem Wasiljewa rzędu co najwyżej $n$, jeśli dla dowolnego osobliwego węzła $K$ o $n + 1$ wierzchołkach zachodzi $v(K) = 0$.
     Jeśli dodatkowo $v$ nie jest rzędu co najwyżej $n - 1$, to mówimy, że jest rzędu dokładnie $n$.
 \end{definition}
