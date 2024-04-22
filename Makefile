@@ -56,7 +56,7 @@ chapter-2.pdf: src/20-colours/*.tex
 	$(call make_pdf,chapter-2)
 	cp ${MY_TMP_DIR}/${$@_precision}/build/knot-theory.pdf chapter-2.pdf
 
-chapter-3.pdf: src/30-polynomials/*.tex
+chapter-3.pdf: src/50-polynomials/*.tex
 	$(call make_pdf,chapter-3)
 	cp ${MY_TMP_DIR}/${$@_precision}/build/knot-theory.pdf chapter-3.pdf
 
