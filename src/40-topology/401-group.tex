@@ -6,16 +6,15 @@ Dzięki temu poniższa definicja ma sens:
 \begin{definition}[grupa węzła]
 \index{grupa!węzła}%
     Niech $K$ będzie węzłem.
-    Grupę podstawową jego dopełnienia,
+    Wtedy grupę podstawową jego dopełnienia,
     \begin{equation}
-        \pi(L) := \pi_1 \left(\R^3 \setminus L\right),
+        \pi(L) := \pi_1 \left(\R^3 \setminus K\right),
     \end{equation}
     nazywamy grupą węzła i oznaczamy $\pi(K)$.
 \end{definition}
 
 Nie należy (i dosyć trudno jest) mylić grupy węzła z grupą kolorującą (patrz definicja \ref{def:colouring_group}).
-Jak wkrótce się przekonamy, ta pierwsza jest zawsze nieskończona i poza grupą niewęzła, nieprzemienna.
-Natomiast grupa kolorująca jest skończona dla splotów o~niezerowym wyznaczniku i zawsze przemienna.
+Grupa kolorująca jest skończona dla splotów o~niezerowym wyznaczniku i zawsze przemienna, natomiast, jak wkrótce się przekonamy, grupa podstawowa jest zawsze nieskończona i poza grupą niewęzła, nieprzemienna.
 
 Podamy najpierw kilka przykładów węzłów oraz ich grup.
 
@@ -69,12 +68,14 @@ Jej wyznaczenie to popularne ćwiczenie w~podręcznikach topologii algebraicznej
 \end{proposition}
 
 \begin{proof}
-    Niech $K_1, K_2$ będą równoważnymi węzłami.
-    Wtedy istnieje izotopijny z~identycznością homeomorfizm $f \colon \R^3 \to \R^3$, który posyła pierwszy węzeł na drugi: $f(K_1) = K_2$.
-    Obcięty do dopełnień węzłów indukuje izomorfizm grup podstawowych $\pi(K_1) \cong \pi(K_2)$.
+    Ustalmy dwa równoważne węzły $K_1 \equiv K_2$.
+    Wtedy istnieje pewien homeomorfizm $f \colon \R^3 \to \R^3$, który posyła pierwszy węzeł na drugi: $f[K_1] = K_2$.
+    Obcięcie $f$ do dopełnień węzłów indukuje izomorfizm grup podstawowych $\pi(K_1) \cong \pi(K_2)$.
 \end{proof}
 
-Na przykładzie grupy $\langle x,y,z \mid xyx=yxy,xzx=zxz\rangle$, która odpowiada zarówno sumie prostej różno-, jak i~jednoskrętnych trójlistników, widać że implikacja odwrotna nie zachodzi: mają one różne sygnatury (patrz uwaga za wnioskiem \ref{cor:acheiral_signature}).
+Sumy proste przeciwnie oraz tak samo skrętnych trójlistników mają róże sygnatury (patrz uwaga za wnioskiem \ref{cor:acheiral_signature}), więc nie są równoważne.
+Ale obydwie sumy mają tę samą grupę podstawową $\langle x,y,z \mid xyx=yxy,xzx=zxz\rangle$.
+
 Prawdziwe jest nawet ogólniejsze stwierdzenie:
 
 \begin{proposition}
@@ -85,7 +86,7 @@ Prawdziwe jest nawet ogólniejsze stwierdzenie:
     \end{equation}
 \end{proposition}
 
-\begin{proof}
+\begin{proof}[Niedowód]
     Wniosek z twierdzeń o podgrupie południkowo-równoleżnikowej \cite[s. 75]{kawauchi1996}.
 \end{proof}
 
@@ -93,7 +94,7 @@ Twierdzenie odwrotne do faktu \ref{prop:knot_group_invariant} jest prawdziwe w k
 
 \begin{proposition}
     Niech $K_1, K_2$ będą węzłami pierwszymi.
-    Jeżeli ich grupy są izomorficzne, to same węzły są równoważne.
+    Jeżeli grupy $\pi(K_1) \cong \pi(K_2)$ są izomorficzne, to węzły $K_1 \equiv K_2$ są równoważne.
 \end{proposition}
 
 ,,\emph{The group of a prime knot does not, however, necessarily determine the topological type of the exterior. Dehn hips on certain “essential” solid tori in the exteriors of torus knots and of cable knots produce Haken manifolds that are homotopically equivalent but not homeomorphic to the original exteriors and that, in fact, cannot be imbedded in $S^3$}'' (Whitten, \cite{whitten1987}).
@@ -126,7 +127,7 @@ Potem odkryto, że:
     Jest to wniosek 3 z~pracy Feustela \cite{feustel1978}.
 \end{proof}
 
-Wreszcie Thurston \cite{thurston1982} jako efekt uboczny uzyskał kolejny wynik o grupie: hiperboliczne rozmaitości o skończonej objętości (domknięte rozmaitości lub takie, których brzeg jest zbudowany z torusów) są wyznaczone przez ich grupę podstawową.
+Thurston \cite{thurston1982} uzyskał kolejny wynik o grupie jako efekt uboczny badania czegoś tam: hiperboliczne rozmaitości o skończonej objętości (domknięte rozmaitości lub takie, których brzeg jest zbudowany z torusów) są wyznaczone przez ich grupę podstawową.
 \index[persons]{Thurston, William}%
 
 \subsection{Grupa splotu}
