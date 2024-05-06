@@ -25,7 +25,7 @@ Podamy najpierw kilka przykładów węzłów oraz ich grup.
 Z twierdzenia o pętli, czyli uogólnienia lematu Dehna wynika, że niewęzeł jest jedynym węzłem, którego grupą podstawową jest $\Z$.
 % TODO: https://math.stackexchange.com/questions/3468034/knot-group-is-mathbbz-iff-k-is-the-unknot
 (Pierwszy dowód lematu Dehna podał Max Dehn w 1910 roku, ale Hellmuth Kneser znalazł w 1929 lukę w dowodzie.
-Z odsieczą przyszedł matematyk grecki Christos Papakyriakopoulos, który około 1957 roku nie tylko podał poprawny dowód używając jego ,,konstrukcji wieżowej'', ale uogólnił go do twierdzenia o~pętli, o~sferze).
+Z odsieczą przyszedł matematyk grecki Christos Papakyriakopoulos, który około 1957 roku nie tylko podał poprawny dowód używając  ,,konstrukcji wieżowej'', ale uogólnił go do twierdzenia o~pętli, o~sferze).
 % Wiem to z: https://en.wikipedia.org/wiki/Dehn%27s_lemma oraz Burde, Zieschang, Heusener, strona 52
 
 \begin{example}
@@ -132,7 +132,7 @@ Thurston \cite{thurston1982} uzyskał kolejny wynik o grupie jako efekt uboczny 
 
 \subsection{Grupa splotu}
 
-Kawauchi \cite[s. 73]{kawauchi1996} definiuje grupę splotu jako grupę podstawową jego dopełnienia.
+Kawauchi \cite[s. 73]{kawauchi1996} (i prawie cała reszta świata) definiuje grupę splotu jako grupę podstawową jego dopełnienia.
 Dla Milnora \cite{milnor1954} grupą splotu był pewien iloraz\footnote{%
 Niech $L$ będzie splotem w otwartej 3-rozmaitości $M$, $\pi(L)$ grupą podstawową dopełnienia $L$, zaś $L^i$ splotem powstałym przez usunięcie $i$-tego ogniwa.
 Niech $A_i(L)$ oznacza jądro naturalnej inkluzji $\pi(L) \to \pi(L^i)$, zaś $[A_i]$ komutanta.
@@ -140,7 +140,7 @@ Wtedy $E(L) := [A_1][A_2] \cdots [A_n]$ jest podgrupą normalną $\pi(L)$.
 Milnor nazywa iloraz $\pi(L) / E(L)$ grupą splotu.%
 } tamtej grupy, dlatego należy zachować ostrożność i~sprawdzić, która konwencja obowiązuje.
 % TODO: John Milnor (1954). Link groups. Ann. of Math. (2), 59, 177–195. https://mathscinet.ams.org/mathscinet/relay-station?mr=71020
-My będziemy mieć do czynienia jedynie z~grupą podstawową dopełnienia.
+My przenigdy nie będziemy wykorzystywać podejścia Milnora.
 
 \begin{example}
     Grupa splotu Hopfa: $\Z \oplus \Z$.
@@ -149,12 +149,13 @@ My będziemy mieć do czynienia jedynie z~grupą podstawową dopełnienia.
 Kawauchi wspomina, że istnieją sploty, których grupa splotu nie odróżnia, podaje w~formie ćwiczenia \cite[s. 73]{kawauchi1996}, że grupa sumy niespójnej splotów $L_1, L_2$ to $\pi(L_1) * \pi(L_2)$ i~przytacza twierdzenie:
 
 \begin{proposition}
-    Niech $L \subseteq S^3$ będzie splotem.
+    Niech $L \subseteq S^3$ będzie splotem, ale nie niewęzłem.
     Następujące warunki są równoważne:
     \begin{enumerate}
         \item splot $L$ nie jest rozszczepialny,
 \index{splot!rozszczepialny}%
-        \item splot $L$ jest niewęzłem lub jego dopełnienie jest rozmaitością Hakena o~nieściśliwym brzegu,
+        \item dopełnienie $S^3 
+        \setminus L$ jest rozmaitością Hakena o~nieściśliwym brzegu,
 \index{rozmaitość!Hakena}%
         \item grupa podstawowa splotu $L$ jest nierozkładalna względem produktu wolnego.
     \end{enumerate}
@@ -183,7 +184,7 @@ Kawauchi wspomina, że istnieją sploty, których grupa splotu nie odróżnia, p
     Następujące warunki są równoważne:
     \begin{enumerate}
         \item splot $L$ jest prosty i niepierścieniowaty,
-        \item grupa $\pi(L)$ jest nieprzemienną, nierozkładalną względem produktu wolnego grupą, izomorficzną z dyskretną podgrupą $PSL_2(\C)$.
+        \item grupa $\pi(L)$ jest nieprzemienna, nierozkładalna względem produktu wolnego oraz izomorficzna z~dyskretną podgrupą $PSL_2(\C)$.
     \end{enumerate}
 \end{proposition}
 
@@ -197,19 +198,27 @@ W~szczególności, jeśli $\pi(L) \cong \Z \oplus \Z$, to $L$ jest splotem Hopfa
 
 \begin{proposition}
     Niech $L$ będzie splotem.
-    Centrum grupy $\pi(L)$ jest nietrywialne wtedy i tylko wtedy, gdy dopełnienie splotu $L$ jest rozmaitością Seiferta.
+    Następujące warunki są równoważne:
+    \begin{enumerate}
+    \item centrum grupy $\pi(L)$ jest nietrywialne,
+    \item dopełnienie splotu $S^3 \setminus L$ jest rozmaitością Seiferta.
+    \end{enumerate}
 \end{proposition}
 
 \begin{corollary}
     Niech $K$ będzie węzłem.
-    Centrum grupy $\pi(K)$ jest nietrywialne wtedy i tylko wtedy, gdy $K$ jest węzłem torusowym.
+    Następujące warunki są równoważne:
+    \begin{enumerate}
+    \item centrum grupy $\pi(K)$ jest nietrywialne,
+    \item węzeł $K$ jest torusowy.
+    \end{enumerate}
 \end{corollary}
 
-O tym samym, ale nie tak samo, pisaliśmy już w \ref{prp:torus_nontrivial_center}.
-Kawauchi \cite[s. 85]{kawauchi1996} żegna się z grupami splotów:
+O tym samym, ale nie tak samo, napiszemy jeszcze raz w \ref{prp:torus_nontrivial_center}.
+Kawauchi \cite[s. 85]{kawauchi1996} mówi grupom splotów dobranoc:
 
 \begin{proposition}
-    Grupa splotu jest rezydualnie skończona (dla każdego nietrywialnego elementu $x \in \pi$, istnieje homomorfizm $f: \pi \to H$ taki, że grupa $H$ jest skończona i $f(x) \neq 1$) i lokalnie indeksowalna (dla każdej  nietrywialnej skończenie generowanej podgrupy $H \le \pi$, istnieje epimorfizm $H \to \Z$).
+    Grupa splotu jest lokalnie indeksowalna (dla każdej  nietrywialnej skończenie generowanej podgrupy $H \le \pi$, istnieje epimorfizm $H \to \Z$) i~rezydualnie skończona (dla każdego nietrywialnego elementu $x \in \pi$, istnieje homomorfizm $f: \pi \to H$ taki, że grupa $H$ jest skończona i $f(x) \neq 1$).
 \end{proposition}
 
 \input{40-topology/401a-wirtinger}
