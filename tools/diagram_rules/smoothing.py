@@ -33,3 +33,10 @@ diagram_commands["JustSmoothing"] = {
     ],
     "sizes": ["Medium", "Large"],
 }
+diagram_commands["ThikkJustSmoothing"] = {
+    "lines": [
+        "\\draw[ultra thick,-latex] (-5, -5) to [out=45, in=-45] (-5, 5);",
+        "\\draw[ultra thick,-latex] (5, -5) to [out=135, in=-135] (5, 5);",
+    ],
+    "sizes": ["Medium", "Large"],
+}
