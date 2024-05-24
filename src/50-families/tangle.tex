@@ -58,8 +58,8 @@ Dużo dokładniej mówi o tym Turajew \cite{turaev1990}:
     Na przykład supły $\curvearrowright$, $\curvearrowleft$ oraz $X_+$ opisane są przez morfizmy $\varnothing \to (-1, 1)$, $\varnothing \to (1, -1)$ oraz $(1, 1) \to (1, 1)$.
     Składanie morfizmów odpowiada mnożeniu supłów.
 
-    W kategorii OTa wprowadza się iloczyn tensorowy $\otimes$. Iloczynem obiektów $\varepsilon, \nu$ (znaczących to, co wyżej) jest obiekt $(\varepsilon_1, \ldots, \varepsilon_k, \nu_1, \ldots, \nu_l)$.
-    Iloczyn tensorowy morfizmów to iloczyn tensorowy splotów i łatwo widać, że $(OTa, \otimes, \varnothing)$ jest ściśle monoidalną kategorią.
+    Wprowadźmy iloczyn tensorowy $\otimes$.
+    Iloczynem obiektów $\varepsilon, \nu$ (które znaczą to, co wcześniej) jest obiekt $(\varepsilon_1, \ldots, \varepsilon_k, \nu_1, \ldots, \nu_l)$, zaś iloczyn tensorowy morfizmów będzie iloczynem tensorowym splotów i łatwo widać, że $(OTa, \otimes, \varnothing)$ jest ściśle monoidalną kategorią (cokolwiek to znaczy).
 
     Zdefiniujmy cztery słowa:
     \begin{align}
@@ -68,7 +68,7 @@ Dużo dokładniej mówi o tym Turajew \cite{turaev1990}:
         T & = (\curvearrowleft \, \uparrow \, \downarrow) \circ (\downarrow X_- \downarrow) \circ (\downarrow \, \uparrow \inversedcurvearrowleft) \\
         Y & = (\uparrow \, \downarrow \, \curvearrowright) \circ (\downarrow X_+ \downarrow) \circ (\inversedcurvearrowright \uparrow \, \downarrow)
     \end{align}
-    Kategoria OTa jest generowana przez morfizmy $\inversedcurvearrowright, \inversedcurvearrowleft, \curvearrowright, \curvearrowleft, X_+, X_-$ oraz przedstawiana przez nie razem z relacjami:
+    Kategorię OTa można przedstawić przez morfizmy $\inversedcurvearrowright, \inversedcurvearrowleft, \curvearrowright, \curvearrowleft, X_+, X_-$ (generatory) oraz relacje:
     \begin{align}
         (\curvearrowright \, \uparrow) \circ (\uparrow \inversedcurvearrowright) = & \uparrow \, = (\uparrow \, \curvearrowleft) \circ (\inversedcurvearrowleft \uparrow) \\
         (\curvearrowleft \, \downarrow) \circ (\downarrow \inversedcurvearrowleft) = & \downarrow \, = (\downarrow \, \curvearrowright) \circ (\inversedcurvearrowright \downarrow) \\
@@ -163,11 +163,11 @@ Każdemu supłowi przypiszmy pewną liczbę wymierną, według przepisu:
 \end{equation}
 
 \begin{proposition}
-    Istnieje bijekcja między typami supłów wymiernych oraz ułamkami łańcuchowymi.
+    Istnieje bijekcja między supłami wymiernymi oraz ułamkami łańcuchowymi.
 \end{proposition}
 
 \begin{proof}[Niedowód]
-    Praca \cite{conway1970} Conwaya, strony 331-332.
+    Praca Conwaya \cite[s. 331-332]{conway1970}.
 \end{proof}
 
 \begin{proposition}[ćwiczenie 9.2.6 w \cite{murasugi1996}]
@@ -210,11 +210,8 @@ Rodzina supłów wymiernych jest zamknięta na branie produktów, ale nie sum.
 Wprowadzamy więc następującą, ogólniejszą definicję.
 Supeł będący skończoną sumą supłów wymiernych, ich luster, odbić lub odbić luster nazywamy algebraicznym.
 
-\begin{tobedone}[notacja Conwaya]
-    % TODO: when changing tobedone to something else, remember to add prp: or other prefix!
-\label{conway_notation}%
-    Do zrobienia
-\end{tobedone}
+Conway korzystając ze skończonej listy ,,wielościanów podstawowych'' (pewnych grafów planarnych) był w stanie zakodować wszystkie węzły o~małej liczbie skrzyżowań.
+Ale ponieważ notacja ta nie jest uniwersalna -- im więcej skrzyżowań, tym więcej wielościanów potrzeba, by opisać wszystkie węzły -- nie opiszemy, jak działa.
 
 Przez zszycie par łuków wejściowych (lub wyjściowych) zamieniamy supły w~węzły:
 \begin{figure}[H]
