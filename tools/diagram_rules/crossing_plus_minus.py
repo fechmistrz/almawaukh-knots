@@ -24,7 +24,7 @@ diagram_commands["PlusCrossingColouring"] = {
 }
 diagram_commands["PlusCrossingLabel"] = {
     "lines": [
-        "\\strand[ultra thick,-latex] (-5, -5) to (5, 5);",
+        "\\strand[ultra thick,-latex] (-5, -5) to (6.5, 6.5);",
         "\\strand[ultra thick,] (5, -5) to (-5, 5);",
         "\\node[first_colour] at (5, 5)[below right] {$g$};",
         "\\node[first_colour] at (5, -5)[above right] {$h$};",

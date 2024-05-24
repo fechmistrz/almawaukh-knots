@@ -1,12 +1,15 @@
 
 \subsection{Macierz Seiferta}
 \index{macierz Seiferta|(}
+
+Macierz opisana w tej podsekcji nie jest niezmiennikiem węzłów, ale prowadzi do wielomianu Alexandera (i dwóch nowych niezmienników: sygnatury i niezmiennika Arfa).
+
 Niech $K$ będzie węzłem z diagramem $D$ i powierzchnią Seiferta $S$.
 
 % Murasugi, s. 79
 \begin{definition}[graf Seiferta]
 \index{graf Seiferta}%
-    Ściągnijmy dyski z dowodu faktu \ref{prp:seifert_exists} do punktów jednocześnie kurcząc doklejone paski, otrzymamy graf zwany grafem Seiferta diagramu $D$.
+    Graf otrzymany przez ściągnięcie dysków z dowodu faktu \ref{prp:seifert_exists} do punktów oraz skurczenie doklejonych pasków do krawędzi nazywamy grafem Seiferta diagramu $D$.
 \end{definition}
 
 Murasugi \cite[s. 79]{murasugi1996} proponuje jako ćwiczenie dowód faktu:
@@ -22,7 +25,7 @@ Brzeg każdego obszaru jest zamkniętą krzywą, z których tworzymy krzywe $x_1
 Generują one grupę podstawową $\pi_1(S)$.
 
 Niech $S$ będzie powierzchnią Seiferta z wyróżnioną wierzchnią stroną.
-Jeśli krzywa $x_i$ biegnie po powierzchni $S$, przez $x_i^*$ oznaczać będziemy dodatnie wypchnięcie: krzywą równoległą do $x_i$, która biegnie tuż nad nią.
+Jeśli krzywa $x_i$ biegnie po powierzchni $S$, przez $x_i^*$ oznaczać będziemy dodatnie wypchnięcie: równoległą do $x_i$ krzywą, która biegnie tuż nad nią.
 (W razie problemów z wyobrażeniem sobie tego, można wykonać papierowy model powierzchni Seiferta albo popatrzeć na rysunek w \cite[s. 111]{livingston1993} albo zrobić jedno i drugie).
 
 \begin{definition}[macierz Seiferta]
@@ -42,13 +45,13 @@ Stanie się nim, kiedy uwzględnimy jeszcze wpływ ruchów Reidemeistera.
 \end{proof}
 
 \begin{definition}
-    Operacja $\Lambda_1$ dla pewnej odwracalnej macierzy $P$ o całkowitych wyrazach (czyli $\det P = \pm 1$) to
+\index{macierz Seiferta!S-równoważność}%
+\index{S-równoważność (macierzy Seiferta)}%
+    Dwie macierze $M_1, M_2$ nazywamy $S$-równoważnymi, jeśli jedną z nich daje się otrzymać z~drugiej poprzez wykonanie skończonego ciągu operacji $\Lambda_1$, $\Lambda_2$ oraz ich odwrotności.
+
+    Operacji $\Lambda_2$ nie można krótko opisać słowami, ale na szczęście można wzorem: niech $*$ będzie dowolną liczbą całkowitą, wtedy
     \begin{equation}
-        \Lambda_1 \colon M \mapsto PMP^t.
-    \end{equation}
-    Natomiast operację $\Lambda_2$ definiuje wzór:
-    \begin{equation}
-        \Lambda_2 \colon M \mapsto \begin{bmatrix}
+        \Lambda_2 (M) = \begin{bmatrix}
   &   &  & 0 & 0 \\
   & M &  & \vdots & \vdots \\
   &   &  & 0 & 0 \\
@@ -60,16 +63,9 @@ Stanie się nim, kiedy uwzględnimy jeszcze wpływ ruchów Reidemeistera.
   &   &  & * & 0 \\
 0 & \dots & 0 & 0 & 1 \\
 0 & \dots & 0 & 0 & 0
-\end{bmatrix},
+\end{bmatrix}.
     \end{equation}
-    gdzie gwiazdka zastępuje ustaloną liczbę całkowitą.
-\end{definition}
-
-\begin{definition}
-\index{macierz Seiferta!S-równoważność}%
-\index{S-równoważność (macierzy Seiferta)}%
-    Niech $M_1, M_2$ będą macierzami.
-    Jeśli $M_2$ można otrzymać z $M_1$ przez skończony ciąg operacji $\Lambda_1, \Lambda_2$ oraz ich odwrotności, to macierze nazywamy $S$-równoważnymi.
+    Operacja $\Lambda_1$ polega na zastąpieniu macierzy $M$ przez $PMP^t$, gdzie $P$ jest dowolną odwracalną macierzą o całkowitych wyrazach (wtedy $\det P = \pm 1$).
 \end{definition}
 
 Badania powyższej relacji równoważności prowadzili w~latach sześćdziesiątych ubiegłego stulecia Trotter \cite{trotter1962}, Murasugi \cite{murasugi1965} oraz Levine \cite{levine1970}.
@@ -108,8 +104,6 @@ Przez wprowadzenie dodatkowej zmiennej $t \in \R$, ponownie uogólnimy wyznaczni
         \alexander_K (t) = t^{-k/2}\det(M - tM^t).
     \end{equation}
 \end{proposition}
-
-Określimy jeszcze dwa, niewystępujący wcześniej niezmiennik (Arfa i sygnaturę).
 
 \index{macierz Seiferta|)}
 
