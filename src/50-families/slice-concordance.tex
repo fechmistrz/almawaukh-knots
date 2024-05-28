@@ -6,8 +6,12 @@ My przytaczamy jej definicję z pracy Gompfa \cite{gompf1986}:
 
 \begin{definition}[zgodność]
 \index{zgodność}%
-\index{węzeł!zgodny|see {zgodność}}%
-    Dwa węzły $K_0, K_1$ nazywamy (gładko) zgodnymi, jeżeli istnieje gładko zanurzony pierścień w $S^3 \times I$, którego brzegiem jest zbiór $K_0 \times \{0\} \cup K_1 \times \{1\}$.
+\index{węzeł!zgodny|see {zgodność}}%z
+    Dwa węzły $K_0, K_1$ nazywamy (gładko) zgodnymi, jeżeli zbiór
+    \begin{equation}
+        K_0 \times \{0\} \cup K_1 \times \{1\}
+    \end{equation}
+    jest brzegiem pewnego pierścienia gładko zanurzonego w $S^3 \times I$.
 \end{definition}
 
 Kawauchi \cite[s. 156]{kawauchi1996} pisze \emph{,,Two knots (…) are knot cobordant (or concordant)''}, więc tak jak wielu innych autorów nie odróżnia więc węzłów kobordantnych od zgodnych.
@@ -21,7 +25,7 @@ Dlatego my będziemy zawsze pisać o węzłach zgodnych i nigdy o kobordantnynch
 
 \begin{proposition}
 \label{prp:concordant_iff_sum_slice}%
-    Dwa węzły $K_1, K_2$ są zgodne wtedy i tylko wtedy, gdy suma $(mr K_0) \shrap K_1$ jest plastrowa.
+    Dwa węzły $K_1, K_2$ są zgodne wtedy i tylko wtedy, gdy suma $(\operatorname{mr} K_0) \shrap K_1$ jest plastrowa.
 \end{proposition}
 
 \begin{proof}
@@ -47,7 +51,7 @@ Klasę abstrakcji węzła $K$ oznaczamy przez $[K]$.
     \end{equation}
     staje się grupą abelową, nazywaną grupą zgodności.
     Jej elementem neutralnym jest klasa abstrakcji niewęzła.
-    Elementem przeciwnym do $[K]$ jest $[mr K]$.
+    Elementem przeciwnym do $[K]$ jest $[\operatorname{mr} K]$.
 \end{definition}
 
 %%% Kawauchi 157:
@@ -72,7 +76,7 @@ Kobordyzm stanowi relację równoważności na $\Theta$ -- iloraz $\Theta$ przez
 \end{proposition}
 
 \begin{proof}
-    Nie umiem nic sam udowodnić, więc wymienię tylko trzy odsyłacze: z faktu~\ref{prp:cobordant_to_algebraic_is_algebraic} wynika, że odwzorowanie $\psi$ jest dobrze określone, dowód faktu~\ref{prp:signature_additive} pokazuje, że $\psi$ jest homomorfizmem, zaś w \cite[s. 62]{kawauchi1996} można przeczytać, dlaczego jest ,,na''.
+    Nie umiemy nic udowodnić, więc wymienimy tylko trzy odsyłacze: z faktu~\ref{prp:cobordant_to_algebraic_is_algebraic} wynika, że odwzorowanie $\psi$ jest dobrze określone, dowód faktu~\ref{prp:signature_additive} pokazuje, że $\psi$ jest homomorfizmem, zaś w \cite[s. 62]{kawauchi1996} można przeczytać, dlaczego jest ,,na''.
 \end{proof}
 
 Funkcję $\psi$ rozpatrywał Levine \cite{levine1969} w latach sześćdziesiątych.
@@ -89,5 +93,5 @@ Potem był wynik Jianga \cite{jiang1981}, że jądro nie jest skończenie genero
 \end{proposition}
 
 Kawauchi \cite[s. 161]{kawauchi1996} bez uzasadnienia postanawia nie przytoczyć dowodu tego faktu, ale opowiada krótko, jaka jest idea przewodnia i odsyła wprost do pracy Levine'a.
-Na dalszych stronach jego pracy przeglądowej pojawiają się jakieś formy kwadratowe oraz uogólnienia wszystkiego do zgodności splotów, ale ja wracam nocnym pociągiem, więc nie mam siły o tym pisać.
+Na dalszych stronach jego pracy przeglądowej pojawiają się jakieś formy kwadratowe oraz uogólnienia wszystkiego do zgodności splotów, ale wracamy nocnym pociągiem i zaraz uśniemy...
 
