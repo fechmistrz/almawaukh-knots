@@ -20,17 +20,17 @@ Mówimy, że zamknięta krzywa $\lambda \subseteq W$ jest właściwa, jeżeli pr
 
 \begin{definition}[węzeł satelitarny]
     \index{węzeł!satelitarny}
-    Niech $P$ będzie splotem zanurzonym w~niezawęźlonym torusie $W$ tak, by co najmniej jedno z~ogniw stanowiło właściwą pętlę w~$W$.
+    Niech $P$ będzie splotem zanurzonym w~torusie niezawęźlonym $W$ tak, by co najmniej jedno z~ogniw stanowiło właściwą pętlę w~$W$.
     Niech $C$ będzie węzłem, zaś $V$ jego rurowym otoczeniem.
     Wybierzmy dowolny homeomorfizm $h \colon W \to V$.
-    Wtedy splot $S = h(P)$ nazywamy satelitą o~wzorcu $P$ oraz towarzyszu $C$.
+    Wtedy splot $S = h(P)$ nazywamy satelitą o~wzorcu $P$ i towarzyszu $C$.
 \end{definition}
 
 % \begin{definition}
 %     Węzeł nazywamy satelitarnym, jeśli zawiera nieściśliwy, nierównoległy do brzegu torus we własnym dopełnieniu.
 % \end{definition}
 
-Hoste i inni podejrzewają w~\cite{thistlethwaite1998}, że jeśli satelita owija się $m$-krotnie wokół torusa, zaś indeks skrzyżowaniowy towarzysza wynosi $k$, to satelita nie posiada diagramu o~mniej niż $km^2$ skrzyżowaniach.
+Hoste i inni \cite{thistlethwaite1998} podejrzewają, że jeśli satelita owija się $m$-krotnie wokół torusa, zaś indeks skrzyżowaniowy towarzysza wynosi $k$, to satelita nie posiada diagramu o~mniej niż $km^2$ skrzyżowaniach.
 \index[persons]{Hoste, Jim}%
 \index[persons]{Thistlethwaite, Morwen}%
 \index[persons]{Weeks, Jeff}%
@@ -57,13 +57,13 @@ Razem 380 węzłów.
 \label{swallow_follow_torus}
 % DICTIONARY;swallow-follow;połykająco-podążający;torus
 % DICTIONARY;torus;torus;-
-    Klasa węzłów satelitarnych obejmuje węzły złożone.
-    W ich przypadku można wskazać pewien szczególny torus nieściśliwy -- połykający pierwszy składnik, a~potem podążający za drugim:\footnote{Źródło obrazka: \url{https://mcm-www.jwu.ac.jp/~hayashic/semi/07/07i/07i.html}}
     \begin{figure}[H]
         \centering
         \includegraphics[width=0.75\linewidth]{../data/mixed/follow-swallow.png}
         \caption[something]{Torus połykająco-podążający. Źródło: strona internetowa  C. Hayashiego.}
     \end{figure}
+    Klasa węzłów satelitarnych obejmuje węzły złożone.
+    W ich przypadku można wskazać pewien szczególny torus nieściśliwy -- połykający pierwszy składnik, a~potem podążający za drugim\footnote{Źródło obrazka: \url{https://mcm-www.jwu.ac.jp/~hayashic/semi/07/07i/07i.html}}.
 \end{example}
 
 Schubert pokazał, że zorientowane klasy izotopii węzłów w~$S^3$ tworzą wolny przemienny monoid na przeliczalnie wielu generatorach.
@@ -80,7 +80,8 @@ Równoleżnik preferowany to taki, którego indeks zaczepienia z~rdzeniem torusa
 
 \begin{definition}[dubel Whiteheada]
 \index{dubel Whiteheada}%
-    Jeżeli $P \subseteq W$ jest skręconym jednokrotnie niewęzłem, to węzeł $S$ nazywamy dublem Whiteheada.
+    Niech $P \subseteq W$ będzie jednokrotnie skręconym niewęzłem, tak jak na rysunku 3.1.2a w \cite[s. 32]{kawauchi1996}.
+    Wtedy węzeł $S$ nazywamy dublem Whiteheada.
 \end{definition}
 
 Każdy węzeł posiada nieskończenie wiele dubli Whiteheada: wystarczy rozciąć torus $V$, skręcić jedną końcówkę i~ponownie zszyć, żaden z~nich nie jest odróżniany od niewęzła przez wielomian Alexandera.
@@ -89,8 +90,8 @@ Wyróżnia się pewien szczególny homeomorfizm $h$, który przenosi południk i
 Nazywamy go wiernym.
 % DICTIONARY;faithful homeomorphism;homomorfizm wierny;-
 O dublu względem wiernego homeomorfizmu mówimy, że jest nieskręcony.
-% TODO: skąd powyższe zdanie? jak jest nieskręcony po angielsku?
-% Kawauchi około strony 32? (Ten z 1996)
+% TODO: skąd powyższe zdanie -- z Kawauchi około strony 32 (Ten z 1996)
+% TODO: Usually, we take the homeomorphism cp to send the the standard meridian-longitude system (Co, mo) of V to a meridian-longitude system (C, m) of K on V*, which we call a faithful homeomorphism.
 
 \begin{definition}[węzeł kablowy]
 \index{węzeł!kablowy}%
@@ -105,8 +106,8 @@ O dublu względem wiernego homeomorfizmu mówimy, że jest nieskręcony.
 \begin{proof}
 \index[persons]{Feustel, Charles}%
 \index[persons]{Whitten, Wilbur}%
-    Wniosek 2 z~pracy \cite{feustel1978} Feustela, Whittena pokazuje, że na podstawie kabla można wyznaczyć parametry węzła torusowego $K'_{p,q}$ oraz topologię dopełnienia oryginalnego węzła.
-    Wiemy jednak z~twierdzenia Gordona-Lueckego, że różne węzły PIERWSZE mają różne dopełnienia.
+    Wniosek 2 z~pracy Feustela, Whittena \cite{feustel1978} pokazuje, że na podstawie kabla można wyznaczyć parametry węzła torusowego $K'_{p,q}$ oraz topologię dopełnienia oryginalnego węzła.
+    Ale my wiemy już dzięki z~twierdzenia Gordona-Lueckego, że różne węzły pierwsze mają różne dopełnienia... co jakoś kończy dowód.
 \end{proof}
 
 Niewęzeł nie ma nietrywialnych węzłów towarzyszących.
@@ -117,11 +118,12 @@ Niewęzeł nie ma nietrywialnych węzłów towarzyszących.
 
 Sploty bez właściwych towarzyszy określa się zazwyczaj terminem ,,atoroidalny''.
 \index{splot!atoroidalny}%
-Patrz też diagram przedstawiony w \cite{cromwell2004} na stronie 83.
+Patrz też diagram przedstawiony u Cromwella \cite[s. 83]{cromwell2004}.
 
 Schubert \cite{schubert1954} zastanawiał się, czy węzeł może mieć nieskończenie wiele towarzyszy.
 Udzielił negatywnej odpowiedzi: satelita $S$ z towarzyszem $C$ oraz wzorcem indeksu $k$ spełnia nierówność $\bridge(S) \ge k \cdot \bridge(C)$; z drugiej strony tylko niewęzeł jest 1-mostowy.
 (Patrz też wstęp do \cite{schultens2003}).
+(Trochę dużo tych ,,patrz też'').
 % wiem to z pracy schultens03
 
 \begin{proposition}
@@ -141,11 +143,15 @@ Rok 1979 przyniósł amerykańską pracę \cite{jaco1979} oraz niemiecką ksią�
 
 \begin{proposition}
     Niech $M$ będzie nierozkładalną, orientowalną, domkniętą 3-rozmaitością.
-    Istnieje wtedy jedyna z dokładnością do izotopii minimalna rodzina rozłącznie zanurzonych nieściśliwych torusów tak, że każda składowa 3-rozmaitości powstałej przez rozcinanie wzdłuż torusów jest atoroidalna lub włóknistą przestrzenią Seiferta ($S^1$-wiązką nad dwuwymiarowym orbifoldem).
+    Wtedy istnieje minimalna rodzina rozłącznie zanurzonych nieściśliwych torusów tak, że każda składowa 3-rozmaitości powstałej przez rozcinanie wzdłuż torusów jest:
+    \begin{itemize}
+        \item atoroidalna lub
+    \item włóknistą przestrzenią Seiferta ($S^1$-wiązką nad dwuwymiarowym orbifoldem).    \end{itemize}
 \index{orbifold}%
 \index{rozmaitość!atoroidalna}%
 \index{przestrzeń!włóknista Seiferta}%
 \index{wiązka ($S^1$)}%
+    Rodzina ta z dokładnością do izotopii jest jedyna.
 \end{proposition}
 
 Jest on związany z operacją złączania (ang. \emph{splicing}), będącej uogólnieniem budowania satelitów, sumy spójnej, dubli Whiteheada i kasowania ogniwa.
