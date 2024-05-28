@@ -7,7 +7,7 @@ run_and_log () {
 }
 
 generate_knot_makefile() {
-    knots="3_1 4_1 5_2 6_3 7_7 8_21 9_49 10_165"
+    knots="0_1 3_1 4_1 5_2 6_3 7_7 8_21 9_49 10_165"
     all_knots=($(echo "${knots}" | tr ' _' '\n ' | while read -r cr last; do seq 1 "${last}" | awk -v cr="${cr}" '{printf "%d_%d\n", cr, $1}'; done))
     echo "all: ${all_knots[@]}"
 

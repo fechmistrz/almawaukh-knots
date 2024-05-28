@@ -24,6 +24,8 @@ Bulbulator, który jest jednocześnie jagodowy i truskawkowy nazywamy smacznym.
 % DICTIONARY;yummy;smaczny;bulbulator
 ```
 
+Wszystkie diagramy węzłów w TikZ używają grubości ultra thick, chyba że mówimy o dowodach z sekcji o klamrze Kauffmana - wtedy musi być thick.
+
 Wyszukiwanie tego samego nazwiska z roznie zapisanymi imionami:
 ```
 grep AUTHOR ./src/knot_theory.bib | grep -Eo '\{.*\}' | sed -r 's/ and /\n/g' | tr -d '{}' | sort | uniq > tmp.txt

@@ -14,7 +14,7 @@ Na zakończenie wspomnimy o~mutacjach.
 \begin{definition}[mutant]
 \label{def:mutant}%
     Niech $K$ będzie węzłem.
-    Węzeł, który powstaje przez wykonanie ciągu mutacji na węźle $K$, nazywamy mutantem węzła $K$.
+    Węzeł, który powstaje przez ciąg mutacji na węźle $K$, nazywamy mutantem węzła $K$.
 \end{definition}
 
 Mutacja węzła o~co najwyżej dziesięciu skrzyżowaniach nie zmienia jego klasy abstrakcji.
@@ -22,17 +22,13 @@ Najprostszą, a zarazem najsłynniejszą parą różnych od siebie mutantów sta
 \index{węzeł!Conwaya}%
 \index{węzeł!Kinoshity-Terasakiego}%
 
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.601\linewidth]{../data/mixed/knudemutation.png}
-\caption{Węzły $11n_{42}$ oraz $11n_{34}$. Grafika Sørena Jørgensena, dostępna na licencji \href{https://creativecommons.org/licenses/by-sa/3.0/deed.en}{CC BY-SA 3.0} pod adresem \url{https://en.wikipedia.org/wiki/File:Knudemutation.svg}.}
-\end{figure}
 Conway zauważył podczas klasyfikacji niealternujących węzłów, że tylko one posiadają trywialny wielomian Alexandera.
 Mają też taki sam wielomian Jonesa,
 \begin{equation}
     \jones(t) = t^{6} -2t^5 +2t^4 -2t^3 +t^2 +2t^{-1} -2t^{-2} +2t^{-3} -t^{-4}.
 \end{equation}
-Kinoshita, Terasaki \cite{kinoshita1957} zdefiniowali nieskończoną rodzinę węzłów o trywialnym wielomianie Alexandera, której pierwszym wyrazem jest węzeł $11n_{42}$.
+
+Kinoshita, Terasaki \cite{kinoshita1957} zdefiniowali nieskończoną rodzinę węzłów, której pierwszym wyrazem jest węzeł $11n_{42}$ (i wszystkie mają trywialny wielomian Alexandera).
 \index[persons]{Kinoshita, Shinichi}%
 \index[persons]{Terasaka, Hidetaka}%
 Dowód tego, że $11n_{34}$ oraz $11n_{42}$ są różne, jako pierwszy podał prawdopodobnie Riley w~1971 roku \cite{riley1971}: wykorzystał on homomorfizmy z~grupy węzła w~$PSL(2, 7)$.
@@ -41,6 +37,13 @@ Dowód tego, że $11n_{34}$ oraz $11n_{42}$ są różne, jako pierwszy podał pr
 Genusy, odpowiednio: $3$ i~$2$, wyznaczył Gabai piętnaście lat później w~\cite{gabai1986}, używał foliacji.
 \index[persons]{Gabai, David}%
 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.601\linewidth]{../data/mixed/knudemutation.png}
+    \caption{Węzły $11n_{42}$ oraz $11n_{34}$. Grafika Sørena Jørgensena, dostępna na licencji \href{https://creativecommons.org/licenses/by-sa/3.0/deed.en}{CC BY-SA 3.0} pod adresem \url{https://en.wikipedia.org/wiki/File:Knudemutation.svg}.}
+\end{figure}
+    
 Niedawno Stojmenow podjął się systematycznie szukania mutantów wśród węzłów o~mniej niż 19 skrzyżowaniach (praca \cite{stoimenow2010} z~2010 roku).
 \index[persons]{Stojmenow, Aleksander}%
 Początkowo pracował sam, badając pewne subtelne przykłady postanowił uwikłać w swój projekt Toshifumiego Tanakę, a później także Daniela Mateię.
@@ -184,7 +187,7 @@ Morton w recenzji pracy Lickorisha, Lipsona wspomina, że dla satelitów owijaj�
 \end{proposition}
 
 \begin{proof}
-    \cite{tanaka2009}, choć nie wiem gdzie dokładnie.
+    \cite{tanaka2009}, choć nie wiemy, gdzie dokładnie.
 \end{proof}
 
 \begin{proposition}
@@ -207,7 +210,7 @@ Morton w recenzji pracy Lickorisha, Lipsona wspomina, że dla satelitów owijaj�
 
 \begin{proof}
 \index[persons]{Ruberman, Daniel}%
-    Ruberman w \cite{ruberman1987}.
+    Ruberman \cite{ruberman1987}.
     % Ruberman [42] showed that mutants have equal volume in all hyperbolic pieces of the JSJ decomposition.
 \end{proof}
 
@@ -218,7 +221,7 @@ Morton w recenzji pracy Lickorisha, Lipsona wspomina, że dla satelitów owijaj�
 
 \begin{proof}
 \index[persons]{Ruberman, Daniel}%
-    Jeszcze raz Ruberman, w \cite{ruberman1999}.
+    Jeszcze raz Ruberman \cite{ruberman1999}.
 \end{proof}
 
 \begin{proposition}
@@ -240,7 +243,8 @@ Celowo nie podajemy definicji tego niezmiennika.
 Nieformalnie, zlicza on co drugą klasę sprzężoności reprezentacji grupy podstawowej homologicznej 3-sfery w grupie $SU(2)$.
 
 \begin{proof}
-    Kirk w \cite{kirk1989}.
+\index[persons]{Kirk, Paul}%
+    Kirk \cite{kirk1989}.
 \end{proof}
 
 \begin{conjecture}

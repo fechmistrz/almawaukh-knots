@@ -1,0 +1,41 @@
+
+\subsection{Spin}
+\index{spin|(}%
+
+Niektórzy, na przykład Przytycki, używają określenia ,,liczba Taita'', ale nam się ono nie podoba, więc proponujemy nasze, lepsze.
+\index{liczba Taita}%
+
+% DICTIONARY;writhe;spin;-
+\begin{definition}[spin]
+    Niech $D$ będzie diagramem zorientowanego splotu $L$.
+    Wtedy sumę wszystkich znaków skrzyżowań diagramu:
+    \begin{equation}
+        \writhe D = \sum_c \operatorname{sign} c,
+    \end{equation}
+    nazywamy jego spinem (diagramu, nie splotu!).
+\end{definition}
+
+Co ważne, spin nie jest niezmiennikiem splotów ani węzłów.
+Para Perko przedstawia ten sam węzeł z~minimalną liczbą skrzyżowań i~spinem równym siedem lub dziewięć.
+\index{para Perko}%
+Dzięki temu przez wiele lat nie została dostrzeżona.
+Spin jest za to niezmiennikiem węzłów alternujących, mówi o~tym druga hipoteza Taita.
+\index{hipoteza!Taita}%
+
+\begin{lemma}
+\label{lem:writhe_reidemeister}%
+    Spin nie zależy od orientacji diagramu.
+    Tylko I ruch Reidemeistera zmienia spin:
+\begin{comment}
+    \begin{equation}
+        \writhe \left(\MedLarReidemeisterOneLeft\right) =
+        \writhe \left(\MedLarReidemeisterOneStraight\right) - 1.
+    \end{equation}
+\end{comment}
+    Pozostałe ruchy nie mają na niego wpływu.
+\end{lemma}
+
+\index{spin|)}%
+
+% Koniec sekcji Spin
+

@@ -59,16 +59,12 @@ Sam diagram oznaczamy $C(a_1, \ldots, a_{2k+1})$ i~nazywamy postacią normalną 
     % Burde, Zieschang 2013, strona 217, nazywają to twierdzeniem Bankwitza-Schumanna.
 \end{proof}
 
-Przez analogię do supłów, definiujemy ułamek łańcuchowy
+\index{postać normalna!Conwaya}%
+\index{postać normalna!Schuberta}%
+Przez analogię do supłów, definiujemy ułamek łańcuchowy (postać normalną Conwaya, ale mamy jeszcze postać Schuberta -- patrz \cite[s. 21]{kawauchi1996}):
 \begin{equation}
     C(a_1, \ldots, a_{2k+1}) \mapsto a_1 + \frac{1}{a_2 + 1/\ldots} = \frac \alpha \beta.
 \end{equation}
-
-\begin{tobedone}
-\index{postać normalna!Conwaya}%
-\index{postać normalna!Schuberta}%
-    To jest postać normalna Conwaya, ale mamy jeszcze postać Schuberta - \cite[s. 21]{kawauchi1996}.
-\end{tobedone}
 
 Zauważmy, że wartość bezwzględna ułamka $\alpha/\beta$ zawsze przekracza $1$ i~odwrotnie, każdy taki ułamek pochodzi od pewnego węzła dwumostowego.
 Parę względnie pierwszych liczb $(\alpha, \beta)$ nazywamy typem węzła dwumostowego.
@@ -85,10 +81,9 @@ Parę względnie pierwszych liczb $(\alpha, \beta)$ nazywamy typem węzła dwumo
     Gdyby rozpatrywać niezorientowane sploty, drugie przystawanie upraszcza się: wystarczy, że będzie zachodzić modulo $\alpha$.
 \end{proposition}
 
-\begin{proof}
+\begin{proof}[Niedowód]
     Słabsza wersja twierdzenia bierze się z klasyfikacji przestrzeni soczewkowych oraz tego, że podwójnie rozgałęziona przestrzeń nakryciowa dwumostowego splotu typu $(\alpha, \beta)$ to przestrzeń soczewkowa typu $(\alpha, \beta)$.
     % two-fold branched cyclic spaces?
-    (Nie definiujemy w~tej książce, czym są przestrzenie soczewkowe).
 \index{przestrzeń!soczewkowa}%
     Burde, Zieschang \cite[s. 212]{burde2014} wspominają tu prace Reidemeistera \cite{reidemeister1935}, Brody'ego \cite{brody1960} oraz Turajewa \cite{turaevXX}.
 
@@ -105,29 +100,9 @@ Parę względnie pierwszych liczb $(\alpha, \beta)$ nazywamy typem węzła dwumo
     \end{equation}
 \end{proposition}
 
-\begin{proof}
-    Wynika to z tego, że lustrem splotu typu $(\alpha, \beta)$ jest splot typu $(\alpha, -\beta)$ oraz faktu~\ref{prp:tangle_equivalence}.
+\begin{proof}[Niedowód]
+    Lustrem splotu typu $(\alpha, \beta)$ jest splot typu $(\alpha, -\beta)$, to oraz fakt~\ref{prp:tangle_equivalence} kończy dowód.
     Explicite pisze o tym Kawauchi \cite[s. 24]{kawauchi1996}.
-\end{proof}
-
-\begin{proposition}
-    Niech $b$ będzie dowolną liczbą całkowitą.
-    Wtedy następujące sploty są tego samego typu:
-    \begin{align}
-        N(T(a_1, a_2, \ldots, a_{2k+1})) & \approx N(T(a_1, a_2, \ldots, a_{2k+1}, b, 0)) \\
-                                         & \approx D(T(-a_1, -a_2, \ldots, -a_{2k+1}, b)) \\
-                                         & \approx C(a_1, a_2, \ldots, a_{2k}-1, 1). \\
-        N(T(a_1, a_2, \ldots, a_{2k}))   & \approx D(T(-a_1, -a_2, \ldots, -a_{2k}, b)) \\
-                                         & \approx C(a_1, a_2, \ldots, a_{2k}-1, 1). \\
-        D(T(a_1, a_2, \ldots, a_{2k+1})) & \approx D(T(a_1, a_2, \ldots, a_{2k}, 0)) \\
-                                         & \approx C(1, a_1-1, a_2, \ldots, a_{2k}). \\
-        D(T(a_1, a_2, \ldots, a_{2k}))   & \approx D(T(a_1, a_2, \ldots, a_{2k-1}, 0)) \\
-                                         & \approx C(a_1, a_2, \ldots, a_{2k-1}).
-    \end{align}
-\end{proposition}
-
-\begin{proof}
-    \cite[fakt 9.3.4]{murasugi1996}
 \end{proof}
 
 \begin{proposition}
@@ -155,6 +130,27 @@ Pomimo to, splot $N(A+B)$ jest dwumostowy, potrafimy nawet powiedzieć, jaki ma 
 Murasugi \cite[twierdzenie 9.3.5]{murasugi1996} twierdzi, że dowód znajduje się u Ernsta, Sumnersa \cite[lemat 2.1]{ernst1990}.
 \index[persons]{Ernst, Claus}%
 \index[persons]{Sumners, De Witt}%
+
+
+\begin{proposition}
+    Niech $b$ będzie dowolną liczbą całkowitą.
+    Wtedy następujące sploty są tego samego typu:
+    \begin{align}
+        N(T(a_1, a_2, \ldots, a_{2k+1})) & \approx N(T(a_1, a_2, \ldots, a_{2k+1}, b, 0)) \\
+                                         & \approx D(T(-a_1, -a_2, \ldots, -a_{2k+1}, b)) \\
+                                         & \approx C(a_1, a_2, \ldots, a_{2k}-1, 1). \\
+        N(T(a_1, a_2, \ldots, a_{2k}))   & \approx D(T(-a_1, -a_2, \ldots, -a_{2k}, b)) \\
+                                         & \approx C(a_1, a_2, \ldots, a_{2k}-1, 1). \\
+        D(T(a_1, a_2, \ldots, a_{2k+1})) & \approx D(T(a_1, a_2, \ldots, a_{2k}, 0)) \\
+                                         & \approx C(1, a_1-1, a_2, \ldots, a_{2k}). \\
+        D(T(a_1, a_2, \ldots, a_{2k}))   & \approx D(T(a_1, a_2, \ldots, a_{2k-1}, 0)) \\
+                                         & \approx C(a_1, a_2, \ldots, a_{2k-1}).
+    \end{align}
+\end{proposition}
+
+\begin{proof}
+    \cite[fakt 9.3.4]{murasugi1996}
+\end{proof}
 
 \begin{proposition}
     Rozpatrzmy węzeł dwumostowy typu $(\alpha, \beta)$, gdzie $0 < \beta < \alpha$ i~$\beta$ jest nieparzyste.

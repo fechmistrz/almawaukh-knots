@@ -1,0 +1,57 @@
+
+\subsection{Wielomian Alexandera a niezmienniki numeryczne}
+\begin{proposition}
+\label{prp:alexander_determinant}%
+    Niech $L$ będzie zorientowanym splotem.
+    Wtedy $|\alexander_L(-1)| = \det L$.
+\end{proposition}
+
+\begin{proof}
+    Wystarczy porównać definicję dla $\alexander_L$ (\ref{def:alexander_polynomial}) oraz $\det L$ (\ref{def:determinant}).
+\end{proof}
+
+\begin{proposition}
+    Niech $K$ będzie węzłem.
+    Wtedy wielomian Alexandera zadaje ograniczenie na jego indeks skrzyżowaniowy:
+    \begin{equation}
+        \operatorname{span} \alexander_K(t) < \crossing K.
+    \end{equation}
+\end{proposition}
+
+Być może istnieje bezpośredni dowód tej nierówności, ale jedyne uzasadnienie, jakie znamy, opiera się na fakcie~\ref{prp:alexander_genus} oraz wniosku~\ref{cor:crossing_genus} -- czyli własnościach genusu.
+\index{genus}%
+
+\begin{proposition}
+\index{węzeł!alternujący}%
+    Tylko skończenie wiele węzłów alternujących może mieć ten sam wielomian Alexandera.
+\end{proposition}
+
+\begin{proof}
+    Załóżmy nie wprost, że istnieje nieskończony ciąg $K_n$ węzłów alternujących o~tym samym wielomianie Alexandera $\alexander_K(t)$.
+    Wszystkie jego wyrazy mają ten sam wyznacznik, ponieważ $\det K_n = |\alexander_K(-1)|$.
+    Z faktu~\ref{prp:bankwitz} wynika, że indeks skrzyżowaniowy węzłów $K_n$ jest wspólnie ograniczony: $c_k \le \det K_n = \det K$.
+    To prowadzi do sprzeczności: węzłów o~danym indeksie skrzyżowaniowym jest tylko skończenie wiele.
+\end{proof}
+
+Wielomian Alexandera nie nakłada żadnych ograniczeń na liczbę gordyjską, wspominamy o~tym w dowodzie faktu~\ref{balanced_iff_four_conditions}.
+Mamy też:
+
+\begin{proposition}
+\index{liczba mostowa}%
+\label{no_relation_bridge_alexander}%
+    Nie istnieje związek między liczbą mostową oraz stopniem wielomianu Alexandera.
+\end{proposition}
+
+Wiemy o tym z książki Livingstona \cite[s. 145]{livingston1993}.
+
+\begin{proof}
+    Niech $K$ będzie nietrywialnym węzłem o~trywialnym wielomiane Alexandera, na przykład $11_{471}$.
+    (Wiemy o~istnieniu takiego węzła z~faktu \ref{alexander_no_detects_unknot}).
+    Wtedy suma spójna $n$ kopii węzła $K$, $K \shrap K \shrap \ldots \shrap K$, też ma trywialny wielomian Alexandera, ale jej liczba mostowa wynosi $2n + 1$.
+
+    Niech $K_n$ będzie węzłem $(2, n)$-torusowym.
+    Wtedy $\deg (\alexander(K_n)) = n-1$ (to jest treść wniosku \ref{cor:alexander_distinguishes_torus}), ale węzeł $K_n$ jest dwumostowy.
+\end{proof}
+
+% koniec podsekcji Wielomian Alexandera a niezmienniki numeryczne
+

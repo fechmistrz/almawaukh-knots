@@ -9,10 +9,6 @@
 
 % As a consequence of the sphere theorem (Papa), the complement of a Knot in S3  is aspherical, i.e. all its higher homotopy groups are trivial. Thus the complement of a Knot in S3  is an Eileriberg-Maelane space K(G^,1) . It follows that the homotopy type of S3  - K is determined by the isomorphism class of the group G . Also it is Known that if a group G contains non^trivial elements of finite order, then K(G,1) is infinite-dimensional ((Hem), p.76). Hence we have the interesting result that a Knot group is torsion-free. Hence each meridian-longitude pair in the group of a non-trivial Knot generates a subgroup isomorphic to Z + Z . A fairly recent result (Sha) is that a Knot group cannot contain an infinitely divisible element other than the identity (an element g is infinitely divisible if it is an nth power for infinitely many n).
 
-"Arborescent knots are the ones which can be represented in terms of double fat graphs or equivalently as tree Feynman diagrams.". Find out whether they are useful or not. - węzeł drzewiasty?
-
-In mathematics, Mostow's rigidity theorem, or strong rigidity theorem, or Mostow–Prasad rigidity theorem, essentially states that the geometry of a complete, finite-volume hyperbolic manifold of dimension greater than two is determined by the fundamental group and hence unique. The theorem was proven for closed manifolds by Mostow (1968) and extended to finite volume manifolds by Marden (1974) in 3 dimensions, and by Prasad (1973) in all dimensions at least 3. Gromov (1981) gave an alternate proof using the Gromov norm. Isomorphism pi M1 -> pi M2 can be lifted to isometry int M1 -> int M2.
-
 https://mathoverflow.net/questions/104172/knot-diagrams-sets-of-moves-and-equivalence-relations
 
 Niech K \subseteq S^3 będzie zorientowanym węzłem, który pogrubiamy do V(K), otoczenia tubularnego. Wtedy T = \partial V jest torusem. Kładziemy l = T \cap powierzchnia Seiferta dla K, "prostopadła" krzywa do l to m (longitude, merridian). Niech \hat V = S^3 \setminus int V. Wtedy cl \hat V \cap cl V = T (wspólny brzeg). Definiujemy m - merridian dla \hat V jako merridian dla V.

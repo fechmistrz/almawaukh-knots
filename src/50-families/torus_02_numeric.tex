@@ -1,5 +1,28 @@
 
 \subsection{Niezmienniki wielomianowe splotów torusowych}
+
+Wartości wielomianu Jonesa podajemy bez dowodu:
+
+\begin{proposition}
+\index{klamra Kauffmana}%
+    Klamra Kauffmana spełnia zależność rekurencyjną
+    \begin{equation}
+        \bracket{T_{2, n}} = A \bracket{T_{2,n-1}} + (-1)^{n-1} A^{2-3n}
+    \end{equation}
+    z warunkiem brzegowym $\bracket{T_{2,1}} = -A^3$.
+\end{proposition}
+
+\begin{proposition}
+\index{wielomian!Jonesa}%
+    Niech $K = T_{p, q}$ będzie węzłem torusowym.
+    Wtedy jego wielomianem Jonesa jest
+    \begin{equation}
+        \jones_K(t) = \frac {{\sqrt t}^{(p-1)(q-1)}}{1-t^2} \cdot (1 - t^{p+1} - t^{q+1} + t^{p+q}).
+    \end{equation}
+\end{proposition}
+
+Byłoby niezmiernie smutno, gdyby wszystkie dowody zostały pominięte, uzasadnimy więc ze szczegółami, dlaczego wielomian Alexandera splotów torusowych jest taki, jaki jest.
+
 \begin{proposition}
     Niech $L = T_{p, q}$ będzie splotem torusowym o $d$ ogniwach, różnym od $T_{0, 0}$.
 \index{wielomian!Alexandera}%
@@ -62,7 +85,7 @@ Znajomość wielomianu Alexandera wystarcza na szczęście do podania pełnej kl
 
 \begin{proposition}
     Niech $p, q, r, s$ będą liczbami całkowitymi.
-    Następujące warunki są równoważne:
+    Wtedy naststępujące warunki są równoważne:
     \begin{itemize}
         \item węzły torusowe $T_{q, r}$ oraz $T_{p, s}$ są równoważne,
         \item $\{q, r\} = \{p, s\}$ lub $\{q, r\} = \{-p, -s\}$.
@@ -79,24 +102,4 @@ Znajomość wielomianu Alexandera wystarcza na szczęście do podania pełnej kl
 \end{proof}
 
 Kawauchi pisze, że wcześniej klasyfikacja węzłów torusowych wynikała z klasyfikacji wolnych produktów $(\Z/p) * (\Z/q)$, które są ilorazami grup węzłów torusowych \cite{schreier1924}.
-
-Wartości wielomianu Jonesa podajemy bez dowodu:
-
-\begin{proposition}
-\index{klamra Kauffmana}%
-    Klamra Kauffmana spełnia zależność rekurencyjną
-    \begin{equation}
-        \bracket{T_{2, n}} = A \bracket{T_{2,n-1}} + (-1)^{n-1} A^{2-3n}
-    \end{equation}
-    z warunkiem brzegowym $\bracket{T_{2,1}} = -A^3$.
-\end{proposition}
-
-\begin{proposition}
-\index{wielomian!Jonesa}%
-    Niech $K = T_{p, q}$ będzie węzłem torusowym.
-    Wtedy jego wielomianem Jonesa jest
-    \begin{equation}
-        \jones_K(t) = \frac {{\sqrt t}^{(p-1)(q-1)}}{1-t^2} \cdot (1 - t^{p+1} - t^{q+1} + t^{p+q}).
-    \end{equation}
-\end{proposition}
 

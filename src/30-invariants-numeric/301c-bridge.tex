@@ -1,0 +1,103 @@
+
+% DICTIONARY;bridge number;liczba mostowa;-
+\section{Liczba mostowa}
+\index{liczba mostowa|(}%
+
+Wprowadzona w~1954 przez Schuberta \cite{schubert1954}.
+\index[persons]{Schubert, Horst}%
+
+\begin{definition}
+    Niech $L$ będzie splotem.
+    Minimalną liczbę mostów, czyli długich łuków, które biegną tylko przez nadskrzyżowania, jakie muszą się pojawić na diagramie, który przedstawia splot $L$ nazywamy liczbą mostową i oznaczamy krótko $\bridge L$.
+\end{definition}
+
+% źródło: https://knotinfo.math.indiana.edu/descriptions/bridge_index.html
+W 2012 roku Musick \cite{musick2012} znalazł liczbę mostową węzłów pierwszych o 11 skrzyżowaniach: węzły, które nie są ani wymierne, ani Montesinosa, są trzymostowe.
+\index[persons]{Musick, Chad}%
+Po ośmiu latach pchnięto granicę wiedzy do 12 skrzyżowań, dokonał tego międzynarodowy zespół: Blair, Kjuczukowa, Velazquez, Villanueva \cite{blair2020}.
+\index[persons]{Blair, Ryan}%
+\index[persons]{Kjuchukova, Alexandra}%
+\index[persons]{Velazquez, Roman}%
+\index[persons]{Villanueva, Paul}%
+
+Jedynym węzłem jednomostowym jest niewęzeł.
+Kolejne w~hierarchii skomplikowania, czyli dwumostowe, to domknięcia wymiernych supłów (piszemy o~nich w podsekcji \ref{sub:twobridge}).
+Fukuhama, Ozawa, Teragaito \cite{fukuhama1999} pokazali, że trzymostowe węzły genusu jeden są preclami.
+\index[persons]{Fukuhama, Satoshi}%
+\index[persons]{Ozawa, Makoto}%
+\index[persons]{Teragaito, Masakazu}%
+\index{genus}%
+\index{precel}%
+\index{węzeł!trzymostowy}%
+Hilden, Montesinos, Tejada, Toro \cite{hilden2012} klasyfikują wszystkie węzły trzymostowe przy użyciu tak zwanej reprezentacji motylkowej, podobną do wyniku Schuberta z~sekcji \ref{sub:twobridge}.
+\index[persons]{Hilden, Hugh}%
+\index[persons]{Montesinos, José}%
+\index[persons]{Tejada, Débora}%
+\index[persons]{Toro, Margarita}%
+\index{liczba mostowa!węzeł trzymostowy}%
+\index{węzeł!trzymostowy!see {liczba mostowa}}%
+\index{reprezentacja!motylkowa}%
+
+\begin{proposition}
+    Węzły $n$-mostowe rozkładają się na sumę dwóch wymiernych $n$-supłów.
+\end{proposition}
+% źródło: Wiki Bridge_number, TODO: znaleźć lepsze źródło?
+\index{supeł!wymierny}%
+
+Co ciekawe, powyższe stwierdzenie nie pada nigdzie poza stroną \textsc{Bridge number} na angielskiej Wikipedii.
+
+\begin{proposition}
+\label{prp:bridge_additive}%
+    Niech $K_1, K_2$ będą węzłami.
+    Wtedy $\bridge (K_1) + \bridge(K_2) = \bridge(K_1 \# K_2) + 1$.
+\end{proposition}
+
+\begin{proof}[Niedowód]
+\index[persons]{Schubert, Horst}%
+\index[persons]{Schultens, Jennifer}%
+    Schubert \cite[s. 279]{schubert1954} pokazał to blisko pół wieku temu.
+    Nowszy dowód pochodzi od Schultens \cite{schultens2003}, skorzystała z~foliacji na brzegu węzła towarzyszącego satelitarnemu.
+    Ale dokładniejszy opis powyższych prac wykraczałby poza zakres tego opracowania, więc zostanie pominięty.
+\end{proof}
+
+Murasugi wspomina w rozdziale 4.3 podręcznika \cite{murasugi1996} następującą hipotezę, nie podaje jednak wcale, skąd się wzięła:
+\index[persons]{Murasugi, Kunio}%
+
+\begin{conjecture}[mostowo-skrzyźowaniowa]
+\index{hipoteza!mostowo-skrzyżowaniowa}%
+    Niech $K$ będzie węzłem.
+    Wtedy $\crossing K \ge 3 \bridge K - 3$, przy czym równość zachodzi dokładnie dla niewęzła, trójlistnika i~sumy spójnej trójlistników.
+\end{conjecture}
+
+Należy więc uzupełnić brakujące informacje.
+Murasugi \cite{murasugi1988} przypuszcza, że dla splotów o~$\mu$~ogniwach zachodzi nierównosć $\crossing L + \mu - 1 \ge 3 \bridge L - 3$, przedstawia jednocześnie dowód jej szczególnego przypadku, dla alternujących splotów algebraicznych.
+\index[persons]{Murasugi, Kunio}%
+Hipoteza Murasugiego stanowi uogólnienie dużo starszego problemu pochodzącego od Foxa \cite{fox1950}, który zapytał, czy nierówność jest prawdziwa dla węzłów, gdy $\mu = 1$.
+\index[persons]{Fox, Ralph}%
+
+\begin{proposition}
+\index{liczba gordyjska}%
+\label{no_relation_bridge_unknotting}%
+    Nie istnieje bezpośredni związek między liczbą mostową oraz gordyjską.
+\end{proposition}
+
+Wiemy o tym z książki Livingstona \cite[s. 146]{livingston1993}.
+
+\begin{proof}
+    Niech $K_n$ będzie węzłem $(2, 2n+1)$-torusowym.
+    Wtedy $K_n$ jest dwumostowy i~jego liczba gordyjska wynosi $n$, to jest dokładnie treść hipotezy Milnora (patrz fakt \ref{prp:torus_unknotting_number}).
+
+    Livingston pisze, że Schubert \cite[s. 281]{schubert1954} udowodnił następujący wynik.
+    Jeśli węzeł $K'$ jest dublem węzła $K$, to $\bridge K' = 2 \bridge K$ chyba, że $K$ jest niewęzłem (Livingston mówi tylko, że jest jakiś wyjątek i~każe go znaleźć).
+    Zatem wielokrotne dublowanie prowadzi do węzłów o~dowolnie dużej liczbie mostowej.
+    Duble są 1-gordyjskie: rysunek 7.12 w książce Livingstona \cite[s. 146]{livingston1993} świetnie to pokazuje.
+\end{proof}
+
+% Podobnie nie ma zależności między liczbą mostową oraz genusem.
+% \index{genus}%
+% TODO: zamiast tego, z każdego miejsca dolinkować znowu do \subsection{Podsumowanie}
+
+\index{liczba mostowa|)}%
+
+% Koniec podsekcji Liczba mostowa
+

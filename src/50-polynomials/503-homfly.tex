@@ -1,0 +1,247 @@
+
+\section{Wielomian HOMFLY-PT}
+\index{wielomian!HOMFLY-PT|(}%
+
+Po tym, jak Jones przedstawił światu swój wielomian w~1984 roku, matematycy
+zaczęli szukać jego uogólnienia zależnego nie od jednej, lecz dwóch zmiennych.
+Pierwszym takim węzłowym niezmiennikiem okazał się wielomian HOMFLY.
+Jego nazwa pochodzi od sześciu odkrywców: Hoste, Ocneanu, Millett, Freyd, Lickorish, Yetter z~pracy \cite{homfly1985}.
+\index[persons]{Freyd, Peter}%
+\index[persons]{Hoste, Jim}%
+\index[persons]{Lickorish, William}%
+\index[persons]{Millett, Kenneth}%
+\index[persons]{Ocneanu, Adrian}%
+\index[persons]{Yetter, David}%
+
+Dwa lata później i~niezależnie od nich, Przytycki z~Traczykiem otrzymał ten sam obiekt w~\cite{przytycki1987}.
+\index[persons]{Przytycki, Józef}%
+\index[persons]{Traczyk, Paweł}%
+Michael McDaniel w artykule ,,Knots to You'' pisze, że często pomija się litery PT (i mówi o wielomianie HOMFLY), ponieważ polska poczta była spowolniona w latach osiemdziesiątych przez ruch solidarnościowy i artykuł \cite{przytycki1987} nie dotarł na czas do redakcji AMS!
+
+\begin{definition}[wielomian HOMFLY]
+\index{relacja kłębiasta}%
+\label{def:homfly}%
+    Niech $L$ będzie zorientowanym diagramem splotu.
+    Wielomian Laurenta $P$ dwóch zmiennych, który spełnia relację kłębiastą
+    \begin{equation}
+        l \cdot P_{L_+} + l^{-1} \cdot P_{L_-} + m \cdot P_{L_0} = 0
+    \end{equation}
+    z warunkiem brzegowym $P({\SmallUnknot}) \equiv 1$ oraz jest niezmienniczy na izotopie i~trzy ruchy Reidemeistera, nazywamy wielomianem HOMFLY.
+\end{definition}
+
+Symbole $L_+, L_-, L_0$ objaśnione są przy definicji \ref{skein_symbols}.
+Litery $l, m$ pochodzą od nazwisk odkrywców: Lickorisha i Milletta.
+To dość mylące, ale niektórzy używają innych zmiennych:
+
+\begin{definition}[HOMFLY inaczej]
+    $a \cdot P_{L_+} - a^{-1} \cdot P_{L_-} = z \cdot P_{L_0}$. (Czasami zamiast $a$ pisze się $v$).
+\end{definition}
+
+\begin{definition}[HOMFLY jeszcze inaczej]
+    $\alpha^{-1} \cdot P_{L_+} - \alpha \cdot P_{L_-} = z \cdot P_{L_0}$.
+\end{definition}
+
+\begin{definition}[HOMFLY jednorodny]
+    $x \cdot S_{L_+} - y \cdot S_{L_-} - z \cdot S_{L_0} = 0$.
+\end{definition}
+
+Jednorodny wielomian HOMFLY można znaleźć na przykład w~\cite[s. 10]{millett1988} albo \cite[s. 231]{murasugi1996}.
+Murasugi podaje tam jako ćwiczenie równości:
+\index[persons]{Murasugi, Kunio}%
+\begin{align}
+    P(\alpha, z) & = S(\alpha^{-1}, \alpha, z) \\
+    S(x, y, z) & = P(\sqrt{y/x}, z/\sqrt{xy}).
+\end{align}
+
+Relacja kłębiasta pozwala wywnioskować własności wielomianu sumy spójnej i~prostej.
+Potrzebować będziemy lematu:
+
+\begin{lemma}
+\label{lem:homfly_unlinks}%
+    Wielomianem HOMFLY dla niesplotu o~$n$ ogniwach jest
+    \begin{equation}
+        P(U_n) = \left(-\frac{l+1/l}{m}\right)^{n-1}.
+    \end{equation}
+\end{lemma}
+
+Można potraktować to jako proste ćwiczenie z~indukcji matematycznej, pozostawiam je uwadze Czytelnika.
+
+\begin{proposition}
+    \label{prp:homfly_and_shraps}%
+    Niech $L_1, L_2$ będą splotami.
+    Wtedy
+    \begin{align}
+        P(L_1 \sqcup L_2) & = - \frac{l + 1/l}{m} \cdot P(L_1) P(L_2) \\
+        P(L_1 \shrap L_2) & = P(L_1) P(L_2).
+    \end{align}
+\end{proposition}
+
+Dowód przebiega analogicznie do dowodu ,,multiplikatywności'' wielomianów Alexandera (fakty \ref{prp:alexander_multiplicative}) oraz Jonesa (fakt \ref{prp:jones_multiplicative_1}, \ref{prp:jones_multiplicative_2}).
+
+Patrz też \url{https://math.stackexchange.com/a/399405}.
+
+\begin{proof}
+    Każdy splot $L$ jest kombinacją liniową (o współczynnikach będących wielomianami w~$m$ oraz $l$) niesplotów $U_k$ o~różnej liczbie składowych $k$.
+    Mamy więc
+    \begin{equation}
+        L_1 = \sum_{k=1}^n a_k U_k, \quad
+        L_2 = \sum_{k=1}^n b_k U_k.
+    \end{equation}
+
+    Skorzystamy w~tym miejscu z~lematu \ref{lem:homfly_unlinks}.
+    Wynika z~niego, że $P(U_i)P(U_j) = P(U_{i+j-1})$ i~bezpośrednio
+    \begin{equation}
+        P(L_1)P(L_2) = \sum_{k=1}^{2n} \sum_{i=1}^{k-1} a_i b_{k-i}P(U_{k-1}).
+    \end{equation}
+
+    Pozostało spojrzeć na sumę spójną diagramów  $L_1 \shrap L_2$.
+    Jeśli usuniemy teraz wszystkie skrzyżowania z~diagramu $L_1$ relacją kłębiastą, dostaniemy $L_1 \# L_2 = \sum_{k=1}^n a_k (U_{k-1} \cup L_2)$, gdyż jedna z~niezawęźlonych składowych zostanie wchłonięta do diagramu diagramu $L_2$.
+    Rozwijamy dalej i~otrzymujemy
+    \begin{align}
+        L_1 \# L_2
+        & = \sum_{k=1}^n a_k \left(U_{k-1} \cup \sum_{k=1}^n b_k U_k\right) \\
+        & = \sum_{k=1}^{2n} \sum_{i=1}^{k-1} a_i b_{k-i} U_{i-1} \cup U_{k-i} \\
+        & = \sum_{k=1}^{2n} \sum_{i=1}^{k-1} a_i b_{k-i} U_{k-1},
+    \end{align}
+    co kończy dowód.
+\end{proof}
+
+Nie wiemy jeszcze, czy definicja \ref{def:homfly} pozwala wyliczyć wielomian w~skończenie wielu krokach. %, ani czy wynik jest jednoznaczny.
+Zauważmy, że wyznaczenie nawiasu Kauffmana było prostsze, ponieważ w~każdym kroku liczba skrzyżowań ulegała zmniejszeniu.
+Teraz powołamy się na lemat \ref{lem:unknotting_well_defined}.
+% istnienie trudno pokazać, jednoznaczność przebiega tak samo jak dla wielomianu Jonesa
+
+\begin{proposition}
+    Wielomian HOMFLY można wyznaczyć w~skończenie wielu krokach.
+\end{proposition}
+
+\begin{proof}
+    Niech $L$ będzie splotem, którego wielomian HOMFLY próbujemy wyznaczyć.
+    Ustalmy jego dowolny diagram i~wybierzmy jedno ze skrzyżowań, które należy odwrócić, by uzyskać niesplot.
+    Takie skrzyżowanie istnieje na mocy lematu \ref{lem:unknotting_well_defined}.
+    Początkowy diagram odpowiada albo $L_+$, albo $L_-$ w relacji kłębiastej dla tego skrzyżowania; jego wielomian jest różnicą wielomianów pozostałych dwóch diagramów (o~mniejszej liczbie skrzyżowań!).
+    Powtarzając procedurę dojdziemy do splotów trywialnych.
+
+    Jeśli powołamy się na wniosek \ref{lem:homfly_unlinks}, dowód zostanie zakończony.
+\end{proof}
+
+Porównajmy wielomian HOMFLY ze znanymi już wielomianami Alexandera $\alexander$ oraz Jonesa $\jones$.
+Żaden z~nich nie jest mocniejszy od drugiego, istnieją pary węzłów rozróżnialne przez dokładnie jeden.
+Na przykład $4_1$ oraz $11n_{19}$ mają różne tylko wielomiany Alexandera, zaś $8_{10}$ oraz $10_{143}$ różne tylko wielomiany Jonesa.
+
+\begin{proposition}
+\label{homfly_stronger}%
+    Wielomian HOMFLY jest mocniejszy niż wielomiany Jonesa i~Alexandera jednocześnie.
+\end{proposition}
+
+\begin{proof}
+    Podstawiając $l = it^{-1}$, $m = i(t^{-1/2} - t^{1/2})$ w~definicji dostajemy relację kłębiastą dla wielomianu Jonesa.
+    Wielomian Alexandera otrzymamy kładąc $l = i$, $m = i(t^{-1/2} - t^{1/2})$.
+    Stąd wynika, że wielomian HOMFLY jest co najmniej tak samo mocny jak $\alexander$ oraz $\jones$.
+
+    Wielomian HOMFLY odróżnia $11_{388}$ od swojego odbicia, wielomiany Jonesa i~Conwaya nie, więc jest istotnie mocniejszy.
+\end{proof}
+
+Pomimo swej mocy nie jest jednak niezmiennikiem zupełnym, nigdy nie odróżnia od siebie mutantów (to fakt \ref{mutants_and_homfly}).
+\index{mutant}%
+Konkretne przykłady kolizji, tym razem nie mutantów, to $5_1$ oraz $10_{132}$, $8_{8}$ oraz $10_{129}$, $8_{16}$ oraz $10_{156}$ albo $10_{25}$ oraz $10_{56}$.
+Co bardziej dramatyczne, Kanenobu \cite{kanenobu1986} wskazał przy użyciu elementarnych metod (!):
+\index[persons]{Kanenobu, Taizo}%
+
+\begin{proposition}
+\index{genus}%
+\index{liczba mostowa}%
+\index{węzeł!hiperboliczny}%
+\index{węzeł!rozwłókniony}%
+\index{węzeł!taśmowy}%
+    Istnieje przeliczalna rodzina węzłów, której wszystkie elementy są hiperboliczne, taśmowe, rozwłóknione, trzymostowe, o~genusie 2 oraz nieodróżnialne od siebie wielomianem HOMFLY.
+\end{proposition}
+
+\begin{proof}[Niedowód]
+    Rozpatrzmy rodzinę węzłów $K(p, q)$, gdzie całkowite liczby $p, q$ oznaczają ile razy wykonano pełny skręt wewnątrz prostokąta:
+\begin{comment}
+    \[
+        \begin{tikzpicture}[baseline=-0.65ex,scale=0.08]
+        \begin{knot}[clip width=5, flip crossing/.list={1,3,6,7}]
+        \strand [ultra thick] (0, 25)
+            [in=left, out=right] to (20, 25)
+            [in=up, out=right] to (25, 5)
+            [in=down, out=down] to (15, 5)
+            [in=right, out=up] to (10, 20)
+            [in=up, out=left] to (5, 15)
+            [in=up, out=down] to (5, 5)
+            [in=left, out=down] to (15, -10)
+        ;
+        \strand [ultra thick] (15, -10)
+            [in=down, out=right] to (20, 10)
+            [in=up, out=up] to (30, 10)
+            [in=right, out=down] to (20, -25)
+            [in=down, out=left] to (5, -20)
+            [in=down, out=up] to (5, -10)
+        ;
+        \strand [ultra thick] (5, -10)
+            [in=down, out=up] to (15, 0)
+            [in=right, out=up] to (0, 5)
+            [in=up, out=left] to (-15, 0)
+            [in=up, out=down] to (-5, -10)
+            ;
+        \strand [ultra thick] (-15, -10)
+            [in=down, out=left] to (-20, 10)
+            [in=up, out=up] to (-30, 10)
+            [in=left, out=down] to (-20, -25)
+            [in=down, out=right] to (-5, -20)
+            [in=down, out=up] to (-5, -10)
+        ;
+        \strand [ultra thick] (0, 25)
+            [in=right, out=left] to (-20, 25)
+            [in=up, out=left] to (-25, 5)
+            [in=down, out=down] to (-15, 5)
+            [in=left, out=up] to (-10, 20)
+            [in=up, out=right] to (-5, 15)
+            [in=up, out=down] to (-5, 5)
+            [in=right, out=down] to (-15, -10)
+        ;
+        \draw[fill=ocre!15, ultra thick] (-5, 10) rectangle (5, 15);
+        \draw[fill=ocre!15, ultra thick] (-5, -17.5) rectangle (5, -12.5);
+        \node at (0, 12.5) {$p$};
+        \node at (0, -15) {$q$};
+        \end{knot}
+        \end{tikzpicture}
+    \]
+\end{comment}
+    I tak zachowując oznaczenia z pracy \cite{kanenobu1986}, mamy trzy lematy:
+    \begin{enumerate}
+        \item $K(p,q) = K(q,p)$.
+        \item węzły $K(p,q)$ i $K(p', q')$ mają ten sam moduł Alexandera wtedy i tylko wtedy, gdy $|p-q| = |p'-q'|$.
+        \item węzły $K(p,q)$ i $K(p', q')$ mają ten sam wielomian Jonesa (HOMFLY) wtedy i tylko wtedy, gdy $p+q = p'+q'$.
+    \end{enumerate}
+    Wynika stąd, że węzły $K(p, q)$, gdzie $p \ge q$, są parami różne.
+ 
+    Dalej, węzeł $K(p,q)$ jest zawsze trzymostowy (lemat 4); prawie zawsze hiperboliczny (chyba że $p = q = 0$); zwierciadlany wtedy i tylko wtedy, gdy $p + q = 0$.
+    Autor twierdzi, że dowód włóknistości, taśmowości i~bycia genusu $2$ zamieścił wcześniej w~\cite{kanenobu1981}, ale to jest po francusku.
+\end{proof}
+
+Wielomian HOMFLY jest niezmiennikiem splotów zorientowanych, ale możemy go użyć także do porównywania obiektów bez orientacji.
+Jeśli wielomiany dwóch splotów, niezależnie od orientacji ich ogniw, są zawsze różne, to same sploty też są różne.
+Dunfield, Garoufalidis, Szumakowicz, Thistlethwaite w~\cite{dunfield2010} znaleźli diagram pewnego węzła o~75 skrzyżowaniach, którego kablowe mutacje zachowują wielomiany Jonesa oraz Alexandera, ale nie zachowują wielomianu HOMFLY.
+\index[persons]{Dunfield, Nathan}%
+\index[persons]{Garoufalidis, Stavros}%
+\index[persons]{Szumakowicz, Alexander}%
+\index[persons]{Thistlethwaite, Morwen}%
+\index{węzeł!o 75 skrzyżowaniach}%
+Wiadomo, że jeśli istnieje prostszy przykład, to ma co najmniej 13 skrzyżowań.
+
+Zaletą wielomianu HOMFLY jest to, że często wykrywa chiralność (węzeł chiralny nie jest równoważny swemu lustrzanemu odbiciu), ale nie odróżnia enancjomerów węzłów $9_{42}$, $10_{48}$, $10_{71}$, $10_{91}$, $10_{104}$, oraz $10_{125}$.
+\index{enancjomer}%
+Wśród węzłów do 10 skrzyżowań dokładnie dwa opierają się testom chiralności opartym na niezmiennikach HOMFLY oraz Kauffmana: $9_{42}$ oraz $10_{71}$.
+\index{węzeł!9-42}%
+\index{węzeł!10-71}%
+Do jej wykrycia potrzebna jest na przykład $SU(2)$-teoria Cherna-Simonsa, wyjaśniona w~kolejnej wersji tego skryptu.
+
+% A POLYNOMIAL INVARIANT OF ORIENTED LINKS W. B. R. LICKORISH and KENNETH C. MILLET
+% Example 16 - książka
+
+\index{wielomian!HOMFLY-PT|)}%
+
+% Koniec sekcji Wielomian HOMFLY
+

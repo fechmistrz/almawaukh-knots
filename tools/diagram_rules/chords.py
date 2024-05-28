@@ -4,7 +4,8 @@ diagram_commands["OneTerm"] = {
         "\\draw[thick, first_colour] (20*17:5) [out=180+17*20, in=down] to (0:2) [in=180+1*20, out=up] to (20*1:5);",
         "\\draw[thick] (20*16:5) arc (20*16:20*20:5);",
     ],
-    "sizes": ["Large"],
+    "sizes": ["Large", "MedLar"],
+    "bounding": [-5, -5, 6.5, 5],
 }
 diagram_commands["FourTermA"] = {
     "lines": [
@@ -15,7 +16,8 @@ diagram_commands["FourTermA"] = {
         "\\draw[thick] (20*11:5) arc (20*11:20*14:5);",
         "\\draw[thick] (20*17:5) arc (20*17:20*20:5);",
     ],
-    "sizes": ["Large"],
+    "sizes": ["Large", "MedLar"],
+    "bounding": [-6, -5, 6.5, 5],
 }
 diagram_commands["FourTermB"] = {
     "lines": [
@@ -26,7 +28,8 @@ diagram_commands["FourTermB"] = {
         "\\draw[thick] (20*11:5) arc (20*11:20*14:5);",
         "\\draw[thick] (20*17:5) arc (20*17:20*20:5);",
     ],
-    "sizes": ["Large"],
+    "sizes": ["Large", "MedLar"],
+    "bounding": [-6, -5, 6.5, 5],
 }
 diagram_commands["FourTermC"] = {
     "lines": [
@@ -37,7 +40,8 @@ diagram_commands["FourTermC"] = {
         "\\draw[thick] (20*11:5) arc (20*11:20*14:5);",
         "\\draw[thick] (20*17:5) arc (20*17:20*20:5);",
     ],
-    "sizes": ["Large"],
+    "sizes": ["Large", "MedLar"],
+    "bounding": [-6, -5, 6.5, 5],
 }
 diagram_commands["FourTermD"] = {
     "lines": [
@@ -48,5 +52,6 @@ diagram_commands["FourTermD"] = {
         "\\draw[thick] (20*11:5) arc (20*11:20*14:5);",
         "\\draw[thick] (20*17:5) arc (20*17:20*20:5);",
     ],
-    "sizes": ["Large"],
+    "sizes": ["Large", "MedLar"],
+    "bounding": [-6, -5, 6.5, 5],
 }

@@ -1,0 +1,113 @@
+
+\section{Węzły okresowe}
+\index{węzeł!okresowy|(}%
+Można wyróżnić jeszcze jeden rodzaj symetrii.
+
+% DICTIONARY;period;okres;-
+% DICTIONARY;periodic;okresowy;węzeł
+\begin{definition}
+\label{def:period}%
+    Węzeł $K$ nazywamy $n$-okresowym, jeśli istnieje obrót $f \colon \R^3 \to \R^3$ o~kąt $2\pi/n$ wokół pewnej prostej $l$, rozłącznej z~węzłem $K$, taki że $f(K) = K$.
+\end{definition}
+
+Zamiast obrotów można rozpatrywać dowolne odwzorowania okresowe $f \colon S^3 \to S^3$, których zbiór punktów stałych jest rozłączny z węzłem $K$, homeomorficzny z $S^1$ oraz które trzymają węzeł $K$ w miejscu, ale dostaje się wtedy dokładnie taką samą klasę węzłów.
+Czemu?
+Wynika to z hipotezy Smitha, otrzymanej z połączenia głębokich teorii dotyczących geometrii i topologii 3-rozmaitości.
+\index{hipoteza!Smitha}%
+Kawauchi \cite[s. 125]{kawauchi1996} odsyła tu do książki Morgana, Bassa \cite{morgan1984}, gdzie znajdziemy problem, jego historię i rozwiązanie.
+\index[persons]{Morgan, John}%
+\index[persons]{Bass, Hyman}%
+
+\begin{proposition}
+    Zbiór wszystkich okresów jest niezmiennikiem węzłów.
+\end{proposition}
+
+Nieodwracalny węzeł $8_{17}$ nie posiada żadnych okresów.
+% ćwiczenie 10.1.5 w Kawauchi
+Węzeł $5_1$ jest 5-okresowy, co widać na standardowym diagramie, oraz 2-okresowy, tę drugą symetrię można dostrzec na diagramie realizującym liczbę mostową.
+Trójlistnik ma dokładnie dwa okresy, $2$ i~$3$.
+Ogólniej, jak głosi Kawauchi \cite[ćwiczenie 10.1.9]{kawauchi1996}:
+
+\begin{proposition}
+    Jedynymi okresami węzła $(p, q)$-torusowego są dzielniki liczb $p$ oraz $q$.
+\end{proposition}
+
+Murasugi podał dwa warunki, które musi spełniać węzeł o~okresie $n = p^r$, gdzie $r$ jest liczbą pierwszą.
+\index[persons]{Murasugi, Kunio}%
+Do ich zrozumienia potrzebujemy dwóch definicji.
+
+\begin{definition}
+    Niech $f$ będzie obrotem z definicji \ref{def:period}, zaś $p \colon \R^3 \to \R^3/f \simeq \R^3$ rzutem na przestrzeń ilorazową.
+% DICTIONARY;quotient;ilorazowy;węzeł
+\index{węzeł!ilorazowy}%
+    Wtedy $p(K)$ nazywamy \emph{węzłem ilorazowym}, zaś $K$ to jego $n$-krotne nakrycie.    
+\end{definition}
+
+Ładny rysunek węzła ilorazowego znaleźliśmy u Kawauchiego \cite[s. 122]{kawauchi1996}.
+
+\begin{definition}
+    Niech $l, K$ będą zorientowanymi prostą oraz węzłem, które nie są do siebie styczne.
+    Wtedy różnicę między liczbą skrzyżowań dodatnich oraz ujemnych wzdłuż półprostej (bez znaku) nazywamy indeksem zaczepienia $\lambda$ węzła $p(K)$.
+\end{definition}
+
+\begin{proposition}[warunek Murasugiego]
+\index{warunek!Murasugiego}%
+\label{prp:murasugi_periodic}%
+    Niech $K$ będzie węzłem o~okresie $n = p^r$, gdzie $p$ jest liczbą pierwszą.
+    Niech $J$ będzie jego węzłem ilorazowym, z~indeksem zaczepienia $\lambda$.
+    Wtedy wielomian $\alexander_J$ jest dzielnikiem wielomianu $\alexander_K$ oraz istnieje pewna całkowita liczba $k$, taka że
+    \begin{equation}
+        \alexander_K(t) \equiv \pm t^k \alexander_J(n)^n \left(1 + t + t^2 + \ldots + t^{\lambda - 1}\right)^{n-1} \mod p.
+    \end{equation}
+\end{proposition}
+
+\begin{proof}[Niedowód]
+    Murasugi \cite{murasugi1971} każe rachować mozolnie na macierzach, których wyznacznikiem jest wielomian Alexandera.
+    Kawauchi \cite[s. 122-124]{kawauchi1996} przedstawia inny dowód: rozpatruje najpierw szczególny przypadek węzła torusowego $T_{n, d}$, którego węzłem ilorazowym jest niewęzeł.
+    W ogólnym przypadku, korzysta z relacji kłębiastej dla wielomianu Conwaya.
+    Detale oraz odsyłacze do dalszych prac znaleźć można w jego przeglądowej publikacji.
+\end{proof}
+
+Z prac Borodzika (m.in. \cite{grabowski20} napisanej z Grabowskim, Królem i Marchwicką) dowiedzieliśmy się, że podany wyżej warunek Murasugiego jest tylko jednym z wielu ograniczeń, jakie musi spełniać węzeł okresowy.
+Autorzy wymieniają:
+\begin{itemize}
+    \item warunek Murasugiego udoskonalony przez Davisa, Livingstona \cite{davis1991},
+\index[persons]{Davis, James}%
+\index[persons]{Livingston, Charles}%
+    \item kryterium Naika z homologiami rozgałęzionego nakrycia \cite{naik1997},
+\index[persons]{Naik, Swatee}%
+\index{homologie}%
+\index{rozgałęzione nakrycie}%
+    \item kryterium Traczyka z wielomianem Jonesa \cite{traczyk1991},
+\index{wielomian Jonesa}%
+\index[persons]{Traczyk, Paweł}%
+    \item kryterium Przytyckiego z wielomianem HOMFLY-PT \cite{przytyckij1989},
+\index{wielomian HOMFLY-PT}%
+\index[persons]{Przytycki, Józef}%
+    \item kryterium Naika z niezmiennikiem Cassona-Gordona,
+\index{niezmiennik Cassona-Gordona}%
+\index[persons]{Naik, Swatee}%
+    \item kryterium Hillmana, Livingstona, Naika ze skręconym wielomianem Alexandera \cite{hillman2006},
+\index{wielomian Alexandera!skręcony}%
+\index[persons]{Hillman, Jonathan}%
+\index[persons]{Livingston, Charles}%
+\index[persons]{Naik, Swatee}%
+    \item kryterium Jabuki, Naika z homologią Floera \cite{jabuka2016},
+\index{homologia Floera}%
+\index[persons]{Jabuka, Stanisław}%
+\index[persons]{Naik, Swatee}%
+    \item kryteria Borodzika, Politarczyka z homologią Chowanowa, \cite{politarczyk2017}, \cite{politarczyk2021},
+\index{homologia Chowanowa}%
+\index[persons]{Borodzik, Maciej}%
+\index[persons]{Politarczyk, Wojciech}%
+    \item kryterium Chena z grupą podstawową \cite{chen2018}.
+\index{grupa podstawowa}%
+\index[persons]{Chen, Haimiao}%
+\end{itemize}
+% Sakumy nie ma, bo nie został wymieniony ze słowem criterion; być może napisał coś ogólnego? 
+\index{kryterium Naika (okresowości)}%
+
+\index{węzeł!okresowy|)}%
+
+% koniec podsekcji Węzły okresowe
+

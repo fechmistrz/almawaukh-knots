@@ -1,0 +1,89 @@
+
+\section{Diagramy. Ruchy Reidemeistera}
+
+Chociaż w~świetle definicji \ref{def:knot} węzły są pewnymi regularnymi podzbiorami przestrzeni $\R^3$, z~kombinatorycznego punktu widzenia wygodniej jest rysować je na płaszczyźnie.
+
+% DICTIONARY;shadow;cień;-
+% DICTIONARY;crossing;skrzyżowanie;-
+\begin{definition}[cień, skrzyżowanie]
+\index{cień}%
+\index{skrzyżowanie}%  
+\label{def:crossing}%
+    Niech $\pi \colon \R^3 \to \R^2$ będzie rzutem na pewną płaszczyznę, zaś $L \subseteq \R^3$ ustalonym splotem.
+    Obraz $\pi[L]$ nazywamy cieniem, punkty podwójne $p$ cienia (punkt $p \in \R^2$, którego przeciwobraz $\pi^{-1}[\{p\}]$ jest dwupunktowy) nazywamy skrzyżowaniami.
+\end{definition}
+
+\begin{definition}[diagram]
+% DICTIONARY;diagram;diagram;-
+\index{diagram}%
+    Niech $D$ będzie cieniem splotu $L$ takim, że cień $D$ zawiera skończenie wiele punktów wielokrotnych (i wszystkie są punktami podwójnymi) oraz skrzyżowania cienia $D$ nie zawierają wierzchołków splotu $L$.
+    Wtedy cień $D$ wzbogacony o~informację o tym, jak przebiegają skrzyżowania (który odcinek łamanej biegnie dołem, a~który górą) nazywamy diagramem.
+\end{definition}
+
+Mieliśmy problemy ze znalezieniem ładnego rysunku katastrof, jakich nie dopuszczamy pracując z diagramami zamiast zwykłymi cieniami; nam nie do końca chciało się je rysować je tutaj.
+Wybawieniem okazała się monografia Burdego, Zieschanga (i Heusenera) \cite[s. 9]{burde2014}.
+
+Dla każdego ustalonego $n \ge 2$ i każdego węzła $K$ istnieje cień $D$, na którym wszystkie wielokrotne punkty są $n$-krotne (wiemy to od Hostego, College'a \cite[s. 11]{adams2021}, którzy nie napisali, skąd to wiedzą);
+\index[persons]{Hoste, Jim}%
+\index[persons]{College, Pitzer}%
+dla co najmniej jednej wartości $n$ można dodatkowo wymagać, by diagram zawierał dokładnie jedno skrzyżowanie (Adams, Crawford, DeMeo, Landry, Lin, Montee, Park, Venkatesh, Yhee \cite{venkatesh2015} albo Brunn ponad sto lat temu \cite[s. 28]{adams2021}!).
+\index[persons]{Adams, Colin}%
+\index[persons]{Crawford, Thomas}%
+\index[persons]{DeMeo, Benjamin}%
+\index[persons]{Landry, Michael}%
+\index[persons]{Lin, Alex}%
+\index[persons]{Montee, Murphy}%
+\index[persons]{Park, Seojung}
+\index[persons]{Venkatesh, Saraswathi}%
+\index[persons]{Yhee, Farrah}%
+
+\begin{definition}[włókno, nić]
+\index{włókno}%
+\index{nić}%
+    Fragment diagramu biegnący między dwoma kolejnymi skrzyżowaniami (odpowiednio: tunelami, czyli podskrzyżowaniami), nazywamy nicią (odpowiednio: włóknem)
+\end{definition}
+
+Skrzyżowania i diagramy są standardowymi terminami, zrozumiałymi przez każdego. 
+Cienie, nici i włókna stanowią twórczość własną autorów!
+Nici powstają z włókien przez rozcięcie ich przy każdym nadskrzyżowaniu.
+
+\begin{proposition}
+\label{prp:links_have_diagrams}%
+    Niech $L$ będzie splotem.
+    Jego diagramy tworzą otwarty i~gęsty podzbiór wszystkich rzutów.
+\end{proposition}
+
+Kawauchi \cite[s. 7]{kawauchi1996} wspomina w tym miejscu podręcznik Crowella, Foxa \cite[s. 7]{crowell1963}.
+To samo jest na przykład u Burdego, Zieschanga, Heusenera \cite[s. 10]{burde2014}, ale oni odsyłają jeszcze do Reidemeistera \cite{reidemeister1927} i samego Burdego \cite{burde1978}.
+
+\begin{proof}[Niedowód]
+    Rzut splotu na równoległe płaszczyzny jest taki sam, a te można sparametryzować prostymi przechodzącymi przez początek układu współrzędnych, które tworzą przestrzeń rzutową $\R \mathbb P^2$.
+    Niech $S$ będzie zbiorem prostych, które dają złe rzuty.
+    Wystarczy pokazać jego nigdziegęstość.
+    Okazuje się, że $S$ jest też jednowymiarowy.
+\end{proof}
+
+\begin{corollary}
+    Każdy splot posiada diagram.
+\end{corollary}
+
+% DICTIONARY;oriented;zorientowany;węzeł
+\begin{definition}[orientacja]
+\index{węzeł!zorientowany}%
+\index{orientacja|see {węzeł zorientowany}}%
+    Węzeł, w~którym wybrano kierunek, w~którym należy się po nim poruszać, nazywamy zorientowanym.
+    Splot nazywamy zorientowanym, jeśli wszystkie jego ogniwa traktowane jako węzły są zorientowane.
+\end{definition}
+
+Orientację na diagramie zaznaczamy małą strzałką wskazującą kierunek poruszania się.
+
+\input{10-introduction/102a-reidemeister}
+
+\input{10-introduction/102b-history}
+
+\input{10-introduction/102c-codes}
+
+\input{10-introduction/102d-hardunknots}
+
+\input{10-introduction/102e-tait}
+

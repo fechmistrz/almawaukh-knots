@@ -20,7 +20,7 @@ Przebiega w dwóch etapach: najpierw pokazuje się, że genus sumy nie jest wię
 
 \begin{proof}
     Pokażemy najpierw, że $\genus (K_1 \# K_2) \le \genus (K_1) + \genus (K_2)$.
-    Wybierzmy powierzchnie Seiferta $M_1$ oraz $M_2$ dla $K_1$ oraz $K_2$ o~minimalnym genusie.
+    Wybierzmy powierzchnie Seiferta $S_1$ oraz $S_2$ dla $K_1$ oraz $K_2$ o~minimalnym genusie.
     Suma $K_1 \shrap K_2$ powstaje z~$K_1$ oraz $K_2$, podobnie jest z~powierzchniami Seiferta:
 \begin{comment}
     \begin{figure}[H]
@@ -40,34 +40,32 @@ Przebiega w dwóch etapach: najpierw pokazuje się, że genus sumy nie jest wię
         \end{minipage}
     \end{figure}
 \end{comment}
-
-    Skoro $M_{\#}$ powstaje z~$M_1 \sqcup M_2$ przez dołączenie paska do brzegu, mamy
+    Skoro $S_{\#}$ powstaje z~$S_1 \sqcup S_2$ przez dołączenie paska do brzegu, mamy
     \begin{equation}
-        \chi(M_{\#}) = \chi(M_1 \sqcup M_2) - 1 = \chi(M_1) + \chi(M_2)-1,
+        \chi(S_{\#}) = \chi(S_1 \sqcup S_2) - 1 = \chi(S_1) + \chi(S_2)-1,
     \end{equation}
     a~przez to
     \begin{equation}
-        \genus (M_{\#}) = \frac{1-\chi(M_{\#})}{2} =
-        \frac{1-\chi(M_1)}{2} + \frac{1-\chi(M_2)}{2}
-        % = %g(M_J)+g(M_K)
+        \genus (S_{\#}) = \frac{1-\chi(S_{\#})}{2} =
+        \frac{1-\chi(S_1)}{2} + \frac{1-\chi(S_2)}{2}
+        % = %g(S_J)+g(S_K)
         = \genus(K_1) + \genus(K_2).
     \end{equation}
     To kończy dowód pierwszej nierówności.
 
     Pokażemy jeszcze, że $\genus (K_1 \# K_2) \ge \genus (K_1) + g(K_2)$.
-    Zaczynamy od powierzchni Seiferta $M_{\#}$ dla $K_1 \# K_2$ o~minimalnym genusie $\genus (M_{\#})$ równym $\genus (K_1 \# K_2)$.
+    Zaczynamy od powierzchni Seiferta $S_{\#}$ dla $K_1 \# K_2$ o~minimalnym genusie $\genus (S_{\#})$ równym $\genus (K_1 \# K_2)$.
     Poprzez wykonanie chirurgii na powierzchni, możemy przyjąć specjalną postać jak w~poprzednim dowodzie:
 \begin{comment}
     \[
         \LargeGenusProofD
     \]
 \end{comment}
-
-    Usunięcie paska daje powierzchnie Seiferta dla $M_1$ oraz $M_2$ takie, że
+    Usunięcie paska daje powierzchnie Seiferta dla $S_1$ oraz $S_2$ takie, że
     \begin{equation}
-        \genus(M_1) + \genus(M_2) = \genus(M_{\#}) = \genus(K_1 \# K_2).
+        \genus(S_1) + \genus(S_2) = \genus(S_{\#}) = \genus(K_1 \# K_2).
     \end{equation}
-    Oznacza to, że $\genus(K_1) + \genus(K_2) \le \genus(M_1) + \genus(M_2) = \genus(K_1 \# K_2)$ i~mamy równość.
+    Oznacza to, że $\genus(K_1) + \genus(K_2) \le \genus(S_1) + \genus(S_2) = \genus(K_1 \# K_2)$ i~mamy równość.
 \end{proof}
 
 Jesteśmy wreszcie w~stanie podać ,,prawdziwy dowód'' faktu \ref{first_time_sum_is_trivial}.
@@ -98,7 +96,7 @@ Są to: $3_{1}$, $4_{1}$, $5_{2}$, $6_{1}$, $7_{2}$, $7_{4}$, $8_{1}$, $8_{3}$, 
 
 \begin{proposition}
 \label{prp:knots_decompose_into_primes}%
-    Każdy węzeł można zapisać jako suma spójna pewnej liczby węzłów pierwszych.
+    Każdy węzeł $K$ można zapisać w postaci sumy spójna pewnej liczby węzłów pierwszych $K_1 \shrap K_2 \shrap \ldots \shrap K_n$.
     Niewęzeł jest sumą pustej rodziny węzłów.
 \end{proposition}
 
@@ -122,6 +120,7 @@ Są to: $3_{1}$, $4_{1}$, $5_{2}$, $6_{1}$, $7_{2}$, $7_{4}$, $8_{1}$, $8_{3}$, 
 \end{proof}
 
 Nasz aparat matematyczny jest niedostatecznie rozwinięty, by móc udowodnić jedyność rozkładu.
+Niestety!
 
 \begin{theorem}[Schubert, 1949]
     Każdy nietrywialny węzeł rozkłada się na węzły pierwsze.

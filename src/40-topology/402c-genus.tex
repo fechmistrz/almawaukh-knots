@@ -1,38 +1,42 @@
 
 \subsection{Genus}
 \index{genus|(}%
-Zanim przejdziemy do zdefiniowania macierzy Seiferta, potrzebować będziemy krótkiego skoku w bok -- zrozumieć bardzo geometryczny niezmiennik węzłów, genus.
-% TODO: zamienić skok w bok na coś innego, w końcu to central position in knot theory
-Jak piszą Burde, Zieschang, Heusener \cite[s. 20]{burde2014}, \emph{,,The notion of the genus was first introduced by H. Seifert in \cite{seifert1935}, it holds a central position in knot theory.''}
+Termin genus został wymyślony przez Clebscha około 1864 roku (w~,,Über die Anwendung der Abelschen Functionen in der Geometrie'', jak można przeczytać w~przypisie do pracy ,,Development of the concept of homotopy'' Rii Vanden Eynde) i początkowo oznaczał po prostu liczbę dziur w~powierzchni.
+Jak piszą Burde, Zieschang, Heusener \cite[s. 20]{burde2014}, \emph{,,the notion of the genus was first introduced by H. Seifert in \cite{seifert1935}, it holds a central position in knot theory''}; zbadamy więc teraz bliżej ten geometryczny niezmiennik węzłów.
+(Nie pamiętamy, czemu ta podsekcja znajduje się akurat tutaj, ale chyba nie jest to najgorsze miejsce dla niej.)
 
 Zaczniemy od starego twierdzenia, które klasyfikuje powierzchnie domknięte.
 
 \begin{proposition}
-    Każda powierzchnia domknięta jest członkiem jednej z dwóch nieskończonych rodzin:
+    Niech $S$ będzie powierzchnią domkniętą.
+    Wtedy dokładnie jedno zdanie z~poniższych jest prawdziwe:
     \begin{enumerate}[leftmargin=*]
         \itemsep0em
-        \item sumą spójną $g \ge 0$ torusów,
-        \item sumą spójną $k \ge 1$ rzeczywistych płaszczyzn rzutowych.
+        \item $S$ jest orientowalna, sumą spójną $g \ge 0$ torusów
+        \item $S$ jest nieorientowalna, sumą spójną $k \ge 1$ rzeczywistych płaszczyzn rzutowych.
     \end{enumerate}
+    Liczby $g$ lub $k$ są wyznaczone jednoznacznie. % , to znaczy jeśli coś jest sumą spójną $g_1$ lub $g_2$ torusów, to $g_1 = g_2$ i podobnie dla płaszczyzn rzutowych).
 \end{proposition}
 
-Elementy pierwszej rodziny są orientowalne.
 Sferę traktujemy dla wygody jako sumę spójną $g = 0$ torusów.
 Wtedy sumę spójną $g$ torusów możemy wyobrazić sobie jako sferę, do której doklejono $g$ rączek.
+(Suma spójna torusa i~płaszczyzny rzutowej jest tym samym, co suma spójna trzech płaszczyzn rzutowych -- wykazanie tego jest jednym z kroków w klasyfikacji powierzchni.)
 
 \begin{definition}[genus powierzchni]
-    Ilość torusów nazywamy genusem powierzchni i oznaczamy literą $\genus$.
+    Niech $S$ będzie orientowalną powierzchnią będącą sumą spójną $\genus$ torusów.
+    Liczbę $\genus$ nazywamy genusem powierzchni $S$.
 \end{definition}
 
 Podobna charakteryzacja istnieje dla powierzchni z~brzegiem.
-Każdy taki obiekt jest homeomorficzny z~sumą spójną $g$ torusów, w~których wydrążono pewną liczbę otworów: tyle, ile składowych spójności ma brzeg pneiowierzchni.
+Każdy taki obiekt jest homeomorficzny z~sumą spójną $g$ torusów, w~których wydrążono pewną liczbę otworów: tyle, ile składowych spójności ma brzeg powierzchni.
 W~przypadku powierzchni Seiferta mamy do czynienia z jednym otworem.
 
-Dla wygody przypomnijmy jeszcze definicję klasycznego niezmiennika powierzchni:
+Definiujemy jeszcze jeden klasyczny niezmiennik powierzchni: charakterystykę Eulera-Poincarégo, odkrytą najpierw dla wielościanów platońskich w 1537 roku przez Francesco Maurolico i wiele lat później przez Eulera dla wielościanów wypukłych.
+(Obecnie wyprowadza się ją z homologii/algebry homologicznej, ale darujemy to sobie).
 
 \begin{definition}[charakterystyka Eulera]
 \index{charakterystyka Eulera}%
-    Niech $M$ będzie domkniętą powierzchnią orientowalną.
+    Niech $S$ będzie domkniętą powierzchnią orientowalną.
     Po striangulowaniu, składa się z $k_0$ wierzchołków, $k_1$ krawędzi oraz $k_2$ ścian.
     Wielkość
     \begin{equation}
@@ -45,20 +49,20 @@ Definicja ta nie jest wygodna podczas ręcznych obliczeń.
 Mamy za to:
 
 \begin{proposition}
-    Charakterystykę Eulera powierzchni jednoznacznie wyznaczają cztery reguły:
+    Charakterystykę Eulera powierzchni jednoznacznie wyznaczają cztery reguły, gdzie stale $S_1, S_2$ są pewnymi powierzchniami, zaś $S$ jest dyskiem:
     \begin{itemize}
-        \item jeśli $M$ jest dyskiem, to $\chi(M) = 1$,
-        \item jeśli $M_1, M_2$ są powierzchniami, to $\chi(M_1 \sqcup M_2) = \chi(M_1) + \chi(M_2)$,
-        \item jeśli powierzchnia $M_2$ powstaje z $M_1$ przez dołączenie paska, to $\chi(M_2) = \chi(M_1) - 1$,
-        \item jeśli powierzchnia $M_2$ powstaje z $M_1$ przez dołączenie dysku do całej składowej spójności brzegu, to $\chi(M_2) = \chi(M_1) + 1$.
+        \item $\chi(S) = 1$,
+        \item $\chi(S_1 \sqcup S_2) = \chi(S_1) + \chi(S_2)$,
+        \item Jeśli $S_2$ powstaje z $S_1$ przez dołączenie paska, to $\chi(S_2) = \chi(S_1) - 1$,
+        \item Jeśli $S_2$ powstaje z $S_1$ przez dołączenie dysku do całej składowej spójności brzegu, to $\chi(S_2) = \chi(S_1) + 1$.
     \end{itemize}
 \end{proposition}
 
 Genus oraz charakterystyka Eulera są ze sobą związane:
 
 \begin{proposition}
-    Niech $M$ będzie powierzchnią o genusie $\genus$ i $\mu$ składowych spójności brzegu.
-    Wtedy
+    Niech $S$ będzie powierzchnią o genusie $\genus$ i $\mu$ składowych spójności brzegu.
+    Wtedy zachodzi równość
     \begin{equation}
         \chi = 2 - \mu - 2\genus.
     \end{equation}
@@ -92,8 +96,10 @@ Jeżeli nie powoduje to nieporozumień, zamiast 3-genus można pisać po prostu 
 
 \begin{proposition}
 \label{prp:genus_detects_unknot}%
-    Genus wykrywa niewęzły: $K$ jest niewęzłem wtedy i tylko wtedy, gdy $g(K) = 0$.
+    Węzeł $K$ jest niewęzłem wtedy i tylko wtedy, gdy $\genus K = 0$.
 \end{proposition}
+
+,,Genus wykrywa niewęzły''.
 
 \begin{proof}
     Niech $K$ będzie węzłem o genusie $0$.

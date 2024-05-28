@@ -9,11 +9,11 @@ Węzły Lissajous zdefiniowali Bogle, Hearst, Jones i Stoiłow \cite{bogle1994} 
 \index[persons]{Stoiłow, Luben}%
 
 \begin{definition}[węzeł Lissajous]
-    Niech $n_x, n_y, n_z$ (,,częstotliwości'') będą liczbami całkowitymi, zaś  $\varphi_x, \varphi_y, \varphi_z$ (,,fazy'') liczbami rzeczywistymi.
-    Wtedy węzeł zadany w przestrzeni $\R^3$ parametrycznie:
+    Niech $n_x, n_y, n_z$ będą liczbami całkowitymi (zwanymi dalej ,,częstotliwościami''), zaś  $\varphi_x, \varphi_y, \varphi_z$ liczbami rzeczywistymi (,,fazami'').
+    Wtedy węzeł zadany w $\R^3$ parametrycznie:
     \begin{equation}
-        x = \cos(n_xt + \varphi_x) \quad
-        y = \cos(n_yt + \varphi_y) \quad
+        x = \cos(n_xt + \varphi_x), \quad
+        y = \cos(n_yt + \varphi_y), \quad
         z = \cos(n_zt + \varphi_z),
     \end{equation}
     nazywamy węzłem Lissajous.
@@ -66,18 +66,17 @@ Węzły Lissajous są bardzo symetryczne.
 \begin{proposition}
 \index{węzeł!silnie dodatnio achiralny}%
 \label{prp:lissajus_odd}%
-    Jeśli wszystkie częstotliwości są nieparzyste, węzeł jest silnie dodatnio achiralny.
+    Jeśli wszystkie częstotliwości $n_x, n_y, n_z$ węzła Lissajous są nieparzyste, to węzeł ten jest silnie dodatnio achiralny.
 \end{proposition}
 
 \begin{proposition}
 \index{węzeł!okresowy}%
 \label{prp:lissajous_two_periodic}%
-    Jeśli jedna z częstotliwości jest parzysta, to węzeł jest 2-okresowy.
+    Jeśli jedna z częstotliwości $n_x$ węzła Lissajous jest parzysta, to węzeł ten jest 2-okresowy.
 \end{proposition}
 
 \begin{proof}
-    Załóżmy, że częstotliwość $n_x$ jest parzysta.
-    Wtedy półobrót wokół osi $x$ odwzorowuje węzeł w~siebie.
+    Półobrót węzła $K$ wokół osi $x$ odwzorowuje go w~siebie.
 \end{proof}
 
 To nakłada ograniczenia na wielomian Alexandera.
@@ -247,7 +246,7 @@ Koseleff, Pecker \cite{koseleff2014} korzystając z~twierdzenia Manturowa
 pokazują, że każdy węzeł ma diagram, który jest wielokątem gwiaździstym.
 Użyte zostało twierdzenie Kroneckera z~1884 roku: jeśli liczby $\theta_0 = 1, \theta_1, \ldots, \theta_k$ są liniowo niezależne nad ciałem $\Q$, to zbiór punktów $(\lfloor n\theta_i \rfloor_{i=0}^k)_{n=0}^\infty$ leży gęsto w kostce jednostkowej.
 
-W 1999 Lamm, Obermeyer \cite{obermeyer1999} dowiedli, że węzły bilardowe wewnątrz walca są taśmowe albo okresowe, więc w walcu nie można zrealizować każdego węzła.
+Lamm, Obermeyer \cite{obermeyer1999} dowiedli w 1999, że węzły bilardowe wewnątrz walca są taśmowe albo okresowe, więc w walcu nie można zrealizować każdego węzła.
 \index[persons]{Lamm, Christoph}%
 \index[persons]{Obermeyer, Daniel}%
 \index{węzeł!okresowy}%

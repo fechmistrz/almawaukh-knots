@@ -1,0 +1,49 @@
+
+\subsection{Niezmienniki, które nie są skończonego typu}
+Pójdźmy teraz w~ślad za Murasugim i~zdefiniujmy nieskończoną rodzinę węzłów osobliwych $K[p, q]$, gdzie $p$ jest liczbą wierzchołków singularnych, zaś $|q|$ liczbą klasycznych skrzyżowań.
+Jeśli $q < 0$, wszystkie klasyczne skrzyżowania odwracamy:
+\begin{figure}[H]
+    \centering
+\begin{comment}
+    \begin{tikzpicture}[baseline=-0.65ex, scale=0.1]
+    \begin{knot}[clip width=5, end tolerance=1pt, flip crossing/.list={2}]
+        % left part
+        \draw[thick] (5, 0) [in=-60, out=-120] to (-5, 0) [in=60, out=120] to (-15, 0) [in=-60, out=-120] to (-25, 0) [in=60, out=120] to (-35, 0) [in=180, out=-120] to (-35, -10);
+        \draw[thick] (5, 0) [in=60, out=120] to (-5, 0) [in=-60, out=-120] to (-15, 0) [in=60, out=120] to (-25, 0) [in=-60, out=-120] to (-35, 0) [in=-180, out=120] to (-35, 10);
+        % right part
+        \strand[thick] (5, 0) [in=120, out=60] to (15, 0) [in=-120, out=-60] to (25, 0) [in=120, out=60] to (35, 0) [in=0, out=-60] to (35, -10);
+        \strand[thick] (5, 0) [in=-120, out=-60] to (15, 0) [in=120, out=60] to (25, 0) [in=-120, out=-60] to (35, 0) [in=0, out=60] to (35, 10);
+        % external lines
+        \draw[thick,Latex-] (-35, 10) to (35, 10);
+        \draw[thick,Latex-] (-35, -10) to (35, -10);
+        \draw[black,fill=black] (5,0) circle (0.5);
+        \draw[black,fill=black] (-5,0) circle (0.5);
+        \draw[black,fill=black] (-15,0) circle (0.5);
+        \draw[black,fill=black] (-25,0) circle (0.5);
+        \draw[black,fill=black] (-35,0) circle (0.5);
+    \end{knot}
+    \end{tikzpicture}
+\end{comment}
+    \caption{Węzeł osobliwy $K[p, q]$ dla $p = 5, q = +3$.}
+\end{figure}
+
+\begin{proposition}
+\index{genus}%
+\index{indeks skrzyżowaniowy}%
+\index{indeks warkoczowy}%
+\index{liczba gordyjska}%
+\index{liczba mostowa}%
+\index{sygnatura}%
+    Następujące funkcje: indeks skrzyżowaniowy $\crossing$, liczba gordyjska $\unknotting$, liczba mostowa $\bridge$, indeks warkoczowy $\braid$, genus $g$, sygnatura $\sigma$ nie są niezmiennikami Wasiljewa.
+\end{proposition}
+
+Wynik był znany już w latach 90., na przykład Birman, Lin \cite{birman1993} pokazali, że liczba gordyjska nie jest niezmiennikiem Wasiljewa.
+\index[persons]{Birman, Joan}%
+\index[persons]{Lin, Xiao-Song}%
+
+\begin{proof}
+    Dowód dla sygnatury jest w~podręczniku Murasugiego \cite[s. 312]{murasugi1996}.
+    Natomiast żaden z~pozostałych niezmienników nie znika na osobliwym węźle $K[n+1, n]$ (ćwiczenie).
+    % dowód dla reszty to ćwiczenie na następnej stronie, 313
+\end{proof}
+

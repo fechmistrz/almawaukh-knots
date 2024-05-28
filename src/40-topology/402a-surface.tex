@@ -1,17 +1,18 @@
 
 \subsection{Powierzchnia Seiferta}
 Zaczniemy od przyjrzenia się powierzchniom.
-Niektóre stwierdzenia będziemy przyjmować bez dowodu, by nie rozwodzić się za bardzo nad topologią.
+Niektóre stwierdzenia będziemy przyjmować bez dowodów, bo te są w~dobrych podręcznikach topologii albo analizy na rozmaitościach.
 
 \begin{definition}
 \index{powierzchnia}%
-    Dwuwymiarową rozmaitość topologiczną $M \subseteq \R^n$ nazywamy powierzchnią.
+    Dwuwymiarową rozmaitość topologiczną bez brzegu $M \subseteq \R^n$ nazywamy powierzchnią.
 \end{definition}
 
 Rozmaitość to obiekt, który wygląda lokalnie jak przestrzeń euklidesowa: każdy jej punkt $x \in M$ posiada otwarte otoczenie homeomorficzne z~otwartą kulą.
 Przykładami powierzchni są sfera, brzeg torusa albo hiperboloida jednopowłokowa.
 Istnieje ogólniejsze pojęcie, to jest rozmaitość z~brzegiem: każdy jej punkt posiada otoczenie homeomorficzne z otwartym podzbiorem górnej półpłaszczyzny $\{x \in \C: \mathfrak {Im} \ge 0\}$.
-Zwartą powierzchnię bez brzegu nazywamy domkniętą.
+
+%Zwartą powierzchnię bez brzegu nazywamy domkniętą.
 
 Powierzchnię nazywamy orientowalną, jeśli nie istnieje na niej zamknięta krzywa, podczas pokonywania której odwraca się kierownica.
 \index{powierzchnia!orientowalna}%
@@ -22,7 +23,7 @@ Najważniejsze dla nas są powierzchnie Seiferta (opisane np. w \cite[s. 46-72]{
 
 \begin{definition}[powierzchnia Seiferta]
     Niech $L$ będzie splotem.
-    Spójną, orientowalną powierzchnię zanurzoną w przestrzeni $\R^3$, której brzegiem jest splot $L$, nazywamy powierzchnią Seiferta splotu $L$.
+    Każdą spójną oraz orientowalną powierzchnię zanurzoną w przestrzeni $\R^3$, której brzegiem jest splot $L$, nazywamy powierzchnią Seiferta splotu $L$.
     % R^3, nie R^n: patrz Kawauchi, 47
 \end{definition}
 
@@ -67,7 +68,7 @@ Powyższe stwierdzenie uzasadnili Pontriagin oraz Frankl w~1930 roku, my jednak 
     a~następnie wyprostujmy wszystkie skrzyżowania zgodnie z~ich orientacją:
 \begin{comment}
     \[
-        \LargeMinusCrossingArrows, \LargePlusCrossingArrows \mapsto \LargeJustSmoothing
+        \LargeMinusCrossingArrows, \LargePlusCrossingArrows \longrightarrow \LargeThikkJustSmoothing
     \]
 \end{comment}
 
@@ -88,7 +89,7 @@ Powyższe stwierdzenie uzasadnili Pontriagin oraz Frankl w~1930 roku, my jednak 
 \end{proof}
 
 Powierzchnia Seiferta jest wrażliwa na orientację ogniw splotu: odwrócenie niektórych, ale nie wszystkich, często prowadzi do innej powierzchni.
-Na przykład sygnatura splotu L4a1 wynosi w zależności od orientacji $1$ lub $-3$.
+Na przykład sygnatura splotu L4a1 może wynosić, w zależności od orientacji ogniw względem siebie, $1$ lub $-3$.
 
 \index{powierzchnia!Seiferta|)}%
 

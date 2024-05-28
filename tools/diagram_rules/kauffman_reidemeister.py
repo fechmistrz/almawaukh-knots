@@ -9,14 +9,15 @@ diagram_commands["KauffmanReidemeisterTwoA"] = {
 }
 diagram_commands["KauffmanReidemeisterTwoB"] = {
     "lines": [
-        "\\strand[thick] (5, -5) .. controls (5, -3) and (-5, -3) .. (-5, -1);",
-        "\\strand[thick] (-5, -5) .. controls (-5, -3) and (5, -3) .. (5, -1);",
-        "\\strand[thick] (-5, -1) [in=left, out=up] to (0, 1) to [in=up, out=right] (5, -1);",
-        "\\strand[thick] (-5, 5) [in=left, out=down] to (0, 3) to [in=down, out=right] (5, 5);",
+        "\\strand[thick, pink] (5, -5) .. controls (5, -3) and (-5, -3) .. (-5, -1);",
+        "\\strand[thick, pink] (-5, -5) .. controls (-5, -3) and (5, -3) .. (5, -1);",
+        "\\strand[thick, pink] (-5, -1) [in=left, out=up] to (0, 1) to [in=up, out=right] (5, -1);",
+        "\\strand[thick, pink] (-5, 5) [in=left, out=down] to (0, 3) to [in=down, out=right] (5, 5);",
     ],
     "sizes": [
         "Medium",
     ],
+    "clip": 5
 }
 diagram_commands["KauffmanReidemeisterTwoC"] = {
     "lines": [

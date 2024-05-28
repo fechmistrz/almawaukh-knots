@@ -20,11 +20,11 @@ def generate_command(command_name, command_details):
         bound1, bound3 = -7, 7
     elif "Large" in command_name:
         scale = 0.15001
-        clip = 15
+        clip = 6
         bound1, bound3 = -7, 7
     elif "MedLar" in command_name:
-        scale = 0.1101
-        clip = 7
+        scale = 0.13
+        clip = 5
         bound1, bound3 = -7, 7
     elif "Medium" in command_name:
         scale = 0.06001
@@ -46,9 +46,11 @@ def generate_command(command_name, command_details):
     options = [f"clip width={clip}", "end tolerance=1pt"]
     if "flip" in command_copy.keys():
         options.append("flip crossing/.list={" + ",".join(command_copy["flip"]) + "}")
+    if command_details.get("pink", False):
+        options.append(f"background color=ocre!15")
 
     print(f"\\newcommand{{\\{command_name}}} {{\\begin{{tikzpicture}}[baseline=-0.65ex, scale={scale}]")
-    print(f"    \\begin{{knot}}[{', '.join(options)}])")
+    print(f"    \\begin{{knot}}[{', '.join(options)}]")
     for line in command_copy["lines"]:
         print("        " + line)
     # print("\\draw[thick,red,fill=red] (-0, 0) circle (3);")

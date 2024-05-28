@@ -1,0 +1,138 @@
+
+\subsection{Wielomian Alexandera a operacje na węzłach}
+Wielomian Alexandera nie odróżnia luster $mL$ i~rewersów $rL$ od wyjściowych splotów $L$:
+
+\begin{proposition}
+\index{lustro}%
+    Niech $L$ będzie zorientowanym splotem.
+    Wtedy $\alexander_{mL}(t) = \alexander_L(1/t)$.
+\end{proposition}
+
+\begin{proof}
+    Po odbiciu diagramu względem pionowej prostej skrzyżowanie z~definicji \ref{def:colouring_equation} też się odbija.
+    Równanie związane z~nim zmienia się według schematu:
+    \begin{equation}
+        a + tc - ta - b = 0 \rightleftharpoons a + tb - ta - c = 0
+    \end{equation}
+    Pierwsze równanie z~$t$ zamienionym na $1/t$ staje się drugim równaniem przemnożonym przez $-1/t$, zatem $\alexander_{mL}(t) = \alexander_L(1/t)$.
+\end{proof}
+
+\begin{proposition}
+\index{rewers}%
+    Niech $L$ będzie zorientowanym splotem.
+    Wtedy $\alexander_{rL}(t) = \alexander_L(1/t)$.
+\end{proposition}
+
+\begin{proof}[Niedowód]
+    Analogicznie.
+\end{proof}
+
+\begin{proposition}
+\label{prp:alexander_multiplicative}%
+    Niech $K_1, K_2$ będą zorientowanymi węzłami.
+    Wtedy
+    \begin{equation}
+        \alexander_{K_1 \shrap K_2}(t) \equiv \alexander_{K_1}(t) \alexander_{K_2}(t).
+    \end{equation}
+\end{proposition}
+
+\begin{proof}
+    Wybierzmy poniższe diagramy dla węzłów $K_1$ oraz $K$:
+\begin{comment}
+    \[\begin{tikzpicture}[baseline=-0.65ex, scale=0.07]
+    %\useasboundingbox (-5, -5) rectangle (5,5);
+    \begin{knot}[clip width=7, end tolerance=1pt]
+        \strand[thick] (-70, -20) rectangle (-30, 20);
+        \strand[thick] (30, -20) rectangle ( 70, 20);
+        \strand[thick] (-10, -10) [in=right, out=left] to (-25, 10);
+        \strand[thick,-latex] (-25, 10) to (-30, 10);
+        \strand[thick] (-30,-10) [in=left, out=right] to (-25, -10) to (-10, 10);
+        \strand[thick] (-10, 10) [in=up, out=right] to (-5, 0) [in=right, out=down] to (-10, -10);
+
+        % prawe strzalki
+        \strand[thick] (30, 10) [in=right, out=left] to (25, 10) to (10, -10);
+        \strand[thick,latex-] (30, -10) [in=right, out=left] to (25, -10) to (10, 10);
+        \strand[thick] (10, 10) [in=up, out=left] to (5, 0) [in=left, out=down] to (10, -10);
+
+        \node[darkblue] at (-50,10) [below] {$x_1,\ldots,x_{m-1}$};
+        \node[red] at (-50,-10) [above] {$1,\ldots,m$};
+
+        \node[darkblue] at (50,10) [below] {$y_1,\ldots,y_{n-1}$};
+        \node[red] at (50,-10) [above] {$1,\ldots,n$};
+
+        \node[darkblue] at (-20,-10)[below] {$x_m$};
+        \node[darkblue] at (-10, 10)[above] {$x_0$};
+        \node[darkblue] at (25,-10)[below] {$y_n$};
+        \node[darkblue] at (10,10)[above] {$y_0$};
+        \node[red] at ( 20,  0)[right]{$0$};
+        \node[red] at (-20,  0)[left]{$0$};
+    \end{knot}
+    \end{tikzpicture}\]
+\end{comment}
+    Niech $M_1$ oraz $M_2$ oznaczają macierze otrzymane z~wielomianowych równań kolorujących dla $K_1$ oraz $K_2$ przez skreślenie pierwszej kolumny i~pierwszego wiersza.
+    Wtedy $\alexander_{K_1}(t) = \det A$ oraz $\alexander_{K_2}(t) = \det B$.
+    
+    Poniższy diagram przedstawia sumę $K_1 \shrap K_2$:
+\begin{comment}
+    \[\begin{tikzpicture}[baseline=-0.65ex, scale=0.07]
+        %\useasboundingbox (-5, -5) rectangle (5,5);
+        \begin{knot}[clip width=5, end tolerance=1pt]
+            \strand[thick] (-70, -20) rectangle (-30, 20);
+            \strand[thick] (30, -20) rectangle ( 70, 20);
+            \strand[thick] (-10, -10) [in=right, out=left] to (-25, 10);
+            \strand[thick,-latex] (-25, 10) to (-30, 10);
+            \strand[thick] (-30,-10) [in=left, out=right] to (-25, -10) to (-10, 10);
+            \strand[thick] (-10, -10) to (10, -10);
+            \strand[thick] (-10, 10) to (10, 10);
+
+            % prawe strzalki
+            \strand[thick] (30, 10) [in=right, out=left] to (25, 10) to (10, -10);
+            \strand[thick,latex-] (30, -10) [in=right, out=left] to (25, -10) to (10, 10);
+
+            \node[darkblue] at (-50,10) [below] {$x_1,\ldots,x_{m-1}$};
+            \node[red] at (-50,-10) [above] {$1,\ldots,m$};
+
+            \node[darkblue] at (50,10) [below] {$y_1,\ldots,y_{n-1}$};
+            \node[red] at (50,-10) [above] {$1,\ldots,n$};
+
+            \node[darkblue] at (-20,-10)[below] {$x_m$};
+            \node[darkblue] at (0, 10)[above] {$z$};
+            \node[darkblue] at (25,-10)[below] {$y_n$};
+            \node[darkblue] at (0, -10)[below] {$x_0 = y_0$};
+            \node[red] at ( 20,  0)[right]{$\zeta$};
+            \node[red] at (-20,  0)[left]{$0$};
+        \end{knot}
+    \end{tikzpicture}\]
+\end{comment}
+
+    Ponumerujemy teraz łuki i skrzyżowania na nowo tak, by znalezienie wyznacznika nie wymagało dużo liczenia.
+    Przyjmijmy kolejność dla łuków sumy od $x_0$, $x_1, \ldots, x_m$ przez $y_1, \ldots, y_n$ do $z$; zaś skrzyżowania ustawmy od $0, 1, \ldots, m$ (pochodzące od $K_1$) przez $1, \ldots, n$ (pochodzące od $K_2$) do $\zeta$.
+    Wielomianowe równanie kolorujące dla $K_1 \shrap K_2$ nad wszystkimi skrzyżowaniami poza ostatnim są takie same, jak ich odpowiedniki przed dodaniem do siebie węzłów.
+    (Jeżeli to stwierdzenie jest nieoczywiste, warto wykonać rysunek dla $K_1 = K_2 = 3_1$ i przeprowadzić stosowne rachunki).
+    Natomiast nad skrzyżowaniem $\zeta$ stosowne równanie grzmi $(1-t)x_0 + tz - y_n = 0$.
+
+    Z otrzymanej dużej macierzy skreślmy ponownie pierwszą kolumnę oraz pierwszy wiersz.
+    Aby zakończyć dowód, musimy obliczyć jej wyznacznik.
+    Mamy:
+    \begin{align*}
+        \alexander_{K_1 \shrap K_2}(t) & = \det \left(\begin{array}{cccc}
+            M_1 &     &        & \\
+                & M_2 &        & \\
+                &     & \ddots & \\
+                &     & -1     & t
+    \end{array}\right) = \pm t \alexander_{K_1}(t) \alexander_{K_2}(t),
+    \end{align*}
+    gdzie ostatnia równość wynika z rozwinięcia Laplace'a wyznacznika względem ostatniej kolumny.
+\end{proof}
+
+Można zadać sobie pytanie, czy z równości $\Delta_{K_1}(t) = \Delta_{K_2}(t) \Delta_{K_3}(t)$ wynika, że $K_1$ jest sumą $K_2 \shrap K_3$ albo chociaż czy $K_1$ jest złożony.
+Odpowiedź będzie negatywna, jak pokazuje przykład:
+\begin{align}
+    \Delta_{8_{17}}(t) & = 3(t^2 +t^{-2}) -8(t+t^{-1}) + 11 \\
+    & = (t+t^{-1} + 1) (3(t+t^{-1}) - 5) \\
+    & = \Delta_{3_1}(t) \Delta_{7_2}(t),
+\end{align}
+ponieważ wszystkie występujące w niej węzły są pierwsze.
+
+% koniec podsekcji Wielomian Alexandera a operacje na węzłach
+

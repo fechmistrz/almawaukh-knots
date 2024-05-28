@@ -18,7 +18,6 @@ Dawniej nazywano je splotami Neuwirtha, gdyż ten pokazał w~swojej pracy dyplom
 \end{example}
 
 (Jeśli węzeł pierwszy o co najwyżej ośmiu skrzyżowaniach nie został wymieniony w tym przykładzie, to nie jest rozwłókniony).
-{\color{red} \textbf{\cite{burde2014} strona 130: Burde, Zieschang, Bing, Martin pokazali, że 3-1 i 4-1 to jedyne włókniste o genusie 1. Morton pokazał, że wielomian Alexandera nie odróżnia włóknistych genusu > 1. Do dziesięciu skrzyżowań, rozwłókniony <=> Alexander(0) = +- 1.}}
 Rozkład liczby węzłów rozwłóknionych wśród węzłów pierwszych wygląda następująco:
 
 \renewcommand*{\arraystretch}{1.4}
@@ -41,8 +40,8 @@ Lwia część analizy węzłów o 12 skrzyżowaniach została wykonana przez Sto
 \begin{proposition}
 \index{wielomian!Alexandera}%
 \label{prp:fibered_alexander_monic}%
-    Niech $K$ będzie węzłem rozwłóknionym genusu $g$.
-    Wtedy wielomian Alexandera $\alexander(t)$ jest unormowany (jego wiodący współczynnik to $\pm 1$) oraz stopnia $2g$.
+    Niech $K$ będzie węzłem rozwłóknionym.
+    Wtedy wielomian Alexandera $\alexander_K(t)$ jest unormowany (jego wiodący współczynnik to $\pm 1$) oraz stopnia $2g$, gdzie $g$ oznacza genus węzła $K$.
 \end{proposition}
 
 Dowód tego faktu można znaleźć w monografii Burdego, Zieschanga, Heusenera \cite[s. 130]{burde2014}.
@@ -90,7 +89,7 @@ Rolfsen \cite[s. 326]{rolfsen1976} podaje jako ćwiczenie w swojej książce:
 Dzięki książce Kawauchiego \cite[s. 84]{kawauchi1996} jesteśmy świadomi jeszcze, że Stallings ma swoje twierdzenie o~rozwłóknienieach dla zwartych 3-rozmaitości ze specjalnym przypadkiem:
 \index[persons]{Stallings, John}%
 \begin{proposition}
-    Niech $f$ będzie epimorfizmem grupy splotu $L$ na nieskończoną grupę cykliczną, który posyła każdy południk na jej generator $t$. % each meridian
+    Niech $L$ będzie splotem, $\pi$ jego grupą podstawową, zaś $f \colon \pi \to \Z$ pewnym epimorfizmem, który posyła każdy południk na generator $t$ grupy $\Z$. % each meridian % TODO!!! meridian longitute latitude
     Wtedy splot $L$ jest rozwłókniony wtedy i tylko wtedy, gdy jądro $\ker f$ jest skończenie generowalne.
 \end{proposition}
 

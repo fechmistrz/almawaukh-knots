@@ -1,20 +1,20 @@
 diagram_commands["ReidemeisterThreeB"] = {
     "lines": [
-        "\\strand[thick] (-5, -5) -- (5, 5);",
-        "\\strand[thick] (-5, 5) -- (5, -5);",
-        "\\strand[thick] (-5, 0) to [in=left, out=right] (0, -5);",
-        "\\strand[thick] (5, 0) to [in=right, out=left] (0, -5);",
+        "\\strand[ultra thick] (-5, -5) -- (5, 5);",
+        "\\strand[ultra thick] (-5, 5) -- (5, -5);",
+        "\\strand[ultra thick] (-5, 0) to [in=left, out=right] (0, -5);",
+        "\\strand[ultra thick] (5, 0) to [in=right, out=left] (0, -5);",
     ],
-    "sizes": ["Large"],
+    "sizes": ["Large", "MedLar"],
     "flip": ["1", "2", "3"],
     "bounding": [-6, -5, 6, 5],
 }
 diagram_commands["ReidemeisterThreeLinkingA"] = {
     "lines": [
-        "\\strand[thick] (-5, -5) -- (5, 5);",
-        "\\strand[thick] (-5, 5) -- (5, -5);",
-        "\\strand[thick] (-5, 0) to [in=left, out=right] (0, 5);",
-        "\\strand[thick] (5, 0) to [in=right, out=left] (0, 5);",
+        "\\strand[ultra thick] (-5, -5) -- (5, 5);",
+        "\\strand[ultra thick] (-5, 5) -- (5, -5);",
+        "\\strand[ultra thick] (-5, 0) to [in=left, out=right] (0, 5);",
+        "\\strand[ultra thick] (5, 0) to [in=right, out=left] (0, 5);",
         "\\node[first_colour] at (-4,2.5)[left] {$a$};",
         "\\node[first_colour] at (4,2.5)[right] {$b$};",
         "\\node[first_colour] at (0,-2)[below] {$c$};",
@@ -24,10 +24,10 @@ diagram_commands["ReidemeisterThreeLinkingA"] = {
 }
 diagram_commands["ReidemeisterThreeLinkingB"] = {
     "lines": [
-        "\\strand[thick] (-5, -5) -- (5, 5);",
-        "\\strand[thick] (-5, 5) -- (5, -5);",
-        "\\strand[thick] (-5, 0) to [in=left, out=right] (0, -5);",
-        "\\strand[thick] (5, 0) to [in=right, out=left] (0, -5);",
+        "\\strand[ultra thick] (-5, -5) -- (5, 5);",
+        "\\strand[ultra thick] (-5, 5) -- (5, -5);",
+        "\\strand[ultra thick] (-5, 0) to [in=left, out=right] (0, -5);",
+        "\\strand[ultra thick] (5, 0) to [in=right, out=left] (0, -5);",
         "\\node[first_colour] at (-4,-2.5)[left] {$a$};",
         "\\node[first_colour] at (4,-2.5)[right] {$b$};",
         "\\node[first_colour] at (0,2)[above] {$c$};",
@@ -37,10 +37,10 @@ diagram_commands["ReidemeisterThreeLinkingB"] = {
 }
 diagram_commands["ReidemeisterThreeColouringA"] = {
     "lines": [
-        "\\strand[thick] (-5, -5) -- (5, 5);",
-        "\\strand[thick] (-5, 5) -- (5, -5);",
-        "\\strand[thick] (-5, 0) to [in=left, out=right] (0, 5);",
-        "\\strand[thick] (5, 0) to [in=right, out=left] (0, 5);",
+        "\\strand[ultra thick] (-5, -5) -- (5, 5);",
+        "\\strand[ultra thick] (-5, 5) -- (5, -5);",
+        "\\strand[ultra thick] (-5, 0) to [in=left, out=right] (0, 5);",
+        "\\strand[ultra thick] (5, 0) to [in=right, out=left] (0, 5);",
         "\\node[first_colour] at (-5, 4) [left] {$b$};",
         "\\node[first_colour] at (5, 4) [right] {$c$};",
         "\\node[first_colour] at (-5, 0) [left] {$a$};",
@@ -49,57 +49,61 @@ diagram_commands["ReidemeisterThreeColouringA"] = {
     ],
     "sizes": ["Large"],
     "flip": ["1", "2", "3"],
-    "bounding": [-10, -7, 10, 7],
+    "bounding": [-10, -8, 10, 8],
+    "clip": 5,
 }
 diagram_commands["ReidemeisterThreeQuandleA"] = {
     "lines": [
-        "\\strand[thick] (-5, -5)  -- (4, 4);",
-        "\\strand[thick,-latex] (4, 4) to (5, 5);"
+        "\\strand[ultra thick] (-5, -5) -- (3, 3);",
+        "\\strand[ultra thick,-latex] (3, 3) to (7, 7);",
         # split to improve clip area
-        "\\strand[thick] (-5, 5) -- (4, -4);",
-        "\\strand[thick,-latex] (-4, 4) to (5, -5);",
+        "\\strand[ultra thick] (-5, 5) -- (3, -3);",
+        "\\strand[ultra thick,-latex] (3, -3) to (7, -7);",
         # split to improve area
-        "\\strand[thick] (-5, 0) to [in=left, out=right] (0, 4);",
-        "\\strand[thick] (5, 0) to [in=right, out=left] (0, 4);",
-        "\\strand[thick,-latex] (5, 0) to (6, 0);"
+        "\\strand[ultra thick] (-5, 0) to [in=left, out=right] (0, 4.5);",
+        "\\strand[ultra thick] (5, 0) to [in=right, out=left] (0, 4.5);",
+        "\\strand[ultra thick] (5, 0) to (6, 0);"
         "\\node[first_colour] at (-5, 4) [ left] {$z$};",
         "\\node[first_colour] at (-5, 0) [left] {$y$};",
         "\\node[first_colour] at (-5, -4) [ left] {$x$};",
-        "\\node[first_colour] at (0, 4) [above] {$y \\triangleright z$};",
-        "\\node[first_colour] at (5, 4) [right] {$(x \\triangleright z) \\triangleright (y \\triangleright z)$};",
+        "\\node[first_colour] at (0, 4.5) [above] {$y \\triangleright z$};",
+        "\\node[first_colour] at (6, 0) [right] {$(x \\triangleright z) \\triangleleft (y \\triangleright z)$};",
+        "\\node[first_colour] at (6, 4) [right] {$(x \\triangleright z)$};",
     ],
-    "sizes": ["Large"],
+    "sizes": ["Large", "MedLar"],
     "flip": ["1"],
-    "bounding": [-7, -5, 20, 7],
-    "clip": 7,
+    "bounding": [-8, -5, 22, 7],
+    "clip": 4,
 }
 diagram_commands["ReidemeisterThreeQuandleB"] = {
     "lines": [
-        "\\strand[thick] (-5, -5)  -- (4, 4);",
-        "\\strand[thick,-latex] (4, 4) to (5, 5);"
+        "\\strand[ultra thick] (-5, -5) -- (3, 3);",
+        "\\strand[ultra thick,-latex] (3, 3) to (7, 7);",
         # split to improve clip area
-        "\\strand[thick] (-5, 5) -- (4, -4);",
-        "\\strand[thick,-latex] (-4, 4) to (5, -5);",
+        "\\strand[ultra thick] (-5, 5) -- (3, -3);",
+        "\\strand[ultra thick,-latex] (3, -3) to (7, -7);",
         # split to improve area
-        "\\strand[thick] (-5, 0) to [in=left, out=right] (0, -4);",
-        "\\strand[thick] (5, 0) to [in=right, out=left] (0, -4);",
-        "\\strand[thick,-latex] (5, 0) to (6, 0);"
+        "\\strand[ultra thick] (-5, 0) to [in=left, out=right] (0, -4.5);",
+        "\\strand[ultra thick] (5, 0) to [in=right, out=left] (0, -4.5);",
+        "\\strand[ultra thick] (5, 0) to (6, 0);"
         "\\node[first_colour] at (-5, 4) [ left] {$z$};",
         "\\node[first_colour] at (-5, 0) [left] {$y$};",
         "\\node[first_colour] at (-5, -4) [ left] {$x$};",
-        "\\node[first_colour] at (5, 4) [right] {$(x \\triangleright y) \\triangleright z$};",
+        "\\node[first_colour] at (0, -4.5) [below] {$x \\triangleleft y$};",
+        "\\node[first_colour] at (6, 0) [right] {$(x \\triangleleft y) \\triangleright z$};",
+        "\\node[first_colour] at (6, 4) [right] {$(x \\triangleright z)$};",
     ],
-    "sizes": ["Large"],
+    "sizes": ["Large", "MedLar"],
     "flip": ["1"],
-    "bounding": [-7, -5, 15, 7],
-    "clip": 7,
+    "bounding": [-8, -5, 22, 7],
+    "clip": 4,
 }
 diagram_commands["ReidemeisterThreeColouringB"] = {
     "lines": [
-        "\\strand[thick] (-5, -5) -- (5, 5);",
-        "\\strand[thick] (-5, 5) -- (5, -5);",
-        "\\strand[thick] (-5, 0) to [in=left, out=right] (0, -5);",
-        "\\strand[thick] (5, 0) to [in=right, out=left] (0, -5);",
+        "\\strand[ultra thick] (-5, -5) -- (5, 5);",
+        "\\strand[ultra thick] (-5, 5) -- (5, -5);",
+        "\\strand[ultra thick] (-5, 0) to [in=left, out=right] (0, -5);",
+        "\\strand[ultra thick] (5, 0) to [in=right, out=left] (0, -5);",
         "\\node[first_colour] at (-5, 4) [left] {$b$};",
         "\\node[first_colour] at (5, 4) [right] {$c$};",
         "\\node[first_colour] at (5, 0) [right] {$a$};",
@@ -108,96 +112,100 @@ diagram_commands["ReidemeisterThreeColouringB"] = {
     ],
     "sizes": ["Large"],
     "flip": ["1", "2", "3"],
-    "bounding": [-10, -7, 10, 7],
-    "clip": 7,
+    "bounding": [-10, -8, 10, 6],
+    "clip": 5,
 }
 
 diagram_commands["ReidemeisterThreeA"] = {
     "lines": [
-        "\\strand[thick] (-5, -5) -- (5, 5);",
-        "\\strand[thick] (-5, 5) -- (5, -5);",
-        "\\strand[thick] (-5, 0) to [in=left, out=right] (0, 5);",
-        "\\strand[thick] (5, 0) to [in=right, out=left] (0, 5);",
+        "\\strand[ultra thick] (-5, -5) -- (5, 5);",
+        "\\strand[ultra thick] (-5, 5) -- (5, -5);",
+        "\\strand[ultra thick] (-5, 0) to [in=left, out=right] (0, 5);",
+        "\\strand[ultra thick] (5, 0) to [in=right, out=left] (0, 5);",
     ],
-    "sizes": ["Large"],
+    "sizes": ["Large", "MedLar"],
     "flip": ["1", "2", "3"],
     "bounding": [-6, -5, 6, 5],
 }
 diagram_commands["VirtualReidemeisterThreeA"] = {
     "lines": [
         # down arrow
-        "\\strand[thick,latex-] (-5, -5) to (-4, -4);",
-        "\\strand[thick] (-4, -4) to (-0.25, -0.25);",
-        "\\strand[thick] (0.25, 0.25) to (5, 5);",
+        "\\strand[ultra thick,latex-] (-5, -5) to (-4, -4);",
+        "\\strand[ultra thick] (-4, -4) to (-0.25, -0.25);",
+        "\\strand[ultra thick] (0.25, 0.25) to (5, 5);",
         # up arrow
-        "\\strand[thick,-latex] (-4, 4) to (-5, 5);",
-        "\\strand[thick] (5, -5) to (0.25, -0.25);",
-        "\\strand[thick] (-0.25, 0.25) to (-4, 4);",
+        "\\strand[ultra thick,-latex] (-4, 4) to (-5, 5);",
+        "\\strand[ultra thick] (5, -5) to (0.25, -0.25);",
+        "\\strand[ultra thick] (-0.25, 0.25) to (-4, 4);",
         # background arrow
-        "\\strand[thick,-latex] (5, 0) to (4, 0);",
-        "\\strand[thick] (-5, 0) [in=left, out=right] to (-4, 0) to (0, 5) to (4, 0);",
+        "\\strand[ultra thick,-latex] (4, 0) to (6, 0);",
+        "\\strand[ultra thick] (-5, 0) [in=left, out=right] to (-4, 0) to (0, 5) to (4, 0);",
         # singular crossing
-        "\\draw[thick,fill=black] (0, 0) circle (0.5);",
+        "\\draw[ultra thick,fill=black] (0, 0) circle (0.5);",
     ],
     "sizes": ["Large"],
-    "clip": 7,
+    "clip": 5,
     "flip": ["1", "2"],
+    "pink": True,
 }
 diagram_commands["VirtualReidemeisterThreeB"] = {
     "lines": [
         # down arrow
-        "\\strand[thick,latex-] (-5, -5) to (-4, -4);",
-        "\\strand[thick] (-4, -4) to (-0.25, -0.25);",
-        "\\strand[thick] (0.25, 0.25) to (5, 5);",
+        "\\strand[ultra thick,latex-] (-5, -5) to (-4, -4);",
+        "\\strand[ultra thick] (-4, -4) to (-0.25, -0.25);",
+        "\\strand[ultra thick] (0.25, 0.25) to (5, 5);",
         # up arrow
-        "\\strand[thick,-latex] (-4, 4) to (-5, 5);",
-        "\\strand[thick] (5, -5) to (0.25, -0.25);",
-        "\\strand[thick] (-0.25, 0.25) to (-4, 4);",
+        "\\strand[ultra thick,-latex] (-4, 4) to (-5, 5);",
+        "\\strand[ultra thick] (5, -5) to (0.25, -0.25);",
+        "\\strand[ultra thick] (-0.25, 0.25) to (-4, 4);",
         # background arrow
-        "\\strand[thick,-latex] (5, 0) to (4, 0);",
-        "\\strand[thick] (-5, 0) [in=left, out=right] to (-4, 0) to (0, -5) to (4, 0);",
+        "\\strand[ultra thick,-latex] (4, 0) to (6, 0);",
+        "\\strand[ultra thick] (-5, 0) [in=left, out=right] to (-4, 0) to (0, -5) to (4, 0);",
         # singular crossing
-        "\\draw[thick,fill=black] (0, 0) circle (0.5);",
+        "\\draw[ultra thick,fill=black] (0, 0) circle (0.5);",
     ],
     "sizes": ["Large"],
-    "clip": 7,
+    "clip": 5,
     "flip": ["1", "2"],
+    "pink": True,
 }
 diagram_commands["VirtualReidemeisterThreeC"] = {
     "lines": [
         # down arrow
-        "\\strand[thick,latex-] (-5, -5) to (-4, -4);",
-        "\\strand[thick] (-4, -4) to (-0.25, -0.25);",
-        "\\strand[thick] (0.25, 0.25) to (5, 5);",
+        "\\strand[ultra thick,latex-] (-5, -5) to (-4, -4);",
+        "\\strand[ultra thick] (-4, -4) to (-0.25, -0.25);",
+        "\\strand[ultra thick] (0.25, 0.25) to (5, 5);",
         # up arrow
-        "\\strand[thick,-latex] (-4, 4) to (-5, 5);",
-        "\\strand[thick] (5, -5) to (0.25, -0.25);",
-        "\\strand[thick] (-0.25, 0.25) to (-4, 4);",
+        "\\strand[ultra thick,-latex] (-4, 4) to (-5, 5);",
+        "\\strand[ultra thick] (5, -5) to (0.25, -0.25);",
+        "\\strand[ultra thick] (-0.25, 0.25) to (-4, 4);",
         # background arrow
-        "\\strand[thick,-latex] (5, 0) to (4, 0);"
-        "\\strand[thick] (-5, 0) [in=left, out=right] to (-4, 0) to (0, 5) to (4, 0);",
+        "\\strand[ultra thick,-latex] (4, 0) to (6, 0);",
+        "\\strand[ultra thick] (-5, 0) [in=left, out=right] to (-4, 0) to (0, 5) to (4, 0);",
         # singular crossing
-        "\\draw[thick,fill=black] (0, 0) circle (0.5);",
+        "\\draw[ultra thick,fill=black] (0, 0) circle (0.5);",
     ],
     "sizes": ["Large"],
-    "clip": 7,
+    "clip": 5,
+    "pink": True,
 }
 diagram_commands["VirtualReidemeisterThreeD"] = {
     "lines": [
         # down arrow
-        "\\strand[thick,latex-] (-5, -5) to (-4, -4);",
-        "\\strand[thick] (-4, -4) to (-0.25, -0.25);",
-        "\\strand[thick] (0.25, 0.25) to (5, 5);",
+        "\\strand[ultra thick,latex-] (-5, -5) to (-4, -4);",
+        "\\strand[ultra thick] (-4, -4) to (-0.25, -0.25);",
+        "\\strand[ultra thick] (0.25, 0.25) to (5, 5);",
         # up arrow
-        "\\strand[thick,-latex] (-4, 4) to (-5, 5);",
-        "\\strand[thick] (5, -5) to (0.25, -0.25);",
-        "\\strand[thick] (-0.25, 0.25) to (-4, 4);",
+        "\\strand[ultra thick,-latex] (-4, 4) to (-5, 5);",
+        "\\strand[ultra thick] (5, -5) to (0.25, -0.25);",
+        "\\strand[ultra thick] (-0.25, 0.25) to (-4, 4);",
         # background arrow
-        "\\strand[thick,-latex] (5, 0) to (4, 0);"
-        "\\strand[thick] (-5, 0) [in=left, out=right] to (-4, 0) to (0, -5) to (4, 0);",
+        "\\strand[ultra thick,-latex] (4, 0) to (6, 0);",
+        "\\strand[ultra thick] (-5, 0) [in=left, out=right] to (-4, 0) to (0, -5) to (4, 0);",
         # singular crossing
-        "\\draw[thick,fill=black] (0, 0) circle (0.5);",
+        "\\draw[ultra thick,fill=black] (0, 0) circle (0.5);",
     ],
     "sizes": ["Large"],
-    "clip": 7,
+    "clip": 5,
+    "pink": True,
 }

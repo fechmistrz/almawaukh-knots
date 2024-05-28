@@ -1,0 +1,84 @@
+
+\subsection{Niezmienniki, które są skończonego typu}
+
+Polyak, Viro \cite{polyak2001} piszą, że jedyny niezmiennik Wasiljewa rzędu 2 to
+\index[persons]{Polyak, Michael (Поляк, Михаил?)}%
+\index[persons]{Viro, Oleg}%
+\begin{equation}
+    v_2 = \frac 12 \alexander''(1)
+\end{equation}
+i~że występuje pod nazwą ,,niezmiennik węzłów Cassona''.
+\index{niezmiennik!Cassona}%
+Modulo $2$ to niezmiennik Arfa.
+\index{niezmiennik!Arfa}%
+
+\begin{example}
+\index{wielomian!Conwaya}%
+    Niech $K$ będzie węzłem, zaś $\conway_K(t) = \sum_k \conway_{2k} z^{2k}$ jego wielomianem Conwaya.
+    Współczynnik $\conway_{2k}$ indukuje niezmiennik Wasiljewa rzędu dokładnie $2k$.
+\end{example}
+
+\begin{proof}
+    Czmutow \cite{chmutov2012} porównał ze sobą relację kłębiastą dla wielomianu Conwaya oraz dla niezmienników Wasiljewa.
+    Wynika z tego, że wielomian Conwaya osobliwego węzła, który ma $m$ punktów podwójnych, musi być podzielny przez $z^m$, zatem $c_{2k}$ jest niezmiennikiem rzędu co najwyżej $2k$.
+    To było proste.
+\index[persons]{Czmutow, Siergiej (Чмутов, Сергей Владимирович)}%
+
+    Nieproste jest pokazanie, dlaczego rząd tego niezmiennika wynosi dokładnie $2k$.
+    Dokonał tego Bar-Natan \cite{barnatan1991} jeszcze w latach dziewięćdziesiątych ubiegłego wieku.
+\index[persons]{Bar-Natan, Dror}%
+\end{proof}
+
+Lin oraz Wang \cite{wang1996} w~1994 roku na podstawie niezmienników małych rzędów, to jest $v_2$ oraz $v_3$, brawurowo wysunęli hipotezę: istnieje uniwersalna stała $C$ taka, że
+\index[persons]{Lin, Xiao-Song}%
+\index[persons]{Wang, Zhenghan}%
+\index{hipoteza!Lin-Wanga}%
+\begin{equation}
+    |v_k(K)| \le C (\crossing K)^k.
+\end{equation}
+
+Hipotezę wkrótce udowodniono, najpierw dla węzłów (Bar-Natan \cite{barnatan1995}), nieco później także dla splotów (Stojmenow \cite{stoimenowa2001}).
+\index[persons]{Bar-Natan, Dror}%
+\index[persons]{Stojmenow, Aleksander}%
+Wartość stałej $C$ trudno obliczyć, dlatego Stojmenow \cite[problem 1.17]{ohtsuki2002} zaproponował ograniczenie się do przypadku $v_k = \conway_k$.
+
+\begin{conjecture}
+    Niech $L$ będzie splotem.
+    Wtedy
+    \begin{equation}
+        |\conway_k(L)| \le \frac{(\crossing L)^k}{2^kk!}.
+    \end{equation}
+\end{conjecture}
+
+Nierówność jest nietrywialna tylko dla splotu $L$ z~$k+1, k-1, \ldots$ składowymi; trywialna dla $k = 0$, łatwa dla $k=1$ (wtedy $\conway_1$ jest indeksem zaczepienia splotów o~dwóch składowych) oraz udowodniona dla węzłów i~$k=2$ przez Polyaka, Viro \cite{polyak2001} na początku wieku.
+\index[persons]{Polyak, Michael}%
+\index[persons]{Viro, Oleg}%
+
+\begin{example}
+\index{wielomian!Jonesa}%
+    Niech $K$ będzie węzłem, zaś $\jones_K(t)$ jego wielomianem Jonesa.
+    Podstawmy
+    \begin{equation}
+        t := e^x = 1 + x + \frac{x^2}{2} + \frac{x^3}{6} + \ldots,
+    \end{equation}
+    a~następnie rozwińmy wynik w~szereg Taylora:
+    \begin{equation}
+        \jones_K(e^x) = \sum_{k = 0}^\infty b_k x^k.
+    \end{equation}
+    Współczynnik $b_{k}$ indukuje niezmiennik Wasiljewa rzędu co najwyżej $k$.
+\end{example}
+
+Ten i podobne wyniki dla wielomianów HOMFLY, Kauffmana uzyskała Birman z~Linem \cite{birman1993}, gdzie znacznie uprościli oryginalne techniki Wasiljewa.
+\index[persons]{Birman, Joan}%
+\index[persons]{Lin, Xiao-Song}%
+Patrz też \cite[s. 56]{chmutov2012}.
+\index[persons]{Czmutow, Siergiej (Чмутов, Сергей Владимирович)}%
+
+\begin{example}[s. 311 w \cite{murasugi1996}]
+    Niech $K$ będzie węzłem, zaś $f(t)$ rozwinięciem Taylora wielomianu Jonesa $V_K(t)$ w punkcie $t = 1$:
+    \begin{equation}
+        f(t) = \sum_{k = 0}^\infty c_k (t-1)^k.
+    \end{equation}
+    Współczynnik $c_{k}$ indukuje niezmiennik Wasiljewa rzędu co najwyżej $k$.
+\end{example}
+

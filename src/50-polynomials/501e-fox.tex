@@ -1,0 +1,57 @@
+
+\subsection{Pochodna Foxa}
+\index{pochodna Foxa|(}%
+Pojęcie grupy węzła oraz jej prezentacji wprowadzamy później, więc warto wrócić tutaj dopiero przy drugim lub następnym czytaniu!
+Są dwa konkurencyjne podejścia do prezentowania grupy węzła.
+Zgodnie z pomysłem pochodzącym jeszcze od Dehna, można przypisywać różne litery czterem częściom płaszczyzny, które są wycinane przez łuki skrzyżowania.
+\index[persons]{Dehn, Max}%
+Między innymi pierwsza praca Alexandera była bliska takiemu postępowaniu, ale dla oszczędności miejsca, nie opiszemy go wcale.
+\index[persons]{Alexander, James}%
+
+Alternatywne rozwiązanie każe etykietować nie obszary płaszczyzny, tylko łuki diagramu.
+Klasyczne podręczniki teorii węzłów, takie jak \cite{crowell1963} Crowella, macierz, a~co za tym idzie, także wielomian Alexandera wprowadzają właśnie w ten sposób: przy użyciu prezentacji Wirtingera i~pochodnej Foxa.
+Jak sugeruje tytuł podsekcji, opiszemy teraz ten sposób.
+
+Fox opublikował w~Annals of Mathematics cykl pięciu artykułów \cite{fox1953}, \cite{fox1954}, \cite{fox1956}, \cite{fox1958}, \cite{fox1960} poświęconych wolnemu rachunkowi różniczkowemu.
+\index[persons]{Fox, Ralph}%
+Definicja \ref{def:fox_derivative} jest tylko małym wycinkiem tego cyklu.
+
+% DICTIONARY;Fox derivative;pochodna Foxa;-
+\begin{definition}[pochodna Foxa]
+\label{def:fox_derivative}%
+    Niech $G$ będzie wolną grupą generowaną przez (być może nieSchskończony) podzbiór $\{g_i\}_{i \in I}$.
+    Odwzorowanie $\partial/\partial g_i \colon G \to \Z G$ spełniające trzy aksjomaty:
+    \begin{align}
+        \frac{\partial}{\partial g_i} (e) & = 0 \\
+        \frac{\partial}{\partial g_i} (g_j) & = \delta_{ij} \\
+        \forall u, v \in G : \frac{\partial}{\partial g_i} (uv) & = \frac{\partial}{\partial g_i}(u) + u \frac{\partial}{\partial g_i} (w),
+    \end{align}
+    gdzie $\delta_{ij}$ oznacza deltę Kroneckera, nazywamy pochodną cząstkową Foxa.
+\end{definition}
+
+Ustalmy grupę $G$ oraz jej prezentację $\langle X | R \rangle = F/N$, gdzie $F = \langle X \rangle$ jest wolną grupą abelową, zaś $N$ to domknięcie normalne relacji $R$.
+Mamy wtedy kanoniczny rzut $\varphi \colon F \to G$.
+Niech $G^{ab} = G/[G, G]$ oznacza abelianizację, wtedy funkcja $\varphi^{ab} \colon F \to G^{ab}$ jest dobrze określona.
+Ponieważ nie prowadzi to do zamieszania, tych samych liter będziemy używać także do funkcji $\varphi \colon \Z F \to \Z G$.
+Definiujemy teraz macierz Jacobiego wymiaru $n \times n$:
+\index{macierz!Jacobiego}%
+\begin{equation}
+    J = \left(\varphi \left(\frac{\partial r_i}{\partial x_j}\right) \right).
+\end{equation}
+oraz macierz $J^{ab}$, która jest obrazem $J$ nad $\Z G^{ab}$.
+W pierścieniu $\Z G^{ab}$ wyróżnia się ideały generowane przez minory (wyznaczniki podmacierzy) rozmiaru $i \times i$ w $J^{ab}$.
+Ciąg $D_1, D_2, \ldots$ tych ideałów jest z dokładnością do jakichś technicznych szczegółów niezmiennikiem, to znaczy nie zależy od prezentacji.
+
+W szczególnym przypadku, kiedy $G$ jest grupą węzła, relacje $r_i$ pochodzą z prezentacji Wirtingera, zaś grupa $G^{ab}$ jest nieskończona, cykliczna.
+Niech $t$ oznacza jej generator; wtedy najwyższy niezerowy ideał $D_i$ jest główny.
+Generator tego ideału nazywamy wielomianem Alexandera.
+\index{wielomian!Alexandera}%
+
+Rachunki są trochę prostsze niż wydają się być.
+Wystarczy najpierw wykreślić z macierzy $J$ jedną kolumnę oraz jeden wiersz, po czym podstawić za wszystkie litery zmienną $t$ i policzyć wyznacznik.
+Otrzymaliśmy znowu wielomian Alexandera!
+
+\index{pochodna Foxa|)}%
+
+% koniec podsekcji pochodna Foxa
+

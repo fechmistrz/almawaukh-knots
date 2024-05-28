@@ -1,0 +1,115 @@
+
+% DICTIONARY;unknotting number;liczba gordyjska;-
+\section{Liczba gordyjska}
+\index{liczba gordyjska|(}%
+
+\begin{definition}
+    Niech $L$ będzie splotem.
+    Minimalną liczbę skrzyżowań, które trzeba odwrócić na pewnym jego diagramie, by dostać niewęzeł, nazywamy liczbą gordyjską i~oznaczamy $\unknotting L$.
+\end{definition}
+
+Zgodnie z ,,klasyczną'' definicją, między odwracaniem kolejnych skrzyżowań mamy prawo wykonać izotopie otaczające; natomiast zgodnie ze ,,standardową'' definicją, takie izotopie są zabronione.
+Obie definicje są równoważne: tłumaczy to książka Adamsa \cite[s. 58]{adams1994}.
+(Książka nie tłumaczy, czemu te dwie definicje zostały określone akurat takimi przymiotnikami.)
+
+\begin{lemma}
+\label{lem:unknotting_well_defined}%
+    W dowolnym rzucie splotu można odwrócić pewne skrzyżowania tak, by uzyskać diagram niesplotu.
+\end{lemma}
+
+\begin{proof}
+    Bez straty ogólności załóźmy, że diagram przedstawia węzeł.
+    Ustalmy zatem diagram węzła i~wybierzmy jakiś początkowy punkt na nim, różny od skrzyżowania wraz z~kierunkiem, wzdłuż którego będziemy przemierzać węzeł.
+    Za każdym razem, kiedy odwiedzamy nowe skrzyżowanie, zmieniamy je w~razie potrzeby na takie, przez które przemieszczamy się wzdłuż górnego łuku.
+    Skrzyżowań już odwiedzonych nie zmieniamy wcale.
+
+    Teraz wyobraźmy sobie nasz nowy węzeł w~trójwymiarowej przestrzeni $\mathbb R^3$, przy czym oś $z$ skierowana jest z~płaszczyzny, w~której leży diagram, w~naszą stronę.
+    Umieśćmy początkowy punkt tak, by jego trzecią współrzędną była $z = 1$.
+
+    Przemierzając węzeł, zmniejszamy stopniowo tę współrzędną, aż osiągniemy wartość $0$ tuż przed punktem, z~którego wyruszyliśmy.
+    Połączmy obydwa punkty (początkowy oraz ten, w~którym osiągamy współrzędną $z = 0$) pionowym odcinkiem.
+    Zauważmy, że kiedy patrzymy na węzeł w~kierunku osi $z$, nie widzimy żadnych skrzyżowań.
+
+    Oznacza to, że nasza procedura przekształciła początkowy diagram w~diagram niewęzła, co należało okazać.
+\end{proof}
+
+Nakanishi \cite{nakanishi1983} znalazł 2-gordyjski diagram 1-gordyjskiego węzła $6_2$, a po trzynastu latach udowodnił, że każdy nietrywialny węzeł ma diagram, który nie jest 1-gordyjski \cite{nakanishi1996}.
+\index[persons]{Nakanishi, Yasutaka}%
+Jego wyniki uogólnia praca Taniyamy \cite{taniyama2009}: dla każdego nietrywialnego splotu istnieje diagram wymagający odwrócenia dowolnie wielu skrzyżowań.
+\index[persons]{Taniyama, Kouki}%
+
+\begin{proposition}
+    Niech $L$ będzie nietrywialnym splotem.
+    Dla każdej liczby naturalnej $n \in \N$ istnieje diagram $D$ splotu $L$ taki, że $\unknotting D \ge n$.
+\end{proposition}
+
+Pokazany jest tam jeszcze jeden godny uwagi fakt.
+Jeśli odwrócenie pewnych skrzyżowań daje niewęzeł, to odwrócenie pozostałych także.
+Zatem dla splotów $L$ o $n$ skrzyżowaniach mamy $2 \crossing L \le n$.
+Nie jest to zbyt pomocne, daje rozstrzygnięcie pięć razy dla pierwszych węzłów do 12 skrzyżowań: $3_{1}$, $5_{1}$, $7_{1}$, $9_{1}$, $11a_{367}$.
+Ale...
+
+\begin{proposition}
+    Jeśli liczba gordyjska diagramu $D$ węzła $K$ wynosi $\frac 12 (\crossing D - 1)$, to węzeł jest $(2,p)$-torusowy albo wygląda jak diagram niewęzła po pierwszym ruchu Reidemeistera.
+\end{proposition}
+
+W powyższym stwierdzeniu nie można zastąpić słowa ,,węzeł'' przez ,,splot''.
+
+\input{30-invariants-numeric/301ba-unknotting_one}
+
+\input{30-invariants-numeric/301bb-known_values}
+
+\input{30-invariants-numeric/301bc-lower_bounds}
+
+\input{30-invariants-numeric/301bd-bleiler}
+
+\input{30-invariants-numeric/301be-metric}
+
+\subsubsection{Inne operacje rozwiązujące węzły}
+
+Shimizu w pracy \cite{shimizu2014} rozpatruje różne operacje, które rozwiązują węzły lub sploty.
+\index[persons]{Shimizu, Ayaka}%
+Nie będziemy się nimi zajmować, podamy tylko przykład: zamiana pod- i nadskrzyżowań wokół obszaru na diagramie rozwiązuje węzły, ale nie sploty; kontrprzykładem jest splot Hopfa.
+\index{splot!Hopfa}%
+Patrz też, co pisze Kawauchi w \cite[s. 141-154]{kawauchi1996}.
+% TODO: co pisze?
+
+Mieliśmy też:
+
+\begin{conjecture}
+    Dowolny splot można rozwiązać wykonując ciąg 3-ruchów (zastępując dwie równoległe nici przez trzy półskręty lub odwrotnie).
+\end{conjecture}
+
+Ze zbioru problemów Kirby'ego \cite{kirby1978} wiemy, że Nakanishi zastanawiał się nad tym w 1981 roku.
+\index[persons]{Nakanishi, Yasutaka}%
+Nie to samo, ale podobne pytanie zadał wcześniej Montesinos w związku z nakryciami i~dlatego Kirby nazwał problem hipotezą Nakanishiego-Montesinosa.
+\index[persons]{Montesinos, José}%
+Conway zauważył, że hipoteza jest prawdziwa dla węzłów algebraicznych.
+\index[persons]{Conway, John}%
+Coxeter rozprawił się z nią dla prawie wszystkich splotów o~indeksie warkoczowym mniejszym niż $6$ oraz indeksie mostowym mniejszym niż $4$.
+\index[persons]{Coxeter, Harold}%
+Nakanishi w 1994 pokazał splot zbudowany z pierścieni Boromeuszy wobec którego podejrzewał, że jest kontrprzykładem.
+\index{pierścienie Boromeuszy}%
+Żeby zdobyć więcej informacji o postępie prac nad hipotezą, musieliśmy sięgnąć po artykuł Przytyckiego, Dąbkowskiego \cite{dabkowski2002}.
+\index[persons]{Przytycki, Józef}%
+\index[persons]{Dąbkowski, Mieczysław}%
+Chen w~1999 zasugerował inny kontrprzykład, domknięcie 5-warkocza $(\sigma_1\sigma_2\sigma_3\sigma_4)^{10}$.
+\index[persons]{Chen, Qi}%
+Artykuł \cite{dabkowski2002} dowodzi, że te dwa sploty istotnie obalają hipotezę.
+Używa się w~nim nieprzemiennej wersji $n$-kolorowań Foxa, tak zwanej $n$-tej grupy Burnside'a splotu.
+\index{grupa Burnside'a}%
+\index{kolorowanie}%
+
+Nakanishi w 1979, a więc zanim ogłosił powyższą hipotezę, miał wrażenie, że $4$-ruchy rozwiązują wszystkie sploty.
+Najpierw sprawdzono, że jest prawdziwa dla wszystkich dwu- i trzymostowych węzłów, a także węzłów do 12 skrzyżowań, ale potem Askitas ogłosił, że pewien węzeł o 16 skrzyżowaniach obala ją.
+\index[persons]{Askitas, Nikos}%
+Później pojawili się inni podejrzani, ale nie wiemy, czy naprawdę są kontrprzykładami.
+
+% znalezione przypadkiem w MR3143585
+% 1979 Nakanishi: hipoteza że 4-ruch jest rozwiązujący
+% dowody: 2-mostowe i 3-mostowe węzły, wszystkie do 12 skrzyżowań
+
+\index{liczba gordyjska|)}%
+
+% Koniec podsekcji Liczba gordyjska
+
