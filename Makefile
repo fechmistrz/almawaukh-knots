@@ -9,6 +9,7 @@ define make_pdf
 	rsync -aR --delete --exclude tmp --exclude .git "$${PWD}/./" "${MY_TMP_DIR}/${$@_precision}/"; 
 	mkdir -p "${MY_TMP_DIR}/${$@_precision}/build/"
 	sed -r -e 's/ FJOURNAL/ XJOURNAL/g' -e 's/ JOURNAL/ FJOURNAL/g' "src/knot_theory.bib" | sed -r 's/XJOURNAL/JOURNAL/g' > "${MY_TMP_DIR}/${$@_precision}/build/knot_theory.bib";
+	cd "${MY_TMP_DIR}/${$@_precision}/src/" && max_print_line=10000 lualatex $(LUALALATEX_FLAGS) knot-theory.tex;
 endef
 
 define make_bib
