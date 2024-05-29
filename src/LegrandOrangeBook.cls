@@ -390,8 +390,6 @@
 
 \usepackage{makeidx} % Required to make an index
 
-\makeindex % Tells LaTeX to create the files required for indexing
-
 % Modify the command to output the index to output the correctly styled Index name to the page headers
 \patchcmd{\theindex}
 	{\MakeUppercase\indexname} % Find
@@ -792,8 +790,7 @@
 \usepackage{comment}
 \includecomment{comment}
 
-\makeindex[title=Skorowidz]
-\makeindex[name=persons,title=Indeks osób]
+
 
 \usepackage{enumitem}
 \usepackage{booktabs}
