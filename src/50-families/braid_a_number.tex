@@ -37,8 +37,7 @@ Znamy ją między innymi dla węzłów torusowych (fakt~\ref{cor:torus_braid_num
     \end{figure}
 \end{comment}
 
-Według bazy danych LinkInfo\footnote{\url{https://linkinfo.sitehost.iu.edu/index.php} (sprawdzono 8 listopada 2023 roku).} istnieją 1424 niezorientowane sploty pierwsze o indeksie skrzyżowaniowym 11 lub mniejszym.
-% TODO: zamienić na prawdziwe cytowanie
+Według bazy danych LinkInfo \cite{linkinfo24} istnieją 1424 niezorientowane sploty pierwsze o indeksie skrzyżowaniowym 11 lub mniejszym.
 Spośród nich, 622 sploty mają tę samą liczbę warkoczową niezależnie od tego, jak zorientowane są ich ogniwa.   
 Z drugiej strony dokładnie jeden splot z~bazy LinkInfo, $L_{10}a_{153}$, może mieć aż cztery różne liczby warkoczowe: 3, 4, 5 lub 6.
 
@@ -61,7 +60,6 @@ Wśród pierwszych węzłów do 10 skrzyżowań mamy równość dziesięć razy:
 %=% PANDAS
 %=% >>> knots = [x for x in d.query('crossing_number == 2 * braid_index - 2 and crossing_number < 11')["name"]]; print(len(knots), knots)
 %=% 10 ['4_1', '6_1', '8_1', '8_3', '8_12', '10_1', '10_3', '10_13', '10_35', '10_58']
-% TODO: czemu tutaj?
 
 \begin{proposition}[nierówność Mortona-Franksa-Williamsa]
 \index{nierówność Mortona-Franksa-Williamsa}%
@@ -77,7 +75,7 @@ Dowód podali niezależnie Franks, Williams \cite{franks1987} i Morton \cite{mor
 \index[persons]{Franks, John}%
 \index[persons]{Morton, Hugh}%
 \index[persons]{Williams, Robert}%
-% TODO: zweryfikować z ./tools/knotinfo_parsed.json programem w Pythonie
+% zweryfikować z ./tools/knotinfo_parsed.json programem w Pythonie
 
 Wielomian Alexandera wykrywa czasami węzły, których nie otrzyma się przez domykanie ,,małych'' warkoczy.
 \index{wielomian!Alexandera}%
