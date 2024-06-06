@@ -25,8 +25,9 @@ all: knot-theory.pdf
 all-fallback: src/00-meta-latex/new_diagrams.tex src/90-appendix/table_invariants_summary.tex src/90-appendix/table_invariants.tex tools/knotinfo_parsed.json
 	mkdir -pv build
 	cd src && max_print_line=10000 lualatex -shell-escape -halt-on-error knot-theory.tex;
-	cd src && bibtex knot-theory;
+	cd src && python3 merridew/fix_bbl_authors.py knot-theory.bbl && bibtex knot-theory && python3 merridew/fix_bbl_authors.py knot-theory.bbl ;
 	cd src && max_print_line=10000 lualatex -shell-escape -halt-on-error knot-theory.tex;
+	cd src && python3 merridew/fix_bbl_authors.py knot-theory.bbl && bibtex knot-theory && python3 merridew/fix_bbl_authors.py knot-theory.bbl ;
 	cd src && max_print_line=10000 lualatex -shell-escape -halt-on-error knot-theory.tex;
 	cp src/*pdf .
 
