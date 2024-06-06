@@ -24,12 +24,11 @@ all: knot-theory.pdf
 
 all-fallback: src/00-meta-latex/new_diagrams.tex src/90-appendix/table_invariants_summary.tex src/90-appendix/table_invariants.tex tools/knotinfo_parsed.json
 	mkdir -pv build
-	cd src && max_print_line=10000 lualatex $(LUALALATEX_FLAGS) knot-theory.tex;
-	cd build && cp ../src/*bib . && bibtex knot-theory;
-	cd src && max_print_line=10000 lualatex $(LUALALATEX_FLAGS) knot-theory.tex;
-	cd src && max_print_line=10000 lualatex $(LUALALATEX_FLAGS) knot-theory.tex;
-	cp build/*pdf .
-
+	cd src && max_print_line=10000 lualatex -shell-escape -halt-on-error knot-theory.tex;
+	cd src && bibtex knot-theory;
+	cd src && max_print_line=10000 lualatex -shell-escape -halt-on-error knot-theory.tex;
+	cd src && max_print_line=10000 lualatex -shell-escape -halt-on-error knot-theory.tex;
+	cp src/*pdf .
 
 test:
 	python3 tools/verify_bib_authors.py --bib src/knot_theory.bib
