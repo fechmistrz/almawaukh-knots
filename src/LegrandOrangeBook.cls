@@ -16,12 +16,12 @@
 
 % popular page size in Amazon's KDP
 \RequirePackage[
-	paperwidth=6.00in,
-	paperheight=9.00in,
-	left=0.75in,
-	right=0.625in,
-	top=0.95in,
-	bottom=0.76in,
+	paperwidth=6.125in,
+	paperheight=9.25in,
+	left=0.8125in,
+	right=0.6875in,
+	top=1.075in,
+	bottom=0.885in,
 	twoside,
 	% showframe,
 	headsep=0.15in,
