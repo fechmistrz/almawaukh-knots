@@ -1,0 +1,13 @@
+digraph G {
+    lamm1997 -> bogle1994;
+    lamm1997 -> burde2014;
+    lamm1997 -> hartley1979;
+    lamm1997 -> jones1998;
+    lamm1997 -> murasugi1971;
+    lamm1997 -> seifert1950;
+    murasugi1971 -> brody1960;
+    murasugi1971 -> fox1953;
+    murasugi1971 -> fox1954;
+    murasugi1971 -> reidemeister1932;
+    murasugi1971 -> schubert1956;
+}
