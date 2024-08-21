@@ -1,13 +1,10 @@
 SHELL = /bin/bash
-LUALALATEX_FLAGS = -shell-escape -halt-on-error -output-directory ../build/
+LUALALATEX_FLAGS = -shell-escape -halt-on-error
 MY_TMP_DIR = $(shell echo "$${PWD}/tmp/")
 .PHONY: all 
 
 define make_pdf
-	$(eval $@_precision = $(1))
-	mkdir -p "${MY_TMP_DIR}/${$@_precision}/build/"
-	rsync -aR --delete --exclude tmp --exclude .git "$${PWD}/./" "${MY_TMP_DIR}/${$@_precision}/"; 
-	mkdir -p "${MY_TMP_DIR}/${$@_precision}/build/"
+	rsync -aR --delete src/./ src-build/
 	sed -r -e 's/ FJOURNAL/ XJOURNAL/g' -e 's/ JOURNAL/ FJOURNAL/g' "src/knot_theory.bib" | sed -r 's/XJOURNAL/JOURNAL/g' > "${MY_TMP_DIR}/${$@_precision}/build/knot_theory.bib";
 	cd "${MY_TMP_DIR}/${$@_precision}/src/" && max_print_line=10000 lualatex $(LUALALATEX_FLAGS) knot-theory.tex;
 endef
@@ -41,9 +38,12 @@ lint:
 	./tools/make_lint.sh
 
 knot-theory.pdf: src/knot-theory.tex src/knot_theory.bib src/*/*.tex
-	$(call make_pdf,slow)
-	$(call make_bib,slow)
-	cp ${MY_TMP_DIR}/${$@_precision}/build/knot-theory.pdf .
+	rsync -avR --delete src/./ src-build/
+	cd src-build && sed -r -e 's/ FJOURNAL/ XJOURNAL/g' -e 's/ JOURNAL/ FJOURNAL/g' "knot_theory.bib" | sed -r 's/XJOURNAL/JOURNAL/g' > "tmp-knot_theory.bib" && mv tmp-knot_theory.bib knot_theory.bib
+	cd src-build && lualatex -shell-escape -halt-on-error knot-theory.tex && bibtex knot-theory && python3 merridew/fix_bbl_authors.py knot-theory.bbl ;
+	cd src-build && lualatex -shell-escape -halt-on-error knot-theory.tex && bibtex knot-theory && python3 merridew/fix_bbl_authors.py knot-theory.bbl ;
+	cd src-build && lualatex -shell-escape -halt-on-error knot-theory.tex && bibtex knot-theory && python3 merridew/fix_bbl_authors.py knot-theory.bbl ;
+	cp src-build/*pdf .
 
 draft-knot-theory.pdf: src/knot-theory.tex src/knot_theory.bib src/*/*.tex
 	$(call make_pdf,draft)
