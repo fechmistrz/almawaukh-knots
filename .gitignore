@@ -25,3 +25,4 @@ tools/knotinfo_parsed.json
 
 # titletoc
 *.ptc
+src-build
