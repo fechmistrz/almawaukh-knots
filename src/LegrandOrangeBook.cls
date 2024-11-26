@@ -1,20 +1,15 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{LegrandOrangeBook}[2022/01/26 The Legrand Orange Book Class v3.0]
-\LoadClass[9pt, twoside]{extbook} % Load the base class
-\usepackage{graphicx} % Required for including pictures
-\graphicspath{{Images/}} % Specifies the directory where pictures are stored
-\usepackage{float} % Allows more precisely positioning floats e.g. \begin{figure}[H]
-\usepackage[usenames, svgnames, table]{xcolor} % Required for defining and using custom colors
-\usepackage{calc} % For simpler calculations - used for spacing the index letter headings correctly
-\usepackage{changepage} % Required for temporarily indenting text blocks
-\usepackage[toc]{appendix} % Required for the appendices chapters
-\usepackage{etoolbox} % Required for conditional logic and easily changing commands
+\LoadClass[9pt, twoside]{extbook}
+\RequirePackage{graphicx}
+\graphicspath{{Images/}}
+\RequirePackage{float} % [H] for figure environment
+\RequirePackage[usenames, svgnames, table]{xcolor}
+\RequirePackage{calc}
+%\usepackage{changepage} not needed?
+\RequirePackage[toc]{appendix}
+\RequirePackage{etoolbox}
 
-%----------------------------------------------------------------------------------------
-%	MARGINS
-%----------------------------------------------------------------------------------------
-
-% popular page size in Amazon's KDP
 \RequirePackage[
 	paperwidth=6.125in,
 	paperheight=9.25in,
@@ -25,55 +20,29 @@
 	twoside,
 	% showframe,
 	headsep=0.15in,
-	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% pokazuje ramki na stronach: showframe
 ]{geometry}
 
-%----------------------------------------------------------------------------------------
-%	FONTS
-%----------------------------------------------------------------------------------------
+\RequirePackage[utf8]{inputenc}
+\RequirePackage[T1]{fontenc}
+\RequirePackage[final]{microtype}
 
-\usepackage[utf8]{inputenc} % Required for inputting international characters
-\usepackage[T1]{fontenc} % Output font encoding for international characters
-
-\usepackage[final]{microtype} % Improve typography
-
-\usepackage{fancyhdr} % Required for customizing headers and footers
-\pagestyle{fancy} % Enable the custom headers and footers
-
-\renewcommand{\headrulewidth}{0.5pt} % Top horizontal rule thickness
-
-\renewcommand{\chaptermark}[1]{\markboth{\sffamily\normalsize\bfseries\chaptername\ \thechapter.~#1}{}} % Redefine the styling of the current chapter name in the header
-\renewcommand{\sectionmark}[1]{\markright{\sffamily\normalsize\thesection~#1}{}} % Redefine the styling of the current section name in the header
-
-\fancyhf{} % Clear default headers and footers
-
-\fancyhead[LE, RO]{\sffamily\thepage} % Header for left even pages and right odd pages
-
-\fancyhead[LO]{\rightmark} % Header for left odd pages
-
-\fancyhead[RE]{\leftmark} % Header for right even pages
-
-\fancypagestyle{plain}{ % Style for when a plain pagestyle is specified
-	\fancyhead{} % Clear headers
-	\renewcommand{\headrulewidth}{0pt} % Remove header rule
+\RequirePackage{fancyhdr}
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\chaptermark}[1]{\markboth{\sffamily\normalsize\bfseries\chaptername\ \thechapter.~#1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\sffamily\normalsize\thesection~#1}{}}
+\fancyhf{}
+\fancyhead[LE, RO]{\sffamily\thepage}
+\fancyhead[LO]{\rightmark}
+\fancyhead[RE]{\leftmark}
+\fancypagestyle{plain}{
+    \fancyhead{}
+    \renewcommand{\headrulewidth}{0pt}
 }
+\RequirePackage{emptypage}
 
-\usepackage{emptypage} % This package removes headers and footers on empty pages between chapters
+\RequirePackage[explicit, newparttoc]{titlesec}
 
-%----------------------------------------------------------------------------------------
-%	SECTION STYLING
-%----------------------------------------------------------------------------------------
-
-% \setcounter{secnumdepth}{3} % Number sections down to subsubsections, a value of 2 will number to subsections only and 1 to sections only
-
-\usepackage[
-	explicit, % Specify section names explicitly in \titleformat with #1
-	newparttoc, % Required for writing the part toc entry number in a standard way (overriding default LaTeX behavior) so the titletoc package can style it
-]{titlesec} % Required for modifying sections
-
-%-------------------------------------------
-
-% Command to create and output the parts pages
 \newcommand{\outputpartpage}[2]{
 	\begin{tikzpicture}[remember picture, overlay]
 		\node[anchor=center, rectangle, fill=ocre!20, inner sep=0pt, minimum height=\paperheight, minimum width=\paperwidth] at (current page.center) {}; % Background color
@@ -98,16 +67,11 @@
 
 %-------------------------------------------
 
-% Command to store the current chapter image to use for all future chapters, can be changed any time in the document and can be empty
 \newcommand{\thechapterimage}{}
-\newcommand{\chapterimage}[1]{\renewcommand{\thechapterimage}{#1}}
-
-% Command to store the current whitespace above the chapter title box for all future chapters, can be changed at any time in the document
 \newcommand{\thechapterspaceabove}{}
-\newcommand{\chapterspaceabove}[1]{\renewcommand{\thechapterspaceabove}{#1}}
-
-% Command to store the current whitespace below the chapter title box for all future chapters, can be changed at any time in the document
 \newcommand{\thechapterspacebelow}{}
+\newcommand{\chapterimage}[1]{\renewcommand{\thechapterimage}{#1}}
+\newcommand{\chapterspaceabove}[1]{\renewcommand{\thechapterspaceabove}{#1}}
 \newcommand{\chapterspacebelow}[1]{\renewcommand{\thechapterspacebelow}{#1}}
 
 % Command to output the chapter title with optional background image
@@ -401,63 +365,24 @@
 %	 TABLES
 %----------------------------------------------------------------------------------------
 
-\usepackage{array} % Required for manipulating table elements
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{longtable}
 
-\newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}} % Define a new right-aligned paragraph column type
-\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}} % Define a new left-aligned (no justification) paragraph column type
-\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}} % Define a new centered paragraph column type
+\newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
 
-\usepackage{booktabs} % Required for high quality horizontal rules in tables
-
-%----------------------------------------------------------------------------------------
-%	 LISTS
-%----------------------------------------------------------------------------------------
-
-% \usepackage{enumitem} % Required for list customization
-% \setlist{nolistsep, noitemsep} % Customize spacing inside and outside lists
-% \renewcommand{\labelenumi}{\arabic{enumi}.} % Customize the first level numbered list characters
-% \renewcommand{\labelenumii}{\alph{enumii}.} % Customize the second level numbered list characters
-% \renewcommand{\labelenumiii}{\roman{enumiii}.} % Customize the third level numbered list characters
-%------------------------------------------------
-% 
-% \renewcommand{\labelitemi}{\raisebox{-2pt}{\Large \textbullet}} % Customize the first level bullet point character
-% \renewcommand{\labelitemii}{--} % Customize the second level bullet point character
-% \renewcommand{\labelitemiii}{$\circ$} % Customize the third level bullet point character
-
-%----------------------------------------------------------------------------------------
-%	LINKS
-%----------------------------------------------------------------------------------------
-
-\RequirePackage[pdfusetitle]{hyperref}
-
-% \hypersetup{
-% 	colorlinks=true, % Whether to color links (a thin box is output around links if this is false)
-% 	%hidelinks, % Hide the default boxes around links
-% 	urlcolor=ocre, % Color for \url and \href links
-% 	linkcolor=black, % Color for \ref/\nameref links
-% 	citecolor=ocre, % Color for reference citations like \cite{}
-% 	hyperindex=true, % Adds links from the page numbers in the index to the relevant page
-% 	linktoc=all, % Link from section names and page numbers in the table of contents
-% }
-
-%----------------------------------------------------------------------------------------
-%	BOOKMARKS
-%----------------------------------------------------------------------------------------
-
-\usepackage{bookmark} % Required for customizing PDF bookmarks
-
-\bookmarksetup{
-	open, % Open all bookmark drawers automatically
-	numbered, % Add section numbers to bookmarks
-	addtohook={%
-		\ifnum\bookmarkget{level}=-1 % Customize part bookmarks
-			\bookmarksetup{color=ocre, bold}% Bold and colored
-		\fi
-		\ifnum\bookmarkget{level}=0 % Customize chapter bookmarks
-			\bookmarksetup{bold}% Bold
-		\fi
-	}
-}
+\let\oldtabular\tabular % alternate rowcolors for all tables
+\let\endoldtabular\endtabular
+\renewenvironment{tabular}
+{\rowcolors{2}{white}{hotpink}\oldtabular}
+{\endoldtabular}
+\let\oldlongtable\longtable % alternate rowcolors for all long-tables
+\let\endoldlongtable\endlongtable
+\renewenvironment{longtable}
+{\rowcolors{2}{white}{hotpink}\oldlongtable}
+{\endoldlongtable}
 
 %----------------------------------------------------------------------------------------
 %	THEOREM STYLES
@@ -527,12 +452,8 @@
 
 \newcounter{counter}
 \numberwithin{counter}{section}
-
-
 % Orange theorem number and optional black title with padding above and below
 \theoremstyle{ocrenum}
-
-
 % Orange theorem number and optional black title with no padding above and below
 \theoremstyle{ocrenumbox}
 \newtheorem{propositionT}[counter]{Fakt} % Propositions, the first argument is the theorem name, the second the theorem title used before the number and the third optional argument is whether to number under chapters (e.g. 2.1) or sections (e.g. 2.1.1)
@@ -551,8 +472,6 @@
 \theoremstyle{blacknumbox}
 \newtheorem{definitionT}[counter]{Definicja} % Definitions, the first argument is the theorem name, the second the theorem title used before the number and the third optional argument is whether to number under chapters (e.g. 2.1) or sections (e.g. 2.1.1)
 \newtheorem{corollaryT}[counter]{Wniosek} % Corollaries, the first argument is the theorem name, the second the theorem title used before the number and the third optional argument is whether to number under chapters (e.g. 2.1) or sections (e.g. 2.1.1
-
-
 %----------------------------------------------------------------------------------------
 %	COLORED THEOREM BOXES
 %----------------------------------------------------------------------------------------
@@ -628,8 +547,6 @@
 	leftmargin=0cm, % Outside left margin width
 	rightmargin=0cm % Outside right margin width
 ]{cBox}
-
-
 % Corollary box
 \newmdenv[
 	skipabove=7pt, % Whitespace above box
@@ -670,8 +587,6 @@
 % Creates an environment for each type of theorem and assigns it a theorem text style from the THEOREM STYLES block above and a colored box from above
 
 \newenvironment{dupaexercise}{\begin{eBox}\begin{exerciseT}}{\hfill{\color{ocre}\tiny\ensuremath{\blacksquare}}\end{exerciseT}\end{eBox}}
-
-
 \newenvironment{definition}{\begin{dBox}\begin{definitionT}}{\end{definitionT}\end{dBox}}
 \newenvironment{example}{\begin{exampleT}}{\hfill{\tiny\ensuremath{\blacksquare}}\end{exampleT}}	
 \newenvironment{examplenosquare}{\begin{exampleT}}{\end{exampleT}}	
@@ -693,43 +608,23 @@
 
 \usepackage{tikz} % Required for drawing custom shapes and positioning elements absolutely on the page
 
-
-
-
-
-
-
-% Book information for PDF metadata, remove/comment this block if not required 
-\hypersetup{
-	pdftitle={Title}, % Title field
-	pdfauthor={Author}, % Author field
-	pdfsubject={Subject}, % Subject field
-	pdfkeywords={Keyword1, Keyword2, ...}, % Keywords
-	pdfcreator={LaTeX}, % Content creator field
-}
-
 \definecolor{ocre}{RGB}{255, 105, 180} % Define the color used for highlighting throughout the book
+\colorlet{darkblue}{blue!80!black}
+\definecolor{diagramfiller}{RGB}{255, 182, 193} % HTML: LightPink
+\definecolor{first_colour}{RGB}{255, 105, 180}
+\definecolor{hotpink}{RGB}{255, 105, 180}
+\definecolor{mediumvioletred}{RGB}{199, 21, 133}
 
 \chapterimage{orange1.jpg} % Chapter heading image
 \chapterspaceabove{6.5cm} % Default whitespace from the top of the page to the chapter title on chapter pages
 \chapterspacebelow{6.75cm} % Default amount of vertical whitespace from the top margin to the start of the text on chapter pages
 
-% \NeedsTeXFormat{LaTeX2e}
-% \ProvidesClass{createspace}[2022/01/20 Create Space class]
-% \LoadClass[twoside, 9pt]{extbook}
+% my personal inventions
 
 % to handle ą, ć, ę, etc.
-\RequirePackage[utf8]{inputenc}
-\RequirePackage[T1]{fontenc}
 \RequirePackage{polski}
-
-% to make the text as compact as possible
 \usepackage{Alegreya}
-% \RequirePackage[final]{microtype}
-% \RequirePackage[compact]{titlesec}
 \RequirePackage{paralist}
-
-
 
 \RequirePackage{fancyhdr}
 \fancypagestyle{plain}{
@@ -752,80 +647,41 @@
 % https://tex.stackexchange.com/questions/22012/hyperref-and-imakeidx-do-not-work-together
 \RequirePackage{imakeidx}
 
-% \DeclareMathOperator:
-\RequirePackage{amsmath}
-% \mathbb:
-\RequirePackage{amssymb}
-% \theoremstyle, \newtheorem:
-\RequirePackage{amsthm}
-% [H] for figure environment:
-\RequirePackage{float}
-% \subcaption for minipage inside figure:
-\RequirePackage{subcaption} % captions to subfigures
-% clickable links
-% add [backref] for links from bib entries to citations
-% add [pdfusetitle] for metadata
-\hypersetup{
-    colorlinks,
-    linkcolor={red!50!black},
-    citecolor={blue!50!black},
-    urlcolor={blue!80!black}
-}
-
-
+\RequirePackage{subcaption} % \subcaption for minipage inside figure:
 
 % https://www.reddit.com/r/LaTeX/comments/athzn1/replacing_leq_and_geq_with_leqslant_and_geqslant/
-\let\savedleq=\leq %
-\let\savedgeq=\geq %
-\let\le=\leqslant %
-\let\ge=\geqslant %
-
-\input{00-meta-latex/shortcuts}
-
-
-
-
-
-
+\let\savedleq=\leq
+\let\savedgeq=\geq
+\let\le=\leqslant
+\let\ge=\geqslant
 \usepackage{comment}
 \includecomment{comment}
 
-
-
 \usepackage{enumitem}
-\usepackage{booktabs}
-\usepackage{longtable}
-\usepackage[table]{xcolor}
-\usepackage[colorinlistoftodos,prependcaption]{todonotes}
-\usepackage{tikz}
+
+% knot diagrams
 \usetikzlibrary{arrows.meta}
 \usetikzlibrary{decorations.markings}
 \usetikzlibrary{decorations.pathreplacing}
 \usetikzlibrary{knots}
-\colorlet{darkblue}{blue!80!black}
-\definecolor{diagramfiller}{RGB}{255, 182, 193} % HTML: LightPink
-\definecolor{first_colour}{RGB}{255, 105, 180}
 \input{00-meta-latex/diagrams}
+\input{00-meta-latex/shortcuts}
 
-\definecolor{hotpink}{RGB}{255, 105, 180}
-\definecolor{mediumvioletred}{RGB}{199, 21, 133}
-\let\oldtabular\tabular % alternate rowcolors for all tables
-\let\endoldtabular\endtabular
-\renewenvironment{tabular}
-{\rowcolors{2}{white}{hotpink}\oldtabular}
-{\endoldtabular}
-\let\oldlongtable\longtable % alternate rowcolors for all long-tables
-\let\endoldlongtable\endlongtable
-\renewenvironment{longtable}
-{\rowcolors{2}{white}{hotpink}\oldlongtable}
-{\endoldlongtable}
+\author{Casimir Allard}
+\title{Kombinatoryczna teoria węzłów}
+%----------------------------------------------------------------------------------------
+%	LINKS
+%----------------------------------------------------------------------------------------
 
+\RequirePackage[pdfusetitle]{hyperref}
 \hypersetup{
+	pdftitle={Kombinatoryczna teoria wężów},
+	pdfauthor={Cassimir Allard}, % Author field
+	pdfsubject={teoria węzłów}, % Subject field
+	% pdfkeywords={Keyword1, Keyword2, ...}, % Keywords
+	pdfcreator={LaTeX}, % Content creator field
     colorlinks,
     linkcolor={mediumvioletred},
     citecolor={mediumvioletred},
     urlcolor={mediumvioletred}
 }
-
-\author{Casimir Allard}
-\title{Kombinatoryczna teoria węzłów}
