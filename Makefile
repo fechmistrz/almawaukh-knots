@@ -44,6 +44,7 @@ knot-theory.pdf: src/knot-theory.tex src/knot_theory.bib src/*/*.tex
 	cd src-build && lualatex -shell-escape -halt-on-error knot-theory.tex && bibtex knot-theory && python3 merridew/fix_bbl_authors.py knot-theory.bbl ;
 	cd src-build && lualatex -shell-escape -halt-on-error knot-theory.tex && bibtex knot-theory && python3 merridew/fix_bbl_authors.py knot-theory.bbl ;
 	cp src-build/*pdf .
+	rm -rf src-build
 
 draft-knot-theory.pdf: src/knot-theory.tex src/knot_theory.bib src/*/*.tex
 	$(call make_pdf,draft)
