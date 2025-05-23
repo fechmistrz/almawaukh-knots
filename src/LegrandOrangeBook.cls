@@ -623,8 +623,11 @@
 
 % to handle ą, ć, ę, etc.
 \RequirePackage{polski}
-\usepackage{Alegreya}
+\RequirePackage{Alegreya}
 \RequirePackage{paralist}
+
+% https://tex.stackexchange.com/questions/544506/implies-arrow-looks-off
+\RequirePackage{unicode-math}
 
 \RequirePackage{fancyhdr}
 \fancypagestyle{plain}{
