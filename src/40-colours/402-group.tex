@@ -44,7 +44,7 @@ Następnie znajdźmy macierz diagonalną $D = \operatorname{diag}(d_1, \ldots, d
 Z~algebry liniowej wiemy, że to zawsze się uda: macierz $D$ nazywamy postacią normalną Smitha.
 Wtedy funkcja
 \begin{equation}
-    f(x) \colon \frac{\Z^m}{A^t \Z^m} \to \frac{\Z^m}{D\Z^m}, \quad f(x) = C^t x
+    f(x) \colon \frac{\Z^m}{A^t \Z^m} \verylongrightarrow \frac{\Z^m}{D\Z^m}, \quad f(x) = C^t x
 \end{equation}
 stanowi izomorfizm, a~skoro $D$ jest macierzą diagonalną, to
 \begin{equation}
@@ -65,7 +65,7 @@ Podsumujmy.
 \end{proposition}
 
 \begin{corollary}
-    Grupa kolorująca splotu $L$ jest skończona wtedy i tylko wtedy, gdy wyznacznik tego splotu, $\det L$, jest niezerowy.
+    Grupa kolorująca $\ColoringGroup(L)$ splotu $L$ jest skończona wtedy i tylko wtedy, gdy wyznacznik tego splotu jest niezerowy: $\det L \neq 0$.
 \end{corollary}
 
 \begin{proof}
@@ -78,9 +78,11 @@ Podsumujmy.
     Wyznacznik jest niezmiennikiem splotów.
 \end{corollary}
 
-Wyznacznik jest słabszym niezmiennikiem od grupy kolorującej.
-Na przykład węzły $6_1$ oraz $3_1 \shrap 3_1$ mają ten sam wyznacznik, $9$, ale różne grupy kolorujące: odpowiednio $\Z/9$ oraz ~$(\Z/3)^2$.
-Jedna jest cykliczna, druga niezbyt.
+Wyznacznik jest niezmiennikiem słabszym od grupy kolorującej.
+
+\begin{example}
+    Węzły $6_1$ oraz $3_1 \shrap 3_1$ mają różne grupy kolorujące: odpowiednio $\Z/9$ oraz ~$(\Z/3)^2$, ale ten sam wyznacznik, $9 = 3 \times 3$.
+\end{example}
 
 Jednakowoż wyznacznik jest na tyle mocnym niezmiennikiem, że pozwala elementarnie udowodnić, że węzłów pierwszych jest nieskończenie wiele.
 Trzeba nam lematu:

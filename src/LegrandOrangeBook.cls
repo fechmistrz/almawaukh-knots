@@ -627,7 +627,7 @@
 \RequirePackage{paralist}
 
 % https://tex.stackexchange.com/questions/544506/implies-arrow-looks-off
-\RequirePackage{unicode-math}
+% \RequirePackage{unicode-math}
 
 \RequirePackage{fancyhdr}
 \fancypagestyle{plain}{
