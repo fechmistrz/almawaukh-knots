@@ -1,5 +1,38 @@
 
-\subsection{Objętość hiperboliczna}
+Purcell \cite[s. 66]{purcell2020} proponuje znaleźć rodzinę zupełnych struktur hiperbolicznych na nakłutym torusie oraz czterokrotnie nakłutej sferze (w formie ćwiczenia).
+Podobna elastyczność nie występuje jednak w~przestrzeniach wyższych wymiarów.
+Z~twierdzenia o~sztywności, w~wersji algebraicznej:
+
+\begin{theorem}[Mostow-Prasad]
+    \index{twierdzenie!o sztywności}
+    Niech $\Gamma_1, \Gamma_2$ będą dyskretnymi podgrupami grupy izometrii $\mathbb H^n$ dla $n \ge 3$ takimi, że ilorazy $\mathbb H^n/\Gamma_i$ mają skończone objętości.
+    Załóżmy też, że istnieje izomorfizm grup $\varphi \colon \Gamma_1 \to \Gamma_2$.
+    Wtedy podgrupy $\Gamma_1, \Gamma_2$ są sprzężone.
+\end{theorem}
+\index{twierdzenie!Mostowa-Prasada}
+
+albo geometrycznej:
+
+\begin{theorem}[Mostow-Prasad]
+    Niech $M_1, M_2$ będą zupełnymi, hiperbolicznymi rozmaitościami o skończonych objętościach.
+    Wtedy każdy izomorfizm grup podstawowych $\varphi \colon \pi_1(M_1) \to \pi_1(M_2)$ realizowany jest jednoznacznie przez izometrię.
+\end{theorem}
+
+wynika, że jeśli znaleźliśmy jakąś zupełną strukturę hiperboliczną na dopełnieniu splotu, to innych już nie ma.
+
+\begin{proof}[Niedowód]
+\index[persons]{Benedetti, Riccardo}%
+\index[persons]{Mostow, George}%
+\index[persons]{Petronio, Carlo}%
+\index[persons]{Prasad, Gopal}%
+\index[persons]{Thurston, William}%
+Pierwsi byli Mostow \cite{mostow1973} oraz Prasad \cite{prasad1973}.
+    Thurston naszkicował rozumowanie w~sekcji 5.9 swoich notatek, na bazie których powstała później książka \cite{thurston1997}.
+    Inny tok myślenia można znaleźć w~podręczniku Benedettiego, Petronio \cite[rozdział C]{benedetti1992}.
+\end{proof}
+
+Twierdzenie Mostowa-Prasada pozwala nam na wprowadzenie nowych niezmienników splotów hiperbolicznych: wystarczy wziąć dowolny geometryczny niezmiennik dopełnienia węzła.
+Najważniejszym z~nich wydaje się być objętość.
 
 \index{objętość!hipeboliczna|(}%
 \begin{definition}[objętość]
@@ -42,12 +75,11 @@ W encyklopedii Wolfram Mathworld znajduje się informacja, że $5_2$ oraz pewien
     % https://arxiv.org/pdf/q-alg/9601025.pdf strona 6
 \end{example}
 
-\begin{example}
-    $\volume 6_2 \approx 4.40083$.
-\end{example}
+Objętości węzłów $4_1$, $5_2$ i $6_1$ znajdują się w pracy Kaszajewa \cite[s. 6]{kashaev1996}.
+\index[persons]{Kaszajew, Rinat (Кашаев, Ринат Мавлявиевич)}%
 
 \begin{example}
-    $\volume 6_3 \approx 5.69302$.
+    $\volume 6_2 \approx 4.40083$.
 \end{example}
 
 \begin{example}
@@ -55,6 +87,11 @@ W encyklopedii Wolfram Mathworld znajduje się informacja, że $5_2$ oraz pewien
     Niech $K$ będzie jednym z~dwóch węzłów w~parze Perko.
     Wtedy $\volume K \approx 5.63877$.
 \end{example}
+
+\begin{example}
+    $\volume 6_3 \approx 5.69302$.
+\end{example}
+% TODO: skąd te wartości?
 
 Praca Futera, Kalfagianni, Purcell \cite{purcell2019} wspomina kilka przyjemnych ograniczeń, jakie musi spełniać objętość.
 \index[persons]{Futer, David}%
