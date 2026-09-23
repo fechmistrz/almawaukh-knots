@@ -30,6 +30,7 @@ all-fallback: src/00-meta-latex/new_diagrams.tex src/90-appendix/table_invariant
 
 test:
 	python3 tools/verify_bib_authors.py --bib src/knot_theory.bib
+	./tools/spellcheck.sh
 
 clean:
 	rm -rf tmp *.pdf || true
