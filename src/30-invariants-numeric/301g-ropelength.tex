@@ -74,6 +74,23 @@ To oszacowanie jest lepsze dla węzłów do 1850 skrzyżowań (chociaż nigdy ni
 
 Jakościowy wynik znaleźliśmy znowu w~\cite{klotz2021}: zachodzi $\ropelength L \le a_u \crossing K \log^5 \crossing K$ (nie tylko dla węzłów, ale też splotów), przy czym stała $a_u$ musi być większa od $8\pi/\log^5 2 \approx 78.5$, by dobrze ograniczała splot Hopfa.
 
+Jak długość sznurowa zachowuje się względem sumy spójnej?
+Najkrótszy splot Hopfa składa się z~dwóch okręgów o~jednakowym promieniu, leżących w~prostopadłych płaszczyznach, z~których każdy przechodzi przez środek drugiego; przy grubości $1$ promień wynosi $2$, więc $\ropelength(\text{splot Hopfa}) = 8 \pi$.
+Najkrótsza suma dwóch splotów Hopfa, czyli łańcuch trzech okręgów, składa się z~dwóch okręgów leżących w~jednej płaszczyźnie oraz ,,stadionu'' (dwóch odcinków połączonych półokręgami) w~płaszczyźnie prostopadłej, przy czym każdy z~okręgów przechodzi przez środek jednego z~półokręgów.
+Jej długość sznurowa wynosi $8 \pi + (4 \pi + 4) = 12 \pi + 4$, czyli o~$4 \pi - 4$ mniej niż suma długości składników \cite[problem 1.74]{baykur2026}.
+Katritch, Olson, Pieranski, Dubochet, Stasiak \cite{katritch1997} przypuszczali, że przy każdej sumie spójnej oszczędzamy przynajmniej tyle sznura:
+\index[persons]{Katritch, Vsevolod}%
+\index[persons]{Pieranski, Piotr}%
+\index[persons]{Stasiak, Andrzej}%
+
+\begin{conjecture}
+    Niech $K_1, K_2$ będą węzłami albo splotami.
+    Wtedy $\ropelength(K_1 \shrap K_2) \le \ropelength K_1 + \ropelength K_2 - (4 \pi - 4)$.
+\end{conjecture}
+
+Słabszą wersję dostajemy zastępując $4 \pi - 4$ pewną stałą dodatnią niezależną od typu węzła.
+Nie znamy kształtu najkrótszych realizacji poza przypadkami splotów, których składowe są płaskie; w~pozostałych mamy tylko wyniki numeryczne.
+
 Przywołajmy pracę \cite{klotz2021} jeszcze jeden, ostatni raz.
 Badania satelitów do 42 skrzyżowań pokazały, że satelita jest zazwyczaj trzy razy dłuższy niż jego towarzysz.
 % tak piszą w recenzji na MathSciNecie.
