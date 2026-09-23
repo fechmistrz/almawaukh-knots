@@ -17,7 +17,7 @@ define bibtex_pass
 	cd $(1) && bibtex knot-theory && python3 merridew/fix_bbl_authors.py knot-theory.bbl;
 endef
 
-knot-theory.pdf: src/knot-theory.tex src/knot_theory.bib src/00-meta-latex/new_diagrams.tex src/90-appendix/table_invariants_summary.tex src/90-appendix/table_invariants.tex $(wildcard src/*/*.tex) | src/merridew/createspace.cls
+knot-theory.pdf: src/knot-theory.tex src/knot_theory.bib src/00-meta-latex/new_diagrams.tex src/00-meta-latex/citation_count.tex src/90-appendix/table_invariants_summary.tex src/90-appendix/table_invariants.tex $(wildcard src/*/*.tex) | src/merridew/createspace.cls
 	cd src && rsync -av --delete . ../src-build/
 	cd src-build && sed -r -e 's/ FJOURNAL/ XJOURNAL/g' -e 's/ JOURNAL/ FJOURNAL/g' "knot_theory.bib" | sed -r 's/XJOURNAL/JOURNAL/g' > "tmp-knot_theory.bib" && mv tmp-knot_theory.bib knot_theory.bib
 	$(call lualatex_pass,src-build)
@@ -37,6 +37,9 @@ src/00-meta-latex/new_diagrams.tex: tools/diagram_rules/*.py tools/write_diagram
 	{ echo; python3 tools/write_diagram_rules_2.py; } > $@
 	rm tools/write_diagram_rules_2.py
 
+src/00-meta-latex/citation_count.tex: tools/count_citations.py $(filter-out src/00-meta-latex/%.tex,$(wildcard src/*/*.tex))
+	python3 tools/count_citations.py > $@
+
 src/90-appendix/table_invariants_summary.tex: tools/convert_knotinfo_json_to_table.py tools/knotinfo_parsed.json
 	{ echo; python3 tools/convert_knotinfo_json_to_table.py summary tools/knotinfo_parsed.json; } > $@
 
@@ -46,7 +49,7 @@ src/90-appendix/table_invariants.tex: tools/convert_knotinfo_json_to_table.py to
 tools/knotinfo_parsed.json: tools/convert_knotinfo_to_json.py tools/knotinfo_raw.txt
 	cd tools && ./convert_knotinfo_to_json.py
 
-all-fallback: src/00-meta-latex/new_diagrams.tex src/90-appendix/table_invariants_summary.tex src/90-appendix/table_invariants.tex tools/knotinfo_parsed.json | src/merridew/createspace.cls
+all-fallback: src/00-meta-latex/new_diagrams.tex src/00-meta-latex/citation_count.tex src/90-appendix/table_invariants_summary.tex src/90-appendix/table_invariants.tex tools/knotinfo_parsed.json | src/merridew/createspace.cls
 	$(call lualatex_pass,src)
 	$(call bibtex_pass,src)
 	$(call lualatex_pass,src)
