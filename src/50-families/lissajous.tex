@@ -95,7 +95,9 @@ To nakłada ograniczenia na wielomian Alexandera.
     \paragraph{Przypadek II}
     Jeżeli jedna z częstotliwości jest parzysta, to węzeł $K$ jest 2-okresowy (fakt~\ref{prp:lissajous_two_periodic}).
     Niech $J$ będzie jego węzłem ilorazowym.
-    Z faktu~\ref{prp:murasugi_periodic} (dla $n=2^1$ oraz $\lambda = 1$) dostajemy równość
+    Z faktu~\ref{prp:murasugi_periodic} (dla $n=2^1$ oraz $\lambda = 1$) dostajemy kongruencję $\alexander_K(t) \equiv t^k \alexander_J(t)^2 \mod 2$ dla pewnej liczby całkowitej $k$: znak $\pm$ nie ma znaczenia modulo $2$, zaś czynnik $1 + t + \ldots + t^{\lambda-1}$ jest równy $1$.
+    Wielomiany $\alexander_K$ oraz $\alexander_J$ są symetryczne w~zmiennych $t$ i~$1/t$, a~$\alexander_J \not\equiv 0 \mod 2$, bo $\alexander_J(1) = \pm 1$.
+    Zatem $t^k = t^{-k}$, czyli $k = 0$ i~mamy równość
     \begin{equation}
 \label{eqn:lissajous_squared}%
         \alexander_K(t) \equiv \alexander^2_{J}(t) \mod 2,
