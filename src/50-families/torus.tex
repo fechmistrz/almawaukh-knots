@@ -48,20 +48,18 @@ Poniżej przedstawiamy trzy węzły torusowe.
     \end{minipage}
 \end{figure}
 
-Murasugi \cite[s. 135]{murasugi1996} pisze, że będzie nazywać okrąg leżący na powierzchni torusa $T_{0, 0}$ (chociaż według naszej parametryzacji to byłby punkt), natomiast (do napisania!).
+Murasugi \cite[s. 135]{murasugi1996} pisze, że będzie nazywać okrąg leżący na powierzchni torusa $T_{0, 0}$ (chociaż według naszej parametryzacji to byłby punkt), natomiast okrąg $m$, użyty wcześniej do zbudowania trywialnego torusa -- czyli nawiniętą toroidalnie pętlę -- $T_{1, 0}$.
+Zaznacza przy tym, że żaden z tych dwóch okręgów nie jest właściwym splotem torusowym w~opisanym wyżej sensie; to jedynie rozszerzenie notacji $T_{q, r}$ na przypadek $r = 0$.
 % todo: http://www.matematyka.wroc.pl/leksykonmatematyczny/torus
 % f[ppp_, qqq_] := ParametricPlot3D[{Cos[2 Pi ppp t] (2 + Cos[2 Pi qqq t]), (2 + Cos[2 Pi qqq t]) Sin[2 Pi ppp t], -Sin[2 Pi qqq t]}, {t, 0, 1}, ColorFunction -> "ValentineTones", PlotStyle -> Thickness[0.02], Boxed -> False, Axes -> False];
 % f[3, 2]
 % f[3, 8]
 % f[8, 3]
-% 1, 0 czy 0, 1? Wydaje mi się, że my mamy to na odwrót
-% Węzeł $T_{0, 0}$ leży na powierzchni torusa i~jest ściągalny do punktu, zaś $T_{1, 0}$ to nawinięta toroidalnie pętla.
 
 Okazuje się, że innych obiektów już nie ma.
 
 \begin{proposition}
     Niech $K$ będzie splotem torusowym takim, że żadne z jego ogniw nie jest niewęzłem, czyli postaci $T_{1, 0}$.
-    % T 1,0 czy T 0,1?
     Wtedy $K = T_{p, q}$ dla pewnych całkowitch $p, q$.
 \end{proposition}
 
