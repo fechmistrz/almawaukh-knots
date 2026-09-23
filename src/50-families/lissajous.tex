@@ -93,7 +93,11 @@ To nakłada ograniczenia na wielomian Alexandera.
     Szczegóły ich pracy są dla nas nieistotne; nam wystarczy zauważyć, że stąd już wynika kwadratowość wielomianu $\alexander_K(t)$ w~pierścieniu $(\Z/2\Z)[t]$.
 
     \paragraph{Przypadek II}
-    Jeżeli jedna z częstotliwości jest nieparzysta, to z faktów~\ref{prp:lissajous_two_periodic} oraz~\ref{prp:murasugi_periodic} (dla $n=2^1$ oraz $\lambda = 1$) dostajemy równość
+    Jeżeli jedna z częstotliwości jest parzysta, to węzeł $K$ jest 2-okresowy (fakt~\ref{prp:lissajous_two_periodic}).
+    Niech $J$ będzie jego węzłem ilorazowym.
+    Z faktu~\ref{prp:murasugi_periodic} (dla $n=2^1$ oraz $\lambda = 1$) dostajemy kongruencję $\alexander_K(t) \equiv t^k \alexander_J(t)^2 \mod 2$ dla pewnej liczby całkowitej $k$: znak $\pm$ nie ma znaczenia modulo $2$, zaś czynnik $1 + t + \ldots + t^{\lambda-1}$ jest równy $1$.
+    Wielomiany $\alexander_K$ oraz $\alexander_J$ są symetryczne w~zmiennych $t$ i~$1/t$, a~$\alexander_J \not\equiv 0 \mod 2$, bo $\alexander_J(1) = \pm 1$.
+    Zatem $t^k = t^{-k}$, czyli $k = 0$ i~mamy równość
     \begin{equation}
 \label{eqn:lissajous_squared}%
         \alexander_K(t) \equiv \alexander^2_{J}(t) \mod 2,
@@ -160,9 +164,7 @@ Wielomian $\alexander(t) = A_0 + A_1(t+1/t) + \cdots + A_n(t^n + 1/t^n)$ jest kw
 \begin{proof}
     Nietrywialny węzeł o dwóch mostach nie może być silnie dodatnio achiralny (Hartley, Kawauchi \cite{hartley1979}).
     Jeśli jest węzłem Lissajous, jedna z jego częstotliwości okazuje się być parzysta.
-    Wtedy jego faktor jest trywialny i~kongruencja~\ref{eqn:lissajous_squared} daje $\alexander_K(t) \equiv 1 \mod 2$.
-\index{faktor}%
-    % TODO: co to jest faktor? To jedyne miejsce w całej książce, gdzie używa się tego słowa. factor?
+    Wtedy jego węzeł ilorazowy jest trywialny i~kongruencja~\ref{eqn:lissajous_squared} daje $\alexander_K(t) \equiv 1 \mod 2$.
 \end{proof}
 
 %=% Lamm
