@@ -19,7 +19,13 @@ endef
 
 all: knot-theory.pdf
 
-all-fallback: src/00-meta-latex/new_diagrams.tex src/90-appendix/table_invariants_summary.tex src/90-appendix/table_invariants.tex tools/knotinfo_parsed.json
+# Cloning without --recurse-submodules leaves src/merridew empty, which
+# breaks every target below that shells out to a script in it. Rebuild it
+# on demand instead of making that a manual setup step.
+src/merridew/createspace.cls:
+	git submodule update --init
+
+all-fallback: src/00-meta-latex/new_diagrams.tex src/90-appendix/table_invariants_summary.tex src/90-appendix/table_invariants.tex tools/knotinfo_parsed.json | src/merridew/createspace.cls
 	mkdir -pv build
 	cd src && max_print_line=10000 lualatex -shell-escape -halt-on-error knot-theory.tex;
 	cd src && bibtex knot-theory && python3 merridew/fix_bbl_authors.py knot-theory.bbl ;
@@ -34,10 +40,10 @@ test:
 clean:
 	rm -rf tmp *.pdf || true
 
-lint:
+lint: | src/merridew/createspace.cls
 	./tools/make_lint.sh
 
-knot-theory.pdf: src/knot-theory.tex src/knot_theory.bib src/*/*.tex
+knot-theory.pdf: src/knot-theory.tex src/knot_theory.bib src/*/*.tex | src/merridew/createspace.cls
 	rsync -avR --delete src/./ src-build/
 	cd src-build && sed -r -e 's/ FJOURNAL/ XJOURNAL/g' -e 's/ JOURNAL/ FJOURNAL/g' "knot_theory.bib" | sed -r 's/XJOURNAL/JOURNAL/g' > "tmp-knot_theory.bib" && mv tmp-knot_theory.bib knot_theory.bib
 	cd src-build && lualatex -shell-escape -halt-on-error knot-theory.tex && bibtex knot-theory && python3 merridew/fix_bbl_authors.py knot-theory.bbl ;
@@ -46,7 +52,7 @@ knot-theory.pdf: src/knot-theory.tex src/knot_theory.bib src/*/*.tex
 	cp src-build/*pdf .
 	rm -rf src-build
 
-draft-knot-theory.pdf: src/knot-theory.tex src/knot_theory.bib src/*/*.tex
+draft-knot-theory.pdf: src/knot-theory.tex src/knot_theory.bib src/*/*.tex | src/merridew/createspace.cls
 	$(call make_pdf,draft)
 	$(call make_bib,draft)
 	cp ${MY_TMP_DIR}/${$@_precision}/build/knot-theory.pdf draft-knot-theory.pdf
