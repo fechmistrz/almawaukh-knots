@@ -23,7 +23,7 @@ def generate_tikz(diagram):
         epsilon = 0
         start_angle = int(start * 180.0 / DIAGRAM_ORDER)
         end_angle   = int(end   * 180.0 / DIAGRAM_ORDER)
-        print(f"    \draw[thick, first_colour] ({start_angle}:5) [in={180 + epsilon + end_angle}, out={180 - epsilon + start_angle}] to ({end_angle}:5);")
+        print(rf"    \draw[thick, first_colour] ({start_angle}:5) [in={180 + epsilon + end_angle}, out={180 - epsilon + start_angle}] to ({end_angle}:5);")
     print(r"    \draw[very thick] (-0, 0) circle (5);")
     print(r"\end{knot}")
     print(r"\end{tikzpicture}")
