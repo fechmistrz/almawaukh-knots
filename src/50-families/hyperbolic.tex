@@ -1,6 +1,4 @@
 
-% TODO: whole file needs a serious refactor
-
 \section{Węzły hiperboliczne}
 \index{węzeł!hiperboliczny|(}%
 \label{sec:hyperbolic}%
@@ -36,6 +34,7 @@ Jeśli wiemy, czym jest 3-przestrzeń hiperboliczna $\mathbb H^3$, możemy używ
     Węzeł $K$ taki, że istnieje dyskretna oraz beztorsyjna grupa izometrii $\Gamma$ izomorficzna z~$\pi_1(S^3 \setminus K)$ taka, że $S^3 \setminus K = \mathbb H^3 / \Gamma$, nazywamy hiperbolicznym.
 \end{definition}
 
+\subsection{Trychotomia Thurstona}
 Nie pamiętamy kto, gdzie i kiedy, ale ktoś gdzieś i kiedyś opowiedział nam, że Thurston podejrzewał, że każda 3-rozmaitość rozkłada się wzdłuż sfer i~nieściśliwych torusów na części wyposażone w~jedną z~ośmiu kanonicznych geometrii:
 \begin{itemize}
 \item sferyczną $S^3$, albo euklidesową $E^3$, albo hiperboliczną $H^3$,
@@ -72,22 +71,14 @@ Thurston pisze, że Riley przypuszczał to samo z pomocą komputera na podstawie
     Stąd wynika już trychotomia.
 \end{proof}
 
-Węzły hiperboliczne stanowią najliczniejszą i~najmniej zrozumianą rodzinę węzłów.
-Sam Nead, użytkownik portalu MathOverflow napisał, że kryterium Thurstona dzięki maszynerii JSJ oraz pracom innych osób można wysłowić algebraicznie.
+\subsection{Kryteria hiperboliczności}
+Węzły hiperboliczne stanowią najliczniejszą, ale też najmniej zrozumianą rodzinę węzłów.
+Sam Nead, użytkownik portalu MathOverflow napisał, że maszyneria JSJ\footnote{rozkład Jaco-Shalena-Johannsona} oraz prace innych osób pozwalają wysłowić algebraicznie kryterium Thurstona.
 \index{rozkład Jaco-Shalena-Johannsona}%
+Podajemy trzy równoważne postaci, od najbardziej konkretnej do w~pełni algebraicznej.
 
 \begin{proposition}
-    % There is a topological criterion due to Thurston.  Using the JSJ machine (and work of many others) this criterion can also be phrased algebraically.  I'll essay these below.  Please note that the situation is much simpler for knots.  To answer your question most directly, here is the desired reference to Wikipedia.
-    % http://en.wikipedia.org/wiki/Hyperbolic_link
-    % This page refers to the books of Colin Adams and William Thurston.  Both are excellent.
-    % Now, here is Thurston's criterion. (EDIT: exposition improved after reading Bruno Martelli's answer.)
-    % Suppose that $L$ is the link and $X$ is the link complement.  Suppose $\pi = \pi_1(X)$. We assume the following properties (and each property assumes the proceeding ones). $\newcommand{\ZZ}{\mathbb{Z}}$
-    %  - $L$ is not a split link.  Equivalently, $X$ is contains no essential two-sphere.  Equivalently, $\pi$ is not a free product.
-    %  - $L$ is not the unknot. Equivalently, $X$ contains no essential disk. Equivalently, $\pi$ is not $\ZZ$.
-    %  - $L$ has no component that is an "undisturbed satellite knot".  Equivalently, $X$ contains no essential torus.
-    %  - $L$ is not a torus knot. Equivalently, $X$ contains no essential annulus. These last two topological properties are equivalent to $\pi$ not containing a copy of $\ZZ^2$.
-    % Then $X$ admits a hyperbolic structure.
-    Niech $L$ będzie splotem, który nie rozszczepia się, nie jest niewęzłem, nie posiada wśród ogniw niezakłóconego węzła satelitarnego\footnote{,,undisturbed satellite knot''} oraz nie jest węzłem torusowym.
+    Niech $L$ będzie takim splotem, który nie rozszczepia się, nie jest niewęzłem, nie posiada wśród ogniw niezakłóconego węzła satelitarnego (\emph{,,undisturbed satellite knot''}) oraz nie jest węzłem torusowym.
 \index{splot!rozszczepialny}%
     Wtedy $L$ jest hiperboliczny.
 \end{proposition}
@@ -106,6 +97,7 @@ Sam Nead, użytkownik portalu MathOverflow napisał, że kryterium Thurstona dzi
     Patrz \url{https://mathoverflow.net/a/153327}.
 \end{proof}
 
+\subsection{Przykłady rodzin węzłów hiperbolicznych}
 Czas na podanie jakichś przykładów węzłów hiperbolicznych, za Adamsem \cite{adams2005}.
 
 \begin{proposition}
@@ -193,6 +185,7 @@ Z kryterium Thurstona mamy prosty wniosek:
     Każdy węzeł złożony jest satelitarny, patrz przykład \ref{swallow_follow_torus}.
 \end{proof}
 
+\subsection{Ile jest węzłów hiperbolicznych?}
 Prawie każdy węzeł pierwszy o~mniej niż 17 skrzyżowaniach jest hiperboliczny, na 32 wyjątki składa się 12 węzłów torusowych oraz 20 satelitów trójlistnika.
 \label{page:nonhyperbolic_below_16}%
 Te ostatnie mają co najmniej 13 skrzyżowań.
@@ -213,7 +206,8 @@ Analizując ciągi \href{https://oeis.org/A051764}{A051764}, \href{https://oeis.
 \normalsize
 \end{figure}
 
-W pracy \cite{malyutin2016} Malutin pokazał jednak, że to przypuszczenie jest sprzeczne z~wieloma innymi starymi hipotezami teorii węzłów:~\ref{con:malyutin1} --~\ref{con:malyutin4}.
+Ta obserwacja o granicy równej $1$ jest jednak tylko przypuszczeniem, i~to przypuszczeniem, które -- jak zobaczymy -- trudno nawet precyzyjnie wysłowić.
+W pracy \cite{malyutin2016} Malutin pokazał, że jest ono sprzeczne z~wieloma innymi starymi hipotezami teorii węzłów:~\ref{con:malyutin1} --~\ref{con:malyutin4}.
 \index[persons]{Malutin, Andriej}%
 
 \begin{conjecture}
@@ -234,7 +228,6 @@ Lackenby \cite{lackenby2014} pokazał, że jeśli $K$ jest satelitą z~towarzysz
 \index[persons]{Lackenby, Marc}%
 
 \begin{conjecture}
-%label{con:malyutin3}
     Węzeł złożony ma większy (w słabszej wersji: nie mniejszy) indeks skrzyżowaniowy niż jego składniki.
     \index{węzeł!pierwszy}
 \end{conjecture}
@@ -258,41 +251,7 @@ Pokazał w~niej, że jeśli oznaczymy liczbę splotów pierwszych i~nierozszczep
     \liminf_{n \to \infty} \frac{H_n}{P_n} < 1 - 10^{-13}.
 \end{equation}
 
-Purcell \cite[s. 66]{purcell2020} w formie ćwiczenia proponuje znaleźć rodzinę zupełnych struktur hiperbolicznych na nakłutym torusie oraz czterokrotnie nakłutej sferze.
-Podobna elastyczność nie występuje jednak w~przestrzeniach wyższych wymiarów.
-Z~twierdzenia o~sztywności, w~wersji algebraicznej:
-
-\begin{theorem}[Mostow-Prasad]
-    \index{twierdzenie!o sztywności}
-    Niech $\Gamma_1, \Gamma_2$ będą dyskretnymi podgrupami grupy izometrii $\mathbb H^n$ dla $n \ge 3$ takimi, że ilorazy $\mathbb H^n/\Gamma_i$ mają skończone objętości.
-    Załóżmy też, że istnieje izomorfizm grup $\varphi \colon \Gamma_1 \to \Gamma_2$.
-    Wtedy podgrupy $\Gamma_1, \Gamma_2$ są sprzężone.
-\end{theorem}
-\index{twierdzenie!Mostowa-Prasada}
-
-albo geometrycznej:
-
-\begin{theorem}[Mostow-Prasad]
-    Niech $M_1, M_2$ będą zupełnymi, hiperbolicznymi rozmaitościami o skończonych objętościach.
-    Wtedy każdy izomorfizm grup podstawowych $\varphi \colon \pi_1(M_1) \to \pi_1(M_2)$ realizowany jest jednoznacznie przez izometrię.
-\end{theorem}
-
-wynika, że jeśli znaleźliśmy jakąś zupełną strukturę hiperboliczną na dopełnieniu splotu, to innych już nie ma.
-
-\begin{proof}[Niedowód]
-\index[persons]{Benedetti, Riccardo}%
-\index[persons]{Mostow, George}%
-\index[persons]{Petronio, Carlo}%
-\index[persons]{Prasad, Gopal}%
-\index[persons]{Thurston, William}%
-Pierwsi byli Mostow \cite{mostow1973} oraz Prasad \cite{prasad1973}.
-    Thurston naszkicował rozumowanie w~sekcji 5.9 swoich notatek, na bazie których powstała później książka \cite{thurston1997}.
-    Inny tok myślenia można znaleźć w~podręczniku Benedettiego, Petronio \cite[rozdział C]{benedetti1992}.
-\end{proof}
-
-Twierdzenie Mostowa-Prasada pozwala nam na wprowadzenie nowych niezmienników splotów hiperbolicznych: wystarczy wziąć dowolny geometryczny niezmiennik dopełnienia węzła.
-Najważniejszym z~nich wydaje się być objętość.
-
+\subsection{Objętość hiperboliczna jako niezmiennik}
 \input{50-families/hyperbolic_volume}
 
 \subsection{Symetrie węzłów hiperbolicznych}
