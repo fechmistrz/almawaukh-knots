@@ -3,7 +3,7 @@
 def one_entry(crossings, index)
     puts %q"\begin{minipage}[b]{.18\linewidth}"
     puts %q"\centering"
-    puts "\\includegraphics[width=\\linewith]{../images/#{crossings}_#{index}.png}"
+    puts "\\includegraphics[width=\\linewidth]{../images/#{crossings}_#{index}.png}"
     puts "\\subcaption{$#{crossings}_{#{index}}$}"
     puts %q"\end{minipage}"
 end

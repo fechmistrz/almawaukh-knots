@@ -3,7 +3,7 @@
 def generate_entry(crossings, index):
     print (r"\begin{minipage}[b]{.18\linewidth}")
     print (r"\centering")
-    print ("\\includegraphics[width=\\linewith]{{../images/virtual_{0}_{1}.png}}".format(crossings, index))
+    print ("\\includegraphics[width=\\linewidth]{{../images/virtual_{0}_{1}.png}}".format(crossings, index))
     print ("\\subcaption{{${0}.{{{1}}}$}}".format(crossings, index))
     print (r"\end{minipage}")
 
