@@ -29,33 +29,6 @@ pdflatex knot-theory.tex
 ```
 
 ## Do zrobienia
-Naprawić `./src/merridew/bibliography_sort.py --bib src/knot_theory.bib`:
-```
-WARNING: Found unexpected fields: ['archiveprefix', 'eprint', 'primaryclass'] in brittenham06 (@misc)
-WARNING: Found unexpected fields: ['archiveprefix', 'eprint', 'primaryclass'] in cha18 (@misc)
-WARNING: Found unexpected fields: ['archiveprefix', 'eprint', 'primaryclass'] in chmutov05 (@misc)
-WARNING: Found unexpected fields: ['archiveprefix', 'eprint', 'primaryclass'] in gruber03 (@misc)
-WARNING: Found unexpected fields: ['archiveprefix', 'eprint', 'primaryclass'] in kneissler97 (@misc)
-WARNING: Found unexpected fields: ['archiveprefix', 'eprint', 'primaryclass'] in malyutin16 (@misc)
-WARNING: Found unexpected fields: ['archiveprefix', 'eprint', 'primaryclass'] in malyutin19 (@misc)
-WARNING: Found unexpected fields: ['archiveprefix', 'eprint', 'primaryclass'] in musick12 (@misc)
-WARNING: Found unexpected fields: ['archiveprefix', 'eprint', 'primaryclass'] in purcell20 (@misc)
-WARNING: Found unexpected fields: ['archiveprefix', 'eprint', 'primaryclass'] in stoimenow07 (@misc)
-WARNING: Found unexpected fields: ['archiveprefix', 'eprint', 'primaryclass'] in zirbel06 (@misc)
-
-WARNING: Found unexpected fields: ['copyright', 'keywords', 'publisher'] in schleimer21 (@misc)
-WARNING: Found unexpected fields: ['eprint'] in zanellati16 (@article)
-WARNING: Found unexpected fields: ['fjournal', 'journal'] in lambropoulou97 (@incollection)
-WARNING: Found unexpected fields: ['fjournal', 'journal'] in murakami90 (@inproceedings)
-WARNING: Found unexpected fields: ['fjournal', 'journal'] in perko82 (@inproceedings)
-WARNING: Found unexpected fields: ['fjournal', 'journal'] in scharlemann98 (@incollection)
-WARNING: Found unexpected fields: ['volume'] in cerf98 (@misc)
-```
-
 Zaimplementować aspell w make test.
 
 Wyjaśnić, jaka jest różnica między dowodem i niedowodem.
-
-I would advise to use the @misc type, as it officially allows the fields eprint, eprintclass, and eprinttype, as opposed to @unpublished, and @online. @article requires journaltitle, as @Jonathan pointed out. See biblatex documentation (2.1 Entry Types and 3.12. Electronic Publishing Information) – https://tex.stackexchange.com/questions/3833/how-to-cite-an-article-from-arxiv-using-bibtex
-
-Cytowania z ArXiV nie wyświetlają hiperłącza w bibliografii, poprawić styl. (Usunąć In: oraz Pages: na rzecz W: oraz Stron:)
