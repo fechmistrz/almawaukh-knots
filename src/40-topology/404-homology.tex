@@ -1,6 +1,7 @@
 % początek psot
 
 \section{Homologie Chowanowa}
+\label{sec:khovanov}%
 
 Reszta książki nie zależy od tej sekcji, więc Czytelnik nie dozna większego uszczerbku na wiedzy, jeśli pominie tę i kilka następnych stron (na przykład dlatego, że nie zna kompleksów łańcuchowych, różniczek, grup homologii, i tak dalej).
 Homologię Chowanowa nazywa się kategoryfikacją wielomianu Jonesa.
@@ -148,6 +149,19 @@ Kronheimer, Mrówka \cite{kronheimer2011} pokazali:
     Potem dowodzą, że ta homologia jest izomorficzna z~instantonową homologią Floera szwowego dopełnienia węzła, o~której wiadomo, że wykrywa niewęzeł.
 \index{homologia!Floera}%
 \end{proof}
+
+Z~homologii Chowanowa można wyciągnąć jeszcze jeden niezmiennik, który zasługuje na wzmiankę, choć nie omówimy go dokładnie.
+Rasmussen \cite{rasmussen2010} zauważył, że deformacja homologii Chowanowa zaproponowana przez Lee \cite{lee2005} pozwala każdemu węzłowi $K$ przypisać parzystą liczbę całkowitą $s(K)$.
+\index{niezmiennik!Rasmussena}%
+\index[persons]{Rasmussen, Jacob}%
+\index[persons]{Lee, Eun Soo}%
+Jest to niezmiennik relacji zgodności (patrz sekcja~\ref{sec:slice}): dodaje się przy sumie spójnej i~znika na węzłach gładko plastrowych.
+Co więcej, $|s(K)| \le 2g_4(K)$, gdzie \emph{genus plastrowy} $g_4(K)$ to najmniejszy genus zorientowanej powierzchni gładko zanurzonej w~kuli $B^4$, której brzegiem jest $K$.
+\index{genus!plastrowy}%
+Dla węzłów dodatnich, w~szczególności dla węzłów torusowych $T_{p, q}$ z~$p, q > 0$, zachodzi równość $|s(K)| = 2\genus(K)$.
+Skoro liczba gordyjska ogranicza genus plastrowy z~góry, $\unknotting(K) \ge g_4(K)$, to daje to nowy dowód hipotezy Milnora (fakt~\ref{prp:torus_unknotting_number}).
+Definicji $s(K)$ nie podajemy: wymaga filtracji na homologii Lee, a~nam zabrakło sił już przy różniczce Chowanowa.
+Zainteresowany Czytelnik znajdzie ją w~pracy Rasmussena \cite{rasmussen2010}.
 
 \index{homologia!Chowanowa|)}
 
