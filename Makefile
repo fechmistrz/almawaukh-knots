@@ -59,6 +59,7 @@ all-fallback: src/00-meta-latex/new_diagrams.tex src/00-meta-latex/citation_coun
 
 test:
 	python3 tools/verify_bib_authors.py --bib src/knot_theory.bib
+	./tools/spellcheck.sh
 
 clean:
 	rm -rf tmp src-build *.pdf || true
