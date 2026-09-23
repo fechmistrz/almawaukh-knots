@@ -12,7 +12,7 @@ FIELDS = [
 	("signature", "$\\sigma$", None),
 	# ("arf_invariant", "Arf", None),
 	("conway_polynomial_vector", "$\\conway$", lambda x: "+".join(x.replace("{", "").replace("}", "").replace(" ", "").replace('"', "").split(",")[2:]).replace("+-", "-").replace("]", "")),
-	("symmetry_type", "symetria", lambda x: {"reversible": "odwracalny", "chiral": "chiralny", "fully amphicheiral": "całkowicie", "positive amphicheiral": "+zwierciadlany", "negative amphicheiral": "-zwierciadlany"}.get(x, x + "???")),
+	("symmetry_type", "symetria", lambda x: {"reversible": "odwracalny", "chiral": "chiralny", "fully amphicheiral": "całkowicie zwierciadlany", "positive amphicheiral": "+zwierciadlany", "negative amphicheiral": "-zwierciadlany"}.get(x, x + "???")),
 	("alternating", "alt.", lambda x: {True: "tak", False: "nie"}.get(x, "???")),
 ]
 
