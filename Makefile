@@ -1,5 +1,5 @@
 SHELL = /bin/bash
-LUALALATEX_FLAGS = -shell-escape -halt-on-error
+LUALATEX_FLAGS = -shell-escape -halt-on-error
 .PHONY: all all-fallback test clean lint
 .DEFAULT_GOAL := all
 # We generate .tex/.json/.pdf files with our own recipes below; none of
@@ -10,11 +10,11 @@ LUALALATEX_FLAGS = -shell-escape -halt-on-error
 all: knot-theory.pdf
 
 define lualatex_pass
-	cd $(1) && max_print_line=10000 lualatex $(LUALALATEX_FLAGS) knot-theory.tex;
+	cd $(1) && max_print_line=10000 lualatex $(LUALATEX_FLAGS) knot-theory.tex;
 endef
 
 define bibtex_pass
-	cd $(1) && bibtex knot-theory && python3 merridew/fix_bbl_authors.py knot-theory.bbl ;
+	cd $(1) && bibtex knot-theory && python3 merridew/fix_bbl_authors.py knot-theory.bbl;
 endef
 
 knot-theory.pdf: src/knot-theory.tex src/knot_theory.bib src/00-meta-latex/new_diagrams.tex src/90-appendix/table_invariants_summary.tex src/90-appendix/table_invariants.tex $(wildcard src/*/*.tex) | src/merridew/createspace.cls
