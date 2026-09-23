@@ -10,7 +10,7 @@ def extract_authors(bib_file):
         for raw_line in f:
             if "AUTHOR" not in raw_line:
                 continue
-            authors_with_and = re.sub("^ *AUTHOR *= *\{(.*)\},$", r"\1", raw_line.strip())
+            authors_with_and = re.sub(r"^ *AUTHOR *= *\{(.*)\},$", r"\1", raw_line.strip())
             authors.extend(authors_with_and.split(" and "))
     return authors
 
