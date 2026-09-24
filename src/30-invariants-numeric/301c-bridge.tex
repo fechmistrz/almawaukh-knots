@@ -93,6 +93,27 @@ Wiemy o tym z książki Livingstona \cite[s. 146]{livingston1993}.
     Duble są 1-gordyjskie: rysunek 7.12 w książce Livingstona \cite[s. 146]{livingston1993} świetnie to pokazuje.
 \end{proof}
 
+% DICTIONARY;meridional rank;ranga południkowa;-
+Z~liczbą mostową związana jest jeszcze jedna liczba, zdefiniowana grupowo.
+Rangą południkową $\mu(L)$ splotu $L$ nazywamy najmniejszą liczbę południków, czyli elementów grupy $\pi_1(S^3 \setminus L)$ reprezentowanych przez małe okręgi okrążające splot, które generują całą tę grupę.
+\index{ranga!południkowa}%
+W~prezentacji Wirtingera dla diagramu z~$\bridge L$ mostami generatorem może być jeden południk na most, więc $\mu(L) \le \bridge L$.
+Cappell i~Shaneson zapytali o~węzły, czy zawsze zachodzi równość \cite[problem 1.11]{kirby1997}; K3 \cite[problem 1.18]{baykur2026} stawia to pytanie dla dowolnych splotów.
+\index[persons]{Cappell, Sylvain}%
+\index[persons]{Shaneson, Julius}%
+
+\begin{conjecture}[o~randze południkowej]
+\index{hipoteza!o randze południkowej}%
+    Niech $L$ będzie splotem.
+    Wtedy $\mu(L) = \bridge L$.
+\end{conjecture}
+
+Ranga południkowa nie jest wyznaczona przez sam typ topologiczny dopełnienia.
+Niech $W_n$ oznacza splot Whiteheada, w~którym wykonano $|n| \ge 2$ dodatkowych skrętów.
+Dopełnienia $W_n$ i~$W_0$ są homeomorficzne, ale homeomorfizm ten nie przeprowadza południków na południki: mamy $\mu(W_0) = \bridge W_0 = 2$, natomiast $\mu(W_n) = \bridge W_n = 3$.
+Podobne pytanie: jeśli istnieje epimorfizm $\pi_1(S^3 \setminus L_1) \to \pi_1(S^3 \setminus L_2)$ przeprowadzający południki splotu $L_1$ na południki splotu $L_2$, to czy $\bridge L_1 \ge \bridge L_2$?
+Z~takiego epimorfizmu wynika $\mu(L_1) \ge \mu(L_2)$, więc odpowiedź przeczącą dałby kontrprzykład do hipotezy o~randze południkowej.
+
 % Podobnie nie ma zależności między liczbą mostową oraz genusem.
 % \index{genus}%
 % TODO: zamiast tego, z każdego miejsca dolinkować znowu do \subsection{Podsumowanie}

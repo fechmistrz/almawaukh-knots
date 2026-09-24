@@ -1,0 +1,41 @@
+
+\subsection{Objętość i niezmienniki kombinatoryczne}
+Objętość hiperboliczna wydaje się powiązana z~niezmiennikami, które z~geometrią hiperboliczną nie mają nic wspólnego z~definicji.
+Poniższe hipotezy pochodzą z~listy K3 \cite[problemy 1.27 i~1.29]{baykur2026}.
+
+\paragraph{Hipoteza Vol-Det.}
+Wyznacznik (definicja \ref{def:determinant}) łatwo obliczyć, w~przeciwieństwie do objętości.
+Zauważył to Dunfield: dla alternujących węzłów hiperbolicznych wyznacznik i~objętość są ze sobą skorelowane.
+\index[persons]{Dunfield, Nathan}%
+Champanerkar, Kofman, Purcell \cite{champanerkar2016} przypuszczają, że:
+
+\begin{conjecture}[Vol-Det]
+\index{hipoteza!Vol-Det}%
+    Niech $K$ będzie alternującym węzłem hiperbolicznym.
+    Wtedy $\volume K < 2 \pi \log \det K$.
+\end{conjecture}
+
+Ci sami autorzy pokazali, że stałej $2\pi$ nie można zmniejszyć, i~zapytali o~mocniejszą nierówność $\volume K < 2 \pi \log \operatorname{rank} \widetilde{Kh}(K)$ dla dowolnego węzła hiperbolicznego, gdzie po prawej stronie stoi łączny rząd zredukowanej homologii Chowanowa.
+\index{homologia!Chowanowa}%
+\index[persons]{Champanerkar, Abhijit}%
+\index[persons]{Kofman, Ilya}%
+\index[persons]{Purcell, Jessica}%
+Burton \cite{burton2018} sprawdził pierwszą nierówność dla węzłów dwumostowych, domknięć alternujących 3-warkoczy oraz pewnej nieskończonej rodziny alternujących 4-warkoczy.
+Champanerkar, Kofman, Lalín \cite{champanerkar2019} udowodnili ją dla innych nieskończonych rodzin węzłów alternujących metodami teorii liczb, wykorzystując miarę Mahlera pewnych wielomianów.
+\index[persons]{Burton, Stephan}%
+\index[persons]{Lalín, Matilde}%
+
+\paragraph{Hipoteza objętości.}
+Kaszajew \cite{kashaev1996} przypuścił, że objętość węzła hiperbolicznego można odczytać z~asymptotyki pewnych niezmienników zdefiniowanych przy użyciu dylogarytmu kwantowego.
+H.~Murakami i~J.~Murakami \cite{murakami2001} zauważyli, że są to wartości kolorowanych wielomianów Jonesa $J_n(L; q)$ w~pierwiastkach z~jedynki; kolorowanych wielomianów Jonesa tu nie definiujemy.
+Otrzymujemy hipotezę: dla hiperbolicznego splotu $L$ zachodzi
+\begin{equation}
+    \frac{1}{2\pi} \volume L = \lim_{n \to \infty} \frac{1}{n} \log \left| J_n\left(L; e^{2 \pi i / n}\right) \right|.
+\end{equation}
+\index{hipoteza!objętości}%
+\index[persons]{Murakami, Hitoshi}%
+\index[persons]{Murakami, Jun}%
+Sprawdzono ją m.in. dla węzłów hiperbolicznych o~co najwyżej siedmiu skrzyżowaniach oraz -- w~wersji z~objętością uproszczoną, którą Murakami i~Murakami sformułowali także dla węzłów niehiperbolicznych -- dla węzłów torusowych.
+Gdyby była prawdziwa, kolorowane wielomiany Jonesa wykrywałyby niewęzeł, więc byłaby silniejsza od hipotezy \ref{con:jones}, która pyta o~to samo dla zwykłego wielomianu Jonesa.
+
+% Koniec podsekcji Objętość i niezmienniki kombinatoryczne
