@@ -14,13 +14,13 @@ Sploty torusowe wprowadza króciutko Kawauchi \cite[s. 26-27]{kawauchi1996}.
     Splot, który leży na powierzchni trywialnego torusa, nazywamy torusowym.
 \end{definition}
 
-Na walcu $S^2 \times [0,1]$, którego podstawa leży w~płaszczyźnie $xy$, rozpatrzmy $r$ skierowanych odcinkach (dla $k = 0, 1, \ldots, r - 1$) o~końcach w~punktach
+Na walcu $S^1 \times [0,1]$, którego podstawa leży w~płaszczyźnie $xy$, rozpatrzmy $p$ skierowanych odcinków (dla $k = 0, 1, \ldots, p - 1$) o~końcach w~punktach
 \begin{align*}
-    \left(\cos \frac{2k \pi}{r}, \sin \frac{2k\pi}{r}, 0 \right), \quad
-    \left(\cos \frac{2k \pi}{r}, \sin \frac{2k\pi}{r}, 1 \right).
+    \left(\cos \frac{2k \pi}{p}, \sin \frac{2k\pi}{p}, 0 \right), \quad
+    \left(\cos \frac{2k \pi}{p}, \sin \frac{2k\pi}{p}, 1 \right).
 \end{align*}
-Przekręćmy górną podstawę walca wokół osi $z$ o~skierowany kąt $2\pi q / r$ oraz utożsammy ze sobą pary punktów $(x, y, 0) \sim (x, y, 1)$,
-Uzyskaliśmy splot torusowy $T_{q, r}$: okrąża on $q$ razy rdzeń torusa i~$p$ razy jego oś symetrii obrotowej.
+Przekręćmy górną podstawę walca wokół osi $z$ o~skierowany kąt $2\pi q / p$ oraz utożsamimy ze sobą pary punktów $(x, y, 0) \sim (x, y, 1)$.
+Uzyskaliśmy splot torusowy $T_{p, q}$: okrąża on $q$ razy rdzeń torusa i~$p$ razy jego oś symetrii obrotowej.
 Węzeł $T_{p, q}$ posiada następującą parametryzację:
 \[
     x = (2+\cos q \phi) \cos p \phi, \quad
@@ -48,20 +48,18 @@ Poniżej przedstawiamy trzy węzły torusowe.
     \end{minipage}
 \end{figure}
 
-Murasugi \cite[s. 135]{murasugi1996} pisze, że będzie nazywać okrąg leżący na powierzchni torusa $T_{0, 0}$ (chociaż według naszej parametryzacji to byłby punkt), natomiast (do napisania!).
+Murasugi \cite[s. 135]{murasugi1996} pisze, że będzie nazywać okrąg leżący na powierzchni torusa $T_{0, 0}$ (chociaż według naszej parametryzacji to byłby punkt), natomiast okrąg $m$, użyty wcześniej do zbudowania trywialnego torusa -- czyli nawiniętą toroidalnie pętlę -- $T_{1, 0}$.
+Zaznacza przy tym, że żaden z tych dwóch okręgów nie jest właściwym splotem torusowym w~opisanym wyżej sensie; to jedynie rozszerzenie notacji $T_{q, r}$ na przypadek $r = 0$.
 % todo: http://www.matematyka.wroc.pl/leksykonmatematyczny/torus
 % f[ppp_, qqq_] := ParametricPlot3D[{Cos[2 Pi ppp t] (2 + Cos[2 Pi qqq t]), (2 + Cos[2 Pi qqq t]) Sin[2 Pi ppp t], -Sin[2 Pi qqq t]}, {t, 0, 1}, ColorFunction -> "ValentineTones", PlotStyle -> Thickness[0.02], Boxed -> False, Axes -> False];
 % f[3, 2]
 % f[3, 8]
 % f[8, 3]
-% 1, 0 czy 0, 1? Wydaje mi się, że my mamy to na odwrót
-% Węzeł $T_{0, 0}$ leży na powierzchni torusa i~jest ściągalny do punktu, zaś $T_{1, 0}$ to nawinięta toroidalnie pętla.
 
 Okazuje się, że innych obiektów już nie ma.
 
 \begin{proposition}
     Niech $K$ będzie splotem torusowym takim, że żadne z jego ogniw nie jest niewęzłem, czyli postaci $T_{1, 0}$.
-    % T 1,0 czy T 0,1?
     Wtedy $K = T_{p, q}$ dla pewnych całkowitych $p, q$.
 \end{proposition}
 
