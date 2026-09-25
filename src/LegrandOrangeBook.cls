@@ -678,8 +678,8 @@
 
 \RequirePackage[pdfusetitle]{hyperref}
 \hypersetup{
-	pdftitle={Kombinatoryczna teoria wężów},
-	pdfauthor={Cassimir Allard}, % Author field
+	pdftitle={Kombinatoryczna teoria węzłów},
+	pdfauthor={Casimir Allard}, % Author field
 	pdfsubject={teoria węzłów}, % Subject field
 	% pdfkeywords={Keyword1, Keyword2, ...}, % Keywords
 	pdfcreator={LaTeX}, % Content creator field
