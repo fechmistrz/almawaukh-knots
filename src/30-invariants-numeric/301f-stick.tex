@@ -70,6 +70,42 @@ Górne ograniczenie można zmniejszyć o $3/2$, jeżeli $K$ jest niealternujący
     \frac{7+\sqrt{1 + 8 \crossing K}}{2} \le \stick K \le \frac{3}{2} (1 + \crossing K).
 \end{equation}
 
+% DICTIONARY;equilateral stick number;równoboczna liczba patykowa;-
+% DICTIONARY;pearl number;liczba pereł;-
+Jeśli wymagamy, by wszystkie odcinki łamanej miały tę samą długość, dostajemy równoboczną liczbę patykową; dla trójlistnika wynosi ona $6$ \cite{jin1997}.
+Z~fizyką polimerów związany jest jeszcze jeden niezmiennik.
+Naszyjnikiem z~$n$ pereł nazywamy równoboczny $n$-kąt w~$\R^3$, w~którym wokół każdego wierzchołka leży kula o~średnicy równej długości boku, a~wnętrza tych kul są parami rozłączne (to popularny model polimeru z~twardych kul).
+Liczbą pereł węzła nazywamy najmniejszą liczbę pereł naszyjnika, którego wielokąt przedstawia ten węzeł.
+Jest ona nie mniejsza niż równoboczna liczba patykowa, a~także nie większa niż długość dowolnej reprezentacji węzła w~kracie sześciennej (wystarczy umieścić kule o~promieniu $1/2$ w~wierzchołkach).
+\index{liczba!pereł}%
+Najmniejsza liczba kroków, jaką potrzebuje trójlistnik w~prostej kracie sześciennej, wynosi $24$ (Diao \cite{diao1993}).
+\index[persons]{Diao, Yuanan}%
+
+\begin{conjecture}[o~15 perłach]
+    Liczba pereł trójlistnika wynosi $15$.
+\end{conjecture}
+
+Oshiro, Maehara \cite{maehara1999} skonstruowali naszyjnik z~$15$ pereł przedstawiający trójlistnik i~przypuszczają, że jest on najmniejszy.
+\index[persons]{Maehara, Hiroshi}%
+\index[persons]{Oshiro, Ai}%
+Maehara \cite{maehara2007} udowodnił tylko, że trójlistnik wymaga co najmniej $11$ pereł.
+O~liczbie pereł innych węzłów wiadomo bardzo mało \cite[problem 1.73]{baykur2026}.
+
+% DICTIONARY;stuck;utknięty;niewęzeł
+Równoboczne wielokąty pojawiają się też w~pytaniu o~rozplątywanie.
+Zgodnie z~twierdzeniem o~linijce stolarskiej (Streinu \cite{streinu2000}, Connelly, Demaine, Rote \cite{connelly2003}) każdy płaski, nieprzecinający się wielokąt można przeprowadzić w~wypukły ciągiem takich wielokątów o~tych samych długościach boków.
+\index[persons]{Streinu, Ileana}%
+\index[persons]{Connelly, Robert}%
+\index[persons]{Demaine, Erik}%
+\index[persons]{Rote, Günter}%
+W~$\R^3$ analogiczne twierdzenie jest fałszywe dla dowolnych długości boków: istnieją ,,utknięte'' niewęzły, czyli wielokąty przedstawiające niewęzeł, których nie można rozplątać przez wielokąty o~tych samych długościach boków, już z~sześcioma bokami (Cantarella, Kusner, Sullivan \cite{cantarella1998}; Toussaint \cite{toussaint2001}; Aloupis, Ewald, Toussaint \cite{aloupis2004}).
+\index{niewęzeł!utknięty}%
+Wszystkie znane przykłady mają boki bardzo różnej długości.
+Nie wiadomo, czy istnieją równoboczne utknięte niewęzły \cite[problem 1.72]{baykur2026}.
+Przeciw temu przemawia wynik Khoi \cite{khoi2005}: objętość symplektyczna przestrzeni równobocznych $n$-kątów w~$\R^3$ jest największa wśród przestrzeni $n$-kątów o~tej samej łącznej długości, więc wielokąty równoboczne są w~tym sensie najbardziej elastyczne.
+Z~drugiej strony trudno wyobrazić sobie algorytm rozplątujący równoboczny niewęzeł.
+
+
 Liczba patykowa nie pojawia się już nigdzie w następnych rozdziałach.
 
 % https://knotinfo.math.indiana.edu/descriptions/polygon_index.html wspomina jeszcze <[6] Shonkwilker, C., "All prime knots through 10 crossings have superbridge Index <= 5. Arxiv preprint.>

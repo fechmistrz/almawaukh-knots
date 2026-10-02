@@ -46,12 +46,39 @@ Podejrzewał to Hilmar Wendt w~1937 roku, kiedy policzył liczbę gordyjską wę
 Scharlemann pokazał w \cite[wniosek 1.6]{scharlemann1998}, że liczba gordyjska jest podaddytywna, to znaczy zachodzi $\unknotting(K_1 \shrap K_2) \le \unknotting(K_1) + \unknotting(K_2)$.
 Stąd oraz z faktu \ref{prp:unknotting_one_prime} wynika, że suma dwóch $1$-gordyjskich węzłów jest $2$-gordyjska, ale od początku teorii węzłów podejrzewano dużo więcej, że liczba gordyjska jest addytywna:
 
-\begin{conjecture}
+\begin{conjecture}[obalona w~2025 roku]
 \index{hipoteza!o liczbie gordyjskiej}%
 \label{conjecture_unknotting_additive}%
     Niech $K_1, K_2$ będą węzłami.
     Wtedy $\unknotting (K_1 \shrap K_2) = \unknotting(K_1) + \unknotting(K_2)$.
 \end{conjecture}
+
+Hipoteza była wielokrotnie sprawdzana dla coraz większych klas węzłów, aż w~2025 roku Brittenham i~Hermiller \cite{brittenham2025} podali kontrprzykład.
+\index[persons]{Brittenham, Mark}%
+\index[persons]{Hermiller, Susan}%
+Znaleźli go komputerowo, badając warkocze podobnie jak przy hipotezie Bernharda-Jablana (hipoteza~\ref{con:bernhard_jablan}).
+
+\begin{proposition}[Brittenham, Hermiller]
+\index[knotslinks]{węzeł!7-1}%
+\label{prp:unknotting_not_additive}%
+    Niech $K = 7_1$ będzie węzłem $(2,7)$-torusowym, wtedy $\unknotting K = 3$.
+    Suma spójna $K$ z~jego odbiciem lustrzanym $\overline K$ spełnia $\unknotting(K \shrap \overline K) \le 5 < 6 = \unknotting K + \unknotting \overline K$.
+\end{proposition}
+
+\begin{proof}[Niedowód]
+    Autorzy pokazują diagram węzła $K \shrap \overline K$ oraz ciąg pięciu zmian skrzyżowań, który go rozwiązuje.
+    Sprawdzenie tego rachunku zostawiamy komputerowi (w~pracy \cite{brittenham2025} jest program w~Pythonie).
+\end{proof}
+
+Zauważmy, dlaczego odbicie lustrzane jest tu istotne.
+Sygnatura jest addytywna, a~dla każdego węzła zachodzi $|\sigma(K)| \le 2 \unknotting K$ \cite[s. 142]{livingston1993}.
+Dlatego jeśli $|\sigma(K_i)| = 2 \unknotting K_i$ dla $i = 1, 2$ oraz obie sygnatury mają ten sam znak, to $\unknotting(K_1 \shrap K_2) = \unknotting K_1 + \unknotting K_2$, a~równość $|\sigma| = 2 \unknotting$ zachodzi dla wielu węzłów o~małej liczbie skrzyżowań.
+Na przykład $\sigma(7_1 \shrap 7_1) = \pm 12$, więc $\unknotting(7_1 \shrap 7_1) = 6$, podczas gdy sygnatura węzła $7_1 \shrap \overline{7_1}$ jest równa zero.
+Ponieważ grupy podstawowe dopełnień $K \shrap L$ oraz $K \shrap \overline L$ są izomorficzne, wynika stąd, że grupa węzła nie wyznacza jego liczby gordyjskiej \cite{brittenham2025}.
+Ta sama praca podaje nieskończenie wiele podobnych przykładów: nierówność $\unknotting(T_{2,2k+1} \shrap \overline{T_{2,2\ell+1}}) < \unknotting T_{2,2k+1} + \unknotting T_{2,2\ell+1}$ zachodzi dla wszystkich $k, \ell \ge 3$.
+
+Ciągle otwarte jest słabsze pytanie: czy suma $n$ nietrywialnych węzłów ma liczbę gordyjską co najmniej $n$?
+Dla $n = 2$ odpowiedź jest twierdząca na mocy faktu \ref{prp:unknotting_one_prime}, dla większych $n$ nie wiemy \cite[problem 1.3]{baykur2026}.
 
 Niech $K$ będzie 1-gordyjskim węzłem o genusie 1.
 Wtedy $K$ jest dublem pewnego węzła (Scharlemann, Thompson \cite{thompson1988}, Kobayashi \cite{kobayashitsuyoshi1989}).
