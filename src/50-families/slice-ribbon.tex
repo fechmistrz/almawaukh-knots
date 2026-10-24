@@ -37,6 +37,26 @@ ale Gompf, Scharlemann i~Thompson \cite{gompf2010} zasugerowali potencjalny kont
 Nie możemy przytoczyć tu tego kontrprzykładu, gdyż korzysta z~rozmaitości szwowych, opisanych w~\cite[s. 53-59]{kawauchi1996}.
 \index{rozmaitość!szwowa}%
 
+% DICTIONARY;homotopy-ribbon;homotopijnie taśmowy;węzeł
+% DICTIONARY;handle-ribbon;uchwytowo taśmowy;węzeł
+Istnieją pojęcia pośrednie \cite[problem 1.50]{baykur2026}.
+Węzeł nazywamy homotopijnie taśmowym, jeśli ma dysk plastrowy $D \subseteq B^4$ taki, że inkluzja indukuje epimorfizm $\pi_1(S^3 \setminus K) \to \pi_1(B^4 \setminus D)$, oraz uchwytowo taśmowym, jeśli dopełnienie sąsiedztwa dysku $D$ w~$B^4$ ma rozkład na uchwyty złożony tylko z~uchwytów indeksów $0$, $1$ i~$2$.
+\index{węzeł!homotopijnie taśmowy}%
+\index{węzeł!uchwytowo taśmowy}%
+Bezpośrednio z~definicji mamy implikacje: taśmowy $\Rightarrow$ uchwytowo taśmowy $\Rightarrow$ homotopijnie taśmowy $\Rightarrow$ plastrowy, ale żadnej z~trzech odwrotnych nie potrafimy udowodnić.
+Miyazaki \cite{miyazaki1994} podał wiele przykładów węzłów, które nie są homotopijnie taśmowe (więc nie są taśmowe): pewne kombinacje liniowe węzłów algebraicznych oraz -- co słynne -- $(2,1)$-kabel ósemki, czyli kabel o~liczbie owinięć $2$ i~jednym skręceniu.
+Dla części z~tych przykładów wiemy już, że nie są nawet plastrowe: dla pewnych kombinacji węzłów algebraicznych pokazali to Hedden, Kirk, Livingston \cite{hedden2012}, a~dla kabla ósemki Dai, Kang, Mallick, Park, Stoffregen \cite{dai2024}.
+\index[persons]{Dai, Irving}%
+\index[persons]{Kang, Sungkyung}%
+\index[persons]{Mallick, Abhishek}%
+\index[persons]{Park, Junghwan}%
+\index[persons]{Stoffregen, Matthew}%
+Kabel ósemki przestał więc być kandydatem na kontrprzykład do hipotezy plastrowo-taśmowej.
+
+Nie znamy też algorytmu rozstrzygającego, czy dany węzeł jest plastrowy albo taśmowy (Casson).
+Dunfield i~Gong ogłosili wyniki komputerowego przeszukania węzłów o~co najwyżej $19$ skrzyżowaniach pod kątem węzłów taśmowych, plastrowych i~zgodności \cite[problem 1.52]{baykur2026}.
+\index[persons]{Dunfield, Nathan}%
+
 Teichner myśli\footnote{Patrz \url{https://mathoverflow.net/a/18154}.} o hipotezie plastrowo-taśmowej jako o~życzeniu, które uprościłoby pewne czterowymiarowe problemy, gdyby było prawdziwe.
 \index[persons]{Teichner, Peter}%
 
@@ -44,3 +64,26 @@ Teichner myśli\footnote{Patrz \url{https://mathoverflow.net/a/18154}.} o hipote
 
 % koniec podsekcji węzły taśmowe
 
+\subsubsection{Zgodność taśmowa}
+% DICTIONARY;ribbon concordance;zgodność taśmowa;-
+Zgodność, którą zdefiniowaliśmy wcześniej, można zawęzić.
+Mówimy, że węzeł $K_1$ jest taśmowo zgodny z~węzłem $K_0$, i~piszemy $K_1 \geq K_0$, jeśli istnieje pierścień $C \subseteq S^3 \times [0, 1]$ taki, że $C \cap (S^3 \times \{i\}) = K_i$ dla $i = 0, 1$, który po izotopii nie ma maksimów lokalnych względem rzutu na przedział $[0, 1]$.
+\index{zgodność!taśmowa}%
+Dla $K_0$ równego niewęzłowi dostajemy dokładnie węzły taśmowe.
+Pojęcie wprowadził Gordon \cite{gordon1981}, który przypuszczał, że jest to częściowy porządek; udowodnił to Agol \cite{agol2022}.
+\index[persons]{Gordon, Cameron}%
+\index[persons]{Agol, Ian}%
+Zgodność taśmowa daje więc porządek wewnątrz każdej klasy zgodności, a~hipotezę plastrowo-taśmową można wysłowić tak: niewęzeł jest jedynym elementem minimalnym swojej klasy \cite[problem 1.54]{baykur2026}.
+
+Wiele niezmienników jest monotonicznych względem tego porządku \cite[problem 1.53]{baykur2026}.
+Jeśli $K_1 \geq K_0$, to wielomian Alexandera węzła $K_0$ dzieli wielomian Alexandera węzła $K_1$ (Gilmer \cite{gilmer1984}), a~genus Seiferta węzła $K_0$ nie przekracza genusu $K_1$ (Zemke \cite{zemke2019}; jego dowód korzysta z~homologii Floera, której w~tej książce nie omawiamy).
+\index[persons]{Gilmer, Patrick}%
+\index[persons]{Zemke, Ian}%
+Rozwłóknienie jest dziedziczne: jeśli $K_1 \geq K_0$ i~$K_1$ jest rozwłókniony, to $K_0$ też (Silver \cite{silver1992}, Kochloukova \cite{kochloukova2006}, Miyazaki \cite{miyazaki2018}).
+\index[persons]{Silver, Daniel}%
+\index[persons]{Kochloukova, Dessislava}%
+Przypuszcza się, że dziedziczna jest też własność bycia alternującym oraz że węzły dodatnie są minimalne, to znaczy z~$K_1 \geq K_0$ i~dodatniości $K_1$ wynika $K_0 = K_1$ \cite[problem 1.53]{baykur2026}.
+Nie wiadomo, czy z~$K_1 \geq K_0$ wynika $\crossing K_0 \le \crossing K_1$, ani czy podobne nierówności zachodzą dla liczby mostowej i~indeksu warkoczowego; wiadomo tylko, że jeśli liczba mostowa $K_1$ wynosi $2$, to liczba mostowa $K_0$ jest nie większa niż $2$.
+
+Gordon \cite{gordon1981} zapytał, czy istnieje klasa zgodności z~dwoma różnymi elementami minimalnymi względem $\geq$; on sam pokazał, że niektóre klasy mają element minimalny.
+Nie wiadomo nawet, czy w~każdym nierosnącym ciągu $K_1 \geq K_2 \geq \ldots$ węzły od pewnego miejsca się powtarzają \cite[problem 1.56]{baykur2026}.

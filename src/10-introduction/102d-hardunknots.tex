@@ -36,6 +36,20 @@ W lutym 2021 Lackenby ogłosił nowy algorytm rozpoznający niewęzły w~quasiwi
 % i nie zrobił tego w THE EFFICIENT CERTIFICATION OF KNOTTEDNESS AND THURSTON NORM, bo to wyszło na arxiv w 2016
 \index[persons]{Lackenby, Marc}%
 
+Złożoność rozpoznawania niewęzła opisuje kilka wyników \cite[problem 1.76]{baykur2026}.
+Problem decyzyjny należy do klasy NP, jeśli istnieje dowód, sprawdzalny w~czasie wielomianowym względem liczby skrzyżowań, że dane wejściowe mają poszukiwaną własność; należy do klasy co-NP, jeśli taki dowód istnieje dla danych, które tej własności nie mają.
+Hass, Lagarias, Pippenger \cite{hass1999} pokazali, że rozpoznawanie niewęzła jest w~NP, rozwijając metody Hakena.
+Kuperberg \cite{kuperberg2014} udowodnił, przy założeniu uogólnionej hipotezy Riemanna, że jest ono także w~co-NP, czyli że każdy nietrywialny węzeł ma krótki dowód swojej nietrywialności; Lackenby \cite{lackenby2021} usunął to założenie.
+\index[persons]{Hass, Joel}%
+\index[persons]{Lagarias, Jeffrey}%
+\index[persons]{Pippenger, Nicholas}%
+\index[persons]{Kuperberg, Greg}%
+Nie wiadomo, czy istnieje algorytm wielomianowy.
+Zupełnie inne podejście przyjął Dynnikov \cite{dynnikov2006}: pokazał, że dowolny diagram siatkowy niewęzła można sprowadzić do trywialnego ciągiem ruchów, z~których żaden nie zwiększa rozmiaru siatki.
+\index[persons]{Dynnikov, Ivan}%
+Dla ruchów Reidemeistera i~liczby skrzyżowań taka własność nie zachodzi, co pokazują trudne niewęzły opisane niżej: niech $h(n)$ oznacza najmniejszą liczbę $h$ taką, że każdy diagram niewęzła o~$n$ skrzyżowaniach da się sprowadzić do trywialnego ciągiem ruchów Reidemeistera, w~którym żaden diagram pośredni nie ma więcej niż $h$ skrzyżowań.
+Wiadomo, że $h(n) \ge n + 3$ dla pewnych $n$ \cite{schleimer2021}, ale wartości $h(n)$ nie znamy.
+
 Wyśmienitym punktem wyjścia do poszukiwań trudnych niewęzłów jest praca \cite{schleimer2021}, dzieło Burtona, Changa, Löfflera, de Mesmaya, Marii, Schleimera, Sedgwicka oraz Spreera.
 \index[persons]{Burton, Benjamin}%
 \index[persons]{Chang, Hsien-Chih}%

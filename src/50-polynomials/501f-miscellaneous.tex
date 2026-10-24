@@ -12,6 +12,12 @@ Są warunkami koniecznymi, ale nie wystarczającymi, jak odkrył ponad ćwierć 
 \end{equation}
 spełnia warunki Torresa, ale nie jest wielomianem Alexandera żadnego splotu.
 Wspominają o tym krótko Burde, Zieschang \cite[s. 150]{burde2014}.
+Które wielomiany wielu zmiennych są wielomianami Alexandera splotów, nie wiadomo; nawet dla splotów dwuogniwowych nie znamy pełnej charakteryzacji, chociaż Bailey \cite{bailey1977} opisał ich moduły Alexandera \cite[problem 1.8]{baykur2026}.
+\index[persons]{Bailey, James}%
+W~szczególnych klasach wiemy więcej: Koseleff, Pecker \cite{koseleff2015} podali kolejne warunki konieczne (wciąż niewystarczające) dla splotów dwumostowych, a~Hoste \cite{hoste2020} znalazł algorytm, który dla wielomianu dwóch zmiennych rozstrzyga, czy jest on wielomianem Alexandera dwuogniwowego splotu dwumostowego.
+\index[persons]{Koseleff, Pierre-Vincent}%
+\index[persons]{Pecker, Daniel}%
+\index[persons]{Hoste, Jim}%
 
 \paragraph{Unimodalne współczynniki}
 Fox \cite{fox1962} podejrzewał, że
@@ -23,6 +29,32 @@ Dowód podano dla węzłów algebraicznych (Murasugi \cite{murasugi1985}) oraz g
 \index[persons]{Ozsváth, Peter}%
 \index[persons]{Szabó, Zoltán}%
 Hipoteza w~ogólnym przypadku pozostaje otwarta.
+% DICTIONARY;log-concave;logarytmicznie wklęsły;-
+% DICTIONARY;special alternating;specjalnie alternujący;splot
+Sama hipoteza Foxa \cite[problem 12]{fox1962} jest nieco mocniejsza.
+Niech $\alexander_K(t) = \sum_{i=0}^n a_i t^i$ (z~dokładnością do jednomianu) będzie wielomianem Alexandera alternującego węzła $K$, wtedy $|a_i| = |a_{n-i}|$.
+Hipoteza trapezoidalna głosi, że
+\begin{equation}
+    |a_0| \le |a_1| \le \ldots \le |a_{\lfloor n/2 \rfloor}|,
+\end{equation}
+oraz że jeśli $|a_i| = |a_{i+1}|$ dla pewnego $i < n/2$, to $|a_i| = |a_{i+1}| = \ldots = |a_{n-i}|$.
+Wykres współczynników ma więc kształt trapezu z~płaskim wierzchołkiem.
+Stojmenow \cite{stoimenowb2005} podejrzewa więcej: dla alternujących splotów ciąg $|a_i|$ jest logarytmicznie wklęsły, to znaczy $|a_{i-1}| \, |a_{i+1}| \le a_i^2$ dla $0 < i < n$; dla $i < n/2$ równość zachodzi tylko wtedy, gdy $a_{i-1} = -a_i = a_{i+1}$, a~długość płaskiego wierzchołka nie przekracza wartości bezwzględnej sygnatury.
+\index{hipoteza!trapezoidalna}%
+\index{wielomian!log-wklęsły}%
+Ta mocniejsza wersja jest znana dla węzłów dwumostowych (Banfield \cite{banfield2022}) oraz dla splotów specjalnie alternujących, to znaczy mających alternujący diagram, w~którym wszystkie skrzyżowania mają ten sam znak (Hafner, Mészáros, Vidinas \cite{hafner2024}).
+Stojmenow sprawdził ją dla alternujących węzłów genusu co najwyżej $4$ \cite[sekcja 9.2]{stoimenow2016}.
+\index[persons]{Banfield, Ian}%
+\index[persons]{Hafner, Elena}%
+\index[persons]{Mészáros, Karola}%
+\index[persons]{Vidinas, Alexander}%
+Dalsze postępy w~stronę hipotezy Foxa opisują Azarpendar, Juhász, Kálmán \cite{azarpendar2024}; ogólne omówienie znajduje się w~\cite[problem 1.7]{baykur2026}.
+\index[persons]{Azarpendar, Soheil}%
+\index[persons]{Juhász, András}%
+\index[persons]{Kálmán, Tamás}%
+
+Dla dodatnich splotów o~$\mu$ ogniwach wielomian Conwaya ma postać $\conway_L(z) = z^{\mu-1} \sum_{i=0}^m c_i z^{2i}$ z~dodatnimi współczynnikami $c_i$.
+Stojmenow przypuszcza, że ciąg $(c_i)$ jest silnie logarytmicznie wklęsły, to znaczy $c_{i-1} c_{i+1} < c_i^2$ dla $0 < i < m$; dla splotów specjalnie alternujących udowodnił to w~\cite[tw. 1]{stoimenowb2005}.
 Wiemy natomiast, że kolejne współczynniki wielomianu Conwaya węzła alternującego są przeciwnych znaków i niezerowe (Murasugi \cite[s. 242]{murasugi1996} odsyła do swojej wcześniejszej pracy \cite{murasugi1959}, gdzie używa archaicznej nomenklatury: \textsc{Schlauchknoten} zamiast węzłów satelitarnych jak w \cite[s. 245]{schubert1953}).
 \index{Schlauchknoten}%
 Wynika stąd, że węzły $(p, q)$-torusowe dla $p > q > 2$ oraz pierwsze węzły satelitarne nie są alternujące.
